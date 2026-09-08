@@ -162,19 +162,20 @@ main { margin-top: var(--nav-height); padding: 24px; min-height: calc(100vh - va
 /* 配信リンクバッジ */
 .card-stream-badges { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; z-index: 10; position: relative; }
 .badge { 
-  font-size: 0.65rem; font-weight: 700; padding: 4px 8px; border-radius: 4px; 
-  color: #fff; text-decoration: none; display: inline-block; transition: opacity 0.2s; 
+  font-size: 0.65rem; font-weight: 600; padding: 3px 9px; border-radius: 4px; 
+  text-decoration: none; display: inline-block; transition: all 0.2s; 
+  background: transparent; border: 1px solid currentColor;
 }
-.badge:hover { opacity: 0.8; }
-.badge.abema { background: #3d9e5c; }
-.badge.colleize { background: linear-gradient(135deg, #d9741f, #c96420); color: #fff; }
-.badge.amnibus { background: linear-gradient(135deg, #6b3fa0, #8a5fc4); color: #fff; }
+.badge:hover { opacity: 0.75; }
+.badge.abema { color: #4caf72; }
+.badge.colleize { color: #d9741f; }
+.badge.amnibus { color: #8a5fc4; }
 .stream-link.colleize { background: linear-gradient(135deg, #ff8c00, #ff6600); color: #fff; font-weight: 700; }
 .stream-link.amnibus { background: linear-gradient(135deg, #6a0dad, #9b30ff); color: #fff; font-weight: 700; }
-.badge.danime { background: #d9701f; }
-.badge.amazon { background: #1c8fc2; }
-.badge.netflix { background: #c73340; }
-.badge.dmmtv { background: #a8c93d; color: #111; font-weight:800; } /* DMM TV */
+.badge.danime { color: #e08a45; }
+.badge.amazon { color: #4aa8d8; }
+.badge.netflix { color: #d9636f; }
+.badge.dmmtv { color: #b9d15f; } /* DMM TV */
 
 /* モーダル用の配信ボタン */
 .stream-links-block { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; padding-top: 14px; border-top: 1px dashed var(--border-color); }
