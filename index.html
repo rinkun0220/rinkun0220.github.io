@@ -96,6 +96,7 @@ header {
 .logo-a { color: #fff; } .logo-db { color: var(--accent); }
 .nav-links { display: flex; gap: 4px; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; -ms-overflow-style: none; }
 .nav-links::-webkit-scrollbar { display: none; }
+.nav-icon { filter: grayscale(1) opacity(.55); }
 .nav-item {
   color: var(--text-muted); text-decoration: none; font-size: 0.85rem; font-weight: 600;
   cursor: pointer; transition: all 0.2s; padding: 7px 14px; border-radius: 8px;
@@ -232,11 +233,11 @@ main { margin-top: var(--nav-height); padding: 24px; min-height: calc(100vh - va
 <header>
   <div class="logo" style="touch-action: manipulation; -webkit-tap-highlight-color: transparent; -webkit-user-select: none; -moz-user-select: none; user-select: none; cursor: pointer;"><span class="logo-a">ANIME</span><span class="logo-db">DB</span></div>
   <div class="nav-links">
-    <div class="nav-item active" id="nav-home" onclick="switchPanel('home')">🏠 ホーム</div>
-    <a href="/blog/" class="nav-item" style="text-decoration:none;">📝 ブログ</a>
-    <a href="/glossary.html" class="nav-item" style="text-decoration:none;">📖 用語集</a>
-    <a href="/directory.html" class="nav-item" style="text-decoration:none;">🗂️ 名鑑</a>
-    <a href="/games.html" class="nav-item" style="text-decoration:none;">🎮 診断・ガチャなど・ゲームも？</a>
+    <div class="nav-item active" id="nav-home" onclick="switchPanel('home')"><span class="nav-icon">🏠</span> ホーム</div>
+    <a href="/blog/" class="nav-item" style="text-decoration:none;"><span class="nav-icon">📝</span> ブログ</a>
+    <a href="/glossary.html" class="nav-item" style="text-decoration:none;"><span class="nav-icon">📖</span> 用語集</a>
+    <a href="/directory.html" class="nav-item" style="text-decoration:none;"><span class="nav-icon">🗂️</span> 名鑑</a>
+    <a href="/games.html" class="nav-item" style="text-decoration:none;"><span class="nav-icon">🎮</span> 診断・ガチャなど・ゲームも？</a>
   </div>
 </header>
 

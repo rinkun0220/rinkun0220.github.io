@@ -46,6 +46,7 @@ header {
 .logo-a { color: #fff; } .logo-db { color: var(--accent); }
 .nav-links { display: flex; gap: 4px; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; -ms-overflow-style: none; }
 .nav-links::-webkit-scrollbar { display: none; }
+.nav-icon { filter: grayscale(1) opacity(.55); }
 .nav-item { color: var(--text-muted); text-decoration: none; font-size: 0.85rem; font-weight: 600; cursor: pointer; transition: all 0.2s; padding: 7px 14px; border-radius: 8px; white-space: nowrap; display: inline-flex; align-items: center; gap: 5px; border: 1px solid transparent; flex-shrink: 0; }
 .nav-item:hover { color: #fff; background: rgba(255,255,255,0.07); border-color: rgba(255,255,255,0.08); }
 .nav-item.active { color: var(--accent); background: rgba(230,72,90,0.12); border-color: rgba(230,72,90,0.3); }
@@ -103,11 +104,11 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
 <header>
   <a href="/" class="logo"><span class="logo-a">ANIME</span><span class="logo-db">DB</span></a>
   <div class="nav-links">
-    <a href="/" class="nav-item" style="text-decoration:none;">🏠 ホーム</a>
-    <a href="/blog/" class="nav-item" style="text-decoration:none;">📝 ブログ</a>
-    <a href="/glossary.html" class="nav-item" style="text-decoration:none;">📖 用語集</a>
-    <a href="/directory.html" class="nav-item" style="text-decoration:none;">🗂️ 名鑑</a>
-    <a href="/games.html" class="nav-item active" style="text-decoration:none;">🎮 診断・ガチャなど・ゲームも？</a>
+    <a href="/" class="nav-item" style="text-decoration:none;"><span class="nav-icon">🏠</span> ホーム</a>
+    <a href="/blog/" class="nav-item" style="text-decoration:none;"><span class="nav-icon">📝</span> ブログ</a>
+    <a href="/glossary.html" class="nav-item" style="text-decoration:none;"><span class="nav-icon">📖</span> 用語集</a>
+    <a href="/directory.html" class="nav-item" style="text-decoration:none;"><span class="nav-icon">🗂️</span> 名鑑</a>
+    <a href="/games.html" class="nav-item active" style="text-decoration:none;"><span class="nav-icon">🎮</span> 診断・ガチャなど・ゲームも？</a>
   </div>
 </header>
 

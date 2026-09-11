@@ -59,6 +59,7 @@ header {
 .logo-a { color: #fff; } .logo-db { color: var(--accent); }
 .nav-links { display: flex; gap: 4px; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; -ms-overflow-style: none; }
 .nav-links::-webkit-scrollbar { display: none; }
+.nav-icon { filter: grayscale(1) opacity(.55); }
 .nav-item {
   color: var(--text-muted); text-decoration: none; font-size: 0.85rem; font-weight: 600;
   cursor: pointer; transition: all 0.2s; padding: 7px 14px; border-radius: 8px;
@@ -114,11 +115,11 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
 <header>
   <a href="/" class="logo"><span class="logo-a">ANIME</span><span class="logo-db">DB</span></a>
   <div class="nav-links">
-    <a href="/" class="nav-item" style="text-decoration:none;">🏠 ホーム</a>
-    <a href="/blog/" class="nav-item" style="text-decoration:none;">📝 ブログ</a>
-    <a href="/glossary.html" class="nav-item" style="text-decoration:none;">📖 用語集</a>
-    <a href="/directory.html" class="nav-item" style="text-decoration:none;">🗂️ 名鑑</a>
-    <a href="/games.html" class="nav-item" style="text-decoration:none;">🎮 診断・ガチャなど・ゲームも？</a>
+    <a href="/" class="nav-item" style="text-decoration:none;"><span class="nav-icon">🏠</span> ホーム</a>
+    <a href="/blog/" class="nav-item" style="text-decoration:none;"><span class="nav-icon">📝</span> ブログ</a>
+    <a href="/glossary.html" class="nav-item" style="text-decoration:none;"><span class="nav-icon">📖</span> 用語集</a>
+    <a href="/directory.html" class="nav-item" style="text-decoration:none;"><span class="nav-icon">🗂️</span> 名鑑</a>
+    <a href="/games.html" class="nav-item" style="text-decoration:none;"><span class="nav-icon">🎮</span> 診断・ガチャなど・ゲームも？</a>
   </div>
 </header>
 
@@ -158,6 +159,7 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
         <div class="log-tags"><span class="log-tag fix">FIX</span></div>
         <ul class="log-list">
           <li>ヘッダー背景の透明度をサイト全体で調整しました（不透明度95〜90%→98%）。キービジュアル画像がヘッダーに透けて見え、明るく白っぽくなってしまう現象を解消し、全ページで落ち着いたトーンに統一しました</li>
+          <li>TOPページなどのナビゲーション（🏠ホーム・📝ブログ・📖用語集・🗂️名鑑・🎮診断/ガチャ）の絵文字アイコンをモノトーン化し、配信バッジと同じ落ち着いた見た目に統一しました</li>
         </ul>
       </div>
     </div>
