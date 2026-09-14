@@ -14,12 +14,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>あなたに合う監督診断｜ANIMEDB</title>
 <link rel="canonical" href="https://anime-db.jp/director-diagnosis.html">
-<meta name="description" content="5つの質問に答えるだけで、あなたの好みに近いアニメ監督を診断。長井龍雪・石原立也・石立太一・水島努・新海誠・山田尚子・幾原邦彦の中から結果が出ます。">
+<meta name="description" content="7つの質問に答えるだけで、あなたの好みに近いアニメ監督を診断。長井龍雪・石原立也・石立太一・水島努・新海誠・山田尚子・幾原邦彦の中から結果が出ます。">
 <meta name="keywords" content="監督診断,アニメ診断,長井龍雪,石原立也,石立太一,水島努,新海誠,山田尚子,幾原邦彦">
 <meta name="robots" content="index,follow">
 <meta name="author" content="ANIMEDB">
 <meta property="og:title" content="あなたに合う監督診断｜ANIMEDB">
-<meta property="og:description" content="5つの質問に答えるだけで、あなたの好みに近いアニメ監督がわかります。">
+<meta property="og:description" content="7つの質問に答えるだけで、あなたの好みに近いアニメ監督がわかります。">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://anime-db.jp/director-diagnosis.html">
 <meta property="og:site_name" content="ANIMEDB">
@@ -116,7 +116,7 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
   <div class="page-head">
     <span class="page-tag">🎬 診断コンテンツ</span>
     <h1 class="page-title">あなたに合う監督診断</h1>
-    <p class="page-desc">5つの質問に答えるだけで、あなたの好みに一番近いアニメ監督がわかります。所要時間は約1分です。</p>
+    <p class="page-desc">7つの質問に答えるだけで、あなたの好みに一番近いアニメ監督がわかります。所要時間は約1〜2分です。</p>
   </div>
 
   <div class="progress-wrap"><div class="progress-bar" id="progressBar"></div></div>
@@ -149,24 +149,24 @@ const questions = [
   {
     text: "好きな演出は？",
     options: [
-      { label: "感情が爆発するシーンの強い演出", scores: { nagai: 3 } },
-      { label: "日常芝居の緻密さ、笑いとシリアスのバランス", scores: { ishihara: 3 } },
-      { label: "音楽・美術を活かした繊細な画作り", scores: { ishidate: 3 } },
-      { label: "ジャンルを問わないテンポの良さ", scores: { mizushima: 3 } },
-      { label: "綿密に計算された、圧倒的に美しい映像美", scores: { shinkai: 3 } },
-      { label: "視線や仕草で語る、言葉にならない感情の機微", scores: { yamada: 3 } },
-      { label: "演劇的でメタファーに満ちた独特の映像表現", scores: { ikuhara: 3 } }
+      { label: "感情が爆発するシーンの強い演出", scores: { nagai: 3, yamada: 1 } },
+      { label: "日常芝居の緻密さ、笑いとシリアスのバランス", scores: { ishihara: 3, mizushima: 1 } },
+      { label: "音楽・美術を活かした繊細な画作り", scores: { ishidate: 3, shinkai: 1 } },
+      { label: "ジャンルを問わないテンポの良さ", scores: { mizushima: 3, ishihara: 1 } },
+      { label: "綿密に計算された、圧倒的に美しい映像美", scores: { shinkai: 3, ishidate: 1 } },
+      { label: "視線や仕草で語る、言葉にならない感情の機微", scores: { yamada: 3, ishidate: 1 } },
+      { label: "演劇的でメタファーに満ちた独特の映像表現", scores: { ikuhara: 3, yamada: 1 } }
     ]
   },
   {
     text: "好きなジャンルは？",
     options: [
-      { label: "青春の痛みを描く作品", scores: { nagai: 3 } },
-      { label: "日常系・京都アニメーション系の作品", scores: { ishihara: 3 } },
-      { label: "音楽もの・映像美が際立つ作品", scores: { ishidate: 3 } },
+      { label: "青春の痛みを描く作品", scores: { nagai: 3, ishihara: 1 } },
+      { label: "日常系・京都アニメーション系の作品", scores: { ishihara: 3, ishidate: 1, yamada: 1 } },
+      { label: "音楽もの・映像美が際立つ作品", scores: { ishidate: 3, yamada: 1 } },
       { label: "コメディからミリタリー、業界ものまで幅広く", scores: { mizushima: 3 } },
       { label: "恋愛×SF・ファンタジーの壮大な物語", scores: { shinkai: 3 } },
-      { label: "女性同士や友情など、繊細な関係性を描く作品", scores: { yamada: 3 } },
+      { label: "女性同士や友情など、繊細な関係性を描く作品", scores: { yamada: 3, ikuhara: 1 } },
       { label: "カルト的な人気を誇る、寓話的で難解な作品", scores: { ikuhara: 3 } }
     ]
   },
@@ -174,23 +174,23 @@ const questions = [
     text: "一番刺さる瞬間は？",
     options: [
       { label: "感情が爆発する瞬間の演出", scores: { nagai: 3 } },
-      { label: "笑いとシリアスの絶妙なバランス", scores: { ishihara: 3 } },
-      { label: "繊細な感情表現の積み重ね", scores: { ishidate: 3 } },
-      { label: "テンポよく物語が転がっていく瞬間", scores: { mizushima: 3 } },
-      { label: "圧倒的な映像美に息をのむ瞬間", scores: { shinkai: 3 } },
-      { label: "ふとした仕草に心情がにじむ瞬間", scores: { yamada: 3 } },
-      { label: "強いメッセージ性が炸裂する瞬間", scores: { ikuhara: 3 } }
+      { label: "笑いとシリアスの絶妙なバランス", scores: { ishihara: 3, mizushima: 1 } },
+      { label: "繊細な感情表現の積み重ね", scores: { ishidate: 3, yamada: 1 } },
+      { label: "テンポよく物語が転がっていく瞬間", scores: { mizushima: 3, ishihara: 1 } },
+      { label: "圧倒的な映像美に息をのむ瞬間", scores: { shinkai: 3, ishidate: 1 } },
+      { label: "ふとした仕草に心情がにじむ瞬間", scores: { yamada: 3, ishidate: 1 } },
+      { label: "強いメッセージ性が炸裂する瞬間", scores: { ikuhara: 3, nagai: 1 } }
     ]
   },
   {
     text: "監督に求めるものは？",
     options: [
-      { label: "脚本と一体化した感情の演出力", scores: { nagai: 3 } },
+      { label: "脚本と一体化した感情の演出力", scores: { nagai: 3, yamada: 1 } },
       { label: "緻密な日常芝居の積み上げ", scores: { ishihara: 3 } },
-      { label: "音楽・美術との調和", scores: { ishidate: 3 } },
+      { label: "音楽・美術との調和", scores: { ishidate: 3, shinkai: 1 } },
       { label: "ジャンルを超えた振れ幅の広さ", scores: { mizushima: 3 } },
-      { label: "個人制作出身ならではの、こだわり抜いた映像美", scores: { shinkai: 3 } },
-      { label: "キャラクターの内面をすくい上げる繊細な演出", scores: { yamada: 3 } },
+      { label: "個人制作出身ならではの、こだわり抜いた映像美", scores: { shinkai: 3, ishidate: 1 } },
+      { label: "キャラクターの内面をすくい上げる繊細な演出", scores: { yamada: 3, ishidate: 1 } },
       { label: "演劇的な演出と、強いメッセージ性", scores: { ikuhara: 3 } }
     ]
   },
@@ -198,12 +198,36 @@ const questions = [
     text: "好きな画作りは？",
     options: [
       { label: "感情を爆発させる強いカット割り", scores: { nagai: 3 } },
-      { label: "笑いとシリアスの緩急がついた画面", scores: { ishihara: 3 } },
-      { label: "音楽・美術が引き立つ美しい画面", scores: { ishidate: 3 } },
+      { label: "笑いとシリアスの緩急がついた画面", scores: { ishihara: 3, mizushima: 1 } },
+      { label: "音楽・美術が引き立つ美しい画面", scores: { ishidate: 3, shinkai: 1 } },
       { label: "テンポよく展開する軽快な画面", scores: { mizushima: 3 } },
-      { label: "圧倒的な作画・美術による情景美", scores: { shinkai: 3 } },
-      { label: "視線や間で語る、繊細な画面設計", scores: { yamada: 3 } },
-      { label: "演劇的でシンボリックな独特の画面構成", scores: { ikuhara: 3 } }
+      { label: "圧倒的な作画・美術による情景美", scores: { shinkai: 3, ishidate: 1 } },
+      { label: "視線や間で語る、繊細な画面設計", scores: { yamada: 3, ishidate: 1 } },
+      { label: "演劇的でシンボリックな独特の画面構成", scores: { ikuhara: 3, yamada: 1 } }
+    ]
+  },
+  {
+    text: "好きな物語の締めくくり方は？",
+    options: [
+      { label: "号泣必至、感情が振り切れるラスト", scores: { nagai: 3 } },
+      { label: "笑いと余韻が同居する、じんわり温かい結末", scores: { ishihara: 3, yamada: 1 } },
+      { label: "静かな余韻を残す、涙腺を刺激するラスト", scores: { ishidate: 3, shinkai: 1 } },
+      { label: "スカッと爽快、テンポよくまとまる結末", scores: { mizushima: 3 } },
+      { label: "切なくも美しい、心に残る幕引き", scores: { shinkai: 3, ishidate: 1 } },
+      { label: "言葉にできない余韻、じんわり効いてくる結末", scores: { yamada: 3 } },
+      { label: "解釈が分かれる、考察したくなる結末", scores: { ikuhara: 3 } }
+    ]
+  },
+  {
+    text: "惹かれるキャラクター描写は？",
+    options: [
+      { label: "感情を隠さずぶつけ合うキャラクター", scores: { nagai: 3, ikuhara: 1 } },
+      { label: "個性豊かな群像劇のキャラクターたち", scores: { ishihara: 3, mizushima: 1 } },
+      { label: "寡黙でも内面が豊かなキャラクター", scores: { ishidate: 3, yamada: 1 } },
+      { label: "どんなジャンルにも馴染む幅広いキャラ造形", scores: { mizushima: 3 } },
+      { label: "運命に翻弄される、壮大な物語の主人公", scores: { shinkai: 3 } },
+      { label: "視線や沈黙で気持ちを伝える寡黙なキャラクター", scores: { yamada: 3, ishidate: 1 } },
+      { label: "記号的・象徴的でどこか非現実的なキャラクター", scores: { ikuhara: 3 } }
     ]
   }
 ];
@@ -293,10 +317,20 @@ function selectOption(i) {
   }
 }
 
+function shuffleArray(arr) {
+  const a = arr.slice();
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
 function showResult() {
   document.getElementById('progressBar').style.width = '100%';
   document.getElementById('quizScreen').classList.add('hidden');
-  const ranked = Object.keys(scores).sort((a, b) => scores[b] - scores[a]);
+  // スコアが同点の場合に常に同じ監督が選ばれないよう、キーの並び順をランダム化してから安定ソートする
+  const ranked = shuffleArray(Object.keys(scores)).sort((a, b) => scores[b] - scores[a]);
   const topKey = ranked[0];
   const otherKeys = ranked.slice(1);
   const r = results[topKey];
