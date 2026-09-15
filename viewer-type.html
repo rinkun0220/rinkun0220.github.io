@@ -95,6 +95,14 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
 .footer-link { color: var(--text-muted); text-decoration: none; font-size: 0.85rem; }
 .footer-link:hover { color: #fff; }
 .copyright { font-size: 0.8rem; color: rgba(255,255,255,0.3); }
+
+.reveal-section { max-width: 880px; margin: 0 auto 28px; padding: 0 20px; }
+.reveal-title { font-size: 1.05rem; font-weight: 700; margin-bottom: 14px; color: var(--text-main); }
+.reveal-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
+.reveal-card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px; padding: 16px; }
+.reveal-card .rc-name { font-weight: 700; color: var(--accent); margin-bottom: 6px; display: block; }
+.reveal-card .rc-desc { font-size: 0.85rem; color: var(--text-muted); line-height: 1.7; }
+.reveal-card .rc-works { font-size: 0.78rem; color: var(--star-color); margin-top: 8px; display: block; }
 </style>
 </head>
 <body>
@@ -117,7 +125,38 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
     <p class="page-desc">脚本派、演出派、キャラ萌え派、考察派、雰囲気派——あなたがアニメのどこに一番惹かれているタイプか、5つの質問で診断します。</p>
   </div>
 
-  <div class="progress-wrap"><div class="progress-bar" id="progressBar"></div></div>
+    <div class="reveal-section">
+    <h2 class="reveal-title">診断でわかる5つの視聴者タイプ</h2>
+    <div class="reveal-grid">
+      <div class="reveal-card">
+        <span class="rc-name">✍️ 脚本派</span>
+        <span class="rc-desc">あなたは脚本派です。話の構成、伏線の張り方、台詞の一つひとつに注目するタイプ。「なぜこの展開になったのか」を理解して初めて満足できる、物語の設計そのものを楽しむ視聴者です。</span>
+        
+      </div>
+      <div class="reveal-card">
+        <span class="rc-name">🎬 演出派</span>
+        <span class="rc-desc">あなたは演出派です。カット割り、色使い、動きの気持ちよさなど、画面そのものが持つ表現力に強く反応するタイプ。同じ脚本でも「魅せ方」で評価が大きく変わる、映像作品としてのアニメを見ている視聴者です。</span>
+        
+      </div>
+      <div class="reveal-card">
+        <span class="rc-name">💖 キャラ萌え派</span>
+        <span class="rc-desc">あなたはキャラ萌え派です。ストーリーの巧拙よりも、キャラクターの魅力・関係性・声優の演技に強く惹かれるタイプ。「このキャラがいるから見続けられる」という原動力を大事にしている視聴者です。</span>
+        
+      </div>
+      <div class="reveal-card">
+        <span class="rc-name">🔍 考察派</span>
+        <span class="rc-desc">あなたは考察派です。表面的なストーリーよりも、その奥にあるテーマやメタファー、伏線の意図を読み解くことに喜びを感じるタイプ。見終わった後も頭の中で反芻し続ける視聴者です。</span>
+        
+      </div>
+      <div class="reveal-card">
+        <span class="rc-name">🌙 雰囲気派</span>
+        <span class="rc-desc">あなたは雰囲気派です。ストーリーの起伏よりも、作品全体が持つ空気感・音楽・間の取り方に浸ることを大切にするタイプ。「なんとなく好き」という感覚を大事にできる視聴者です。</span>
+        
+      </div>
+    </div>
+  </div>
+
+<div class="progress-wrap"><div class="progress-bar" id="progressBar"></div></div>
 
   <div id="startScreen">
     <div class="q-card">

@@ -83,6 +83,13 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
 .footer-link { color: var(--text-muted); text-decoration: none; font-size: 0.85rem; }
 .footer-link:hover { color: #fff; }
 .copyright { font-size: 0.8rem; color: rgba(255,255,255,0.3); }
+
+.reveal-section { max-width: 880px; margin: 0 auto 28px; padding: 0 20px; }
+.reveal-title { font-size: 1.05rem; font-weight: 700; margin-bottom: 6px; color: var(--text-main); }
+.reveal-note { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 14px; line-height: 1.7; }
+.reveal-rank-table { width: 100%; border-collapse: collapse; margin-top: 10px; margin-bottom: 16px; font-size: 0.85rem; }
+.reveal-rank-table th, .reveal-rank-table td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--border-color); color: var(--text-muted); }
+.reveal-rank-table th { color: var(--text-main); }
 </style>
 </head>
 <body>
@@ -105,7 +112,26 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
     <p class="page-desc">脚本・作画演出・キャラ・音楽の4項目を、見た作品のイメージでスライダーに合わせてみてください。ANIMEDBの<a href="/blog/rating-criteria.html" style="color:var(--star-color);text-decoration:none;">評価基準</a>に沿って、S〜Cの判定を返します。</p>
   </div>
 
-  <div class="sim-card">
+    <div class="reveal-section">
+    <h2 class="reveal-title">ANIMEDB評価基準の内訳</h2>
+    <p class="reveal-note">このシミュレーターは、ANIMEDB管理人が実際のレビューで使っている加重平均の考え方をそのまま再現しています。脚本を最も重視するのは、管理人自身が「脚本派」を公言しているためです（詳しくは<a href="/blog/rating-criteria.html" style="color:var(--star-color)">評価基準の記事</a>で解説しています）。</p>
+    <table class="reveal-rank-table">
+      <tr><th>項目</th><th>配点比率</th></tr>
+      <tr><td>✍️ 脚本・構成</td><td>40%</td></tr>
+      <tr><td>🎬 作画・演出</td><td>25%</td></tr>
+      <tr><td>💖 キャラクター</td><td>25%</td></tr>
+      <tr><td>🎵 音楽</td><td>10%</td></tr>
+    </table>
+    <table class="reveal-rank-table">
+      <tr><th>判定</th><th>加重スコア</th><th>目安</th></tr>
+      <tr><td>S</td><td>9.0以上</td><td>積極的に人に薦めたくなる作品</td></tr>
+      <tr><td>A</td><td>8.0〜8.9</td><td>大きな欠点がなく安定して面白い作品</td></tr>
+      <tr><td>B</td><td>7.0〜7.9</td><td>楽しめるが気になる点もある作品</td></tr>
+      <tr><td>C</td><td>6.9以下</td><td>視聴は続けられるが積極的な理由は見つからない作品</td></tr>
+    </table>
+  </div>
+
+<div class="sim-card">
     <div class="slider-group">
       <div class="slider-label"><span class="slider-name">✍️ 脚本・構成</span><span class="slider-value" id="val-script">5</span></div>
       <input type="range" min="0" max="10" value="5" class="slider-input" id="slider-script" oninput="updateSim()">

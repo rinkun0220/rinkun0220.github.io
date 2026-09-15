@@ -96,6 +96,18 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
 .footer-links { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 12px; }
 .footer-link { color: var(--text-muted); text-decoration: none; font-size: 0.82rem; }
 .copyright { font-size: 0.78rem; color: rgba(255,255,255,0.3); }
+
+.reveal-section { max-width: 880px; margin: 0 auto 28px; padding: 0 20px; }
+.reveal-title { font-size: 1.05rem; font-weight: 700; margin-bottom: 6px; color: var(--text-main); }
+.reveal-note { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 14px; line-height: 1.7; }
+.reveal-group { margin-bottom: 18px; }
+.reveal-group-title { font-size: 0.85rem; font-weight: 700; color: var(--accent); margin-bottom: 8px; }
+.reveal-list { list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 6px 16px; }
+.reveal-list li { font-size: 0.82rem; color: var(--text-muted); line-height: 1.6; padding: 4px 0; border-bottom: 1px dashed var(--border-color); }
+.reveal-list li b { color: var(--text-main); font-weight: 600; }
+.reveal-rank-table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 0.85rem; }
+.reveal-rank-table th, .reveal-rank-table td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--border-color); color: var(--text-muted); }
+.reveal-rank-table th { color: var(--text-main); }
 </style>
 </head>
 <body>
@@ -118,7 +130,80 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
     <p class="page-desc">代表作のヒントだけで、声優・脚本家・監督・制作会社・アーティストを当てる4択クイズ。ANIMEDBの名鑑データ全47件から出題します。</p>
   </div>
 
-  <div class="progress-wrap"><div class="progress-bar" id="progressBar"></div></div>
+    <div class="reveal-section">
+    <h2 class="reveal-title">出題プール一覧（全47件）</h2>
+    <p class="reveal-note">クイズには声優・脚本家・監督・制作会社・アーティストの中から、代表作のヒントとともに出題されます。出題対象はこちらの一覧の通りです。</p>
+      <div class="reveal-group">
+        <div class="reveal-group-title">声優（24件）</div>
+        <ul class="reveal-list">
+          <li><b>中村悠一</b> — CLANNAD（岡崎朋也役）</li>
+          <li><b>杉田智和</b> — 電脳冒険記ウェブダイバー（グラディオン役）</li>
+          <li><b>津田健次郎</b> — ID:INVADED イド:インヴェイデッド（鳴瓢秋人役）</li>
+          <li><b>梶裕貴</b> — 進撃の巨人（エレン・イェーガー役）</li>
+          <li><b>松岡禎丞</b> — ソードアート・オンライン（キリト役）</li>
+          <li><b>内田雄馬</b> — シャングリラ・フロンティア（サンラク／陽務楽郎役）</li>
+          <li><b>花澤香菜</b> — PSYCHO-PASS サイコパス（常守朱役）</li>
+          <li><b>早見沙織</b> — 赤髪の白雪姫（白雪役）</li>
+          <li><b>佐倉綾音</b> — 夢喰いメリー（メリー・ナイトメア役）</li>
+          <li><b>種﨑敦美</b> — ドラゴンクエスト ダイの大冒険（ダイ役）</li>
+          <li><b>水瀬いのり</b> — 心が叫びたがってるんだ。（成瀬順役）</li>
+          <li><b>大塚芳忠</b> — 幼女戦記（ハンス・フォン・ゼートゥーア役）</li>
+          <li><b>石田彰</b> — 文豪ストレイドッグス（フョードル・D役）</li>
+          <li><b>三木眞一郎</b> — 機動戦士ガンダム00（ロックオン・ストラトス役）</li>
+          <li><b>井上喜久子</b> — ハッピーシュガーライフ（さとうの叔母役）</li>
+          <li><b>林原めぐみ</b> — 名探偵コナン（灰原哀役）</li>
+          <li><b>沢城みゆき</b> — Fate/Apocrypha（赤のセイバー／モードレッド役）</li>
+          <li><b>悠木碧</b> — 魔法少女まどか☆マギカ（鹿目まどか役）</li>
+          <li><b>羊宮妃那</b> — 僕の心のヤバイやつ（山田杏奈役）</li>
+          <li><b>鈴代紗弓</b> — ぼっち・ざ・ろっく！（伊地知虹夏役）</li>
+          <li><b>夏吉ゆうこ</b> — 超かぐや姫！（かぐや役）</li>
+          <li><b>大塚剛央</b> — 【推しの子】（アクア役）</li>
+          <li><b>関根明良</b> — 天幕のジャードゥーガル（シタラ役）</li>
+          <li><b>千葉翔也</b> — アオのハコ（猪股大喜役）</li>
+        </ul>
+      </div>      <div class="reveal-group">
+        <div class="reveal-group-title">脚本家（5件）</div>
+        <ul class="reveal-list">
+          <li><b>吉田玲子</b> — けいおん!（None）</li>
+          <li><b>岡田麿里</b> — あの日見た花の名前を僕達はまだ知らない。（None）</li>
+          <li><b>花田十輝</b> — 宇宙よりも遠い場所（None）</li>
+          <li><b>横手美智子</b> — SHIROBAKO（None）</li>
+          <li><b>あおしまたかし</b> — みつどもえ（None）</li>
+        </ul>
+      </div>      <div class="reveal-group">
+        <div class="reveal-group-title">監督（4件）</div>
+        <ul class="reveal-list">
+          <li><b>長井龍雪</b> — あの日見た花の名前を僕達はまだ知らない。（None）</li>
+          <li><b>石原立也</b> — CLANNAD / CLANNAD AFTER STORY（None）</li>
+          <li><b>石立太一</b> — 境界の彼方（None）</li>
+          <li><b>水島努</b> — ガールズ&パンツァー（None）</li>
+        </ul>
+      </div>      <div class="reveal-group">
+        <div class="reveal-group-title">制作会社（6件）</div>
+        <ul class="reveal-list">
+          <li><b>P.A.WORKS</b> — SHIROBAKO（None）</li>
+          <li><b>京都アニメーション</b> — 響け!ユーフォニアム（None）</li>
+          <li><b>CloverWorks</b> — 約束のネバーランド（None）</li>
+          <li><b>A-1 Pictures</b> — ソードアート・オンライン（None）</li>
+          <li><b>wit studio</b> — 進撃の巨人（1〜3期）（None）</li>
+          <li><b>MAPPA</b> — 呪術廻戦（None）</li>
+        </ul>
+      </div>      <div class="reveal-group">
+        <div class="reveal-group-title">アーティスト（8件）</div>
+        <ul class="reveal-list">
+          <li><b>米津玄師</b> — チェンソーマン（None）</li>
+          <li><b>中島美嘉</b> — 機動戦士ガンダムSEED（None）</li>
+          <li><b>Mrs. GREEN APPLE</b> — 炎炎ノ消防隊（None）</li>
+          <li><b>Official髭男dism</b> — SPY×FAMILY（第1期）（None）</li>
+          <li><b>YOASOBI（幾田りらソロ含む）</b> — 【推しの子】（None）</li>
+          <li><b>Aimer</b> — 鬼滅の刃 遊郭編（None）</li>
+          <li><b>LiSA</b> — 鬼滅の刃（第1期）（None）</li>
+          <li><b>King Gnu</b> — 呪術廻戦 渋谷事変（None）</li>
+        </ul>
+      </div>
+  </div>
+
+<div class="progress-wrap"><div class="progress-bar" id="progressBar"></div></div>
 
   <div id="startScreen">
     <div class="start-card">

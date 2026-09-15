@@ -97,6 +97,14 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
 .footer-link { color: var(--text-muted); text-decoration: none; font-size: 0.85rem; }
 .footer-link:hover { color: #fff; }
 .copyright { font-size: 0.8rem; color: rgba(255,255,255,0.3); }
+
+.reveal-section { max-width: 880px; margin: 0 auto 28px; padding: 0 20px; }
+.reveal-title { font-size: 1.05rem; font-weight: 700; margin-bottom: 14px; color: var(--text-main); }
+.reveal-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
+.reveal-card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px; padding: 16px; }
+.reveal-card .rc-name { font-weight: 700; color: var(--accent); margin-bottom: 6px; display: block; }
+.reveal-card .rc-desc { font-size: 0.85rem; color: var(--text-muted); line-height: 1.7; }
+.reveal-card .rc-works { font-size: 0.78rem; color: var(--star-color); margin-top: 8px; display: block; }
 </style>
 </head>
 <body>
@@ -119,7 +127,48 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
     <p class="page-desc">7つの質問に答えるだけで、あなたの好みに一番近いアニメ監督がわかります。所要時間は約1〜2分です。</p>
   </div>
 
-  <div class="progress-wrap"><div class="progress-bar" id="progressBar"></div></div>
+    <div class="reveal-section">
+    <h2 class="reveal-title">診断に登場する監督たち（全7名）</h2>
+    <div class="reveal-grid">
+      <div class="reveal-card">
+        <span class="rc-name">長井龍雪</span>
+        <span class="rc-desc">あなたに一番近いのは長井龍雪です。脚本の岡田麿里とのタッグ作品を中心に、青春の痛みを真正面から描く監督。感情の爆発シーンの演出に強く惹かれるタイプです。</span>
+        <span class="rc-works">代表作：あの日見た花の名前を僕達はまだ知らない。　など</span>
+      </div>
+      <div class="reveal-card">
+        <span class="rc-name">石原立也</span>
+        <span class="rc-desc">あなたに一番近いのは石原立也です。京都アニメーションの土台を作った世代の監督。日常芝居の緻密さと、笑いとシリアスのバランス感覚に長けている作風に惹かれるタイプです。</span>
+        <span class="rc-works">代表作：涼宮ハルヒの憂鬱　など</span>
+      </div>
+      <div class="reveal-card">
+        <span class="rc-name">石立太一</span>
+        <span class="rc-desc">あなたに一番近いのは石立太一です。京都アニメーションの次世代を担う監督。繊細な感情表現と、音楽・美術を活かした画作りの美しさに強く惹かれるタイプです。</span>
+        <span class="rc-works">代表作：ヴァイオレット・エヴァーガーデン　など</span>
+      </div>
+      <div class="reveal-card">
+        <span class="rc-name">水島努</span>
+        <span class="rc-desc">あなたに一番近いのは水島努です。ジャンルを問わない振れ幅の広さが持ち味。コメディからミリタリー、業界ものまで幅広く手掛け、どの作品もテンポの良さが光る作風に惹かれるタイプです。</span>
+        <span class="rc-works">代表作：SHIROBAKO　など</span>
+      </div>
+      <div class="reveal-card">
+        <span class="rc-name">新海誠</span>
+        <span class="rc-desc">あなたに一番近いのは新海誠です。CoMix Wave Films所属、個人制作出身という異色の経歴を持ちながら、緻密で美しい映像美と繊細な心理描写で『君の名は。』を国民的大ヒットに導いた監督。圧倒的な映像美に強く惹かれるタイプです。</span>
+        <span class="rc-works">代表作：君の名は。　など</span>
+      </div>
+      <div class="reveal-card">
+        <span class="rc-name">山田尚子</span>
+        <span class="rc-desc">あなたに一番近いのは山田尚子です。京都アニメーション出身、現在はサイエンスSARUに軸足を移す監督。キャラクターの視線や仕草といった、言葉にならない感情の機微を映像で語る手腕に定評があり、繊細な感情表現に強く惹かれるタイプです。</span>
+        <span class="rc-works">代表作：映画 聲の形　など</span>
+      </div>
+      <div class="reveal-card">
+        <span class="rc-name">幾原邦彦</span>
+        <span class="rc-desc">あなたに一番近いのは幾原邦彦です。演劇的な演出とメタファーに満ちた独特の映像表現で、カルト的な人気を誇る監督。「イクニ」の愛称で親しまれ、社会的なテーマを寓話的に描く作風に強く惹かれるタイプです。</span>
+        <span class="rc-works">代表作：少女革命ウテナ　など</span>
+      </div>
+    </div>
+  </div>
+
+<div class="progress-wrap"><div class="progress-bar" id="progressBar"></div></div>
 
   <div id="startScreen">
     <div class="q-card">

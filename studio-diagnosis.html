@@ -119,6 +119,14 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
 .footer-link { color: var(--text-muted); text-decoration: none; font-size: 0.85rem; }
 .footer-link:hover { color: #fff; }
 .copyright { font-size: 0.8rem; color: rgba(255,255,255,0.3); }
+
+.reveal-section { max-width: 880px; margin: 0 auto 28px; padding: 0 20px; }
+.reveal-title { font-size: 1.05rem; font-weight: 700; margin-bottom: 14px; color: var(--text-main); }
+.reveal-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
+.reveal-card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px; padding: 16px; }
+.reveal-card .rc-name { font-weight: 700; color: var(--accent); margin-bottom: 6px; display: block; }
+.reveal-card .rc-desc { font-size: 0.85rem; color: var(--text-muted); line-height: 1.7; }
+.reveal-card .rc-works { font-size: 0.78rem; color: var(--star-color); margin-top: 8px; display: block; }
 </style>
 </head>
 <body>
@@ -141,7 +149,93 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
     <p class="page-desc">5つの質問に答えるだけで、あなたの好みに一番近いアニメ制作会社がわかります。所要時間は約1分です。</p>
   </div>
 
-  <div class="progress-wrap"><div class="progress-bar" id="progressBar"></div></div>
+    <div class="reveal-section">
+    <h2 class="reveal-title">診断に登場する制作会社たち（全16社）</h2>
+    <div class="reveal-grid">
+      <div class="reveal-card">
+        <span class="rc-name">P.A.WORKS</span>
+        <span class="rc-desc">あなたに一番近いのはP.A.WORKSです。地方を舞台にした日常や、じんわりと心に残る人間ドラマを丁寧に描くのが持ち味の制作会社。派手さより、静かな余韻や登場人物の生活感を大切にしたい人にぴったりです。</span>
+        <span class="rc-works">代表作：true tears／花咲くいろは／SHIROBAKO　など</span>
+      </div>
+      <div class="reveal-card">
+        <span class="rc-name">京都アニメーション</span>
+        <span class="rc-desc">あなたに一番近いのは京都アニメーションです。圧倒的な作画クオリティと、キャラクターの表情・仕草まで作り込まれた繊細な演出が持ち味。感情表現の緻密さで魅せる作品が好きな人に向いています。</span>
+        <span class="rc-works">代表作：響け！ユーフォニアム／涼宮ハルヒの憂鬱／京アニ作品全般</span>
+      </div>
+      <div class="reveal-card">
+        <span class="rc-name">CloverWorks</span>
+        <span class="rc-desc">あなたに一番近いのはCloverWorksです。ジャンルを問わず幅広く手掛け、どこか今っぽく洗練された空気感を作るのが得意な制作会社。新しい感性のアニメを求める人にぴったりです。</span>
+        <span class="rc-works">代表作：SPY×FAMILY／その着せ替え人形は恋をする　など</span>
+      </div>
+      <div class="reveal-card">
+        <span class="rc-name">A-1 Pictures</span>
+        <span class="rc-desc">あなたに一番近いのはA-1 Picturesです。大型IPを派手な演出で見せる、王道エンタメの安定感が持ち味の制作会社。スカッとする展開やわかりやすい面白さを求める人に向いています。</span>
+        <span class="rc-works">代表作：ソードアート・オンライン／四月は君の嘘　など</span>
+      </div>
+      <div class="reveal-card">
+        <span class="rc-name">wit studio</span>
+        <span class="rc-desc">あなたに一番近いのはwit studioです。緊張感のあるダークな世界観と、息をのむようなアクション演出が持ち味の制作会社。じっくり見せる重厚なシリアス作品が好きな人にぴったりです。</span>
+        <span class="rc-works">代表作：進撃の巨人（1〜3期）／甲鉄城のカバネリ　など</span>
+      </div>
+      <div class="reveal-card">
+        <span class="rc-name">MAPPA</span>
+        <span class="rc-desc">あなたに一番近いのはMAPPAです。原作の熱量をそのまま画面にぶつけるような、ハイテンションな作画と演出が持ち味の制作会社。ダークな世界観のバトルものを全力で楽しみたい人に向いています。</span>
+        <span class="rc-works">代表作：呪術廻戦／チェンソーマン／進撃の巨人 The Final Season</span>
+      </div>
+      <div class="reveal-card">
+        <span class="rc-name">スタジオジブリ</span>
+        <span class="rc-desc">あなたに一番近いのはスタジオジブリです。自然や日常の中にある温かさ、手描きならではの豊かな質感を大切にする制作会社。世代を超えて愛される、心を癒す物語に惹かれるタイプです。</span>
+        <span class="rc-works">代表作：となりのトトロ／千と千尋の神隠し／もののけ姫　など</span>
+      </div>
+      <div class="reveal-card">
+        <span class="rc-name">東映アニメーション</span>
+        <span class="rc-desc">あなたに一番近いのは東映アニメーションです。長く愛される王道の少年漫画・ファミリー向け作品を作り続けてきた老舗。努力・友情・勝利のわかりやすい熱さに心動かされるタイプです。</span>
+        <span class="rc-works">代表作：ドラゴンボール／ONE PIECE／プリキュアシリーズ　など</span>
+      </div>
+      <div class="reveal-card">
+        <span class="rc-name">ufotable</span>
+        <span class="rc-desc">あなたに一番近いのはufotableです。デジタル作画による圧倒的なエフェクトとアクション演出で魅せる制作会社。息をのむような戦闘シーンのクオリティに強く惹かれるタイプです。</span>
+        <span class="rc-works">代表作：鬼滅の刃／Fateシリーズ　など</span>
+      </div>
+      <div class="reveal-card">
+        <span class="rc-name">バンダイナムコフィルムワークス（サンライズ）</span>
+        <span class="rc-desc">あなたに一番近いのはバンダイナムコフィルムワークス（旧サンライズ）です。半世紀近く続くロボット・メカアニメの系譜を作り続けてきた制作会社。壮大な世界観と長く愛せる作品世界に浸りたいタイプです。</span>
+        <span class="rc-works">代表作：機動戦士ガンダムシリーズ　など</span>
+      </div>
+      <div class="reveal-card">
+        <span class="rc-name">BONES</span>
+        <span class="rc-desc">あなたに一番近いのはBONESです。スタイリッシュなキャラクターデザインと、格好良さを追求したアクション演出が持ち味の制作会社。かっこよさと熱さを両立した作品に惹かれるタイプです。</span>
+        <span class="rc-works">代表作：僕のヒーローアカデミア／鋼の錬金術師／モブサイコ100　など</span>
+      </div>
+      <div class="reveal-card">
+        <span class="rc-name">MADHOUSE</span>
+        <span class="rc-desc">あなたに一番近いのはMADHOUSEです。ジャンルを問わない実験精神と、心理的などんでん返しを得意とする老舗制作会社。予測を裏切る展開や、芸術性の高い作品に惹かれるタイプです。</span>
+        <span class="rc-works">代表作：DEATH NOTE／葬送のフリーレン／パーフェクトブルー　など</span>
+      </div>
+      <div class="reveal-card">
+        <span class="rc-name">TRIGGER</span>
+        <span class="rc-desc">あなたに一番近いのはTRIGGERです。常識を軽々と飛び越える規格外のテンションと、独創的な演出が持ち味の制作会社。予定調和を壊す展開にワクワクするタイプです。</span>
+        <span class="rc-works">代表作：キルラキル／プロメア／SSSS.GRIDMAN　など</span>
+      </div>
+      <div class="reveal-card">
+        <span class="rc-name">サイエンスSARU</span>
+        <span class="rc-desc">あなたに一番近いのはサイエンスSARUです。現実と地続きの不思議な世界観と、実験的で自由な絵作りを追求する制作会社。他にはない独創的な映像表現に惹かれるタイプです。</span>
+        <span class="rc-works">代表作：平家物語／きみの色／夜は短し歩けよ乙女　など</span>
+      </div>
+      <div class="reveal-card">
+        <span class="rc-name">スタジオKAI</span>
+        <span class="rc-desc">あなたに一番近いのはスタジオKAIです。音楽・アイドル・パフォーマンス系の作品を中心に、ライブ感あふれる映像を手掛ける制作会社。作品世界にどっぷり浸れるエンタメを求めるタイプです。</span>
+        <span class="rc-works">代表作：ウマ娘 プリティーダービー シリーズ　など</span>
+      </div>
+      <div class="reveal-card">
+        <span class="rc-name">スタジオバインド</span>
+        <span class="rc-desc">あなたに一番近いのはスタジオバインドです。原作の世界観を長期的・計画的に、丁寧に作り込む誠実な姿勢が持ち味の制作会社。じっくり積み上げた末の納得感を大事にするタイプです。</span>
+        <span class="rc-works">代表作：無職転生 〜異世界行ったら本気だす〜　など</span>
+      </div>
+    </div>
+  </div>
+
+<div class="progress-wrap"><div class="progress-bar" id="progressBar"></div></div>
 
   <div id="startScreen">
     <div class="q-card">

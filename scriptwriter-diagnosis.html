@@ -97,6 +97,14 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
 .footer-link { color: var(--text-muted); text-decoration: none; font-size: 0.85rem; }
 .footer-link:hover { color: #fff; }
 .copyright { font-size: 0.8rem; color: rgba(255,255,255,0.3); }
+
+.reveal-section { max-width: 880px; margin: 0 auto 28px; padding: 0 20px; }
+.reveal-title { font-size: 1.05rem; font-weight: 700; margin-bottom: 14px; color: var(--text-main); }
+.reveal-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
+.reveal-card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px; padding: 16px; }
+.reveal-card .rc-name { font-weight: 700; color: var(--accent); margin-bottom: 6px; display: block; }
+.reveal-card .rc-desc { font-size: 0.85rem; color: var(--text-muted); line-height: 1.7; }
+.reveal-card .rc-works { font-size: 0.78rem; color: var(--star-color); margin-top: 8px; display: block; }
 </style>
 </head>
 <body>
@@ -119,7 +127,38 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
     <p class="page-desc">5つの質問に答えるだけで、あなたの好みに一番近いアニメ脚本家がわかります。所要時間は約1分です。</p>
   </div>
 
-  <div class="progress-wrap"><div class="progress-bar" id="progressBar"></div></div>
+    <div class="reveal-section">
+    <h2 class="reveal-title">診断に登場する脚本家たち（全5名）</h2>
+    <div class="reveal-grid">
+      <div class="reveal-card">
+        <span class="rc-name">吉田玲子</span>
+        <span class="rc-desc">あなたに一番近いのは吉田玲子です。日常の空気感と、キャラクター同士のさりげない会話を書かせたら随一の脚本家。派手な事件がなくても飽きさせない、いわゆる「日常もの」の名手というイメージが強いタイプです。</span>
+        <span class="rc-works">代表作：けいおん!　など</span>
+      </div>
+      <div class="reveal-card">
+        <span class="rc-name">岡田麿里</span>
+        <span class="rc-desc">あなたに一番近いのは岡田麿里です。感情のむき出し方が独特で、いわゆる「エモい」を体現するような脚本家。青春の痛みや後悔を容赦なく描く作風に強く惹かれるタイプです。</span>
+        <span class="rc-works">代表作：あの日見た花の名前を僕達はまだ知らない。　など</span>
+      </div>
+      <div class="reveal-card">
+        <span class="rc-name">花田十輝</span>
+        <span class="rc-desc">あなたに一番近いのは花田十輝です。テンポの良いコメディとラブコメを量産し続けている脚本家。原作ものの「間」の作り方が上手く、キャラの掛け合いが小気味良い作風に惹かれるタイプです。</span>
+        <span class="rc-works">代表作：宇宙よりも遠い場所　など</span>
+      </div>
+      <div class="reveal-card">
+        <span class="rc-name">横手美智子</span>
+        <span class="rc-desc">あなたに一番近いのは横手美智子です。シリアスからキッズ向けまで守備範囲が異様に広い脚本家。長期シリーズの構成を任されることが多く、物語を破綻させずに畳む手腕に定評があるタイプに惹かれます。</span>
+        <span class="rc-works">代表作：SHIROBAKO　など</span>
+      </div>
+      <div class="reveal-card">
+        <span class="rc-name">あおしまたかし</span>
+        <span class="rc-desc">あなたに一番近いのはあおしまたかしです。日常コメディの脚本・シリーズ構成を数多く手がける脚本家。キャラクターの魅力を引き出す話の並び順や緩急の作り方に、構成の妙を感じるタイプです。</span>
+        <span class="rc-works">代表作：みつどもえ　など</span>
+      </div>
+    </div>
+  </div>
+
+<div class="progress-wrap"><div class="progress-bar" id="progressBar"></div></div>
 
   <div id="startScreen">
     <div class="q-card">
