@@ -87,6 +87,15 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
 .footer-links { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 12px; }
 .footer-link { color: var(--text-muted); text-decoration: none; font-size: 0.82rem; }
 .copyright { font-size: 0.78rem; color: rgba(255,255,255,0.3); }
+
+.reveal-section { max-width: 880px; margin: 0 auto 28px; padding: 0 20px; }
+.reveal-title { font-size: 1.05rem; font-weight: 700; margin-bottom: 6px; color: var(--text-main); }
+.reveal-note { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 14px; line-height: 1.7; }
+.reveal-group { margin-bottom: 18px; }
+.reveal-group-title { font-size: 0.85rem; font-weight: 700; color: var(--accent); margin-bottom: 8px; }
+.reveal-list { list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 6px 16px; }
+.reveal-list li { font-size: 0.82rem; color: var(--text-muted); line-height: 1.6; padding: 4px 0; border-bottom: 1px dashed var(--border-color); }
+.reveal-list li b { color: var(--text-main); font-weight: 600; }
 </style>
 </head>
 <body>
@@ -109,7 +118,37 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
     <p class="page-desc">6つの質問から、あなたの"アニメ視聴者としてのプロフィールカード"を作成します。画像として保存・シェアできます。</p>
   </div>
 
-  <div class="progress-wrap"><div class="progress-bar" id="progressBar"></div></div>
+    <div class="reveal-section">
+    <h2 class="reveal-title">診断で分かる5つのステータス</h2>
+    <p class="reveal-note">6つの質問への回答から、以下の5項目を数値化してステータスカードを作成します。</p>
+    <ul class="reveal-list">
+      <li><b>経験値</b> — アニメを見始めた時期の長さ</li>
+      <li><b>視聴の幅</b> — 1クールに視聴する本数</li>
+      <li><b>涙腺</b> — 感動しやすいジャンル・場面の傾向</li>
+      <li><b>こだわり</b> — 脚本・演出・キャラのどこを重視するか</li>
+      <li><b>継続力</b> — 一番長く追っているシリーズの年数</li>
+    </ul>
+    <div class="reveal-group">
+      <div class="reveal-group-title">診断で判定される視聴タイプ（4種）</div>
+      <ul class="reveal-list">
+        <li><b>脚本派</b> — 脚本・構成の巧さを重視</li>
+        <li><b>演出派</b> — 作画・演出のクオリティを重視</li>
+        <li><b>キャラ萌え派</b> — キャラクター・声優の魅力を重視</li>
+        <li><b>自由派</b> — 特にこだわらず気楽に楽しむ</li>
+      </ul>
+    </div>
+    <div class="reveal-group">
+      <div class="reveal-group-title">診断で判定される視聴スタイル（4種）</div>
+      <ul class="reveal-list">
+        <li><b>深夜アニメ探求者</b> — 深夜0時〜2時にリアルタイム視聴</li>
+        <li><b>スキマ視聴の達人</b> — 通勤・通学のスキマ時間に視聴</li>
+        <li><b>週末一気見タイプ</b> — 週末にまとめて一気見</li>
+        <li><b>コツコツ追走型</b> — 配信された分をこまめに視聴</li>
+      </ul>
+    </div>
+  </div>
+
+<div class="progress-wrap"><div class="progress-bar" id="progressBar"></div></div>
 
   <div id="startScreen">
     <div class="start-card">
