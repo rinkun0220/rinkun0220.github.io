@@ -14,8 +14,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>あなたに合う監督診断｜ANIMEDB</title>
 <link rel="canonical" href="https://anime-db.jp/director-diagnosis.html">
-<meta name="description" content="7つの質問に答えるだけで、あなたの好みに近いアニメ監督を診断。長井龍雪・石原立也・石立太一・水島努・新海誠・山田尚子・幾原邦彦の中から結果が出ます。">
-<meta name="keywords" content="監督診断,アニメ診断,長井龍雪,石原立也,石立太一,水島努,新海誠,山田尚子,幾原邦彦">
+<meta name="description" content="7つの質問に答えるだけで、あなたの好みに近いアニメ監督を診断。長井龍雪・石原立也・石立太一・水島努・新海誠・山田尚子・幾原邦彦・高松信司の中から結果が出ます。">
+<meta name="keywords" content="監督診断,アニメ診断,長井龍雪,石原立也,石立太一,水島努,新海誠,山田尚子,幾原邦彦,高松信司">
 <meta name="robots" content="index,follow">
 <meta name="author" content="ANIMEDB">
 <meta property="og:title" content="あなたに合う監督診断｜ANIMEDB">
@@ -125,10 +125,11 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
     <span class="page-tag">🎬 診断コンテンツ</span>
     <h1 class="page-title">あなたに合う監督診断</h1>
     <p class="page-desc">7つの質問に答えるだけで、あなたの好みに一番近いアニメ監督がわかります。所要時間は約1〜2分です。</p>
+    <p style="font-size:.78rem;color:var(--text-muted);margin-top:-24px;margin-bottom:32px;">※文中敬称略</p>
   </div>
 
     <div class="reveal-section">
-    <h2 class="reveal-title">診断に登場する監督たち（全7名）</h2>
+    <h2 class="reveal-title">診断に登場する監督たち（全8名）</h2>
     <div class="reveal-grid">
       <div class="reveal-card">
         <span class="rc-name">長井龍雪</span>
@@ -164,6 +165,11 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
         <span class="rc-name">幾原邦彦</span>
         <span class="rc-desc">あなたに一番近いのは幾原邦彦です。演劇的な演出とメタファーに満ちた独特の映像表現で、カルト的な人気を誇る監督。「イクニ」の愛称で親しまれ、社会的なテーマを寓話的に描く作風に強く惹かれるタイプです。</span>
         <span class="rc-works">代表作：少女革命ウテナ　など</span>
+      </div>
+      <div class="reveal-card">
+        <span class="rc-name">高松信司</span>
+        <span class="rc-desc">あなたに一番近いのは高松信司です。『銀魂』のブレイク以降、『男子高校生の日常』『坂本ですが？』では監督と全話脚本を兼任するなど、コメディ作品における圧倒的な脚本・演出センスに定評がある監督。テンポの良いギャグと緩急のついた演出に強く惹かれるタイプです。</span>
+        <span class="rc-works">代表作：銀魂　など</span>
       </div>
     </div>
   </div>
@@ -204,7 +210,8 @@ const questions = [
       { label: "ジャンルを問わないテンポの良さ", scores: { mizushima: 3, ishihara: 1 } },
       { label: "綿密に計算された、圧倒的に美しい映像美", scores: { shinkai: 3, ishidate: 1 } },
       { label: "視線や仕草で語る、言葉にならない感情の機微", scores: { yamada: 3, ishidate: 1 } },
-      { label: "演劇的でメタファーに満ちた独特の映像表現", scores: { ikuhara: 3, yamada: 1 } }
+      { label: "演劇的でメタファーに満ちた独特の映像表現", scores: { ikuhara: 3, yamada: 1 } },
+      { label: "テンポよく畳みかけるギャグ演出", scores: { takamatsu: 3, mizushima: 1 } }
     ]
   },
   {
@@ -216,7 +223,8 @@ const questions = [
       { label: "コメディからミリタリー、業界ものまで幅広く", scores: { mizushima: 3 } },
       { label: "恋愛×SF・ファンタジーの壮大な物語", scores: { shinkai: 3 } },
       { label: "女性同士や友情など、繊細な関係性を描く作品", scores: { yamada: 3, ikuhara: 1 } },
-      { label: "カルト的な人気を誇る、寓話的で難解な作品", scores: { ikuhara: 3 } }
+      { label: "カルト的な人気を誇る、寓話的で難解な作品", scores: { ikuhara: 3 } },
+      { label: "テンポの良いギャグ・コメディ作品", scores: { takamatsu: 3, mizushima: 1 } }
     ]
   },
   {
@@ -228,7 +236,8 @@ const questions = [
       { label: "テンポよく物語が転がっていく瞬間", scores: { mizushima: 3, ishihara: 1 } },
       { label: "圧倒的な映像美に息をのむ瞬間", scores: { shinkai: 3, ishidate: 1 } },
       { label: "ふとした仕草に心情がにじむ瞬間", scores: { yamada: 3, ishidate: 1 } },
-      { label: "強いメッセージ性が炸裂する瞬間", scores: { ikuhara: 3, nagai: 1 } }
+      { label: "強いメッセージ性が炸裂する瞬間", scores: { ikuhara: 3, nagai: 1 } },
+      { label: "畳みかけるギャグが炸裂する瞬間", scores: { takamatsu: 3, ishihara: 1 } }
     ]
   },
   {
@@ -240,7 +249,8 @@ const questions = [
       { label: "ジャンルを超えた振れ幅の広さ", scores: { mizushima: 3 } },
       { label: "個人制作出身ならではの、こだわり抜いた映像美", scores: { shinkai: 3, ishidate: 1 } },
       { label: "キャラクターの内面をすくい上げる繊細な演出", scores: { yamada: 3, ishidate: 1 } },
-      { label: "演劇的な演出と、強いメッセージ性", scores: { ikuhara: 3 } }
+      { label: "演劇的な演出と、強いメッセージ性", scores: { ikuhara: 3 } },
+      { label: "脚本まで一貫して手掛ける、原作の空気感の再現力", scores: { takamatsu: 3, ishihara: 1 } }
     ]
   },
   {
@@ -252,7 +262,8 @@ const questions = [
       { label: "テンポよく展開する軽快な画面", scores: { mizushima: 3 } },
       { label: "圧倒的な作画・美術による情景美", scores: { shinkai: 3, ishidate: 1 } },
       { label: "視線や間で語る、繊細な画面設計", scores: { yamada: 3, ishidate: 1 } },
-      { label: "演劇的でシンボリックな独特の画面構成", scores: { ikuhara: 3, yamada: 1 } }
+      { label: "演劇的でシンボリックな独特の画面構成", scores: { ikuhara: 3, yamada: 1 } },
+      { label: "ギャグのテンポを支える小気味よいカット割り", scores: { takamatsu: 3, mizushima: 1 } }
     ]
   },
   {
@@ -264,7 +275,8 @@ const questions = [
       { label: "スカッと爽快、テンポよくまとまる結末", scores: { mizushima: 3 } },
       { label: "切なくも美しい、心に残る幕引き", scores: { shinkai: 3, ishidate: 1 } },
       { label: "言葉にできない余韻、じんわり効いてくる結末", scores: { yamada: 3 } },
-      { label: "解釈が分かれる、考察したくなる結末", scores: { ikuhara: 3 } }
+      { label: "解釈が分かれる、考察したくなる結末", scores: { ikuhara: 3 } },
+      { label: "笑って終われる、後味の軽い結末", scores: { takamatsu: 3, ishihara: 1 } }
     ]
   },
   {
@@ -276,7 +288,8 @@ const questions = [
       { label: "どんなジャンルにも馴染む幅広いキャラ造形", scores: { mizushima: 3 } },
       { label: "運命に翻弄される、壮大な物語の主人公", scores: { shinkai: 3 } },
       { label: "視線や沈黙で気持ちを伝える寡黙なキャラクター", scores: { yamada: 3, ishidate: 1 } },
-      { label: "記号的・象徴的でどこか非現実的なキャラクター", scores: { ikuhara: 3 } }
+      { label: "記号的・象徴的でどこか非現実的なキャラクター", scores: { ikuhara: 3 } },
+      { label: "ボケとツッコミが小気味よいキャラクター", scores: { takamatsu: 3, mizushima: 1 } }
     ]
   }
 ];
@@ -324,17 +337,23 @@ const results = {
     desc: "あなたに一番近いのは幾原邦彦です。演劇的な演出とメタファーに満ちた独特の映像表現で、カルト的な人気を誇る監督。「イクニ」の愛称で親しまれ、社会的なテーマを寓話的に描く作風に強く惹かれるタイプです。",
     works: "代表作：少女革命ウテナ　など",
     anchor: "ikuhara"
+  },
+  takamatsu: {
+    name: "高松信司",
+    desc: "あなたに一番近いのは高松信司です。『銀魂』のブレイク以降、『男子高校生の日常』『坂本ですが？』では監督と全話脚本を兼任するなど、コメディ作品における圧倒的な脚本・演出センスに定評がある監督。テンポの良いギャグと緩急のついた演出に強く惹かれるタイプです。",
+    works: "代表作：銀魂　など",
+    anchor: "takamatsu"
   }
 };
 
 let currentQ = 0;
-let scores = { nagai: 0, ishihara: 0, ishidate: 0, mizushima: 0, shinkai: 0, yamada: 0, ikuhara: 0 };
+let scores = { nagai: 0, ishihara: 0, ishidate: 0, mizushima: 0, shinkai: 0, yamada: 0, ikuhara: 0, takamatsu: 0 };
 
 function startQuiz() {
   document.getElementById('startScreen').classList.add('hidden');
   document.getElementById('quizScreen').classList.remove('hidden');
   currentQ = 0;
-  scores = { nagai: 0, ishihara: 0, ishidate: 0, mizushima: 0, shinkai: 0, yamada: 0, ikuhara: 0 };
+  scores = { nagai: 0, ishihara: 0, ishidate: 0, mizushima: 0, shinkai: 0, yamada: 0, ikuhara: 0, takamatsu: 0 };
   renderQuestion();
 }
 
