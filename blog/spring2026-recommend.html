@@ -60,8 +60,9 @@ header {
 }
 .logo { font-size: 1.5rem; font-weight: 800; text-decoration: none; }
 .logo-a { color: #fff; } .logo-db { color: var(--accent); }
-.nav-links { display: flex; gap: 8px; }
-.nav-item { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; font-weight: 500; padding: 8px 12px; border-radius: 6px; transition: all 0.2s; }
+.nav-links { display: flex; gap: 8px; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; -ms-overflow-style: none; }
+.nav-links::-webkit-scrollbar { display: none; }
+.nav-item { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; font-weight: 500; padding: 8px 12px; border-radius: 6px; transition: all 0.2s; white-space: nowrap; flex-shrink: 0; }
 .nav-item:hover, .nav-item.active { color: #fff; background: rgba(255,255,255,0.05); }
 
 .article-wrap { margin-top: var(--nav-height); max-width: 820px; margin-left: auto; margin-right: auto; padding: 48px 24px 80px; }
