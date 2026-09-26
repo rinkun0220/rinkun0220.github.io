@@ -60,6 +60,13 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
 .article-body h2{font-size:1.3rem;font-weight:700;margin:40px 0 8px;padding-left:14px;border-left:4px solid var(--accent)}
 .article-body p{font-size:.95rem;margin-bottom:16px;line-height:1.9}
 .back-btn{display:inline-flex;align-items:center;gap:6px;color:var(--text-muted);text-decoration:none;font-size:.85rem;margin-bottom:32px;transition:color .2s}.back-btn:hover{color:#fff}
+.next-article{display:flex;align-items:center;gap:18px;background:linear-gradient(135deg,rgba(255,71,87,0.14),rgba(255,107,129,0.06));border:2px solid var(--accent);border-radius:14px;padding:22px 26px;margin:36px 0 8px;text-decoration:none;transition:transform .2s,box-shadow .2s}
+.next-article:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(230,72,90,0.25)}
+.next-article-label{font-size:.72rem;font-weight:700;color:var(--accent);letter-spacing:.03em;margin-bottom:6px}
+.next-article-title{font-size:1.08rem;font-weight:700;color:#fff;line-height:1.5}
+.next-article-desc{font-size:.83rem;color:var(--text-muted);margin-top:6px;line-height:1.7}
+.next-article-arrow{font-size:1.7rem;color:var(--accent);flex-shrink:0}
+@media(max-width:600px){.next-article{flex-direction:row;padding:18px 20px}.next-article-arrow{font-size:1.3rem}}
 .site-footer{background:var(--bg-darker);border-top:1px solid var(--border-color);padding:30px 24px;text-align:center;margin-top:40px}
 .footer-links{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;margin-bottom:16px}
 .footer-link{color:var(--text-muted);text-decoration:none;font-size:.85rem}.footer-link:hover{color:#fff}
@@ -267,6 +274,15 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
 
     <h2 id="summary">9. まとめ</h2>
     <p>整理すると、赤井三兄妹（沖矢昴・羽田秀吉・世良真純）と安室透という「正体を隠して組織に立ち向かう味方側」の物語が積み重なった先に、17年前の羽田浩司事件という「すべての出発点」が見えてきて、組織ナンバー2のRUM、そしてさらにその上にいる真のトップ「あの方（烏丸蓮耶）」へとたどり着く、という構成になっています。新出先生の一件も含めて、名探偵コナンは「見慣れた顔の裏に、もう一つの正体が隠れている」という仕掛けを、身近な人物から組織のトップまで何段階にも重ねて使いながら物語を広げてきたシリーズだと言えます。整理しながら見返すと、これまで気づかなかった伏線に気づけるはずです。</p>
+
+    <a href="https://anime-db.jp/blog/conan-genetics-guide.html" class="next-article">
+      <div style="flex:1">
+        <div class="next-article-label">🧬 番外編はこちら</div>
+        <div class="next-article-title">名探偵コナン「親から子へ」名探偵の血筋ガイド【工藤家・服部家・毛利家・黒羽家】</div>
+        <div class="next-article-desc">正体編を読み終えたところで一息。工藤新一の推理力から黒羽快斗の怪盗キッドまで、名探偵たちの力が親から子へどう受け継がれてきたのかを整理した番外編もあわせてどうぞ。</div>
+      </div>
+      <div class="next-article-arrow">→</div>
+    </a>
 
   </div>
 
