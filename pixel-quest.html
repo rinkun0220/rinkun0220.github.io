@@ -214,6 +214,10 @@ const LANE_Z = 0;
 const LANE_X = [-1.7, 0, 1.7];
 let playerLane = 1;
 let playerX = 0;
+// 速度の上限（これがないと際限なく加速し、反応時間が人間の限界を割り込んで
+// 「誰もクリアできない」状態になってしまうため上限を設けている）
+const SPEED_CAP_NORMAL = 0.34;
+const SPEED_CAP_HARD = 0.40;
 
 function loadBest() {
   try { return parseInt(localStorage.getItem('animedb_runner_best') || '0'); } catch(e) { return 0; }
@@ -398,10 +402,14 @@ function spawnObstacle() {
   scene.add(mesh);
   obstacles.push({ mesh, h, z: -60, lane });
 
-  const doubleChance = hard ? 0.35 : 0.22;
-  if (speed > 0.19 && Math.random() < doubleChance) {
+  // 2つ目の障害物との間隔は「距離」ではなく「時間（フレーム数）」で決める。
+  // 距離固定だと速度が上がるほどプレイヤーの反応時間が短くなり、
+  // 終盤は人間の反応速度を超えて事実上回避不可能になっていたため修正。
+  const doubleChance = hard ? 0.28 : 0.18;
+  if (speed > 0.22 && Math.random() < doubleChance) {
     const lane2 = Math.floor(Math.random() * 3);
-    const gap = hard ? (6 + Math.random() * 2.5) : (8 + Math.random() * 3);
+    const gapFrames = hard ? (34 + Math.random() * 12) : (42 + Math.random() * 16);
+    const gap = gapFrames * speed * 1.6;
     const h2 = hard ? (0.6 + Math.random() * 0.8) : (0.5 + Math.random() * 0.6);
     const geo2 = new THREE.BoxGeometry(1.0, h2, 0.5);
     const mesh2 = new THREE.Mesh(geo2, mat.clone());
@@ -446,7 +454,10 @@ function update() {
     spawnObstacle();
     const baseMin = hard ? 22 : 28;
     const baseRand = hard ? 20 : 24;
-    spawnTimer = baseMin + Math.random() * baseRand - Math.min(speed * 60, hard ? 16 : 18);
+    // 単発の障害物同士の間隔にも下限（フレーム数）を設け、速度が上がっても
+    // 反応する余地が完全になくならないようにしている
+    const floor = hard ? 20 : 24;
+    spawnTimer = Math.max(floor, baseMin + Math.random() * baseRand - Math.min(speed * 60, hard ? 16 : 18));
   }
 
   for (const o of obstacles) {
@@ -467,7 +478,8 @@ function update() {
   }
 
   score += 1;
-  speed += hard ? 0.00016 : 0.00012;
+  const cap = hard ? SPEED_CAP_HARD : SPEED_CAP_NORMAL;
+  speed = Math.min(cap, speed + (hard ? 0.00016 : 0.00012));
 
   camera.position.y = 3.2 + Math.sin(score * 0.03) * 0.03;
   document.getElementById('hudScore').textContent = 'SCORE: ' + Math.floor(score / 5);
