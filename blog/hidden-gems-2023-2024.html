@@ -37,21 +37,26 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
 .article-tag{display:inline-block;background:#059669;color:#fff;font-size:.75rem;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:16px}
 .article-title{font-size:1.9rem;font-weight:800;line-height:1.4;margin-bottom:16px}
 .article-meta{font-size:.85rem;color:var(--text-muted);display:flex;gap:16px;flex-wrap:wrap;margin-bottom:32px}
-.article-body h2{font-size:1.4rem;font-weight:700;margin:48px 0 16px;padding-left:14px;border-left:4px solid var(--accent)}
-.article-body p{font-size:.95rem;margin-bottom:18px;line-height:1.9}
-.gem-card{background:var(--bg-card);border:1px solid var(--border-color);border-radius:14px;padding:28px;margin:24px 0;position:relative;overflow:hidden}
-.gem-card::before{content:'💎';position:absolute;right:20px;top:20px;font-size:2rem;opacity:.15}
-.gem-num{font-size:.8rem;font-weight:700;color:var(--accent);margin-bottom:8px}
-.gem-title{font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:4px}
-.gem-sub{font-size:.8rem;color:var(--text-muted);margin-bottom:12px}
-.gem-score{display:inline-flex;align-items:center;gap:4px;font-size:.9rem;color:var(--star-color);font-weight:700;margin-bottom:12px}
-.gem-body{font-size:.9rem;line-height:1.85;margin-bottom:14px}
-.gem-why{background:rgba(5,150,105,0.08);border-left:3px solid #059669;padding:10px 14px;border-radius:0 8px 8px 0;font-size:.88rem;color:#34d399}
-.gem-why strong{color:#34d399}
-.streaming-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.toc{background:var(--bg-card);border:1px solid var(--border-color);border-radius:12px;padding:24px;margin:0 0 40px}
+.toc-title{font-size:1rem;font-weight:700;margin-bottom:14px}
+.toc-grid{display:grid;grid-template-columns:1fr 1fr;gap:4px 16px}
+@media(max-width:600px){.toc-grid{grid-template-columns:1fr}}
+.toc-grid a{color:var(--text-muted);text-decoration:none;font-size:.85rem;padding:3px 0}.toc-grid a:hover{color:var(--accent)}
+.gem-card{background:var(--bg-card);border:1px solid var(--border-color);border-radius:14px;padding:24px 28px;margin:20px 0;scroll-margin-top:80px}
+.gem-header{display:flex;align-items:flex-start;gap:12px;margin-bottom:14px;flex-wrap:wrap}
+.gem-num{background:var(--accent);color:#fff;font-size:.85rem;font-weight:800;min-width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+.gem-title-block{flex:1}
+.gem-name{font-size:1.1rem;font-weight:700;color:#fff;line-height:1.4}
+.gem-name a{color:inherit;text-decoration:none}.gem-name a:hover{color:var(--accent)}
+.gem-sub{font-size:.8rem;color:var(--text-muted);margin-top:3px}
+.gem-body{font-size:.92rem;line-height:1.9;margin-bottom:14px;color:var(--text-main)}
+.gem-point{background:rgba(255,71,87,0.08);border-left:3px solid var(--accent);padding:9px 14px;border-radius:0 8px 8px 0;font-size:.87rem;margin-bottom:14px;color:var(--text-muted)}
+.gem-point strong{color:var(--accent)}
+.streaming-row{display:flex;gap:6px;flex-wrap:wrap}
 .badge{font-size:.7rem;font-weight:600;padding:3px 10px;border-radius:4px;text-decoration:none;background:transparent;border:1px solid currentColor}
-.badge.abema{color:#4caf72}.badge.danime{color:#e08a45}.badge.amazon{color:#4aa8d8}.badge.netflix{color:#d9636f}.badge.dmmtv{color:#b9d15f}
-.callout{background:rgba(255,71,87,0.08);border:1px solid rgba(255,71,87,0.2);border-radius:10px;padding:16px 20px;margin:24px 0;font-size:.9rem}.callout strong{color:var(--accent)}
+.badge.abema{color:#4caf72}.badge.danime{color:#e08a45}.badge.amazon{color:#4aa8d8}.badge.netflix{color:#d9636f}.badge.unext{color:#5f8fd9}.badge.dmmtv{color:#b9d15f}.badge.official{background:#444;border:1px solid rgba(255,255,255,0.15)}
+.article-body h2{font-size:1.3rem;font-weight:700;margin:40px 0 8px;padding-left:14px;border-left:4px solid var(--accent)}
+.article-body p{font-size:.95rem;margin-bottom:16px;line-height:1.9}
 .back-btn{display:inline-flex;align-items:center;gap:6px;color:var(--text-muted);text-decoration:none;font-size:.85rem;margin-bottom:32px;transition:color .2s}.back-btn:hover{color:#fff}
 .site-footer{background:var(--bg-darker);border-top:1px solid var(--border-color);padding:30px 24px;text-align:center;margin-top:40px}
 .footer-links{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;margin-bottom:16px}
@@ -75,253 +80,348 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
     2023〜2024年隠れた名作アニメ18選
   </div>
 
-  <span class="article-tag">💎 レビュー</span>
+  <span class="article-tag">💎 隠れた名作</span>
   <h1 class="article-title">2023〜2024年に見逃した隠れた名作アニメ18選</h1>
   <div class="article-meta">
     <span>📅 2026年5月20日</span><span>✍️ ANIMEDB編集部</span><span>⏱ 読了目安：約12分</span>
   </div>
 
+  <div class="toc">
+    <div class="toc-title">📋 作品一覧（全18作品）</div>
+    <div class="toc-grid">
+      <a href="#gem1">1. ラーメン赤猫</a>
+      <a href="#gem2">2. 時々ボソッとロシア語でデレる隣のアーリャさん</a>
+      <a href="#gem3">3. シャングリラ・フロンティア</a>
+      <a href="#gem4">4. 呪術廻戦 懐玉・玉折</a>
+      <a href="#gem5">5. 夜のクラゲは泳げない</a>
+      <a href="#gem6">6. お兄ちゃんはおしまい!</a>
+      <a href="#gem7">7. ダークギャザリング</a>
+      <a href="#gem8">8. 好きな子がめがねを忘れた</a>
+      <a href="#gem9">9. ミギとダリ</a>
+      <a href="#gem10">10. 経験済みなキミと、経験ゼロなオレが、お付き合いする話。</a>
+      <a href="#gem11">11. 16bitセンセーション -ANOTHER LAYER-</a>
+      <a href="#gem12">12. 望まぬ不死の冒険者</a>
+      <a href="#gem13">13. Girls Band Cry</a>
+      <a href="#gem14">14. 忘却バッテリー</a>
+      <a href="#gem15">15. 逃げ上手の若君</a>
+      <a href="#gem16">16. 疑似ハーレム</a>
+      <a href="#gem17">17. 天穂のサクナヒメ</a>
+      <a href="#gem18">18. トリリオンゲーム</a>
+    </div>
+  </div>
+
   <div class="article-body">
+
     <p>2023〜2024年は「ダンダダン」「鬼滅の刃」など話題作が多かった時期でしたが、その陰で見逃されてしまった良作も少なくありません。今回は2023〜2024年に放送された作品の中から、評価は高いのにあまり話題にならなかった「隠れた名作」を18本ピックアップします。</p>
 
-    <h2>💎 2023〜2024年 隠れた名作18選</h2>
 
-    <div class="gem-card">
-      <div class="gem-num">HIDDEN GEM #1</div>
-      <div class="gem-title">ラーメン赤猫</div>
-      <div class="gem-sub">2024年夏〜 / OLM / 日常・コメディ</div>
-      <div class="gem-score">★ 8.0 / 10</div>
+        <div class="gem-card" id="gem1">
+      <div class="gem-header">
+        <div class="gem-num">1</div>
+        <div class="gem-title-block">
+          <div class="gem-name"><a href="https://ramenakaneko.com/" target="_blank" rel="noopener">ラーメン赤猫</a></div>
+          <div class="gem-sub">2024年夏〜 / OLM / 日常・コメディ</div>
+        </div>
+      </div>
       <div class="gem-body">猫が経営するラーメン屋を舞台にした日常系コメディ。猫たちの仕草や言動がリアルで、動物好きには堪らない描写が続きます。笑いとほっこりのバランスが絶妙で、深夜に見るのに最適な作品。派手さはないですが見終わった後に温かい気持ちになれる良作です。</div>
-      <div class="gem-why"><strong>見逃し理由：</strong>地味なタイトルと日常系という立ち位置から、話題にならなかった。でも実際に見ると笑いが止まらない。</div>
+      <div class="gem-point"><strong>見逃し理由：</strong>地味なタイトルと日常系という立ち位置から、話題にならなかった。でも実際に見ると笑いが止まらない。</div>
       <div class="streaming-row">
         <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
         <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
+        <a href="https://ramenakaneko.com/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
       </div>
     </div>
 
-    <div class="gem-card">
-      <div class="gem-num">HIDDEN GEM #2</div>
-      <div class="gem-title">時々ボソッとロシア語でデレる隣のアーリャさん</div>
-      <div class="gem-sub">2024年夏 / Doga Kobo / ラブコメ</div>
-      <div class="gem-score">★ 7.9 / 10</div>
+    <div class="gem-card" id="gem2">
+      <div class="gem-header">
+        <div class="gem-num">2</div>
+        <div class="gem-title-block">
+          <div class="gem-name"><a href="https://roshidere.com/" target="_blank" rel="noopener">時々ボソッとロシア語でデレる隣のアーリャさん</a></div>
+          <div class="gem-sub">2024年夏 / Doga Kobo / ラブコメ</div>
+        </div>
+      </div>
       <div class="gem-body">ロシア語でこっそりデレるという独自設定が光るラブコメ。実はロシア語を理解している主人公という構図が生む独特の緊張感とドキドキが癖になります。笑いどころも多く、ラブコメ好きなら間違いなく楽しめます。アーリャのキャラクターが非常に魅力的。</div>
-      <div class="gem-why"><strong>見逃し理由：</strong>タイトルが長くて検索されにくかった。でも設定の面白さは本物。</div>
+      <div class="gem-point"><strong>見逃し理由：</strong>タイトルが長くて検索されにくかった。でも設定の面白さは本物。</div>
       <div class="streaming-row">
         <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
         <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
         <a href="https://netflix.com" target="_blank" rel="noopener" class="badge netflix">Netflix</a>
+        <a href="https://roshidere.com/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
       </div>
     </div>
 
-    <div class="gem-card">
-      <div class="gem-num">HIDDEN GEM #3</div>
-      <div class="gem-title">シャングリラ・フロンティア</div>
-      <div class="gem-sub">2023年〜2024年 / C2C / ゲーム・バトル</div>
-      <div class="gem-score">★ 8.2 / 10</div>
+    <div class="gem-card" id="gem3">
+      <div class="gem-header">
+        <div class="gem-num">3</div>
+        <div class="gem-title-block">
+          <div class="gem-name"><a href="https://anime.shangrilafrontier.com/" target="_blank" rel="noopener">シャングリラ・フロンティア</a></div>
+          <div class="gem-sub">2023年〜2024年 / C2C / ゲーム・バトル</div>
+        </div>
+      </div>
       <div class="gem-body">クソゲーハンターがVRMMOの最高難易度ゲームに挑む作品。ゲームを楽しむことへの純粋な熱量が視聴者に伝わってきて、見ていて気持ちのいい作品です。バトルシーンのクオリティも高く、特に終盤のボス戦は今のアニメの水準でも引けを取らない完成度。</div>
-      <div class="gem-why"><strong>見逃し理由：</strong>ゲームアニメというジャンルの先入観で敬遠した人が多い。実際はゲームを知らなくても楽しめる。</div>
+      <div class="gem-point"><strong>見逃し理由：</strong>ゲームアニメというジャンルの先入観で敬遠した人が多い。実際はゲームを知らなくても楽しめる。</div>
       <div class="streaming-row">
         <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
         <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
+        <a href="https://anime.shangrilafrontier.com/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
       </div>
     </div>
 
-    <div class="gem-card">
-      <div class="gem-num">HIDDEN GEM #4</div>
-      <div class="gem-title">呪術廻戦 懐玉・玉折</div>
-      <div class="gem-sub">2023年 / MAPPA / バトル・前日譚</div>
-      <div class="gem-score">★ 8.7 / 10</div>
+    <div class="gem-card" id="gem4">
+      <div class="gem-header">
+        <div class="gem-num">4</div>
+        <div class="gem-title-block">
+          <div class="gem-name"><a href="https://jujutsukaisen.jp/" target="_blank" rel="noopener">呪術廻戦 懐玉・玉折</a></div>
+          <div class="gem-sub">2023年 / MAPPA / バトル・前日譚</div>
+        </div>
+      </div>
       <div class="gem-body">本編の人気に隠れてしまいがちな五条悟の過去編ですが、独立したドラマとして非常に高い完成度を誇ります。五条と夏油の友情と決別を描いた物語は、本編を見ていない人でも楽しめる構造になっており、むしろここから呪術を見始めた人も多かったようです。</div>
-      <div class="gem-why"><strong>見逃し理由：</strong>本編が長すぎて追いきれなかった人が多い。でもこのアークだけ切り取っても傑作。</div>
+      <div class="gem-point"><strong>見逃し理由：</strong>本編が長すぎて追いきれなかった人が多い。でもこのアークだけ切り取っても傑作。</div>
       <div class="streaming-row">
         <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
         <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
         <a href="https://netflix.com" target="_blank" rel="noopener" class="badge netflix">Netflix</a>
+        <a href="https://jujutsukaisen.jp/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
       </div>
     </div>
 
-    <div class="gem-card">
-      <div class="gem-num">HIDDEN GEM #5</div>
-      <div class="gem-title">夜のクラゲは泳げない</div>
-      <div class="gem-sub">2024年春 / domerica / 青春・音楽</div>
-      <div class="gem-score">★ 8.1 / 10</div>
+    <div class="gem-card" id="gem5">
+      <div class="gem-header">
+        <div class="gem-num">5</div>
+        <div class="gem-title-block">
+          <div class="gem-name"><a href="https://yorukura-anime.com/" target="_blank" rel="noopener">夜のクラゲは泳げない</a></div>
+          <div class="gem-sub">2024年春 / domerica / 青春・音楽</div>
+        </div>
+      </div>
       <div class="gem-body">SNSで活動するイラストレーターと音楽を通じた女の子たちの青春を描いた作品。現代のSNS文化をリアルに描写しつつ、創作活動の喜びと苦しみを丁寧に掘り下げています。音楽シーンのクオリティが高く、使われる楽曲のセンスも良い。青春系が好きな人には強くおすすめします。</div>
-      <div class="gem-why"><strong>見逃し理由：</strong>春クールはラインナップが豊富で埋もれてしまった。でも刺さる人には深く刺さる作品。</div>
+      <div class="gem-point"><strong>見逃し理由：</strong>春クールはラインナップが豊富で埋もれてしまった。でも刺さる人には深く刺さる作品。</div>
       <div class="streaming-row">
         <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
-        
+        <a href="https://yorukura-anime.com/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
       </div>
     </div>
 
-
-    <div class="gem-card">
-      <div class="gem-num">HIDDEN GEM #6</div>
-      <div class="gem-title">お兄ちゃんはおしまい!</div>
-      <div class="gem-sub">2023年冬 / スタジオバインド / コメディ・TS（性転換）</div>
-      <div class="gem-score">★ 8.0 / 10</div>
+    <div class="gem-card" id="gem6">
+      <div class="gem-header">
+        <div class="gem-num">6</div>
+        <div class="gem-title-block">
+          <div class="gem-name"><a href="https://onimai.jp/" target="_blank" rel="noopener">お兄ちゃんはおしまい!</a></div>
+          <div class="gem-sub">2023年冬 / スタジオバインド / コメディ・TS（性転換）</div>
+        </div>
+      </div>
       <div class="gem-body">ひきこもりの兄が薬で妹そっくりの女の子になってしまうというぶっ飛んだ設定のコメディ。下品にならず、むしろ「女の子として生活する戸惑いと発見」を繊細に描いていて、笑いながらもどこか温かい気持ちになれます。作画のクオリティが非常に高く、日常芝居の可愛さだけでも見る価値がある作品です。</div>
-      <div class="gem-why"><strong>見逃し理由：</strong>タイトルとジャケットのインパクトで「ネタアニメ」だと誤解されがち。中身は丁寧な日常コメディです。</div>
+      <div class="gem-point"><strong>見逃し理由：</strong>タイトルとジャケットのインパクトで「ネタアニメ」だと誤解されがち。中身は丁寧な日常コメディです。</div>
       <div class="streaming-row">
         <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
         <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
+        <a href="https://onimai.jp/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
       </div>
     </div>
 
-    <div class="gem-card">
-      <div class="gem-num">HIDDEN GEM #7</div>
-      <div class="gem-title">ダークギャザリング</div>
-      <div class="gem-sub">2023年夏〜冬 / OLM / ホラー・アクション</div>
-      <div class="gem-score">★ 7.9 / 10</div>
+    <div class="gem-card" id="gem7">
+      <div class="gem-header">
+        <div class="gem-num">7</div>
+        <div class="gem-title-block">
+          <div class="gem-name"><a href="https://darkgathering.jp/" target="_blank" rel="noopener">ダークギャザリング</a></div>
+          <div class="gem-sub">2023年夏〜冬 / OLM / ホラー・アクション</div>
+        </div>
+      </div>
       <div class="gem-body">幽霊が見える少年と、霊を使役するお金持ちの少女が悪霊退治に挑むダークファンタジー。単なる怖がらせで終わらず、少年の過去や家族の秘密を絡めたシリアスな展開が続き、気づけば続きが気になって止まらなくなります。ホラーとバトルのバランスが絶妙な良作です。</div>
-      <div class="gem-why"><strong>見逃し理由：</strong>同時期の話題作の陰に隠れがちだったが、2期制作も決定した実力派。</div>
+      <div class="gem-point"><strong>見逃し理由：</strong>同時期の話題作の陰に隠れがちだったが、2期制作も決定した実力派。</div>
       <div class="streaming-row">
         <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
         <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
+        <a href="https://darkgathering.jp/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
       </div>
     </div>
 
-    <div class="gem-card">
-      <div class="gem-num">HIDDEN GEM #8</div>
-      <div class="gem-title">好きな子がめがねを忘れた</div>
-      <div class="gem-sub">2023年夏 / GoHands / ラブコメ</div>
-      <div class="gem-score">★ 8.0 / 10</div>
+    <div class="gem-card" id="gem8">
+      <div class="gem-header">
+        <div class="gem-num">8</div>
+        <div class="gem-title-block">
+          <div class="gem-name"><a href="https://sh-anime.shochiku.co.jp/sukimega/" target="_blank" rel="noopener">好きな子がめがねを忘れた</a></div>
+          <div class="gem-sub">2023年夏 / GoHands / ラブコメ</div>
+        </div>
+      </div>
       <div class="gem-body">視力が悪すぎて眼鏡がないと何も見えないヒロインと、それを甘やかしたい主人公の「ゼロ距離ラブコメ」。ケンカも三角関係もほぼ起きず、ひたすら甘くて尊いだけという潔さが逆に癖になります。疲れているときに見ると、砂糖を直接舐めるような幸福感が得られる作品です。</div>
-      <div class="gem-why"><strong>見逃し理由：</strong>ラブコメが乱立するクールに埋もれがちだったが、「甘さ特化」というジャンルでは頭一つ抜けていた。</div>
+      <div class="gem-point"><strong>見逃し理由：</strong>ラブコメが乱立するクールに埋もれがちだったが、「甘さ特化」というジャンルでは頭一つ抜けていた。</div>
       <div class="streaming-row">
         <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
         <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
+        <a href="https://sh-anime.shochiku.co.jp/sukimega/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
       </div>
     </div>
 
-    <div class="gem-card">
-      <div class="gem-num">HIDDEN GEM #9</div>
-      <div class="gem-title">ミギとダリ</div>
-      <div class="gem-sub">2023年秋 / Geek Toys / ミステリー・サスペンス</div>
-      <div class="gem-score">★ 8.3 / 10</div>
+    <div class="gem-card" id="gem9">
+      <div class="gem-header">
+        <div class="gem-num">9</div>
+        <div class="gem-title-block">
+          <div class="gem-name"><a href="https://migitodali.com/" target="_blank" rel="noopener">ミギとダリ</a></div>
+          <div class="gem-sub">2023年秋 / Geek Toys / ミステリー・サスペンス</div>
+        </div>
+      </div>
       <div class="gem-body">生き別れた双子が入れ替わりながら、母を死に追いやった人物への復讐を進めていくダークミステリー。独特な色彩感覚とデフォルメされたキャラクターデザインが、物語のブラックさと不思議にマッチしていて、他のどの作品にも似ていない読後感を残します。伏線の張り方も丁寧です。</div>
-      <div class="gem-why"><strong>見逃し理由：</strong>絵柄の可愛さと内容のダークさのギャップで敬遠されがちだったが、ミステリー好きなら間違いなく刺さる。</div>
+      <div class="gem-point"><strong>見逃し理由：</strong>絵柄の可愛さと内容のダークさのギャップで敬遠されがちだったが、ミステリー好きなら間違いなく刺さる。</div>
       <div class="streaming-row">
         <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
         <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
+        <a href="https://migitodali.com/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
       </div>
     </div>
 
-    <div class="gem-card">
-      <div class="gem-num">HIDDEN GEM #10</div>
-      <div class="gem-title">経験済みなキミと、経験ゼロなオレが、お付き合いする話。</div>
-      <div class="gem-sub">2023年秋 / ENGI / ラブコメ・青春</div>
-      <div class="gem-score">★ 7.8 / 10</div>
+    <div class="gem-card" id="gem10">
+      <div class="gem-header">
+        <div class="gem-num">10</div>
+        <div class="gem-title-block">
+          <div class="gem-name"><a href="https://kimizero.com/" target="_blank" rel="noopener">経験済みなキミと、経験ゼロなオレが、お付き合いする話。</a></div>
+          <div class="gem-sub">2023年秋 / ENGI / ラブコメ・青春</div>
+        </div>
+      </div>
       <div class="gem-body">元カレのいるギャル系ヒロインと、恋愛経験ゼロの地味な主人公の凸凹ラブコメ。過去の恋愛を気にしすぎる主人公の不器用さがリアルで共感を呼びます。派手な事件は起きませんが、ふたりが少しずつ距離を縮めていく過程が丁寧に描かれ、見終わった後の満足感がしっかりある作品です。</div>
-      <div class="gem-why"><strong>見逃し理由：</strong>長いタイトルで検索されにくく、似た雰囲気のラブコメに埋もれてしまった。</div>
+      <div class="gem-point"><strong>見逃し理由：</strong>長いタイトルで検索されにくく、似た雰囲気のラブコメに埋もれてしまった。</div>
       <div class="streaming-row">
         <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
         <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
+        <a href="https://kimizero.com/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
       </div>
     </div>
 
-    <div class="gem-card">
-      <div class="gem-num">HIDDEN GEM #11</div>
-      <div class="gem-title">16bitセンセーション -ANOTHER LAYER-</div>
-      <div class="gem-sub">2023年秋 / SILVER LINK. / コメディ・SF（ゲーム業界）</div>
-      <div class="gem-score">★ 8.1 / 10</div>
+    <div class="gem-card" id="gem11">
+      <div class="gem-header">
+        <div class="gem-num">11</div>
+        <div class="gem-title-block">
+          <div class="gem-name"><a href="https://16bitsensation-al.com/" target="_blank" rel="noopener">16bitセンセーション -ANOTHER LAYER-</a></div>
+          <div class="gem-sub">2023年秋 / SILVER LINK. / コメディ・SF（ゲーム業界）</div>
+        </div>
+      </div>
       <div class="gem-body">1990年代の美少女ゲーム業界にタイムスリップしてしまうという異色設定の作品。当時の同人・ゲーム制作現場をリアルに再現しつつ、「好きなものを作る情熱」を真正面から描いていて、クリエイター気質な人ほど刺さります。懐かしさと新鮮さが同居した不思議な魅力があります。</div>
-      <div class="gem-why"><strong>見逃し理由：</strong>ニッチな業界ネタが前面に出ていたため層が狭いと思われがちだったが、物語としての完成度は高い。</div>
+      <div class="gem-point"><strong>見逃し理由：</strong>ニッチな業界ネタが前面に出ていたため層が狭いと思われがちだったが、物語としての完成度は高い。</div>
       <div class="streaming-row">
         <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
         <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
+        <a href="https://16bitsensation-al.com/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
       </div>
     </div>
 
-    <div class="gem-card">
-      <div class="gem-num">HIDDEN GEM #12</div>
-      <div class="gem-title">望まぬ不死の冒険者</div>
-      <div class="gem-sub">2024年冬 / CONNECT / ダークファンタジー</div>
-      <div class="gem-score">★ 8.0 / 10</div>
+    <div class="gem-card" id="gem12">
+      <div class="gem-header">
+        <div class="gem-num">12</div>
+        <div class="gem-title-block">
+          <div class="gem-name"><a href="https://nozomanufushi-anime.jp/" target="_blank" rel="noopener">望まぬ不死の冒険者</a></div>
+          <div class="gem-sub">2024年冬 / CONNECT / ダークファンタジー</div>
+        </div>
+      </div>
       <div class="gem-body">不死身のモンスターとして目覚めてしまった元冒険者が、人間に戻る方法を探して旅をするダークファンタジー。淡々とした語り口の中に、死と再生、孤独といった重いテーマがじわじわと効いてきます。派手なバトルよりも静かな緊張感を楽しみたい人におすすめの一本です。</div>
-      <div class="gem-why"><strong>見逃し理由：</strong>地味な作風とタイトルの長さで手に取られにくかったが、じっくり系ダークファンタジーとして良質。</div>
+      <div class="gem-point"><strong>見逃し理由：</strong>地味な作風とタイトルの長さで手に取られにくかったが、じっくり系ダークファンタジーとして良質。</div>
       <div class="streaming-row">
         <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
         <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
+        <a href="https://nozomanufushi-anime.jp/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
       </div>
     </div>
 
-    <div class="gem-card">
-      <div class="gem-num">HIDDEN GEM #13</div>
-      <div class="gem-title">Girls Band Cry</div>
-      <div class="gem-sub">2024年春 / 東映アニメーション / 音楽・青春ドラマ</div>
-      <div class="gem-score">★ 8.5 / 10</div>
+    <div class="gem-card" id="gem13">
+      <div class="gem-header">
+        <div class="gem-num">13</div>
+        <div class="gem-title-block">
+          <div class="gem-name"><a href="https://girls-band-cry.com/" target="_blank" rel="noopener">Girls Band Cry</a></div>
+          <div class="gem-sub">2024年春 / 東映アニメーション / 音楽・青春ドラマ</div>
+        </div>
+      </div>
       <div class="gem-body">フル3DCGという挑戦的な手法で描かれるガールズバンドの青春群像劇。生きづらさを抱えた少女たちが、上手くいかない現実にもがきながらバンドを組んでいく過程がとにかく生々しく、綺麗事だけでは終わらない人間ドラマが心を打ちます。ライブシーンの熱量も圧巻です。</div>
-      <div class="gem-why"><strong>見逃し理由：</strong>フル3DCGという見た目の第一印象で敬遠されがちだったが、話数が進むにつれて評価が急上昇した作品。</div>
+      <div class="gem-point"><strong>見逃し理由：</strong>フル3DCGという見た目の第一印象で敬遠されがちだったが、話数が進むにつれて評価が急上昇した作品。</div>
       <div class="streaming-row">
         <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
         <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
+        <a href="https://girls-band-cry.com/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
       </div>
     </div>
 
-    <div class="gem-card">
-      <div class="gem-num">HIDDEN GEM #14</div>
-      <div class="gem-title">忘却バッテリー</div>
-      <div class="gem-sub">2024年春〜夏 / MAPPA / スポーツ・青春（野球）</div>
-      <div class="gem-score">★ 8.2 / 10</div>
+    <div class="gem-card" id="gem14">
+      <div class="gem-header">
+        <div class="gem-num">14</div>
+        <div class="gem-title-block">
+          <div class="gem-name"><a href="https://boukyaku-battery.com/" target="_blank" rel="noopener">忘却バッテリー</a></div>
+          <div class="gem-sub">2024年春〜夏 / MAPPA / スポーツ・青春（野球）</div>
+        </div>
+      </div>
       <div class="gem-body">天才ピッチャーだった過去を忘れてしまった少年が、弱小野球部でもう一度白球に向き合う青春スポーツもの。過去の記憶と現在の自分を重ね合わせながら成長していく王道の展開ながら、キャラクターの掛け合いのテンポが良く、野球に詳しくなくても素直に楽しめます。</div>
-      <div class="gem-why"><strong>見逃し理由：</strong>野球アニメというジャンルで敬遠されがちだったが、青春コメディとしての完成度が高い。</div>
+      <div class="gem-point"><strong>見逃し理由：</strong>野球アニメというジャンルで敬遠されがちだったが、青春コメディとしての完成度が高い。</div>
       <div class="streaming-row">
         <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
         <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
+        <a href="https://boukyaku-battery.com/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
       </div>
     </div>
 
-    <div class="gem-card">
-      <div class="gem-num">HIDDEN GEM #15</div>
-      <div class="gem-title">逃げ上手の若君</div>
-      <div class="gem-sub">2024年夏〜 / CloverWorks / 歴史・アクション</div>
-      <div class="gem-score">★ 8.3 / 10</div>
+    <div class="gem-card" id="gem15">
+      <div class="gem-header">
+        <div class="gem-num">15</div>
+        <div class="gem-title-block">
+          <div class="gem-name"><a href="https://nigewaka.run/" target="_blank" rel="noopener">逃げ上手の若君</a></div>
+          <div class="gem-sub">2024年夏〜 / CloverWorks / 歴史・アクション</div>
+        </div>
+      </div>
       <div class="gem-body">北条時行という実在の少年武将を主人公に据えた異色の歴史アクション。「逃げる」ことを武器に生き延びていくという切り口が新しく、単なる合戦ものとは一線を画します。少年漫画らしい熱さと、史実に基づく重みが同居していて、歴史好き・バトル好きどちらにも刺さる作品です。</div>
-      <div class="gem-why"><strong>見逃し理由：</strong>マイナーな時代（南北朝時代）を扱っているため取っつきにくいと思われがちだが、説明が丁寧で誰でも入りやすい。</div>
+      <div class="gem-point"><strong>見逃し理由：</strong>マイナーな時代（南北朝時代）を扱っているため取っつきにくいと思われがちだが、説明が丁寧で誰でも入りやすい。</div>
       <div class="streaming-row">
         <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
         <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
+        <a href="https://nigewaka.run/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
       </div>
     </div>
 
-    <div class="gem-card">
-      <div class="gem-num">HIDDEN GEM #16</div>
-      <div class="gem-title">疑似ハーレム</div>
-      <div class="gem-sub">2024年夏 / ノーマッド / ラブコメ</div>
-      <div class="gem-score">★ 7.8 / 10</div>
+    <div class="gem-card" id="gem16">
+      <div class="gem-header">
+        <div class="gem-num">16</div>
+        <div class="gem-title-block">
+          <div class="gem-name"><a href="https://gijiharem.com/" target="_blank" rel="noopener">疑似ハーレム</a></div>
+          <div class="gem-sub">2024年夏 / ノーマッド / ラブコメ</div>
+        </div>
+      </div>
       <div class="gem-body">演劇部の部長が「モテる主人公」を演じることで恋愛下手な後輩を導くという、変則的なハーレムラブコメ。ヒロインは実質ひとりなのに周りから「ハーレムを築いている」と誤解されるというねじれた構図が面白く、完結済みで一気見しやすいのも嬉しいポイントです。</div>
-      <div class="gem-why"><strong>見逃し理由：</strong>タイトルだけ見ると量産型ハーレムものに見えるが、実際は誠実な一途ラブコメ。</div>
+      <div class="gem-point"><strong>見逃し理由：</strong>タイトルだけ見ると量産型ハーレムものに見えるが、実際は誠実な一途ラブコメ。</div>
       <div class="streaming-row">
         <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
         <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
+        <a href="https://gijiharem.com/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
       </div>
     </div>
 
-    <div class="gem-card">
-      <div class="gem-num">HIDDEN GEM #17</div>
-      <div class="gem-title">天穂のサクナヒメ</div>
-      <div class="gem-sub">2024年夏 / P.A.WORKS / アクション・ファンタジー（稲作）</div>
-      <div class="gem-score">★ 8.1 / 10</div>
+    <div class="gem-card" id="gem17">
+      <div class="gem-header">
+        <div class="gem-num">17</div>
+        <div class="gem-title-block">
+          <div class="gem-name"><a href="https://sakuna-anime.com/" target="_blank" rel="noopener">天穂のサクナヒメ</a></div>
+          <div class="gem-sub">2024年夏 / P.A.WORKS / アクション・ファンタジー（稲作）</div>
+        </div>
+      </div>
       <div class="gem-body">追放された農耕神の少女が、鬼が住む島で稲作をしながら成長していくという唯一無二の設定。田植えや稲刈りの過程が驚くほど丁寧に描かれる一方、バトルシーンの作画もしっかり見応えがあり、「稲作アニメ」という言葉から想像する以上にちゃんとした王道成長譚になっています。</div>
-      <div class="gem-why"><strong>見逃し理由：</strong>「稲作×アクション」という組み合わせのインパクトでネタ扱いされがちだったが、中身は骨太なファンタジー。</div>
+      <div class="gem-point"><strong>見逃し理由：</strong>「稲作×アクション」という組み合わせのインパクトでネタ扱いされがちだったが、中身は骨太なファンタジー。</div>
       <div class="streaming-row">
         <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
         <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
+        <a href="https://sakuna-anime.com/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
       </div>
     </div>
 
-    <div class="gem-card">
-      <div class="gem-num">HIDDEN GEM #18</div>
-      <div class="gem-title">トリリオンゲーム</div>
-      <div class="gem-sub">2024年秋〜 / MADHOUSE / ビジネス・コメディドラマ</div>
-      <div class="gem-score">★ 8.2 / 10</div>
+    <div class="gem-card" id="gem18">
+      <div class="gem-header">
+        <div class="gem-num">18</div>
+        <div class="gem-title-block">
+          <div class="gem-name"><a href="https://trilliongame-anime.com/" target="_blank" rel="noopener">トリリオンゲーム</a></div>
+          <div class="gem-sub">2024年秋〜 / MADHOUSE / ビジネス・コメディドラマ</div>
+        </div>
+      </div>
       <div class="gem-body">口先だけの天才詐欺師と、天才プログラマーのコンビが「世界一の会社を作る」ことを目指して起業していくビジネスサクセスストーリー。IT起業というリアルな題材を扱いながらも、ふたりのバディ感とハッタリの効いた展開がエンタメとして純粋に面白く、大人が見ても楽しめる作品です。</div>
-      <div class="gem-why"><strong>見逃し理由：</strong>ビジネスものという地味な題材のイメージで敬遠されがちだったが、実際は痛快なサクセスストーリー。</div>
+      <div class="gem-point"><strong>見逃し理由：</strong>ビジネスものという地味な題材のイメージで敬遠されがちだったが、実際は痛快なサクセスストーリー。</div>
       <div class="streaming-row">
         <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
         <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
+        <a href="https://trilliongame-anime.com/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
       </div>
     </div>
+
 
     <h2>まとめ</h2>
     <p>隠れた名作は毎クール必ずあります。話題になっていないからといって面白くないわけではなく、むしろ話題作の陰で静かに輝いている作品に出会えたときの感動は格別です。今回紹介した18本、ぜひ配信でチェックしてみてください。</p>
