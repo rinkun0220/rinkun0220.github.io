@@ -892,7 +892,7 @@ async function loadHomeContent() {
     if (nowData && nowData.data && nowData.data.length > 0) {
       const unique = dedup(nowData.data);
       renderHeroSlider(unique.slice(0, 5));
-      createScrollRow(rowsContainer, "海外で今シーズン注目のアニメ", unique);
+      createScrollRow(rowsContainer, "海外で今シーズン注目のアニメ", unique, "※MyAnimeList（Jikan API）のユーザー評価データをもとに、海外で話題の今期アニメを自動集計して表示しています");
     } else {
       throw new Error("No Data");
     }
@@ -900,7 +900,7 @@ async function loadHomeContent() {
     console.warn("注目アニメの取得に失敗。バックアップを表示します。");
     const unique = dedup(BACKUP_DATA.now);
     renderHeroSlider(unique.slice(0, 5));
-    createScrollRow(rowsContainer, "海外で今シーズン注目のアニメ (おすすめ)", unique);
+    createScrollRow(rowsContainer, "海外で今シーズン注目のアニメ (おすすめ)", unique, "※MyAnimeList（Jikan API）のユーザー評価データをもとに、海外で話題の今期アニメを自動集計して表示しています");
   }
 }
 
@@ -944,7 +944,7 @@ function renderHeroSlider(list) {
   }
 }
 
-function createScrollRow(container, heading, list) {
+function createScrollRow(container, heading, list, desc) {
   // リスト単体の重複も除去（同じmal_idが複数ある場合）
   const seenLocal = new Set();
   const uniqueList = list.filter(a => {
@@ -954,7 +954,8 @@ function createScrollRow(container, heading, list) {
   });
   if (uniqueList.length === 0) return;
   const section = document.createElement("section");
-  section.innerHTML = `<h3 class="section-title">${heading}</h3>`;
+  const descHtml = desc ? `<p style="font-size:0.78rem;color:var(--text-muted);margin:-10px 0 16px;">${desc}</p>` : "";
+  section.innerHTML = `<h3 class="section-title">${heading}</h3>${descHtml}`;
   const row = document.createElement("div");
   row.className = "scroll-row";
   uniqueList.forEach(anime => row.appendChild(createAnimeCard(anime)));
