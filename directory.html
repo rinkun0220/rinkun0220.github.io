@@ -283,12 +283,19 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
 </footer>
 
 <script>
+// カタカナをひらがなに変換（検索時のひらがな・カタカナ表記ゆれを吸収するため）
+function toHiragana(str) {
+  return str.replace(/[ァ-ヶ]/g, function(match) {
+    return String.fromCharCode(match.charCodeAt(0) - 0x60);
+  });
+}
+
 function filterNames() {
-  const q = document.getElementById('nameSearch').value.trim().toLowerCase();
+  const q = toHiragana(document.getElementById('nameSearch').value.trim().toLowerCase());
   const cards = document.querySelectorAll('.name-card');
   let visibleCount = 0;
   cards.forEach(card => {
-    const name = card.getAttribute('data-name').toLowerCase();
+    const name = toHiragana(card.getAttribute('data-name').toLowerCase());
     if (q === '' || name.includes(q)) {
       card.classList.remove('hidden');
       visibleCount++;
