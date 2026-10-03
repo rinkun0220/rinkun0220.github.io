@@ -893,7 +893,7 @@ async function loadHomeContent() {
     if (nowData && nowData.data && nowData.data.length > 0) {
       const unique = dedup(nowData.data);
       renderHeroSlider(unique.slice(0, 5));
-      createScrollRow(rowsContainer, "海外で今シーズン注目のアニメ", unique, "※MyAnimeList（Jikan API）のユーザー評価データをもとに、海外で話題の今期アニメを自動集計して表示しています");
+      createScrollRow(rowsContainer, "海外で今シーズン注目のアニメ", unique, "※MyAnimeList（Jikan API）のユーザー評価データをもとに、海外で話題の今期アニメを自動集計して表示しています<br>※作品画像はMyAnimeListのデータベースから取得して表示しています。更新直後やMyAnimeList側の状況により、画像が一時的に表示されない場合があります");
     } else {
       throw new Error("No Data");
     }
@@ -901,7 +901,7 @@ async function loadHomeContent() {
     console.warn("注目アニメの取得に失敗。バックアップを表示します。");
     const unique = dedup(BACKUP_DATA.now);
     renderHeroSlider(unique.slice(0, 5));
-    createScrollRow(rowsContainer, "海外で今シーズン注目のアニメ (おすすめ)", unique, "※MyAnimeList（Jikan API）のユーザー評価データをもとに、海外で話題の今期アニメを自動集計して表示しています");
+    createScrollRow(rowsContainer, "海外で今シーズン注目のアニメ (おすすめ)", unique, "※MyAnimeList（Jikan API）のユーザー評価データをもとに、海外で話題の今期アニメを自動集計して表示しています<br>※作品画像はMyAnimeListのデータベースから取得して表示しています。更新直後やMyAnimeList側の状況により、画像が一時的に表示されない場合があります");
   }
 }
 
