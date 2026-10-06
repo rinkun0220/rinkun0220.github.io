@@ -116,7 +116,7 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
       <span class="hud-best" id="hudBest">BEST: 0</span>
     </div>
     <div id="gameCanvasWrap"><span class="render-badge">3D RENDER</span></div>
-    <div class="game-hint">タップ・クリック/スペースキーでジャンプ　・　左右スワイプ・ドラッグ/矢印キーでレーン移動</div>
+    <div class="game-hint">タップ・クリック／スペース・W・↑キーでジャンプ　・　左右スワイプ・ドラッグ／←→・A・Dキーでレーン移動（PCはキーボード操作がおすすめ）</div>
   </div>
 
   <div class="gameover-box" id="gameoverBox">
@@ -210,6 +210,7 @@ const kojimaGameOverLines = [
 let scene, camera, renderer, playerGroup, groundMesh, lineMeshes = [];
 let obstacles = [], score, best, speed, running, animId, spawnTimer;
 let playerY = 0, playerVY = 0, jumping = false;
+let jumpBuffer = 0; // 空中で押したジャンプを、着地の直前だけ先行入力として受け付ける
 const LANE_Z = 0;
 const LANE_X = [-1.7, 0, 1.7];
 let playerLane = 1;
@@ -373,6 +374,9 @@ function resetGame() {
   playerX = LANE_X[1];
   playerGroup.position.x = playerX;
   running = true;
+  lastFrameTime = 0;
+  stepAccumulator = 0;
+  jumpBuffer = 0;
   window._hardMode = isKojima;
 }
 
@@ -381,6 +385,8 @@ function jump() {
   if (!jumping) {
     playerVY = 0.28;
     jumping = true;
+  } else {
+    jumpBuffer = 6; // 約0.1秒以内に着地するなら、着地と同時にジャンプ
   }
 }
 
@@ -420,7 +426,12 @@ function spawnObstacle() {
   }
 }
 
-function update() {
+// ゲーム内の1ステップ分の処理（1ステップ＝60fps換算の1フレーム）。
+// 以前はこの処理を画面の更新（requestAnimationFrame）のたびに実行していたため、
+// 120Hz・144Hzなどのモニターを使うPCではゲームが2倍以上の速さになり、
+// 60Hzのスマートフォンと同じ感覚で遊べなくなっていた。
+// 現在は経過時間をもとに「1秒あたり60ステップ」に固定している。
+function step() {
   if (!running) return;
   const hard = window._hardMode;
 
@@ -430,7 +441,10 @@ function update() {
     playerY = 0;
     playerVY = 0;
     jumping = false;
+    // 着地の直前に押したジャンプは、着地した瞬間に出す（キーボード操作で押し損じにくくする）
+    if (jumpBuffer > 0) { jumpBuffer = 0; playerVY = 0.28; jumping = true; }
   }
+  if (jumpBuffer > 0) jumpBuffer--;
 
   // レーン移動（滑らかに目標レーンへ寄せる）
   const targetX = LANE_X[playerLane];
@@ -483,7 +497,26 @@ function update() {
 
   camera.position.y = 3.2 + Math.sin(score * 0.03) * 0.03;
   document.getElementById('hudScore').textContent = 'SCORE: ' + Math.floor(score / 5);
+}
 
+const STEP_MS = 1000 / 60;
+let lastFrameTime = 0, stepAccumulator = 0;
+function update(ts) {
+  if (!running) return;
+  if (!lastFrameTime) lastFrameTime = ts;
+  let dt = ts - lastFrameTime;
+  lastFrameTime = ts;
+  if (dt > 100) dt = 100; // タブを切り替えて戻った直後などに、まとめて進みすぎないようにする
+  stepAccumulator += dt;
+  let steps = 0;
+  // 60Hz表示のときに誤差で1ステップ抜けたり増えたりしないよう、1ms分の余裕を持たせる
+  while (stepAccumulator >= STEP_MS - 1 && steps < 5) {
+    step();
+    stepAccumulator -= STEP_MS;
+    steps++;
+    if (!running) return;
+  }
+  if (steps === 5) stepAccumulator = 0;
   renderer.render(scene, camera);
   animId = requestAnimationFrame(update);
 }
@@ -604,9 +637,13 @@ gameCanvasEl.addEventListener('touchend', (e) => {
 }, { passive: false });
 
 document.addEventListener('keydown', (e) => {
-  if (e.code === 'Space' || e.code === 'ArrowUp') { e.preventDefault(); jump(); }
-  if (e.code === 'ArrowLeft' || e.code === 'KeyA') { e.preventDefault(); moveLane(-1); }
-  if (e.code === 'ArrowRight' || e.code === 'KeyD') { e.preventDefault(); moveLane(1); }
+  const isGameKey = ['Space', 'ArrowUp', 'KeyW', 'ArrowLeft', 'KeyA', 'ArrowRight', 'KeyD'].includes(e.code);
+  if (isGameKey && running) e.preventDefault(); // ゲーム中はページがスクロールしないようにする
+  // キーを押しっぱなしにしたときの連続入力（キーリピート）は無視し、1回押すごとに1回だけ反応させる
+  if (e.repeat) return;
+  if (e.code === 'Space' || e.code === 'ArrowUp' || e.code === 'KeyW') jump();
+  if (e.code === 'ArrowLeft' || e.code === 'KeyA') moveLane(-1);
+  if (e.code === 'ArrowRight' || e.code === 'KeyD') moveLane(1);
 });
 </script>
 
