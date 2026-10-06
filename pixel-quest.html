@@ -100,7 +100,7 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
   <div class="page-head">
     <span class="page-tag">🥚 隠しゲーム発見</span>
     <h1 class="page-title">スタジオランナー <span style="font-size:.6em;color:var(--star-color);">3D</span></h1>
-    <p class="page-desc">制作会社を擬人化したキャラクターで、3Dコースを駆け抜けよう。タップ／スペースキーでジャンプ。</p>
+    <p class="page-desc">制作会社を擬人化したキャラクターで、3Dコースを駆け抜けよう。スマホはタップとスワイプ、PCはマウスとキーボードで遊べます。</p>
   </div>
 
   <div class="char-select active" id="charSelect">
@@ -116,7 +116,7 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
       <span class="hud-best" id="hudBest">BEST: 0</span>
     </div>
     <div id="gameCanvasWrap"><span class="render-badge">3D RENDER</span></div>
-    <div class="game-hint">タップ・クリック／スペース・W・↑キーでジャンプ　・　左右スワイプ・ドラッグ／←→・A・Dキーでレーン移動（PCはキーボード操作がおすすめ）</div>
+    <div class="game-hint">【スマホ】タップでジャンプ・左右スワイプでレーン移動　【PC】クリック／スペース・W・↑キーでジャンプ・マウスを左右に動かす／←→・A・Dキーでレーン移動</div>
   </div>
 
   <div class="gameover-box" id="gameoverBox">
@@ -215,6 +215,11 @@ const LANE_Z = 0;
 const LANE_X = [-1.7, 0, 1.7];
 let playerLane = 1;
 let playerX = 0;
+// レーン移動の速さ（1ステップで目標位置に近づく割合）。スマホのスワイプは従来どおり、
+// マウス・キーボードは「入力してから動き出すまでが遅い」と感じやすいため速くしている
+const LANE_SMOOTH_TOUCH = 0.22;
+const LANE_SMOOTH_PC = 0.55;
+let laneSmooth = LANE_SMOOTH_TOUCH;
 // 速度の上限（これがないと際限なく加速し、反応時間が人間の限界を割り込んで
 // 「誰もクリアできない」状態になってしまうため上限を設けている）
 const SPEED_CAP_NORMAL = 0.34;
@@ -374,6 +379,7 @@ function resetGame() {
   playerX = LANE_X[1];
   playerGroup.position.x = playerX;
   running = true;
+  laneSmooth = LANE_SMOOTH_TOUCH;
   lastFrameTime = 0;
   stepAccumulator = 0;
   jumpBuffer = 0;
@@ -448,7 +454,7 @@ function step() {
 
   // レーン移動（滑らかに目標レーンへ寄せる）
   const targetX = LANE_X[playerLane];
-  playerX += (targetX - playerX) * 0.22;
+  playerX += (targetX - playerX) * laneSmooth;
   playerGroup.position.x = playerX;
   playerGroup.position.y = playerY;
   playerGroup.rotation.z = (targetX - playerX) * -0.25;
@@ -588,30 +594,41 @@ function handleResize() {
 }
 window.addEventListener('resize', handleResize);
 
-// マウス操作（PC向け）：短いクリック＝ジャンプ、左右ドラッグ＝レーン移動
-// （以前はクリック＝ジャンプのみで、マウスだけではレーン移動ができなかったため、
-// タッチ操作と同じ「ドラッグでレーン移動」に対応させた）
-let mouseStartX = 0, mouseStartY = 0, mouseStartTime = 0, mouseDown = false;
+// マウス操作（PC向け）：カーソルを左右に動かすとレーン移動、クリックでジャンプ。
+// （以前はクリック＝ジャンプ、左右ドラッグ＝レーン移動だったが、ドラッグは素早く横に動かす必要があり、
+// マウスでは狙ったレーンに入りにくかった。そのため、カーソルの横位置にキャラクターがついてくる方式にした。
+// また、ジャンプはボタンを離したときではなく押した瞬間に出るようにして、反応を速くしている）
 const gameCanvasWrapEl = document.getElementById('gameCanvasWrap');
+function setLane(i) {
+  if (!running) return;
+  laneSmooth = LANE_SMOOTH_PC;
+  playerLane = i;
+}
+function laneFromMouse(clientX) {
+  if (!running || !camera) return;
+  const rect = gameCanvasWrapEl.getBoundingClientRect();
+  if (!rect.width) return;
+  const nx = (clientX - rect.left) / rect.width; // 0（左端）〜1（右端）
+  // 3つのレーンが、実際に画面のどのあたり（横位置）に映っているかを求める
+  const v = new THREE.Vector3();
+  const sx = LANE_X.map(x => { v.set(x, 0.8, LANE_Z).project(camera); return (v.x + 1) / 2; });
+  const d = (sx[2] - sx[0]) / 2;      // レーン1つ分の画面上の幅
+  const thrL = sx[1] - d * 0.9;       // これより左なら左レーン
+  const thrR = sx[1] + d * 0.9;       // これより右なら右レーン
+  const h = d * 0.15;                 // 境目でレーンが行き来しないための余裕
+  let target = 1;
+  if (nx < thrL) target = 0;
+  else if (nx > thrR) target = 2;
+  else if (playerLane === 0 && nx < thrL + h) target = 0;
+  else if (playerLane === 2 && nx > thrR - h) target = 2;
+  if (target !== playerLane) setLane(target);
+}
+gameCanvasWrapEl.addEventListener('mousemove', (e) => laneFromMouse(e.clientX));
 gameCanvasWrapEl.addEventListener('mousedown', (e) => {
-  mouseDown = true;
-  mouseStartX = e.clientX;
-  mouseStartY = e.clientY;
-  mouseStartTime = Date.now();
+  if (e.button !== 0) return;
+  laneFromMouse(e.clientX);
+  jump();
 });
-window.addEventListener('mouseup', (e) => {
-  if (!mouseDown) return;
-  mouseDown = false;
-  const dx = e.clientX - mouseStartX;
-  const dy = e.clientY - mouseStartY;
-  const dt = Date.now() - mouseStartTime;
-  if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy) && dt < 500) {
-    moveLane(dx > 0 ? 1 : -1);
-  } else {
-    jump();
-  }
-});
-gameCanvasWrapEl.addEventListener('mouseleave', () => { mouseDown = false; });
 
 // タッチ操作：短いタップ＝ジャンプ、左右スワイプ＝レーン移動
 let touchStartX = 0, touchStartY = 0, touchStartTime = 0;
@@ -630,6 +647,7 @@ gameCanvasEl.addEventListener('touchend', (e) => {
   const dy = t.clientY - touchStartY;
   const dt = Date.now() - touchStartTime;
   if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy) && dt < 500) {
+    laneSmooth = LANE_SMOOTH_TOUCH;
     moveLane(dx > 0 ? 1 : -1);
   } else {
     jump();
@@ -642,8 +660,8 @@ document.addEventListener('keydown', (e) => {
   // キーを押しっぱなしにしたときの連続入力（キーリピート）は無視し、1回押すごとに1回だけ反応させる
   if (e.repeat) return;
   if (e.code === 'Space' || e.code === 'ArrowUp' || e.code === 'KeyW') jump();
-  if (e.code === 'ArrowLeft' || e.code === 'KeyA') moveLane(-1);
-  if (e.code === 'ArrowRight' || e.code === 'KeyD') moveLane(1);
+  if (e.code === 'ArrowLeft' || e.code === 'KeyA') { laneSmooth = LANE_SMOOTH_PC; moveLane(-1); }
+  if (e.code === 'ArrowRight' || e.code === 'KeyD') { laneSmooth = LANE_SMOOTH_PC; moveLane(1); }
 });
 </script>
 
