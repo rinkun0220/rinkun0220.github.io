@@ -96,6 +96,7 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
 .reveal-list { list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 6px 16px; }
 .reveal-list li { font-size: 0.82rem; color: var(--text-muted); line-height: 1.6; padding: 4px 0; border-bottom: 1px dashed var(--border-color); }
 .reveal-list li b { color: var(--text-main); font-weight: 600; }
+.tool-guide{max-width:880px;margin:40px auto 28px;padding:0 20px}.tool-guide h2{font-size:1.05rem;font-weight:700;color:var(--text-main);margin:0 0 12px}.tool-guide h3{font-size:.92rem;font-weight:700;color:var(--accent);margin:20px 0 8px}.tool-guide p{font-size:.88rem;color:var(--text-muted);line-height:1.95;margin:0 0 12px}.tool-guide a{color:var(--star-color);text-decoration:none}.tool-guide a:hover{text-decoration:underline}
 </style>
 </head>
 <body>
@@ -167,6 +168,16 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
       <button class="result-btn secondary" onclick="restartQuiz()">もう一度作る</button>
     </div>
   </div>
+  <section class="tool-guide">
+    <h2>この診断の仕組みと使い方</h2>
+    <h3>5つのステータスは何で決まる？</h3>
+    <p>「あなたのアニメ履歴書」は、6つの質問への回答から、経験値・視聴の幅・涙腺・こだわり・継続力の5項目を4段階のバーで表示するプロフィールカードを作る診断です。経験値はアニメを見始めた時期、視聴の幅は1クールに見る本数、涙腺は心を動かされたジャンル、こだわりは作品のどこを重視するか、継続力は一番長く追っているシリーズの年数をもとにしています。</p>
+    <h3>カード上部のタイプの見方</h3>
+    <p>カードの一番上には、4つ目の質問の回答で決まる「視聴タイプ」（脚本派・演出派・キャラ萌え派・自由派）と、最後の質問の回答で決まる「視聴スタイル」が、「脚本派 × 週末一気見タイプ」のように並んで表示されます。バーが長いほど優れているという意味ではありません。たくさんの作品を追う人も、1作品をじっくり味わう人も、楽しみ方の違いを見える形にしたものです。</p>
+    <h3>保存・シェアと、回答の扱いについて</h3>
+    <p>できあがったカードは「画像を保存」でPNG画像として保存でき、「結果をシェア」からXに投稿できます。回答の集計はお使いのブラウザの中だけで行われ、選んだ回答の内容をANIMEDBのサーバーへ送信・保存することはありません。視聴環境や気分が変われば答えも変わるので、数か月後にもう一度作って見比べてみるのも面白いと思います。</p>
+    <p>重視するポイントをもっと細かく知りたい方は、5つのタイプに分けて診断する<a href="/viewer-type.html">「あなたは何派？」</a>や、評価の配点を試せる<a href="/rating-simulator.html">「このアニメ、何点つける？」</a>もあわせてどうぞ。</p>
+  </section>
 </main>
 
 <footer>

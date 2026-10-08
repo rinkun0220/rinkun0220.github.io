@@ -90,6 +90,7 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
 .reveal-rank-table { width: 100%; border-collapse: collapse; margin-top: 10px; margin-bottom: 16px; font-size: 0.85rem; }
 .reveal-rank-table th, .reveal-rank-table td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--border-color); color: var(--text-muted); }
 .reveal-rank-table th { color: var(--text-main); }
+.tool-guide{max-width:880px;margin:40px auto 28px;padding:0 20px}.tool-guide h2{font-size:1.05rem;font-weight:700;color:var(--text-main);margin:0 0 12px}.tool-guide h3{font-size:.92rem;font-weight:700;color:var(--accent);margin:20px 0 8px}.tool-guide p{font-size:.88rem;color:var(--text-muted);line-height:1.95;margin:0 0 12px}.tool-guide a{color:var(--star-color);text-decoration:none}.tool-guide a:hover{text-decoration:underline}
 </style>
 </head>
 <body>
@@ -157,6 +158,15 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
   <div class="result-box" id="resultBox"></div>
 
   <div class="sim-note">脚本を最重視した加重平均で判定しています。詳しい配点の考え方は<a href="/blog/rating-criteria.html">評価基準の記事</a>で解説しています。</div>
+  <section class="tool-guide">
+    <h2>シミュレーターの使い方と点数の考え方</h2>
+    <h3>スコアの計算方法</h3>
+    <p>4つのスライダーを0〜10で動かすと、脚本・構成40%、作画・演出25%、キャラクター25%、音楽10%の配点で加重平均を計算し、小数点第1位までのスコアとS〜Cの判定を表示します。たとえば全項目を8にすると加重スコアは8.0でA判定になります。一方、演出とキャラクターを9、音楽を8にしても、脚本が6だと加重スコアは7.7でB判定にとどまります。脚本の配点が最も大きいため、他の項目が高くても脚本の弱さは点数に響きやすい仕組みです。</p>
+    <h3>おすすめの使い方</h3>
+    <p>見終わった作品を思い浮かべながら、まずいちばん印象に残った項目から動かしてみてください。5を「可もなく不可もなく」の基準にして、そこから良かった点は上へ、気になった点は下へ動かすと、自分の感覚に近い点数を出しやすくなります。同じ作品を友人と別々に採点して見比べると、人によって重視するポイントが違うことがよく分かります。</p>
+    <h3>点数はあくまで目安です</h3>
+    <p>ここで出る判定は、ANIMEDB管理人が「脚本派」として作品を見ている考え方を再現した目安であり、作品の価値を決めるものではありません。C判定でも、好みに合えば忘れられない作品になることがあります。配点の理由や各項目で何を見ているかは<a href="/blog/rating-criteria.html">評価基準の記事</a>で詳しく説明しています。自分が何を重視するタイプなのかを知りたいときは、<a href="/viewer-type.html">視聴傾向診断「あなたは何派？」</a>もどうぞ。</p>
+  </section>
 </main>
 
 <footer>
