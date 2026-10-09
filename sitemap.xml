@@ -20,6 +20,12 @@
   </url>
 
   <url>
+    <loc>https://anime-db.jp/pixel-quest.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
     <loc>https://anime-db.jp/directory.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
