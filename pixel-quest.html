@@ -218,7 +218,7 @@ let playerX = 0;
 // レーン移動の速さ（1ステップで目標位置に近づく割合）。
 // スマホ・マウス・キーボードとも「入力してから動き出すまでが遅い」と感じやすいため速くしている
 const LANE_SMOOTH_TOUCH = 0.5;
-const LANE_SMOOTH_PC = 0.8;
+const LANE_SMOOTH_PC = 0.92;
 let laneSmooth = LANE_SMOOTH_TOUCH;
 // 速度の上限（これがないと際限なく加速し、反応時間が人間の限界を割り込んで
 // 「誰もクリアできない」状態になってしまうため上限を設けている）
@@ -401,6 +401,20 @@ function moveLane(dir) {
   const next = playerLane + dir;
   if (next < 0 || next > 2) return;
   playerLane = next;
+  applyLaneNow();
+}
+
+// レーンが変わった瞬間に、次のフレームの処理を待たずにキャラの位置を動かして描画する。
+// （入力 → 次のフレーム処理 → 描画、と待つ分の遅れを減らすため）
+function applyLaneNow() {
+  if (!running || !playerGroup || !renderer) return;
+  const targetX = LANE_X[playerLane];
+  playerX += (targetX - playerX) * laneSmooth;
+  playerGroup.position.x = playerX;
+  playerGroup.rotation.z = (targetX - playerX) * -0.25;
+  camera.position.x = playerX * 0.35;
+  camera.lookAt(playerX * 0.35, 1, -10);
+  renderer.render(scene, camera);
 }
 
 function spawnObstacle() {
@@ -615,21 +629,37 @@ function setLane(i) {
   if (!running) return;
   laneSmooth = LANE_SMOOTH_PC;
   playerLane = i;
+  applyLaneNow();
+}
+let laneCam = null, laneScreenX = null;
+function neutralLaneScreenX() {
+  if (!laneCam || laneCam.aspect !== camera.aspect) {
+    laneCam = new THREE.PerspectiveCamera(camera.fov, camera.aspect, camera.near, camera.far);
+    laneCam.position.set(0, 3.2, 6.5);
+    laneCam.lookAt(0, 1, -10);
+    laneCam.updateMatrixWorld(true);
+    laneCam.updateProjectionMatrix();
+    const v = new THREE.Vector3();
+    laneScreenX = LANE_X.map(x => { v.set(x, 0.8, LANE_Z).project(laneCam); return (v.x + 1) / 2; });
+  }
+  return laneScreenX;
 }
 function laneFromMouse(clientX, immediate) {
   if (!running || !camera) return;
   const rect = gameCanvasWrapEl.getBoundingClientRect();
   if (!rect.width) return;
   const nx = (clientX - rect.left) / rect.width; // 0（左端）〜1（右端）
-  // 3つのレーンが、実際に画面のどのあたり（横位置）に映っているかを求める
-  const v = new THREE.Vector3();
-  const sx = LANE_X.map(x => { v.set(x, 0.8, LANE_Z).project(camera); return (v.x + 1) / 2; });
+  // 3つのレーンが、画面のどのあたり（横位置）に映っているかを求める。
+  // カメラはキャラに少しついてくるため、いまのカメラで計算するとレーンの位置がずれて、
+  // 左右のレーンから中央へ戻るときに境目が動いてしまう。そのため、カメラが中央にあるときの位置で固定して判定する
+  const sx = neutralLaneScreenX();
   const d = (sx[2] - sx[0]) / 2;      // レーン1つ分の画面上の幅
   // レーンの「境目」（レーンとレーンの中間）を越えた時点で切り替える。
   // 以前は隣のレーンの中心近く（0.9）まで動かさないと切り替わらず、「マウスを動かしてからキャラが動くまで遅い」と感じやすかった
-  const thrL = sx[1] - d * 0.5;       // これより左なら左レーン
-  const thrR = sx[1] + d * 0.5;       // これより右なら右レーン
-  const h = immediate ? 0 : d * 0.08; // 境目でレーンが行き来しないための余裕（クリック時は不要）
+  // 境目（0.5）の少し手前（0.38）で切り替える。カーソルが境目に着く前から動き出すので、反応が速く感じられる
+  const thrL = sx[1] - d * 0.38;      // これより左なら左レーン
+  const thrR = sx[1] + d * 0.38;      // これより右なら右レーン
+  const h = immediate ? 0 : d * 0.06; // 境目でレーンが行き来しないための余裕（クリック時は不要）
   let target = 1;
   if (nx < thrL) target = 0;
   else if (nx > thrR) target = 2;
@@ -638,6 +668,12 @@ function laneFromMouse(clientX, immediate) {
   if (target !== playerLane) setLane(target);
 }
 gameCanvasWrapEl.addEventListener('mousemove', (e) => laneFromMouse(e.clientX));
+// 対応ブラウザ（Chromeなど）では、フレームごとにまとめられる前のマウスの動きを受け取り、さらに早く反応させる
+if ('onpointerrawupdate' in window) {
+  gameCanvasWrapEl.addEventListener('pointerrawupdate', (e) => {
+    if (e.pointerType === 'mouse') laneFromMouse(e.clientX);
+  });
+}
 gameCanvasWrapEl.addEventListener('mousedown', (e) => {
   if (e.button !== 0) return;
   laneFromMouse(e.clientX, true);
