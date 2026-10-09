@@ -215,10 +215,10 @@ const LANE_Z = 0;
 const LANE_X = [-1.7, 0, 1.7];
 let playerLane = 1;
 let playerX = 0;
-// レーン移動の速さ（1ステップで目標位置に近づく割合）。スマホのスワイプは従来どおり、
-// マウス・キーボードは「入力してから動き出すまでが遅い」と感じやすいため速くしている
-const LANE_SMOOTH_TOUCH = 0.22;
-const LANE_SMOOTH_PC = 0.55;
+// レーン移動の速さ（1ステップで目標位置に近づく割合）。
+// スマホ・マウス・キーボードとも「入力してから動き出すまでが遅い」と感じやすいため速くしている
+const LANE_SMOOTH_TOUCH = 0.5;
+const LANE_SMOOTH_PC = 0.8;
 let laneSmooth = LANE_SMOOTH_TOUCH;
 // 速度の上限（これがないと際限なく加速し、反応時間が人間の限界を割り込んで
 // 「誰もクリアできない」状態になってしまうため上限を設けている）
@@ -507,6 +507,9 @@ function step() {
 
 const STEP_MS = 1000 / 60;
 let lastFrameTime = 0, stepAccumulator = 0;
+// 動作確認用：URLの末尾に ?debug を付けて開くと、右上のバッジに実際の描画FPSが表示される（通常は表示されない）
+const DEBUG_FPS = /[?&]debug\b/.test(location.search);
+let fpsStart = 0, fpsFrames = 0;
 function update(ts) {
   if (!running) return;
   if (!lastFrameTime) lastFrameTime = ts;
@@ -524,6 +527,15 @@ function update(ts) {
   }
   if (steps === 5) stepAccumulator = 0;
   renderer.render(scene, camera);
+  if (DEBUG_FPS) {
+    fpsFrames++;
+    if (!fpsStart) fpsStart = ts;
+    if (ts - fpsStart >= 500) {
+      const badge = document.querySelector('#gameCanvasWrap .render-badge');
+      if (badge) badge.textContent = 'FPS ' + Math.round(fpsFrames * 1000 / (ts - fpsStart));
+      fpsStart = ts; fpsFrames = 0;
+    }
+  }
   animId = requestAnimationFrame(update);
 }
 
@@ -604,7 +616,7 @@ function setLane(i) {
   laneSmooth = LANE_SMOOTH_PC;
   playerLane = i;
 }
-function laneFromMouse(clientX) {
+function laneFromMouse(clientX, immediate) {
   if (!running || !camera) return;
   const rect = gameCanvasWrapEl.getBoundingClientRect();
   if (!rect.width) return;
@@ -613,9 +625,11 @@ function laneFromMouse(clientX) {
   const v = new THREE.Vector3();
   const sx = LANE_X.map(x => { v.set(x, 0.8, LANE_Z).project(camera); return (v.x + 1) / 2; });
   const d = (sx[2] - sx[0]) / 2;      // レーン1つ分の画面上の幅
-  const thrL = sx[1] - d * 0.9;       // これより左なら左レーン
-  const thrR = sx[1] + d * 0.9;       // これより右なら右レーン
-  const h = d * 0.15;                 // 境目でレーンが行き来しないための余裕
+  // レーンの「境目」（レーンとレーンの中間）を越えた時点で切り替える。
+  // 以前は隣のレーンの中心近く（0.9）まで動かさないと切り替わらず、「マウスを動かしてからキャラが動くまで遅い」と感じやすかった
+  const thrL = sx[1] - d * 0.5;       // これより左なら左レーン
+  const thrR = sx[1] + d * 0.5;       // これより右なら右レーン
+  const h = immediate ? 0 : d * 0.08; // 境目でレーンが行き来しないための余裕（クリック時は不要）
   let target = 1;
   if (nx < thrL) target = 0;
   else if (nx > thrR) target = 2;
@@ -626,32 +640,40 @@ function laneFromMouse(clientX) {
 gameCanvasWrapEl.addEventListener('mousemove', (e) => laneFromMouse(e.clientX));
 gameCanvasWrapEl.addEventListener('mousedown', (e) => {
   if (e.button !== 0) return;
-  laneFromMouse(e.clientX);
+  laneFromMouse(e.clientX, true);
   jump();
 });
 
-// タッチ操作：短いタップ＝ジャンプ、左右スワイプ＝レーン移動
-let touchStartX = 0, touchStartY = 0, touchStartTime = 0;
+// タッチ操作：短いタップ＝ジャンプ、左右スワイプ＝レーン移動。
+// 以前は指を離した瞬間に判定していたため、スワイプしてから動き出すまでに遅れがあった。
+// 現在は、指が一定距離（SWIPE_PX）動いた時点ですぐにレーンを移動する。
+// 1回の指の動きで続けて動かせば、2レーン分まとめて移動もできる
+const SWIPE_PX = 22;
+let touchAnchorX = 0, touchAnchorY = 0, touchSwiped = false;
 const gameCanvasEl = document.getElementById('gameCanvasWrap');
 gameCanvasEl.addEventListener('touchstart', (e) => {
   e.preventDefault();
   const t = e.changedTouches[0];
-  touchStartX = t.clientX;
-  touchStartY = t.clientY;
-  touchStartTime = Date.now();
+  touchAnchorX = t.clientX;
+  touchAnchorY = t.clientY;
+  touchSwiped = false;
+}, { passive: false });
+gameCanvasEl.addEventListener('touchmove', (e) => {
+  e.preventDefault();
+  const t = e.changedTouches[0];
+  const dx = t.clientX - touchAnchorX;
+  const dy = t.clientY - touchAnchorY;
+  if (Math.abs(dx) >= SWIPE_PX && Math.abs(dx) > Math.abs(dy)) {
+    laneSmooth = LANE_SMOOTH_TOUCH;
+    moveLane(dx > 0 ? 1 : -1);
+    touchSwiped = true;
+    touchAnchorX = t.clientX;
+    touchAnchorY = t.clientY;
+  }
 }, { passive: false });
 gameCanvasEl.addEventListener('touchend', (e) => {
   e.preventDefault();
-  const t = e.changedTouches[0];
-  const dx = t.clientX - touchStartX;
-  const dy = t.clientY - touchStartY;
-  const dt = Date.now() - touchStartTime;
-  if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy) && dt < 500) {
-    laneSmooth = LANE_SMOOTH_TOUCH;
-    moveLane(dx > 0 ? 1 : -1);
-  } else {
-    jump();
-  }
+  if (!touchSwiped) jump(); // スワイプしていなければタップ＝ジャンプ
 }, { passive: false });
 
 document.addEventListener('keydown', (e) => {
