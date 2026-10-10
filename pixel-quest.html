@@ -65,6 +65,9 @@ main { margin-top: var(--nav-height); padding: 20px; max-width: 640px; margin-le
 .game-hud { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; padding: 0 4px; }
 .hud-score { font-size: 0.95rem; font-weight: 800; color: #fff; }
 .hud-best { font-size: 0.78rem; color: var(--text-muted); }
+.goal-bar { position: relative; height: 8px; background: rgba(255,255,255,0.08); border-radius: 6px; margin: 0 4px 24px; overflow: visible; }
+.goal-fill { height: 100%; width: 0; background: linear-gradient(90deg, var(--accent), var(--star-color)); border-radius: 6px; }
+.goal-flag { position: absolute; right: 0; top: 11px; font-size: 0.66rem; font-weight: 800; color: var(--star-color); letter-spacing: 0.04em; }
 #gameCanvasWrap { width: 100%; aspect-ratio: 2 / 1; display: block; border-radius: 10px; overflow: hidden; touch-action: manipulation; position: relative; background: #05070d; }
 #gameCanvasWrap canvas { display: block; width: 100% !important; height: 100% !important; }
 .game-hint { text-align: center; font-size: 0.78rem; color: var(--text-muted); margin-top: 10px; }
@@ -75,6 +78,9 @@ main { margin-top: var(--nav-height); padding: 20px; max-width: 640px; margin-le
 .go-title { font-size: 1.3rem; font-weight: 800; color: #fff; margin-bottom: 8px; }
 .go-score { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 20px; }
 .go-score strong { color: var(--star-color); font-size: 1.2rem; }
+.go-sub { font-size: 0.85rem; color: var(--text-muted); margin: -10px 0 18px; line-height: 1.7; }
+.gameover-box.cleared { border-color: var(--star-color); }
+.gameover-box.cleared .go-title { color: var(--star-color); }
 .go-btns { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
 .go-btn { padding: 12px 24px; border-radius: 8px; font-size: 0.9rem; font-weight: 700; text-decoration: none; border: none; cursor: pointer; font-family: inherit; }
 .go-btn.primary { background: var(--accent); color: #fff; }
@@ -106,7 +112,7 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
   <div class="page-head">
     <span class="page-tag">🎮 ミニゲーム</span>
     <h1 class="page-title">スタジオランナー <span style="font-size:.6em;color:var(--star-color);">3D</span></h1>
-    <p class="page-desc">制作会社を擬人化したキャラクターで、3Dコースを駆け抜けよう。スマホはタップとスワイプ、PCはマウスとキーボードで遊べます。</p>
+    <p class="page-desc">制作会社を擬人化したキャラクターで、3Dコースを駆け抜けよう。ゴールまで走り切れば、1回およそ2分で遊び終わります。スマホはタップとスワイプ、PCはマウスとキーボードで遊べます。</p>
   </div>
 
   <div class="char-select active" id="charSelect">
@@ -118,16 +124,18 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
 
   <div class="game-wrap" id="gameWrap">
     <div class="game-hud">
-      <span class="hud-score" id="hudScore">SCORE: 0</span>
+      <span class="hud-score" id="hudScore">SCORE: 0 / 1200</span>
       <span class="hud-best" id="hudBest">BEST: 0</span>
     </div>
+    <div class="goal-bar"><div class="goal-fill" id="goalFill"></div><span class="goal-flag">🏁 GOAL</span></div>
     <div id="gameCanvasWrap"><span class="render-badge">3D RENDER</span></div>
     <div class="game-hint">【スマホ】タップでジャンプ・左右スワイプでレーン移動　【PC】クリック／スペース・W・↑キーでジャンプ・マウスを左右に動かす／←→・A・Dキーでレーン移動</div>
   </div>
 
   <div class="gameover-box" id="gameoverBox">
-    <div class="go-title">💥 ゲームオーバー</div>
+    <div class="go-title" id="goTitle">💥 ゲームオーバー</div>
     <div class="go-score">スコア：<strong id="finalScore">0</strong></div>
+    <div class="go-sub" id="goSub"></div>
     <div id="kojimaOutro" style="display:none;font-size:.82rem;color:var(--accent);font-style:italic;margin-bottom:18px;line-height:1.8;padding:12px 16px;background:rgba(230,72,90,0.08);border-radius:10px;text-align:left;"></div>
     <div class="go-btns">
       <button class="go-btn primary" onclick="retryGame()">もう一度遊ぶ</button>
@@ -138,9 +146,9 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
   <section class="game-guide">
     <h2>スタジオランナーの遊び方</h2>
     <h3>どんなゲーム？</h3>
-    <p>「スタジオランナー」は、アニメ制作会社を擬人化したキャラクターを選び、3Dのコースを走って障害物を避けるミニゲームです。コースは左・中央・右の3レーンに分かれていて、レーンを切り替えたりジャンプしたりして、次々に現れる赤い障害物をよけ続けます。障害物にぶつかるとゲームオーバーです。</p>
+    <p>「スタジオランナー」は、アニメ制作会社を擬人化したキャラクターを選び、3Dのコースを走って障害物を避けるミニゲームです。コースは左・中央・右の3レーンに分かれていて、レーンを切り替えたりジャンプしたりして、次々に現れる赤い障害物をよけ続けます。障害物にぶつかるとゲームオーバーで、スコアが1200点に届くとゴール（クリア）です。ノーミスで走り切ると、1回およそ1分40秒から2分で遊び終わります。</p>
     <h3>キャラクターとルール</h3>
-    <p>選べるのは、P.A.WORKS、京都アニメーション、CloverWorks、A-1 Pictures、wit studio、MAPPA、TRIGGER、サイエンスSARUの8社と、特別出演のコジマプロダクションです。8社は色が違うだけで、遊び方や難しさは同じです。コジマプロダクションを選ぶと、スピードが少し速く、障害物も高くなって難易度が上がります。スコアは走った距離に応じて増え、走るほどスピードも上がっていきますが、速さには上限があります。ベストスコアは、お使いのブラウザの中だけに保存されます。</p>
+    <p>選べるのは、P.A.WORKS、京都アニメーション、CloverWorks、A-1 Pictures、wit studio、MAPPA、TRIGGER、サイエンスSARUの8社と、特別出演のコジマプロダクションです。8社は色が違うだけで、遊び方や難しさは同じです。コジマプロダクションを選ぶと、スピードが少し速く、障害物も高くなって難易度が上がります。スコアは走った距離に応じて増え、画面上のバーでゴールまでの進み具合を確かめられます。走るほどスピードも上がっていきますが、速さには上限があります。ゴールするとクリアタイムが表示されます。ベストスコアとベストタイムは、お使いのブラウザの中だけに保存されます。</p>
     <h3>操作方法</h3>
     <p>スマホでは、画面をタップするとジャンプし、左右にスワイプするとレーンを移動します。PCでは、マウスをクリックするか、スペース・W・↑キーを押すとジャンプします。レーンの移動は、マウスのカーソルを左右に動かすか、←→キーまたはA・Dキーで行います。3Dの描画には、WebGLに対応した最新のブラウザが必要です。</p>
     <p>診断やガチャも用意しています。ほかのコンテンツは<a href="/games.html">診断・ガチャ一覧</a>から、制作会社のことをもっと知りたい方は<a href="/blog/studio-favorites.html">好きな制作会社16社の代表作まとめ</a>や<a href="/studio-diagnosis.html">制作会社診断</a>もどうぞ。</p>
@@ -226,6 +234,12 @@ const kojimaGameOverLines = [
 /* ===================== 3D エンジン（Three.js） ===================== */
 let scene, camera, renderer, playerGroup, groundMesh, lineMeshes = [];
 let obstacles = [], score, best, speed, running, animId, spawnTimer;
+// ゴール設定：表示スコアがGOAL_SCOREに達するとクリア（60fps換算で約100秒）。
+// ミニゲームとして1回が数分以内に終わるよう、ゴールを設けている。
+const GOAL_SCORE = 1200;
+const GOAL_GATE_LEAD = 35;   // ゴールゲートが見え始めるのは、ゴールの約35点（約3秒）手前
+const GOAL_GATE_Z = -90;
+let goalGate = null, goalSpawned = false, stepCount = 0;
 let playerY = 0, playerVY = 0, jumping = false;
 let jumpBuffer = 0; // 空中で押したジャンプを、着地の直前だけ先行入力として受け付ける
 const LANE_Z = 0;
@@ -386,6 +400,9 @@ function resetGame() {
 
   obstacles.forEach(o => scene.remove(o.mesh));
   obstacles = [];
+  if (goalGate) { scene.remove(goalGate.mesh); goalGate = null; }
+  goalSpawned = false;
+  stepCount = 0;
   score = 0;
   speed = isKojima ? 0.155 : 0.145;
   spawnTimer = 0;
@@ -401,6 +418,8 @@ function resetGame() {
   stepAccumulator = 0;
   jumpBuffer = 0;
   window._hardMode = isKojima;
+  document.getElementById('gameoverBox').classList.remove('cleared');
+  updateHud();
 }
 
 function jump() {
@@ -432,6 +451,49 @@ function applyLaneNow() {
   camera.position.x = playerX * 0.35;
   camera.lookAt(playerX * 0.35, 1, -10);
   renderer.render(scene, camera);
+}
+
+function buildGoalGate() {
+  const g = new THREE.Group();
+  const gold = new THREE.MeshBasicMaterial({ color: 0xd99a3d, fog: false });
+  for (const x of [-3.1, 3.1]) {
+    const pillar = new THREE.Mesh(new THREE.BoxGeometry(0.35, 3.6, 0.35), gold);
+    pillar.position.set(x, 1.8, 0);
+    g.add(pillar);
+  }
+  const bar = new THREE.Mesh(new THREE.BoxGeometry(6.8, 0.35, 0.35), gold);
+  bar.position.set(0, 3.6, 0);
+  g.add(bar);
+  // 市松模様の横断幕（GOAL）
+  const cv = document.createElement('canvas');
+  cv.width = 512; cv.height = 128;
+  const cx = cv.getContext('2d');
+  for (let i = 0; i < 32; i++) {
+    for (let j = 0; j < 8; j++) {
+      cx.fillStyle = ((i + j) % 2) ? '#ffffff' : '#111111';
+      cx.fillRect(i * 16, j * 16, 16, 16);
+    }
+  }
+  cx.fillStyle = 'rgba(230,72,90,0.92)';
+  cx.fillRect(150, 24, 212, 80);
+  cx.fillStyle = '#ffffff';
+  cx.font = 'bold 64px sans-serif';
+  cx.textAlign = 'center'; cx.textBaseline = 'middle';
+  cx.fillText('GOAL', 256, 66);
+  const banner = new THREE.Mesh(new THREE.PlaneGeometry(6.4, 1.6), new THREE.MeshBasicMaterial({ map: new THREE.CanvasTexture(cv), fog: false, side: THREE.DoubleSide }));
+  banner.position.set(0, 2.7, 0.05);
+  g.add(banner);
+  // 路面のゴールライン
+  const cv2 = document.createElement('canvas');
+  cv2.width = 256; cv2.height = 32;
+  const c2 = cv2.getContext('2d');
+  for (let i = 0; i < 16; i++) for (let j = 0; j < 2; j++) { c2.fillStyle = ((i + j) % 2) ? '#ffffff' : '#111111'; c2.fillRect(i * 16, j * 16, 16, 16); }
+  const line = new THREE.Mesh(new THREE.PlaneGeometry(6, 0.9), new THREE.MeshBasicMaterial({ map: new THREE.CanvasTexture(cv2), fog: false }));
+  line.rotation.x = -Math.PI / 2;
+  line.position.set(0, 0.06, 0);
+  g.add(line);
+  g.position.set(0, 0, GOAL_GATE_Z);
+  return g;
 }
 
 function spawnObstacle() {
@@ -501,7 +563,7 @@ function step() {
   });
 
   spawnTimer -= 1;
-  if (spawnTimer <= 0) {
+  if (!goalSpawned && spawnTimer <= 0) {
     spawnObstacle();
     const baseMin = hard ? 22 : 28;
     const baseRand = hard ? 20 : 24;
@@ -528,12 +590,31 @@ function step() {
     }
   }
 
+  if (goalGate) {
+    goalGate.z += speed * 1.6;
+    goalGate.mesh.position.z = goalGate.z;
+    if (goalGate.z >= LANE_Z) { clearGame(); return; }
+  }
+
   score += 1;
+  stepCount++;
+  if (!goalSpawned && Math.floor(score / 5) >= GOAL_SCORE - GOAL_GATE_LEAD) {
+    goalSpawned = true;
+    const mesh = buildGoalGate();
+    scene.add(mesh);
+    goalGate = { mesh, z: GOAL_GATE_Z };
+  }
   const cap = hard ? SPEED_CAP_HARD : SPEED_CAP_NORMAL;
   speed = Math.min(cap, speed + (hard ? 0.00016 : 0.00012));
 
   camera.position.y = 3.2 + Math.sin(score * 0.03) * 0.03;
-  document.getElementById('hudScore').textContent = 'SCORE: ' + Math.floor(score / 5);
+  updateHud();
+}
+
+function updateHud() {
+  const pts = Math.min(GOAL_SCORE, Math.floor(score / 5));
+  document.getElementById('hudScore').textContent = 'SCORE: ' + pts + ' / ' + GOAL_SCORE;
+  document.getElementById('goalFill').style.width = (pts / GOAL_SCORE * 100) + '%';
 }
 
 const STEP_MS = 1000 / 60;
@@ -580,6 +661,10 @@ function endGame() {
   }
   document.getElementById('hudBest').textContent = 'BEST: ' + best;
   document.getElementById('finalScore').textContent = finalScore;
+  document.getElementById('goTitle').textContent = '💥 ゲームオーバー';
+  const remain = Math.max(0, GOAL_SCORE - finalScore);
+  document.getElementById('goSub').textContent = 'ゴールまであと ' + remain + ' 点' + (remain <= 300 ? '。あと少しです！' : '。もう一度挑戦してみよう！');
+  document.getElementById('gameoverBox').classList.remove('cleared');
 
   const outroEl = document.getElementById('kojimaOutro');
   if (characters[selectedChar].special) {
@@ -597,6 +682,52 @@ function endGame() {
 
   document.getElementById('gameWrap').classList.remove('active');
   document.getElementById('gameoverBox').classList.add('active');
+}
+
+function loadBestTime() {
+  try { return parseFloat(localStorage.getItem('animedb_runner_besttime') || '0'); } catch(e) { return 0; }
+}
+function saveBestTime(v) {
+  try { localStorage.setItem('animedb_runner_besttime', String(v)); } catch(e) {}
+}
+function fmtTime(sec) {
+  const m = Math.floor(sec / 60);
+  const s = (sec - m * 60).toFixed(1).padStart(4, '0');
+  return m + '分' + s + '秒';
+}
+
+function clearGame() {
+  running = false;
+  cancelAnimationFrame(animId);
+  score = GOAL_SCORE * 5;
+  updateHud();
+  if (GOAL_SCORE > best) { best = GOAL_SCORE; saveBest(best); }
+  document.getElementById('hudBest').textContent = 'BEST: ' + best;
+  document.getElementById('finalScore').textContent = GOAL_SCORE;
+
+  const sec = stepCount / 60;
+  const prev = loadBestTime();
+  let sub = 'クリアタイム：' + fmtTime(sec);
+  if (!prev || sec < prev) {
+    saveBestTime(sec);
+    sub += (prev ? '（ベストタイム更新！）' : '（初クリア！）');
+  } else {
+    sub += '（ベストタイム：' + fmtTime(prev) + '）';
+  }
+  document.getElementById('goTitle').textContent = '🏁 ゴール！クリア！';
+  document.getElementById('goSub').textContent = sub;
+  const box = document.getElementById('gameoverBox');
+  box.classList.add('cleared');
+
+  const outroEl = document.getElementById('kojimaOutro');
+  if (characters[selectedChar].special) {
+    outroEl.innerHTML = '🎬 ……見事だ。だが、これは『エンディング』ではない。次のミッションへの『プロローグ』だ。（THE END？ いや、まだだ）<br><a href="' + characters[selectedChar].url + '" target="_blank" rel="noopener" style="color:var(--star-color);font-size:.78rem;">→ KOJIMA PRODUCTIONS 公式サイト</a>';
+    outroEl.style.display = 'block';
+  } else {
+    outroEl.style.display = 'none';
+  }
+  document.getElementById('gameWrap').classList.remove('active');
+  box.classList.add('active');
 }
 
 function startGame() {
