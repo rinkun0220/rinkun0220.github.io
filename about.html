@@ -77,6 +77,18 @@
       margin-bottom: 20px;
     }
     p:last-child { margin-bottom: 0; }
+    h2 {
+      font-size: 1.15rem;
+      font-weight: 800;
+      margin: 36px 0 16px;
+      padding-left: 12px;
+      border-left: 3px solid var(--accent);
+    }
+    .about-list { list-style: none; padding: 0; margin: 0 0 20px; }
+    .about-list li { font-size: 0.93rem; line-height: 1.85; padding: 10px 0 10px 18px; position: relative; border-bottom: 1px solid var(--border); }
+    .about-list li::before { content: "▸"; color: var(--accent); position: absolute; left: 0; }
+    .about-list li:last-child { border-bottom: none; }
+    .about-list a, .card p a { color: var(--accent2); text-decoration: underline; }
     footer {
       background: var(--surface);
       border-top: 1px solid var(--border);
@@ -107,8 +119,25 @@
 
       <p>管理人について簡単に自己紹介させてください。アニメ視聴歴は23年ほどになります。学生時代に夜な夜な見ていた深夜アニメから始まり、社会人になった今も月間12本前後のペースで新作をチェックし続けています。累計視聴本数は自分でも把握しきれていませんが、幼少期から数えると相当な数になっているはずです。このサイトで紹介している評価やレビューは、そうした個人の視聴経験に基づく率直な感想です。万人受けを狙うのではなく、「一人のアニメ好きが本気で選んだ結果」を大切にしています。</p>
 
+      <h2>ANIMEDBでできること</h2>
+      <ul class="about-list">
+        <li><a href="./index.html">今クールの注目アニメ</a>：放送中の作品をデータベースからピックアップし、各種動画配信サービスへの入口をまとめています。</li>
+        <li><a href="./blog/">ブログ</a>：クールごとのおすすめ記事、ジャンル別ランキング、脚本家・監督・制作会社・声優の掘り下げ、「名探偵コナン」のガイド記事など、管理人の視点で書いています。</li>
+        <li><a href="./games.html">診断・ガチャ・ミニゲーム</a>：あなたに合う制作会社・監督・脚本家の診断、視聴傾向診断、埋もれた名作ガチャなど、アニメ選びのきっかけになるコンテンツです。</li>
+        <li><a href="./directory.html">声優・スタッフ名鑑</a>：記事で紹介している声優・脚本家・監督・制作会社・アーティストを横断的に探せます。</li>
+        <li><a href="./glossary.html">アニメ初心者向け用語集</a>：「1話切り」「なろう系」「シリーズ構成」など、アニメサイトやSNSでよく見る言葉を解説しています。</li>
+      </ul>
+
+      <h2>評価について</h2>
+      <p>当サイトの★の点数（10点満点）やS・A・B・Cの評価は、管理人が実際に視聴した経験にもとづく個人的な評価です。脚本、作画・演出、キャラクター、音楽といった複数の観点から見て付けています。どのような基準で付けているかは<a href="./blog/rating-criteria.html">評価基準の記事</a>で公開しています。万人に当てはまる優劣ではなく、作品選びの参考のひとつとして使っていただければ幸いです。</p>
+
+      <h2>情報の更新と訂正について</h2>
+      <p>新しいクールが始まるたびに、注目作品や記事を追加・更新しています。サイトの追加や修正の履歴は<a href="./changelog.html">更新履歴・お知らせ</a>にまとめています。放送や配信の情報は変更されることがあるため、最新の情報は各作品の公式サイトや配信サービスでもご確認ください。掲載内容に誤りを見つけた場合は、<a href="./contact.html">お問い合わせ</a>からお知らせいただければ、確認のうえ訂正します。</p>
+
+      <h2>運営方針と広告について</h2>
       <p>なお、本サイトはアフィリエイト収益を主目的とはせず、純粋な情報提供を目的として運営しています。広告（Google AdSenseなど）を掲載する場合がありますが、作品の紹介や評価に、収益目的の偏りが入らないよう心がけています。</p>
 
+      <h2>SNSでも発信しています</h2>
       <p>また X・Instagram・TikTok に管理人の感想を投稿しております。そちらも参考にしてください。</p>
 
       <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:8px;">
