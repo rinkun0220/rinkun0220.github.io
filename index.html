@@ -942,13 +942,15 @@ async function loadHomeContent() {
   const staticHero = buildStaticHeroList();
   if (staticHero.length > 0) renderHeroSlider(staticHero);
 
-  // 「海外で注目」の行は、APIが応答したときだけ後から追加する。応答しなければ表示しない。
+  // 「海外で注目」の行は、AniList（アニメの評価・人気データを公開している海外のサービス）のデータが
+  // 取得できたときだけ後から追加する。取得できなければ表示しない。
+  // （以前使っていたJikan API（MyAnimeList）が長期間つながらなくなったため、AniListに切り替えた）
   try {
-    const nowData = await fetchWithCache(`${API_BASE}/seasons/now?limit=25`, 1);
-    if (nowData && nowData.data && nowData.data.length > 0) {
-      const unique = dedup(nowData.data);
+    const list = await fetchAniListSeason();
+    if (list.length > 0) {
+      const unique = dedup(list);
       if (staticHero.length === 0) renderHeroSlider(unique.slice(0, 5));
-      createScrollRow(rowsContainer, "海外で今シーズン注目のアニメ", unique, "※MyAnimeList（Jikan API）のユーザー評価データをもとに、海外で話題の今期アニメを自動集計して表示しています。<br>※作品画像はMyAnimeListのデータベースから取得して表示しています。更新直後やMyAnimeList側の状況により、画像が一時的に表示されない場合があります。");
+      createScrollRow(rowsContainer, "海外で今シーズン注目のアニメ", unique, "※AniList（海外のアニメ情報サービス）のユーザー評価・人気データをもとに、海外で話題の今期アニメを自動集計して表示しています。★はAniListユーザーの平均評価（10点満点換算）です。<br>※作品画像はAniListから取得して表示しています。AniList側の状況により、画像が一時的に表示されない場合があります。");
     } else {
       throw new Error("No Data");
     }
@@ -959,6 +961,48 @@ async function loadHomeContent() {
       renderHeroSlider(unique.slice(0, 5));
     }
   }
+}
+
+// AniListから今シーズン（放送中）の人気アニメを取得し、カード表示用の形に変換する
+function currentAniListSeason() {
+  const d = new Date();
+  const m = d.getMonth() + 1;
+  const season = m <= 3 ? "WINTER" : m <= 6 ? "SPRING" : m <= 9 ? "SUMMER" : "FALL";
+  return { season, year: d.getFullYear() };
+}
+
+async function fetchAniListSeason() {
+  const { season, year } = currentAniListSeason();
+  const query = `query($y:Int,$s:MediaSeason){Page(perPage:20){media(season:$s,seasonYear:$y,type:ANIME,status:RELEASING,format_in:[TV,TV_SHORT,ONA],sort:POPULARITY_DESC,isAdult:false){id idMal title{native romaji} averageScore coverImage{large} siteUrl season seasonYear}}}`;
+  for (let i = 0; i < 2; i++) {
+    const ctrl = new AbortController();
+    const timer = setTimeout(() => ctrl.abort(), 8000);
+    try {
+      const res = await fetch("https://graphql.anilist.co", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+        body: JSON.stringify({ query, variables: { y: year, s: season } }),
+        signal: ctrl.signal
+      });
+      if (!res.ok) throw new Error("HTTP_" + res.status);
+      const json = await res.json();
+      const media = (json.data && json.data.Page && json.data.Page.media) || [];
+      return media.map(a => ({
+        mal_id: a.idMal || ("al" + a.id),
+        title_japanese: (a.title && (a.title.native || a.title.romaji)) || "",
+        score: a.averageScore ? a.averageScore / 10 : null,
+        year: a.seasonYear,
+        season: (a.season || "").toLowerCase(),
+        href: a.siteUrl,
+        images: { webp: { image_url: a.coverImage && a.coverImage.large } }
+      })).filter(a => a.title_japanese);
+    } catch (e) {
+      if (i === 1) throw e;
+    } finally {
+      clearTimeout(timer);
+    }
+  }
+  return [];
 }
 
 // 「国内で注目のアニメ（管理人セレクト）」のカードから、上部スライダー用のデータを作る
@@ -1069,7 +1113,11 @@ function createAnimeCard(anime) {
   const card = document.createElement("div");
   card.className = "anime-card";
   const title = getJapaneseTitle(anime);
-  card.addEventListener("click", () => openModal(anime.mal_id, title));
+  if (anime.href) {
+    card.addEventListener("click", () => window.open(anime.href, "_blank", "noopener"));
+  } else {
+    card.addEventListener("click", () => openModal(anime.mal_id, title));
+  }
   
   const imgUrl = anime.images?.webp?.image_url || anime.images?.jpg?.image_url || '';
   const score = anime.score ? anime.score.toFixed(2) : '--';
