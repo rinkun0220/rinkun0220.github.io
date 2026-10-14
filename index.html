@@ -564,6 +564,7 @@ main { margin-top: var(--nav-height); padding: 24px; min-height: calc(100vh - va
       <h3 class="section-title">国内で注目のアニメ（管理人セレクト）</h3>
       <p style="font-size:0.78rem;color:var(--text-muted);margin:-10px 0 16px;">※作品画像はMyAnimeListのデータベースから取得して表示しています。更新直後やMyAnimeList側の状況により、画像が一時的に表示されない場合があります。</p>
       <p style="font-size:0.78rem;color:var(--text-muted);margin:-10px 0 16px;">※★の点数は管理人スコア（10点満点）です。評価の基準は<a href="/blog/rating-criteria.html" style="color:var(--accent);">こちら</a>をご覧ください。</p>
+      <p style="font-size:0.78rem;color:var(--text-muted);margin:-10px 0 16px;">※作品の画像・タイトルをクリックすると、その作品の公式サイトが新しいタブで開きます。</p>
       <div class="scroll-row">
 
         <div class="anime-card">
@@ -950,7 +951,7 @@ async function loadHomeContent() {
     if (list.length > 0) {
       const unique = dedup(list);
       if (staticHero.length === 0) renderHeroSlider(unique.slice(0, 5));
-      createScrollRow(rowsContainer, "海外で今シーズン注目のアニメ", unique, "※AniList（海外のアニメ情報サービス）のユーザー評価・人気データをもとに、海外で話題の今期アニメを自動集計して表示しています。★はAniListユーザーの平均評価（10点満点換算）です。<br>※作品画像はAniListから取得して表示しています。AniList側の状況により、画像が一時的に表示されない場合があります。");
+      createScrollRow(rowsContainer, "海外で今シーズン注目のアニメ", unique, "※AniList（海外のアニメ情報サービス）のユーザー評価・人気データをもとに、海外で話題の今期アニメを自動集計して表示しています。★はAniListユーザーの平均評価（10点満点換算）です。<br>※作品画像はAniListから取得して表示しています。AniList側の状況により、画像が一時的に表示されない場合があります。<br>※作品の画像・タイトルをクリックすると、AniListの作品ページが新しいタブで開きます。<br>※dアニメ・Amazon・Netflixのボタンは、作品名で各サービスを検索するリンクです。海外のデータから自動で並べているため、全作品に3つのボタンが表示されますが、その作品が実際に配信されているとは限りません。");
     } else {
       throw new Error("No Data");
     }
