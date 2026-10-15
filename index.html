@@ -147,6 +147,8 @@ main { margin-top: var(--nav-height); padding: 24px; min-height: calc(100vh - va
 /* セクションタイトル */
 .section-title { font-size: 1.5rem; font-weight: 700; margin: 32px 0 16px 0; display: flex; align-items: center; gap: 8px; }
 .section-title::before { content: ''; display: inline-block; width: 4px; height: 24px; background: var(--accent); border-radius: 2px; }
+.row-notes { margin: -10px 0 16px; }
+.row-notes p { font-size: 0.78rem; color: var(--text-muted); margin: 0 0 4px; padding-left: 1em; text-indent: -1em; line-height: 1.6; }
 .scroll-row { display: flex; gap: 20px; overflow-x: auto; padding-bottom: 16px; scroll-behavior: smooth; }
 .scroll-row::-webkit-scrollbar { height: 8px; }
 .scroll-row::-webkit-scrollbar-track { background: transparent; }
@@ -1101,7 +1103,8 @@ function createScrollRow(container, heading, list, desc) {
   });
   if (uniqueList.length === 0) return;
   const section = document.createElement("section");
-  const descHtml = desc ? `<p style="font-size:0.78rem;color:var(--text-muted);margin:-10px 0 16px;">${desc}</p>` : "";
+  // 注意書きは「※」ごとに1段落にする（スマホで折り返したとき、2行目以降を※の右に揃えるため）
+  const descHtml = desc ? `<div class="row-notes">${desc.split("<br>").map(t => `<p>${t}</p>`).join("")}</div>` : "";
   section.innerHTML = `<h3 class="section-title">${heading}</h3>${descHtml}`;
   const row = document.createElement("div");
   row.className = "scroll-row";
