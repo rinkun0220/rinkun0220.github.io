@@ -147,7 +147,10 @@ main { margin-top: var(--nav-height); padding: 24px; min-height: calc(100vh - va
 /* セクションタイトル */
 .section-title { font-size: 1.5rem; font-weight: 700; margin: 32px 0 16px 0; display: flex; align-items: center; gap: 8px; }
 .section-title::before { content: ''; display: inline-block; width: 4px; height: 24px; background: var(--accent); border-radius: 2px; }
+.adsense-seo-content p { word-break: auto-phrase; line-break: strict; }
+
 .row-notes { margin: -10px 0 16px; }
+.row-notes .note-line { display: block; text-indent: 0; }
 .row-notes p { font-size: 0.78rem; color: var(--text-muted); margin: 0 0 4px; padding-left: 1em; text-indent: -1em; line-height: 1.6; }
 .scroll-row { display: flex; gap: 20px; overflow-x: auto; padding-bottom: 16px; scroll-behavior: smooth; }
 .scroll-row::-webkit-scrollbar { height: 8px; }
@@ -258,7 +261,7 @@ main { margin-top: var(--nav-height); padding: 24px; min-height: calc(100vh - va
     <div class="adsense-seo-content" style="margin-bottom: 40px; animation: fadeIn 0.8s ease-out;">
       <h1 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 16px; line-height: 1.4;">ANIMEDB｜今クールの注目アニメをピックアップ。またアニメの入口の幅を増やすためのサイトです。</h1>
       <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 16px; line-height: 1.8;">
-        当サイトは、毎クール70本前後放送されるアニメ作品の中から注目アニメをデータベースから検索。またアニメの入口の幅を広くするためにブログから、アニメを発掘するためのアニメサイトです。今クールの注目アニメ。アニメの入口の幅を増やすためのブログ。そこからピックアップしたアニメを各種動画配信サービスへの繋がりをまとめました。力を入れているのが<a href="./blog/" style="color:var(--text-muted);text-decoration:none;">管理人が書いている<span style="color:var(--accent);">ブログ</span>です</a>。レビュー、ランキングから脚本家・監督・制作会社・音楽・声優の掘り下げまで、管理人の視点でブログを書いています。<br><a href="./about.html" style="color:var(--text-muted);text-decoration:none;margin-left:4px;"><span style="color:var(--accent);">開発者の思い</span>を見て頂ければ幸いです。</a>
+        当サイトは、毎クール70本前後放送されるアニメ作品の中から注目アニメをデータベースから検索。またアニメの入口の幅を広くするためにブログから、アニメを発掘するためのアニメサイトです。今クールの注目アニメ。アニメの入口の幅を増やすためのブログ。そこからピックアップしたアニメを各種動画配信サービスへの繋がりをまとめました。<br>力を入れているのが<a href="./blog/" style="color:var(--text-muted);text-decoration:none;">管理人が書いている<span style="color:var(--accent);">ブログ</span>です</a>。レビュー、ランキングから脚本家・監督・制作会社・音楽・声優の掘り下げまで、管理人の視点でブログを書いています。<a href="./about.html" style="color:var(--text-muted);text-decoration:none;"><span style="color:var(--accent);">開発者の思い</span>を見て頂ければ幸いです。</a>
       </p>
       <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 8px;">X・Instagram・TikTokにも管理人の感想を投稿しています。ぜひフォローしてください。</p>
       <div style="display:flex; gap:10px; flex-wrap:wrap; margin-bottom: 24px;">
@@ -953,7 +956,7 @@ async function loadHomeContent() {
     if (list.length > 0) {
       const unique = dedup(list);
       if (staticHero.length === 0) renderHeroSlider(unique.slice(0, 5));
-      createScrollRow(rowsContainer, "海外で今シーズン注目のアニメ", unique, "※AniList（海外のアニメ情報サービス）のユーザー評価・人気データをもとに、海外で話題の今期アニメを自動集計して表示しています。★はAniListユーザーの平均評価（10点満点換算）です。<br>※作品画像はAniListから取得して表示しています。AniList側の状況により、画像が一時的に表示されない場合があります。<br>※作品の画像・タイトルをクリックすると、AniListの作品ページが新しいタブで開きます。<br>※dアニメ・Amazon・Netflixのボタンは、作品名で各サービスを検索するリンクです。海外のデータから自動で並べているため、全作品に3つのボタンが表示されますが、その作品が実際に配信されているとは限りません。");
+      createScrollRow(rowsContainer, "海外で今シーズン注目のアニメ", unique, "※AniList（海外のアニメ情報サービス）のユーザー評価・人気データをもとに、海外で話題の今期アニメを自動集計して表示しています。<span class='note-line'>★はAniListユーザーの平均評価（10点満点換算）です。</span><br>※作品画像はAniListから取得して表示しています。AniList側の状況により、画像が一時的に表示されない場合があります。<br>※作品の画像・タイトルをクリックすると、AniListの作品ページが新しいタブで開きます。<br>※dアニメ・Amazon・Netflixのボタンは、作品名で各サービスを検索するリンクです。海外のデータから自動で並べているため、全作品に3つのボタンが表示されますが、その作品が実際に配信されているとは限りません。");
     } else {
       throw new Error("No Data");
     }
