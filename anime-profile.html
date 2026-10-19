@@ -407,7 +407,7 @@ function shareCard() {
   const total = stats.keiken + stats.haba + stats.ruisen + stats.kodawari + stats.keizoku;
   const shareText = encodeURIComponent(`私のアニメタイプは「${chosenType} × ${chosenType2}」総合偏差値${total}/20でした！ #ANIMEDBアニメ履歴書`);
   const shareUrl = encodeURIComponent('https://anime-db.jp/anime-profile.html');
-  window.open(`https://twitter.com/intent/tweet?text=${shareText}&url=${shareUrl}`, '_blank', 'noopener');
+  window.open(`https://x.com/intent/tweet?text=${shareText}&url=${shareUrl}`, '_blank', 'noopener');
 }
 
 function restartQuiz() {

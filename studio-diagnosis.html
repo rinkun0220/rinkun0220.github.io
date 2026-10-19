@@ -487,7 +487,7 @@ function showResult() {
     : `<a href="${r.official}" target="_blank" rel="noopener" class="result-btn primary">公式サイトを見る →</a>`;
   const shareText = encodeURIComponent(`私に合う制作会社は「${r.name}」でした！ #ANIMEDB制作会社診断`);
   const shareUrl = encodeURIComponent('https://anime-db.jp/studio-diagnosis.html');
-  const shareHtml = `<a href="https://twitter.com/intent/tweet?text=${shareText}&url=${shareUrl}" target="_blank" rel="noopener" class="result-btn share">𝕏 結果をシェア</a>`;
+  const shareHtml = `<a href="https://x.com/intent/tweet?text=${shareText}&url=${shareUrl}" target="_blank" rel="noopener" class="result-btn share">𝕏 結果をシェア</a>`;
   document.getElementById('resultScreen').innerHTML = `
     <div class="result-card">
       <div class="result-label">あなたにおすすめの制作会社は…</div>
