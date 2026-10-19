@@ -63,6 +63,14 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
 .article-body h2{font-size:1.3rem;font-weight:700;margin:40px 0 8px;padding-left:14px;border-left:4px solid var(--accent)}
 .article-body p{font-size:.95rem;margin-bottom:16px;line-height:1.9}
 .back-btn{display:inline-flex;align-items:center;gap:6px;color:var(--text-muted);text-decoration:none;font-size:.85rem;margin-bottom:32px;transition:color .2s}.back-btn:hover{color:#fff}
+.next-article{display:flex;align-items:center;gap:18px;background:linear-gradient(135deg,rgba(255,71,87,0.14),rgba(255,107,129,0.06));border:2px solid var(--accent);border-radius:14px;padding:22px 26px;margin:36px 0 8px;text-decoration:none;transition:transform .2s,box-shadow .2s}
+.next-article:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(230,72,90,0.25)}
+.next-article-label{font-size:.72rem;font-weight:700;color:var(--accent);letter-spacing:.03em;margin-bottom:6px}
+.next-article-title{font-size:1.08rem;font-weight:700;color:#fff;line-height:1.5}
+.next-article-desc{font-size:.83rem;color:var(--text-muted);margin-top:6px;line-height:1.7}
+.next-article-arrow{font-size:1.7rem;color:var(--accent);flex-shrink:0}
+@media(max-width:600px){.next-article{flex-direction:row;padding:18px 20px}.next-article-arrow{font-size:1.3rem}}
+.related-guides{margin:40px 0 28px;padding:22px 24px;background:var(--bg-card);border:1px solid var(--border-color);border-radius:14px}.related-guides-title{font-size:1.05rem;font-weight:700;color:#fff;margin:0 0 14px}.related-guides ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}.related-guides a{display:block;text-decoration:none;padding:12px 14px;border:1px solid var(--border-color);border-radius:10px;transition:border-color .2s,background .2s}.related-guides a:hover{border-color:var(--accent);background:rgba(255,255,255,0.03)}.related-guides .rg-name{display:block;color:#fff;font-weight:700;font-size:.95rem;line-height:1.5}.related-guides .rg-desc{display:block;color:var(--text-muted);font-size:.82rem;line-height:1.7;margin-top:2px}
 .site-footer{background:var(--bg-darker);border-top:1px solid var(--border-color);padding:30px 24px;text-align:center;margin-top:40px}
 .footer-links{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;margin-bottom:16px}
 .footer-link{color:var(--text-muted);text-decoration:none;font-size:.85rem}.footer-link:hover{color:#fff}
@@ -636,7 +644,28 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
     <h2>まとめ</h2>
     <p>今のアニメ主題歌は、邦楽シーンの第一線で活躍するアーティストが手がけることが当たり前になりました。好きなアーティストの曲を辿っていくだけでも、新しいアニメとの出会いになります。ここに載っている作品でまだ見ていないものがあれば、是非チェックしてみてください。</p>
     <p>この記事はあくまで管理人個人の「見逃しチェックリスト」です。他にもおすすめのタイアップ曲・作品があれば、XやInstagramで教えてもらえると嬉しいです。</p>
+    <p>名前から探したい方は、「<a href="https://anime-db.jp/directory.html" style="color:#fff;">声優・スタッフ名鑑</a>」もご利用ください。紹介している監督・脚本家・制作会社・アーティスト・声優を、名前から探せます。</p>
+
+    <a href="https://anime-db.jp/directory.html" class="next-article">
+      <div style="flex:1">
+        <div class="next-article-label">🗂️ 名前から探すならこちら</div>
+        <div class="next-article-title">声優・スタッフ名鑑</div>
+        <div class="next-article-desc">ここまでに紹介した監督・脚本家・制作会社・アーティストや、声優の名前から、代表作の解説へすぐに移動できます。</div>
+      </div>
+      <div class="next-article-arrow">→</div>
+    </a>
+
   </div>
+
+  <section class="related-guides" aria-label="関連記事">
+    <h2 class="related-guides-title">関連記事（スタッフ特集）</h2>
+    <ul>
+      <li><a href="https://anime-db.jp/blog/director-favorites.html"><span class="rg-name">好きな監督8人の代表作まとめ</span><span class="rg-desc">監督8人の代表作を紹介。監督買いの視点でアニメを見返してみたい人向け。</span></a></li>
+      <li><a href="https://anime-db.jp/blog/scriptwriter-favorites.html"><span class="rg-name">好きな脚本家8人の代表作まとめ</span><span class="rg-desc">脚本家8人の代表作を紹介。脚本家買いという視点でアニメを掘り下げたい人向け。</span></a></li>
+      <li><a href="https://anime-db.jp/blog/studio-favorites.html"><span class="rg-name">好きな制作会社16社の代表作まとめ</span><span class="rg-desc">制作会社16社の代表作を一挙紹介。特にP.A.WORKSは一番のお気に入り。見逃し作品がないかチェック用に。</span></a></li>
+      <li><a href="https://anime-db.jp/directory.html"><span class="rg-name">声優・スタッフ名鑑</span><span class="rg-desc">声優や監督などの名前から、紹介している記事へジャンプできます。</span></a></li>
+    </ul>
+  </section>
 
   <a href="https://anime-db.jp/blog/" class="back-btn">← ブログ一覧に戻る</a>
 </div>
