@@ -236,6 +236,12 @@
   </url>
 
   <url>
+    <loc>https://anime-db.jp/blog/toaru-guide.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
     <loc>https://anime-db.jp/blog/conan-beginner-guide.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
