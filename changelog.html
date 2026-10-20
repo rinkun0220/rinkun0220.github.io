@@ -14,12 +14,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>更新履歴・お知らせ｜ANIMEDB</title>
 <link rel="canonical" href="https://anime-db.jp/changelog.html">
-<meta name="description" content="ANIMEDBの更新履歴・お知らせ一覧。新着記事の追加、機能改善、配信情報の修正などをまとめています。">
+<meta name="description" content="ANIMEDBの更新履歴・お知らせの一覧です。新着記事の追加、機能改善、配信情報の修正などをまとめています。">
 <meta name="keywords" content="更新履歴,お知らせ,ANIMEDB,アップデート">
 <meta name="robots" content="index,follow">
 <meta name="author" content="ANIMEDB">
 <meta property="og:title" content="更新履歴・お知らせ｜ANIMEDB">
-<meta property="og:description" content="ANIMEDBの更新履歴・お知らせ一覧。">
+<meta property="og:description" content="ANIMEDBの更新履歴・お知らせの一覧です。">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://anime-db.jp/changelog.html">
 <meta property="og:site_name" content="ANIMEDB">
@@ -109,10 +109,11 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
 .footer-link:hover { color: #fff; }
 .copyright { font-size: 0.8rem; color: rgba(255,255,255,0.3); }
 /* 日本語の改行を自然にする設定（文節単位で改行・行頭禁則・1文字だけの行を避ける） */
-body{line-break:strict;overflow-wrap:break-word}
+body{line-break:strict;overflow-wrap:anywhere}
 @supports (word-break:auto-phrase){body{word-break:auto-phrase}}
 :has(> wbr){word-break:keep-all}
 p,li,dd,td,th{text-wrap:pretty}
+td,th{overflow-wrap:anywhere}
 .nb{white-space:nowrap}
 h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-title,.pick-name,.next-article-title{text-wrap:balance}
 </style>
@@ -161,6 +162,8 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
           <li>スマートフォンと<wbr>パソコンで、<wbr>文節の<wbr>途中で<wbr>改行されに<wbr>くくなるよう、<wbr>文章の<wbr>折り返しを<wbr>調整しました。</li>
           <li>「<a href="/scriptwriter-diagnosis.html">脚本家診断</a>」の<wbr>表示の<wbr>不具合を<wbr>修正しました。</li>
           <li>「<a href="/blog/toaru-guide.html">「とある」シリーズの見る<wbr>順番ガイド</a>」の<wbr>視聴順に、<wbr>5番目以降の<wbr>作品と<wbr>放送時期を<wbr>追加しました。<wbr>各作品に、<wbr>dアニメストアと<wbr>公式サイトへの<wbr>リンクも<wbr>付けています。<wbr>あわせて、<wbr>KADOKAWAグループの<wbr>ウェブマガジン<wbr>「メクリメクル」の「とある」シリーズ相性診断の<wbr>紹介も<wbr>追加しました。<wbr>視聴順の<wbr>見出しの<wbr>下には<wbr>公式サイト（とある<wbr>プロジェクトポータル）への<wbr>バナーを<wbr>置き、<wbr>禁書目録の<wbr>公式リンクは<wbr>正しい<wbr>ページに<wbr>直しました。</li>
+          <li>検索結果などに<wbr>表示される<wbr>各ページの<wbr>説明文を、<wbr>「です・ます」調に<wbr>そろえました。<wbr>あわせて、<wbr>「<a href="/anime-profile.html">アニメ視聴者プロフィールカード</a>」の<wbr>説明文が<wbr>途中で<wbr>切れていた<wbr>不具合も<wbr>直しました。</li>
+          <li>「<a href="/pixel-quest.html">スタジオランナー</a>」の<wbr>コジマプロダクションの<wbr>セリフを、<wbr>小島秀夫さんの<wbr>作品や<wbr>発言への<wbr>オマージュとして<wbr>書き直しました。</li>
           <li>「とある暗部の少女共棲」の<wbr>配信バッジを、<wbr>公式サイトの<wbr>配信情報に<wbr>合わせて、<wbr>dアニメのみに<wbr>しました<wbr>（TOPページと<wbr>「<a href="/blog/autumn2026-recommend.html">2026年秋アニメ おすすめ6選</a>」）。<wbr>Prime Videoは<wbr>都度課金の<wbr>ため、<wbr>外しています。</li>
         </ul>
       </div>

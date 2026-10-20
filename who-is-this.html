@@ -14,12 +14,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>この人は誰？声優・スタッフ当てクイズ｜ANIMEDB</title>
 <link rel="canonical" href="https://anime-db.jp/who-is-this.html">
-<meta name="description" content="代表作のヒントだけで、声優・脚本家・監督・制作会社・アーティストを当てる4択クイズ。ANIMEDBの名鑑データ全47件から出題します。">
+<meta name="description" content="代表作のヒントだけで、声優・脚本家・監督・制作会社・アーティストを当てる4択クイズです。ANIMEDBの名鑑データ全47件から出題します。">
 <meta name="keywords" content="声優クイズ,当てクイズ,声優名鑑,ANIMEDB,アニメクイズ">
 <meta name="robots" content="index,follow">
 <meta name="author" content="ANIMEDB">
 <meta property="og:title" content="この人は誰？声優・スタッフ当てクイズ｜ANIMEDB">
-<meta property="og:description" content="代表作のヒントだけで、声優・脚本家・監督・制作会社・アーティストを当てる4択クイズ。">
+<meta property="og:description" content="代表作のヒントだけで、声優・脚本家・監督・制作会社・アーティストを当てる4択クイズです。">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://anime-db.jp/who-is-this.html">
 <meta property="og:site_name" content="ANIMEDB">
@@ -109,10 +109,11 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
 .reveal-rank-table th, .reveal-rank-table td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--border-color); color: var(--text-muted); }
 .reveal-rank-table th { color: var(--text-main); }
 /* 日本語の改行を自然にする設定（文節単位で改行・行頭禁則・1文字だけの行を避ける） */
-body{line-break:strict;overflow-wrap:break-word}
+body{line-break:strict;overflow-wrap:anywhere}
 @supports (word-break:auto-phrase){body{word-break:auto-phrase}}
 :has(> wbr){word-break:keep-all}
 p,li,dd,td,th{text-wrap:pretty}
+td,th{overflow-wrap:anywhere}
 .nb{white-space:nowrap}
 h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-title,.pick-name,.next-article-title{text-wrap:balance}
 </style>

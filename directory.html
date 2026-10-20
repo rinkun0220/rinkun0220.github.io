@@ -14,12 +14,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>声優・スタッフ名鑑｜ANIMEDB</title>
 <link rel="canonical" href="https://anime-db.jp/directory.html">
-<meta name="description" content="ANIMEDBで紹介している声優・脚本家・監督・制作会社・アーティストを横断的にまとめた名鑑ページ。名前をクリックすると代表作の解説へジャンプできます。">
+<meta name="description" content="ANIMEDBで紹介している声優・脚本家・監督・制作会社・アーティストを横断的にまとめた名鑑ページです。名前をクリックすると、代表作の解説へジャンプできます。">
 <meta name="keywords" content="声優名鑑,脚本家,監督,制作会社,アーティスト,ANIMEDB,横断検索">
 <meta name="robots" content="index,follow">
 <meta name="author" content="ANIMEDB">
 <meta property="og:title" content="声優・スタッフ名鑑｜ANIMEDB">
-<meta property="og:description" content="ANIMEDBで紹介している声優・脚本家・監督・制作会社・アーティストを横断的にまとめた名鑑ページ。">
+<meta property="og:description" content="ANIMEDBで紹介している声優・脚本家・監督・制作会社・アーティストを横断的にまとめた名鑑ページです。">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://anime-db.jp/directory.html">
 <meta property="og:site_name" content="ANIMEDB">
@@ -106,10 +106,11 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
 .footer-link:hover { color: #fff; }
 .copyright { font-size: 0.8rem; color: rgba(255,255,255,0.3); }
 /* 日本語の改行を自然にする設定（文節単位で改行・行頭禁則・1文字だけの行を避ける） */
-body{line-break:strict;overflow-wrap:break-word}
+body{line-break:strict;overflow-wrap:anywhere}
 @supports (word-break:auto-phrase){body{word-break:auto-phrase}}
 :has(> wbr){word-break:keep-all}
 p,li,dd,td,th{text-wrap:pretty}
+td,th{overflow-wrap:anywhere}
 .nb{white-space:nowrap}
 h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-title,.pick-name,.next-article-title{text-wrap:balance}
 </style>

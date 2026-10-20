@@ -14,12 +14,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>アニメ初心者向け用語集｜ANIMEDB</title>
 <link rel="canonical" href="https://anime-db.jp/glossary.html">
-<meta name="description" content="「1話切り」「なろう系」「シリーズ構成」など、アニメサイトやSNSでよく見る言葉をやさしく解説する用語集。深夜アニメを見始めたばかりの方にもわかるようにまとめました。">
+<meta name="description" content="「1話切り」「なろう系」「シリーズ構成」など、アニメサイトやSNSでよく見る言葉をやさしく解説する用語集です。深夜アニメを見始めたばかりの方にもわかるようにまとめました。">
 <meta name="keywords" content="アニメ用語集,1話切り,なろう系,シリーズ構成,見放題,深夜アニメ,初心者,アニメ用語">
 <meta name="robots" content="index,follow">
 <meta name="author" content="ANIMEDB">
 <meta property="og:title" content="アニメ初心者向け用語集｜ANIMEDB">
-<meta property="og:description" content="アニメサイトやSNSでよく見る言葉をやさしく解説する用語集。">
+<meta property="og:description" content="アニメサイトやSNSでよく見る言葉をやさしく解説する用語集です。">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://anime-db.jp/glossary.html">
 <meta property="og:site_name" content="ANIMEDB">
@@ -97,10 +97,11 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
 .footer-link:hover { color: #fff; }
 .copyright { font-size: 0.8rem; color: rgba(255,255,255,0.3); }
 /* 日本語の改行を自然にする設定（文節単位で改行・行頭禁則・1文字だけの行を避ける） */
-body{line-break:strict;overflow-wrap:break-word}
+body{line-break:strict;overflow-wrap:anywhere}
 @supports (word-break:auto-phrase){body{word-break:auto-phrase}}
 :has(> wbr){word-break:keep-all}
 p,li,dd,td,th{text-wrap:pretty}
+td,th{overflow-wrap:anywhere}
 .nb{white-space:nowrap}
 h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-title,.pick-name,.next-article-title{text-wrap:balance}
 </style>

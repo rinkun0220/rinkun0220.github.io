@@ -14,7 +14,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>埋もれた名作ガチャ｜ANIMEDB</title>
 <link rel="canonical" href="https://anime-db.jp/hidden-gems-gacha.html">
-<meta name="description" content="ボタン一つで、埋もれた名作アニメをランダムに1本提案。今日は何を見るか迷ったときのお供に。ANIMEDBが厳選した113作品からランダムに抽選します。">
+<meta name="description" content="ボタン一つで、埋もれた名作アニメをランダムに1本提案します。今日は何を見るか迷ったときに、ご利用ください。ANIMEDBが厳選した113作品から、ランダムに抽選します。">
 <meta name="keywords" content="アニメガチャ,隠れた名作,ランダム,アニメ おすすめ,今日は何見る">
 <meta name="robots" content="index,follow">
 <meta name="author" content="ANIMEDB">
@@ -97,10 +97,11 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
 .reveal-list li { font-size: 0.82rem; color: var(--text-muted); line-height: 1.6; padding: 4px 0; border-bottom: 1px dashed var(--border-color); }
 .reveal-list li b { color: var(--text-main); font-weight: 600; }
 /* 日本語の改行を自然にする設定（文節単位で改行・行頭禁則・1文字だけの行を避ける） */
-body{line-break:strict;overflow-wrap:break-word}
+body{line-break:strict;overflow-wrap:anywhere}
 @supports (word-break:auto-phrase){body{word-break:auto-phrase}}
 :has(> wbr){word-break:keep-all}
 p,li,dd,td,th{text-wrap:pretty}
+td,th{overflow-wrap:anywhere}
 .nb{white-space:nowrap}
 h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-title,.pick-name,.next-article-title{text-wrap:balance}
 </style>

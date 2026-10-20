@@ -14,12 +14,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>診断・ガチャ一覧｜ANIMEDB</title>
 <link rel="canonical" href="https://anime-db.jp/games.html">
-<meta name="description" content="ANIMEDBの診断・ガチャコンテンツ一覧。あなたに合う制作会社診断、視聴傾向診断「あなたは何派？」、埋もれた名作ガチャなど、遊びながらアニメに出会えるコンテンツをまとめました。">
+<meta name="description" content="ANIMEDBの診断・ガチャコンテンツの一覧です。あなたに合う制作会社診断、視聴傾向診断「あなたは何派？」、埋もれた名作ガチャなど、遊びながらアニメに出会えるコンテンツをまとめました。">
 <meta name="keywords" content="アニメ診断,ガチャ,制作会社診断,視聴傾向診断,ANIMEDB">
 <meta name="robots" content="index,follow">
 <meta name="author" content="ANIMEDB">
 <meta property="og:title" content="診断・ガチャ一覧｜ANIMEDB">
-<meta property="og:description" content="遊びながらアニメに出会える診断・ガチャコンテンツ一覧。">
+<meta property="og:description" content="遊びながらアニメに出会える、診断・ガチャコンテンツの一覧です。">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://anime-db.jp/games.html">
 <meta property="og:site_name" content="ANIMEDB">
@@ -74,10 +74,11 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
 .footer-link:hover { color: #fff; }
 .copyright { font-size: 0.8rem; color: rgba(255,255,255,0.3); }
 /* 日本語の改行を自然にする設定（文節単位で改行・行頭禁則・1文字だけの行を避ける） */
-body{line-break:strict;overflow-wrap:break-word}
+body{line-break:strict;overflow-wrap:anywhere}
 @supports (word-break:auto-phrase){body{word-break:auto-phrase}}
 :has(> wbr){word-break:keep-all}
 p,li,dd,td,th{text-wrap:pretty}
+td,th{overflow-wrap:anywhere}
 .nb{white-space:nowrap}
 h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-title,.pick-name,.next-article-title{text-wrap:balance}
 </style>

@@ -14,7 +14,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>あなたに合う脚本家診断｜ANIMEDB</title>
 <link rel="canonical" href="https://anime-db.jp/scriptwriter-diagnosis.html">
-<meta name="description" content="5つの質問に答えるだけで、あなたの好みに近いアニメ脚本家を診断。吉田玲子・岡田麿里・花田十輝・横手美智子・あおしまたかしの中から結果が出ます。">
+<meta name="description" content="5つの質問に答えるだけで、あなたの好みに近いアニメ脚本家を診断します。吉田玲子・岡田麿里・花田十輝・横手美智子・あおしまたかしの中から結果が出ます。">
 <meta name="keywords" content="脚本家診断,アニメ診断,吉田玲子,岡田麿里,花田十輝,横手美智子,あおしまたかし">
 <meta name="robots" content="index,follow">
 <meta name="author" content="ANIMEDB">
@@ -107,10 +107,11 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
 .reveal-card .rc-works { font-size: 0.78rem; color: var(--star-color); margin-top: 8px; display: block; }
 .tool-guide{max-width:880px;margin:40px auto 28px;padding:0 20px}.tool-guide h2{font-size:1.05rem;font-weight:700;color:var(--text-main);margin:0 0 12px}.tool-guide h3{font-size:.92rem;font-weight:700;color:var(--accent);margin:20px 0 8px}.tool-guide p{font-size:.88rem;color:var(--text-muted);line-height:1.95;margin:0 0 12px}.tool-guide a{color:var(--star-color);text-decoration:none}.tool-guide a:hover{text-decoration:underline}
 /* 日本語の改行を自然にする設定（文節単位で改行・行頭禁則・1文字だけの行を避ける） */
-body{line-break:strict;overflow-wrap:break-word}
+body{line-break:strict;overflow-wrap:anywhere}
 @supports (word-break:auto-phrase){body{word-break:auto-phrase}}
 :has(> wbr){word-break:keep-all}
 p,li,dd,td,th{text-wrap:pretty}
+td,th{overflow-wrap:anywhere}
 .nb{white-space:nowrap}
 h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-title,.pick-name,.next-article-title{text-wrap:balance}
 </style>

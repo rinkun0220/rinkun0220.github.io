@@ -14,7 +14,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>あなたに合う監督診断｜ANIMEDB</title>
 <link rel="canonical" href="https://anime-db.jp/director-diagnosis.html">
-<meta name="description" content="7つの質問に答えるだけで、あなたの好みに近いアニメ監督を診断。長井龍雪・石原立也・石立太一・水島努・新海誠・山田尚子・幾原邦彦・高松信司の中から結果が出ます。">
+<meta name="description" content="7つの質問に答えるだけで、あなたの好みに近いアニメ監督を診断します。長井龍雪・石原立也・石立太一・水島努・新海誠・山田尚子・幾原邦彦・高松信司の中から結果が出ます。">
 <meta name="keywords" content="監督診断,アニメ診断,長井龍雪,石原立也,石立太一,水島努,新海誠,山田尚子,幾原邦彦,高松信司">
 <meta name="robots" content="index,follow">
 <meta name="author" content="ANIMEDB">
@@ -106,10 +106,11 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
 .reveal-card .rc-desc { font-size: 0.85rem; color: var(--text-muted); line-height: 1.7; }
 .reveal-card .rc-works { font-size: 0.78rem; color: var(--star-color); margin-top: 8px; display: block; }
 /* 日本語の改行を自然にする設定（文節単位で改行・行頭禁則・1文字だけの行を避ける） */
-body{line-break:strict;overflow-wrap:break-word}
+body{line-break:strict;overflow-wrap:anywhere}
 @supports (word-break:auto-phrase){body{word-break:auto-phrase}}
 :has(> wbr){word-break:keep-all}
 p,li,dd,td,th{text-wrap:pretty}
+td,th{overflow-wrap:anywhere}
 .nb{white-space:nowrap}
 h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-title,.pick-name,.next-article-title{text-wrap:balance}
 </style>

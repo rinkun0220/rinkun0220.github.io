@@ -18,12 +18,12 @@ gtag('config', 'G-X4M05SEYCE');
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>ANIMEDB｜今クールの注目アニメをピックアップ</title>
 <link rel="canonical" href="https://anime-db.jp/">
-<meta name="description" content="今シーズン放送中のアニメを網羅。配信先まで分かる無料のアニメデータベース。管理人独自のブログも公開中。">
+<meta name="description" content="今シーズン放送中のアニメを網羅した、配信先まで分かる無料のアニメデータベースです。管理人独自のブログも公開しています。">
 <meta name="keywords" content="アニメ,2026秋アニメ,ランキング,神アニメ,泣けるアニメ,ANIMEDB,アニメDB,今期アニメ,アニメ一覧,dアニメストア">
 <meta name="robots" content="index,follow">
 <meta name="author" content="ANIMEDB">
 <meta property="og:title" content="ANIMEDB｜今クールの注目アニメをピックアップ">
-<meta property="og:description" content="今シーズン放送中のアニメを網羅。配信先まで分かる無料のアニメデータベース。">
+<meta property="og:description" content="今シーズン放送中のアニメを網羅した、配信先まで分かる無料のアニメデータベースです。">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://anime-db.jp/">
 <meta property="og:site_name" content="ANIMEDB">
@@ -239,10 +239,11 @@ main { margin-top: var(--nav-height); padding: 24px; min-height: calc(100vh - va
     left: 100%;
 }
 /* 日本語の改行を自然にする設定（文節単位で改行・行頭禁則・1文字だけの行を避ける） */
-body{line-break:strict;overflow-wrap:break-word}
+body{line-break:strict;overflow-wrap:anywhere}
 @supports (word-break:auto-phrase){body{word-break:auto-phrase}}
 :has(> wbr){word-break:keep-all}
 p,li,dd,td,th{text-wrap:pretty}
+td,th{overflow-wrap:anywhere}
 .nb{white-space:nowrap}
 h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-title,.pick-name,.next-article-title{text-wrap:balance}
 </style>
