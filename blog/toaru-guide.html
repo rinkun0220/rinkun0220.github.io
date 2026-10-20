@@ -67,6 +67,14 @@ th{color:var(--text-muted);font-weight:700;font-size:.8rem}
 .badge{font-size:.7rem;font-weight:600;padding:3px 10px;border-radius:4px;text-decoration:none;background:transparent;border:1px solid currentColor}
 .badge.linkto{background:#2563eb}
 .streaming-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
+.official-banner{display:flex;align-items:center;gap:16px;margin:4px 0 22px;padding:16px 20px;background:linear-gradient(135deg,#1b2540,#161f30);border:1px solid var(--border-color);border-left:4px solid var(--accent);border-radius:10px;text-decoration:none;color:var(--text-main)}
+.official-banner:hover{border-color:var(--accent)}
+.official-banner .ob-text{flex:1;min-width:0}
+.official-banner .ob-label{display:inline-block;font-size:.7rem;font-weight:700;padding:2px 10px;border-radius:4px;background:#444;border:1px solid rgba(255,255,255,0.15);margin-bottom:6px}
+.official-banner .ob-title{display:block;font-size:1.15rem;font-weight:800;line-height:1.5}
+.official-banner .ob-desc{display:block;font-size:.85rem;color:var(--text-muted);line-height:1.7;margin-top:2px}
+.official-banner .ob-go{flex-shrink:0;font-size:.85rem;font-weight:700;color:var(--accent);white-space:nowrap}
+@media(max-width:600px){.official-banner{flex-direction:column;align-items:flex-start;gap:10px;padding:14px 16px}.official-banner .ob-title{font-size:1.05rem}}
 .badge.danime{color:#e08a45}.badge.official{background:#444;border:1px solid rgba(255,255,255,0.15);color:#f1f2f6}
 .article-body h2{font-size:1.3rem;font-weight:700;margin:40px 0 8px;padding-left:14px;border-left:4px solid var(--accent);scroll-margin-top:80px}
 .article-body p{font-size:.95rem;margin-bottom:16px;line-height:1.9}
@@ -132,15 +140,16 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
 
     <h2 id="order">2. おすすめの<wbr>視聴順</h2>
     <p>管理人が<wbr>おすすめする<wbr>視聴順は、次の<wbr>とおりです。</p>
+    <a class="official-banner" href="https://toaru-project.com/" target="_blank" rel="noopener"><span class="ob-text"><span class="ob-label">🌐 公式サイト</span><span class="ob-title">とある<wbr>プロジェクトポータル</span><span class="ob-desc">「とある」シリーズの<wbr>最新情報、<wbr>書籍・コミック、<wbr>世界観の<wbr>紹介が<wbr>見られます。</span></span><span class="ob-go"><wbr>公式サイトを見る →</span></a>
     <ol>
       <li>とある<wbr>科学の<wbr>超電磁砲<wbr>（第1期）：2009年10月〜2010年3月
         <div class="streaming-row"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=10107" target="_blank" rel="noopener" class="badge danime">dアニメ</a><a href="https://toaru-project.com/railgun/" target="_blank" rel="noopener" class="badge official">🌐 公式</a></div>
       </li>
       <li>とある<wbr>魔術の<wbr>禁書目録<wbr>（第1期）：2008年10月〜2009年3月
-        <div class="streaming-row"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=10001" target="_blank" rel="noopener" class="badge danime">dアニメ</a><a href="https://toaru-project.com/index_1_2/" target="_blank" rel="noopener" class="badge official">🌐 公式</a></div>
+        <div class="streaming-row"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=10001" target="_blank" rel="noopener" class="badge danime">dアニメ</a><a href="https://toaru-project.com/index_1_2/story/1st/" target="_blank" rel="noopener" class="badge official">🌐 公式</a></div>
       </li>
       <li>とある<wbr>魔術の<wbr>禁書目録II<wbr>（第2期）：2010年10月〜2011年4月
-        <div class="streaming-row"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=10108" target="_blank" rel="noopener" class="badge danime">dアニメ</a><a href="https://toaru-project.com/index_1_2/" target="_blank" rel="noopener" class="badge official">🌐 公式</a></div>
+        <div class="streaming-row"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=10108" target="_blank" rel="noopener" class="badge danime">dアニメ</a><a href="https://toaru-project.com/index_1_2/story/2nd/index.html" target="_blank" rel="noopener" class="badge official">🌐 公式</a></div>
       </li>
       <li>劇場版 とある<wbr>魔術の<wbr>禁書目録 エンデュミオンの<wbr>奇蹟：2013年2月23日公開
         <div class="streaming-row"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=21115" target="_blank" rel="noopener" class="badge danime">dアニメ</a><a href="https://toaru-project.com/index_m/" target="_blank" rel="noopener" class="badge official">🌐 公式</a></div>
