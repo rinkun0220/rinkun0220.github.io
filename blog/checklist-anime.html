@@ -14,7 +14,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>アニメを見る前に必ずチェックする項目6つ【管理人の選び方】｜ANIMEDBブログ</title>
 <link rel="canonical" href="https://anime-db.jp/blog/checklist-anime.html">
-<meta name="description" content="毎クール70本前後のアニメから見る作品を選ぶために、管理人が必ずチェックしている6つの項目を公開。脚本家・監督・制作会社・声優・主題歌アーティスト・1話の掴みまで、判断基準の中身をまとめました。">
+<meta name="description" content="毎クール70本前後のアニメから見る作品を選ぶために、管理人が必ずチェックしている6つの項目を公開しています。脚本家・監督・制作会社・声優・主題歌アーティスト・1話の掴みまで、判断基準の中身をまとめました。">
 <meta name="keywords" content="アニメの選び方,アニメチェックリスト,脚本家,監督,制作会社,声優,主題歌,1話切り,見る前に確認">
 <meta name="robots" content="index,follow">
 <meta name="author" content="ANIMEDB">
@@ -69,10 +69,11 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
 .footer-link{color:var(--text-muted);text-decoration:none;font-size:.85rem}.footer-link:hover{color:#fff}
 .copyright{font-size:.8rem;color:rgba(255,255,255,0.3)}
 /* 日本語の改行を自然にする設定（文節単位で改行・行頭禁則・1文字だけの行を避ける） */
-body{line-break:strict;overflow-wrap:break-word}
+body{line-break:strict;overflow-wrap:anywhere}
 @supports (word-break:auto-phrase){body{word-break:auto-phrase}}
 :has(> wbr){word-break:keep-all}
 p,li,dd,td,th{text-wrap:pretty}
+td,th{overflow-wrap:anywhere}
 .nb{white-space:nowrap}
 h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-title,.pick-name,.next-article-title{text-wrap:balance}
 </style>

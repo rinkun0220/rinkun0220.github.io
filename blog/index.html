@@ -14,11 +14,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>アニメブログ｜ANIMEDB - 感想・考察・ランキング</title>
 <link rel="canonical" href="https://anime-db.jp/blog/">
-<meta name="description" content="2026年春アニメの感想まとめ、おすすめランキング、作品考察など。ANIMEDBスタッフによる独自レビューを掲載。">
+<meta name="description" content="2026年の春・夏・秋アニメの感想まとめ、おすすめランキング、作品考察などを掲載しています。ANIMEDB管理人による、独自のレビューです。">
 <meta name="robots" content="index,follow">
 <meta name="author" content="ANIMEDB">
 <meta property="og:title" content="アニメブログ｜ANIMEDB">
-<meta property="og:description" content="2026年春アニメの感想まとめ、おすすめランキング、作品考察。">
+<meta property="og:description" content="2026年の春・夏・秋アニメの感想まとめ、おすすめランキング、作品考察を掲載しています。">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://anime-db.jp/blog/">
 <meta name="google-adsense-account" content="ca-pub-4858195974765934">
@@ -85,10 +85,11 @@ main { margin-top: var(--nav-height); padding: 40px 24px; max-width: 1100px; mar
 .footer-link:hover { color: #fff; }
 .copyright { font-size: 0.8rem; color: rgba(255,255,255,0.3); }
 /* 日本語の改行を自然にする設定（文節単位で改行・行頭禁則・1文字だけの行を避ける） */
-body{line-break:strict;overflow-wrap:break-word}
+body{line-break:strict;overflow-wrap:anywhere}
 @supports (word-break:auto-phrase){body{word-break:auto-phrase}}
 :has(> wbr){word-break:keep-all}
 p,li,dd,td,th{text-wrap:pretty}
+td,th{overflow-wrap:anywhere}
 .nb{white-space:nowrap}
 h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-title,.pick-name,.next-article-title{text-wrap:balance}
 </style>
