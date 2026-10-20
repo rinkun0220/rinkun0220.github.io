@@ -67,6 +67,13 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
 .footer-links{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;margin-bottom:16px}
 .footer-link{color:var(--text-muted);text-decoration:none;font-size:.85rem}.footer-link:hover{color:#fff}
 .copyright{font-size:.8rem;color:rgba(255,255,255,0.3)}
+/* 日本語の改行を自然にする設定（文節単位で改行・行頭禁則・1文字だけの行を避ける） */
+body{line-break:strict;overflow-wrap:break-word}
+@supports (word-break:auto-phrase){body{word-break:auto-phrase}}
+:has(> wbr){word-break:keep-all}
+p,li,dd,td,th{text-wrap:pretty}
+.nb{white-space:nowrap}
+h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-title,.pick-name,.next-article-title{text-wrap:balance}
 </style>
 </head>
 <body>
@@ -82,48 +89,48 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
   <div class="breadcrumb">
     <a href="https://anime-db.jp/">ホーム</a><span>›</span>
     <a href="https://anime-db.jp/blog/">ブログ</a><span>›</span>
-    管理人が思い出に残るアニメ
+    管理人が<wbr>思い出に残る<wbr>アニメ
   </div>
 
   <span class="article-tag">🎞️ 思い出</span>
-  <h1 class="article-title">管理人が思い出に残るアニメ6選【実体験つきレビュー】</h1>
+  <h1 class="article-title">管理人が<wbr>思い出に残る<wbr>アニメ6選【実体<wbr>験つきレビュー】</h1>
   <div class="article-meta">
-    <span>📅 2026年7月10日（更新：10月8日）</span><span>✍️ ANIMEDB管理人</span><span>⏱ 読了目安：約6分</span>
+    <span>📅 2026年7月10日<wbr>（更新：10月8日）</span><span><wbr>✍️ ANIMEDB管理人</span><span>⏱ 読了目安：約6分</span>
   </div>
 
   <div class="article-body">
-    <p>ANIMEDBを作った理由の一つは、自分がアニメに救われてきたからです。深夜に布団の中で見た話、泣きながら見ていた話、キャラクターの真似をして過ごした日々です。ランキングではなく、純粋に「自分の人生に刺さった」アニメを紹介します。</p>
-    <p>鋼の錬金術師、ガンダムSEED、とらドラ！、DEATH NOTEの4作品は、19歳から24歳のころ、北海道で一人暮らしをしていたときに観ました。鋼の錬金術師（2003年版）以外は、家で待機して観るリアルタイム視聴でした。</p>
+    <p>ANIMEDBを<wbr>作った<wbr>理由の<wbr>一つは、<wbr>自分が<wbr>アニメに<wbr>救われてきたからです。<wbr>深夜に<wbr>布団の中で<wbr>見た話、<wbr>泣きながら<wbr>見ていた<wbr>話、<wbr>キャラクターの<wbr>真似をして<wbr>過ごした<wbr>日々です。<wbr>ランキングではなく、<wbr>純粋に<wbr>「自分の人生に刺さった」<wbr>アニメを<wbr>紹介します。</p>
+    <p>鋼の<wbr>錬金術師、<wbr>ガンダムSEED、とらドラ!、<wbr>DEATH NOTEの<wbr>4作品は、<wbr>19歳から<wbr>24歳の<wbr>ころ、<wbr>北海道で一人<wbr>暮らしを<wbr>していた<wbr>ときに<wbr>観ました。鋼の<wbr>錬金術師<wbr>（2003年版）<wbr>以外は、家で<wbr>待機して観る<wbr>リアルタイム視聴でした。</p>
 
     <div class="toc">
       <div class="toc-title">📋 目次</div>
       <ol>
         <li><a href="#yorimoi">宇宙よりも遠い場所</a></li>
-        <li><a href="#hagaren">鋼の錬金術師（2003年版 &amp; FULLMETAL ALCHEMIST）</a></li>
+        <li><a href="#hagaren">鋼の<wbr>錬金術師<wbr>（2003年版 &amp; FULLMETAL ALCHEMIST）</a></li>
         <li><a href="#seed">機動戦士ガンダムSEED</a></li>
         <li><a href="#violet">ヴァイオレットエヴァーガーデン</a></li>
-        <li><a href="#toradora">とらドラ！</a></li>
+        <li><a href="#toradora">とらドラ!</a></li>
         <li><a href="#deathnote">DEATH NOTE</a></li>
       </ol>
     </div>
 
-    <h2>思い出のアニメ6選</h2>
+    <h2>思い出の<wbr>アニメ6選</h2>
 
     <div class="memory-card" id="yorimoi">
       <div class="memory-header">
         <div class="memory-num">1</div>
         <div class="memory-title-block">
           <div class="memory-name"><a href="https://yorimoi.com/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">宇宙よりも遠い場所</a></div>
-          <div class="memory-sub">2018年冬 / 青春・旅・感動 / Madhouse</div>
+          <div class="memory-sub">2018年冬 / 青春・旅・<wbr>感動 / Madhouse</div>
         </div>
       </div>
-      <div class="memory-quote">「これで泣かない人は人間じゃない」</div>
+      <div class="memory-quote">「これで<wbr>泣かない人は<wbr>人間じゃない」</div>
       <div class="memory-body">
-        <p>南極を目指す女子高生4人の物語です。「何かしたい、でも何も出来ない」という感情をこれほどリアルに描いたアニメを他に知りません。前半はまだ余裕で見られるが、後半からは毎話ボロボロに泣かされます。特にある人物の「未読メール」のシーンは、アニメ史上最高の演出の一つだと今でも思っています。</p>
-        <p>見終わった後、自分も何かを始めたくなります。そういう力のある作品です。</p>
+        <p>南極を<wbr>目指す女子高生4人の<wbr>物語です。<wbr>「何かしたい、でも何も<wbr>できない」という<wbr>感情を<wbr>これほど<wbr>リアルに<wbr>描いた<wbr>アニメを他に<wbr>知りません。<wbr>前半はまだ<wbr>余裕で<wbr>見られますが、<wbr>後半からは<wbr>毎話ボロボロに<wbr>泣かされます。特にある<wbr>人物の<wbr>「未読メール」の<wbr>シーンは、<wbr>アニメ史上最高の<wbr>演出の<wbr>一つだと<wbr>今でも<wbr>思っています。</p>
+        <p>見終わった<wbr>後、<wbr>自分も<wbr>何かを<wbr>始めたくなります。<wbr>そういう力のある<wbr>作品です。</p>
       </div>
       <div class="streaming-section">
-        <div class="streaming-label">▶ 今すぐ見られるサービス</div>
+        <div class="streaming-label">▶ 今すぐ<wbr>見られる<wbr>サービス</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp/" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
           <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -137,21 +144,21 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
       <div class="memory-header">
         <div class="memory-num">2</div>
         <div class="memory-title-block">
-          <div class="memory-name"><a href="https://www.hagaren.jp/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">鋼の錬金術師（2003年版 &amp; FULLMETAL ALCHEMIST）</a></div>
+          <div class="memory-name"><a href="https://www.hagaren.jp/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">鋼の<wbr>錬金術師<wbr>（2003年版 &amp; FULLMETAL ALCHEMIST）</a></div>
           <div class="memory-sub">2003年・2009年 / ダークファンタジー / BONES</div>
         </div>
       </div>
-      <div class="memory-episode">📺 第7話「合成獣（キメラ）が哭く夜」— この回が管理人を深夜アニメにどっぷりはまらせた原点です。</div>
+      <div class="memory-episode">📺 第7話<wbr>「合成獣<wbr>（キメラ）が哭く夜」<wbr>— この回が<wbr>管理人を<wbr>深夜アニメに<wbr>どっぷりは<wbr>まらせた<wbr>原点です。</div>
       <div class="memory-body">
-        <p>2003年版の第7話です。あの夜、画面の前で固まったまま動けなくなったことを今でも覚えています。子供向けだと思って見ていたアニメが、一瞬でそれを覆してきました。「アニメってここまでやるのか」と震えた回です。</p>
-        <p>2003年版は各クールの話数とタイトルを暗記するほど繰り返し見ました。その後の「FULLMETAL ALCHEMIST」も含めて、このシリーズが自分のアニメ観の基盤を作ったと言っても過言ではありません。等価交換の概念は、今も生き方に影響を与えています。</p>
-        <p>放送は土曜日の夕方、17時ごろでした。この作品をきっかけに、アニメには深夜アニメというジャンルがあると知りました。リアルタイムで観られたのは、運が良かったと思っています。</p>
-        <p>第7話でいちばん衝撃を受けたのは、最初は可愛がっていた子供と犬を、人体錬成の実験台にしてしまう展開です。「アニメってここまでやるのか」と感じたのは、このときです。</p>
-        <p>観返してから気づいたこともあります。2003年版は、前半は原作どおりで、後半はアニメオリジナルでした。当時は分かりませんでしたが、原作がそこまで追いついていなかったため、オリジナルで作るしかない状況だったのだと思います。それでも、劇場版「シャンバラを征く者」で物語を成立させたことに、感嘆しました。</p>
-        <p>今でも覚えているのは、タッカーの「君のような勘のいいガキは嫌いだよ」というセリフです。</p>
+        <p>2003年版の<wbr>第7話です。あの<wbr>夜、<wbr>画面の前で<wbr>固まったまま<wbr>動けなくなった<wbr>ことを<wbr>今でも<wbr>覚えています。<wbr>子供向けだと<wbr>思って<wbr>見ていた<wbr>アニメが、<wbr>一瞬で<wbr>それを<wbr>覆してきました。<wbr>「アニメって<wbr>ここまで<wbr>やるのか」と<wbr>震えた回です。</p>
+        <p>2003年版は<wbr>各クールの<wbr>話数と<wbr>タイトルを<wbr>暗記するほど<wbr>繰り返し見ました。<wbr>その後の<wbr>「FULLMETAL ALCHEMIST」も<wbr>含めて、この<wbr>シリーズが<wbr>自分の<wbr>アニメ観の<wbr>基盤を<wbr>作ったと<wbr>言っても<wbr>過言ではありません。<wbr>等価交換の<wbr>概念は、今も<wbr>生き方に<wbr>影響を<wbr>与えています。</p>
+        <p>放送は<wbr>土曜日の<wbr>夕方、<wbr>17時ごろでした。この<wbr>作品を<wbr>きっかけに、<wbr>アニメには<wbr>深夜アニメという<wbr>ジャンルが<wbr>あると<wbr>知りました。<wbr>リアルタイムで<wbr>観られたのは、運が<wbr>良かったと<wbr>思っています。</p>
+        <p>第7話で一番<wbr>衝撃を<wbr>受けたのは、<wbr>最初は<wbr>可愛がっていた<wbr>子供と<wbr>犬を、<wbr>人体錬成の<wbr>実験台に<wbr>してしまう<wbr>展開です。<wbr>「アニメって<wbr>ここまで<wbr>やるのか」と<wbr>感じたのは、この<wbr>ときです。</p>
+        <p>観返してから<wbr>気づいたこともあります。<wbr>2003年版は、<wbr>前半は<wbr>原作ど<wbr>おりで、<wbr>後半は<wbr>アニメオリジナルでした。<wbr>当時は<wbr>分かりませんでしたが、<wbr>原作が<wbr>そこまで<wbr>追いついていなかった<wbr>ため、<wbr>オリジナルで<wbr>作るしかない<wbr>状況だったのだと<wbr>思います。<wbr>それでも、<wbr>劇場版<wbr>「シャンバラを征く者」で<wbr>物語を<wbr>成立させたことに、<wbr>感嘆しました。</p>
+        <p>今でも<wbr>覚えているのは、<wbr>タッカーの<wbr>「君のような勘のいい<wbr>ガキは<wbr>嫌いだよ」という<wbr>セリフです。</p>
       </div>
       <div class="streaming-section">
-        <div class="streaming-label">▶ 今すぐ見られるサービス</div>
+        <div class="streaming-label">▶ 今すぐ<wbr>見られる<wbr>サービス</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp/" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
           <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -170,11 +177,11 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
         </div>
       </div>
       <div class="memory-body">
-        <p>鋼の錬金術師の後に見た作品です。こちらも話数とサブタイトルを暗記しました。ガンダムシリーズへの入口として最高で、キラとアスランの関係性、戦争の理不尽さ、それでも戦わなければならない葛藤が全50話にわたって描かれます。</p>
-        <p>SEEDから入ってDESTINYに進み。当時の秋葉原にあったガンダムカフェに通ったり、フィギュアを集めたり、推しのキャラ（カガリ・ユラ・アスハ）が出来たりと思い出が深い作品です。放送開始から四半世紀弱です。近年SEEDが再評価されている風潮が嬉しいです。また新作映画製作中です。コンテンツとしてまだまだ楽しまされてくれます。</p>
+        <p>鋼の<wbr>錬金術師の後に見た<wbr>作品です。<wbr>こちらも<wbr>話数と<wbr>サブタイトルを<wbr>暗記しました。<wbr>ガンダムシリーズへの<wbr>入口として<wbr>最高で、<wbr>キラと<wbr>アスランの<wbr>関係性、<wbr>戦争の<wbr>理不尽さ、<wbr>それでも<wbr>戦わなければならない<wbr>葛藤が<wbr>全50話に<wbr>わたって<wbr>描かれます。</p>
+        <p>SEEDから<wbr>入って<wbr>DESTINYに<wbr>進みました。<wbr>当時の<wbr>秋葉原に<wbr>あった<wbr>ガンダムカフェに<wbr>通ったり、<wbr>フィギュアを<wbr>集めたり、<wbr>推しの<wbr>キャラ<wbr>（カガリ・ユラ・アスハ）が<wbr>できたりと<wbr>思い出が深い<wbr>作品です。<wbr>放送開始から<wbr>四半世紀弱です。<wbr>近年SEEDが<wbr>再評価されている<wbr>風潮が<wbr>嬉しいです。また<wbr>新作映画製作中です。<wbr>コンテンツとして<wbr>まだまだ<wbr>楽しまされてくれます。</p>
       </div>
       <div class="streaming-section">
-        <div class="streaming-label">▶ 今すぐ見られるサービス</div>
+        <div class="streaming-label">▶ 今すぐ<wbr>見られる<wbr>サービス</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp/" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
           <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -191,13 +198,13 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
           <div class="memory-sub">2018年冬 / 感動・ドラマ / 京都アニメーション</div>
         </div>
       </div>
-      <div class="memory-quote">「これで泣かない人は人間じゃない」（同率1位）</div>
+      <div class="memory-quote">「これで<wbr>泣かない人は<wbr>人間じゃない」<wbr>（同率1位）</div>
       <div class="memory-body">
-        <p>京都アニメーション制作の圧倒的な映像美と、「愛してる」という言葉の意味を探し続けるヴァイオレットの旅です。1話ごとに手紙を書くオムニバス形式で、毎回違う誰かの人生が描かれます。</p>
-        <p>宇宙よりも遠い場所と並んで「これを超える感動はしばらくいらない」と思えた数少ない作品の一つです。劇場版まで全部見てほしいです。特に外伝映画のラストは息が出来なくなります。</p>
+        <p>京都アニメーション制作の<wbr>圧倒的な<wbr>映像美と、<wbr>「愛してる」という<wbr>言葉の<wbr>意味を<wbr>探し続ける<wbr>ヴァイオレットの<wbr>旅です。<wbr>1話ごとに<wbr>手紙を書く<wbr>オムニバス形式で、毎回違う<wbr>誰かの<wbr>人生が<wbr>描かれます。</p>
+        <p>宇宙よりも遠い<wbr>場所と<wbr>並んで<wbr>「これを<wbr>超える<wbr>感動は<wbr>しばらく<wbr>いらない」と<wbr>思えた<wbr>数少ない<wbr>作品の<wbr>一つです。<wbr>劇場版まで全部<wbr>見てほしいです。特に<wbr>外伝映画の<wbr>ラストは息が<wbr>できなくなります。</p>
       </div>
       <div class="streaming-section">
-        <div class="streaming-label">▶ 今すぐ見られるサービス</div>
+        <div class="streaming-label">▶ 今すぐ<wbr>見られる<wbr>サービス</div>
         <div class="streaming-row">
           <a href="https://netflix.com" target="_blank" rel="noopener" class="badge netflix">Netflix</a>
           <a href="https://animestore.docomo.ne.jp/" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
@@ -211,18 +218,18 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
       <div class="memory-header">
         <div class="memory-num">5</div>
         <div class="memory-title-block">
-          <div class="memory-name"><a href="https://www.tv-tokyo.co.jp/anime/toradora/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">とらドラ！</a></div>
+          <div class="memory-name"><a href="https://www.tv-tokyo.co.jp/anime/toradora/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">とらドラ!</a></div>
           <div class="memory-sub">2008年秋 / ラブコメ・青春 / J.C.STAFF</div>
         </div>
       </div>
       <div class="memory-body">
-        <p>ラブコメの金字塔です。竜児と大河の関係性は今見ても最高ですが、管理人にとって一番印象に残っているのは<strong>川嶋亜美</strong>というキャラクターです。</p>
-        <p>人間関係が煩わしくなった時期、亜美が昼休みに自販機の隙間で一人でいるシーンが妙に刺さって、自分も真似をして昼休みを一人で過ごしていた時期がありました。アニメのキャラクターに「こういう過ごし方もあるんだ」と教えてもらった体験は、今も不思議と心に残っています。</p>
-        <p>恋愛メインで語られがちな作品だが、亜美の孤独と本音のギャップこそがとらドラの隠れた核心だと思っています。</p>
-        <p>観たのは、社会人2年目（24歳）のころです。学生のころではなかったので、亜美の昼休みの過ごし方が、自分の状況と重なりました。</p>
+        <p>ラブコメの<wbr>金字塔です。<wbr>竜児と<wbr>大河の<wbr>関係性は<wbr>今見ても<wbr>最高ですが、<wbr>管理人に<wbr>とって一番<wbr>印象に<wbr>残っているのは<strong><wbr>川嶋亜美</strong>という<wbr>キャラクターです。</p>
+        <p>人間<wbr>関係が<wbr>煩わしくなった<wbr>時期、<wbr>亜美が<wbr>昼休みに<wbr>自販機の<wbr>隙間で<wbr>一人でいる<wbr>シーンが妙に<wbr>刺さって、<wbr>自分も<wbr>真似をして<wbr>昼休みを<wbr>一人で<wbr>過ごしていた<wbr>時期が<wbr>ありました。<wbr>アニメの<wbr>キャラクターに<wbr>「こういう<wbr>過ごし方も<wbr>あるんだ」と<wbr>教えて<wbr>もらった<wbr>体験は、今も<wbr>不思議と心に<wbr>残っています。</p>
+        <p>恋愛メインで<wbr>語られがちな<wbr>作品ですが、<wbr>亜美の<wbr>孤独と<wbr>本音の<wbr>ギャップこそがとらドラの<wbr>隠れた<wbr>核心だと<wbr>思っています。</p>
+        <p>観たのは、<wbr>社会人2年目<wbr>（24歳）の<wbr>ころです。<wbr>学生の<wbr>ころではなかったので、<wbr>亜美の<wbr>昼休みの<wbr>過ごし方が、<wbr>自分の<wbr>状況と<wbr>重なりました。</p>
       </div>
       <div class="streaming-section">
-        <div class="streaming-label">▶ 今すぐ見られるサービス</div>
+        <div class="streaming-label">▶ 今すぐ<wbr>見られる<wbr>サービス</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp/" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
           <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -240,23 +247,23 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
         </div>
       </div>
       <div class="memory-body">
-        <p>大場つぐみさん原作、小畑健さん作画の人気漫画を、全37話でアニメ化した作品です。管理人は当時学生でした。続きがどうしても気になって、週刊少年ジャンプの発売日である月曜日の深夜0時の5分前（23:55）から最寄りのコンビニで待機して、買っていました。</p>
-        <p>アニメ化が決まったときは最初は心配でしたが、それは杞憂でした。夜神月役は宮野真守さん、L役は山口勝平さん、弥海砂役は平野綾さんです。今でも第一線で活躍されている、管理人にとってはレジェンド声優の方々です。</p>
-        <p>制作はMADHOUSEです。当時は制作会社まで気にしていませんでしたが、その後、MADHOUSEの凄さを実感するきっかけになった作品です。</p>
+        <p>大場つぐみさん<wbr>原作、<wbr>小畑健さん<wbr>作画の<wbr>人気漫画を、<wbr>全37話で<wbr>アニメ化した<wbr>作品です。<wbr>管理人は<wbr>当時学生でした。<wbr>続きが<wbr>どうしても気に<wbr>なって、<wbr>週刊少年ジャンプの<wbr>発売日である<wbr>月曜日の<wbr>深夜0時の<wbr>5分前<wbr>（23:55）から<wbr>最寄りの<wbr>コンビニで<wbr>待機して、<wbr>買っていました。</p>
+        <p>アニメ化が<wbr>決まった<wbr>ときは<wbr>最初は<wbr>心配でしたが、<wbr>それは<wbr>杞憂でした。<wbr>夜神月役は<wbr>宮野真守さん、<wbr>L役は<wbr>山口勝平さん、<wbr>弥海砂役は<wbr>平野綾さんです。<wbr>今でも<wbr>第一線で<wbr>活躍されている、<wbr>管理人に<wbr>とっては<wbr>レジェンド声優の<wbr>方々です。</p>
+        <p>制作は<wbr>MADHOUSEです。<wbr>当時は<wbr>制作会社まで気に<wbr>していませんでしたが、<wbr>その後、<wbr>MADHOUSEの<wbr>凄さを<wbr>実感する<wbr>きっかけに<wbr>なった<wbr>作品です。</p>
       </div>
       <div class="streaming-section">
-        <div class="streaming-label">▶ 今すぐ見られるサービス</div>
+        <div class="streaming-label">▶ 今すぐ<wbr>見られる<wbr>サービス</div>
         <div class="streaming-row">
           <a href="https://netflix.com" target="_blank" rel="noopener" class="badge netflix">Netflix</a>
           <a href="https://www.ntv.co.jp/deathnote/" target="_blank" rel="noopener" class="badge official">🌐 公式サイト</a>
         </div>
-        <div style="font-size:.78rem;color:var(--text-muted);margin-top:6px;">※配信状況は時期によって変わります。視聴の際は各配信サービスでご確認ください。</div>
+        <div style="font-size:.78rem;color:var(--text-muted);margin-top:6px;">※配信状況は<wbr>時期に<wbr>よって<wbr>変わります。<wbr>視聴の際は<wbr>各配信サービスで<wbr>ご確認ください。</div>
       </div>
     </div>
 
     <h2>最後に</h2>
-    <p>ANIMEDBを作ったのは「見逃したくないアニメがある」という気持ちからでしたが、振り返ってみると自分自身がアニメに何度も救われてきたことに気づきます。泣いたり、キャラクターの真似をしたり、話数を全部暗記したり。そういう体験が出来る作品と出会えたことが、今も続けている理由だと思います。</p>
-    <p>まだ見ていない作品があれば是非。後悔はしないはずです。</p>
+    <p>ANIMEDBを<wbr>作ったのは<wbr>「見逃したくない<wbr>アニメが<wbr>ある」という<wbr>気持ちからでしたが、振り<wbr>返ってみると自分<wbr>自身が<wbr>アニメに<wbr>何度も<wbr>救われてきた<wbr>ことに<wbr>気づきます。<wbr>泣いたり、<wbr>キャラクターの<wbr>真似を<wbr>したり、<wbr>話数を全部<wbr>暗記したりしました。<wbr>そういう<wbr>体験が<wbr>できる<wbr>作品と<wbr>出会えたことが、今も<wbr>続けている<wbr>理由だと<wbr>思います。</p>
+    <p>まだ<wbr>見ていない<wbr>作品が<wbr>あれば、<wbr>ぜひご覧ください。<wbr>後悔は<wbr>しないはずです。</p>
 
   </div>
 

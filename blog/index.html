@@ -84,6 +84,13 @@ main { margin-top: var(--nav-height); padding: 40px 24px; max-width: 1100px; mar
 .footer-link { color: var(--text-muted); text-decoration: none; font-size: 0.85rem; transition: color 0.2s; }
 .footer-link:hover { color: #fff; }
 .copyright { font-size: 0.8rem; color: rgba(255,255,255,0.3); }
+/* 日本語の改行を自然にする設定（文節単位で改行・行頭禁則・1文字だけの行を避ける） */
+body{line-break:strict;overflow-wrap:break-word}
+@supports (word-break:auto-phrase){body{word-break:auto-phrase}}
+:has(> wbr){word-break:keep-all}
+p,li,dd,td,th{text-wrap:pretty}
+.nb{white-space:nowrap}
+h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-title,.pick-name,.next-article-title{text-wrap:balance}
 </style>
 </head>
 <body>
@@ -101,8 +108,8 @@ main { margin-top: var(--nav-height); padding: 40px 24px; max-width: 1100px; mar
 <main>
   <div class="page-header">
     <h1>アニメ<span>ブログ</span></h1>
-    <p>感想・考察・ランキングなど、独自の視点でアニメを掘り下げます。</p>
-    <p style="font-size:0.75rem;color:rgba(255,255,255,0.3);margin-top:6px;">※本サイトでは制作者様のお名前を敬称略で記載しております</p>
+    <p>感想・考察・ランキングなど、<wbr>独自の<wbr>視点で<wbr>アニメを掘り<wbr>下げます。</p>
+    <p style="font-size:0.75rem;color:rgba(255,255,255,0.3);margin-top:6px;">※本サイトでは<wbr>制作者様の<wbr>お名前を<wbr>敬称略で<wbr>記載しております</p>
   </div>
 
   <div class="section-title">最新記事</div>
@@ -113,7 +120,7 @@ main { margin-top: var(--nav-height); padding: 40px 24px; max-width: 1100px; mar
       <div class="blog-card-body">
         <span class="blog-tag review">レビュー</span>
         <div class="blog-card-title">2026年秋アニメ おすすめ10選【見逃し厳禁】</div>
-        <div class="blog-card-desc">薬屋のひとりごと第3期・氷の城壁第2期・らんま1/2第3期など、秋クール厳選10作品を独自レビュー。</div>
+        <div class="blog-card-desc">薬屋の<wbr>ひとりごと<wbr>第3期・氷の<wbr>城壁第2期・らんま1/2第3期など、<wbr>秋クール厳選10作品を<wbr>独自に<wbr>レビューします。</div>
         <div class="blog-card-meta">2026年9月 · 読了目安 9分</div>
       </div>
     </a>
@@ -122,8 +129,8 @@ main { margin-top: var(--nav-height); padding: 40px 24px; max-width: 1100px; mar
       <div class="blog-card-thumb">☀️</div>
       <div class="blog-card-body">
         <span class="blog-tag review">レビュー</span>
-        <div class="blog-card-title">2026年夏アニメ作品を見た感想まとめ【完全版】</div>
-        <div class="blog-card-desc">2026年夏クールの放送作品を視聴。各作品の1話〜最終話まで追った正直な感想と評価をまとめました。</div>
+        <div class="blog-card-title">2026年夏アニメ作品を見た<wbr>感想まとめ【完全版】</div>
+        <div class="blog-card-desc">2026年夏クールの<wbr>放送作品を<wbr>視聴しました。<wbr>各作品の<wbr>1話〜最終話まで<wbr>追った<wbr>正直な<wbr>感想と<wbr>評価を<wbr>まとめました。</div>
         <div class="blog-card-meta">2026年9月更新 · 読了目安 8分</div>
       </div>
     </a>
@@ -132,8 +139,8 @@ main { margin-top: var(--nav-height); padding: 40px 24px; max-width: 1100px; mar
       <div class="blog-card-thumb">🌸</div>
       <div class="blog-card-body">
         <span class="blog-tag review">レビュー</span>
-        <div class="blog-card-title">2026年春アニメ作品を見た感想まとめ【完全版】</div>
-        <div class="blog-card-desc">2026年春クールの放送作品を視聴。各作品の1話〜最終話まで追った正直な感想と評価をまとめました。</div>
+        <div class="blog-card-title">2026年春アニメ作品を見た<wbr>感想まとめ【完全版】</div>
+        <div class="blog-card-desc">2026年春クールの<wbr>放送作品を<wbr>視聴しました。<wbr>各作品の<wbr>1話〜最終話まで<wbr>追った<wbr>正直な<wbr>感想と<wbr>評価を<wbr>まとめました。</div>
         <div class="blog-card-meta">2026年6月 · 読了目安 9分</div>
       </div>
     </a>
@@ -142,8 +149,8 @@ main { margin-top: var(--nav-height); padding: 40px 24px; max-width: 1100px; mar
       <div class="blog-card-thumb">💎</div>
       <div class="blog-card-body">
         <span class="blog-tag review">レビュー</span>
-        <div class="blog-card-title">2025年に見逃した隠れた名作アニメ18選</div>
-        <div class="blog-card-desc">管理人が全作品視聴した2025年の隠れた名作18選。完成度は高いのに話題にならなかった作品ばかり。配信先リンクつき。</div>
+        <div class="blog-card-title">2025年に<wbr>見逃した<wbr>隠れた<wbr>名作アニメ18選</div>
+        <div class="blog-card-desc">管理人が<wbr>全作品視聴した<wbr>2025年の<wbr>隠れた<wbr>名作18選です。<wbr>完成度は<wbr>高いのに<wbr>話題に<wbr>ならなかった<wbr>作品ばかりです。<wbr>配信先リンクつきです。</div>
         <div class="blog-card-meta">2026年7月 · 読了目安 9分</div>
       </div>
     </a>
@@ -152,8 +159,8 @@ main { margin-top: var(--nav-height); padding: 40px 24px; max-width: 1100px; mar
       <div class="blog-card-thumb">💎</div>
       <div class="blog-card-body">
         <span class="blog-tag review">レビュー</span>
-        <div class="blog-card-title">2023~2024年に見逃した隠れた名作アニメ18選</div>
-        <div class="blog-card-desc">話題作の陰で見逃されがちだった2023~2024年の良作をピックアップ。知る人ぞ知る作品ばかりです。</div>
+        <div class="blog-card-title">2023〜2024年に<wbr>見逃した<wbr>隠れた<wbr>名作アニメ18選</div>
+        <div class="blog-card-desc">話題作の陰で<wbr>見逃されが<wbr>ちだった<wbr>2023〜2024年の<wbr>良作を<wbr>ピックアップします。知る人ぞ知る<wbr>作品ばかりです。</div>
         <div class="blog-card-meta">2026年5月 · 読了目安 10分</div>
       </div>
     </a>
@@ -163,7 +170,7 @@ main { margin-top: var(--nav-height); padding: 40px 24px; max-width: 1100px; mar
       <div class="blog-card-body">
         <span class="blog-tag ranking">ランキング</span>
         <div class="blog-card-title">異世界転生アニメおすすめ10選【2026年最新版】</div>
-        <div class="blog-card-desc">数多ある異世界転生ものの中から、本当に面白いと思った10作品を厳選。初心者向けから上級者向けまで幅広く紹介。</div>
+        <div class="blog-card-desc">数多ある<wbr>異世界転生ものの<wbr>中から、<wbr>本当に<wbr>面白いと<wbr>思った<wbr>10作品を<wbr>厳選します。<wbr>初心者向けから<wbr>上級者向けまで<wbr>幅広く<wbr>紹介します。</div>
         <div class="blog-card-meta">2026年6月 · 読了目安 7分</div>
       </div>
     </a>
@@ -172,8 +179,8 @@ main { margin-top: var(--nav-height); padding: 40px 24px; max-width: 1100px; mar
       <div class="blog-card-thumb">💕</div>
       <div class="blog-card-body">
         <span class="blog-tag ranking">ランキング</span>
-        <div class="blog-card-title">泣けるラブコメアニメおすすめ10選【感動保証】</div>
-        <div class="blog-card-desc">笑えて泣けるラブコメを厳選。「君の名は。」以降の恋愛アニメブームを振り返りながら、外せない名作を紹介します。</div>
+        <div class="blog-card-title">泣ける<wbr>ラブコメアニメおすすめ10選【感動保証】</div>
+        <div class="blog-card-desc">笑えて<wbr>泣ける<wbr>ラブコメを<wbr>厳選します。<wbr>「君の名は。」以降の<wbr>恋愛アニメブームを<wbr>振り返りながら、<wbr>外せない<wbr>名作を<wbr>紹介します。</div>
         <div class="blog-card-meta">2026年6月 · 読了目安 5分</div>
       </div>
     </a>
@@ -183,7 +190,7 @@ main { margin-top: var(--nav-height); padding: 40px 24px; max-width: 1100px; mar
       <div class="blog-card-body">
         <span class="blog-tag ranking">ランキング</span>
         <div class="blog-card-title">バトルアニメ歴代おすすめランキング10選</div>
-        <div class="blog-card-desc">迫力の戦闘シーンが魅力のバトルアニメを独自ランキングで紹介。名シーン・作画・ストーリーを総合的に評価。</div>
+        <div class="blog-card-desc">迫力の<wbr>戦闘シーンが<wbr>魅力の<wbr>バトルアニメを<wbr>独自ランキングで<wbr>紹介します。<wbr>名シーン・作画・ストーリーを<wbr>総合的に<wbr>評価します。</div>
         <div class="blog-card-meta">2026年5月 · 読了目安 6分</div>
       </div>
     </a>
@@ -192,8 +199,8 @@ main { margin-top: var(--nav-height); padding: 40px 24px; max-width: 1100px; mar
       <div class="blog-card-thumb">🎞️</div>
       <div class="blog-card-body">
         <span class="blog-tag ranking">思い出</span>
-        <div class="blog-card-title">管理人が思い出に残るアニメ6選【実体験つきレビュー】</div>
-        <div class="blog-card-desc">宇宙よりも遠い場所・鋼の錬金術師・ガンダムSEED・ヴァイオレットエヴァーガーデン・とらドラ・DEATH NOTE。管理人の実体験と共に振り返る、人生に刺さったアニメ6選。</div>
+        <div class="blog-card-title">管理人が<wbr>思い出に残る<wbr>アニメ6選【実体<wbr>験つきレビュー】</div>
+        <div class="blog-card-desc">宇宙よりも遠い<wbr>場所・鋼の<wbr>錬金術師・ガンダムSEED・ヴァイオレットエヴァーガーデン・とらドラ・DEATH NOTEに<wbr>ついて、<wbr>管理人の<wbr>実体験と共に<wbr>振り返る、<wbr>人生に<wbr>刺さった<wbr>アニメ6選です。</div>
         <div class="blog-card-meta">2026年7月 · 読了目安 6分</div>
       </div>
     </a>
@@ -202,8 +209,8 @@ main { margin-top: var(--nav-height); padding: 40px 24px; max-width: 1100px; mar
       <div class="blog-card-thumb">🎁</div>
       <div class="blog-card-body">
         <span class="blog-tag feature">管理人の軸</span>
-        <div class="blog-card-title">見る前は期待してなかったのに刺さった作品6選【管理人の裏切られ体験】</div>
-        <div class="blog-card-desc">オッドタクシーから夜のクラゲは泳げないまで、期待値ゼロから覆された6作品を振り返ります。</div>
+        <div class="blog-card-title">見る前は<wbr>期待してなかったのに<wbr>刺さった<wbr>作品6選【管理人の<wbr>裏切られ体験】</div>
+        <div class="blog-card-desc">オッドタクシーから夜の<wbr>クラゲは<wbr>泳げないまで、<wbr>期待値ゼロから<wbr>覆された<wbr>6作品を<wbr>振り返ります。</div>
         <div class="blog-card-meta">2026年10月 · 読了目安 6分</div>
       </div>
     </a>
@@ -212,8 +219,8 @@ main { margin-top: var(--nav-height); padding: 40px 24px; max-width: 1100px; mar
       <div class="blog-card-thumb">😇</div>
       <div class="blog-card-body">
         <span class="blog-tag feature">本音企画</span>
-        <div class="blog-card-title">話題にならないのに、なぜ続編だけは続くのか【管理人の本音】</div>
-        <div class="blog-card-desc">似た設定の作品が量産される中、SNSで静かなのに続編だけは続くのはなぜか。「虚無枠」と、追放系・悪役令嬢ものの量産を例に考えます。</div>
+        <div class="blog-card-title">話題に<wbr>ならないのに、<wbr>なぜ続編だけは<wbr>続くのか<wbr>【管理人の<wbr>本音】</div>
+        <div class="blog-card-desc">似た<wbr>設定の<wbr>作品が<wbr>量産される<wbr>中、<wbr>SNSで<wbr>静かなのに<wbr>続編だけは<wbr>続くのは<wbr>なぜかを、<wbr>「虚無枠」と、<wbr>追放系・悪役令嬢ものの<wbr>量産を例に<wbr>考えます。</div>
         <div class="blog-card-meta">2026年10月 · 読了目安 8分</div>
       </div>
     </a>
@@ -222,8 +229,8 @@ main { margin-top: var(--nav-height); padding: 40px 24px; max-width: 1100px; mar
       <div class="blog-card-thumb">🎯</div>
       <div class="blog-card-body">
         <span class="blog-tag feature">管理人の軸</span>
-        <div class="blog-card-title">S評価とA評価、何が違うのか【管理人の評価基準を公開】</div>
-        <div class="blog-card-desc">レビュー記事のS/A/B/C評価は何基準？演出派か脚本派か、一話切りの基準まで初公開。</div>
+        <div class="blog-card-title">S評価と<wbr>A評価、何が<wbr>違うのか<wbr>【管理人の<wbr>評価基準を<wbr>公開】</div>
+        <div class="blog-card-desc">レビュー記事の<wbr>S/A/B/C評価は<wbr>何基準？<wbr>演出派か<wbr>脚本派か、<wbr>1話切りの<wbr>基準まで<wbr>初公開します。</div>
         <div class="blog-card-meta">2026年8月 · 読了目安 6分</div>
       </div>
     </a>
@@ -232,8 +239,8 @@ main { margin-top: var(--nav-height); padding: 40px 24px; max-width: 1100px; mar
       <div class="blog-card-thumb">🔍</div>
       <div class="blog-card-body">
         <span class="blog-tag feature">管理人の軸</span>
-        <div class="blog-card-title">アニメを見る前に必ずチェックする項目6つ【管理人の選び方】</div>
-        <div class="blog-card-desc">脚本家・監督・制作会社・声優・主題歌まで、管理人がアニメを選ぶ判断基準を初公開。</div>
+        <div class="blog-card-title">アニメを見る前に必ず<wbr>チェックする<wbr>項目6つ<wbr>【管理人の<wbr>選び方】</div>
+        <div class="blog-card-desc">脚本家・監督・<wbr>制作会社・声優・主題歌まで、<wbr>管理人が<wbr>アニメを選ぶ<wbr>判断基準を<wbr>初公開します。</div>
         <div class="blog-card-meta">2026年8月 · 読了目安 7分</div>
       </div>
     </a>
@@ -241,9 +248,9 @@ main { margin-top: var(--nav-height); padding: 40px 24px; max-width: 1100px; mar
     <a href="./legend-seiyuu-favorites.html" class="blog-card">
       <div class="blog-card-thumb">⭐</div>
       <div class="blog-card-body">
-        <span class="blog-tag feature">変幻自在の演技力を持つ声優特集</span>
-        <div class="blog-card-title">変幻自在の演技力を持つ声優9人まとめ【大塚芳忠・石田彰・三木眞一郎・井上喜久子・林原めぐみ・沢城みゆき 他】</div>
-        <div class="blog-card-desc">役ごとに変幻自在の芝居を見せ、作品の質を底上げする声優9人の代表作を紹介。</div>
+        <span class="blog-tag feature">変幻自在の<wbr>演技力を<wbr>持つ声優特集</span>
+        <div class="blog-card-title">変幻自在の<wbr>演技力を<wbr>持つ声優9人まとめ【大塚芳忠・石田彰・三木眞一郎・井上喜久子・<wbr>林原めぐみ・<wbr>沢城みゆき&nbsp;他】</div>
+        <div class="blog-card-desc">役ごとに<wbr>変幻自在の<wbr>芝居を<wbr>見せ、<wbr>作品の質を<wbr>底上げする<wbr>声優9人の<wbr>代表作を<wbr>紹介します。</div>
         <div class="blog-card-meta">2026年9月更新 · 読了目安 9分</div>
       </div>
     </a>
@@ -252,8 +259,8 @@ main { margin-top: var(--nav-height); padding: 40px 24px; max-width: 1100px; mar
       <div class="blog-card-thumb">🎙️</div>
       <div class="blog-card-body">
         <span class="blog-tag feature">主役級声優特集</span>
-        <div class="blog-card-title">主役級声優11人まとめ【悠木碧・羊宮妃那・鈴代紗弓・夏吉ゆうこ・大塚剛央・関根明良・千葉翔也 他】</div>
-        <div class="blog-card-desc">今、主役級として活躍する声優11人の代表作を紹介。悠木碧は別格として特別収録。これから応援したい声優を探す入り口に。</div>
+        <div class="blog-card-title">主役級声優11人まとめ【悠木碧・羊宮妃那・鈴代紗弓・夏吉ゆう<wbr>こ・大塚剛央・関根明良・<wbr>千葉翔也&nbsp;他】</div>
+        <div class="blog-card-desc">今、<wbr>主役級として<wbr>活躍する<wbr>声優11人の<wbr>代表作を<wbr>紹介します。<wbr>悠木碧は<wbr>別格として<wbr>特別収録しています。<wbr>これから<wbr>応援したい<wbr>声優を探す<wbr>入り口に<wbr>どうぞ。</div>
         <div class="blog-card-meta">2026年9月更新 · 読了目安 12分</div>
       </div>
     </a>
@@ -262,8 +269,8 @@ main { margin-top: var(--nav-height); padding: 40px 24px; max-width: 1100px; mar
       <div class="blog-card-thumb">🎙️</div>
       <div class="blog-card-body">
         <span class="blog-tag feature">男性声優特集</span>
-        <div class="blog-card-title">男性声優9人の代表作まとめ【中村悠一・杉田智和・津田健次郎・梶裕貴・松岡禎丞・内田雄馬 他】</div>
-        <div class="blog-card-desc">男性声優9人の代表作を紹介。声優買いという視点でアニメを掘り下げたい人向け。</div>
+        <div class="blog-card-title">男性声優9人の<wbr>代表作まとめ【中村悠一・<wbr>杉田智和・津田健次郎・梶裕貴・松岡禎丞・内田雄馬&nbsp;他】</div>
+        <div class="blog-card-desc">男性声優9人の<wbr>代表作を<wbr>紹介します。<wbr>声優買いという<wbr>視点で<wbr>アニメを<wbr>掘り下げたい<wbr>人向けです。</div>
         <div class="blog-card-meta">2026年9月更新 · 読了目安 8分</div>
       </div>
     </a>
@@ -272,8 +279,8 @@ main { margin-top: var(--nav-height); padding: 40px 24px; max-width: 1100px; mar
       <div class="blog-card-thumb">🎙️</div>
       <div class="blog-card-body">
         <span class="blog-tag feature">女性声優特集</span>
-        <div class="blog-card-title">女性声優8人の代表作まとめ【花澤香菜・早見沙織・佐倉綾音・種﨑敦美・水瀬いのり 他】</div>
-        <div class="blog-card-desc">女性声優8人の代表作を紹介。声優買いという視点でアニメを掘り下げたい人向け。</div>
+        <div class="blog-card-title">女性声優8人の<wbr>代表作まとめ【花澤香菜・早見沙織・佐倉綾音・種﨑敦美・<wbr>水瀬いのり&nbsp;他】</div>
+        <div class="blog-card-desc">女性声優8人の<wbr>代表作を<wbr>紹介します。<wbr>声優買いという<wbr>視点で<wbr>アニメを<wbr>掘り下げたい<wbr>人向けです。</div>
         <div class="blog-card-meta">2026年9月更新 · 読了目安 7分</div>
       </div>
     </a>
@@ -282,8 +289,8 @@ main { margin-top: var(--nav-height); padding: 40px 24px; max-width: 1100px; mar
       <div class="blog-card-thumb">🎬</div>
       <div class="blog-card-body">
         <span class="blog-tag feature">監督特集</span>
-        <div class="blog-card-title">監督8人の代表作まとめ【長井龍雪・石原立也・石立太一・水島努・新海誠・山田尚子・幾原邦彦・高松信司】</div>
-        <div class="blog-card-desc">監督8人の代表作を紹介。監督買いの視点でアニメを見返してみたい人向け。</div>
+        <div class="blog-card-title">監督8人の<wbr>代表作まとめ【長井龍雪・石原立也・石立太一・<wbr>水島努・新海誠・山田尚子・幾原邦彦・高松信司】</div>
+        <div class="blog-card-desc">監督8人の<wbr>代表作を<wbr>紹介します。<wbr>監督買いの<wbr>視点で<wbr>アニメを<wbr>見返してみたい<wbr>人向けです。</div>
         <div class="blog-card-meta">2026年9月更新 · 読了目安 8分</div>
       </div>
     </a>
@@ -292,9 +299,9 @@ main { margin-top: var(--nav-height); padding: 40px 24px; max-width: 1100px; mar
       <div class="blog-card-thumb">✍️</div>
       <div class="blog-card-body">
         <span class="blog-tag feature">脚本家特集</span>
-        <div class="blog-card-title">脚本家8人の代表作まとめ【吉田玲子・岡田麿里・花田十輝・横手美智子・あおしまたかし・虚淵玄・大河内一楼・上江洲誠】</div>
-        <div class="blog-card-desc">脚本家8人の代表作を紹介。脚本家買いという視点でアニメを掘り下げたい人向け。</div>
-        <div class="blog-card-meta">2026年9月更新 · 読了目安 8分</div>
+        <div class="blog-card-title">脚本家8人の<wbr>代表作まとめ【吉田玲子・岡田麿里・花田十輝・横手美智子・あ<wbr>おしまたかし・虚淵玄・大河内一楼・上江洲誠】</div>
+        <div class="blog-card-desc">脚本家8人の<wbr>代表作を<wbr>紹介します。<wbr>脚本家買いという<wbr>視点で<wbr>アニメを<wbr>掘り下げたい<wbr>人向けです。</div>
+        <div class="blog-card-meta">2026年9月更新 · 読了目安 9分</div>
       </div>
     </a>
 
@@ -302,8 +309,8 @@ main { margin-top: var(--nav-height); padding: 40px 24px; max-width: 1100px; mar
       <div class="blog-card-thumb">🏢</div>
       <div class="blog-card-body">
         <span class="blog-tag feature">制作会社特集</span>
-        <div class="blog-card-title">制作会社16社の代表作まとめ【P.A.WORKS・京都アニメーション・CloverWorks 他】</div>
-        <div class="blog-card-desc">制作会社16社の代表作を一挙紹介。見逃し作品がないかチェック用に。</div>
+        <div class="blog-card-title">制作会社16社の<wbr>代表作まとめ【P.A.WORKS・京都アニメーション・CloverWorks&nbsp;他】</div>
+        <div class="blog-card-desc">制作会社16社の<wbr>代表作を<wbr>一挙に<wbr>紹介します。<wbr>見逃し作品が<wbr>ないか<wbr>チェック用に<wbr>どうぞ。</div>
         <div class="blog-card-meta">2026年9月更新 · 読了目安 13分</div>
       </div>
     </a>
@@ -312,8 +319,8 @@ main { margin-top: var(--nav-height); padding: 40px 24px; max-width: 1100px; mar
       <div class="blog-card-thumb">🎵</div>
       <div class="blog-card-body">
         <span class="blog-tag feature">邦楽アーティスト特集</span>
-        <div class="blog-card-title">アーティスト11組が手掛けたアニメまとめ【米津玄師・中島美嘉・Mrs. GREEN APPLE 他】</div>
-        <div class="blog-card-desc">邦楽アーティストが手がけたアニメ主題歌をまとめて紹介。音楽好きがアニメを発見する入り口に。</div>
+        <div class="blog-card-title">アーティスト11組が<wbr>手掛けた<wbr>アニメまとめ【米津玄師・中島美嘉・Mrs. GREEN APPLE&nbsp;他】</div>
+        <div class="blog-card-desc">邦楽アーティストが<wbr>手がけた<wbr>アニメ主題歌を<wbr>まとめて<wbr>紹介します。<wbr>音楽好きが<wbr>アニメを<wbr>発見する<wbr>入り口に<wbr>どうぞ。</div>
         <div class="blog-card-meta">2026年9月更新 · 読了目安 11分</div>
       </div>
     </a>
@@ -322,8 +329,8 @@ main { margin-top: var(--nav-height); padding: 40px 24px; max-width: 1100px; mar
       <div class="blog-card-thumb">🧬</div>
       <div class="blog-card-body">
         <span class="blog-tag feature">特集</span>
-        <div class="blog-card-title">名探偵コナン「親から子へ」名探偵の血筋ガイド【工藤家・服部家・毛利家・黒羽家】</div>
-        <div class="blog-card-desc">新一・平次・蘭・快斗の推理力や特技は、実は親から受け継いだもの。4つの家族に注目した血筋特集。</div>
+        <div class="blog-card-title">名探偵コナン<wbr>「親から子へ」<wbr>名探偵の<wbr>血筋ガイド【工藤家・服部家・<wbr>毛利家・黒羽家】</div>
+        <div class="blog-card-desc">新一・<wbr>平次・蘭・快斗の<wbr>推理力や<wbr>特技は、実は<wbr>親から<wbr>受け継いだものです。<wbr>4つの<wbr>家族に<wbr>注目した<wbr>血筋特集です。</div>
         <div class="blog-card-meta">2026年9月更新 · 読了目安 6分</div>
       </div>
     </a>
@@ -332,8 +339,8 @@ main { margin-top: var(--nav-height); padding: 40px 24px; max-width: 1100px; mar
       <div class="blog-card-thumb">💘</div>
       <div class="blog-card-body">
         <span class="blog-tag feature">特集</span>
-        <div class="blog-card-title">名探偵コナン恋愛名場面ガイド【新一×蘭・園子×京極・平次×和葉・高木×佐藤・快斗×青子を時系列で振り返る】</div>
-        <div class="blog-card-desc">事件解決だけじゃない、もう一つの魅力。怪盗キッド編を含む5組のカップルの名場面を、別視点で時系列に振り返る特集。</div>
+        <div class="blog-card-title">名探偵コナン恋愛名場面ガイド【新一×蘭・園子×京極・平次×和葉・高木×佐藤・快斗×青子を<wbr>時系列で<wbr>振り返る】</div>
+        <div class="blog-card-desc">事件解決だけじゃない、もう<wbr>一つの<wbr>魅力です。<wbr>怪盗キッド編を含む<wbr>5組の<wbr>カップルの<wbr>名場面を、<wbr>別視点で<wbr>時系列に<wbr>振り返る<wbr>特集です。</div>
         <div class="blog-card-meta">2026年9月更新 · 読了目安 8分</div>
       </div>
     </a>
@@ -342,8 +349,8 @@ main { margin-top: var(--nav-height); padding: 40px 24px; max-width: 1100px; mar
       <div class="blog-card-thumb">🕵️</div>
       <div class="blog-card-body">
         <span class="blog-tag feature">特集</span>
-        <div class="blog-card-title">名探偵コナン上級ガイド【正体判明ミステリーを時系列で整理：新出先生〜あの方編】</div>
-        <div class="blog-card-desc">初心者ガイドの続編（ネタバレ全開）。新出先生・沖矢昴・安室透・RUM、そして組織の頂点「あの方」まで正体判明の流れを時系列で整理。</div>
+        <div class="blog-card-title">名探偵コナン上級ガイド【正体判明ミステリーを<wbr>時系列で<wbr>整理：新出先生〜あの<wbr>方編】</div>
+        <div class="blog-card-desc">初心者ガイドの続編<wbr>（ネタバレ全開）です。<wbr>新出先生・沖矢昴・安室透・RUM、そして<wbr>組織の頂点<wbr>「あの方」まで<wbr>正体判明の<wbr>流れを<wbr>時系列で<wbr>整理します。</div>
         <div class="blog-card-meta">2026年9月更新 · 読了目安 8分</div>
       </div>
     </a>
@@ -352,8 +359,8 @@ main { margin-top: var(--nav-height); padding: 40px 24px; max-width: 1100px; mar
       <div class="blog-card-thumb">🕵️</div>
       <div class="blog-card-body">
         <span class="blog-tag feature">特集</span>
-        <div class="blog-card-title">名探偵コナン初心者ガイド【親から子へ、今から見せるならこの順番で】</div>
-        <div class="blog-card-desc">原作・アニメ8割、劇場版は全29作品視聴済みの管理人が、これから見始める人向けに入り口を解説。映画6選つき。</div>
+        <div class="blog-card-title">名探偵コナン初心者ガイド【親から<wbr>子へ、<wbr>今から<wbr>見せるならこの<wbr>順番で】</div>
+        <div class="blog-card-desc">原作・アニメ8割、<wbr>劇場版は<wbr>全29作品視聴済みの<wbr>管理人が、<wbr>これから<wbr>見始める<wbr>人向けに<wbr>入り口を<wbr>解説します。<wbr>映画6選つきです。</div>
         <div class="blog-card-meta">2026年9月更新 · 読了目安 9分</div>
       </div>
     </a>
@@ -362,8 +369,8 @@ main { margin-top: var(--nav-height); padding: 40px 24px; max-width: 1100px; mar
       <div class="blog-card-thumb">⚡</div>
       <div class="blog-card-body">
         <span class="blog-tag feature">特集</span>
-        <div class="blog-card-title">「とある」シリーズの見る順番ガイド【超電磁砲から入るのがおすすめな理由】</div>
-        <div class="blog-card-desc">超電磁砲から入る視聴順と、禁書目録から入らない理由を、2009年にリアルタイムで観た管理人が解説。いちばん好きな超電磁砲Sの見どころつき。</div>
+        <div class="blog-card-title">「とある」シリーズの見る<wbr>順番ガイド【超電磁砲から<wbr>入るのが<wbr>おすすめな<wbr>理由】</div>
+        <div class="blog-card-desc">超電磁砲から入る<wbr>視聴順と、<wbr>禁書目録から<wbr>入らない<wbr>理由を、<wbr>2009年に<wbr>リアルタイムで観た<wbr>管理人が<wbr>解説します。一番<wbr>好きな<wbr>超電磁砲Sの<wbr>見どころ<wbr>つきです。</div>
         <div class="blog-card-meta">2026年10月 · 読了目安 4分</div>
       </div>
     </a>
@@ -375,7 +382,7 @@ main { margin-top: var(--nav-height); padding: 40px 24px; max-width: 1100px; mar
   <div class="footer-links">
     <a href="https://anime-db.jp/" class="footer-link">ホーム</a>
     <a href="https://anime-db.jp/blog/" class="footer-link">ブログ</a>
-    <a href="https://anime-db.jp/about.html" class="footer-link">ANIMEDBについて</a>
+    <a href="https://anime-db.jp/about.html" class="footer-link">ANIMEDBに<wbr>ついて</a>
     <a href="https://anime-db.jp/privacy.html" class="footer-link">プライバシーポリシー</a>
     <a href="https://anime-db.jp/contact.html" class="footer-link">お問い合わせ</a>
     <a href="https://anime-db.jp/changelog.html" class="footer-link">更新履歴</a>

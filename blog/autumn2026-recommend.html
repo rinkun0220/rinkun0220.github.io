@@ -63,6 +63,13 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
 .rating-guide-note{font-size:.88rem;color:var(--text-muted);margin:-8px 0 28px;line-height:1.8}.rating-guide-note a{color:var(--accent);text-decoration:underline}
 .pick-point a,.pick-point a:visited{color:var(--accent);text-decoration:underline;text-underline-offset:2px}
 .pick-point a:hover{opacity:.8}
+/* 日本語の改行を自然にする設定（文節単位で改行・行頭禁則・1文字だけの行を避ける） */
+body{line-break:strict;overflow-wrap:break-word}
+@supports (word-break:auto-phrase){body{word-break:auto-phrase}}
+:has(> wbr){word-break:keep-all}
+p,li,dd,td,th{text-wrap:pretty}
+.nb{white-space:nowrap}
+h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-title,.pick-name,.next-article-title{text-wrap:balance}
 </style>
 </head>
 <body>
@@ -84,32 +91,32 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
   <span class="article-tag">🍁 レビュー</span>
   <h1 class="article-title">2026年秋アニメ おすすめ10選【見逃し厳禁】</h1>
   <div class="article-meta">
-    <span>📅 2026年9月5日（更新：10月8日）</span><span>✍️ ANIMEDB管理人</span><span>⏱ 読了目安：約9分</span>
+    <span>📅 2026年9月5日<wbr>（更新：10月8日）</span><span><wbr>✍️ ANIMEDB管理人</span><span>⏱ 読了目安：約9分</span>
   </div>
 
   <div class="article-body">
-    <p>2026年秋クールが始まります。人気シリーズの続編ラッシュに加え、新規オリジナル作品も控える豪華な布陣。その中でも特に「これは見ておくべき」と感じた10作品を独自視点でレビューします。配信サービス情報も合わせて掲載しているので、視聴環境の参考にしてください。</p>
+    <p>2026年秋クールが<wbr>始まります。<wbr>人気シリーズの<wbr>続編ラッシュに<wbr>加え、<wbr>新規オリジナル作品も<wbr>控える<wbr>豪華な<wbr>布陣です。その<wbr>中でも特に<wbr>「これは見ておくべき」と<wbr>感じた<wbr>10作品を<wbr>独自視点で<wbr>レビューします。<wbr>配信サービス情報も<wbr>合わせて<wbr>掲載しているので、<wbr>視聴環境の<wbr>参考に<wbr>してください。</p>
 
     <div class="toc">
       <div class="toc-title">📋 目次</div>
       <ol>
-        <li><a href="#pick1">1位：薬屋のひとりごと 第3期</a></li>
-        <li><a href="#pick2">2位：氷の城壁 第2期</a></li>
-        <li><a href="#pick3">3位：アオのハコ Season2</a></li>
-        <li><a href="#pick4">4位：追放されたチート付与魔術師は気ままなセカンドライフを謳歌する。</a></li>
+        <li><a href="#pick1">1位：薬屋の<wbr>ひとりごと 第3期</a></li>
+        <li><a href="#pick2">2位：氷の<wbr>城壁 第2期</a></li>
+        <li><a href="#pick3">3位：アオの<wbr>ハコ Season2</a></li>
+        <li><a href="#pick4">4位：追放された<wbr>チート付与魔術師は<wbr>気ままな<wbr>セカンドライフを<wbr>謳歌する。</a></li>
         <li><a href="#pick5">5位：らんま1/2 第3期</a></li>
-        <li><a href="#pick6">6位：とある暗部の少女共棲</a></li>
+        <li><a href="#pick6">6位：とある<wbr>暗部の<wbr>少女共棲</a></li>
         <li><a href="#pick7">7位：アン・シャーリー</a></li>
-        <li><a href="#pick8">8位：#ゾンビさがしてます</a></li>
-        <li><a href="#pick9">9位：世界最強の魔女、始めました</a></li>
-        <li><a href="#pick10">10位：FX戦士くるみちゃん</a></li>
+        <li><a href="#pick8">8位：#ゾンビさが<wbr>してます</a></li>
+        <li><a href="#pick9">9位：世界最強の<wbr>魔女、<wbr>始めました</a></li>
+        <li><a href="#pick10">10位：FX戦士くる<wbr>みちゃん</a></li>
       </ol>
     </div>
 
-    <p class="rating-guide-note">※★の点数は管理人スコア（10点満点）です。評価の基準は<a href="https://anime-db.jp/blog/rating-criteria.html">こちら</a>をご覧ください。</p>
+    <p class="rating-guide-note">※★の<wbr>点数は<wbr>管理人スコア<wbr>（10点満点）です。<wbr>評価の<wbr>基準は<a href="https://anime-db.jp/blog/rating-criteria.html"><wbr>こちら</a>を<wbr>ご覧ください。</p>
 
     <h2>今期の総評</h2>
-    <p>2026年秋クールは、続編シリーズの「本気度」が際立つシーズンです。長く愛されてきた作品がいよいよ物語の核心に迫る一方、青春群像劇の新シーズンや、異色のオリジナル企画も混在する、バランスの良いラインナップになっています。続編ものは前情報を追ってきたファンほど楽しめる内容が多いので、気になる作品は今のうちに1期・2期を予習しておくのがおすすめです。更に、P.A.WORKS制作の異世界ファンタジー、ゾンビ×青春コメディの新作、再放送で見られる名作文学アニメまで揃っており、幅広いジャンルから選べるクールです。</p>
+    <p>2026年秋クールは、<wbr>続編シリーズの<wbr>「本気度」が<wbr>際立つシーズンです。長く<wbr>愛されてきた<wbr>作品が<wbr>いよいよ<wbr>物語の<wbr>核心に迫る<wbr>一方、<wbr>青春群像劇の<wbr>新シーズンや、<wbr>異色の<wbr>オリジナル企画も<wbr>混在する、<wbr>バランスの良い<wbr>ラインナップに<wbr>なっています。<wbr>続編ものは<wbr>前情報を<wbr>追ってきた<wbr>ファンほど<wbr>楽しめる<wbr>内容が<wbr>多いので、気になる<wbr>作品は今の<wbr>うちに<wbr>1期・2期を<wbr>予習しておくのが<wbr>おすすめです。<wbr>さらに、<wbr>P.A.WORKS制作の<wbr>異世界ファンタジー、<wbr>ゾンビ×青春コメディの<wbr>新作、<wbr>再放送で<wbr>見られる<wbr>名作文学アニメまで<wbr>揃っており、<wbr>幅広い<wbr>ジャンルから<wbr>選べる<wbr>クールです。</p>
 
     <h2>おすすめ10選</h2>
 
@@ -117,14 +124,14 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
       <div class="pick-header">
         <div class="pick-num">1</div>
         <div class="pick-title-block">
-          <div class="pick-name"><a href="https://kusuriyanohitorigoto.jp/season3/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">薬屋のひとりごと 第3期</a></div>
-          <div class="pick-sub">中華風ミステリー / 2026年秋（10月2日〜）</div>
+          <div class="pick-name"><a href="https://kusuriyanohitorigoto.jp/season3/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">薬屋の<wbr>ひとりごと 第3期</a></div>
+          <div class="pick-sub"><span class="nb">中華風ミステリー</span> / <span class="nb">2026年秋<wbr>（10月2日〜）</span></div>
         </div>
         <div class="pick-score">★ 9.2</div>
       </div>
-      <div class="pick-body">シリーズ累計5,700万部を超える人気作、待望の第3期。物語の舞台は後宮から市井へと移り、猫猫と壬氏の関係もいよいよ大きく動き出す転換点が描かれます。分割2クール（第1クール：10月〜、第2クール：2027年4月〜）というボリュームからも、シリーズ屈指の重要エピソードであることがうかがえます。12月には劇場版の公開も控えており、今期最も目が離せないシリーズの一つです。</div>
-      <div class="pick-point"><strong>ここが推しポイント：</strong>猫猫の推理と壬氏との駆け引きが、これまで以上に濃密に。1期・2期からの積み上げが効いてくる第3期です。</div>
-      <div class="pick-point"><strong>管理人が一番楽しみにしている理由：</strong>中華風ミステリーは、実写ドラマには多くありますが、アニメでここまで続いている作品を、管理人は初めて観ました。1期は日本テレビ系の深夜枠で始まり、その後、金曜のフラアニ枠へ移りました。2期から続く企業とのコラボも多く、12月には劇場版も公開されます。2021年以降では、頭ひとつ抜けた作品だと考えているため、今期はこの作品を一番楽しみにしています。</div>
+      <div class="pick-body">シリーズ累計5,700万部を<wbr>超える<wbr>人気作、<wbr>待望の<wbr>第3期です。<wbr>物語の<wbr>舞台は<wbr>後宮から<wbr>市井へと<wbr>移り、<wbr>猫猫と<wbr>壬氏の<wbr>関係も<wbr>いよいよ<wbr>大きく<wbr>動き出す転換点が<wbr>描かれます。<wbr>分割2クール<wbr>（第1クール：10月〜、<wbr>第2クール：2027年4月〜）という<wbr>ボリュームからも、<wbr>シリーズ屈指の<wbr>重要エピソードである<wbr>ことがうかが<wbr>えます。<wbr>12月には<wbr>劇場版の<wbr>公開も<wbr>控えており、<wbr>今期最も目が<wbr>離せない<wbr>シリーズの<wbr>一つです。</div>
+      <div class="pick-point"><strong>ここが<wbr>推しポイント：</strong>猫猫の<wbr>推理と<wbr>壬氏との<wbr>駆け引きが、<wbr>これまで<wbr>以上に<wbr>濃密に<wbr>なります。<wbr>1期・2期からの<wbr>積み上げが<wbr>効いてくる<wbr>第3期です。</div>
+      <div class="pick-point"><strong>管理人が一番<wbr>楽しみに<wbr>している<wbr>理由：</strong>中華風ミステリーは、<wbr>実写ドラマには多く<wbr>ありますが、<wbr>アニメで<wbr>ここまで<wbr>続いている<wbr>作品を、<wbr>管理人は<wbr>初めて<wbr>観ました。<wbr>1期は<wbr>日本テレビ系の<wbr>深夜枠で<wbr>始まり、<wbr>その後、<wbr>金曜の<wbr>フラアニ枠へ<wbr>移りました。<wbr>2期から続く<wbr>企業との<wbr>コラボも<wbr>多く、<wbr>12月には<wbr>劇場版も<wbr>公開されます。<wbr>2021年以降では、<wbr>頭ひとつ抜けた<wbr>作品だと<wbr>考えている<wbr>ため、<wbr>今期はこの<wbr>作品を一番<wbr>楽しみに<wbr>しています。</div>
       <div class="streaming-row">
         <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
         <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -137,13 +144,13 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
       <div class="pick-header">
         <div class="pick-num">2</div>
         <div class="pick-title-block">
-          <div class="pick-name"><a href="https://korinojoheki-pr.com/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">氷の城壁 第2期</a></div>
-          <div class="pick-sub">青春群像劇 / 2026年秋（10月1日〜）</div>
+          <div class="pick-name"><a href="https://korinojoheki-pr.com/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">氷の<wbr>城壁 第2期</a></div>
+          <div class="pick-sub"><span class="nb">青春群像劇</span> / <span class="nb">2026年秋<wbr>（10月1日〜）</span></div>
         </div>
         <div class="pick-score">★ 9.0</div>
       </div>
-      <div class="pick-body">阿賀沢紅茶原作、静かな緊張感が漂う青春群像劇の第2期。人と壁を作ってしまう氷川小雪と、距離感ゼロで踏み込んでくる雨宮湊。1期のラストで動き出した二人の関係が、2期でどう転がっていくのかが最大の見どころです。前作は14話以降の展開が特に評価された作品なだけに、2期でも中盤以降への期待値が高まります。</div>
-      <div class="pick-point"><strong>ここが推しポイント：</strong>不器用でじれったい人間関係を、繊細な間で見せる演出力。1期未見の方はまず1期からの視聴がおすすめです。</div>
+      <div class="pick-body">阿賀沢紅茶原作、<wbr>静かな<wbr>緊張感が漂う<wbr>青春群像劇の<wbr>第2期です。人と壁を<wbr>作ってしまう<wbr>氷川小雪と、<wbr>距離感ゼロで<wbr>踏み込んでくる<wbr>雨宮湊です。<wbr>1期の<wbr>ラストで<wbr>動き出した<wbr>二人の<wbr>関係が、<wbr>2期でどう<wbr>転がっていくのかが<wbr>最大の<wbr>見どころです。<wbr>前作は<wbr>14話以降の<wbr>展開が特に<wbr>評価された<wbr>作品なだけに、<wbr>2期でも<wbr>中盤以降への<wbr>期待値が<wbr>高まります。</div>
+      <div class="pick-point"><strong>ここが<wbr>推しポイント：</strong>不器用で<wbr>じれったい<wbr>人間関係を、<wbr>繊細な間で<wbr>見せる<wbr>演出力です。<wbr>1期未見の方はまず<wbr>1期からの<wbr>視聴が<wbr>おすすめです。</div>
       <div class="streaming-row">
         <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
         <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -156,13 +163,13 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
       <div class="pick-header">
         <div class="pick-num">3</div>
         <div class="pick-title-block">
-          <div class="pick-name"><a href="https://aonohako-anime.com/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">アオのハコ Season2</a></div>
-          <div class="pick-sub">青春スポーツラブストーリー / 2026年秋（10月4日〜）</div>
+          <div class="pick-name"><a href="https://aonohako-anime.com/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">アオの<wbr>ハコ Season2</a></div>
+          <div class="pick-sub"><span class="nb">青春スポーツラブストーリー</span> / <span class="nb">2026年秋<wbr>（10月4日〜）</span></div>
         </div>
         <div class="pick-score">★ 8.9</div>
       </div>
-      <div class="pick-body">バドミントン部の大喜と、バスケ部の先輩・千夏。等身大の恋と部活を描いた青春ラブストーリー第2期です。1期は世界配信でクランチロール・アニメアワード2025最優秀ロマンス作品賞を受賞するなど、海外でも高く評価された実力派です。誰かを好きになった時の心の機微を丁寧にすくい取る作風は、2期でも健在です。</div>
-      <div class="pick-point"><strong>ここが推しポイント：</strong>部活と恋、両方に全力な登場人物たちのひたむきさ。青春アニメとしての完成度が非常に高い一作です。</div>
+      <div class="pick-body">バドミントン部の<wbr>大喜と、<wbr>バスケ部の<wbr>先輩・千夏です。<wbr>等身大の恋と<wbr>部活を<wbr>描いた<wbr>青春ラブストーリー第2期です。<wbr>1期は<wbr>世界配信で<wbr>クランチロール・アニメアワード2025最優秀ロマンス作品賞を<wbr>受賞するなど、<wbr>海外でも高く<wbr>評価された<wbr>実力派です。<wbr>誰かを<wbr>好きに<wbr>なった時の心の<wbr>機微を<wbr>丁寧にすく<wbr>い取る<wbr>作風は、<wbr>2期でも<wbr>健在です。</div>
+      <div class="pick-point"><strong>ここが<wbr>推しポイント：</strong>部活と<wbr>恋、<wbr>両方に<wbr>全力な<wbr>登場人物たちの<wbr>ひたむきさが<wbr>見どころです。<wbr>青春アニメと<wbr>しての<wbr>完成度が<wbr>非常に高い<wbr>一作です。</div>
       <div class="streaming-row">
         <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
         <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -175,13 +182,13 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
       <div class="pick-header">
         <div class="pick-num">4</div>
         <div class="pick-title-block">
-          <div class="pick-name"><a href="https://sh-anime.shochiku.co.jp/chiifuyo-anime/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">追放されたチート付与魔術師は気ままなセカンドライフを謳歌する。</a></div>
-          <div class="pick-sub">異世界ファンタジー / P.A.WORKS / 2026年秋（10月6日〜）</div>
+          <div class="pick-name"><a href="https://sh-anime.shochiku.co.jp/chiifuyo-anime/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">追放された<wbr>チート付与魔術師は<wbr>気ままな<wbr>セカンドライフを<wbr>謳歌する。</a></div>
+          <div class="pick-sub"><span class="nb">異世界ファンタジー</span> / <span class="nb">P.A.WORKS</span> / <span class="nb">2026年秋<wbr>（10月6日〜）</span></div>
         </div>
         <div class="pick-score">★ 8.9</div>
       </div>
-      <div class="pick-body">六志麻あさ・業務用餅・kisui原作で、累計140万部を突破した人気漫画のアニメ化です。あらゆるものに「強化ポイント」を付与出来る魔術師レインが、ギルドを追放されたところから物語が始まります。新たに加わった「青の水晶」ギルドで、傷を抱えた仲間たちと冒険を繰り広げます。監督は本間修、制作はP.A.WORKSで、レイン役は山下大輝さんです。</div>
-      <div class="pick-point"><strong>ここが推しポイント：</strong>タイトルは長いですが、物語は追放からの再出発というシンプルな構図です。魔法と科学技術が同居する世界観も見どころです。テレ東系列で毎週火曜24:00から放送されます。</div>
+      <div class="pick-body">六志麻あさ・<wbr>業務用餅・kisui原作で、<wbr>累計140万部を<wbr>突破した<wbr>人気漫画の<wbr>アニメ化です。<wbr>あらゆる<wbr>ものに<wbr>「強化ポイント」を<wbr>付与できる<wbr>魔術師レインが、<wbr>ギルドを<wbr>追放された<wbr>ところから<wbr>物語が<wbr>始まります。<wbr>新たに<wbr>加わった<wbr>「青の水晶」ギルドで、傷を<wbr>抱えた<wbr>仲間たちと<wbr>冒険を繰り<wbr>広げます。<wbr>監督は<wbr>本間修、<wbr>制作は<wbr>P.A.WORKSで、<wbr>レイン役は<wbr>山下大輝さんです。</div>
+      <div class="pick-point"><strong>ここが<wbr>推しポイント：</strong>タイトルは<wbr>長いですが、<wbr>物語は<wbr>追放からの<wbr>再出発という<wbr>シンプルな<wbr>構図です。<wbr>魔法と<wbr>科学技術が<wbr>同居する<wbr>世界観も<wbr>見どころです。<wbr>テレ東系列で毎週<wbr>火曜24:00から<wbr>放送されます。</div>
       <div class="streaming-row">
         <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
         <a href="https://sh-anime.shochiku.co.jp/chiifuyo-anime/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
@@ -193,30 +200,30 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
         <div class="pick-num">5</div>
         <div class="pick-title-block">
           <div class="pick-name"><a href="https://ranma-pr.com/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">らんま1/2 第3期</a></div>
-          <div class="pick-sub">格闘ラブコメディ / MAPPA / 2026年秋（10月3日〜）</div>
+          <div class="pick-sub"><span class="nb">格闘ラブコメディ</span> / <span class="nb">MAPPA</span> / <span class="nb">2026年秋<wbr>（10月3日〜）</span></div>
         </div>
         <div class="pick-score">★ 8.8</div>
       </div>
-      <div class="pick-body">高橋留美子による不朽の名作、MAPPA制作による令和リメイク第3期です。水をかぶれば女に、お湯をかぶれば男に戻ってしまう乱馬と、許嫁のあかねが繰り広げるドタバタ格闘ラブコメディです。第3期では恐怖の秘拳「爆砕点穴」にまつわるエピソードが展開予定で、アクション面でも更に見応えが増しそうです。</div>
-      <div class="pick-point"><strong>ここが推しポイント：</strong>放送直後からNetflix独占配信という体制です。地上波を見逃してもすぐに追えるので、リアタイ勢も配信勢も安心です。</div>
+      <div class="pick-body">高橋留美子による<wbr>不朽の<wbr>名作、<wbr>MAPPA制作による<wbr>令和リメイク第3期です。水を<wbr>かぶれば<wbr>女に、<wbr>お湯を<wbr>かぶれば男に<wbr>戻ってしまう<wbr>乱馬と、<wbr>許嫁の<wbr>あかねが繰り<wbr>広げる<wbr>ドタバタ格闘ラブコメディです。<wbr>第3期では<wbr>恐怖の秘拳<wbr>「爆砕点穴」に<wbr>まつわる<wbr>エピソードが<wbr>展開予定で、<wbr>アクション面でも<wbr>さらに<wbr>見応えが<wbr>増しそうです。</div>
+      <div class="pick-point"><strong>ここが<wbr>推しポイント：</strong>放送直後から<wbr>Netflix独占配信という<wbr>体制です。<wbr>地上波を<wbr>見逃しても<wbr>すぐに<wbr>追えるので、<wbr>リアタイ勢も<wbr>配信勢も<wbr>安心です。</div>
       <div class="streaming-row">
         <a href="https://netflix.com" target="_blank" rel="noopener" class="badge netflix">Netflix</a>
         <a href="https://ranma-pr.com/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
       </div>
-      <div style="font-size:.78rem;color:var(--text-muted);margin-top:6px;">※放送直後よりNetflix独占配信（他サービスでは視聴不可）</div>
+      <div style="font-size:.78rem;color:var(--text-muted);margin-top:6px;">※放送直後より<wbr>Netflix独占配信<wbr>（他サービスでは<wbr>視聴不可）</div>
     </div>
 
     <div class="pick-card" id="pick6">
       <div class="pick-header">
         <div class="pick-num">6</div>
         <div class="pick-title-block">
-          <div class="pick-name">とある暗部の少女共棲</div>
-          <div class="pick-sub">ダークファンタジー・バトル / J.C.STAFF / 2026年秋（10月9日〜）</div>
+          <div class="pick-name">とある<wbr>暗部の<wbr>少女共棲</div>
+          <div class="pick-sub"><span class="nb">ダークファンタジー・バトル</span> / <span class="nb">J.C.STAFF</span> / <span class="nb">2026年秋<wbr>（10月9日〜）</span></div>
         </div>
         <div class="pick-score">★ 8.6</div>
       </div>
-      <div class="pick-body">「とある」プロジェクト再始動企画の一つです。学園都市の裏社会で汚れ仕事を請け負う精鋭部隊「アイテム」に焦点を当てたダークな物語です。麦野沈利・フレンダ・滝壺理后・絹旗最愛の4人に、5人目の少女・華野超美が加わることで、闇は更に深く広がっていきます。監督は長井龍雪です。青春の痛みを描く手腕が、暗部の少女たちの物語でどう活きるかにも注目です。</div>
-      <div class="pick-point"><strong>ここが推しポイント：</strong>「とある」シリーズ本編とは一味違う、裏社会視点のハードな人間ドラマ。シリーズファンはもちろん初見でも楽しめる構成です。<br>「とある魔術の禁書目録」のアニメが始まったのは2008年。その放送後に生まれた世代は、いまや高校生です。名前は聞いたことがあっても、シリーズが長くて追いつけない、よく分からない、という方にこそおすすめしたい作品です。「とある」シリーズの入口として、気軽に触れられる一作です。</div>
+      <div class="pick-body">「とある」プロジェクト再始動企画の<wbr>一つです。<wbr>学園都市の<wbr>裏社会で<wbr>汚れ仕事を<wbr>請け負う<wbr>精鋭部隊<wbr>「アイテム」に<wbr>焦点を<wbr>当てた<wbr>ダークな<wbr>物語です。<wbr>麦野沈利・フレンダ・滝壺理后・絹旗最愛の<wbr>4人に、<wbr>5人目の<wbr>少女・華野超美が<wbr>加わる<wbr>ことで、闇は<wbr>さらに深く<wbr>広がっていきます。<wbr>監督は<wbr>長井龍雪です。<wbr>青春の<wbr>痛みを描く<wbr>手腕が、<wbr>暗部の<wbr>少女たちの<wbr>物語でどう<wbr>活きるかにも<wbr>注目です。</div>
+      <div class="pick-point"><strong>ここが<wbr>推しポイント：</strong>「とある」シリーズ本編とは一味<wbr>違う、<wbr>裏社会視点の<wbr>ハードな<wbr>人間ドラマです。<wbr>シリーズファンは<wbr>もちろん<wbr>初見でも<wbr>楽しめる<wbr>構成です。<br>「とある魔術の禁書目録」の<wbr>アニメが<wbr>始まったのは<wbr>2008年です。その<wbr>放送後に<wbr>生まれた<wbr>世代は、<wbr>いまや<wbr>高校生です。<wbr>名前は<wbr>聞いたことが<wbr>あっても、<wbr>シリーズが<wbr>長くて<wbr>追いつけない、よく<wbr>分からない、という<wbr>方にこそ<wbr>おすすめしたい<wbr>作品です。「とある」シリーズの<wbr>入口と<wbr>して、<wbr>気軽に<wbr>触れられる<wbr>一作です。</div>
       <div class="streaming-row">
         <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
         <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -229,31 +236,31 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
         <div class="pick-num">7</div>
         <div class="pick-title-block">
           <div class="pick-name"><a href="https://anime-ann-e.jp/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">アン・シャーリー</a></div>
-          <div class="pick-sub">名作文学アニメ / アンサー・スタジオ / 2025年春放送・2026年秋に再放送（10月4日〜）</div>
+          <div class="pick-sub"><span class="nb">名作文学アニメ</span> / <span class="nb">アンサー・スタジオ</span> / 2025年春放送・2026年秋に<wbr>再放送<wbr>（10月4日〜）</div>
         </div>
         <div class="pick-score">★ 8.4</div>
       </div>
-      <div class="pick-body">モンゴメリ作・村岡花子訳「赤毛のアン」シリーズ（新潮文庫）の3巻分を、全24話で描いたアニメです。手違いでカスバート兄妹に引き取られた孤児の少女アンが、アヴォンリーの村で成長していく姿を追います。2025年春にNHK Eテレで放送された作品で、2026年10月4日（日）5時10分からフジテレビ（関東ローカル）で再放送が始まります。監督は川又浩です。</div>
-      <div class="pick-point"><strong>ここが推しポイント：</strong>全24話で完結している作品なので、再放送を機に最初から追いかけやすい一作です。見逃していた方にもおすすめします。</div>
+      <div class="pick-body">モンゴメリ作・村岡花子訳<wbr>「赤毛のアン」<wbr>シリーズ<wbr>（新潮文庫）の<wbr>3巻分を、<wbr>全24話で<wbr>描いた<wbr>アニメです。<wbr>手違いで<wbr>カスバート兄妹に<wbr>引き取られた<wbr>孤児の<wbr>少女アンが、<wbr>アヴォンリーの村で<wbr>成長していく姿を<wbr>追います。<wbr>2025年春に<wbr>NHK Eテレで<wbr>放送された<wbr>作品で、<wbr>2026年10月4日<wbr>（日）<wbr>5時10分から<wbr>フジテレビ<wbr>（関東ローカル）で<wbr>再放送が<wbr>始まります。<wbr>監督は<wbr>川又浩です。</div>
+      <div class="pick-point"><strong>ここが<wbr>推しポイント：</strong>全24話で<wbr>完結している<wbr>作品なので、<wbr>再放送を機に<wbr>最初から<wbr>追いかけやすい<wbr>一作です。<wbr>見逃していた<wbr>方にも<wbr>おすすめします。</div>
       <div class="streaming-row">
         <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
         <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
         <a href="https://anime-ann-e.jp/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
       </div>
-      <div style="font-size:.78rem;color:var(--text-muted);margin-top:6px;">※2025年春にNHK Eテレで放送された作品の再放送です。</div>
+      <div style="font-size:.78rem;color:var(--text-muted);margin-top:6px;">※2025年春に<wbr>NHK Eテレで<wbr>放送された<wbr>作品の<wbr>再放送です。</div>
     </div>
 
     <div class="pick-card" id="pick8">
       <div class="pick-header">
         <div class="pick-num">8</div>
         <div class="pick-title-block">
-          <div class="pick-name"><a href="https://zommasu.com/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">#ゾンビさがしてます</a></div>
-          <div class="pick-sub">ゾンビ×青春コメディ / Studio Comet / 2026年秋（10月3日〜）</div>
+          <div class="pick-name"><a href="https://zommasu.com/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">#ゾンビさが<wbr>してます</a></div>
+          <div class="pick-sub"><span class="nb">ゾンビ×青春コメディ</span> / <span class="nb">Studio Comet</span> / <span class="nb">2026年秋<wbr>（10月3日〜）</span></div>
         </div>
         <div class="pick-score">★ 8.4</div>
       </div>
-      <div class="pick-body">「三ツ星カラーズ」のカツヲによる漫画（KADOKAWA）が原作です。謎の感染症で人類の約9割が失われてから13年が経ち、閉ざされた村を飛び出した主人公が幼なじみたちとともに、ゾンビだらけの世界を旅します。過酷なはずの世界が、仲間と過ごす日々のなかで鮮やかに映る、青春コメディです。テレビ朝日系全国24局ネットの「IMAnimation」枠で、毎週土曜23:30から放送されています。</div>
-      <div class="pick-point"><strong>ここが推しポイント：</strong>ゾンビものでありながら、旅と仲間を軸にしたポップな雰囲気が持ち味です。ABEMA・dアニメストアでは、放送後の毎週土曜24:00から最速配信されます。</div>
+      <div class="pick-body">「三ツ星カラーズ」の<wbr>カツヲによる漫画<wbr>（KADOKAWA）が<wbr>原作です。謎の<wbr>感染症で<wbr>人類の<wbr>約9割が<wbr>失われてから<wbr>13年が<wbr>経ち、<wbr>閉ざされた村を<wbr>飛び出した<wbr>主人公が<wbr>幼なじみたちとともに、<wbr>ゾンビだらけの<wbr>世界を<wbr>旅します。<wbr>過酷なはずの<wbr>世界が、<wbr>仲間と<wbr>過ごす<wbr>日々の<wbr>なかで<wbr>鮮やかに<wbr>映る、<wbr>青春コメディです。<wbr>テレビ朝日系全国24局ネットの<wbr>「IMAnimation」枠で、毎週<wbr>土曜23:30から<wbr>放送されています。</div>
+      <div class="pick-point"><strong>ここが<wbr>推しポイント：</strong>ゾンビものでありながら、旅と<wbr>仲間を軸にした<wbr>ポップな<wbr>雰囲気が<wbr>持ち味です。<wbr>ABEMA・dアニメストアでは、<wbr>放送後の毎週<wbr>土曜24:00から<wbr>最速配信されます。</div>
       <div class="streaming-row">
         <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
         <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -265,13 +272,13 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
       <div class="pick-header">
         <div class="pick-num">9</div>
         <div class="pick-title-block">
-          <div class="pick-name"><a href="https://sekamajo-anime.com/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">世界最強の魔女、始めました</a></div>
-          <div class="pick-sub">ファンタジー・コメディ / ブリッジ・アイル / 2026年秋（10月7日〜）</div>
+          <div class="pick-name"><a href="https://sekamajo-anime.com/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">世界最強の<wbr>魔女、<wbr>始めました</a></div>
+          <div class="pick-sub"><span class="nb">ファンタジー・コメディ</span> / <span class="nb">ブリッジ・<wbr>アイル</span> / <span class="nb">2026年秋<wbr>（10月7日〜）</span></div>
         </div>
         <div class="pick-score">★ 8.0</div>
       </div>
-      <div class="pick-body">坂木持丸さん原作、ririttoさんイラストのSQEXノベル（スクウェア・エニックス）が原作で、漫画版は講談社「月マガ基地」で連載されています。自由で平和な生活を求めて旅する「世界最強の魔女」ローナが主人公です。追放されたあと、攻略サイトを閲覧出来るスキルで旅を楽しむうちに、気づけば周囲を驚かせてしまう、騒がしい冒険の日々を描きます。監督は古田丈司さん、シリーズ構成は米村正二さんで、ローナ役を橘杏咲さん、エリミナ役をファイルーズあいさんが務めます。TOKYO MXでは毎週水曜22:00から放送されています。</div>
-      <div class="pick-point"><strong>ここが推しポイント：</strong>開始数分で追放されて、「また虚無枠か」と思いきや、その後の展開で「あれ？　これは<a href="https://konosuba.com/" target="_blank" rel="noopener">『この素晴らしい世界に祝福を！』</a>になる可能性を秘めているのでは」と感じました。ABEMA・dアニメストアでは、毎週水曜22:00から見放題の先行配信があります。Prime Videoなど多くのサービスでは、10月12日（月）から配信されます。</div>
+      <div class="pick-body">坂木持丸さん<wbr>原作、<wbr>ririttoさん<wbr>イラストの<wbr>SQEXノベル<wbr>（スクウェア・エニックス）が<wbr>原作で、<wbr>漫画版は<wbr>講談社<wbr>「月マガ基地」で<wbr>連載されています。<wbr>自由で<wbr>平和な<wbr>生活を<wbr>求めて<wbr>旅する<wbr>「世界最強の魔女」<wbr>ローナが<wbr>主人公です。<wbr>追放された<wbr>あと、<wbr>攻略サイトを<wbr>閲覧できる<wbr>スキルで旅を<wbr>楽しむうちに、<wbr>気づけば<wbr>周囲を<wbr>驚かせてしまう、騒がしい<wbr>冒険の<wbr>日々を<wbr>描きます。<wbr>監督は<wbr>古田丈司さん、<wbr>シリーズ構成は<wbr>米村正二さんで、<wbr>ローナ役を<wbr>橘杏咲さん、<wbr>エリミナ役を<wbr>ファイルーズあいさんが<wbr>務めます。<wbr>TOKYO MXでは毎週<wbr>水曜22:00から<wbr>放送されています。</div>
+      <div class="pick-point"><strong>ここが<wbr>推しポイント：</strong>開始数分で<wbr>追放されて、<wbr>「また虚無枠か」と<wbr>思いきや、<wbr>その後の<wbr>展開で<wbr>「あれ？　これは<a href="https://konosuba.com/" target="_blank" rel="noopener"><wbr>『この<wbr>素晴らしい<wbr>世界に<wbr>祝福を!』</a>になる<wbr>可能性を<wbr>秘めているのでは」と<wbr>感じました。<wbr>ABEMA・dアニメストアでは、毎週<wbr>水曜22:00から<wbr>見放題の<wbr>先行配信が<wbr>あります。<wbr>Prime Videoなど<wbr>多くの<wbr>サービスでは、<wbr>10月12日<wbr>（月）から<wbr>配信されます。</div>
       <div class="streaming-row">
         <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
         <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -283,20 +290,20 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
       <div class="pick-header">
         <div class="pick-num">10</div>
         <div class="pick-title-block">
-          <div class="pick-name"><a href="http://fxkurumi-info.com/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">FX戦士くるみちゃん</a></div>
-          <div class="pick-sub">コメディ / パッショーネ / 2026年秋（10月1日〜）</div>
+          <div class="pick-name"><a href="http://fxkurumi-info.com/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">FX戦士くる<wbr>みちゃん</a></div>
+          <div class="pick-sub"><span class="nb">コメディ</span> / <span class="nb">パッショーネ</span> / <span class="nb">2026年秋<wbr>（10月1日〜）</span></div>
         </div>
         <div class="pick-score">★ 8.0</div>
       </div>
-      <div class="pick-body">ごく普通の女子大生・福賀くるみが、FX（外国為替証拠金取引）で2000万円を目指すという、令和らしい異色コメディです。チャートの値動きに一喜一憂するくるみの姿は、投資経験がある人ほど「あるある」と共感出来る作りになっています。ゆるふわな絵柄とシビアな相場の世界のギャップが本作最大の魅力です。</div>
-      <div class="pick-point"><strong>ここが推しポイント：</strong>dアニメストアで最速先行配信です。OPテーマは主人公役・鈴木愛奈さん本人が担当する、いわゆる「電波ソング」との呼び声もあります。</div>
+      <div class="pick-body">ごく<wbr>普通の<wbr>女子大生・<wbr>福賀くるみが、FX<wbr>（外国為替証拠金取引）で<wbr>2000万円を<wbr>目指すと<wbr>いう、<wbr>令和らしい<wbr>異色コメディです。<wbr>チャートの<wbr>値動きに<wbr>一喜一憂する<wbr>くるみの<wbr>姿は、<wbr>投資経験がある<wbr>人ほど<wbr>「あるある」と<wbr>共感できる<wbr>作りに<wbr>なっています。ゆる<wbr>ふわな<wbr>絵柄と<wbr>シビアな<wbr>相場の<wbr>世界の<wbr>ギャップが<wbr>本作最大の<wbr>魅力です。</div>
+      <div class="pick-point"><strong>ここが<wbr>推しポイント：</strong>dアニメストアで<wbr>最速先行配信です。<wbr>OPテーマは<wbr>主人公役・鈴木愛奈さん<wbr>本人が<wbr>担当する、<wbr>いわゆる<wbr>「電波ソング」との<wbr>呼び声も<wbr>あります。</div>
       <div class="streaming-row">
         <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
         <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
         <a href="https://netflix.com" target="_blank" rel="noopener" class="badge netflix">Netflix</a>
         <a href="http://fxkurumi-info.com/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
       </div>
-      <div style="font-size:.78rem;color:var(--text-muted);margin-top:6px;">※Amazon・Netflixは10月6日より配信開始予定</div>
+      <div style="font-size:.78rem;color:var(--text-muted);margin-top:6px;">※Amazon・Netflixは<wbr>10月6日より<wbr>配信開始予定</div>
     </div>
 
   </div>

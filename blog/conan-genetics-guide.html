@@ -71,6 +71,13 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
 .footer-link{color:var(--text-muted);text-decoration:none;font-size:.85rem}.footer-link:hover{color:#fff}
 .copyright{font-size:.8rem;color:rgba(255,255,255,0.3)}
 .related-guides{margin:40px 0 28px;padding:22px 24px;background:var(--bg-card);border:1px solid var(--border-color);border-radius:14px}.related-guides-title{font-size:1.05rem;font-weight:700;color:#fff;margin:0 0 14px}.related-guides ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}.related-guides a{display:block;text-decoration:none;padding:12px 14px;border:1px solid var(--border-color);border-radius:10px;transition:border-color .2s,background .2s}.related-guides a:hover{border-color:var(--accent);background:rgba(255,255,255,0.03)}.related-guides .rg-name{display:block;color:#fff;font-weight:700;font-size:.95rem;line-height:1.5}.related-guides .rg-desc{display:block;color:var(--text-muted);font-size:.82rem;line-height:1.7;margin-top:2px}
+/* 日本語の改行を自然にする設定（文節単位で改行・行頭禁則・1文字だけの行を避ける） */
+body{line-break:strict;overflow-wrap:break-word}
+@supports (word-break:auto-phrase){body{word-break:auto-phrase}}
+:has(> wbr){word-break:keep-all}
+p,li,dd,td,th{text-wrap:pretty}
+.nb{white-space:nowrap}
+h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-title,.pick-name,.next-article-title{text-wrap:balance}
 </style>
 </head>
 <body>
@@ -86,131 +93,131 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
   <div class="breadcrumb">
     <a href="https://anime-db.jp/">ホーム</a><span>›</span>
     <a href="https://anime-db.jp/blog/">ブログ</a><span>›</span>
-    名探偵コナン「親から子へ」名探偵の血筋ガイド
+    名探偵コナン<wbr>「親から子へ」<wbr>名探偵の<wbr>血筋ガイド
   </div>
 
   <span class="article-tag">🧬 名探偵コナン特集・血筋編</span>
-  <h1 class="article-title">名探偵コナン「親から子へ」名探偵の血筋ガイド<br>【工藤家・服部家・毛利家・黒羽家】</h1>
+  <h1 class="article-title">名探偵コナン<wbr>「親から子へ」<wbr>名探偵の<wbr>血筋ガイド<br>【工藤家・服部家・<wbr>毛利家・黒羽家】</h1>
   <div class="article-meta">
     <span>📅 2026年9月更新</span><span>✍️ ANIMEDB管理人</span><span>⏱ 読了目安：約6分</span>
   </div>
 
   <div class="alert-box">
-    <strong>🧬 才能は、親から子へ受け継がれている</strong><br>
-    名探偵コナンに登場する名探偵たちの推理力や特技は、実は偶然ではありません。工藤新一・服部平次・毛利蘭・黒羽快斗。それぞれの活躍の裏には、父や母から受け継いだ「血筋」があります。ここでは4つの家族に注目して、親から子へ何が受け継がれているのかを整理しました。
+    <strong>🧬 才能は、<wbr>親から子へ<wbr>受け継がれている</strong><br>
+    名探偵コナンに<wbr>登場する<wbr>名探偵たちの<wbr>推理力や<wbr>特技は、実は<wbr>偶然ではありません。<wbr>取り上げるのは、<wbr>工藤新一・<wbr>服部平次・<wbr>毛利蘭・黒羽快斗の<wbr>4人です。<wbr>それぞれの<wbr>活躍の<wbr>裏には、父や<wbr>母から<wbr>受け継いだ<wbr>「血筋」が<wbr>あります。<wbr>ここでは<wbr>4つの<wbr>家族に<wbr>注目して、<wbr>親から子へ何が<wbr>受け継がれているのかを<wbr>整理しました。
   </div>
 
   <div class="toc">
-    <div class="toc-title">📋 このページの構成</div>
+    <div class="toc-title">📋 この<wbr>ページの構成</div>
     <div class="toc-grid">
-      <a href="#why">はじめに：この記事を書いた理由</a>
-      <a href="#kudo">1. 工藤家：新一の推理力と変装術</a>
-      <a href="#hattori">2. 服部家：平次の剣道と正義感</a>
-      <a href="#mouri">3. 毛利家：蘭の芯の強さ</a>
-      <a href="#kuroba">4. 黒羽家：快斗が継いだ怪盗キッド</a>
-      <a href="#twins">5. おまけ：工藤家と黒羽家のつながり</a>
+      <a href="#why">はじめに：この<wbr>記事を<wbr>書いた<wbr>理由</a>
+      <a href="#kudo">1. 工藤家：新一の<wbr>推理力と<wbr>変装術</a>
+      <a href="#hattori">2. 服部家：平次の<wbr>剣道と<wbr>正義感</a>
+      <a href="#mouri">3. 毛利家：蘭の芯の<wbr>強さ</a>
+      <a href="#kuroba">4. 黒羽家：快斗が<wbr>継いだ怪盗キッド</a>
+      <a href="#twins">5. おまけ：工藤家と<wbr>黒羽家の<wbr>つながり</a>
       <a href="#summary">6. まとめ</a>
     </div>
   </div>
 
   <div class="article-body">
 
-    <h2 id="why">はじめに：この記事を書いた理由</h2>
-    <p>管理人がコナンに出会ったのは、小学生のころです。月曜日の19時30分ごろ、家族で夕ご飯を食べながら観ていたのが最初でした。続きが気になって、アニメを観たあとに、原作のコミックを買いました。当時は紙の本です。</p>
-    <p>この記事を書いたきっかけは、血縁や遺伝子まわりの伏線を整理したサイトや動画、ブログが、見つからなかったからです。なければ自分でまとめよう、と思いました。書くときには、電子書籍で買った「紅の修学旅行編」のコミックも読み返しています。読み返しながら、「ロンドンのビッグベンから、ここまで時間がかかりすぎだ」と感じました。</p>
-    <p>血縁まわりで、管理人がいちばん驚いたのは、工藤優作と黒羽盗一が双子で、新一とキッドがいとこ同士だったことです。くわしくは、このあとの「おまけ」で紹介します。</p>
-    <p>いちばん好きなキャラクターは、山村ミサオです。ポンコツなのに、ファンから愛されているところが好きです。管理人自身がポンコツだからです。</p>
+    <h2 id="why">はじめに：この<wbr>記事を<wbr>書いた理由</h2>
+    <p>管理人が<wbr>コナンに<wbr>出会ったのは、<wbr>小学生の<wbr>ころです。<wbr>月曜日の<wbr>19時30分ごろ、<wbr>家族で<wbr>夕ご飯を<wbr>食べながら<wbr>観ていたのが<wbr>最初でした。<wbr>続きが気に<wbr>なって、<wbr>アニメを観た<wbr>あとに、<wbr>原作の<wbr>コミックを<wbr>買いました。<wbr>当時は紙の<wbr>本です。</p>
+    <p>この<wbr>記事を<wbr>書いた<wbr>きっかけは、<wbr>血縁や<wbr>遺伝子まわりの<wbr>伏線を<wbr>整理した<wbr>サイトや<wbr>動画、<wbr>ブログが、<wbr>見つからなかったからです。<wbr>なければ<wbr>自分で<wbr>まとめよう、と<wbr>思いました。書く<wbr>ときには、<wbr>電子書籍で<wbr>買った<wbr>「紅の修学旅行編」の<wbr>コミックも<wbr>読み返しています。<wbr>読み返しながら、<wbr>「ロンドンの<wbr>ビッグベンから、<wbr>ここまで<wbr>時間が<wbr>かかりすぎだ」と<wbr>感じました。</p>
+    <p>血縁まわりで、<wbr>管理人が一番<wbr>驚いたのは、<wbr>工藤優作と<wbr>黒羽盗一が<wbr>双子で、<wbr>新一と<wbr>キッドが<wbr>いとこ同士だった<wbr>ことです。<wbr>くわしくは、この<wbr>あとの<wbr>「おまけ」で<wbr>紹介します。</p>
+    <p>一番<wbr>好きな<wbr>キャラクターは、<wbr>山村ミサオです。<wbr>ポンコツなのに、<wbr>ファンから<wbr>愛されている<wbr>ところが<wbr>好きです。<wbr>管理人自身が<wbr>ポンコツだからです。</p>
 
-    <h2 id="kudo">1. 工藤家：新一の推理力と変装術</h2>
+    <h2 id="kudo">1. 工藤家：新一の<wbr>推理力と<wbr>変装術</h2>
     <div class="family-box">
-      <div class="family-parent">父：工藤優作（推理作家「ナイトバロン」シリーズで世界的に有名な小説家）<br>×<br>母：工藤有希子（元大女優）</div>
+      <div class="family-parent">父：工藤優作<wbr>（推理作家<wbr>「ナイトバロン」<wbr>シリーズで<wbr>世界的に<wbr>有名な<wbr>小説家）<br>×<br>母：工藤有希子<wbr>（元大女優）</div>
     </div>
     <div class="gem-card">
       <div class="gem-header">
         <div class="gem-num">1</div>
         <div class="gem-title-block">
           <div class="gem-name">工藤新一</div>
-          <div class="gem-sub">名探偵としての鋭い推理力／変装・演技の才能</div>
+          <div class="gem-sub">名探偵と<wbr>しての鋭い<wbr>推理力／変装・演技の才能</div>
         </div>
       </div>
-      <div class="gem-body">父・優作は世界的ベストセラー作家であるだけでなく、怪盗キッドの濡れ衣を晴らしたり、難解な密室事件を解決したりと、プロの探偵顔負けの推理力を見せる人物です。新一の推理の鋭さは、こうした父の血を受け継いだものと言えるでしょう。一方、母・有希子は数々の映画賞に輝いた元大女優で、変装や演技力はプロ級です。作中では、灰原哀が新一の目立ちたがりな性格や物おじしない演技力、突っ走ってしまうところを「母親の遺伝」とはっきり指摘する場面もあります。</div>
-      <div class="gem-point"><strong>ここが分かる：</strong>新一の「推理力は父から、目立ちたがりで演技がうまいところは母から」というふうに、両親それぞれの得意分野を受け継いでいること。</div>
+      <div class="gem-body">父・優作は<wbr>世界的ベストセラー作家であるだけでなく、<wbr>怪盗キッドの<wbr>濡れ衣を<wbr>晴らしたり、<wbr>難解な<wbr>密室事件を<wbr>解決したりと、<wbr>プロの<wbr>探偵顔負けの<wbr>推理力を<wbr>見せる<wbr>人物です。<wbr>新一の<wbr>推理の<wbr>鋭さは、<wbr>こうした父の血を<wbr>受け継いだものと<wbr>言えるでしょう。<wbr>一方、母・<wbr>有希子は<wbr>数々の<wbr>映画賞に<wbr>輝いた<wbr>元大女優で、<wbr>変装や<wbr>演技力は<wbr>プロ級です。<wbr>作中では、<wbr>灰原哀が<wbr>新一の<wbr>目立ちたがりな<wbr>性格や物<wbr>おじしない<wbr>演技力、<wbr>突っ走ってしまう<wbr>ところを<wbr>「母親の遺伝」とはっきり指摘する<wbr>場面も<wbr>あります。</div>
+      <div class="gem-point"><strong>ここが<wbr>分かる：</strong>新一の<wbr>「推理力は<wbr>父から、<wbr>目立ちたがりで<wbr>演技が<wbr>うまい<wbr>ところは<wbr>母から」という<wbr>ふうに、<wbr>両親それぞれの<wbr>得意分野を<wbr>受け継いでいる<wbr>ことです。</div>
     </div>
 
-    <h2 id="hattori">2. 服部家：平次の剣道と正義感</h2>
+    <h2 id="hattori">2. 服部家：平次の<wbr>剣道と<wbr>正義感</h2>
     <div class="family-box">
-      <div class="family-parent">父：服部平蔵（大阪府警察本部長）<br>×<br>母：服部静香（剣道の達人）</div>
+      <div class="family-parent">父：服部平蔵<wbr>（大阪府警察本部長）<br>×<br>母：服部静香<wbr>（剣道の達人）</div>
     </div>
     <div class="gem-card">
       <div class="gem-header">
         <div class="gem-num">2</div>
         <div class="gem-title-block">
           <div class="gem-name">服部平次</div>
-          <div class="gem-sub">剣道の腕前と警察一家で育った正義感</div>
+          <div class="gem-sub">剣道の<wbr>腕前と<wbr>警察一家で<wbr>育った<wbr>正義感</div>
         </div>
       </div>
-      <div class="gem-body">大阪の高校生探偵・服部平次の父は、大阪府警のトップである本部長・服部平蔵です。母の静香も剣道の達人とされており、平次自身の剣道の腕前は、両親から受け継いだ実力と言えます。父が警察組織を率いる立場にあるという家庭環境も、平次のまっすぐな正義感を育てた土台になっているのでしょう。</div>
-      <div class="gem-point"><strong>ここが分かる：</strong>平次の強さは剣道の腕だけでなく、警察一家という環境で育まれた正義感も含めて「家族から受け継いだもの」だということ。</div>
+      <div class="gem-body">大阪の<wbr>高校生探偵・服部平次の<wbr>父は、<wbr>大阪府警の<wbr>トップである<wbr>本部長・服部平蔵です。母の<wbr>静香も<wbr>剣道の<wbr>達人と<wbr>されており、<wbr>平次自身の<wbr>剣道の<wbr>腕前は、<wbr>両親から<wbr>受け継いだ<wbr>実力と<wbr>言えます。父が<wbr>警察組織を<wbr>率いる<wbr>立場に<wbr>あるという<wbr>家庭環境も、<wbr>平次の<wbr>まっすぐな<wbr>正義感を<wbr>育てた<wbr>土台に<wbr>なっているのでしょう。</div>
+      <div class="gem-point"><strong>ここが<wbr>分かる：</strong>平次の<wbr>強さは<wbr>剣道の<wbr>腕だけでなく、<wbr>警察一家という<wbr>環境で<wbr>育まれた<wbr>正義感も<wbr>含めて<wbr>「家族から<wbr>受け継いだもの」だという<wbr>ことです。</div>
     </div>
 
     <h2 id="mouri">3. 毛利家：蘭の芯の強さ</h2>
     <div class="family-box">
-      <div class="family-parent">父：毛利小五郎（柔道の実力者「米花の三四郎」）<br>×<br>母：妃英理（弁護士「法曹界の女王」）</div>
+      <div class="family-parent">父：毛利小五郎<wbr>（柔道の<wbr>実力者<wbr>「米花の三四郎」）<br>×<br>母：妃英理<wbr>（弁護士<wbr>「法曹界の女王」）</div>
     </div>
     <div class="gem-card">
       <div class="gem-header">
         <div class="gem-num">3</div>
         <div class="gem-title-block">
           <div class="gem-name">毛利蘭</div>
-          <div class="gem-sub">空手の実力とまっすぐな芯の強さ</div>
+          <div class="gem-sub">空手の<wbr>実力と<wbr>まっすぐな芯の強さ</div>
         </div>
       </div>
-      <div class="gem-body">蘭の父・小五郎は大学時代、柔道で日本一とも言われた実力の持ち主でしたが、本番に弱く公式戦では勝てないという少し残念な一面もあります。母・英理は「法曹界の女王」の異名を持つ敏腕弁護士で、勝負事に強く、一度決めたことを曲げない性格で知られています。蘭自身の空手の実力は部活動などを通して自分自身で磨いたものですが、物事に対するまっすぐで芯の強い性格は、母・英理譲りの部分が大きいと言えるでしょう。</div>
-      <div class="gem-point"><strong>ここが分かる：</strong>蘭の強さは自分自身の努力の積み重ねであると同時に、母譲りの「まっすぐな芯の強さ」に支えられているということ。</div>
+      <div class="gem-body">蘭の父・<wbr>小五郎は<wbr>大学時代、<wbr>柔道で<wbr>日本一とも<wbr>言われた<wbr>実力の<wbr>持ち主でしたが、<wbr>本番に弱く<wbr>公式戦では<wbr>勝てないという少し<wbr>残念な<wbr>一面も<wbr>あります。<wbr>母・英理は<wbr>「法曹界の女王」の<wbr>異名を<wbr>持つ敏腕弁護士で、<wbr>勝負事に<wbr>強く、一度<wbr>決めた<wbr>ことを<wbr>曲げない<wbr>性格で<wbr>知られています。<wbr>蘭自身の<wbr>空手の<wbr>実力は部<wbr>活動などを<wbr>通して自分<wbr>自身で<wbr>磨いた<wbr>ものですが、<wbr>物事に<wbr>対する<wbr>まっすぐで芯の強い<wbr>性格は、<wbr>母・英理譲りの<wbr>部分が<wbr>大きいと<wbr>言えるでしょう。</div>
+      <div class="gem-point"><strong>ここが<wbr>分かる：</strong>蘭の<wbr>強さは自分<wbr>自身の<wbr>努力の<wbr>積み重ねであると<wbr>同時に、<wbr>母譲りの<wbr>「まっすぐな芯の強さ」に<wbr>支えられているという<wbr>ことです。</div>
     </div>
 
-    <h2 id="kuroba">4. 黒羽家：快斗が継いだ怪盗キッド</h2>
+    <h2 id="kuroba">4. 黒羽家：快斗が<wbr>継いだ怪盗キッド</h2>
     <div class="family-box">
-      <div class="family-parent">父：黒羽盗一（初代・怪盗キッド／世界的マジシャン）</div>
+      <div class="family-parent">父：黒羽盗一<wbr>（初代・怪盗キッド／世界的マジシャン）</div>
     </div>
     <div class="gem-card">
       <div class="gem-header">
         <div class="gem-num">4</div>
         <div class="gem-title-block">
           <div class="gem-name">黒羽快斗</div>
-          <div class="gem-sub">父から受け継いだマジックと「怪盗キッド」の名前</div>
+          <div class="gem-sub">父から<wbr>受け継いだマジックと<wbr>「怪盗キッド」の名前</div>
         </div>
       </div>
-      <div class="gem-body">快斗の父・黒羽盗一は、世界的に名を轟かせた奇術師であり、初代の怪盗キッド（怪盗1412号）でした。快斗が8歳の頃、盗一は舞台上の事故として発表される謎の死を遂げますが、実際には伝説の宝石「パンドラ」をめぐって命を狙われていたことが後に明らかになります。父の遺した道具部屋を偶然見つけた快斗は、父の技と怪盗キッドという名前を受け継ぎ、事件の真相を探るために自ら2代目のキッドとなる道を選びました。</div>
-      <div class="gem-point"><strong>ここが分かる：</strong>快斗が怪盗キッドを名乗るのは遊びではなく、父から受け継いだ技術と、父の死の真相を追うという強い覚悟の表れだということ。</div>
+      <div class="gem-body">快斗の<wbr>父・黒羽盗一は、<wbr>世界的に名を<wbr>轟かせた<wbr>奇術師であり、<wbr>初代の<wbr>怪盗キッド<wbr>（怪盗1412号）でした。<wbr>快斗が<wbr>8歳の<wbr>頃、<wbr>盗一は<wbr>舞台上の<wbr>事故として<wbr>発表される謎の死を<wbr>遂げますが、<wbr>実際には<wbr>伝説の宝石<wbr>「パンドラ」を<wbr>めぐって命を<wbr>狙われていた<wbr>ことが後に<wbr>明らかに<wbr>なります。父の<wbr>遺した<wbr>道具部屋を偶然<wbr>見つけた<wbr>快斗は、父の技と<wbr>怪盗キッドという<wbr>名前を<wbr>受け継ぎ、<wbr>事件の<wbr>真相を探る<wbr>ために<wbr>自ら2代目の<wbr>キッドとなる道を<wbr>選びました。</div>
+      <div class="gem-point"><strong>ここが<wbr>分かる：</strong>快斗が<wbr>怪盗キッドを<wbr>名乗るのは<wbr>遊びではなく、<wbr>父から<wbr>受け継いだ技術と、父の死の<wbr>真相を<wbr>追うという強い<wbr>覚悟の<wbr>表れだという<wbr>ことです。</div>
     </div>
 
-    <h2 id="twins">5. おまけ：工藤家と黒羽家のつながり</h2>
-    <p style="font-size:.82rem;color:var(--text-muted);">※劇場版「名探偵コナン 100万ドルの五稜星」（2024年）のラストで明かされた内容にふれています。映画をまだ見ていない方はご注意ください。</p>
+    <h2 id="twins">5. おまけ：工藤家と<wbr>黒羽家の<wbr>つながり</h2>
+    <p style="font-size:.82rem;color:var(--text-muted);">※劇場版<wbr>「名探偵コナン 100万ドルの<wbr>五稜星」<wbr>（2024年）の<wbr>ラストで<wbr>明かされた<wbr>内容に<wbr>ふれています。<wbr>映画をまだ<wbr>見ていない方は<wbr>ご注意ください。</p>
     <div class="gem-card">
       <div class="gem-header">
         <div class="gem-num">5</div>
         <div class="gem-title-block">
-          <div class="gem-name">工藤優作と黒羽盗一</div>
-          <div class="gem-sub">新一と快斗が「そっくり」な理由</div>
+          <div class="gem-name">工藤優作と<wbr>黒羽盗一</div>
+          <div class="gem-sub">新一と<wbr>快斗が<wbr>「そっくり」な理由</div>
         </div>
       </div>
-      <div class="gem-body">工藤新一の父・優作と、黒羽快斗の父・盗一は、実は双子の兄弟です。つまり、新一と快斗は「いとこ同士」ということになります。新一と快斗は、作中でも顔がそっくりなことが印象的に描かれてきましたが、父親同士が双子だと分かったことで、その理由が血のつながりとして説明出来るようになりました。</div>
-      <div class="gem-point"><strong>ここが分かる：</strong>新一と快斗がそっくりなのは偶然ではなく、父親同士が双子だから。名探偵と怪盗という正反対の立場にいる二人は、実は親戚どうしだということ。</div>
+      <div class="gem-body">工藤新一の<wbr>父・優作と、<wbr>黒羽快斗の<wbr>父・盗一は、実は<wbr>双子の<wbr>兄弟です。<wbr>つまり、<wbr>新一と<wbr>快斗は<wbr>「いとこ同士」という<wbr>ことになります。<wbr>新一と<wbr>快斗は、<wbr>作中でも顔が<wbr>そっくりな<wbr>ことが<wbr>印象的に<wbr>描かれてきましたが、<wbr>父親同士が<wbr>双子だと<wbr>分かった<wbr>ことで、その<wbr>理由が血の<wbr>つながりとして<wbr>説明できるようになりました。</div>
+      <div class="gem-point"><strong>ここが<wbr>分かる：</strong>新一と<wbr>快斗が<wbr>そっくりなのは<wbr>偶然ではなく、<wbr>父親同士が<wbr>双子だからです。<wbr>名探偵と<wbr>怪盗という<wbr>正反対の<wbr>立場にいる<wbr>二人は、実は<wbr>親戚どうしだという<wbr>ことです。</div>
     </div>
 
     <h2 id="summary">6. まとめ</h2>
-    <p>工藤新一の推理力と変装術、服部平次の剣道と正義感、毛利蘭のまっすぐな芯の強さ、黒羽快斗が継いだ怪盗キッドという名前。名探偵コナンに登場する名探偵たちの活躍の裏には、いつも親から子へ受け継がれてきた何かがあります。血筋として受け継がれるのは、推理力や特技といった目に見える力だけではありません。管理人自身、原作・アニメ・映画をこれだけ長く追いかけてこられたのは、身近な誰かが好きなものを見せてくれたことがきっかけでした。親から子へ受け継がれるのは才能だけでなく、「好きなもの」も同じなのかもしれません。この記事が、次の世代にコナンを手渡す誰かの参考になればうれしいです。</p>
-    <p>最後に、これから見る方へ。考察は、あとからで十分です。まずは気軽に見てください。ただそれだけです。</p>
+    <p>工藤新一の<wbr>推理力と<wbr>変装術、<wbr>服部平次の<wbr>剣道と<wbr>正義感、<wbr>毛利蘭の<wbr>まっすぐな芯の<wbr>強さ、<wbr>黒羽快斗が<wbr>継いだ怪盗キッドという<wbr>名前が、<wbr>それぞれ親から子へ<wbr>受け継がれた<wbr>ものです。<wbr>名探偵コナンに<wbr>登場する<wbr>名探偵たちの<wbr>活躍の<wbr>裏には、<wbr>いつも<wbr>親から子へ<wbr>受け継がれてきた<wbr>何かが<wbr>あります。<wbr>血筋として<wbr>受け継がれるのは、<wbr>推理力や<wbr>特技と<wbr>いった目に<wbr>見える<wbr>力だけではありません。<wbr>管理人自身、<wbr>原作・アニメ・映画を<wbr>これだけ長く<wbr>追いかけて<wbr>こられたのは、<wbr>身近な<wbr>誰かが<wbr>好きな<wbr>ものを<wbr>見せてくれた<wbr>ことが<wbr>きっかけでした。<wbr>親から子へ<wbr>受け継がれるのは<wbr>才能だけでなく、<wbr>「好きなもの」も<wbr>同じなのかもしれません。この<wbr>記事が、次の<wbr>世代に<wbr>コナンを<wbr>手渡す<wbr>誰かの<wbr>参考に<wbr>なればうれしいです。</p>
+    <p>最後に、<wbr>これから<wbr>見る方へ<wbr>お伝えします。<wbr>考察は、<wbr>あとからで<wbr>十分です。<wbr>まずは<wbr>気軽に<wbr>見てください。ただ<wbr>それだけです。</p>
 
   </div>
 
   <section class="related-guides" aria-label="関連ガイド">
-    <h2 class="related-guides-title">関連ガイド（名探偵コナン）</h2>
+    <h2 class="related-guides-title">関連<wbr>ガイド<wbr>（名探偵コナン）</h2>
     <ul>
-      <li><a href="https://anime-db.jp/blog/conan-beginner-guide.html"><span class="rg-name">名探偵コナン初心者ガイド</span><span class="rg-desc">親から子へ、今から見せるならこの順番で。序盤の神回、映画6本、原作の追い方をまとめています。</span></a></li>
-      <li><a href="https://anime-db.jp/blog/conan-advanced-guide.html"><span class="rg-name">名探偵コナン上級ガイド</span><span class="rg-desc">新出先生・沖矢昴・安室透からRUM編、「あの方」まで、正体判明ミステリーを時系列で整理しています。</span></a></li>
-      <li><a href="https://anime-db.jp/blog/conan-romance-guide.html"><span class="rg-name">名探偵コナン恋愛名場面ガイド</span><span class="rg-desc">新一×蘭、園子×京極、平次×和葉、高木×佐藤、快斗×青子の5組を時系列で振り返ります。</span></a></li>
+      <li><a href="https://anime-db.jp/blog/conan-beginner-guide.html"><span class="rg-name">名探偵コナン初心者ガイド</span><span class="rg-desc">親から<wbr>子へ、<wbr>今から<wbr>見せるならこの<wbr>順番で<wbr>どうぞ。<wbr>序盤の<wbr>神回、<wbr>映画6本、<wbr>原作の追い方を<wbr>まとめています。</span></a></li>
+      <li><a href="https://anime-db.jp/blog/conan-advanced-guide.html"><span class="rg-name">名探偵コナン上級ガイド</span><span class="rg-desc">新出先生・沖矢昴・安室透から<wbr>RUM編、<wbr>「あの方」まで、<wbr>正体判明ミステリーを<wbr>時系列で<wbr>整理しています。</span></a></li>
+      <li><a href="https://anime-db.jp/blog/conan-romance-guide.html"><span class="rg-name">名探偵コナン恋愛名場面ガイド</span><span class="rg-desc">新一×蘭、<wbr>園子×京極、<wbr>平次×和葉、<wbr>高木×佐藤、<wbr>快斗×青子の<wbr>5組を<wbr>時系列で<wbr>振り返ります。</span></a></li>
     </ul>
   </section>
 

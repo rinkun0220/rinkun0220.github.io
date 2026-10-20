@@ -66,6 +66,13 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
 .footer-link{color:var(--text-muted);text-decoration:none;font-size:.85rem}.footer-link:hover{color:#fff}
 .copyright{font-size:.8rem;color:rgba(255,255,255,0.3)}
 .rating-guide-note{font-size:.88rem;color:var(--text-muted);margin:-8px 0 28px;line-height:1.8}.rating-guide-note a{color:var(--accent);text-decoration:underline}
+/* 日本語の改行を自然にする設定（文節単位で改行・行頭禁則・1文字だけの行を避ける） */
+body{line-break:strict;overflow-wrap:break-word}
+@supports (word-break:auto-phrase){body{word-break:auto-phrase}}
+:has(> wbr){word-break:keep-all}
+p,li,dd,td,th{text-wrap:pretty}
+.nb{white-space:nowrap}
+h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-title,.pick-name,.next-article-title{text-wrap:balance}
 </style>
 </head>
 <body>
@@ -81,40 +88,40 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
   <div class="breadcrumb">
     <a href="https://anime-db.jp/">ホーム</a><span>›</span>
     <a href="https://anime-db.jp/blog/">ブログ</a><span>›</span>
-    泣けるラブコメアニメおすすめ10選
+    泣ける<wbr>ラブコメアニメおすすめ10選
   </div>
 
   <span class="article-tag">💕 ランキング</span>
-  <h1 class="article-title">泣けるラブコメアニメおすすめ10選【感動保証】</h1>
+  <h1 class="article-title">泣ける<wbr>ラブコメアニメおすすめ10選【感動保証】</h1>
   <div class="article-meta">
     <span>📅 2026年6月8日</span><span>✍️ ANIMEDB管理人</span><span>⏱ 読了目安：約5分</span>
   </div>
 
   <div class="article-body">
-    <p>「笑えて、でも最後は泣ける」——そんなラブコメアニメを10本厳選しました。恋愛アニメが苦手な方でも入りやすい作品から、ガチで号泣出来る名作まで幅広く紹介します。今夜何を見るか迷っている方は是非参考にしてください。</p>
+    <p>「笑えて、でも<wbr>最後は<wbr>泣ける」——<wbr>そんな<wbr>ラブコメアニメを<wbr>10本厳選しました。<wbr>恋愛アニメが<wbr>苦手な<wbr>方でも<wbr>入りやすい<wbr>作品から、<wbr>ガチで<wbr>号泣できる<wbr>名作まで<wbr>幅広く<wbr>紹介します。<wbr>今夜何を<wbr>見るか<wbr>迷っている方はぜひ<wbr>参考に<wbr>してください。</p>
 
     <div class="toc">
       <div class="toc-title">📋 目次</div>
       <ol>
         <li><a href="#ranking">おすすめ10選</a></li>
-        <li><a href="#cry">特に泣ける作品は？</a></li>
-        <li><a href="#myview">管理人が恋愛アニメに求めるもの</a></li>
+        <li><a href="#cry">特に<wbr>泣ける<wbr>作品は？</a></li>
+        <li><a href="#myview">管理人が<wbr>恋愛アニメに<wbr>求めるもの</a></li>
         <li><a href="#summary">まとめ</a></li>
       </ol>
     </div>
 
-    <p class="rating-guide-note">※★の点数は管理人スコア（10点満点）です。評価の基準は<a href="https://anime-db.jp/blog/rating-criteria.html">こちら</a>をご覧ください。</p>
+    <p class="rating-guide-note">※★の<wbr>点数は<wbr>管理人スコア<wbr>（10点満点）です。<wbr>評価の<wbr>基準は<a href="https://anime-db.jp/blog/rating-criteria.html"><wbr>こちら</a>を<wbr>ご覧ください。</p>
 
-    <h2 id="ranking">💕 泣けるラブコメおすすめ10選</h2>
+    <h2 id="ranking">💕 泣ける<wbr>ラブコメおすすめ10選</h2>
 
     <div class="rank-card">
       <div class="rank-num gold">1</div>
       <div class="rank-body">
-        <div class="rank-title">とらドラ！</div>
-        <div class="rank-sub">2008年 / J.C.Staff</div>
+        <div class="rank-title">とらドラ!</div>
+        <div class="rank-sub"><span class="nb">2008年</span> / <span class="nb">J.C.Staff</span></div>
         <div class="rank-score">★ 9.1 / 10</div>
         <span class="rank-tag">殿堂入り</span><span class="rank-tag green">感動</span>
-        <div class="rank-text">ラブコメの金字塔。ツンデレ少女・大河と不良っぽい外見の竜児が互いの恋を助けながら距離を縮めていく物語。笑いと青春と切なさのバランスが完璧で、終盤の展開は今見ても涙が出ます。15年以上前の作品ですが色褪せない名作中の名作です。</div>
+        <div class="rank-text">ラブコメの<wbr>金字塔です。<wbr>ツンデレ少女・大河と<wbr>不良っぽい<wbr>外見の<wbr>竜児が<wbr>互いの恋を<wbr>助けながら<wbr>距離を<wbr>縮めていく<wbr>物語です。<wbr>笑いと<wbr>青春と<wbr>切なさの<wbr>バランスが<wbr>完璧で、<wbr>終盤の<wbr>展開は<wbr>今見ても涙が<wbr>出ます。<wbr>15年以上前の<wbr>作品ですが<wbr>色褪せない<wbr>名作中の<wbr>名作です。</div>
         <div class="streaming-row">
           <a href="https://www.tv-tokyo.co.jp/anime/toradora/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
         </div>
@@ -124,11 +131,11 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
     <div class="rank-card">
       <div class="rank-num silver">2</div>
       <div class="rank-body">
-        <div class="rank-title">その着せ替え人形は恋をする</div>
-        <div class="rank-sub">2022年 / CloverWorks</div>
+        <div class="rank-title">その<wbr>着せ替え<wbr>人形は恋をする</div>
+        <div class="rank-sub"><span class="nb">2022年</span> / <span class="nb">CloverWorks</span></div>
         <div class="rank-score">★ 8.8 / 10</div>
         <span class="rank-tag">初心者◎</span><span class="rank-tag green">コスプレ</span>
-        <div class="rank-text">コスプレが好きなギャル・海夢と、ひな人形職人を目指す無口な五条の交流を描いたラブコメ。笑えるシーンが多いのに要所で泣けるバランスが絶妙。CloverWorksの作画クオリティも高く、最近のラブコメでは間違いなくトップクラスの完成度です。2期への期待も高まっています。</div>
+        <div class="rank-text">コスプレが<wbr>好きな<wbr>ギャル・海夢と、<wbr>ひな人形職人を<wbr>目指す<wbr>無口な<wbr>五条の<wbr>交流を<wbr>描いた<wbr>ラブコメです。<wbr>笑える<wbr>シーンが<wbr>多いのに<wbr>要所で<wbr>泣ける<wbr>バランスが<wbr>絶妙です。<wbr>CloverWorksの<wbr>作画クオリティも<wbr>高く、<wbr>最近の<wbr>ラブコメでは<wbr>間違いなく<wbr>トップクラスの<wbr>完成度です。<wbr>2期への<wbr>期待も<wbr>高まっています。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
           <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -141,11 +148,11 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
     <div class="rank-card">
       <div class="rank-num bronze">3</div>
       <div class="rank-body">
-        <div class="rank-title">あの日見た花の名前を僕達はまだ知らない。</div>
-        <div class="rank-sub">2011年 / A-1 Pictures</div>
+        <div class="rank-title">あの<wbr>日見た花の<wbr>名前を<wbr>僕達はまだ<wbr>知らない。</div>
+        <div class="rank-sub"><span class="nb">2011年</span> / <span class="nb">A-1 Pictures</span></div>
         <div class="rank-score">★ 8.7 / 10</div>
         <span class="rank-tag green">号泣注意</span><span class="rank-tag blue">青春</span>
-        <div class="rank-text">幼馴染グループと幽霊となって戻ってきたメンバーの再会と別れを描いた感動作。ラブコメ要素と切ない余韻が絶妙に混じり合い、最終話は多くの視聴者が号泣したと言われます。今でも「こんなに泣いたアニメ」の上位に挙がる作品です。</div>
+        <div class="rank-text">幼馴染グループと<wbr>幽霊と<wbr>なって<wbr>戻ってきた<wbr>メンバーの<wbr>再会と<wbr>別れを<wbr>描いた<wbr>感動作です。<wbr>ラブコメ要素と<wbr>切ない<wbr>余韻が<wbr>絶妙に<wbr>混じり合い、<wbr>最終話は<wbr>多くの<wbr>視聴者が<wbr>号泣したと<wbr>言われます。<wbr>今でも<wbr>「こんなに泣いたアニメ」の<wbr>上位に<wbr>挙がる<wbr>作品です。</div>
         <div class="streaming-row">
           <a href="https://www.anohana.jp/tv/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
         </div>
@@ -155,11 +162,11 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
     <div class="rank-card">
       <div class="rank-num">4</div>
       <div class="rank-body">
-        <div class="rank-title">やはり俺の青春ラブコメはまちがっている。</div>
-        <div class="rank-sub">2013年〜2020年 / Brain's Base / feel.</div>
+        <div class="rank-title">やはり俺の<wbr>青春ラブコメは<wbr>まちがっている。</div>
+        <div class="rank-sub"><span class="nb">2013年〜2020年</span> / <span class="nb">Brain's Base</span> / <span class="nb">feel.</span></div>
         <div class="rank-score">★ 8.6 / 10</div>
-        <span class="rank-tag blue">セリフが刺さる</span><span class="rank-tag">思春期</span>
-        <div class="rank-text">「ぼっち」な主人公・八幡の歪んだ青春観と、本物を求める葛藤を描いた深みのあるラブコメ。セリフの一つ一つに哲学があり、読み返したくなる言葉が多いです。3期（完結）での八幡の選択は、長年のファンにとって最高の結末でした。</div>
+        <span class="rank-tag blue">セリフが<wbr>刺さる</span><span class="rank-tag"><wbr>思春期</span>
+        <div class="rank-text">「ぼっち」な<wbr>主人公・八幡の<wbr>歪んだ<wbr>青春観と、<wbr>本物を<wbr>求める<wbr>葛藤を<wbr>描いた<wbr>深みのある<wbr>ラブコメです。<wbr>セリフの一つ<wbr>一つに<wbr>哲学が<wbr>あり、<wbr>読み返したくなる<wbr>言葉が<wbr>多いです。3期<wbr>（完結）での<wbr>八幡の<wbr>選択は、<wbr>長年の<wbr>ファンに<wbr>とって<wbr>最高の<wbr>結末でした。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
           <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -171,11 +178,11 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
     <div class="rank-card">
       <div class="rank-num">5</div>
       <div class="rank-body">
-        <div class="rank-title">かぐや様は告らせたい</div>
-        <div class="rank-sub">2019年〜2022年 / A-1 Pictures</div>
+        <div class="rank-title">かぐ<wbr>や様は<wbr>告らせたい</div>
+        <div class="rank-sub"><span class="nb">2019年〜2022年</span> / <span class="nb">A-1 Pictures</span></div>
         <div class="rank-score">★ 8.5 / 10</div>
         <span class="rank-tag">頭脳戦ラブコメ</span><span class="rank-tag blue">ギャグ</span>
-        <div class="rank-text">「告白させたい、でも自分からは告白しない」という頭脳戦ラブコメ。毎話の心理戦が笑えて、でも要所でグッとくる展開が入る構成が巧み。最終章での感動は本物で、シリーズを通した伏線回収の完成度も高いです。</div>
+        <div class="rank-text">「告白させたい、でも<wbr>自分からは<wbr>告白しない」という<wbr>頭脳戦ラブコメです。<wbr>毎話の<wbr>心理戦が<wbr>笑えて、でも<wbr>要所で<wbr>グッとくる<wbr>展開が入る<wbr>構成が<wbr>巧みです。<wbr>最終章での<wbr>感動は<wbr>本物で、<wbr>シリーズを<wbr>通した<wbr>伏線回収の<wbr>完成度も<wbr>高いです。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
           <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -188,11 +195,11 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
     <div class="rank-card">
       <div class="rank-num">6</div>
       <div class="rank-body">
-        <div class="rank-title">ハチミツとクローバー</div>
-        <div class="rank-sub">2005年 / J.C.Staff</div>
+        <div class="rank-title">ハチミツと<wbr>クローバー</div>
+        <div class="rank-sub"><span class="nb">2005年</span> / <span class="nb">J.C.Staff</span></div>
         <div class="rank-score">★ 8.3 / 10</div>
         <span class="rank-tag blue">大人向け</span><span class="rank-tag green">青春</span>
-        <div class="rank-text">美大を舞台にした大人の青春ラブコメ。片思い・失恋・夢と現実のはざまで揺れる若者たちの姿がリアルに描かれ、大学生以上が見ると特に刺さる作品です。甘くないほろ苦い青春の味が好きな方には必見。</div>
+        <div class="rank-text">美大を<wbr>舞台にした<wbr>大人の<wbr>青春ラブコメです。<wbr>片思い・失恋・夢と<wbr>現実のは<wbr>ざまで<wbr>揺れる<wbr>若者たちの姿が<wbr>リアルに<wbr>描かれ、<wbr>大学生以上が<wbr>見ると特に<wbr>刺さる<wbr>作品です。<wbr>甘くないほろ苦い<wbr>青春の味が<wbr>好きな<wbr>方には<wbr>必見です。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
         </div>
@@ -203,10 +210,10 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
       <div class="rank-num">7</div>
       <div class="rank-body">
         <div class="rank-title">五等分の花嫁</div>
-        <div class="rank-sub">2019年〜2021年 / Bibury Animation Studios</div>
+        <div class="rank-sub"><span class="nb">2019年〜2021年</span> / Bibury Animation Studios</div>
         <div class="rank-score">★ 8.2 / 10</div>
         <span class="rank-tag">ハーレム系</span><span class="rank-tag green">伏線回収</span>
-        <div class="rank-text">5つ子ヒロインという設定を活かした伏線と謎解きが楽しいラブコメ。「誰が花嫁か」という謎が最後まで視聴者を引っ張る構成が秀逸。どのヒロインを推すかで盛り上がる楽しさがあり、アニメとして盛り上がれるコンテンツとして優秀な作品です。</div>
+        <div class="rank-text">5つ子ヒロインという<wbr>設定を<wbr>活かした<wbr>伏線と<wbr>謎解きが<wbr>楽しい<wbr>ラブコメです。<wbr>「誰が花嫁か」という謎が<wbr>最後まで<wbr>視聴者を<wbr>引っ張る<wbr>構成が<wbr>秀逸です。どの<wbr>ヒロインを<wbr>推すかで<wbr>盛り上がる<wbr>楽しさが<wbr>あり、<wbr>アニメとして盛り<wbr>上がれる<wbr>コンテンツとして<wbr>優秀な<wbr>作品です。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
           <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -220,10 +227,10 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
       <div class="rank-num">8</div>
       <div class="rank-body">
         <div class="rank-title">君に届け</div>
-        <div class="rank-sub">2009年〜 / Production I.G</div>
+        <div class="rank-sub"><span class="nb">2009年〜</span> / <span class="nb">Production I.G</span></div>
         <div class="rank-score">★ 8.1 / 10</div>
         <span class="rank-tag">王道少女漫画</span><span class="rank-tag green">純愛</span>
-        <div class="rank-text">陰キャな女の子・爽子と人気者・風早の純愛を描いた王道少女漫画原作のラブコメ。こじれず真っ直ぐに進む恋愛描写が清々しく、「こんな青春を送りたかった」という気持ちにさせてくれます。純粋な気持ちで見られる、大人になっても心が洗われる作品。</div>
+        <div class="rank-text">陰キャな女の<wbr>子・爽子と<wbr>人気者・風早の<wbr>純愛を<wbr>描いた<wbr>王道少女漫画原作の<wbr>ラブコメです。<wbr>こじれずまっすぐに<wbr>進む恋愛描写が<wbr>清々しく、<wbr>「こんな<wbr>青春を<wbr>送りたかった」という<wbr>気持ちに<wbr>させてくれます。<wbr>純粋な<wbr>気持ちで<wbr>見られる、<wbr>大人に<wbr>なっても心が<wbr>洗われる<wbr>作品です。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
           <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -236,11 +243,11 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
     <div class="rank-card">
       <div class="rank-num">9</div>
       <div class="rank-body">
-        <div class="rank-title">あさがおと加瀬さん。</div>
-        <div class="rank-sub">2018年 / Lay-duce（OVA）</div>
+        <div class="rank-title">あさがおと<wbr>加瀬さん。</div>
+        <div class="rank-sub"><span class="nb">2018年</span> / <span class="nb">Lay-duce<wbr>（OVA）</span></div>
         <div class="rank-score">★ 7.9 / 10</div>
         <span class="rank-tag">百合</span><span class="rank-tag green">癒し</span>
-        <div class="rank-text">女子高生2人の穏やかな恋愛を描いた百合OVA。甘さと温もりに満ちた55分で、見終わった後に幸せな気持ちになれる作品。ラブコメとして派手さはありませんが、この静かな感動は唯一無二です。</div>
+        <div class="rank-text">女子高生2人の<wbr>穏やかな<wbr>恋愛を<wbr>描いた<wbr>百合OVAです。<wbr>甘さと<wbr>温もりに<wbr>満ちた<wbr>55分で、<wbr>見終わった後に<wbr>幸せな<wbr>気持ちに<wbr>なれる<wbr>作品です。<wbr>ラブコメとして<wbr>派手さは<wbr>ありませんが、この<wbr>静かな<wbr>感動は<wbr>唯一無二です。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
           <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -252,31 +259,31 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
       <div class="rank-num">10</div>
       <div class="rank-body">
         <div class="rank-title">orange</div>
-        <div class="rank-sub">2016年 / Telecom Animation Film</div>
+        <div class="rank-sub"><span class="nb">2016年</span> / <span class="nb">Telecom Animation Film</span></div>
         <div class="rank-score">★ 7.8 / 10</div>
         <span class="rank-tag green">号泣注意</span><span class="rank-tag">タイムリープ</span>
-        <div class="rank-text">未来の自分から届いた手紙をもとに、友人を救おうとする青春ラブコメ。重めのテーマを扱いつつも青春の輝きと後悔の切なさが丁寧に描かれ、ラストは号泣必至です。</div>
+        <div class="rank-text">未来の<wbr>自分から<wbr>届いた<wbr>手紙を<wbr>もとに、<wbr>友人を<wbr>救おうとする<wbr>青春ラブコメです。<wbr>重めの<wbr>テーマを扱い<wbr>つつも<wbr>青春の<wbr>輝きと<wbr>後悔の<wbr>切なさが<wbr>丁寧に<wbr>描かれ、<wbr>ラストは<wbr>号泣必至です。</div>
       </div>
     </div>
 
-    <h2 id="cry">特に泣ける作品TOP3</h2>
-    <p>「絶対泣きたい」という方向けに、涙腺崩壊度が特に高い3本を選びました。</p>
+    <h2 id="cry">特に<wbr>泣ける<wbr>作品TOP3</h2>
+    <p>「絶対泣きたい」という<wbr>方向けに、<wbr>涙腺崩壊度が特に高い<wbr>3本を<wbr>選びました。</p>
     <ul>
-      <li><strong>1位：あの花</strong> — 最終話の「めんま！」シーンで泣かない人はいません。</li>
-      <li><strong>2位：とらドラ！</strong> — 大河の選択と竜児の告白で崩壊。</li>
-      <li><strong>3位：orange</strong> — 未来を変えようとする仲間たちの絆に涙。</li>
+      <li><strong>1位：あの<wbr>花</strong> — 最終話の<wbr>「めんま！」<wbr>シーンで<wbr>泣かない人は<wbr>いません。</li>
+      <li><strong>2位：とらドラ!</strong> — 大河の<wbr>選択と<wbr>竜児の<wbr>告白で<wbr>崩壊します。</li>
+      <li><strong>3位：orange</strong> — 未来を<wbr>変えようとする<wbr>仲間たちの絆に<wbr>涙します。</li>
     </ul>
 
-    <h2 id="myview">管理人が恋愛アニメに求めるもの</h2>
-    <p>管理人が恋愛アニメで刺さるのは、「すれ違いから始まって、少しずつ距離が縮まっていく」流れです。逆に苦手なのは、ハーレム系統の作品です。</p>
-    <div class="callout"><strong>1位の「とらドラ！」について：</strong>観たのは学生のころではなく、社会人2年目（24歳）のころです。この作品を観て、会社に行く意欲が出ました。背中を押してもらった作品です。その後、数えきれないほど恋愛アニメを観てきましたが、「とらドラ！」を超える恋愛アニメには、まだ出会っていません。</div>
-    <p>「とらドラ！」でいちばん泣いたのは、第21話「どうしたって」です。川嶋亜美と櫛枝実乃梨がぶつかる場面で、泣きました。</p>
-    <p>ちなみに、恋愛アニメを観る前にも、声優は確認します。</p>
-    <p>ただし、「宇宙よりも遠い場所」や「ヴァイオレットエヴァーガーデン」を恋愛アニメとして数えるなら、話は変わります。この2作品は、<a href="https://anime-db.jp/blog/memories-anime.html">管理人が思い出に残るアニメ</a>の記事で紹介しています。「とらドラ！」でいちばん印象に残っているキャラクター（川嶋亜美）の話も、同じ記事に書きました。</p>
-    <p>観る前と観終わったあとで、いちばん印象が変わった恋愛アニメは、「あの日見た花の名前を僕達はまだ知らない。」です。なお、今の年齢になってはじめて刺さった恋愛アニメは、まだ見つかっていません。</p>
+    <h2 id="myview">管理人が<wbr>恋愛アニメに<wbr>求めるもの</h2>
+    <p>管理人が<wbr>恋愛アニメで<wbr>刺さるのは、<wbr>「すれ違いから<wbr>始まって、少しずつ<wbr>距離が<wbr>縮まっていく」<wbr>流れです。逆に<wbr>苦手なのは、<wbr>ハーレム系統の<wbr>作品です。</p>
+    <div class="callout"><strong>1位の<wbr>「とらドラ!」に<wbr>ついて：</strong>観たのは<wbr>学生の<wbr>ころではなく、<wbr>社会人2年目<wbr>（24歳）の<wbr>ころです。この<wbr>作品を<wbr>観て、<wbr>会社に行く<wbr>意欲が<wbr>出ました。<wbr>背中を<wbr>押して<wbr>もらった<wbr>作品です。<wbr>その後、<wbr>数えきれないほど<wbr>恋愛アニメを<wbr>観てきましたが、<wbr>「とらドラ!」を<wbr>超える<wbr>恋愛アニメには、まだ<wbr>出会っていません。</div>
+    <p>「とらドラ!」で一番<wbr>泣いたのは、<wbr>第21話<wbr>「どうしたって」です。<wbr>川嶋亜美と<wbr>櫛枝実乃梨が<wbr>ぶつかる<wbr>場面で、<wbr>泣きました。</p>
+    <p>ちなみに、<wbr>恋愛アニメを観る<wbr>前にも、<wbr>声優は<wbr>確認します。</p>
+    <p>ただし、<wbr>「宇宙よりも遠い場所」や<wbr>「ヴァイオレットエヴァーガーデン」を<wbr>恋愛アニメとして<wbr>数えるなら、話は<wbr>変わります。この<wbr>2作品は、<a href="https://anime-db.jp/blog/memories-anime.html"><wbr>管理人が<wbr>思い出に残る<wbr>アニメ</a>の<wbr>記事で<wbr>紹介しています。<wbr>「とらドラ!」で一番<wbr>印象に<wbr>残っている<wbr>キャラクター<wbr>（川嶋亜美）の<wbr>話も、同じ<wbr>記事に<wbr>書きました。</p>
+    <p>観る前と<wbr>観終わった<wbr>あとで、一番<wbr>印象が<wbr>変わった<wbr>恋愛アニメは、<wbr>「あの<wbr>日見た花の<wbr>名前を<wbr>僕達はまだ<wbr>知らない。」です。<wbr>なお、今の<wbr>年齢に<wbr>なって<wbr>初めて<wbr>刺さった<wbr>恋愛アニメは、まだ<wbr>見つかっていません。</p>
 
     <h2 id="summary">まとめ</h2>
-    <p>ラブコメアニメは「軽いもの」というイメージがありますが、今回紹介した10作品はどれも感情を動かす力を持っています。笑いと涙が共存するこのジャンルだからこそ、心の底から楽しめる体験が出来ます。是非今夜1本、見てみてください。</p></div>
+    <p>ラブコメアニメは<wbr>「軽いもの」という<wbr>イメージが<wbr>ありますが、<wbr>今回紹介した<wbr>10作品は<wbr>どれも<wbr>感情を<wbr>動かす力を<wbr>持っています。<wbr>笑いと涙が<wbr>共存するこの<wbr>ジャンルだからこそ、心の<wbr>底から<wbr>楽しめる<wbr>体験が<wbr>できます。ぜひ<wbr>今夜1本、<wbr>見てみてください。</p></div>
 
   <a href="https://anime-db.jp/blog/" class="back-btn">← ブログ一覧に戻る</a>
 </div>

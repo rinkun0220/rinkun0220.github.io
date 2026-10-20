@@ -84,6 +84,13 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
 .footer-links{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;margin-bottom:16px}
 .footer-link{color:var(--text-muted);text-decoration:none;font-size:.85rem}.footer-link:hover{color:#fff}
 .copyright{font-size:.8rem;color:rgba(255,255,255,0.3)}
+/* 日本語の改行を自然にする設定（文節単位で改行・行頭禁則・1文字だけの行を避ける） */
+body{line-break:strict;overflow-wrap:break-word}
+@supports (word-break:auto-phrase){body{word-break:auto-phrase}}
+:has(> wbr){word-break:keep-all}
+p,li,dd,td,th{text-wrap:pretty}
+.nb{white-space:nowrap}
+h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-title,.pick-name,.next-article-title{text-wrap:balance}
 </style>
 </head>
 <body>
@@ -99,28 +106,28 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
   <div class="breadcrumb">
     <a href="https://anime-db.jp/">ホーム</a><span>›</span>
     <a href="https://anime-db.jp/blog/">ブログ</a><span>›</span>
-    脚本家8人の代表作まとめ
+    脚本家8人の<wbr>代表作まとめ
   </div>
 
   <span class="article-tag">✍️ 脚本家特集</span>
-  <h1 class="article-title">脚本家8人の代表作まとめ<br>【吉田玲子・岡田麿里・花田十輝・横手美智子・あおしまたかし・虚淵玄・大河内一楼・上江洲誠】</h1>
+  <h1 class="article-title">脚本家8人の<wbr>代表作まとめ<br>【吉田玲子・岡田麿里・花田十輝・横手美智子・あ<wbr>おしまたかし・虚淵玄・大河内一楼・上江洲誠】</h1>
   <div class="article-meta">
-    <span>📅 2026年9月更新</span><span>✍️ ANIMEDB管理人</span><span>⏱ 読了目安：約8分</span><span>※文中敬称略</span>
+    <span>📅 2026年9月更新</span><span>✍️ ANIMEDB管理人</span><span>⏱ 読了目安：約9分</span><span>※文中敬称略</span>
   </div>
 
   <div class="alert-box">
-    <strong>✍️ 見逃している作品がないかチェック</strong><br>
-    アニメは「監督」や「制作会社」で語られがちですが、実は脚本家買いも大事な視点。ここでは脚本家8人の代表作をまとめました。自分の見逃し確認用に作った記事なので、同じ脚本家が好きな方の参考にもなれば。
+    <strong>✍️ 見逃している<wbr>作品が<wbr>ないか<wbr>チェック</strong><br>
+    アニメは<wbr>「監督」や<wbr>「制作会社」で<wbr>語られがちですが、実は<wbr>脚本家買いも<wbr>大事な<wbr>視点です。<wbr>ここでは<wbr>脚本家8人の<wbr>代表作を<wbr>まとめました。<wbr>自分の<wbr>見逃し確認用に<wbr>作った<wbr>記事なので、同じ<wbr>脚本家が<wbr>好きな方の<wbr>参考にも<wbr>なれば<wbr>幸いです。
   </div>
 
   <div class="toc">
-    <div class="toc-title">📋 このページの構成</div>
+    <div class="toc-title">📋 この<wbr>ページの構成</div>
     <div class="toc-grid">
       <a href="#yoshida">1. 吉田玲子</a>
       <a href="#okada">2. 岡田麿里</a>
       <a href="#hanada">3. 花田十輝</a>
       <a href="#yokote">4. 横手美智子</a>
-      <a href="#aoshima">5. あおしまたかし</a>
+      <a href="#aoshima">5. あ<wbr>おしまたかし</a>
       <a href="#urobuchi">6. 虚淵玄</a>
       <a href="#okouchi">7. 大河内一楼</a>
       <a href="#uezu">8. 上江洲誠</a>
@@ -131,7 +138,7 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
 
     <div class="creator-block" id="yoshida">
       <div class="creator-head"><span class="creator-name">吉田玲子</span><span class="creator-kana">よしだ れいこ</span></div>
-      <p class="creator-intro">日常の空気感と、キャラクター同士のさりげない会話を書かせたら随一の脚本家です。派手な事件がなくても飽きさせない、いわゆる「日常もの」の名手というイメージが強いです。</p>
+      <p class="creator-intro">日常の<wbr>空気感と、<wbr>キャラクター同士の<wbr>さりげない<wbr>会話を<wbr>書かせたら<wbr>随一の<wbr>脚本家です。<wbr>派手な<wbr>事件が<wbr>なくても<wbr>飽きさせない、<wbr>いわゆる<wbr>「日常もの」の<wbr>名手という<wbr>イメージが<wbr>強いです。</p>
       <a href="https://x.com/yoshida_1967" target="_blank" rel="noopener" class="official-link">🔗 吉田玲子 公式X</a>
 
       <div class="gem-card">
@@ -139,10 +146,10 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
           <div class="gem-num">1</div>
           <div class="gem-title-block">
             <div class="gem-name">けいおん!</div>
-            <div class="gem-sub">2009年 / 日常・音楽 / 京都アニメーション</div>
+            <div class="gem-sub"><span class="nb">2009年</span> / <span class="nb">日常・音楽</span> / <span class="nb">京都アニメーション</span></div>
           </div>
         </div>
-        <div class="gem-body">シリーズ構成として参加。何気ない部活動の日常を、事件らしい事件もなく最後まで見せきる力量が発揮された代表作です。</div>
+        <div class="gem-body">シリーズ構成として<wbr>参加しています。<wbr>何気ない部<wbr>活動の<wbr>日常を、<wbr>事件らしい<wbr>事件もなく<wbr>最後まで<wbr>見せきる<wbr>力量が<wbr>発揮された<wbr>代表作です。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp/" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
           <a href="https://www.amazon.co.jp/s?k=%E3%81%91%E3%81%84%E3%81%8A%E3%82%93%21&i=instant-video" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -155,11 +162,11 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
         <div class="gem-header">
           <div class="gem-num">2</div>
           <div class="gem-title-block">
-            <div class="gem-name">ヴァイオレット・エヴァーガーデン</div>
-            <div class="gem-sub">2018年 / ドラマ / 京都アニメーション</div>
+            <div class="gem-name">ヴァイオレット・<wbr>エヴァーガーデン</div>
+            <div class="gem-sub"><span class="nb">2018年</span> / <span class="nb">ドラマ</span> / <span class="nb">京都アニメーション</span></div>
           </div>
         </div>
-        <div class="gem-body">シリーズ構成担当。感情を持たない少女が「言葉」を通じて人と向き合っていく物語で、静かなセリフの積み重ねが胸を打ちます。</div>
+        <div class="gem-body">シリーズ構成を<wbr>担当しています。<wbr>感情を<wbr>持たない<wbr>少女が<wbr>「言葉」を<wbr>通じて人と<wbr>向き合っていく<wbr>物語で、<wbr>静かな<wbr>セリフの<wbr>積み重ねが胸を<wbr>打ちます。</div>
         <div class="streaming-row">
           <a href="https://netflix.com" target="_blank" rel="noopener" class="badge netflix">Netflix</a>
 
@@ -172,10 +179,10 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
           <div class="gem-num">3</div>
           <div class="gem-title-block">
             <div class="gem-name">たまこまーけっと</div>
-            <div class="gem-sub">2013年 / 日常 / 京都アニメーション</div>
+            <div class="gem-sub"><span class="nb">2013年</span> / <span class="nb">日常</span> / <span class="nb">京都アニメーション</span></div>
           </div>
         </div>
-        <div class="gem-body">商店街を舞台にした空気感重視の作品です。シリーズ構成として、地に足のついた日常描写が光ります。</div>
+        <div class="gem-body">商店街を<wbr>舞台にした<wbr>空気感重視の<wbr>作品です。<wbr>シリーズ構成と<wbr>して、地に足の<wbr>ついた<wbr>日常描写が<wbr>光ります。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp/" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
           <a href="https://www.amazon.co.jp/s?k=%E3%81%9F%E3%81%BE%E3%81%93%E3%81%BE%E3%83%BC%E3%81%91%E3%81%A3%E3%81%A8&i=instant-video" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -187,17 +194,17 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
 
     <div class="creator-block" id="okada">
       <div class="creator-head"><span class="creator-name">岡田麿里</span><span class="creator-kana">おかだ まり</span></div>
-      <p class="creator-intro">感情のむき出し方が独特で、いわゆる「エモい」を体現するような脚本家です。青春の痛みや後悔を容赦なく描く作風が特徴です。</p>
+      <p class="creator-intro">感情の<wbr>むき出し方が<wbr>独特で、<wbr>いわゆる<wbr>「エモい」を<wbr>体現するような<wbr>脚本家です。<wbr>青春の<wbr>痛みや<wbr>後悔を<wbr>容赦なく描く<wbr>作風が<wbr>特徴です。</p>
 
       <div class="gem-card">
         <div class="gem-header">
           <div class="gem-num">1</div>
           <div class="gem-title-block">
-            <div class="gem-name">あの日見た花の名前を僕達はまだ知らない。</div>
-            <div class="gem-sub">2011年 / 青春・ドラマ / A-1 Pictures</div>
+            <div class="gem-name">あの<wbr>日見た花の<wbr>名前を<wbr>僕達はまだ<wbr>知らない。</div>
+            <div class="gem-sub"><span class="nb">2011年</span> / <span class="nb">青春・ドラマ</span> / <span class="nb">A-1 Pictures</span></div>
           </div>
         </div>
-        <div class="gem-body">脚本担当。幼馴染グループの再生を描く物語で、岡田麿里作品の中でも特に感情の振れ幅が大きい一作です。</div>
+        <div class="gem-body">脚本を<wbr>担当しています。<wbr>幼馴染グループの<wbr>再生を描く<wbr>物語で、<wbr>岡田麿里作品の<wbr>中でも特に<wbr>感情の<wbr>振れ幅が<wbr>大きい<wbr>一作です。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp/" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
           <a href="https://www.amazon.co.jp/s?k=%E3%81%82%E3%81%AE%E6%97%A5%E8%A6%8B%E3%81%9F%E8%8A%B1%E3%81%AE%E5%90%8D%E5%89%8D%E3%82%92%E5%83%95%E9%81%94%E3%81%AF%E3%81%BE%E3%81%A0%E7%9F%A5%E3%82%89%E3%81%AA%E3%81%84%E3%80%82&i=instant-video" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -210,11 +217,11 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
         <div class="gem-header">
           <div class="gem-num">2</div>
           <div class="gem-title-block">
-            <div class="gem-name">さよならの朝に約束の花をかざろう</div>
-            <div class="gem-sub">2018年 / ファンタジー・ドラマ / P.A.WORKS</div>
+            <div class="gem-name">さよならの朝に<wbr>約束の花を<wbr>かざろう</div>
+            <div class="gem-sub"><span class="nb">2018年</span> / <span class="nb">ファンタジー・<wbr>ドラマ</span> / <span class="nb">P.A.WORKS</span></div>
           </div>
         </div>
-        <div class="gem-body">監督・脚本を兼任した劇場版初監督作です。母と子というテーマに真正面から挑んだ意欲作です。</div>
+        <div class="gem-body">監督・脚本を<wbr>兼任した<wbr>劇場版初監督作です。母と子という<wbr>テーマに<wbr>真正面から<wbr>挑んだ<wbr>意欲作です。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp/" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
           <a href="https://netflix.com" target="_blank" rel="noopener" class="badge netflix">Netflix</a>
@@ -228,11 +235,11 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
         <div class="gem-header">
           <div class="gem-num">3</div>
           <div class="gem-title-block">
-            <div class="gem-name">心が叫びたがってるんだ。</div>
-            <div class="gem-sub">2015年 / 青春・ドラマ / A-1 Pictures</div>
+            <div class="gem-name">心が<wbr>叫びたがってるんだ。</div>
+            <div class="gem-sub"><span class="nb">2015年</span> / <span class="nb">青春・ドラマ</span> / <span class="nb">A-1 Pictures</span></div>
           </div>
         </div>
-        <div class="gem-body">脚本・原案担当。言葉に出来ない想いを抱える主人公の再生譚です。あの花コンビでの再タッグ作品です。</div>
+        <div class="gem-body">脚本・<wbr>原案を<wbr>担当しています。<wbr>言葉に<wbr>できない<wbr>想いを<wbr>抱える<wbr>主人公の<wbr>再生譚です。あの<wbr>花コンビでの<wbr>再タッグ作品です。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp/" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
           <a href="https://www.amazon.co.jp/s?k=%E5%BF%83%E3%81%8C%E5%8F%AB%E3%81%B3%E3%81%9F%E3%81%8C%E3%81%A3%E3%81%A6%E3%82%8B%E3%82%93%E3%81%A0%E3%80%82&i=instant-video" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -243,8 +250,8 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
     </div>
 
     <div class="creator-block" id="hanada">
-      <div class="creator-head"><span class="creator-name">花田十輝</span><span class="creator-kana">はなだ じゅっき</span></div>
-      <p class="creator-intro">テンポの良いコメディとラブコメを量産し続けている脚本家です。原作ものの「間」の作り方が上手く、キャラの掛け合いが小気味良いです。管理人が、脚本家の名前で作品を選んで当たった例は、花田十輝さんが脚本を担当した「宇宙よりも遠い場所」です。</p>
+      <div class="creator-head"><span class="creator-name">花田十輝</span><span class="creator-kana">は<wbr>なだ じゅっき</span></div>
+      <p class="creator-intro">テンポの良い<wbr>コメディと<wbr>ラブコメを<wbr>量産し続けている<wbr>脚本家です。<wbr>原作ものの<wbr>「間」の<wbr>作り方が<wbr>上手く、<wbr>キャラの<wbr>掛け合いが<wbr>小気味<wbr>良いです。<wbr>管理人が、<wbr>脚本家の<wbr>名前で<wbr>作品を<wbr>選んで<wbr>当たった<wbr>例は、<wbr>花田十輝さんが<wbr>脚本を<wbr>担当した<wbr>「宇宙よりも遠い場所」です。</p>
       <a href="https://x.com/oitan125" target="_blank" rel="noopener" class="official-link">🔗 花田十輝 公式X</a>
 
       <div class="gem-card">
@@ -252,10 +259,10 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
           <div class="gem-num">1</div>
           <div class="gem-title-block">
             <div class="gem-name">宇宙よりも遠い場所</div>
-            <div class="gem-sub">2018年 / 青春・冒険 / マッドハウス</div>
+            <div class="gem-sub"><span class="nb">2018年</span> / <span class="nb">青春・冒険</span> / <span class="nb">マッドハウス</span></div>
           </div>
         </div>
-        <div class="gem-body">シリーズ構成担当。南極を目指す女子高生たちの青春群像劇です。オリジナルアニメながら完成度の高い脚本で高く評価された代表作です。</div>
+        <div class="gem-body">シリーズ構成を<wbr>担当しています。<wbr>南極を<wbr>目指す女子高生たちの<wbr>青春群像劇です。<wbr>オリジナルアニメながら<wbr>完成度の高い<wbr>脚本で高く<wbr>評価された<wbr>代表作です。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp/" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
           <a href="https://www.amazon.co.jp/s?k=%E5%AE%87%E5%AE%99%E3%82%88%E3%82%8A%E3%82%82%E9%81%A0%E3%81%84%E5%A0%B4%E6%89%80&i=instant-video" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -268,11 +275,11 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
         <div class="gem-header">
           <div class="gem-num">2</div>
           <div class="gem-title-block">
-            <div class="gem-name">響け！ユーフォニアム</div>
-            <div class="gem-sub">2015年〜 / 青春・音楽 / 京都アニメーション</div>
+            <div class="gem-name">響け!ユーフォニアム</div>
+            <div class="gem-sub"><span class="nb">2015年〜</span> / <span class="nb">青春・音楽</span> / <span class="nb">京都アニメーション</span></div>
           </div>
         </div>
-        <div class="gem-body">2015年のTVアニメ第1期からシリーズ構成・脚本を一貫して担当。吹奏楽部の青春を描く人気シリーズを、劇場版の完結編に至るまで長年支え続けています。</div>
+        <div class="gem-body">2015年の<wbr>TVアニメ第1期から<wbr>シリーズ構成・脚本を<wbr>一貫して<wbr>担当しています。<wbr>吹奏楽部の<wbr>青春を描く<wbr>人気シリーズを、<wbr>劇場版の<wbr>完結編に<wbr>至るまで<wbr>長年支え続けています。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp/" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
           <a href="https://www.amazon.co.jp/s?k=%E9%9F%BF%E3%81%91%EF%BC%81%E3%83%A6%E3%83%BC%E3%83%95%E3%82%A9%E3%83%8B%E3%82%A2%E3%83%A0&i=instant-video" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -285,11 +292,11 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
         <div class="gem-header">
           <div class="gem-num">3</div>
           <div class="gem-title-block">
-            <div class="gem-name">僕の心のヤバイやつ</div>
-            <div class="gem-sub">2023年〜 / ラブコメ・青春</div>
+            <div class="gem-name">僕の心の<wbr>ヤバイやつ</div>
+            <div class="gem-sub"><span class="nb">2023年〜</span> / <span class="nb">ラブコメ・青春</span></div>
           </div>
         </div>
-        <div class="gem-body">脚本担当。思春期特有の不器用な恋愛感情を描いた作品で、劇場版化するほどの人気を博しました。</div>
+        <div class="gem-body">脚本を<wbr>担当しています。<wbr>思春期特有の<wbr>不器用な<wbr>恋愛感情を<wbr>描いた<wbr>作品で、<wbr>劇場版化する<wbr>ほどの<wbr>人気を<wbr>博しました。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp/" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
           <a href="https://www.amazon.co.jp/s?k=%E5%83%95%E3%81%AE%E5%BF%83%E3%81%AE%E3%83%A4%E3%83%90%E3%82%A4%E3%82%84%E3%81%A4&i=instant-video" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -303,10 +310,10 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
           <div class="gem-num">4</div>
           <div class="gem-title-block">
             <div class="gem-name">ラブライブ！</div>
-            <div class="gem-sub">2013年〜 / 部活・アイドル</div>
+            <div class="gem-sub"><span class="nb">2013年〜</span> / <span class="nb">部活・アイドル</span></div>
           </div>
         </div>
-        <div class="gem-body">スクールアイドルシリーズの脚本に参加。長期シリーズを支え続けている人気コンテンツの一つです。</div>
+        <div class="gem-body">スクールアイドルシリーズの<wbr>脚本に<wbr>参加しています。<wbr>長期シリーズを<wbr>支え続けている<wbr>人気コンテンツの<wbr>一つです。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp/" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
           <a href="https://www.amazon.co.jp/s?k=%E3%83%A9%E3%83%96%E3%83%A9%E3%82%A4%E3%83%96&i=instant-video" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -318,17 +325,17 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
 
     <div class="creator-block" id="yokote">
       <div class="creator-head"><span class="creator-name">横手美智子</span><span class="creator-kana">よこて みちこ</span></div>
-      <p class="creator-intro">シリアスからキッズ向けまで守備範囲が異様に広い脚本家です。長期シリーズの構成を任されることが多く、物語を破綻させずに畳む手腕に定評があります。</p>
+      <p class="creator-intro">シリアスから<wbr>キッズ向けまで<wbr>守備範囲が<wbr>異様に広い<wbr>脚本家です。<wbr>長期シリーズの<wbr>構成を<wbr>任される<wbr>ことが<wbr>多く、<wbr>物語を<wbr>破綻させずに畳む<wbr>手腕に<wbr>定評が<wbr>あります。</p>
 
       <div class="gem-card">
         <div class="gem-header">
           <div class="gem-num">1</div>
           <div class="gem-title-block">
             <div class="gem-name">SHIROBAKO</div>
-            <div class="gem-sub">2014年 / 業界もの・お仕事 / P.A.WORKS</div>
+            <div class="gem-sub"><span class="nb">2014年</span> / <span class="nb">業界もの・お仕事</span> / <span class="nb">P.A.WORKS</span></div>
           </div>
         </div>
-        <div class="gem-body">シリーズ構成・脚本担当。吉田玲子と共に手掛けたアニメ業界お仕事ものです。制作進行のリアルな奮闘を描いた代表作です。</div>
+        <div class="gem-body">シリーズ構成・脚本を<wbr>担当しています。<wbr>吉田玲子と共に<wbr>手掛けた<wbr>アニメ業界お仕事ものです。<wbr>制作進行の<wbr>リアルな<wbr>奮闘を<wbr>描いた<wbr>代表作です。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp/" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
           <a href="https://www.amazon.co.jp/s?k=SHIROBAKO&i=instant-video" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -341,10 +348,10 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
           <div class="gem-num">2</div>
           <div class="gem-title-block">
             <div class="gem-name">じょしらく</div>
-            <div class="gem-sub">2012年 / 日常・コメディ</div>
+            <div class="gem-sub"><span class="nb">2012年</span> / <span class="nb">日常・コメディ</span></div>
           </div>
         </div>
-        <div class="gem-body">シリーズ構成・脚本担当。落語家の女性たちによる緩やかな日常会話劇で、テンポの良い掛け合いが光ります。</div>
+        <div class="gem-body">シリーズ構成・脚本を<wbr>担当しています。<wbr>落語家の<wbr>女性たちによる<wbr>緩やかな<wbr>日常会話劇で、<wbr>テンポの良い<wbr>掛け合いが<wbr>光ります。</div>
         <div class="streaming-row">
           <a href="https://www.amazon.co.jp/s?k=%E3%81%98%E3%82%87%E3%81%97%E3%82%89%E3%81%8F&i=instant-video" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
         
@@ -357,10 +364,10 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
           <div class="gem-num">3</div>
           <div class="gem-title-block">
             <div class="gem-name">ツルネ -風舞高校弓道部-</div>
-            <div class="gem-sub">2018年〜 / 部活・青春 / 京都アニメーション</div>
+            <div class="gem-sub"><span class="nb">2018年〜</span> / <span class="nb">部活・青春</span> / <span class="nb">京都アニメーション</span></div>
           </div>
         </div>
-        <div class="gem-body">脚本担当。弓道という題材を丁寧に描いた部活青春ものです。静かな緊張感の演出に脚本の巧さが表れています。</div>
+        <div class="gem-body">脚本を<wbr>担当しています。<wbr>弓道という<wbr>題材を<wbr>丁寧に<wbr>描いた<wbr>部活青春ものです。<wbr>静かな<wbr>緊張感の<wbr>演出に<wbr>脚本の<wbr>巧さが<wbr>表れています。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp/" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
           <a href="https://www.amazon.co.jp/s?k=%E3%83%84%E3%83%AB%E3%83%8D&i=instant-video" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -372,17 +379,17 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
 
     <div class="creator-block" id="aoshima">
       <div class="creator-head"><span class="creator-name">あおしまたかし</span></div>
-      <p class="creator-intro">日常コメディの脚本・シリーズ構成を数多く手がける脚本家です。特筆すべきはシリーズ構成そのものの上手さで、キャラクターの魅力を引き出す話の並び順や緩急の作り方が秀逸です。「面白い」と感じる日常系アニメの裏には、あおしまたかしのシリーズ構成があることが多いです。</p>
+      <p class="creator-intro">日常コメディの<wbr>脚本・シリーズ構成を<wbr>数多く手がける<wbr>脚本家です。<wbr>特筆すべきは<wbr>シリーズ構成その<wbr>ものの<wbr>上手さで、<wbr>キャラクターの<wbr>魅力を<wbr>引き出す話の<wbr>並び順や<wbr>緩急の<wbr>作り方が<wbr>秀逸です。<wbr>「面白い」と<wbr>感じる<wbr>日常系アニメの<wbr>裏には、<wbr>あおしまたかしの<wbr>シリーズ構成がある<wbr>ことが<wbr>多いです。</p>
 
       <div class="gem-card">
         <div class="gem-header">
           <div class="gem-num">1</div>
           <div class="gem-title-block">
             <div class="gem-name">みつどもえ</div>
-            <div class="gem-sub">2010年〜2011年 / コメディ</div>
+            <div class="gem-sub"><span class="nb">2010年〜2011年</span> / <span class="nb">コメディ</span></div>
           </div>
         </div>
-        <div class="gem-body">シリーズ構成・脚本担当。三つ子姉妹の掛け合いを中心にしたギャグコメディで、テンポの良い話運びの手腕が光ります。</div>
+        <div class="gem-body">シリーズ構成・脚本を<wbr>担当しています。<wbr>三つ子姉妹の<wbr>掛け合いを<wbr>中心にした<wbr>ギャグコメディで、<wbr>テンポの良い<wbr>話運びの<wbr>手腕が<wbr>光ります。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp/" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
           <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -396,10 +403,10 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
           <div class="gem-num">2</div>
           <div class="gem-title-block">
             <div class="gem-name">ゆるゆり</div>
-            <div class="gem-sub">2011年〜2012年（第1期・第2期） / 日常・コメディ</div>
+            <div class="gem-sub"><span class="nb">2011年〜2012年<wbr>（第1期・第2期）</span> / <span class="nb">日常・コメディ</span></div>
           </div>
         </div>
-        <div class="gem-body">シリーズ構成・脚本担当。女子中学生たちの緩やかな部活動を描いた日常ものです。キャラクターの立たせ方とシリーズ全体の構成力が高く評価されている代表作です。管理人が、脚本家の名前を意識するようになったきっかけの作品でもあります。</div>
+        <div class="gem-body">シリーズ構成・脚本を<wbr>担当しています。<wbr>女子中学生たちの<wbr>緩やかな部<wbr>活動を<wbr>描いた<wbr>日常ものです。<wbr>キャラクターの<wbr>立たせ方と<wbr>シリーズ全体の<wbr>構成力が高く<wbr>評価されている<wbr>代表作です。<wbr>管理人が、<wbr>脚本家の<wbr>名前を<wbr>意識するようになった<wbr>きっかけの<wbr>作品でもあります。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp/" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
         
@@ -411,11 +418,11 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
         <div class="gem-header">
           <div class="gem-num">3</div>
           <div class="gem-title-block">
-            <div class="gem-name">君のことが大大大大大好きな100人の彼女</div>
-            <div class="gem-sub">2023年〜2026年（シリーズ） / ラブコメ</div>
+            <div class="gem-name">君の<wbr>ことが<wbr>大大大大大好きな<wbr>100人の彼女</div>
+            <div class="gem-sub"><span class="nb">2023年〜2026年<wbr>（シリーズ）</span> / <span class="nb">ラブコメ</span></div>
           </div>
         </div>
-        <div class="gem-body">シリーズ構成・脚本担当。100人のヒロインという前代未聞の設定を破綻なく成立させているのは、シリーズ構成の巧みさによるところが大きいです。</div>
+        <div class="gem-body">シリーズ構成・脚本を<wbr>担当しています。<wbr>100人の<wbr>ヒロインという<wbr>前代未聞の<wbr>設定を<wbr>破綻なく<wbr>成立させているのは、<wbr>シリーズ構成の<wbr>巧みさによる<wbr>ところが<wbr>大きいです。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp/" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
         
@@ -428,10 +435,10 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
           <div class="gem-num">4</div>
           <div class="gem-title-block">
             <div class="gem-name">ヤニねこ</div>
-            <div class="gem-sub">2026年 / 日常</div>
+            <div class="gem-sub"><span class="nb">2026年</span> / <span class="nb">日常</span></div>
           </div>
         </div>
-        <div class="gem-body">脚本担当。タバコを吸う猫と人間の緩やかな日常を描いた作品です。派手さのない題材を最後まで飽きさせず見せきる構成力は、まさにあおしまたかしらしい仕事です。</div>
+        <div class="gem-body">脚本を<wbr>担当しています。<wbr>タバコを吸う猫と<wbr>人間の<wbr>緩やかな<wbr>日常を<wbr>描いた<wbr>作品です。<wbr>派手さのない<wbr>題材を<wbr>最後まで<wbr>飽きさせず<wbr>見せきる<wbr>構成力は、<wbr>まさに<wbr>あおしまたかしらしい<wbr>仕事です。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp/" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
           <a href="https://www.amazon.co.jp/s?k=%E3%83%A4%E3%83%8B%E3%81%AD%E3%81%93&i=instant-video" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -443,18 +450,18 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
 
     <div class="creator-block" id="urobuchi">
       <div class="creator-head"><span class="creator-name">虚淵玄</span></div>
-      <p class="creator-intro">ニトロプラス所属のシナリオライター、小説家です。「陰鬱なストーリー展開」が代名詞で、キャラクターが最善を尽くした結果、悲劇に陥るような重厚な物語作りを得意としています。『魔法少女まどか☆マギカ』で一躍脚光を浴び、以降アニメ界屈指の脚本家として活躍しています。</p>
+      <p class="creator-intro">ニトロプラス所属の<wbr>シナリオライター、<wbr>小説家です。<wbr>「陰鬱なストーリー展開」が<wbr>代名詞で、<wbr>キャラクターが<wbr>最善を<wbr>尽くした<wbr>結果、<wbr>悲劇に<wbr>陥るような<wbr>重厚な<wbr>物語作りを<wbr>得意と<wbr>しています。<wbr>『魔法少女まどか☆<wbr>マギカ』で<wbr>一躍脚光を<wbr>浴び、以降<wbr>アニメ界屈指の<wbr>脚本家として<wbr>活躍しています。</p>
       <a href="https://x.com/Butch_Gen" target="_blank" rel="noopener" class="official-link">🔗 虚淵玄 公式X</a>
 
       <div class="gem-card">
         <div class="gem-header">
           <div class="gem-num">1</div>
           <div class="gem-title-block">
-            <div class="gem-name">魔法少女まどか☆マギカ</div>
-            <div class="gem-sub">2011年 / ダークファンタジー</div>
+            <div class="gem-name">魔法少女まどか☆<wbr>マギカ</div>
+            <div class="gem-sub"><span class="nb">2011年</span> / <span class="nb">ダークファンタジー</span></div>
           </div>
         </div>
-        <div class="gem-body">脚本担当。可愛らしい絵柄からは想像もつかない重厚などんでん返しの連続で、社会現象規模のヒットとなった代表作です。</div>
+        <div class="gem-body">脚本を<wbr>担当しています。<wbr>可愛らしい<wbr>絵柄からは<wbr>想像も<wbr>つかない<wbr>重厚などんでん返しの<wbr>連続で、<wbr>社会現象規模の<wbr>ヒットと<wbr>なった<wbr>代表作です。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp/" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
           <a href="https://netflix.com" target="_blank" rel="noopener" class="badge netflix">Netflix</a>
@@ -467,10 +474,10 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
           <div class="gem-num">2</div>
           <div class="gem-title-block">
             <div class="gem-name">Fate/Zero</div>
-            <div class="gem-sub">2011年〜 / ダークファンタジー</div>
+            <div class="gem-sub"><span class="nb">2011年〜</span> / <span class="nb">ダークファンタジー</span></div>
           </div>
         </div>
-        <div class="gem-body">原作担当。聖杯を巡る7人の魔術師と英霊の死闘を描く重厚な物語です。虚淵作品らしい容赦のない展開が魅力の一作です。</div>
+        <div class="gem-body">原作を<wbr>担当しています。<wbr>聖杯を巡る<wbr>7人の<wbr>魔術師と<wbr>英霊の<wbr>死闘を描く<wbr>重厚な<wbr>物語です。<wbr>虚淵作品らしい<wbr>容赦のない<wbr>展開が<wbr>魅力の<wbr>一作です。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp/" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
           <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -483,10 +490,10 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
           <div class="gem-num">3</div>
           <div class="gem-title-block">
             <div class="gem-name">PSYCHO-PASS サイコパス</div>
-            <div class="gem-sub">2012年〜 / SFサスペンス</div>
+            <div class="gem-sub"><span class="nb">2012年〜</span> / <span class="nb">SFサスペンス</span></div>
           </div>
         </div>
-        <div class="gem-body">原案・脚本担当。人の心理状態を数値化して管理する近未来を舞台にしたディストピアSFです。虚淵らしい重いテーマを、緻密な世界観で描き切った代表作です。</div>
+        <div class="gem-body">原案・<wbr>脚本を<wbr>担当しています。人の<wbr>心理状態を<wbr>数値化して<wbr>管理する<wbr>近未来を<wbr>舞台にした<wbr>ディストピアSFです。<wbr>虚淵らしい重い<wbr>テーマを、<wbr>緻密な<wbr>世界観で<wbr>描き切った<wbr>代表作です。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp/" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
           <a href="https://netflix.com" target="_blank" rel="noopener" class="badge netflix">Netflix</a>
@@ -497,18 +504,18 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
 
     <div class="creator-block" id="okouchi">
       <div class="creator-head"><span class="creator-name">大河内一楼</span></div>
-      <p class="creator-intro">主にサンライズ（現バンダイナムコフィルムワークス）作品を手がける脚本家です。壮大な群像劇を破綻なくまとめ上げる構成力に定評があり、『コードギアス 反逆のルルーシュ』で東京国際アニメフェアの脚本賞を受賞するなど高く評価されています。</p>
+      <p class="creator-intro">主に<wbr>サンライズ<wbr>（現バンダイナムコフィルムワークス）<wbr>作品を手がける<wbr>脚本家です。<wbr>壮大な<wbr>群像劇を<wbr>破綻なく<wbr>まとめ上げる<wbr>構成力に<wbr>定評が<wbr>あり、<wbr>『コードギアス 反逆の<wbr>ルルーシュ』で<wbr>東京国際アニメフェアの<wbr>脚本賞を<wbr>受賞するなど高く<wbr>評価されています。</p>
       <a href="https://x.com/ichirou_o" target="_blank" rel="noopener" class="official-link">🔗 大河内一楼 公式X</a>
 
       <div class="gem-card">
         <div class="gem-header">
           <div class="gem-num">1</div>
           <div class="gem-title-block">
-            <div class="gem-name">コードギアス 反逆のルルーシュ</div>
-            <div class="gem-sub">2006年〜 / SFロボット・ドラマ</div>
+            <div class="gem-name">コードギアス 反逆の<wbr>ルルーシュ</div>
+            <div class="gem-sub"><span class="nb">2006年〜</span> / <span class="nb">SFロボット・<wbr>ドラマ</span></div>
           </div>
         </div>
-        <div class="gem-body">ストーリー原案・シリーズ構成担当。「ギアス」の力で世界を変えようとする少年の物語です。緻密な頭脳戦とスケールの大きい群像劇で、大ヒットを記録した代表作です。</div>
+        <div class="gem-body">ストーリー原案・シリーズ構成を<wbr>担当しています。<wbr>「ギアス」の力で<wbr>世界を<wbr>変えようとする<wbr>少年の<wbr>物語です。<wbr>緻密な<wbr>頭脳戦と<wbr>スケールの<wbr>大きい<wbr>群像劇で、<wbr>大ヒットを<wbr>記録した<wbr>代表作です。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp/" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
           <a href="https://www.amazon.co.jp/s?k=%E3%82%B3%E3%83%BC%E3%83%89%E3%82%AE%E3%82%A2%E3%82%B9&i=instant-video" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -521,10 +528,10 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
           <div class="gem-num">2</div>
           <div class="gem-title-block">
             <div class="gem-name">機動戦士ガンダム 水星の魔女</div>
-            <div class="gem-sub">2022年〜 / SF・学園ロボット</div>
+            <div class="gem-sub"><span class="nb">2022年〜</span> / <span class="nb">SF・学園ロボット</span></div>
           </div>
         </div>
-        <div class="gem-body">シリーズ構成担当。学園ものという間口の広い設定から入れるガンダムシリーズです。長年のファンにも初心者にも刺さる構成力が光ります。</div>
+        <div class="gem-body">シリーズ構成を<wbr>担当しています。<wbr>学園ものという<wbr>間口の広い<wbr>設定から<wbr>入れる<wbr>ガンダムシリーズです。<wbr>長年の<wbr>ファンにも<wbr>初心者にも<wbr>刺さる<wbr>構成力が<wbr>光ります。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp/" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
           <a href="https://www.amazon.co.jp/s?k=%E6%B0%B4%E6%98%9F%E3%81%AE%E9%AD%94%E5%A5%B3&i=instant-video" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -537,10 +544,10 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
           <div class="gem-num">3</div>
           <div class="gem-title-block">
             <div class="gem-name">プラネテス</div>
-            <div class="gem-sub">2003年〜 / SF・ヒューマンドラマ</div>
+            <div class="gem-sub"><span class="nb">2003年〜</span> / <span class="nb">SF・ヒューマンドラマ</span></div>
           </div>
         </div>
-        <div class="gem-body">シリーズ構成担当。宇宙開発の裏側で働くデブリ回収業者たちを描いた硬派なSFドラマです。東京国際アニメフェア脚本賞を受賞した実力派の一作です。</div>
+        <div class="gem-body">シリーズ構成を<wbr>担当しています。<wbr>宇宙開発の<wbr>裏側で働く<wbr>デブリ回収業者たちを<wbr>描いた<wbr>硬派な<wbr>SFドラマです。<wbr>東京国際アニメフェア脚本賞を<wbr>受賞した<wbr>実力派の<wbr>一作です。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp/" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
           <a href="https://www.planet-es.net/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
@@ -550,18 +557,18 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
 
     <div class="creator-block" id="uezu">
       <div class="creator-head"><span class="creator-name">上江洲誠</span></div>
-      <p class="creator-intro">スタジオオルフェ出身のフリー脚本家です。ギャグからシリアスまで幅広いジャンルの脚本を手がけ、監督の岸誠二とのタッグ作品が多いことでも知られています。少年向けアニメからコメディ、シリアスなミステリーまで、振れ幅の広さが持ち味です。</p>
+      <p class="creator-intro">スタジオオルフェ出身の<wbr>フリー脚本家です。<wbr>ギャグから<wbr>シリアスまで<wbr>幅広い<wbr>ジャンルの<wbr>脚本を<wbr>手がけ、<wbr>監督の<wbr>岸誠二との<wbr>タッグ作品が多い<wbr>ことでも<wbr>知られています。<wbr>少年向けアニメから<wbr>コメディ、<wbr>シリアスな<wbr>ミステリーまで、<wbr>振れ幅の<wbr>広さが<wbr>持ち味です。</p>
       <a href="https://x.com/uezux" target="_blank" rel="noopener" class="official-link">🔗 上江洲誠 公式X</a>
 
       <div class="gem-card">
         <div class="gem-header">
           <div class="gem-num">1</div>
           <div class="gem-title-block">
-            <div class="gem-name">この素晴らしい世界に祝福を!</div>
-            <div class="gem-sub">2016年〜 / 異世界コメディ</div>
+            <div class="gem-name">この<wbr>素晴らしい<wbr>世界に<wbr>祝福を!</div>
+            <div class="gem-sub"><span class="nb">2016年〜</span> / <span class="nb">異世界コメディ</span></div>
           </div>
         </div>
-        <div class="gem-body">シリーズ構成・脚本担当。異世界転生ものを笑いに全振りした元祖的な作品です。テンポの良いギャグの応酬とキャラの立たせ方が秀逸です。</div>
+        <div class="gem-body">シリーズ構成・脚本を<wbr>担当しています。<wbr>異世界転生ものを<wbr>笑いに<wbr>全振りした<wbr>元祖的な<wbr>作品です。<wbr>テンポの良い<wbr>ギャグの<wbr>応酬と<wbr>キャラの<wbr>立たせ方が<wbr>秀逸です。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp/" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
           <a href="https://netflix.com" target="_blank" rel="noopener" class="badge netflix">Netflix</a>
@@ -574,10 +581,10 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
           <div class="gem-num">2</div>
           <div class="gem-title-block">
             <div class="gem-name">暗殺教室</div>
-            <div class="gem-sub">2015年〜 / 学園・SF</div>
+            <div class="gem-sub"><span class="nb">2015年〜</span> / <span class="nb">学園・SF</span></div>
           </div>
         </div>
-        <div class="gem-body">シリーズ構成・脚本担当。地球を破壊すると宣言した謎の生物を暗殺するという設定ながら、生徒たちとの温かい師弟関係を丁寧に描いた一作です。</div>
+        <div class="gem-body">シリーズ構成・脚本を<wbr>担当しています。<wbr>地球を<wbr>破壊すると<wbr>宣言した謎の<wbr>生物を<wbr>暗殺するという<wbr>設定ながら、<wbr>生徒たちとの<wbr>温かい<wbr>師弟関係を<wbr>丁寧に<wbr>描いた<wbr>一作です。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp/" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
           <a href="https://www.amazon.co.jp/s?k=%E6%9A%97%E6%AE%BA%E6%95%99%E5%AE%A4&i=instant-video" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -590,10 +597,10 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
           <div class="gem-num">3</div>
           <div class="gem-title-block">
             <div class="gem-name">瀬戸の花嫁</div>
-            <div class="gem-sub">2007年 / ラブコメ</div>
+            <div class="gem-sub"><span class="nb">2007年</span> / <span class="nb">ラブコメ</span></div>
           </div>
         </div>
-        <div class="gem-body">シリーズ構成・脚本担当。人魚のお嬢様と平凡な高校生のドタバタラブコメです。テンポの良さと振り切ったギャグセンスが光る、監督・岸誠二とのタッグ初期作です。</div>
+        <div class="gem-body">シリーズ構成・脚本を<wbr>担当しています。<wbr>人魚の<wbr>お嬢様と<wbr>平凡な<wbr>高校生の<wbr>ドタバタラブコメです。<wbr>テンポの<wbr>良さと振り<wbr>切った<wbr>ギャグセンスが<wbr>光る、<wbr>監督・岸誠二との<wbr>タッグ初期作です。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp/" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
           <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -603,15 +610,15 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
     </div>
 
     <h2>まとめ</h2>
-    <p>脚本家という視点でアニメを見返してみると、「何故この作品が刺さったのか」が見えてくることがあります。ここに載っている作品でまだ見ていないものがあれば、是非チェックしてみてください。</p>
-    <p>この記事はあくまで管理人個人の「見逃しチェックリスト」です。他にもおすすめの脚本作品があれば、XやInstagramで教えてもらえると嬉しいです。</p>
-    <p>名前から探したい方は、「<a href="https://anime-db.jp/directory.html" style="color:#fff;">声優・スタッフ名鑑</a>」もご利用ください。紹介している監督・脚本家・制作会社・アーティスト・声優を、名前から探せます。</p>
+    <p>脚本家という<wbr>視点で<wbr>アニメを<wbr>見返してみると、<wbr>「なぜこの<wbr>作品が<wbr>刺さったのか」が<wbr>見えてくることがあります。<wbr>ここに<wbr>載っている<wbr>作品でまだ<wbr>見ていない<wbr>ものが<wbr>あれば、<wbr>ぜひチェックしてみてください。</p>
+    <p>この<wbr>記事は<wbr>あくまで<wbr>管理人個人の<wbr>「見逃しチェックリスト」です。<wbr>他にも<wbr>おすすめの<wbr>脚本作品が<wbr>あれば、Xや<wbr>Instagramで<wbr>教えて<wbr>もらえると<wbr>嬉しいです。</p>
+    <p>名前から<wbr>探したい方は、<wbr>「<a href="https://anime-db.jp/directory.html" style="color:#fff;">声優・スタッフ名鑑</a>」も<wbr>ご利用ください。<wbr>紹介している<wbr>監督・脚本家・<wbr>制作会社・アーティスト・声優を、<wbr>名前から<wbr>探せます。</p>
 
     <a href="https://anime-db.jp/blog/studio-favorites.html" class="next-article">
       <div style="flex:1">
         <div class="next-article-label">🏢 続けて読む</div>
-        <div class="next-article-title">制作会社16社の代表作まとめ【P.A.WORKS・京都アニメーション・CloverWorks 他】</div>
-        <div class="next-article-desc">脚本家の次は、制作会社ごとに代表作を一挙紹介。見逃している作品がないかのチェックにどうぞ。</div>
+        <div class="next-article-title">制作会社16社の<wbr>代表作まとめ【P.A.WORKS・京都アニメーション・CloverWorks&nbsp;他】</div>
+        <div class="next-article-desc">脚本家の<wbr>次は、<wbr>制作会社ごとの<wbr>代表作を<wbr>一挙に<wbr>紹介します。<wbr>見逃している<wbr>作品が<wbr>ないかの<wbr>チェックに<wbr>どうぞ。</div>
       </div>
       <div class="next-article-arrow">→</div>
     </a>
@@ -619,12 +626,12 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
   </div>
 
   <section class="related-guides" aria-label="関連記事">
-    <h2 class="related-guides-title">関連記事（スタッフ特集）</h2>
+    <h2 class="related-guides-title">関連記事<wbr>（スタッフ特集）</h2>
     <ul>
-      <li><a href="https://anime-db.jp/blog/director-favorites.html"><span class="rg-name">監督8人の代表作まとめ</span><span class="rg-desc">監督8人の代表作を紹介。監督買いの視点でアニメを見返してみたい人向け。</span></a></li>
-      <li><a href="https://anime-db.jp/blog/studio-favorites.html"><span class="rg-name">制作会社16社の代表作まとめ</span><span class="rg-desc">制作会社16社の代表作を一挙紹介。見逃し作品がないかチェック用に。</span></a></li>
-      <li><a href="https://anime-db.jp/blog/artist-anime-favorites.html"><span class="rg-name">アーティスト11組が手掛けたアニメまとめ</span><span class="rg-desc">邦楽アーティストが手がけたアニメ主題歌をまとめて紹介。音楽好きがアニメを発見する入り口に。</span></a></li>
-      <li><a href="https://anime-db.jp/directory.html"><span class="rg-name">声優・スタッフ名鑑</span><span class="rg-desc">声優や監督などの名前から、紹介している記事へジャンプできます。</span></a></li>
+      <li><a href="https://anime-db.jp/blog/director-favorites.html"><span class="rg-name">監督8人の<wbr>代表作まとめ</span><span class="rg-desc">監督8人の<wbr>代表作を<wbr>紹介します。<wbr>監督買いの<wbr>視点で<wbr>アニメを<wbr>見返してみたい<wbr>人向けです。</span></a></li>
+      <li><a href="https://anime-db.jp/blog/studio-favorites.html"><span class="rg-name">制作会社16社の<wbr>代表作まとめ</span><span class="rg-desc">制作会社16社の<wbr>代表作を<wbr>一挙に<wbr>紹介します。<wbr>見逃し作品が<wbr>ないか<wbr>チェック用に<wbr>どうぞ。</span></a></li>
+      <li><a href="https://anime-db.jp/blog/artist-anime-favorites.html"><span class="rg-name">アーティスト11組が<wbr>手掛けた<wbr>アニメまとめ</span><span class="rg-desc">邦楽アーティストが<wbr>手がけた<wbr>アニメ主題歌を<wbr>まとめて<wbr>紹介します。<wbr>音楽好きが<wbr>アニメを<wbr>発見する<wbr>入り口に<wbr>どうぞ。</span></a></li>
+      <li><a href="https://anime-db.jp/directory.html"><span class="rg-name">声優・スタッフ名鑑</span><span class="rg-desc">声優や<wbr>監督などの<wbr>名前から、<wbr>紹介している<wbr>記事へ<wbr>ジャンプできます。</span></a></li>
     </ul>
   </section>
 

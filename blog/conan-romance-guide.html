@@ -69,6 +69,13 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
 .footer-link{color:var(--text-muted);text-decoration:none;font-size:.85rem}.footer-link:hover{color:#fff}
 .copyright{font-size:.8rem;color:rgba(255,255,255,0.3)}
 .related-guides{margin:40px 0 28px;padding:22px 24px;background:var(--bg-card);border:1px solid var(--border-color);border-radius:14px}.related-guides-title{font-size:1.05rem;font-weight:700;color:#fff;margin:0 0 14px}.related-guides ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}.related-guides a{display:block;text-decoration:none;padding:12px 14px;border:1px solid var(--border-color);border-radius:10px;transition:border-color .2s,background .2s}.related-guides a:hover{border-color:var(--accent);background:rgba(255,255,255,0.03)}.related-guides .rg-name{display:block;color:#fff;font-weight:700;font-size:.95rem;line-height:1.5}.related-guides .rg-desc{display:block;color:var(--text-muted);font-size:.82rem;line-height:1.7;margin-top:2px}
+/* 日本語の改行を自然にする設定（文節単位で改行・行頭禁則・1文字だけの行を避ける） */
+body{line-break:strict;overflow-wrap:break-word}
+@supports (word-break:auto-phrase){body{word-break:auto-phrase}}
+:has(> wbr){word-break:keep-all}
+p,li,dd,td,th{text-wrap:pretty}
+.nb{white-space:nowrap}
+h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-title,.pick-name,.next-article-title{text-wrap:balance}
 </style>
 </head>
 <body>
@@ -88,24 +95,24 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
   </div>
 
   <span class="article-tag">💘 名探偵コナン特集・恋愛編</span>
-  <h1 class="article-title">名探偵コナン恋愛名場面ガイド<br>【新一×蘭・園子×京極・平次×和葉・高木×佐藤・快斗×青子を時系列で振り返る】</h1>
+  <h1 class="article-title">名探偵コナン恋愛名場面ガイド<br>【新一×蘭・園子×京極・平次×和葉・高木×佐藤・快斗×青子を<wbr>時系列で<wbr>振り返る】</h1>
   <div class="article-meta">
     <span>📅 2026年10月更新</span><span>✍️ ANIMEDB管理人</span><span>⏱ 読了目安：約8分</span>
   </div>
 
   <div class="alert-box">
-    <strong>💘 事件解決だけじゃない、もう一つの魅力</strong><br>
-    名探偵コナンは推理漫画・アニメですが、長年のファンを惹きつけてやまないのが登場人物たちの恋愛模様です。ここでは「<a href="/blog/conan-beginner-guide.html" style="color:#fff;">初心者ガイド</a>」「<a href="/blog/conan-advanced-guide.html" style="color:#fff;">上級ガイド</a>」とは別の視点で、新一×蘭、園子×京極、大阪の服部平次×遠山和葉、警視庁の高木刑事×佐藤刑事、そしてファンの多い怪盗キッド＝黒羽快斗×中森青子という5組の関係の歩みを、名場面とともに時系列で振り返ります。恋愛の展開に関するネタバレを含みますのでご注意ください。
+    <strong>💘 事件解決だけじゃない、もう<wbr>一つの魅力</strong><br>
+    名探偵コナンは<wbr>推理漫画・アニメですが、<wbr>長年の<wbr>ファンを<wbr>惹きつけて<wbr>やまないのが<wbr>登場人物たちの<wbr>恋愛模様です。<wbr>ここでは<wbr>「<a href="/blog/conan-beginner-guide.html" style="color:#fff;">初心者ガイド</a>」<wbr>「<a href="/blog/conan-advanced-guide.html" style="color:#fff;">上級ガイド</a>」とは別の<wbr>視点で、<wbr>新一×蘭、<wbr>園子×京極、<wbr>大阪の<wbr>服部平次×遠山和葉、<wbr>警視庁の<wbr>高木刑事×佐藤刑事、そして<wbr>ファンの多い<wbr>怪盗キッド＝黒羽快斗×中森青子という<wbr>5組の<wbr>関係の<wbr>歩みを、<wbr>名場面とともに<wbr>時系列で<wbr>振り返ります。<wbr>恋愛の<wbr>展開に<wbr>関する<wbr>ネタバレを<wbr>含みますので<wbr>ご注意ください。
   </div>
 
   <div class="toc">
-    <div class="toc-title">📋 このページの構成</div>
+    <div class="toc-title">📋 この<wbr>ページの構成</div>
     <div class="toc-grid">
       <a href="#shinran">1. 新一×蘭</a>
       <a href="#sonokyo">2. 園子×京極</a>
       <a href="#heizikazuha">3. 平次×和葉</a>
       <a href="#takasato">4. 高木刑事×佐藤刑事</a>
-      <a href="#kaitoaoko">5. 快斗×青子（怪盗キッド編）</a>
+      <a href="#kaitoaoko">5. 快斗×青子<wbr>（怪盗キッド編）</a>
       <a href="#summary">6. まとめ</a>
     </div>
   </div>
@@ -113,161 +120,161 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
   <div class="article-body">
 
     <h2 id="shinran">1. 新一×蘭</h2>
-    <p>物語の中心に常にある、工藤新一と毛利蘭の関係です。幼なじみとして育った2人の距離が大きく縮まったのは、ロンドンを舞台にした「ホームズの黙示録」編でした。</p>
+    <p>物語の<wbr>中心に常に<wbr>ある、<wbr>工藤新一と<wbr>毛利蘭の<wbr>関係です。<wbr>幼なじみとして<wbr>育った<wbr>2人の<wbr>距離が<wbr>大きく<wbr>縮まったのは、<wbr>ロンドンを<wbr>舞台にした<wbr>「ホームズの黙示録」<wbr>編でした。</p>
 
     <div class="gem-card">
       <div class="gem-header">
         <div class="gem-num">1</div>
         <div class="gem-title-block">
           <div class="gem-name">ビッグベンの告白</div>
-          <div class="gem-sub">原作コミックス71〜72巻「ホームズの黙示録」編</div>
+          <div class="gem-sub">原作コミックス71〜72巻<wbr>「ホームズの黙示録」編</div>
         </div>
       </div>
-      <div class="gem-body">ロンドンのビッグベンの上で、新一は蘭に向けて「たとえオレがホームズでも解くのは無理だろーぜ！好きな女の心を…正確に読み取るなんて事はな！！」と伝えます。名探偵を自負する新一が、事件のトリックではなく「好きな人の気持ち」だけは分からないと認める場面で、遠回しながらも初めて気持ちを言葉にした瞬間として、シリーズ屈指の名場面に挙げられます。</div>
-      <div class="gem-point"><strong>ここが分かる：</strong>新一は事件と違って、蘭への気持ちだけはまっすぐに言葉に出来ない不器用さを持っている、ということ。</div>
+      <div class="gem-body">ロンドンの<wbr>ビッグベンの<wbr>上で、<wbr>新一は蘭に<wbr>向けて<wbr>「たとえオレが<wbr>ホームズでも<wbr>解くのは<wbr>無理だろーぜ！<wbr>好きな女の心を…<wbr>正確に<wbr>読み取るなんて事は<wbr>な！！」と<wbr>伝えます。<wbr>名探偵を<wbr>自負する<wbr>新一が、<wbr>事件の<wbr>トリックではなく<wbr>「好きな人の気持ち」だけは<wbr>分からないと<wbr>認める<wbr>場面で、<wbr>遠回しながらも<wbr>初めて<wbr>気持ちを<wbr>言葉にした<wbr>瞬間と<wbr>して、<wbr>シリーズ屈指の<wbr>名場面に<wbr>挙げられます。</div>
+      <div class="gem-point"><strong>ここが<wbr>分かる：</strong>新一は<wbr>事件と<wbr>違って、<wbr>蘭への<wbr>気持ちだけは<wbr>まっすぐに<wbr>言葉に<wbr>できない<wbr>不器用さを<wbr>持っている、という<wbr>ことです。</div>
     </div>
 
     <div class="gem-card">
       <div class="gem-header">
         <div class="gem-num">2</div>
         <div class="gem-title-block">
-          <div class="gem-name">清水寺での交際成立</div>
-          <div class="gem-sub">原作コミックス94〜95巻「紅の修学旅行」編</div>
+          <div class="gem-name">清水寺での<wbr>交際成立</div>
+          <div class="gem-sub">原作コミックス94〜95巻<wbr>「紅の修学旅行」編</div>
         </div>
       </div>
-      <div class="gem-body">高校の修学旅行で訪れた京都・清水寺を舞台にした事件の後、新一と蘭はついに正式な交際に至ります。清水寺でのキスシーンと、その後に新一から蘭に届くメッセージによって、長年じれったい関係が続いていた2人の恋がようやく実を結んだ瞬間として描かれました。</div>
-      <div class="gem-point"><strong>ここが分かる：</strong>幼なじみとして始まった関係が、数々の事件を乗り越えて正式な恋人関係になるまでの積み重ねの長さ。</div>
+      <div class="gem-body">高校の<wbr>修学旅行で<wbr>訪れた<wbr>京都・清水寺を<wbr>舞台にした<wbr>事件の<wbr>後、<wbr>新一と蘭は<wbr>ついに<wbr>正式な<wbr>交際に<wbr>至ります。<wbr>清水寺での<wbr>キスシーンと、<wbr>その後に<wbr>新一から蘭に届く<wbr>メッセージに<wbr>よって、<wbr>長年じれったい<wbr>関係が<wbr>続いていた<wbr>2人の恋が<wbr>ようやく実を<wbr>結んだ<wbr>瞬間として<wbr>描かれました。</div>
+      <div class="gem-point"><strong>ここが<wbr>分かる：</strong>幼なじみとして<wbr>始まった<wbr>関係が、<wbr>数々の<wbr>事件を<wbr>乗り越えて<wbr>正式な<wbr>恋人関係に<wbr>なるまでの<wbr>積み重ねの<wbr>長さです。</div>
     </div>
 
     <h2 id="sonokyo">2. 園子×京極</h2>
-    <p>蘭の親友・鈴木園子と、空手の実力者・京極真の関係も、コナンの恋愛模様を語る上で欠かせません。</p>
+    <p>蘭の<wbr>親友・鈴木園子と、<wbr>空手の<wbr>実力者・京極真の<wbr>関係も、<wbr>コナンの<wbr>恋愛模様を語る上で<wbr>欠かせません。</p>
 
     <div class="gem-card">
       <div class="gem-header">
         <div class="gem-num">3</div>
         <div class="gem-title-block">
-          <div class="gem-name">伊豆の海岸での出会い</div>
+          <div class="gem-name">伊豆の<wbr>海岸での<wbr>出会い</div>
           <div class="gem-sub">原作コミックス22巻／アニメ第153〜154話</div>
         </div>
       </div>
-      <div class="gem-body">京極は実は、園子が蘭の空手の試合を応援する姿を見て、以前からひそかに好意を抱いていました。伊豆の海岸で園子が刺される事件に遭遇した際、京極が身を挺して助けたことで、2人の距離は一気に縮まります。</div>
-      <div class="gem-point"><strong>ここが分かる：</strong>京極の一途な想いは、園子と直接出会うよりも前から始まっていたということ。</div>
+      <div class="gem-body">京極は<wbr>実は、<wbr>園子が蘭の<wbr>空手の<wbr>試合を<wbr>応援する姿を<wbr>見て、<wbr>以前から<wbr>ひそかに<wbr>好意を<wbr>抱いていました。<wbr>伊豆の<wbr>海岸で<wbr>園子が<wbr>刺される<wbr>事件に<wbr>遭遇した<wbr>際、<wbr>京極が身を<wbr>挺して<wbr>助けた<wbr>ことで、<wbr>2人の<wbr>距離は<wbr>一気に<wbr>縮まります。</div>
+      <div class="gem-point"><strong>ここが<wbr>分かる：</strong>京極の<wbr>一途な<wbr>想いは、<wbr>園子と<wbr>直接出会うよりも<wbr>前から<wbr>始まっていたという<wbr>ことです。</div>
     </div>
 
     <div class="gem-card">
       <div class="gem-header">
         <div class="gem-num">4</div>
         <div class="gem-title-block">
-          <div class="gem-name">バレンタインの告白「あなたよ……」</div>
+          <div class="gem-name">バレンタインの告白<wbr>「あなたよ……」</div>
           <div class="gem-sub">原作コミックス33巻／アニメ第266〜268話</div>
         </div>
       </div>
-      <div class="gem-body">バレンタインデーのチョコレートを渡す場面で、園子は京極に向けて「あなたよ……」と気持ちを伝え、正式に交際がスタートします。普段は気が強くわがままな一面も見せる園子が、ここでは素直な気持ちを口にする貴重な場面として描かれています。</div>
-      <div class="gem-point"><strong>ここが分かる：</strong>出会いから交際成立まで、園子と京極の関係にも長い時間の積み重ねがあったこと。</div>
+      <div class="gem-body">バレンタインデーの<wbr>チョコレートを渡す<wbr>場面で、<wbr>園子は<wbr>京極に<wbr>向けて<wbr>「あなたよ……」と<wbr>気持ちを<wbr>伝え、<wbr>正式に<wbr>交際が<wbr>スタートします。<wbr>普段は気が<wbr>強くわが<wbr>ままな<wbr>一面も<wbr>見せる<wbr>園子が、<wbr>ここでは<wbr>素直な<wbr>気持ちを口にする<wbr>貴重な<wbr>場面として<wbr>描かれています。</div>
+      <div class="gem-point"><strong>ここが<wbr>分かる：</strong>出会いから<wbr>交際成立まで、<wbr>園子と<wbr>京極の<wbr>関係にも長い<wbr>時間の<wbr>積み重ねが<wbr>あった<wbr>ことです。</div>
     </div>
 
     <h2 id="heizikazuha">3. 平次×和葉</h2>
-    <p>大阪の高校生探偵・服部平次と、幼なじみの遠山和葉です。「東の新一・西の平次」と並び称されるライバル関係の一方で、平次と和葉は幼なじみゆえのじれったい関係が長く続いてきたカップルです。</p>
+    <p>大阪の<wbr>高校生探偵・服部平次と、<wbr>幼なじみの<wbr>遠山和葉です。<wbr>「東の新一・西の平次」と<wbr>並び称される<wbr>ライバル関係の<wbr>一方で、<wbr>平次と<wbr>和葉は<wbr>幼なじみゆえの<wbr>じれったい<wbr>関係が長く<wbr>続いてきた<wbr>カップルです。</p>
 
     <div class="gem-card">
       <div class="gem-header">
         <div class="gem-num">5</div>
         <div class="gem-title-block">
-          <div class="gem-name">浪速ハルカスでの告白成立「茜色の千秋楽」</div>
-          <div class="gem-sub">原作コミックス106巻 FILE.1133「茜色の千秋楽」／TVアニメ2026年9月26日〜10月10日放送</div>
+          <div class="gem-name">浪速ハルカスでの<wbr>告白成立<wbr>「茜色の千秋楽」</div>
+          <div class="gem-sub">原作コミックス106巻 FILE.1133<wbr>「茜色の千秋楽」<wbr>／TVアニメ2026年9月26日〜10月10日放送</div>
         </div>
       </div>
-      <div class="gem-body">服部平次の幼なじみである遠山和葉は、「平次の姉役」を自称しながらも、誰の目から見ても平次を好きなのは明らかという関係が長く続いていました。原作コミックス106巻に収録されたFILE.1133「茜色の千秋楽」で、大阪・浪速ハルカスの展望フロアを舞台にした事件の中、平次の告白がついに成功し、2人は正式に恋人同士になります。和葉が平次に渡していた「お揃いのお守り」の中に、以前2人がつながれた手錠の鎖が入っていたというエピソードも、長年の積み重ねを象徴しています。テレビアニメでは、放送30周年記念としてこの「茜色の千秋楽」が放送されました。</div>
-      <div class="gem-point"><strong>ここが分かる：</strong>幼なじみとして育った2人の関係が、原作では新一×蘭に続いて正式な交際に至り、その場面がアニメでも2026年9月26日〜10月10日の3週にわたって描かれたということ。</div>
+      <div class="gem-body">服部平次の<wbr>幼なじみである<wbr>遠山和葉は、<wbr>「平次の姉役」を<wbr>自称しながらも、誰の<wbr>目から<wbr>見ても<wbr>平次を<wbr>好きなのは<wbr>明らかという<wbr>関係が長く<wbr>続いていました。<wbr>原作コミックス106巻に<wbr>収録された<wbr>FILE.1133<wbr>「茜色の千秋楽」で、<wbr>大阪・浪速ハルカスの<wbr>展望フロアを<wbr>舞台にした<wbr>事件の<wbr>中、<wbr>平次の<wbr>告白が<wbr>ついに<wbr>成功し、<wbr>2人は<wbr>正式に<wbr>恋人同士に<wbr>なります。<wbr>和葉が<wbr>平次に<wbr>渡していた<wbr>「お揃いのお守り」の<wbr>中に、以前<wbr>2人が<wbr>つながれた<wbr>手錠の鎖が<wbr>入っていたという<wbr>エピソードも、<wbr>長年の<wbr>積み重ねを<wbr>象徴しています。<wbr>TVアニメでは、<wbr>放送30周年記念としてこの<wbr>「茜色の千秋楽」が<wbr>放送されました。</div>
+      <div class="gem-point"><strong>ここが<wbr>分かる：</strong>幼なじみとして<wbr>育った<wbr>2人の<wbr>関係が、<wbr>原作では<wbr>新一×蘭に<wbr>続いて<wbr>正式な<wbr>交際に<wbr>至り、その<wbr>場面が<wbr>アニメでも<wbr>2026年9月26日〜10月10日の<wbr>3週に<wbr>わたって<wbr>描かれたという<wbr>ことです。</div>
     </div>
 
     <div class="gem-card">
       <div class="gem-header">
         <div class="gem-num">6</div>
         <div class="gem-title-block">
-          <div class="gem-name">告白成立後の原作展開</div>
-          <div class="gem-sub">原作FILE.1157「星空の下で…」</div>
+          <div class="gem-name">告白成立後の<wbr>原作展開</div>
+          <div class="gem-sub">原作FILE.1157<wbr>「星空の下で…」</div>
         </div>
       </div>
-      <div class="gem-body">恋人同士になった後も、原作FILE.1157「星空の下で…」では東京のプラネタリウムに出かける様子が描かれるなど、交際後の2人の距離感を追ったエピソードが続いています。なお、こちらのエピソードについては、2026年9月時点ではアニメ化の発表はありませんでした。</div>
-      <div class="gem-point"><strong>ここが分かる：</strong>告白がゴールではなく、交際後も2人の関係を描くエピソードが原作で続いているということ。</div>
+      <div class="gem-body">恋人同士に<wbr>なった<wbr>後も、<wbr>原作FILE.1157<wbr>「星空の下で…」では<wbr>東京の<wbr>プラネタリウムに<wbr>出かける<wbr>様子が<wbr>描かれるなど、<wbr>交際後の<wbr>2人の<wbr>距離感を<wbr>追った<wbr>エピソードが<wbr>続いています。<wbr>なお、<wbr>こちらの<wbr>エピソードに<wbr>ついては、<wbr>2026年9月時点では<wbr>アニメ化の<wbr>発表は<wbr>ありませんでした。</div>
+      <div class="gem-point"><strong>ここが<wbr>分かる：</strong>告白が<wbr>ゴールではなく、<wbr>交際後も<wbr>2人の<wbr>関係を描く<wbr>エピソードが<wbr>原作で<wbr>続いているという<wbr>ことです。</div>
     </div>
 
     <h2 id="takasato">4. 高木刑事×佐藤刑事</h2>
-    <p>大人カップルとして根強い人気を誇るのが、警視庁捜査一課の高木渉刑事と佐藤美和子刑事です。</p>
-    <p>管理人がいちばん好きなカップルは、この2人です。特に好きなのは、佐藤刑事が犯人を銃で撃とうとするのを、高木刑事が止めるシーンです。その事件の被害者は、松田陣平でした。松田は、のちに「警察学校組」の一人だったと明かされます。そして、その犯人と思われる人物が殺害される場面が、劇場版にあることも印象に残っています。（※ネタバレを含みます）</p>
+    <p>大人カップルとして<wbr>根強い<wbr>人気を<wbr>誇るのが、<wbr>警視庁捜査一課の<wbr>高木渉刑事と<wbr>佐藤美和子刑事です。</p>
+    <p>管理人が一番<wbr>好きな<wbr>カップルは、この<wbr>2人です。特に<wbr>好きなのは、<wbr>佐藤刑事が<wbr>犯人を銃で<wbr>撃とうと<wbr>するのを、<wbr>高木刑事が<wbr>止める<wbr>シーンです。その<wbr>事件の<wbr>被害者は、<wbr>松田陣平でした。<wbr>松田は、のちに<wbr>「警察学校組」の<wbr>一人だったと<wbr>明かされます。<wbr>そして、その<wbr>犯人と<wbr>思われる<wbr>人物が<wbr>殺害される<wbr>場面が、<wbr>劇場版にある<wbr>ことも<wbr>印象に<wbr>残っています。<wbr>（※ネタバレを含みます）</p>
 
     <div class="gem-card">
       <div class="gem-header">
         <div class="gem-num">7</div>
         <div class="gem-title-block">
-          <div class="gem-name">1200万人の人質事件から交際へ</div>
-          <div class="gem-sub">アニメ第304話「揺れる警視庁 1200万人の人質」以降</div>
+          <div class="gem-name">1200万人の<wbr>人質事件から<wbr>交際へ</div>
+          <div class="gem-sub">アニメ第304話<wbr>「揺れる<wbr>警視庁 1200万人の<wbr>人質」以降</div>
         </div>
       </div>
-      <div class="gem-body">爆発物を巡る大事件を経て、高木刑事と佐藤刑事は正式に交際するようになります。その後、原作コミックス64巻や、77巻収録の「命を懸けた恋愛中継」など、複数のエピソードでキスシーンを含む関係の進展が描かれ、シリーズの中でも特に長く見守られてきたカップルです。</div>
-      <div class="gem-point"><strong>ここが分かる：</strong>命がけの事件を通して結ばれた2人の絆の強さ。</div>
+      <div class="gem-body">爆発物を巡る<wbr>大事件を<wbr>経て、<wbr>高木刑事と<wbr>佐藤刑事は<wbr>正式に<wbr>交際するようになります。<wbr>その後、<wbr>原作コミックス64巻や、<wbr>77巻収録の<wbr>「命を懸けた恋愛中継」など、<wbr>複数の<wbr>エピソードで<wbr>キスシーンを含む<wbr>関係の<wbr>進展が<wbr>描かれ、<wbr>シリーズの<wbr>中でも特に長く<wbr>見守られてきた<wbr>カップルです。</div>
+      <div class="gem-point"><strong>ここが<wbr>分かる：</strong>命がけの<wbr>事件を<wbr>通して<wbr>結ばれた<wbr>2人の絆の<wbr>強さです。</div>
     </div>
 
     <div class="gem-card">
       <div class="gem-header">
         <div class="gem-num">8</div>
         <div class="gem-title-block">
-          <div class="gem-name">映画「ハロウィンの花嫁」以降の関係</div>
-          <div class="gem-sub">劇場版第26作（2022年）以降</div>
+          <div class="gem-name">映画<wbr>「ハロウィンの花嫁」<wbr>以降の関係</div>
+          <div class="gem-sub">劇場版第26作<wbr>（2022年）以降</div>
         </div>
       </div>
-      <div class="gem-body">劇場版「名探偵コナン ハロウィンの花嫁」では2人の結婚式のような場面が話題になりましたが、これは実は「別の人物の結婚式のリハーサル」という位置づけで、高木刑事と佐藤刑事自身はまだ結婚していません。管理人が確認した範囲では、2026年3月時点でも2人は「交際中」の関係が続いています。</div>
-      <div class="gem-point"><strong>ここが分かる：</strong>映画の印象的な場面だけを見ると勘違いしやすいが、本編ではまだ結婚に至っていないということ。</div>
+      <div class="gem-body">劇場版<wbr>「名探偵コナン ハロウィンの<wbr>花嫁」では<wbr>2人の<wbr>結婚式のような<wbr>場面が<wbr>話題に<wbr>なりましたが、<wbr>これは実は<wbr>「別の<wbr>人物の<wbr>結婚式の<wbr>リハーサル」という<wbr>位置づけで、<wbr>高木刑事と<wbr>佐藤刑事自身はまだ<wbr>結婚していません。<wbr>管理人が<wbr>確認した<wbr>範囲では、<wbr>2026年3月時点でも<wbr>2人は<wbr>「交際中」の<wbr>関係が<wbr>続いています。</div>
+      <div class="gem-point"><strong>ここが<wbr>分かる：</strong>映画の<wbr>印象的な<wbr>場面だけを<wbr>見ると<wbr>勘違いしやすいですが、<wbr>本編ではまだ<wbr>結婚に<wbr>至っていないという<wbr>ことです。</div>
     </div>
 
-    <h2 id="kaitoaoko">5. 快斗×青子（怪盗キッド編）</h2>
-    <p>※厳密には、黒羽快斗と中森青子は名探偵コナンの本編ではなく、同じ青山剛昌先生による姉妹作「まじっく快斗」の主人公たちです。ただし名探偵コナンと同一の世界観（同じ時間軸・同じ地続きの物語）に位置づけられており、怪盗キッド自身も名探偵コナンの本編・劇場版に何度も登場する重要キャラクターです。ここでは名探偵コナンファンの視点から、彼らの関係もあわせて紹介します。青子の父・中森警部は怪盗キッドを追う刑事であり、快斗が青子にだけは「自分がキッドである」ことを絶対に明かせない、というのがこの関係の一番の切なさです。</p>
+    <h2 id="kaitoaoko">5. 快斗×青子<wbr>（怪盗キッド編）</h2>
+    <p>※厳密には、<wbr>黒羽快斗と<wbr>中森青子は<wbr>名探偵コナンの<wbr>本編ではなく、同じ<wbr>青山剛昌先生による<wbr>姉妹作<wbr>「まじっく快斗」の<wbr>主人公たちです。<wbr>ただし名探偵コナンと<wbr>同一の<wbr>世界観<wbr>（同じ<wbr>時間軸・同じ<wbr>地続きの<wbr>物語）に<wbr>位置づけられており、<wbr>怪盗キッド自身も<wbr>名探偵コナンの<wbr>本編・劇場版に<wbr>何度も<wbr>登場する<wbr>重要キャラクターです。<wbr>ここでは<wbr>名探偵コナンファンの<wbr>視点から、<wbr>彼らの<wbr>関係も<wbr>あわせて<wbr>紹介します。<wbr>青子の<wbr>父・中森警部は<wbr>怪盗キッドを追う<wbr>刑事であり、<wbr>快斗が<wbr>青子にだけは<wbr>「自分がキッドである」<wbr>ことを<wbr>絶対に<wbr>明かせない、と<wbr>いうのがこの<wbr>関係の<wbr>一番の<wbr>切なさです。</p>
 
     <div class="gem-card">
       <div class="gem-header">
         <div class="gem-num">9</div>
         <div class="gem-title-block">
-          <div class="gem-name">モップで追いかける幼なじみ</div>
-          <div class="gem-sub">シリーズ通しての定番シーン</div>
+          <div class="gem-name">モップで<wbr>追いかける<wbr>幼なじみ</div>
+          <div class="gem-sub">シリーズ通しての<wbr>定番シーン</div>
         </div>
       </div>
-      <div class="gem-body">快斗のいたずらや軽口に腹を立てた青子が、モップを振り回して快斗を追いかけ回すのは、まじっく快斗の名物とも言えるやり取りです。実は青子は、怪盗キッドに父の時間を奪われていると感じて快斗以上に「キッドが嫌い」なのですが、その相手が幼なじみの快斗自身だとは気づいていません。この「知らないからこそ成立する軽妙なやり取り」が、2人の関係の土台になっています。</div>
-      <div class="gem-point"><strong>ここが分かる：</strong>快斗が正体を隠すのは、青子を危険から遠ざけるためでもあり、2人の友情を壊さないためでもあること。</div>
+      <div class="gem-body">快斗の<wbr>いたずらや<wbr>軽口に腹を<wbr>立てた<wbr>青子が、<wbr>モップを<wbr>振り回して<wbr>快斗を<wbr>追いかけ回すのは、<wbr>まじっく<wbr>快斗の<wbr>名物とも<wbr>言える<wbr>やり取りです。実は<wbr>青子は、<wbr>怪盗キッドに父の<wbr>時間を<wbr>奪われていると<wbr>感じて<wbr>快斗以上に<wbr>「キッドが嫌い」なのですが、その<wbr>相手が<wbr>幼なじみの<wbr>快斗自身だとは<wbr>気づいていません。この<wbr>「知らないからこそ<wbr>成立する<wbr>軽妙な<wbr>やり取り」が、<wbr>2人の<wbr>関係の<wbr>土台に<wbr>なっています。</div>
+      <div class="gem-point"><strong>ここが<wbr>分かる：</strong>快斗が<wbr>正体を<wbr>隠すのは、<wbr>青子を<wbr>危険から<wbr>遠ざける<wbr>ためでも<wbr>あり、<wbr>2人の<wbr>友情を<wbr>壊さない<wbr>ためでもある<wbr>ことです。</div>
     </div>
 
     <div class="gem-card">
       <div class="gem-header">
         <div class="gem-num">10</div>
         <div class="gem-title-block">
-          <div class="gem-name">仮面を剥がされた「サンフラワーの日輪」編</div>
-          <div class="gem-sub">「まじっく快斗」原作コミックス5巻</div>
+          <div class="gem-name">仮面を剥が<wbr>された<wbr>「サンフラワーの日輪」編</div>
+          <div class="gem-sub">「まじっく快斗」<wbr>原作コミックス5巻</div>
         </div>
       </div>
-      <div class="gem-body">ある事件で、青子は怪盗キッドの仮面を実際に剥がしてしまい、その下にあった快斗の顔を見て、彼がキッドではないかと強く疑うようになります。その後、キッドとして銃で撃たれ負傷した快斗を知らずに、青子はバイクの後ろから彼にしがみつき、傷口を強く押してしまいます。快斗は痛みをこらえながら「もっとしっかり掴まってろ」と言葉をかけ、その様子から青子は疑いを引っ込めてしまう、という切ない一幕が描かれます。</div>
-      <div class="gem-point"><strong>ここが分かる：</strong>快斗が自分の痛みよりも、青子に正体を知られないことを優先してしまう不器用な優しさ。</div>
+      <div class="gem-body">ある<wbr>事件で、<wbr>青子は<wbr>怪盗キッドの<wbr>仮面を<wbr>実際に剥が<wbr>してしまい、その下に<wbr>あった<wbr>快斗の顔を<wbr>見て、彼が<wbr>キッドではないかと強く<wbr>疑うようになります。<wbr>その後、<wbr>キッドとして銃で<wbr>撃たれ負傷した<wbr>快斗を<wbr>知らずに、<wbr>青子は<wbr>バイクの<wbr>後ろから彼にしが<wbr>みつき、<wbr>傷口を強く<wbr>押してしまいます。<wbr>快斗は<wbr>痛みを<wbr>こらえながら<wbr>「もっと<wbr>しっかり<wbr>掴まってろ」と<wbr>言葉を<wbr>かけ、その<wbr>様子から<wbr>青子は<wbr>疑いを<wbr>引っ込めてしまう、という<wbr>切ない<wbr>一幕が<wbr>描かれます。</div>
+      <div class="gem-point"><strong>ここが<wbr>分かる：</strong>快斗が<wbr>自分の<wbr>痛みよりも、<wbr>青子に<wbr>正体を<wbr>知られない<wbr>ことを<wbr>優先してしまう<wbr>不器用な<wbr>優しさです。</div>
     </div>
 
     <div class="gem-card">
       <div class="gem-header">
         <div class="gem-num">11</div>
         <div class="gem-title-block">
-          <div class="gem-name">今も続く「知らせられない」関係</div>
-          <div class="gem-sub">アニメ「まじっく快斗1412」など</div>
+          <div class="gem-name">今も続く<wbr>「知らせられない」関係</div>
+          <div class="gem-sub">アニメ<wbr>「まじっく快斗1412」など</div>
         </div>
       </div>
-      <div class="gem-body">アニメ「まじっく快斗1412」でも、快斗と青子が2人で出かける回や、快斗が別の女性（黒魔術に詳しい同級生・小泉紅子）と一緒にいる姿を見た青子が複雑な表情を見せる回など、2人の関係を掘り下げるエピソードが描かれています。ただし、新一×蘭とは違い、青子は今も快斗が怪盗キッドであることに気づいておらず、2026年時点の原作でも正式な交際には至っていません。「知られてしまえば壊れてしまうかもしれない関係」という切なさが、このカップルならではの魅力になっています。</div>
-      <div class="gem-point"><strong>ここが分かる：</strong>新一×蘭が「気持ちを伝え合って進む」関係なのに対し、快斗×青子は「大事な秘密が二人を近づけつつ隔ててもいる」、また違ったタイプの関係だということ。</div>
+      <div class="gem-body">アニメ<wbr>「まじっく快斗1412」でも、<wbr>快斗と<wbr>青子が<wbr>2人で<wbr>出かける<wbr>回や、<wbr>快斗が別の女性<wbr>（黒魔術に<wbr>詳しい<wbr>同級生・<wbr>小泉紅子）と<wbr>一緒にいる姿を見た<wbr>青子が<wbr>複雑な<wbr>表情を<wbr>見せる<wbr>回など、<wbr>2人の<wbr>関係を<wbr>掘り下げる<wbr>エピソードが<wbr>描かれています。<wbr>ただし、<wbr>新一×蘭とは<wbr>違い、<wbr>青子は今も<wbr>快斗が<wbr>怪盗キッドである<wbr>ことに<wbr>気づいておらず、<wbr>2026年時点の<wbr>原作でも<wbr>正式な<wbr>交際には<wbr>至っていません。<wbr>「知られてしまえば<wbr>壊れてしまうかもしれない<wbr>関係」という<wbr>切なさが、この<wbr>カップルならではの<wbr>魅力に<wbr>なっています。</div>
+      <div class="gem-point"><strong>ここが<wbr>分かる：</strong>新一×蘭が<wbr>「気持ちを<wbr>伝え合って<wbr>進む」<wbr>関係なのに<wbr>対し、<wbr>快斗×青子は<wbr>「大事な<wbr>秘密が<wbr>二人を<wbr>近づけつつ隔ててもいる」、また<wbr>違った<wbr>タイプの<wbr>関係だという<wbr>ことです。</div>
     </div>
 
     <h2 id="summary">6. まとめ</h2>
-    <p>名探偵コナンは事件の謎解きが主役の物語ですが、新一×蘭、園子×京極、服部平次×遠山和葉、高木刑事×佐藤刑事、そして怪盗キッド編の快斗×青子という5組の恋愛模様も、長年のファンを支えてきた大きな魅力の一つです。それぞれのカップルが、出会いから関係を育んでいく過程はタイプもスピードも様々で、事件の謎解きとはまた違った角度で作品を楽しませてくれます。特に平次×和葉は、原作で描かれた告白成立がアニメでも2026年9月26日〜10月10日の3週にわたって描かれたばかりで、今まさに注目のカップルです。まだ見ていない場面があれば、是非振り返ってみてください。</p>
+    <p>名探偵コナンは<wbr>事件の<wbr>謎解きが<wbr>主役の<wbr>物語ですが、<wbr>新一×蘭、<wbr>園子×京極、<wbr>服部平次×遠山和葉、<wbr>高木刑事×佐藤刑事、そして<wbr>怪盗キッド編の<wbr>快斗×青子という<wbr>5組の<wbr>恋愛模様も、<wbr>長年の<wbr>ファンを<wbr>支えてきた<wbr>大きな<wbr>魅力の<wbr>一つです。<wbr>それぞれの<wbr>カップルが、<wbr>出会いから<wbr>関係を<wbr>育んでいく<wbr>過程は<wbr>タイプも<wbr>スピードも<wbr>様々で、<wbr>事件の<wbr>謎解きとはまた<wbr>違った<wbr>角度で<wbr>作品を<wbr>楽しませてくれます。特に<wbr>平次×和葉は、<wbr>原作で<wbr>描かれた<wbr>告白成立が<wbr>アニメでも<wbr>2026年9月26日〜10月10日の<wbr>3週に<wbr>わたって<wbr>描かれたばかりで、<wbr>今まさに<wbr>注目の<wbr>カップルです。まだ<wbr>見ていない<wbr>場面が<wbr>あれば、<wbr>ぜひ振り<wbr>返ってみてください。</p>
 
     <a href="https://anime-db.jp/blog/conan-genetics-guide.html" class="next-article">
       <div style="flex:1">
-        <div class="next-article-label">🧬 番外編はこちら</div>
-        <div class="next-article-title">名探偵コナン「親から子へ」名探偵の血筋ガイド【工藤家・服部家・毛利家・黒羽家】</div>
-        <div class="next-article-desc">恋愛模様を振り返ったところで一息。工藤新一の推理力から黒羽快斗の怪盗キッドまで、名探偵たちの力が親から子へどう受け継がれてきたのかを整理した番外編もあわせてどうぞ。</div>
+        <div class="next-article-label">🧬 番外編は<wbr>こちら</div>
+        <div class="next-article-title">名探偵コナン<wbr>「親から子へ」<wbr>名探偵の<wbr>血筋ガイド【工藤家・服部家・<wbr>毛利家・黒羽家】</div>
+        <div class="next-article-desc">恋愛模様を振り<wbr>返った<wbr>ところで、ひと<wbr>息つきましょう。<wbr>工藤新一の<wbr>推理力から<wbr>黒羽快斗の<wbr>怪盗キッドまで、<wbr>名探偵たちの力が<wbr>親から子へどう<wbr>受け継がれてきたのかを<wbr>整理した<wbr>番外編も<wbr>あわせて<wbr>どうぞ。</div>
       </div>
       <div class="next-article-arrow">→</div>
     </a>
@@ -275,11 +282,11 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
   </div>
 
   <section class="related-guides" aria-label="関連ガイド">
-    <h2 class="related-guides-title">関連ガイド（名探偵コナン）</h2>
+    <h2 class="related-guides-title">関連<wbr>ガイド<wbr>（名探偵コナン）</h2>
     <ul>
-      <li><a href="https://anime-db.jp/blog/conan-beginner-guide.html"><span class="rg-name">名探偵コナン初心者ガイド</span><span class="rg-desc">親から子へ、今から見せるならこの順番で。序盤の神回、映画6本、原作の追い方をまとめています。</span></a></li>
-      <li><a href="https://anime-db.jp/blog/conan-advanced-guide.html"><span class="rg-name">名探偵コナン上級ガイド</span><span class="rg-desc">新出先生・沖矢昴・安室透からRUM編、「あの方」まで、正体判明ミステリーを時系列で整理しています。</span></a></li>
-      <li><a href="https://anime-db.jp/blog/conan-genetics-guide.html"><span class="rg-name">名探偵コナン「親から子へ」名探偵の血筋ガイド</span><span class="rg-desc">工藤家・服部家・毛利家・黒羽家に受け継がれた推理力と特技を整理しています。</span></a></li>
+      <li><a href="https://anime-db.jp/blog/conan-beginner-guide.html"><span class="rg-name">名探偵コナン初心者ガイド</span><span class="rg-desc">親から<wbr>子へ、<wbr>今から<wbr>見せるならこの<wbr>順番で<wbr>どうぞ。<wbr>序盤の<wbr>神回、<wbr>映画6本、<wbr>原作の追い方を<wbr>まとめています。</span></a></li>
+      <li><a href="https://anime-db.jp/blog/conan-advanced-guide.html"><span class="rg-name">名探偵コナン上級ガイド</span><span class="rg-desc">新出先生・沖矢昴・安室透から<wbr>RUM編、<wbr>「あの方」まで、<wbr>正体判明ミステリーを<wbr>時系列で<wbr>整理しています。</span></a></li>
+      <li><a href="https://anime-db.jp/blog/conan-genetics-guide.html"><span class="rg-name">名探偵コナン<wbr>「親から子へ」<wbr>名探偵の<wbr>血筋ガイド</span><span class="rg-desc">工藤家・服部家・<wbr>毛利家・黒羽家に<wbr>受け継がれた<wbr>推理力と<wbr>特技を<wbr>整理しています。</span></a></li>
     </ul>
   </section>
 

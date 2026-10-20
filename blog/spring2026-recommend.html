@@ -141,6 +141,13 @@ header {
 .back-btn { display: inline-flex; align-items: center; gap: 6px; color: var(--text-muted); text-decoration: none; font-size: 0.85rem; margin-bottom: 32px; transition: color 0.2s; }
 .back-btn:hover { color: #fff; }
 .rating-guide-note{font-size:.88rem;color:var(--text-muted);margin:-8px 0 28px;line-height:1.8}.rating-guide-note a{color:var(--accent);text-decoration:underline}
+/* 日本語の改行を自然にする設定（文節単位で改行・行頭禁則・1文字だけの行を避ける） */
+body{line-break:strict;overflow-wrap:break-word}
+@supports (word-break:auto-phrase){body{word-break:auto-phrase}}
+:has(> wbr){word-break:keep-all}
+p,li,dd,td,th{text-wrap:pretty}
+.nb{white-space:nowrap}
+h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-title,.pick-name,.next-article-title{text-wrap:balance}
 </style>
 </head>
 <body>
@@ -161,7 +168,7 @@ header {
 
   <div class="article-header">
     <span class="article-tag">☀️ 季節まとめ</span>
-    <h1 class="article-title">2026年夏アニメ作品を見た感想まとめ【完全版】</h1>
+    <h1 class="article-title">2026年夏アニメ作品を見た<wbr>感想まとめ【完全版】</h1>
     <div class="article-meta">
       <span>📅 2026年9月5日</span>
       <span>✍️ ANIMEDB管理人</span>
@@ -171,7 +178,7 @@ header {
 
   <div class="article-body">
 
-    <p>2026年夏クール（7月〜9月放送）のアニメを視聴した感想をまとめました。今季は完全新作の話題作と、人気シリーズの続編がバランスよく揃った、見応えのあるクールだったと感じています。各作品の感想と独自評価をまとめましたので、是非参考にしてください。</p>
+    <p>2026年夏クール<wbr>（7月〜9月放送）の<wbr>アニメを<wbr>視聴した<wbr>感想を<wbr>まとめました。<wbr>今季は<wbr>完全新作の<wbr>話題作と、<wbr>人気シリーズの<wbr>続編が<wbr>バランスよく<wbr>揃った、<wbr>見応えのある<wbr>クールだったと<wbr>感じています。<wbr>各作品の<wbr>感想と<wbr>独自評価を<wbr>まとめましたので、ぜひ<wbr>参考に<wbr>してください。</p>
 
     <div class="toc">
       <div class="toc-title">目次</div>
@@ -181,20 +188,20 @@ header {
         <li><a href="#a-rank">A評価作品</a></li>
         <li><a href="#c-rank">C評価作品</a></li>
         <li><a href="#summary">全作品評価まとめ表</a></li>
-        <li><a href="#next">来期（秋クール）注目作</a></li>
+        <li><a href="#next">来期<wbr>（秋クール）<wbr>注目作</a></li>
       </ol>
     </div>
 
-    <p class="rating-guide-note">※S・A・B・C評価の基準は<a href="https://anime-db.jp/blog/rating-criteria.html">こちら</a>をご覧ください。</p>
+    <p class="rating-guide-note">※S・A・B・C評価の<wbr>基準は<a href="https://anime-db.jp/blog/rating-criteria.html"><wbr>こちら</a>を<wbr>ご覧ください。</p>
 
     <!-- 総評 -->
     <h2 id="intro">2026年夏クール総評</h2>
-    <p>今期の夏クールを一言で表すなら<strong>「完全新作の当たり年」</strong>でした。続編ものも粒揃いでしたが、それ以上に新規オリジナル・新規アニメ化組の存在感が際立ったシーズンです。特にジャンルを問わず高水準の作品が並んだ点で、近年でも屈指の豊作クールだったと感じています。</p>
-    <p>個人的なMVPは<strong>「二十世紀電氣目録」</strong>。京都アニメーションらしい圧倒的な映像美と、独自の世界観の作り込みは今期随一でした。一方で「無職転生Ⅲ」は1話・2話のエリス修行編こそ今期屈指の熱量でしたが、その後は日常パートが長く続き、やや息切れした印象も。期待値が高かった分、評価は辛口寄りにしています。なお、今期は、観る前の予想を上回った作品はありませんでした。逆に、予想を下回ったのが「無職転生Ⅲ」です。</p>
+    <p>今期の<wbr>夏クールを<wbr>一言で<wbr>表すなら<strong><wbr>「完全新作の当たり年」</strong>でした。<wbr>続編ものも<wbr>粒揃いでしたが、<wbr>それ以上に<wbr>新規オリジナル・新規アニメ化組の<wbr>存在感が<wbr>際立った<wbr>シーズンです。特に<wbr>ジャンルを<wbr>問わず<wbr>高水準の<wbr>作品が<wbr>並んだ<wbr>点で、<wbr>近年でも<wbr>屈指の<wbr>豊作クールだったと<wbr>感じています。</p>
+    <p>個人的な<wbr>MVPは<strong><wbr>「二十世紀電氣目録」</strong>。<wbr>京都アニメーションらしい<wbr>圧倒的な<wbr>映像美と、<wbr>独自の<wbr>世界観の<wbr>作り込みは<wbr>今期随一でした。<wbr>一方で<wbr>「無職転生Ⅲ」は<wbr>1話・2話の<wbr>エリス修行編こそ<wbr>今期屈指の<wbr>熱量でしたが、<wbr>その後は<wbr>日常パートが長く<wbr>続き、やや<wbr>息切れした<wbr>印象も<wbr>ありました。<wbr>期待値が<wbr>高かった<wbr>分、<wbr>評価は<wbr>辛口寄りに<wbr>しています。<wbr>なお、<wbr>今期は、観る前の<wbr>予想を<wbr>上回った<wbr>作品は<wbr>ありませんでした。<wbr>逆に、<wbr>予想を<wbr>下回ったのが<wbr>「無職転生Ⅲ」です。</p>
 
     <!-- S評価 -->
-    <h2 id="s-rank">S評価作品（必見）</h2>
-    <p>今期の最高評価作品です。まだ見ていない方はすぐに視聴をおすすめします。</p>
+    <h2 id="s-rank">S評価作品<wbr>（必見）</h2>
+    <p>今期の<wbr>最高評価作品です。まだ<wbr>見ていない方は<wbr>すぐに<wbr>視聴を<wbr>おすすめします。</p>
 
     <div class="review-card">
       <div class="review-card-header">
@@ -204,13 +211,13 @@ header {
         </div>
         <div class="score-block"><div class="score-num">9.1</div><div class="score-label">管理人評価</div></div>
       </div>
-      <p class="review-text">京都アニメーション制作という時点で品質保証済みの本作。20世紀の電気・テクノロジーをモチーフにした独自の世界観は今期随一のオリジナリティで、京アニらしい圧倒的な映像美と緻密なキャラクター描写が融合しています。今期の「映像クオリティ」最高峰作品でした。</p>
-      <span class="verdict s">S評価 — 毎話スクリーンショットを撮りたくなる映像美</span>
+      <p class="review-text">京都アニメーション制作という<wbr>時点で<wbr>品質保証済みの<wbr>本作です。<wbr>20世紀の<wbr>電気・テクノロジーを<wbr>モチーフにした<wbr>独自の<wbr>世界観は<wbr>今期随一の<wbr>オリジナリティで、<wbr>京アニらしい<wbr>圧倒的な<wbr>映像美と<wbr>緻密な<wbr>キャラクター描写が<wbr>融合しています。<wbr>今期の<wbr>「映像クオリティ」<wbr>最高峰作品でした。</p>
+      <span class="verdict s">S評価 — 毎話<wbr>スクリーンショットを<wbr>撮りたくなる<wbr>映像美</span>
       <div class="streaming-row">
         <a href="https://www.netflix.com/search?q=%E4%BA%8C%E5%8D%81%E4%B8%96%E7%B4%80%E9%9B%BB%E6%B0%A3%E7%9B%AE%E9%8C%B2" target="_blank" rel="noopener" class="badge netflix">Netflix</a>
         <a href="https://denkimokuroku.jp/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
       </div>
-      <div style="font-size:.78rem;color:var(--text-muted);margin-top:6px;">※Netflix世界独占配信（他サービスでは視聴不可）</div>
+      <div style="font-size:.78rem;color:var(--text-muted);margin-top:6px;">※Netflix世界独占配信<wbr>（他サービスでは<wbr>視聴不可）</div>
     </div>
 
     <div class="review-card">
@@ -221,8 +228,8 @@ header {
         </div>
         <div class="score-block"><div class="score-num">9.0</div><div class="score-label">管理人評価</div></div>
       </div>
-      <p class="review-text"><a href="/blog/director-favorites.html#takamatsu" style="color:var(--star-color);">高松信司</a>監督続投のぐらんぶるが3期で海外・パラオへ。序盤からギャグ全開で駆け抜けましたが、真価を見せたのは終盤2話で、この2話を観て、評価が上がりました。第11話「沖縄再上陸（表）」・第12話「沖縄再上陸（裏）」の出来は、管理人的には2026年に見たアニメの中でもトップ5に入る秀逸さでした。監督・音響監督・脚本の全てを一貫して手掛ける高松信司ならではの、笑いと感情描写の緩急が凝縮された2話です。Season4の続報がなくても、管理人はこの先の展開を原作漫画の電子書籍で必ず追いかけます。</p>
-      <span class="verdict s">S評価 — 最終2話「沖縄再上陸」は2026年屈指の出来</span>
+      <p class="review-text"><a href="/blog/director-favorites.html#takamatsu" style="color:var(--star-color);">高松信司</a>監督続投の<wbr>ぐらんぶるが<wbr>3期で<wbr>海外・パラオを<wbr>舞台に<wbr>しました。<wbr>序盤から<wbr>ギャグ全開で<wbr>駆け抜けましたが、<wbr>真価を<wbr>見せたのは<wbr>終盤2話で、この<wbr>2話を<wbr>観て、<wbr>評価が<wbr>上がりました。<wbr>第11話<wbr>「沖縄再上陸（表）」・第12話<wbr>「沖縄再上陸（裏）」の<wbr>出来は、<wbr>管理人的には<wbr>2026年に見た<wbr>アニメの<wbr>中でも<wbr>トップ5に入る<wbr>秀逸さでした。<wbr>監督・音響監督・脚本の<wbr>全てを<wbr>一貫して<wbr>手掛ける<wbr>高松信司ならではの、笑いと<wbr>感情描写の<wbr>緩急が<wbr>凝縮された<wbr>2話です。<wbr>Season4の<wbr>続報が<wbr>なくても、<wbr>管理人はこの先の<wbr>展開を<wbr>原作漫画の<wbr>電子書籍で必ず<wbr>追いかけます。</p>
+      <span class="verdict s">S評価 — 最終2話<wbr>「沖縄再上陸」は<wbr>2026年屈指の出来</span>
       <div class="streaming-row">
         <a href="https://animestore.docomo.ne.jp/animestore/sch_pc?searchKey=%E3%81%90%E3%82%89%E3%82%93%E3%81%B6%E3%82%8B%20Season%203" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
         <a href="https://grandblue-anime.com/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
@@ -237,8 +244,8 @@ header {
         </div>
         <div class="score-block"><div class="score-num">9.0</div><div class="score-label">管理人評価</div></div>
       </div>
-      <p class="review-text">タバコを吸う猫と暮らす日常を描いた異色の日常系アニメ。独特の空気感がクセになると口コミで急速に広がった今期の注目株です。派手な展開はないが、じわじわと沁みてくる温度感が忙しい日々の癒しになる、今期一番の「沼」枠でした。</p>
-      <span class="verdict s">S評価 — 見るほどに味が出てくる中毒性</span>
+      <p class="review-text">タバコを吸う猫と<wbr>暮らす<wbr>日常を<wbr>描いた<wbr>異色の<wbr>日常系アニメです。<wbr>独特の<wbr>空気感が<wbr>クセに<wbr>なると<wbr>口コミで<wbr>急速に<wbr>広がった<wbr>今期の<wbr>注目株です。<wbr>派手な<wbr>展開は<wbr>ありませんが、<wbr>じわじわと<wbr>沁みてくる<wbr>温度感が<wbr>忙しい<wbr>日々の<wbr>癒しに<wbr>なる、<wbr>今期一番の<wbr>「沼」枠でした。</p>
+      <span class="verdict s">S評価 — 見る<wbr>ほどに味が<wbr>出てくる<wbr>中毒性</span>
       <div class="streaming-row">
         <a href="https://animestore.docomo.ne.jp/animestore/sch_pc?searchKey=%E3%83%A4%E3%83%8B%E3%81%AD%E3%81%93" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
         <a href="https://www.amazon.co.jp/s?k=%E3%83%A4%E3%83%8B%E3%81%AD%E3%81%93&i=instant-video" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -247,8 +254,8 @@ header {
     </div>
 
     <!-- A評価 -->
-    <h2 id="a-rank">A評価作品（おすすめ）</h2>
-    <p>安定して面白く、自信を持っておすすめ出来る作品群です。</p>
+    <h2 id="a-rank">A評価作品<wbr>（おすすめ）</h2>
+    <p>安定して<wbr>面白く、<wbr>自信を<wbr>持っておすすめできる<wbr>作品群です。</p>
 
     <div class="review-card">
       <div class="review-card-header">
@@ -258,8 +265,8 @@ header {
         </div>
         <div class="score-block"><div class="score-num">8.9</div><div class="score-label">管理人評価</div></div>
       </div>
-      <p class="review-text">累計1,200万部超の人気ライトノベル待望の第2期。ターニャ・デグレチャフが再び戦場へ。1期の圧倒的な戦術描写と重厚な世界観はそのままに、更にスケールアップした戦争描写が展開され、ファンの期待を裏切らない完成度でした。</p>
-      <span class="verdict a">A評価 — 悠木碧さんの怪演は今期随一</span>
+      <p class="review-text">累計1,200万部超の<wbr>人気ライトノベル待望の<wbr>第2期です。<wbr>ターニャ・デグレチャフが<wbr>再び戦場に<wbr>向かいます。<wbr>1期の<wbr>圧倒的な<wbr>戦術描写と<wbr>重厚な<wbr>世界観は<wbr>そのままに、<wbr>さらに<wbr>スケールアップした<wbr>戦争描写が<wbr>展開され、<wbr>ファンの<wbr>期待を<wbr>裏切らない<wbr>完成度でした。</p>
+      <span class="verdict a">A評価 — 悠木碧さんの<wbr>怪演は<wbr>今期随一</span>
       <div class="streaming-row">
         <a href="https://animestore.docomo.ne.jp/animestore/sch_pc?searchKey=%E5%B9%BC%E5%A5%B3%E6%88%A6%E8%A8%98%E2%85%A1" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
         <a href="https://www.amazon.co.jp/s?k=%E5%B9%BC%E5%A5%B3%E6%88%A6%E8%A8%98%E2%85%A1&i=instant-video" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -276,8 +283,8 @@ header {
         </div>
         <div class="score-block"><div class="score-num">8.8</div><div class="score-label">管理人評価</div></div>
       </div>
-      <p class="review-text">漫画を描くことへの純粋な情熱と葛藤を描いた青春作品。「描くこと」の楽しさと苦しさをリアルに描いた原作の魅力をアニメで余すことなく表現しており、何かに夢中になった経験のある人なら必ず刺さる内容でした。今期の「感動枠」の最有力です。</p>
-      <span class="verdict a">A評価 — 創作の喜びと苦悩がリアルに伝わる</span>
+      <p class="review-text">漫画を描く<wbr>ことへの<wbr>純粋な<wbr>情熱と<wbr>葛藤を<wbr>描いた<wbr>青春作品です。<wbr>「描くこと」の<wbr>楽しさと<wbr>苦しさを<wbr>リアルに<wbr>描いた<wbr>原作の<wbr>魅力を<wbr>アニメで余す<wbr>ことなく<wbr>表現しており、<wbr>何かに<wbr>夢中に<wbr>なった<wbr>経験のある<wbr>人なら必ず<wbr>刺さる<wbr>内容でした。<wbr>今期の<wbr>「感動枠」の<wbr>最有力です。</p>
+      <span class="verdict a">A評価 — 創作の<wbr>喜びと<wbr>苦悩が<wbr>リアルに<wbr>伝わる</span>
       <div class="streaming-row">
         <a href="https://animestore.docomo.ne.jp/animestore/sch_pc?searchKey=%E3%81%93%E3%82%8C%E6%8F%8F%E3%81%84%E3%81%A6%E6%AD%BB%E3%81%AD" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
         <a href="https://www.amazon.co.jp/s?k=%E3%81%93%E3%82%8C%E6%8F%8F%E3%81%84%E3%81%A6%E6%AD%BB%E3%81%AD&i=instant-video" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -293,8 +300,8 @@ header {
         </div>
         <div class="score-block"><div class="score-num">8.6</div><div class="score-label">管理人評価</div></div>
       </div>
-      <p class="review-text">キネマシトラス15周年記念のオリジナルTVアニメーション。現代の滋賀県大津市を舞台に、人間の王子と恋をして泡になった人魚姫ララが、約200年の時を超えて人間として蘇り、もう一度本当の愛を探す物語です。オリジナルアニメながら今期の話題作の一角に食い込みました。</p>
-      <span class="verdict a">A評価 — いきものがかり主題歌も必聴</span>
+      <p class="review-text">キネマシトラス15周年記念の<wbr>オリジナルTVアニメーションです。<wbr>現代の<wbr>滋賀県大津市を<wbr>舞台に、<wbr>人間の<wbr>王子と恋をして泡に<wbr>なった<wbr>人魚姫ララが、<wbr>約200年の時を<wbr>超えて<wbr>人間として<wbr>蘇り、もう一度<wbr>本当の愛を探す<wbr>物語です。<wbr>オリジナルアニメながら<wbr>今期の<wbr>話題作の<wbr>一角に食い<wbr>込みました。</p>
+      <span class="verdict a">A評価 — いきものが<wbr>かり主題歌も必聴</span>
       <div class="streaming-row">
         <a href="https://animestore.docomo.ne.jp/animestore/sch_pc?searchKey=%E3%81%95%E3%82%88%E3%81%AA%E3%82%89%E3%83%A9%E3%83%A9" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
         <a href="https://www.amazon.co.jp/s?k=%E3%81%95%E3%82%88%E3%81%AA%E3%82%89%E3%83%A9%E3%83%A9&i=instant-video" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -305,13 +312,13 @@ header {
     <div class="review-card">
       <div class="review-card-header">
         <div class="review-title-block">
-          <div class="review-anime-title">正反対な君と僕 2クール目</div>
-          <div class="review-anime-sub">青春ラブコメ / 2026年夏（7月5日〜）</div>
+          <div class="review-anime-title">正反対な君と<wbr>僕 2クール目</div>
+          <div class="review-anime-sub">青春ラブコメ / 2026年夏<wbr>（7月5日〜）</div>
         </div>
         <div class="score-block"><div class="score-num">8.5</div><div class="score-label">管理人評価</div></div>
       </div>
-      <p class="review-text">同じ作者・阿賀沢紅茶さんの「氷の城壁」とは対照的な、ほっこり系青春ラブコメの2クール目。真逆の性格の男女が少しずつ距離を縮めていく王道展開ながら、丁寧な感情描写で飽きさせません。1クール目から追っている人も、これから見始める人にも良いタイミングでした。</p>
-      <span class="verdict a">A評価 — 氷の城壁とのギャップも楽しみたい</span>
+      <p class="review-text">同じ<wbr>作者・阿賀沢紅茶さんの<wbr>「氷の城壁」とは<wbr>対照的な、<wbr>ほっこり系青春ラブコメの<wbr>2クール目です。<wbr>真逆の<wbr>性格の<wbr>男女が<wbr>少しずつ距離を<wbr>縮めていく<wbr>王道展開ながら、<wbr>丁寧な<wbr>感情描写で<wbr>飽きさせません。<wbr>1クール目から<wbr>追っている<wbr>人も、<wbr>これから<wbr>見始める<wbr>人にも良い<wbr>タイミングでした。</p>
+      <span class="verdict a">A評価 — 氷の<wbr>城壁との<wbr>ギャップも<wbr>楽しみたい</span>
       <div class="streaming-row">
         <a href="https://animestore.docomo.ne.jp/animestore/sch_pc?searchKey=%E6%AD%A3%E5%8F%8D%E5%AF%BE%E3%81%AA%E5%90%9B%E3%81%A8%E5%83%95%202%E3%82%AF%E3%83%BC%E3%83%AB%E7%9B%AE" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
         <a href="https://www.amazon.co.jp/s?k=%E6%AD%A3%E5%8F%8D%E5%AF%BE%E3%81%AA%E5%90%9B%E3%81%A8%E5%83%95%202%E3%82%AF%E3%83%BC%E3%83%AB%E7%9B%AE&i=instant-video" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -323,13 +330,13 @@ header {
     <div class="review-card">
       <div class="review-card-header">
         <div class="review-title-block">
-          <div class="review-anime-title">花ざかりの君たちへ</div>
-          <div class="review-anime-sub">学園ラブコメ / シグナル・エムディ / 2026年1月〜（分割2クール、7月から第2期）</div>
+          <div class="review-anime-title">花ざかりの<wbr>君たちへ</div>
+          <div class="review-anime-sub">学園ラブコメ / シグナル・エムディ / 2026年1月〜（分割2クール、<wbr>7月から<wbr>第2期）</div>
         </div>
         <div class="score-block"><div class="score-num">8.3</div><div class="score-label">管理人評価</div></div>
       </div>
-      <p class="review-text">累計1,700万部超、平成少女漫画の金字塔とも言える中条比紗也さん原作の学園ラブコメが、原作完結（2004年）から22年を経て2026年についに初のテレビアニメ化。男装ヒロインが男子寮に潜入するという設定は、日本で2007年・2011年の2度にわたり実写ドラマ化もされた大ヒット作ならでは。時を経てのアニメ化ながら、現代の感覚に合わせてアップデートされた描写も高く評価しました。実はこの1月放送のアニメ1期目から、管理人は楽しく観ていました。アニメでの3期発表がなければ、続きは電子書籍で購入して原作を追いかけるつもりです。</p>
-      <span class="verdict a">A評価 — 平成少女漫画の金字塔、待望のアニメ化</span>
+      <p class="review-text">累計1,700万部超、<wbr>平成少女漫画の<wbr>金字塔とも<wbr>言える<wbr>中条比紗也さん<wbr>原作の<wbr>学園ラブコメが、<wbr>原作完結（2004年）から<wbr>22年を経て<wbr>2026年に<wbr>ついに初の<wbr>TVアニメ化です。<wbr>男装ヒロインが<wbr>男子寮に<wbr>潜入するという<wbr>設定は、<wbr>日本で<wbr>2007年・2011年の<wbr>2度に<wbr>わたり実写ドラマ化も<wbr>された<wbr>大ヒット作ならではの<wbr>魅力です。時を<wbr>経ての<wbr>アニメ化ながら、<wbr>現代の<wbr>感覚に<wbr>合わせて<wbr>アップデートされた<wbr>描写も高く<wbr>評価しました。実はこの<wbr>1月放送の<wbr>アニメ1期目から、<wbr>管理人は<wbr>楽しく<wbr>観ていました。<wbr>アニメでの<wbr>3期発表が<wbr>なければ、<wbr>続きは<wbr>電子書籍で<wbr>購入して<wbr>原作を<wbr>追いかける<wbr>つもりです。</p>
+      <span class="verdict a">A評価 — 平成少女漫画の<wbr>金字塔、<wbr>待望の<wbr>アニメ化</span>
       <div class="streaming-row">
         <a href="https://abema.tv/search?q=%E8%8A%B1%E3%81%96%E3%81%8B%E3%82%8A%E3%81%AE%E5%90%9B%E3%81%9F%E3%81%A1%E3%81%B8" target="_blank" rel="noopener" class="badge abema">ABEMA</a>
         <a href="https://tver.jp/search?keyword=%E8%8A%B1%E3%81%96%E3%81%8B%E3%82%8A%E3%81%AE%E5%90%9B%E3%81%9F%E3%81%A1%E3%81%B8" target="_blank" rel="noopener" class="badge tver">TVer</a>
@@ -341,12 +348,12 @@ header {
       <div class="review-card-header">
         <div class="review-title-block">
           <div class="review-anime-title">黄泉のツガイ</div>
-          <div class="review-anime-sub">ダークファンタジー / BONES / 2026年春〜夏（4月〜、連続2クール）</div>
+          <div class="review-anime-sub">ダークファンタジー / BONES / 2026年春〜夏<wbr>（4月〜、連続2クール）</div>
         </div>
         <div class="score-block"><div class="score-num">8.2</div><div class="score-label">管理人評価</div></div>
       </div>
-      <p class="review-text">荒川弘（『鋼の錬金術師』）原作をBONESが制作した、4月から連続2クールで放送中の本格ダークファンタジー。腰を据えて長く見せる構成のおかげで、安定した面白さが最後まで途切れず、時間をかけてじっくり物語に浸りたい人には特におすすめ出来る一本です。ただしその分、尺の使い方が丁寧すぎて、話の運びがゆったりしている点は、良くも悪くも人を選ぶかもしれません。</p>
-      <span class="verdict a">A評価 — 丁寧な尺の使い方は諸刃の剣、じっくり派向け</span>
+      <p class="review-text">荒川弘<wbr>（『鋼の錬金術師』）<wbr>原作を<wbr>BONESが<wbr>制作した、<wbr>4月から<wbr>連続2クールで<wbr>放送中の<wbr>本格ダークファンタジーです。腰を<wbr>据えて長く<wbr>見せる<wbr>構成の<wbr>おかげで、<wbr>安定した<wbr>面白さが<wbr>最後まで<wbr>途切れず、<wbr>時間を<wbr>かけて<wbr>じっくり物語に<wbr>浸りたい<wbr>人には特に<wbr>おすすめできる<wbr>一本です。<wbr>ただしその<wbr>分、尺の<wbr>使い方が<wbr>丁寧すぎて、話の<wbr>運びが<wbr>ゆったりしている<wbr>点は、<wbr>良くも<wbr>悪くも人を<wbr>選ぶかもしれません。</p>
+      <span class="verdict a">A評価 — 丁寧な尺の<wbr>使い方は<wbr>諸刃の<wbr>剣、<wbr>じっくり派向け</span>
       <div class="streaming-row">
         <a href="https://animestore.docomo.ne.jp/animestore/sch_pc?searchKey=%E9%BB%84%E6%B3%89%E3%81%AE%E3%83%84%E3%82%AC%E3%82%A4" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
         <a href="https://www.amazon.co.jp/s?k=%E9%BB%84%E6%B3%89%E3%81%AE%E3%83%84%E3%82%AC%E3%82%A4&i=instant-video" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -356,19 +363,19 @@ header {
     </div>
 
     <!-- C評価 -->
-    <h2 id="c-rank">C評価作品（好みが分かれる作品）</h2>
-    <p>管理人の軸では刺さりきらなかった作品です。C評価は「悪い作品」という意味ではなく、「積極的に薦める理由が見つからなかった」という意味合いです。詳しくは<a href="https://anime-db.jp/blog/rating-criteria.html" style="color:var(--accent);">評価基準の記事</a>をご覧ください。</p>
+    <h2 id="c-rank">C評価作品<wbr>（好みが分かれる作品）</h2>
+    <p>管理人の<wbr>軸では<wbr>刺さりきらなかった<wbr>作品です。<wbr>C評価は<wbr>「悪い作品」という<wbr>意味ではなく、<wbr>「積極的に<wbr>薦める<wbr>理由が<wbr>見つからなかった」という<wbr>意味合いです。<wbr>詳しくは<a href="https://anime-db.jp/blog/rating-criteria.html" style="color:var(--accent);"><wbr>評価基準の<wbr>記事</a>を<wbr>ご覧ください。</p>
 
     <div class="review-card">
       <div class="review-card-header">
         <div class="review-title-block">
-          <div class="review-anime-title">無職転生Ⅲ ～異世界行ったら本気だす～</div>
+          <div class="review-anime-title">無職転生Ⅲ 〜異世界行ったら<wbr>本気だす〜</div>
           <div class="review-anime-sub">異世界ファンタジー / Studio Bind / 2026年夏</div>
         </div>
         <div class="score-block"><div class="score-num">6.9</div><div class="score-label">管理人評価</div></div>
       </div>
-      <p class="review-text">1話・2話のエリス修行編は今期屈指の熱量で、見応えがありました。しかしその後は日常パートが長く続き、正直なところ中弛みを感じる展開に。積み上げてきたシリーズへの期待値が高かった分、後半の失速が惜しまれましたが、残りの3話では一転、未来から来た老ルーデウスの登場で盛り上がりました。第2クールの2027年放送が決定しているので、続きにも期待したいところです。</p>
-      <span class="verdict c">C評価 — 序盤のピークの後、日常パートが長引く</span>
+      <p class="review-text">1話・2話の<wbr>エリス修行編は<wbr>今期屈指の<wbr>熱量で、<wbr>見応えが<wbr>ありました。<wbr>しかし<wbr>その後は<wbr>日常パートが長く<wbr>続き、<wbr>正直な<wbr>ところ<wbr>中弛みを<wbr>感じる<wbr>展開に<wbr>なりました。<wbr>積み上げてきた<wbr>シリーズへの<wbr>期待値が<wbr>高かった<wbr>分、<wbr>後半の<wbr>失速が<wbr>惜しまれましたが、<wbr>残りの<wbr>3話では<wbr>一転、<wbr>未来から来た<wbr>老ルーデウスの<wbr>登場で盛り<wbr>上がりました。<wbr>第2クールの<wbr>2027年放送が<wbr>決定しているので、<wbr>続きにも<wbr>期待したい<wbr>ところです。</p>
+      <span class="verdict c">C評価 — 序盤の<wbr>ピークの<wbr>後、<wbr>日常パートが<wbr>長引く</span>
       <div class="streaming-row">
         <a href="https://animestore.docomo.ne.jp/animestore/sch_pc?searchKey=%E7%84%A1%E8%81%B7%E8%BB%A2%E7%94%9F%E2%85%A2%20%EF%BD%9E%E7%95%B0%E4%B8%96%E7%95%8C%E8%A1%8C%E3%81%A3%E3%81%9F%E3%82%89%E6%9C%AC%E6%B0%97%E3%81%A0%E3%81%99%EF%BD%9E" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
         <a href="https://www.amazon.co.jp/s?k=%E7%84%A1%E8%81%B7%E8%BB%A2%E7%94%9F%E2%85%A2%20%EF%BD%9E%E7%95%B0%E4%B8%96%E7%95%8C%E8%A1%8C%E3%81%A3%E3%81%9F%E3%82%89%E6%9C%AC%E6%B0%97%E3%81%A0%E3%81%99%EF%BD%9E&i=instant-video" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -380,13 +387,13 @@ header {
     <div class="review-card">
       <div class="review-card-header">
         <div class="review-title-block">
-          <div class="review-anime-title">乙女ゲー世界はモブに厳しい世界です2</div>
+          <div class="review-anime-title">乙女ゲー世界は<wbr>モブに<wbr>厳しい<wbr>世界です2</div>
           <div class="review-anime-sub">異世界コメディ / 2026年夏</div>
         </div>
         <div class="score-block"><div class="score-num">6.8</div><div class="score-label">管理人評価</div></div>
       </div>
-      <p class="review-text">乙女ゲームの世界に転生したモブキャラの奮闘を描くコメディの2期。設定自体はテンプレ寄りですが、キャラクターの掛け合いのテンポの良さで押し切る安定感があります。前作からのファンなら気軽に楽しめる続編です。</p>
-      <span class="verdict c">C評価 — テンプレでも掛け合いの軽妙さで楽しめる</span>
+      <p class="review-text">乙女ゲームの<wbr>世界に<wbr>転生した<wbr>モブキャラの<wbr>奮闘を描く<wbr>コメディの<wbr>2期です。<wbr>設定自体は<wbr>テンプレ寄りですが、<wbr>キャラクターの<wbr>掛け合いの<wbr>テンポの<wbr>良さで<wbr>押し切る<wbr>安定感が<wbr>あります。<wbr>前作からの<wbr>ファンなら<wbr>気軽に<wbr>楽しめる<wbr>続編です。</p>
+      <span class="verdict c">C評価 — テンプレでも<wbr>掛け合いの<wbr>軽妙さで<wbr>楽しめる</span>
       <div class="streaming-row">
         <a href="https://animestore.docomo.ne.jp/animestore/sch_pc?searchKey=%E4%B9%99%E5%A5%B3%E3%82%B2%E3%83%BC%E4%B8%96%E7%95%8C%E3%81%AF%E3%83%A2%E3%83%96%E3%81%AB%E5%8E%B3%E3%81%97%E3%81%84%E4%B8%96%E7%95%8C%E3%81%A7%E3%81%992" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
         <a href="https://www.amazon.co.jp/s?k=%E4%B9%99%E5%A5%B3%E3%82%B2%E3%83%BC%E4%B8%96%E7%95%8C%E3%81%AF%E3%83%A2%E3%83%96%E3%81%AB%E5%8E%B3%E3%81%97%E3%81%84%E4%B8%96%E7%95%8C%E3%81%A7%E3%81%992&i=instant-video" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -402,29 +409,29 @@ header {
         <tr><th>作品名</th><th>評価</th><th>管理人スコア</th><th>一言コメント</th></tr>
       </thead>
       <tbody>
-        <tr><td>二十世紀電氣目録</td><td class="rank-s">S</td><td>9.1</td><td>今期No.1の映像美・Netflix独占</td></tr>
-        <tr><td>ぐらんぶる Season 3</td><td class="rank-s">S</td><td>9.0</td><td>最終2話「沖縄再上陸」が2026年屈指の出来</td></tr>
-        <tr><td>ヤニねこ</td><td class="rank-s">S</td><td>9.0</td><td>独特の空気感が沼・今期一番の中毒性</td></tr>
-        <tr><td>幼女戦記Ⅱ</td><td class="rank-a">A</td><td>8.9</td><td>悠木碧さんの怪演が今期随一</td></tr>
-        <tr><td>これ描いて死ね</td><td class="rank-a">A</td><td>8.8</td><td>創作の喜びと苦悩がリアル</td></tr>
-        <tr><td>さよならララ</td><td class="rank-a">A</td><td>8.6</td><td>オリジナルながら話題作に食い込む</td></tr>
-        <tr><td>正反対な君と僕 2クール目</td><td class="rank-a">A</td><td>8.5</td><td>氷の城壁とは対照的なほっこり系</td></tr>
-        <tr><td>花ざかりの君たちへ</td><td class="rank-a">A</td><td>8.3</td><td>平成少女漫画の金字塔、待望のアニメ化</td></tr>
-        <tr><td>黄泉のツガイ</td><td class="rank-a">A</td><td>8.2</td><td>丁寧な尺の使い方は諸刃の剣、じっくり派向け</td></tr>
-        <tr><td>無職転生Ⅲ ～異世界行ったら本気だす～</td><td class="rank-c">C</td><td>6.9</td><td>序盤のピークの後、日常パートが長引く</td></tr>
-        <tr><td>乙女ゲー世界はモブに厳しい世界です2</td><td class="rank-c">C</td><td>6.8</td><td>テンプレでも掛け合いが軽快で楽しい</td></tr>
+        <tr><td>二十世紀電氣目録</td><td class="rank-s">S</td><td>9.1</td><td>今期No.1の<wbr>映像美・Netflix独占</td></tr>
+        <tr><td>ぐらんぶる Season 3</td><td class="rank-s">S</td><td>9.0</td><td>最終2話<wbr>「沖縄再上陸」が<wbr>2026年屈指の出来</td></tr>
+        <tr><td>ヤニねこ</td><td class="rank-s">S</td><td>9.0</td><td>独特の<wbr>空気感が沼・<wbr>今期一番の<wbr>中毒性</td></tr>
+        <tr><td>幼女戦記Ⅱ</td><td class="rank-a">A</td><td>8.9</td><td>悠木碧さんの<wbr>怪演が<wbr>今期随一</td></tr>
+        <tr><td>これ描いて死ね</td><td class="rank-a">A</td><td>8.8</td><td>創作の<wbr>喜びと<wbr>苦悩が<wbr>リアル</td></tr>
+        <tr><td>さよならララ</td><td class="rank-a">A</td><td>8.6</td><td>オリジナルながら<wbr>話題作に食い込む</td></tr>
+        <tr><td>正反対な君と<wbr>僕 2クール目</td><td class="rank-a">A</td><td>8.5</td><td>氷の<wbr>城壁とは<wbr>対照的な<wbr>ほっこり系</td></tr>
+        <tr><td>花ざかりの<wbr>君たちへ</td><td class="rank-a">A</td><td>8.3</td><td>平成少女漫画の<wbr>金字塔、<wbr>待望の<wbr>アニメ化</td></tr>
+        <tr><td>黄泉のツガイ</td><td class="rank-a">A</td><td>8.2</td><td>丁寧な尺の<wbr>使い方は<wbr>諸刃の<wbr>剣、<wbr>じっくり派向け</td></tr>
+        <tr><td>無職転生Ⅲ 〜異世界行ったら<wbr>本気だす〜</td><td class="rank-c">C</td><td>6.9</td><td>序盤の<wbr>ピークの<wbr>後、<wbr>日常パートが<wbr>長引く</td></tr>
+        <tr><td>乙女ゲー世界は<wbr>モブに<wbr>厳しい<wbr>世界です2</td><td class="rank-c">C</td><td>6.8</td><td>テンプレでも<wbr>掛け合いが<wbr>軽快で<wbr>楽しい</td></tr>
       </tbody>
     </table>
 
     <!-- 来期注目作 -->
-    <h2 id="next">来期（秋クール）注目作</h2>
-    <p>2026年秋クール（10月〜12月放送）で個人的に注目している作品をピックアップしました。</p>
+    <h2 id="next">来期<wbr>（秋クール）<wbr>注目作</h2>
+    <p>2026年秋クール<wbr>（10月〜12月放送）で<wbr>個人的に<wbr>注目している<wbr>作品を<wbr>ピックアップしました。</p>
     <ul>
-      <li><strong><a href="https://kusuriyanohitorigoto.jp/season3/" target="_blank" rel="noopener" style="color:var(--accent);">薬屋のひとりごと 第3期</a></strong> — 猫猫と壬氏の関係がいよいよ大きく動き出す転換点。</li>
-      <li><strong><a href="https://korinojoheki-pr.com/" target="_blank" rel="noopener" style="color:var(--accent);">氷の城壁 第2期</a></strong> — 1期14話以降の展開が評価された青春群像劇、待望の続き。</li>
-      <li><strong><a href="https://ranma-pr.com/" target="_blank" rel="noopener" style="color:var(--accent);">らんま1/2 第3期</a></strong> — MAPPA制作の令和リメイク、放送直後よりNetflix独占配信。</li>
+      <li><strong><a href="https://kusuriyanohitorigoto.jp/season3/" target="_blank" rel="noopener" style="color:var(--accent);">薬屋の<wbr>ひとりごと 第3期</a></strong> — 猫猫と<wbr>壬氏の<wbr>関係が<wbr>いよいよ<wbr>大きく<wbr>動き出す転換点です。</li>
+      <li><strong><a href="https://korinojoheki-pr.com/" target="_blank" rel="noopener" style="color:var(--accent);">氷の<wbr>城壁 第2期</a></strong> — 1期14話以降の<wbr>展開が<wbr>評価された<wbr>青春群像劇、<wbr>待望の<wbr>続きです。</li>
+      <li><strong><a href="https://ranma-pr.com/" target="_blank" rel="noopener" style="color:var(--accent);">らんま1/2 第3期</a></strong> — MAPPA制作の<wbr>令和リメイク、<wbr>放送直後より<wbr>Netflix独占配信です。</li>
     </ul>
-    <p>秋クールの詳細は<a href="https://anime-db.jp/blog/autumn2026-recommend.html" style="color:var(--accent);">こちらの記事</a>もあわせてどうぞ。</p>
+    <p>秋クールの<wbr>詳細は<a href="https://anime-db.jp/blog/autumn2026-recommend.html" style="color:var(--accent);"><wbr>こちらの<wbr>記事</a>も<wbr>あわせて<wbr>どうぞ。</p>
 
   </div><!-- /article-body -->
 
@@ -436,7 +443,7 @@ header {
   <div class="footer-links">
     <a href="https://anime-db.jp/" class="footer-link">ホーム</a>
     <a href="https://anime-db.jp/blog/" class="footer-link">ブログ</a>
-    <a href="https://anime-db.jp/about.html" class="footer-link">ANIMEDBについて</a>
+    <a href="https://anime-db.jp/about.html" class="footer-link">ANIMEDBに<wbr>ついて</a>
     <a href="https://anime-db.jp/privacy.html" class="footer-link">プライバシーポリシー</a>
     <a href="https://anime-db.jp/contact.html" class="footer-link">お問い合わせ</a>
   </div>

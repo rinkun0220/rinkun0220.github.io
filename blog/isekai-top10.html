@@ -68,6 +68,13 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
 .footer-link{color:var(--text-muted);text-decoration:none;font-size:.85rem;transition:color .2s}.footer-link:hover{color:#fff}
 .copyright{font-size:.8rem;color:rgba(255,255,255,0.3)}
 .rating-guide-note{font-size:.88rem;color:var(--text-muted);margin:-8px 0 28px;line-height:1.8}.rating-guide-note a{color:var(--accent);text-decoration:underline}
+/* 日本語の改行を自然にする設定（文節単位で改行・行頭禁則・1文字だけの行を避ける） */
+body{line-break:strict;overflow-wrap:break-word}
+@supports (word-break:auto-phrase){body{word-break:auto-phrase}}
+:has(> wbr){word-break:keep-all}
+p,li,dd,td,th{text-wrap:pretty}
+.nb{white-space:nowrap}
+h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-title,.pick-name,.next-article-title{text-wrap:balance}
 </style>
 </head>
 <body>
@@ -95,28 +102,28 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
   </div>
 
   <div class="article-body">
-    <p>「異世界転生」というジャンルは今やアニメの一大ジャンルとなりましたが、正直なところ玉石混交です。数百本の異世界アニメを見てきた筆者が、本当に面白いと思える10作品だけを厳選しました。テンプレ展開が好きな人も、テンプレが苦手な人も、それぞれ楽しめる作品を幅広く紹介しています。</p>
+    <p>「異世界転生」という<wbr>ジャンルは今や<wbr>アニメの<wbr>一大ジャンルと<wbr>なりましたが、<wbr>正直な<wbr>ところ<wbr>玉石混交です。<wbr>数百本の<wbr>異世界アニメを<wbr>見てきた<wbr>筆者が、<wbr>本当に<wbr>面白いと<wbr>思える<wbr>10作品だけを<wbr>厳選しました。<wbr>テンプレ展開が<wbr>好きな<wbr>人も、<wbr>テンプレが<wbr>苦手な<wbr>人も、<wbr>それぞれ楽しめる<wbr>作品を<wbr>幅広く<wbr>紹介しています。</p>
 
     <div class="toc">
       <div class="toc-title">📋 目次</div>
       <ol>
-        <li><a href="#criteria">選定基準について</a></li>
+        <li><a href="#criteria">選定基準に<wbr>ついて</a></li>
         <li><a href="#ranking">おすすめ10選ランキング</a></li>
-        <li><a href="#myview">管理人が異世界アニメを選ぶ基準</a></li>
-        <li><a href="#beginner">初心者向けはどれ？</a></li>
+        <li><a href="#myview">管理人が<wbr>異世界アニメを選ぶ基準</a></li>
+        <li><a href="#beginner">初心者向けは<wbr>どれ？</a></li>
         <li><a href="#summary">まとめ</a></li>
       </ol>
     </div>
 
-    <p class="rating-guide-note">※★の点数は管理人スコア（10点満点）です。評価の基準は<a href="https://anime-db.jp/blog/rating-criteria.html">こちら</a>をご覧ください。</p>
+    <p class="rating-guide-note">※★の<wbr>点数は<wbr>管理人スコア<wbr>（10点満点）です。<wbr>評価の<wbr>基準は<a href="https://anime-db.jp/blog/rating-criteria.html"><wbr>こちら</a>を<wbr>ご覧ください。</p>
 
-    <h2 id="criteria">選定基準について</h2>
-    <p>今回のランキングは以下の基準で選びました。「評判が高い」だけでなく、実際に全話視聴した上で独自に評価しています。</p>
+    <h2 id="criteria">選定基準に<wbr>ついて</h2>
+    <p>今回の<wbr>ランキングは<wbr>以下の<wbr>基準で<wbr>選びました。<wbr>「評判が高い」だけでなく、<wbr>実際に<wbr>全話視聴した上で<wbr>独自に<wbr>評価しています。</p>
     <ul>
-      <li><strong>ストーリーの完成度</strong>：転生してチートが強いだけでなく、ドラマとして成立しているか</li>
-      <li><strong>キャラクターの魅力</strong>：主人公だけでなく脇役まで描けているか</li>
-      <li><strong>アニメとしての映像クオリティ</strong>：作画・演出・音楽の完成度</li>
-      <li><strong>「異世界転生」という設定の活かし方</strong>：転生要素が物語に必然性を持っているか</li>
+      <li><strong>ストーリーの<wbr>完成度</strong>：転生して<wbr>チートが<wbr>強いだけでなく、<wbr>ドラマとして<wbr>成立しているか</li>
+      <li><strong>キャラクターの<wbr>魅力</strong>：主人公だけでなく<wbr>脇役まで<wbr>描けているか</li>
+      <li><strong>アニメと<wbr>しての<wbr>映像クオリティ</strong>：作画・演出・音楽の<wbr>完成度</li>
+      <li><strong>「異世界転生」という<wbr>設定の<wbr>活かし方</strong>：転生要素が<wbr>物語に<wbr>必然性を<wbr>持っているか</li>
     </ul>
 
     <h2 id="ranking">おすすめ10選ランキング</h2>
@@ -124,11 +131,11 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
     <div class="rank-card">
       <div class="rank-num gold">1</div>
       <div class="rank-body">
-        <div class="rank-title">無職転生 〜異世界行ったら本気だす〜</div>
-        <div class="rank-sub">2021年〜2022年 / Studio Bind</div>
+        <div class="rank-title">無職転生 〜異世界行ったら<wbr>本気だす〜</div>
+        <div class="rank-sub"><span class="nb">2021年〜2022年</span> / <span class="nb">Studio Bind</span></div>
         <div class="rank-score">★ 9.0 / 10</div>
         <span class="rank-tag">初心者◎</span><span class="rank-tag green">感動</span><span class="rank-tag blue">作画最高</span>
-        <div class="rank-text">異世界転生ものの到達点と言える作品です。ニートとして死んだ主人公・ルーデウスが別の世界で赤ちゃんとして生まれ変わり、今度こそ本気で生きようとする物語です。転生ものにありがちなご都合主義が少なく、挫折・成長・人間関係のリアルな描写が心を打ちます。Studio Bindの作画クオリティも圧倒的で、全話を通して映像面での妥協がありません。異世界転生アニメを1本だけ見るなら迷わずこれをすすめます。</div>
+        <div class="rank-text">異世界転生ものの<wbr>到達点と<wbr>言える<wbr>作品です。<wbr>ニートとして<wbr>死んだ<wbr>主人公・ルーデウスが別の<wbr>世界で<wbr>赤ちゃんとして<wbr>生まれ<wbr>変わり、<wbr>今度こそ<wbr>本気で<wbr>生きようとする<wbr>物語です。<wbr>転生ものに<wbr>ありがちな<wbr>ご都合主義が<wbr>少なく、<wbr>挫折・成長・人間関係の<wbr>リアルな<wbr>描写が心を<wbr>打ちます。<wbr>Studio Bindの<wbr>作画クオリティも<wbr>圧倒的で、<wbr>全話を<wbr>通して<wbr>映像面での<wbr>妥協が<wbr>ありません。<wbr>異世界転生アニメを<wbr>1本だけ<wbr>見るなら<wbr>迷わず<wbr>これを<wbr>すすめます。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
           <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -141,11 +148,11 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
     <div class="rank-card">
       <div class="rank-num silver">2</div>
       <div class="rank-body">
-        <div class="rank-title">葬送のフリーレン</div>
-        <div class="rank-sub">2023年〜 / Madhouse</div>
+        <div class="rank-title">葬送の<wbr>フリーレン</div>
+        <div class="rank-sub"><span class="nb">2023年〜</span> / <span class="nb">Madhouse</span></div>
         <div class="rank-score">★ 8.9 / 10</div>
         <span class="rank-tag green">感動</span><span class="rank-tag blue">余韻系</span>
-        <div class="rank-text">厳密には「転生」ではありませんが、異世界ファンタジーの文脈で外せない名作として選出されています。魔王を倒した後の世界を描く異色の後日談ファンタジーで、時間・記憶・別れをテーマにした静かな感動が心に刺さります。2023〜2024年の社会現象級ヒット作であり、ファンタジーアニメのスタンダードを塗り替えた傑作です。</div>
+        <div class="rank-text">厳密には<wbr>「転生」ではありませんが、<wbr>異世界ファンタジーの<wbr>文脈で<wbr>外せない<wbr>名作として<wbr>選出されています。<wbr>魔王を<wbr>倒した後の<wbr>世界を描く<wbr>異色の後<wbr>日談ファンタジーで、<wbr>時間・記憶・<wbr>別れを<wbr>テーマにした<wbr>静かな<wbr>感動が心に<wbr>刺さります。<wbr>2023〜2024年の<wbr>社会現象級ヒット作であり、<wbr>ファンタジーアニメの<wbr>スタンダードを塗り<wbr>替えた<wbr>傑作です。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
           <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -158,11 +165,11 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
     <div class="rank-card">
       <div class="rank-num bronze">3</div>
       <div class="rank-body">
-        <div class="rank-title">Re:ゼロから始める異世界生活</div>
-        <div class="rank-sub">2016年〜2021年 / WHITE FOX</div>
+        <div class="rank-title">Re:ゼロから<wbr>始める<wbr>異世界生活</div>
+        <div class="rank-sub"><span class="nb">2016年〜2021年</span> / <span class="nb">WHITE FOX</span></div>
         <div class="rank-score">★ 8.8 / 10</div>
-        <span class="rank-tag">精神的に強い人向け</span><span class="rank-tag green">ループ系</span>
-        <div class="rank-text">「死に戻り」という独自の転生設定を使い、心理的なサスペンスと感情の揺さぶりを極限まで高めた傑作です。主人公・スバルの弱さと成長がこれでもかと描かれ、見る側も一緒に消耗するほどの没入感があります。2期後半のエキドナ編は現代アニメ屈指の名シーンの連続です。ただし精神的にきつい展開も多いので、そういった描写が苦手な方は注意が必要です。</div>
+        <span class="rank-tag">精神的に強い<wbr>人向け</span><span class="rank-tag green">ループ系</span>
+        <div class="rank-text">「死に戻り」という<wbr>独自の<wbr>転生設定を<wbr>使い、<wbr>心理的な<wbr>サスペンスと<wbr>感情の<wbr>揺さぶりを<wbr>極限まで<wbr>高めた<wbr>傑作です。<wbr>主人公・スバルの<wbr>弱さと<wbr>成長が<wbr>これでもかと<wbr>描かれ、見る側も<wbr>一緒に<wbr>消耗する<wbr>ほどの<wbr>没入感が<wbr>あります。<wbr>2期後半の<wbr>エキドナ編は<wbr>現代アニメ屈指の<wbr>名シーンの<wbr>連続です。<wbr>ただし精神的に<wbr>きつい<wbr>展開も<wbr>多いので、<wbr>そういった<wbr>描写が<wbr>苦手な方は<wbr>注意が<wbr>必要です。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
           <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -175,11 +182,11 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
     <div class="rank-card">
       <div class="rank-num">4</div>
       <div class="rank-body">
-        <div class="rank-title">転生したらスライムだった件</div>
-        <div class="rank-sub">2018年〜 / 8bit</div>
+        <div class="rank-title">転生したら<wbr>スライムだった件</div>
+        <div class="rank-sub"><span class="nb">2018年〜</span> / <span class="nb">8bit</span></div>
         <div class="rank-score">★ 8.4 / 10</div>
         <span class="rank-tag">初心者◎</span><span class="rank-tag blue">国造り系</span>
-        <div class="rank-text">スライムという最弱モンスターに転生した主人公・リムルが、仲間を増やしながら国を作り上げていく痛快な成長物語です。チート転生ものの中でも「国造り」という目標が明確で、ストーリーに方向性があるため飽きにくいです。ギスギスした展開が少なく、異世界転生入門として非常におすすめしやすい作品です。</div>
+        <div class="rank-text">スライムという<wbr>最弱モンスターに<wbr>転生した<wbr>主人公・リムルが、<wbr>仲間を<wbr>増やしながら国を<wbr>作り上げていく<wbr>痛快な<wbr>成長物語です。<wbr>チート転生ものの<wbr>中でも<wbr>「国造り」という<wbr>目標が<wbr>明確で、<wbr>ストーリーに<wbr>方向性があるため<wbr>飽きに<wbr>くいです。<wbr>ギスギスした<wbr>展開が<wbr>少なく、<wbr>異世界転生入門として<wbr>非常に<wbr>おすすめしやすい<wbr>作品です。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
           <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -193,10 +200,10 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
       <div class="rank-num">5</div>
       <div class="rank-body">
         <div class="rank-title">本好きの下剋上</div>
-        <div class="rank-sub">2019年〜 / Ajia-do→WIT STUDIO</div>
+        <div class="rank-sub"><span class="nb">2019年〜</span> / <span class="nb">Ajia-do→WIT STUDIO</span></div>
         <div class="rank-score">★ 8.2 / 10</div>
         <span class="rank-tag blue">文化・知識系</span><span class="rank-tag green">感動</span>
-        <div class="rank-text">戦闘ではなく「本を作る」という目標を掲げた異色の転生ものです。本好きな現代人が識字率の低い中世ファンタジー世界に転生し、ゼロから本を作ろうとする物語です。チート無双とは真逆の方向性で、知恵と努力で問題を解決する展開が清々しいです。主人公・マインの熱量と周囲との絆が丁寧に描かれ、各シーズンの節目ごとの感動は本物です。2019〜2022年に第1〜3期（Ajia-do制作）が放送され、2026年からは制作をWIT STUDIOに移して第4期が放送されました。</div>
+        <div class="rank-text">戦闘ではなく<wbr>「本を作る」という<wbr>目標を<wbr>掲げた<wbr>異色の<wbr>転生ものです。<wbr>本好きな<wbr>現代人が<wbr>識字率の低い<wbr>中世ファンタジー世界に<wbr>転生し、<wbr>ゼロから本を<wbr>作ろうとする<wbr>物語です。<wbr>チート無双とは<wbr>真逆の<wbr>方向性で、<wbr>知恵と<wbr>努力で<wbr>問題を<wbr>解決する<wbr>展開が<wbr>清々しいです。<wbr>主人公・マインの<wbr>熱量と<wbr>周囲との絆が<wbr>丁寧に<wbr>描かれ、<wbr>各シーズンの<wbr>節目ごとの<wbr>感動は<wbr>本物です。<wbr>2019〜2022年に<wbr>第1〜3期<wbr>（Ajia-do制作）が<wbr>放送され、<wbr>2026年からは<wbr>制作を<wbr>WIT STUDIOに<wbr>移して<wbr>第4期が<wbr>放送されました。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
           <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -209,11 +216,11 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
     <div class="rank-card">
       <div class="rank-num">6</div>
       <div class="rank-body">
-        <div class="rank-title">蜘蛛ですが、なにか？</div>
-        <div class="rank-sub">2021年 / Millepensee</div>
+        <div class="rank-title">蜘蛛ですが、<wbr>なにか？</div>
+        <div class="rank-sub"><span class="nb">2021年</span> / <span class="nb">Millepensee</span></div>
         <div class="rank-score">★ 8.1 / 10</div>
         <span class="rank-tag green">独自設定</span><span class="rank-tag">ギャグ×シリアス</span>
-        <div class="rank-text">蜘蛛に転生した主人公が迷宮の最下層からひたすら進化していく異色の作品です。序盤はギャグ調ですが中盤以降にシリアスな世界観の全貌が明かされ、伏線回収の快感が味わえます。主人公のポジティブさが中毒性を生んでいて、「次どうなるんだろう」と見続けてしまう引力があります。</div>
+        <div class="rank-text">蜘蛛に<wbr>転生した<wbr>主人公が<wbr>迷宮の<wbr>最下層から<wbr>ひたすら<wbr>進化していく<wbr>異色の<wbr>作品です。<wbr>序盤は<wbr>ギャグ調ですが<wbr>中盤以降に<wbr>シリアスな<wbr>世界観の<wbr>全貌が<wbr>明かされ、<wbr>伏線回収の<wbr>快感が<wbr>味わえます。<wbr>主人公の<wbr>ポジティブさが<wbr>中毒性を<wbr>生んでいて、<wbr>「次どうなるんだろう」と<wbr>見続けてしまう<wbr>引力が<wbr>あります。</div>
         <div class="streaming-row">
           <a href="https://netflix.com" target="_blank" rel="noopener" class="badge netflix">Netflix</a>
           <a href="https://kumo-anime.com/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
@@ -224,11 +231,11 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
     <div class="rank-card">
       <div class="rank-num">7</div>
       <div class="rank-body">
-        <div class="rank-title">この素晴らしい世界に祝福を！</div>
-        <div class="rank-sub">2016年〜 / J.C.Staff / DEEN</div>
+        <div class="rank-title">この<wbr>素晴らしい<wbr>世界に<wbr>祝福を!</div>
+        <div class="rank-sub"><span class="nb">2016年〜</span> / <span class="nb">J.C.Staff</span> / <span class="nb">DEEN</span></div>
         <div class="rank-score">★ 8.0 / 10</div>
         <span class="rank-tag">初心者◎</span><span class="rank-tag">ギャグ系</span>
-        <div class="rank-text">コメディ全振りの異世界転生ものです。無能なパーティーメンバーたちとのドタバタ日常が最大の魅力で、異世界転生の「暗さ」とは無縁の明るい作風が特徴です。笑えるシーンの密度が高く、気軽に見られるエンタメ枠として優秀です。最近公開された劇場版も評判が高く、シリーズとしての人気は衰えていません。</div>
+        <div class="rank-text">コメディ全振りの<wbr>異世界転生ものです。<wbr>無能な<wbr>パーティーメンバーたちとの<wbr>ドタバタ日常が<wbr>最大の<wbr>魅力で、<wbr>異世界転生の<wbr>「暗さ」とは<wbr>無縁の明るい<wbr>作風が<wbr>特徴です。<wbr>笑える<wbr>シーンの<wbr>密度が<wbr>高く、<wbr>気軽に<wbr>見られる<wbr>エンタメ枠として<wbr>優秀です。最近<wbr>公開された<wbr>劇場版も<wbr>評判が<wbr>高く、<wbr>シリーズと<wbr>しての<wbr>人気は<wbr>衰えていません。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
           <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -242,10 +249,10 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
       <div class="rank-num">8</div>
       <div class="rank-body">
         <div class="rank-title">オーバーロード</div>
-        <div class="rank-sub">2015年〜 / Madhouse</div>
+        <div class="rank-sub"><span class="nb">2015年〜</span> / <span class="nb">Madhouse</span></div>
         <div class="rank-score">★ 7.9 / 10</div>
         <span class="rank-tag blue">ダーク系</span><span class="rank-tag">魔王視点</span>
-        <div class="rank-text">「最強の魔王」視点で描く異色の転生ものです。主人公が善人ではなく支配者として世界に君臨していく展開が他作品にない面白さを生んでいます。人間側が圧倒的に弱い立場で描かれるため、爽快感と不気味さが同居する独特の読後感があります。王道とは逆張りのアプローチが好きな方にはたまらない作品です。</div>
+        <div class="rank-text">「最強の魔王」<wbr>視点で描く<wbr>異色の<wbr>転生ものです。<wbr>主人公が<wbr>善人ではなく<wbr>支配者として<wbr>世界に<wbr>君臨していく<wbr>展開が<wbr>他作品にない<wbr>面白さを<wbr>生んでいます。<wbr>人間側が<wbr>圧倒的に弱い<wbr>立場で<wbr>描かれる<wbr>ため、<wbr>爽快感と<wbr>不気味さが<wbr>同居する<wbr>独特の<wbr>読後感が<wbr>あります。<wbr>王道とは<wbr>逆張りの<wbr>アプローチが<wbr>好きな<wbr>方には<wbr>たまらない<wbr>作品です。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
           <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -259,10 +266,10 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
       <div class="rank-num">9</div>
       <div class="rank-body">
         <div class="rank-title">幼女戦記</div>
-        <div class="rank-sub">2017年 / NUT</div>
+        <div class="rank-sub"><span class="nb">2017年</span> / <span class="nb">NUT</span></div>
         <div class="rank-score">★ 7.8 / 10</div>
         <span class="rank-tag blue">ダーク系</span><span class="rank-tag">戦記もの</span>
-        <div class="rank-text">ブラック企業サラリーマンが幼女に転生し、第一次大戦風の異世界で軍人として出世していく異色作です。主人公の打算的かつ合理的な思考が独特の面白さを生んでいます。魔法と戦争が混合した世界観の設定が細かく、戦記・ミリタリー好きにも刺さる内容です。劇場版もクオリティが高いです。</div>
+        <div class="rank-text">ブラック企業サラリーマンが<wbr>幼女に<wbr>転生し、<wbr>第一次大戦風の<wbr>異世界で<wbr>軍人として<wbr>出世していく<wbr>異色作です。<wbr>主人公の<wbr>打算的かつ合理的な<wbr>思考が<wbr>独特の<wbr>面白さを<wbr>生んでいます。<wbr>魔法と<wbr>戦争が<wbr>混合した<wbr>世界観の<wbr>設定が<wbr>細かく、<wbr>戦記・ミリタリー好きにも<wbr>刺さる<wbr>内容です。<wbr>劇場版も<wbr>クオリティが<wbr>高いです。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
           <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -276,10 +283,10 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
       <div class="rank-num">10</div>
       <div class="rank-body">
         <div class="rank-title">異世界食堂</div>
-        <div class="rank-sub">2017年〜 / SILVER LINK.</div>
+        <div class="rank-sub"><span class="nb">2017年〜</span> / <span class="nb">SILVER LINK.</span></div>
         <div class="rank-score">★ 7.6 / 10</div>
         <span class="rank-tag green">癒し系</span><span class="rank-tag">グルメ</span>
-        <div class="rank-text">毎週土曜日だけ異世界と繋がる洋食屋「ねこや」を舞台にしたグルメ系転生ものです。戦闘ゼロ、日常の温かさと食の描写だけで全話構成されています。激しい展開が苦手な方や、ほっこりしたい夜におすすめの作品です。食事シーンの描写が丁寧で、見ていると本当にお腹が空いてきます。</div>
+        <div class="rank-text">毎週<wbr>土曜日だけ異世界と<wbr>つながる<wbr>洋食屋<wbr>「ねこや」を<wbr>舞台にした<wbr>グルメ系転生ものです。<wbr>戦闘ゼロ、<wbr>日常の<wbr>温かさと食の<wbr>描写だけで全話<wbr>構成されています。<wbr>激しい<wbr>展開が<wbr>苦手な<wbr>方や、<wbr>ほっこりしたい夜に<wbr>おすすめの<wbr>作品です。<wbr>食事シーンの<wbr>描写が<wbr>丁寧で、<wbr>見ていると<wbr>本当に<wbr>お腹が<wbr>空いてきます。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
           <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -288,22 +295,22 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
       </div>
     </div>
 
-    <h2 id="myview">管理人が異世界アニメを選ぶ基準</h2>
-    <p>上の選定基準は、このランキングの元になった作品を中心に考えたものです。2021年ごろから増えた量産型の作品（管理人が「虚無枠」と呼んでいる作品。<a href="https://anime-db.jp/blog/worst-anime-honest.html">くわしくはこちら</a>）には、選ぶための基準が、ほとんどありません。このランキングの元になった作品を参考にしたものが多いためです。YouTubeの予告PVを見た時点で、0話切りすることもよくあります。</p>
-    <div class="callout"><strong>1位「無職転生」について：</strong>世界観、主人公、構成など、すべての要素が、すべての男性オタクに刺さる作品だと思っています。ただし、女性（オタクの方も含めて）から見ると、性的で気持ち悪いと感じるシーンがあります。そのため、女性にはおすすめしていません。</div>
-    <p>「この素晴らしい世界に祝福を！」は、異世界ブームの初期に観た作品です。量産型と「違う」と感じるのは、この作品のように、型を外した作品です。転生を案内する女神のアクアまで、異世界に行ってしまう展開を見て、「この手があったか」と思いました。</p>
-    <p>「本好きの下剋上」は、「本」という題材でやられました。異世界でも、まだこの切り口があったのかと驚いた作品です。なお、原作の小説やコミカライズは読みません。アニメだけで判断しています。</p>
+    <h2 id="myview">管理人が<wbr>異世界アニメを選ぶ基準</h2>
+    <p>上の<wbr>選定基準は、この<wbr>ランキングの元に<wbr>なった<wbr>作品を<wbr>中心に<wbr>考えた<wbr>ものです。<wbr>2021年ごろから<wbr>増えた<wbr>量産型の作品<wbr>（管理人が<wbr>「虚無枠」と<wbr>呼んでいる<wbr>作品です。<a href="https://anime-db.jp/blog/worst-anime-honest.html"><wbr>くわしくは<wbr>こちら</a>）には、選ぶ<wbr>ための<wbr>基準が、<wbr>ほとんど<wbr>ありません。この<wbr>ランキングの元に<wbr>なった<wbr>作品を<wbr>参考にした<wbr>ものが<wbr>多いためです。<wbr>YouTubeの<wbr>予告PVを見た<wbr>時点で、<wbr>0話切りする<wbr>こともよく<wbr>あります。</p>
+    <div class="callout"><strong>1位<wbr>「無職転生」に<wbr>ついて：</strong>世界観、<wbr>主人公、<wbr>構成など、<wbr>全ての<wbr>要素が、<wbr>全ての<wbr>男性オタクに<wbr>刺さる<wbr>作品だと<wbr>思っています。<wbr>ただし、女性<wbr>（オタクの方も含めて）から<wbr>見ると、<wbr>性的で<wbr>気持ち悪いと<wbr>感じる<wbr>シーンが<wbr>あります。その<wbr>ため、<wbr>女性には<wbr>おすすめしていません。</div>
+    <p>「この<wbr>素晴らしい<wbr>世界に<wbr>祝福を!」は、<wbr>異世界ブームの<wbr>初期に観た<wbr>作品です。<wbr>量産型と<wbr>「違う」と<wbr>感じるのは、この<wbr>作品のように、型を<wbr>外した<wbr>作品です。<wbr>転生を<wbr>案内する<wbr>女神の<wbr>アクアまで、<wbr>異世界に<wbr>行ってしまう<wbr>展開を<wbr>見て、<wbr>「この手があったか」と<wbr>思いました。</p>
+    <p>「本好きの下剋上」は、<wbr>「本」という<wbr>題材で<wbr>やられました。<wbr>異世界でも、まだこの<wbr>切り口が<wbr>あったのかと<wbr>驚いた<wbr>作品です。<wbr>なお、<wbr>原作の<wbr>小説や<wbr>コミカライズは<wbr>読みません。<wbr>アニメだけで<wbr>判断しています。</p>
 
-    <h2 id="beginner">初心者向けはどれ？</h2>
-    <p>異世界転生アニメを初めて見る方には以下の3本を特におすすめします。</p>
+    <h2 id="beginner">初心者向けは<wbr>どれ？</h2>
+    <p>異世界転生アニメを<wbr>初めて見る<wbr>方には<wbr>以下の<wbr>3本を特に<wbr>おすすめします。</p>
     <ul>
-      <li><strong>無職転生</strong>：クオリティが高く、転生もの特有の「なろう臭さ」が少ないです。最初の1本に最適です。ただし、女性にはおすすめしていません（理由は上に書いたとおりです）。</li>
-      <li><strong>転スラ</strong>：明るく見やすいです。難しい設定もなくサクサク見られます。</li>
-      <li><strong>このすば</strong>：とにかく笑えます。アニメ入門としても最適な軽さがあります。</li>
+      <li><strong>無職転生</strong>：クオリティが<wbr>高く、<wbr>転生もの<wbr>特有の<wbr>「なろう臭さ」が<wbr>少ないです。<wbr>最初の<wbr>1本に<wbr>最適です。<wbr>ただし、<wbr>女性には<wbr>おすすめしていません<wbr>（理由は上に<wbr>書いた<wbr>とおりです）。</li>
+      <li><strong>転スラ</strong>：明るく<wbr>見やすいです。<wbr>難しい<wbr>設定もなく<wbr>サクサク見られます。</li>
+      <li><strong>このすば</strong>：とにかく笑えます。<wbr>アニメ入門と<wbr>しても<wbr>最適な<wbr>軽さが<wbr>あります。</li>
     </ul>
 
     <h2 id="summary">まとめ</h2>
-    <p>異世界転生アニメは「チートで無双するだけ」と思われがちですが、今回紹介した10作品はそれぞれが独自の魅力を持った良作揃いです。転生という設定を活かしてどんなドラマを描くか——そこに各作品の個性が出ます。まだ見ていない作品があれば是非この機会にチェックしてみてください。</p></div>
+    <p>異世界転生アニメは<wbr>「チートで無双するだけ」と<wbr>思われがちですが、<wbr>今回紹介した<wbr>10作品は<wbr>それぞれが<wbr>独自の<wbr>魅力を<wbr>持った<wbr>良作揃いです。<wbr>転生という<wbr>設定を<wbr>活かして<wbr>どんな<wbr>ドラマを<wbr>描くか<wbr>——そこに<wbr>各作品の<wbr>個性が<wbr>出ます。まだ<wbr>見ていない<wbr>作品が<wbr>あればぜひこの<wbr>機会に<wbr>チェックしてみてください。</p></div>
 
   <a href="https://anime-db.jp/blog/" class="back-btn">← ブログ一覧に戻る</a>
 </div>

@@ -65,6 +65,13 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
 .footer-links{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;margin-bottom:16px}
 .footer-link{color:var(--text-muted);text-decoration:none;font-size:.85rem}.footer-link:hover{color:#fff}
 .copyright{font-size:.8rem;color:rgba(255,255,255,0.3)}
+/* 日本語の改行を自然にする設定（文節単位で改行・行頭禁則・1文字だけの行を避ける） */
+body{line-break:strict;overflow-wrap:break-word}
+@supports (word-break:auto-phrase){body{word-break:auto-phrase}}
+:has(> wbr){word-break:keep-all}
+p,li,dd,td,th{text-wrap:pretty}
+.nb{white-space:nowrap}
+h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-title,.pick-name,.next-article-title{text-wrap:balance}
 </style>
 </head>
 <body>
@@ -80,38 +87,38 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
   <div class="breadcrumb">
     <a href="https://anime-db.jp/">ホーム</a><span>›</span>
     <a href="https://anime-db.jp/blog/">ブログ</a><span>›</span>
-    2025年に見逃した隠れた名作アニメ18選
+    2025年に<wbr>見逃した<wbr>隠れた<wbr>名作アニメ18選
   </div>
 
   <span class="article-tag">💎 隠れた名作</span>
-  <h1 class="article-title">2025年に見逃した隠れた名作アニメ18選</h1>
+  <h1 class="article-title">2025年に<wbr>見逃した<wbr>隠れた<wbr>名作アニメ18選</h1>
   <div class="article-meta">
     <span>📅 2026年7月</span><span>✍️ ANIMEDB管理人</span><span>⏱ 読了目安：約9分</span>
   </div>
 
-  <div class="gem-point"><strong>管理人が「埋もれた名作」を見つける方法：</strong>Xのおすすめ欄と、Prime Videoの順位を見て、見つけています。2026年夏アニメなら、「さよならララ」がその例です。2026年の分は、まだこの記事のような形では書いていません。</div>
+  <div class="gem-point"><strong>管理人が<wbr>「埋もれた名作」を<wbr>見つける<wbr>方法：</strong>Xの<wbr>おすすめ欄と、<wbr>Prime Videoの<wbr>順位を<wbr>見て、<wbr>見つけています。<wbr>2026年夏アニメなら、<wbr>「さよならララ」がその<wbr>例です。<wbr>2026年の<wbr>分は、まだこの<wbr>記事のような<wbr>形では<wbr>書いていません。</div>
 
   <div class="toc">
-    <div class="toc-title">📋 作品一覧（全18作品）</div>
+    <div class="toc-title">📋 作品一覧<wbr>（全18作品）</div>
     <div class="toc-grid">
       <a href="#gem1">1. 空色ユーティリティ</a>
-      <a href="#gem2">2. ギルドの受付嬢ですが…</a>
-      <a href="#gem3">3. 笑顔の絶えない職場です。</a>
+      <a href="#gem2">2. ギルドの<wbr>受付嬢ですが…</a>
+      <a href="#gem3">3. 笑顔の<wbr>絶えない<wbr>職場です。</a>
       <a href="#gem4">4. Turkey!</a>
       <a href="#gem5">5. 九龍ジェネリックロマンス</a>
-      <a href="#gem6">6. 黒岩メダカに私の可愛いが通じない</a>
-      <a href="#gem7">7. 最後にひとつだけお願いしてもよろしいでしょうか</a>
-      <a href="#gem8">8. 友達の妹が俺にだけウザい</a>
-      <a href="#gem9">9. 永久のユウグレ</a>
-      <a href="#gem10">10. 忍者と殺し屋のふたりぐらし</a>
-      <a href="#gem11">11. 履いてください、鷹峰さん</a>
+      <a href="#gem6">6. 黒岩メダカに私の<wbr>可愛いが<wbr>通じない</a>
+      <a href="#gem7">7. 最後に<wbr>ひとつだけ<wbr>お願いしても<wbr>よろしいでしょうか</a>
+      <a href="#gem8">8. 友達の妹が<wbr>俺にだけウザい</a>
+      <a href="#gem9">9. 永久の<wbr>ユウグレ</a>
+      <a href="#gem10">10. 忍者と<wbr>殺し屋の<wbr>ふたりぐらし</a>
+      <a href="#gem11">11. 履いてください、<wbr>鷹峰さん</a>
       <a href="#gem12">12. ばっどがーる</a>
-      <a href="#gem13">13. 花は咲く、修羅の如く</a>
-      <a href="#gem14">14. 日々は過ぎれど飯うまし</a>
-      <a href="#gem15">15. フードコートでまた明日。</a>
-      <a href="#gem16">16. ブスに花束を。</a>
-      <a href="#gem17">17. ボールパークでつかまえて!</a>
-      <a href="#gem18">18. 帝乃三姉妹は案外、チョロい。</a>
+      <a href="#gem13">13. 花は<wbr>咲く、<wbr>修羅の如く</a>
+      <a href="#gem14">14. 日々は<wbr>過ぎれど<wbr>飯うまし</a>
+      <a href="#gem15">15. フードコートでまた<wbr>明日。</a>
+      <a href="#gem16">16. ブスに<wbr>花束を。</a>
+      <a href="#gem17">17. ボールパークで<wbr>つかまえて!</a>
+      <a href="#gem18">18. 帝乃三姉妹は<wbr>案外、<wbr>チョロい。</a>
     </div>
   </div>
 
@@ -122,11 +129,11 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
         <div class="gem-num">1</div>
         <div class="gem-title-block">
           <div class="gem-name"><a href="https://anime-sorairo-utility.com/" target="_blank" rel="noopener">空色ユーティリティ</a></div>
-          <div class="gem-sub">2025年 / 青春・スポーツ・日常</div>
+          <div class="gem-sub"><span class="nb">2025年</span> / <span class="nb">青春・スポーツ・日常</span></div>
         </div>
       </div>
-      <div class="gem-body">ゴルフ×青春を絶妙に描かれた作品です。主人公たちの関係性の変化が丁寧で、見ていて心がじんわり温かくなります。「大きな事件は起きないのに、何故か目が離せない」という作品です。派手さはないが、見終わった後には癒されます。</div>
-      <div class="gem-point"><strong>何故埋もれた？</strong> 同クールの大型作品に話題をかっさらわれたが、女子高生×ゴルフという青春物語としては負けていません。</div>
+      <div class="gem-body">ゴルフ×青春を<wbr>絶妙に<wbr>描かれた<wbr>作品です。<wbr>主人公たちの<wbr>関係性の<wbr>変化が<wbr>丁寧で、<wbr>見ていて心が<wbr>じんわり<wbr>温かくなります。<wbr>「大きな<wbr>事件は<wbr>起きないのに、<wbr>なぜか目が<wbr>離せない」という<wbr>作品です。<wbr>派手さは<wbr>ありませんが、<wbr>見終わった<wbr>後には<wbr>癒されます。</div>
+      <div class="gem-point"><strong>なぜ<wbr>埋もれた？</strong> 同クールの<wbr>大型作品に<wbr>話題を<wbr>かっさら<wbr>われましたが、<wbr>女子高生×ゴルフという<wbr>青春物語と<wbr>しては<wbr>負けていません。</div>
       <div class="streaming-row">
         <a href="https://animestore.docomo.ne.jp/" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
         <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -138,12 +145,12 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
       <div class="gem-header">
         <div class="gem-num">2</div>
         <div class="gem-title-block">
-          <div class="gem-name"><a href="https://girumasu.com/" target="_blank" rel="noopener">ギルドの受付嬢ですが、残業は嫌なのでボスをソロ討伐しようと思います</a></div>
-          <div class="gem-sub">2025年 / ファンタジー・コメディ</div>
+          <div class="gem-name"><a href="https://girumasu.com/" target="_blank" rel="noopener">ギルドの<wbr>受付嬢ですが、<wbr>残業は<wbr>嫌なので<wbr>ボスを<wbr>ソロ討伐しようと<wbr>思います</a></div>
+          <div class="gem-sub"><span class="nb">2025年</span> / <span class="nb">ファンタジー・コメディ</span></div>
         </div>
       </div>
-      <div class="gem-body">タイトルの長さで敬遠した人、今すぐ見てください。損してます。受付嬢という地味な立場の主人公が実は規格外の強さを持っており、そのギャップが毎話爆発します。仕事帰りに見ると一番効きます。「残業したくない」という共感しやすいモチベーションが軸にあるため、現代人に刺さるファンタジーコメディです。</div>
-      <div class="gem-point"><strong>推しポイント：</strong>主人公の「超然とした強さ」と「普通のOLマインド」のギャップが癖になります。</div>
+      <div class="gem-body">タイトルの<wbr>長さで<wbr>敬遠した<wbr>人、<wbr>今すぐ<wbr>見てください。<wbr>損してます。<wbr>受付嬢という<wbr>地味な<wbr>立場の<wbr>主人公が実は<wbr>規格外の<wbr>強さを<wbr>持っており、その<wbr>ギャップが毎話<wbr>爆発します。<wbr>仕事帰りに<wbr>見ると一番<wbr>効きます。<wbr>「残業したくない」という<wbr>共感しやすい<wbr>モチベーションが軸にある<wbr>ため、<wbr>現代人に<wbr>刺さる<wbr>ファンタジーコメディです。</div>
+      <div class="gem-point"><strong>推しポイント：</strong>主人公の<wbr>「超然とした強さ」と<wbr>「普通のOLマインド」の<wbr>ギャップが癖に<wbr>なります。</div>
       <div class="streaming-row">
         <a href="https://animestore.docomo.ne.jp/" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
         <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -156,12 +163,12 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
       <div class="gem-header">
         <div class="gem-num">3</div>
         <div class="gem-title-block">
-          <div class="gem-name"><a href="https://egatae.com/" target="_blank" rel="noopener">笑顔の絶えない職場です。</a></div>
-          <div class="gem-sub">2025年 / 日常・コメディ・ブラックユーモア</div>
+          <div class="gem-name"><a href="https://egatae.com/" target="_blank" rel="noopener">笑顔の<wbr>絶えない<wbr>職場です。</a></div>
+          <div class="gem-sub"><span class="nb">2025年</span> / <span class="nb">日常・コメディ・ブラックユーモア</span></div>
         </div>
       </div>
-      <div class="gem-body">タイトルから想像されるほのぼの系かと思いきや、漫画家の苦悩が全編に漂う作品です。「職場」というリアルな舞台設定で展開される人間模様が、笑えるのに少しだけ怖いです。見た後に「自分の職場も…」と考えてしまう、記憶に残るタイプの作品です。</div>
-      <div class="gem-point"><strong>推しポイント：</strong>タイトルと内容のギャップが最高です。見始めたら止まらなくなります。</div>
+      <div class="gem-body">タイトルから<wbr>想像されるほのぼの<wbr>系かと<wbr>思いきや、<wbr>漫画家の<wbr>苦悩が<wbr>全編に漂う<wbr>作品です。<wbr>「職場」という<wbr>リアルな<wbr>舞台設定で<wbr>展開される人間<wbr>模様が、<wbr>笑えるのに<wbr>少しだけ<wbr>怖いです。見た後に<wbr>「自分の職場も…」と<wbr>考えてしまう、<wbr>記憶に残る<wbr>タイプの<wbr>作品です。</div>
+      <div class="gem-point"><strong>推しポイント：</strong>タイトルと<wbr>内容の<wbr>ギャップが<wbr>最高です。<wbr>見始めたら<wbr>止まらなくなります。</div>
       <div class="streaming-row">
         <a href="https://animestore.docomo.ne.jp/" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
         <a href="https://egatae.com/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
@@ -173,11 +180,11 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
         <div class="gem-num">4</div>
         <div class="gem-title-block">
           <div class="gem-name"><a href="https://turkey-project.com/" target="_blank" rel="noopener">Turkey!</a></div>
-          <div class="gem-sub">2025年 / 青春・スポーツ・コメディ</div>
+          <div class="gem-sub"><span class="nb">2025年</span> / <span class="nb">青春・スポーツ・コメディ</span></div>
         </div>
       </div>
-      <div class="gem-body">ボウリングを題材にした青春スポーツアニメです。1話の最後で展開が変わり。最終話でなるほど繋がったと納得するアニメです。またキャラクター同士の掛け合いのテンポが絶妙に噛み合っています。ボウリングというニッチな題材がなんでこうなります！点に注目です。</div>
-      <div class="gem-point"><strong>推しポイント：</strong>「ボウリングアニメなんて…」という先入観を見事に覆してくれる作品です。</div>
+      <div class="gem-body">ボウリングを<wbr>題材にした<wbr>青春スポーツアニメです。<wbr>1話の<wbr>最後で<wbr>展開が<wbr>変わります。<wbr>最終話でなるほど<wbr>つながったと<wbr>納得する<wbr>アニメです。また<wbr>キャラクター同士の<wbr>掛け合いの<wbr>テンポが<wbr>絶妙に<wbr>噛み合っています。<wbr>「ボウリングという<wbr>ニッチな<wbr>題材が、<wbr>なんで<wbr>こうなります！」という点に<wbr>注目です。</div>
+      <div class="gem-point"><strong>推しポイント：</strong><wbr>「ボウリングアニメなんて…」という<wbr>先入観を<wbr>見事に<wbr>覆してくれる<wbr>作品です。</div>
       <div class="streaming-row">
         <a href="https://animestore.docomo.ne.jp/" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
         <a href="https://turkey-project.com/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
@@ -189,11 +196,11 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
         <div class="gem-num">5</div>
         <div class="gem-title-block">
           <div class="gem-name"><a href="https://kowloongr.jp/anime/" target="_blank" rel="noopener">九龍ジェネリックロマンス</a></div>
-          <div class="gem-sub">2025年 / ロマンス・SF・謎</div>
+          <div class="gem-sub"><span class="nb">2025年</span> / <span class="nb">ロマンス・SF・謎</span></div>
         </div>
       </div>
-      <div class="gem-body">九龍城砦をモデルにした雑然とした都市を舞台に、記憶と正体を巡る展開です。絵柄の独特な雰囲気と、九龍城砦をモデルとした再限度が凄いです。主人公周りの人間関係にも注目です。</div>
-      <div class="gem-point"><strong>推しポイント：</strong>他に類を見ない世界観です。最後まで見ると「もう一度見たい」と思う作品です。</div>
+      <div class="gem-body">九龍城砦を<wbr>モデルにした<wbr>雑然とした<wbr>都市を<wbr>舞台に、<wbr>記憶と<wbr>正体を巡る<wbr>展開です。<wbr>絵柄の<wbr>独特な<wbr>雰囲気と、<wbr>九龍城砦を<wbr>モデルとした<wbr>再限度が<wbr>すごいです。<wbr>主人公周りの人間<wbr>関係にも<wbr>注目です。</div>
+      <div class="gem-point"><strong>推しポイント：</strong>他に類を<wbr>見ない<wbr>世界観です。<wbr>最後まで<wbr>見ると<wbr>「もう一度見たい」と思う<wbr>作品です。</div>
       <div class="streaming-row">
         <a href="https://animestore.docomo.ne.jp/" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
         <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -206,12 +213,12 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
       <div class="gem-header">
         <div class="gem-num">6</div>
         <div class="gem-title-block">
-          <div class="gem-name"><a href="https://monaxmedaka.com/" target="_blank" rel="noopener">黒岩メダカに私の可愛いが通じない</a></div>
-          <div class="gem-sub">2025年 / ラブコメ・青春</div>
+          <div class="gem-name"><a href="https://monaxmedaka.com/" target="_blank" rel="noopener">黒岩メダカに私の<wbr>可愛いが<wbr>通じない</a></div>
+          <div class="gem-sub"><span class="nb">2025年</span> / <span class="nb">ラブコメ・青春</span></div>
         </div>
       </div>
-      <div class="gem-body">「可愛いが通じない」という設定から生まれる掛け合いの妙が本作の核心です。主人公の必死さと相手のリアクションのギャップが毎話笑えて、それでいてじわじわと距離が縮まる展開が気持ちいいです。ラブコメとして完成度が高く、王道を攻めながらしっかり新鮮に仕上げています。</div>
-      <div class="gem-point"><strong>推しポイント：</strong>毎話テンポよく進み、気づいたら全話見終わっています。ラブコメの教科書的な完成度です。</div>
+      <div class="gem-body">「可愛いが通じない」という<wbr>設定から<wbr>生まれる<wbr>掛け合いの妙が<wbr>本作の<wbr>核心です。<wbr>主人公の<wbr>必死さと<wbr>相手の<wbr>リアクションの<wbr>ギャップが<wbr>毎話笑えて、<wbr>それで<wbr>いてじわじわと<wbr>距離が<wbr>縮まる<wbr>展開が<wbr>気持ちいいです。<wbr>ラブコメとして<wbr>完成度が<wbr>高く、<wbr>王道を<wbr>攻めながらしっかり<wbr>新鮮に<wbr>仕上げています。</div>
+      <div class="gem-point"><strong>推しポイント：</strong>毎話テンポよく<wbr>進み、<wbr>気づいたら全話<wbr>見終わっています。<wbr>ラブコメの<wbr>教科書的な<wbr>完成度です。</div>
       <div class="streaming-row">
         <a href="https://animestore.docomo.ne.jp/" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
         <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -223,12 +230,12 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
       <div class="gem-header">
         <div class="gem-num">7</div>
         <div class="gem-title-block">
-          <div class="gem-name"><a href="https://saihito-anime.com/" target="_blank" rel="noopener">最後にひとつだけお願いしてもよろしいでしょうか</a></div>
-          <div class="gem-sub">2025年 / ロマンス・ファンタジー・感動</div>
+          <div class="gem-name"><a href="https://saihito-anime.com/" target="_blank" rel="noopener">最後に<wbr>ひとつだけ<wbr>お願いしても<wbr>よろしいでしょうか</a></div>
+          <div class="gem-sub"><span class="nb">2025年</span> / <span class="nb">ロマンス・ファンタジー・感動</span></div>
         </div>
       </div>
-      <div class="gem-body">主人公が幼少から受けたきた侮辱を。とある会場で変わります。とにかく。殴ります。身分なんか関係なく殴ります。ただし。切なさと温かさが絶妙に混ざり合ったいる作品です。ファンタジー世界で、キャラクターたちの感情が丁寧に積み上げられていきます。日常のストレスから解放されたいい人におすすめです。</div>
-      <div class="gem-point"><strong>推しポイント：</strong>ファンタジーと感情描写の融合が秀逸です。観たあとにスッキリします。</div>
+      <div class="gem-body">主人公が<wbr>幼少から<wbr>受けてきた<wbr>侮辱が、とある<wbr>会場で<wbr>変わります。<wbr>とにかく<wbr>殴ります。<wbr>身分なんか<wbr>関係なく<wbr>殴ります。<wbr>ただし、<wbr>切なさと<wbr>温かさが<wbr>絶妙に<wbr>混ざり合っている<wbr>作品です。<wbr>ファンタジー世界で、<wbr>キャラクターたちの<wbr>感情が<wbr>丁寧に<wbr>積み上げられていきます。<wbr>日常の<wbr>ストレスから<wbr>解放されたい人に<wbr>おすすめです。</div>
+      <div class="gem-point"><strong>推しポイント：</strong>ファンタジーと<wbr>感情描写の<wbr>融合が<wbr>秀逸です。観た<wbr>あとに<wbr>スッキリします。</div>
       <div class="streaming-row">
         <a href="https://animestore.docomo.ne.jp/" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
         <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -240,12 +247,12 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
       <div class="gem-header">
         <div class="gem-num">8</div>
         <div class="gem-title-block">
-          <div class="gem-name"><a href="https://www.imouza-animation.com/" target="_blank" rel="noopener">友達の妹が俺にだけウザい</a></div>
-          <div class="gem-sub">2025年 / ラブコメ・青春</div>
+          <div class="gem-name"><a href="https://www.imouza-animation.com/" target="_blank" rel="noopener">友達の妹が<wbr>俺にだけウザい</a></div>
+          <div class="gem-sub"><span class="nb">2025年</span> / <span class="nb">ラブコメ・青春</span></div>
         </div>
       </div>
-      <div class="gem-body">「ウザい」というネガティブな言葉がタイトルにある時点で既に只者ではありません。実際見てみると、そのウザさが可愛さに変換されていく過程が絶妙で、気づいたら主人公と同じ気持ちになっています。ラブコメのフォーマットをしっかり使いながら、キャラクターの個性が立っているため飽きません。</div>
-      <div class="gem-point"><strong>推しポイント：</strong>「ウザい→可愛い」への変換速度が天才的です。主人公に共感しやすいです。</div>
+      <div class="gem-body">「ウザい」という<wbr>ネガティブな<wbr>言葉が<wbr>タイトルにある<wbr>時点ですでに<wbr>只者ではありません。実際<wbr>見てみると、その<wbr>ウザさが<wbr>可愛さに<wbr>変換されていく<wbr>過程が<wbr>絶妙で、<wbr>気づいたら<wbr>主人公と同じ<wbr>気持ちに<wbr>なっています。<wbr>ラブコメの<wbr>フォーマットを<wbr>しっかり<wbr>使いながら、<wbr>キャラクターの<wbr>個性が<wbr>立っているため<wbr>飽きません。</div>
+      <div class="gem-point"><strong>推しポイント：</strong><wbr>「ウザい→可愛い」への<wbr>変換速度が<wbr>天才的です。<wbr>主人公に<wbr>共感しやすいです。</div>
       <div class="streaming-row">
         <a href="https://animestore.docomo.ne.jp/" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
         <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -258,11 +265,11 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
         <div class="gem-num">9</div>
         <div class="gem-title-block">
           <div class="gem-name"><a href="https://towanoyuugure.com/" target="_blank" rel="noopener">永久のユウグレ</a></div>
-          <div class="gem-sub">2025年 / SF・感動・ドラマ</div>
+          <div class="gem-sub"><span class="nb">2025年</span> / <span class="nb">SF・<wbr>感動・ドラマ</span></div>
         </div>
       </div>
-      <div class="gem-body">始まりは15年後。アンドロイドなどの技術が発展で、その開発者と主人公の恋愛から始まります。ただし事件が起きて主人公は数百年の未来へ。その関係者を探す旅が函館をイメージした街から東京に向けてスタートします。ディストピア化した世界にも注目です。SFとして見てもよし、感動系として見てもよし、どちらの角度からも楽しめる作品です。</div>
-      <div class="gem-point"><strong>推しポイント：</strong>世界観の作り込みが丁寧で、ビジュアルの美しさも見どころです。</div>
+      <div class="gem-body">始まりは<wbr>15年後です。<wbr>アンドロイドなどの<wbr>技術の<wbr>発展で、その<wbr>開発者と<wbr>主人公の<wbr>恋愛から<wbr>始まります。<wbr>ただし事件が<wbr>起き、<wbr>主人公は<wbr>数百年の<wbr>未来へ<wbr>飛びます。その<wbr>関係者を<wbr>探す旅が<wbr>函館を<wbr>イメージした<wbr>街から<wbr>東京に<wbr>向けて<wbr>スタートします。<wbr>ディストピア化した<wbr>世界にも<wbr>注目です。<wbr>SFとして<wbr>見ても<wbr>よし、<wbr>感動系として<wbr>見ても<wbr>よし、<wbr>どちらの<wbr>角度からも<wbr>楽しめる<wbr>作品です。</div>
+      <div class="gem-point"><strong>推しポイント：</strong>世界観の<wbr>作り込みが<wbr>丁寧で、<wbr>ビジュアルの<wbr>美しさも<wbr>見どころです。</div>
       <div class="streaming-row">
         <a href="https://animestore.docomo.ne.jp/" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
         <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -274,12 +281,12 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
       <div class="gem-header">
         <div class="gem-num">10</div>
         <div class="gem-title-block">
-          <div class="gem-name"><a href="https://ninkoro.jp/" target="_blank" rel="noopener">忍者と殺し屋のふたりぐらし</a></div>
-          <div class="gem-sub">2025年 / アクション・ラブコメ</div>
+          <div class="gem-name"><a href="https://ninkoro.jp/" target="_blank" rel="noopener">忍者と<wbr>殺し屋の<wbr>ふたりぐらし</a></div>
+          <div class="gem-sub"><span class="nb">2025年</span> / <span class="nb">アクション・ラブコメ</span></div>
         </div>
       </div>
-      <div class="gem-body">忍者と殺し屋が同居するというバカバカしい設定から始まりながら、ちゃんと心が温かくなる日常コメディに仕上がっています。アクションシーンのテンポも良く、二人のやり取りにじわじわと愛着が湧いてきます。「設定の強さ」に頼らず、キャラクターの関係性で勝負している作品です。</div>
-      <div class="gem-point"><strong>推しポイント：</strong>設定だけ見て敬遠するのは損です。温かい日常コメディとして完成度が高いです。</div>
+      <div class="gem-body">忍者と<wbr>殺し屋が<wbr>同居するという<wbr>バカバカしい<wbr>設定から<wbr>始まりながら、<wbr>ちゃんと心が<wbr>温かくなる<wbr>日常コメディに<wbr>仕上がっています。<wbr>アクションシーンの<wbr>テンポも<wbr>良く、<wbr>二人の<wbr>やり取りに<wbr>じわじわと<wbr>愛着が<wbr>湧いてきます。<wbr>「設定の強さ」に<wbr>頼らず、<wbr>キャラクターの<wbr>関係性で<wbr>勝負している<wbr>作品です。</div>
+      <div class="gem-point"><strong>推しポイント：</strong>設定だけ見て<wbr>敬遠するのは<wbr>損です。<wbr>温かい<wbr>日常コメディとして<wbr>完成度が<wbr>高いです。</div>
       <div class="streaming-row">
         <a href="https://animestore.docomo.ne.jp/" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
         <a href="https://ninkoro.jp/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
@@ -290,12 +297,12 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
       <div class="gem-header">
         <div class="gem-num">11</div>
         <div class="gem-title-block">
-          <div class="gem-name"><a href="https://takaminesan.com/" target="_blank" rel="noopener">履いてください、鷹峰さん</a></div>
-          <div class="gem-sub">2025年 / ラブコメ・日常</div>
+          <div class="gem-name"><a href="https://takaminesan.com/" target="_blank" rel="noopener">履いてください、<wbr>鷹峰さん</a></div>
+          <div class="gem-sub"><span class="nb">2025年</span> / <span class="nb">ラブコメ・日常</span></div>
         </div>
       </div>
-      <div class="gem-body">何故か下着を脱ぐと時間を戻せる女の子と、困惑しながらも気にかけてしまう主人公がメインの作品です。この奇妙な設定から始まるラブコメが、回を重ねるごとに純粋な恋愛アニメとして輝き始めます。シュールな笑いと真剣な感情描写のバランスが絶妙で、ジャンルを超えた面白さがあります。</div>
-      <div class="gem-point"><strong>推しポイント：</strong>一話目の「は？」という感覚を大切にして見続けると、必ずハマります。</div>
+      <div class="gem-body">なぜか<wbr>下着を<wbr>脱ぐと<wbr>時間を<wbr>戻せる女の<wbr>子と、<wbr>困惑しながらも気に<wbr>かけてしまう<wbr>主人公が<wbr>メインの<wbr>作品です。この<wbr>奇妙な<wbr>設定から<wbr>始まる<wbr>ラブコメが、回を<wbr>重ねる<wbr>ごとに<wbr>純粋な<wbr>恋愛アニメとして<wbr>輝き始めます。<wbr>シュールな笑いと<wbr>真剣な<wbr>感情描写の<wbr>バランスが<wbr>絶妙で、<wbr>ジャンルを<wbr>超えた<wbr>面白さが<wbr>あります。</div>
+      <div class="gem-point"><strong>推しポイント：</strong>一話目の<wbr>「は？」という<wbr>感覚を<wbr>大切にして<wbr>見続けると、必ず<wbr>ハマります。</div>
       <div class="streaming-row">
         <a href="https://animestore.docomo.ne.jp/" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
         <a href="https://takaminesan.com/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
@@ -307,11 +314,11 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
         <div class="gem-num">12</div>
         <div class="gem-title-block">
           <div class="gem-name"><a href="https://badgirl-anime.com/" target="_blank" rel="noopener">ばっどがーる</a></div>
-          <div class="gem-sub">2025年 / 青春・ドラマ</div>
+          <div class="gem-sub"><span class="nb">2025年</span> / <span class="nb">青春・ドラマ</span></div>
         </div>
       </div>
-      <div class="gem-body">タイトルから想像されるイメージと、実際の内容のギャップが本作の魅力です。不良っぽいキャラクターの内面に迫る青春ドラマとして、感情の描き方が丁寧です。「見た目と中身が違う」キャラクターの魅力を引き出す描写が秀逸で、気づいたらキャラクターたちを応援している自分がいます。</div>
-      <div class="gem-point"><strong>推しポイント：</strong>キャラクターの内面描写の丁寧さが際立っています。青春ドラマとして上質です。</div>
+      <div class="gem-body">タイトルから<wbr>想像される<wbr>イメージと、<wbr>実際の<wbr>内容の<wbr>ギャップが<wbr>本作の<wbr>魅力です。<wbr>不良っぽい<wbr>キャラクターの<wbr>内面に迫る<wbr>青春ドラマと<wbr>して、<wbr>感情の<wbr>描き方が<wbr>丁寧です。<wbr>「見た目と中身が違う」キャラクターの<wbr>魅力を<wbr>引き出す<wbr>描写が<wbr>秀逸で、<wbr>気づいたら<wbr>キャラクターたちを<wbr>応援している<wbr>自分が<wbr>います。</div>
+      <div class="gem-point"><strong>推しポイント：</strong>キャラクターの<wbr>内面描写の<wbr>丁寧さが<wbr>際立っています。<wbr>青春ドラマとして<wbr>上質です。</div>
       <div class="streaming-row">
         <a href="https://animestore.docomo.ne.jp/" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
         <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -323,12 +330,12 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
       <div class="gem-header">
         <div class="gem-num">13</div>
         <div class="gem-title-block">
-          <div class="gem-name"><a href="https://hanashura-anime.com/" target="_blank" rel="noopener">花は咲く、修羅の如く</a></div>
-          <div class="gem-sub">2025年 / 青春・落語・ドラマ / StudioBind</div>
+          <div class="gem-name"><a href="https://hanashura-anime.com/" target="_blank" rel="noopener">花は<wbr>咲く、<wbr>修羅の如く</a></div>
+          <div class="gem-sub"><span class="nb">2025年</span> / <span class="nb">青春・落語・ドラマ</span> / <span class="nb">StudioBind</span></div>
         </div>
       </div>
-      <div class="gem-body">「無職転生」を作ったStudioBindが手掛けた小さな街の高校の放送部を描いた青春アニメです。ありがちなテーマにしながら、現代の青春ドラマとして見事に成立しています。主人公たちの成長と葛藤の描写がとにかく熱いです。</div>
-      <div class="gem-point"><strong>推しポイント：</strong>StudioBind×ありがちなテーマがが組み合わせっています。観た後に癒されたという感覚になります。</div>
+      <div class="gem-body">「無職転生」を<wbr>作った<wbr>StudioBindが<wbr>手掛けた<wbr>小さな街の<wbr>高校の<wbr>放送部を<wbr>描いた<wbr>青春アニメです。<wbr>ありがちな<wbr>テーマにしながら、<wbr>現代の<wbr>青春ドラマとして<wbr>見事に<wbr>成立しています。<wbr>主人公たちの<wbr>成長と<wbr>葛藤の<wbr>描写がとにかく<wbr>熱いです。</div>
+      <div class="gem-point"><strong>推しポイント：</strong>StudioBind×<wbr>ありがちな<wbr>テーマがが<wbr>組み合わせっています。観た後に<wbr>癒されたという<wbr>感覚に<wbr>なります。</div>
       <div class="streaming-row">
         <a href="https://animestore.docomo.ne.jp/" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
         <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -341,12 +348,12 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
       <div class="gem-header">
         <div class="gem-num">14</div>
         <div class="gem-title-block">
-          <div class="gem-name"><a href="https://hibimeshi.com/" target="_blank" rel="noopener">日々は過ぎれど飯うまし</a></div>
-          <div class="gem-sub">2025年 / 日常・グルメ・癒し</div>
+          <div class="gem-name"><a href="https://hibimeshi.com/" target="_blank" rel="noopener">日々は<wbr>過ぎれど<wbr>飯うまし</a></div>
+          <div class="gem-sub"><span class="nb">2025年</span> / <span class="nb">日常・グルメ・癒し</span></div>
         </div>
       </div>
-      <div class="gem-body">タイトル通り、日常と食事の組み合わせを丁寧に描いた癒し系作品です。ご飯の描写が美しく、見ていると無条件にお腹が空いてきます。それだけでなく、登場人物たちの「日常のちょっとした積み重ね」が温かく描かれており、見終わった後に「今日もちゃんと生きよう」という気持ちになれます。</div>
-      <div class="gem-point"><strong>推しポイント：</strong>疲れた時に見ると効きます。究極の「癒し枠」です。飯テロ注意。</div>
+      <div class="gem-body">タイトル通り、<wbr>日常と<wbr>食事の<wbr>組み合わせを<wbr>丁寧に<wbr>描いた<wbr>癒し系作品です。<wbr>ご飯の<wbr>描写が<wbr>美しく、<wbr>見ていると<wbr>無条件に<wbr>お腹が<wbr>空いてきます。<wbr>それだけでなく、<wbr>登場人物たちの<wbr>「日常の<wbr>ちょっとした<wbr>積み重ね」が<wbr>温かく<wbr>描かれており、<wbr>見終わった後に<wbr>「今日も<wbr>ちゃんと<wbr>生きよう」という<wbr>気持ちに<wbr>なれます。</div>
+      <div class="gem-point"><strong>推しポイント：</strong>疲れた時に<wbr>見ると<wbr>効きます。<wbr>究極の<wbr>「癒し枠」です。<wbr>飯テロ注意です。</div>
       <div class="streaming-row">
         <a href="https://animestore.docomo.ne.jp/" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
         <a href="https://hibimeshi.com/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
@@ -357,12 +364,12 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
       <div class="gem-header">
         <div class="gem-num">15</div>
         <div class="gem-title-block">
-          <div class="gem-name"><a href="https://www.foodcourtjk-anime.com/" target="_blank" rel="noopener">フードコートでまた明日。</a></div>
-          <div class="gem-sub">2025年 / 日常・青春・ほっこり</div>
+          <div class="gem-name"><a href="https://www.foodcourtjk-anime.com/" target="_blank" rel="noopener">フードコートでまた<wbr>明日。</a></div>
+          <div class="gem-sub"><span class="nb">2025年</span> / <span class="nb">日常・青春・<wbr>ほっこり</span></div>
         </div>
       </div>
-      <div class="gem-body">フードコートという誰もが知っている舞台で繰り広げられる、ちょっとした日常の物語です。派手な展開は一切ありませんが、その分キャラクターたちの「何でもない会話」がリアルで温かいです。ぼんやり見ているつもりが、気づいたらキャラクターたちを好きになっています。「またここに来たい」と思わせる作品です。</div>
-      <div class="gem-point"><strong>推しポイント：</strong>フードコートに行きたくなります。人が集まる場所の温かさを思い出させてくれる作品です。</div>
+      <div class="gem-body">フードコートという<wbr>誰もが<wbr>知っている<wbr>舞台で<wbr>繰り広げられる、<wbr>ちょっとした<wbr>日常の<wbr>物語です。<wbr>派手な<wbr>展開は<wbr>一切ありませんが、その<wbr>分キャラクターたちの<wbr>「何でもない会話」が<wbr>リアルで<wbr>温かいです。<wbr>ぼんやり<wbr>見ている<wbr>つもりが、<wbr>気づいたら<wbr>キャラクターたちを<wbr>好きに<wbr>なっています。<wbr>「またここに来たい」と<wbr>思わせる<wbr>作品です。</div>
+      <div class="gem-point"><strong>推しポイント：</strong>フードコートに<wbr>行きたくなります。人が<wbr>集まる<wbr>場所の<wbr>温かさを<wbr>思い出させてくれる<wbr>作品です。</div>
       <div class="streaming-row">
         <a href="https://animestore.docomo.ne.jp/" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
         <a href="https://www.foodcourtjk-anime.com/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
@@ -374,11 +381,11 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
         <div class="gem-num">16</div>
         <div class="gem-title-block">
           <div class="gem-name"><a href="https://busunihanatabawo.com/" target="_blank" rel="noopener">ブスに花束を。</a></div>
-          <div class="gem-sub">2025年 / 青春・ロマンス・ドラマ</div>
+          <div class="gem-sub"><span class="nb">2025年</span> / <span class="nb">青春・ロマンス・ドラマ</span></div>
         </div>
       </div>
-      <div class="gem-body">タイトルの強さに圧倒されるが、内容は美しい青春ラブストーリーです。「ブス」と認識している主人公が周りとのギャップに驚いて展開が進む点に注目です。自分の見え方が変わっていく物語です。外見コンプレックスというリアルなテーマに正面から向き合いながら、単なる差別にならずに昇華しています。</div>
-      <div class="gem-point"><strong>推しポイント：</strong>タイトルの強さと内容の繊細さのギャップが本作の魅力です。自己肯定感の話として深いです。</div>
+      <div class="gem-body">タイトルの<wbr>強さに<wbr>圧倒されますが、<wbr>内容は<wbr>美しい<wbr>青春ラブストーリーです。<wbr>「ブス」と<wbr>認識している<wbr>主人公が<wbr>周りとの<wbr>ギャップに<wbr>驚いて<wbr>展開が<wbr>進む点に<wbr>注目です。<wbr>自分の<wbr>見え方が<wbr>変わっていく<wbr>物語です。<wbr>外見コンプレックスという<wbr>リアルな<wbr>テーマに<wbr>正面から<wbr>向き合いながら、<wbr>単なる<wbr>差別に<wbr>ならずに<wbr>昇華しています。</div>
+      <div class="gem-point"><strong>推しポイント：</strong>タイトルの<wbr>強さと<wbr>内容の<wbr>繊細さの<wbr>ギャップが<wbr>本作の<wbr>魅力です。<wbr>自己肯定感の話として<wbr>深いです。</div>
       <div class="streaming-row">
         <a href="https://animestore.docomo.ne.jp/" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
         <a href="https://busunihanatabawo.com/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
@@ -389,12 +396,12 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
       <div class="gem-header">
         <div class="gem-num">17</div>
         <div class="gem-title-block">
-          <div class="gem-name"><a href="https://anime-ballpark.com/" target="_blank" rel="noopener">ボールパークでつかまえて!</a></div>
-          <div class="gem-sub">2025年 / スポーツ・青春・コメディ</div>
+          <div class="gem-name"><a href="https://anime-ballpark.com/" target="_blank" rel="noopener">ボールパークで<wbr>つかまえて!</a></div>
+          <div class="gem-sub"><span class="nb">2025年</span> / <span class="nb">スポーツ・青春・コメディ</span></div>
         </div>
       </div>
-      <div class="gem-body">野球場（ボールパーク）を舞台にした青春コメディです。試合そのものではなく、球場で働くスタッフや観客側の視点で描かれる物語が新鮮です。野球が好きでなくても楽しめるし、野球ファンなら更に刺さる仕掛けが随所にあります。テンポが良く、笑いと感動のバランスが心地よいです。</div>
-      <div class="gem-point"><strong>推しポイント：</strong>「球場の裏側」という視点が新しいです。野球アニメの新ジャンルを開拓した作品です。</div>
+      <div class="gem-body">野球場<wbr>（ボールパーク）を<wbr>舞台にした<wbr>青春コメディです。試合その<wbr>ものではなく、<wbr>球場で働く<wbr>スタッフや<wbr>観客側の<wbr>視点で<wbr>描かれる<wbr>物語が<wbr>新鮮です。<wbr>野球が<wbr>好きでなくても<wbr>楽しめるし、<wbr>野球ファンならさらに<wbr>刺さる<wbr>仕掛けが<wbr>随所に<wbr>あります。<wbr>テンポが<wbr>良く、<wbr>笑いと<wbr>感動の<wbr>バランスが<wbr>心地よいです。</div>
+      <div class="gem-point"><strong>推しポイント：</strong><wbr>「球場の裏側」という<wbr>視点が<wbr>新しいです。<wbr>野球アニメの<wbr>新ジャンルを<wbr>開拓した<wbr>作品です。</div>
       <div class="streaming-row">
         <a href="https://animestore.docomo.ne.jp/" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
         <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -406,12 +413,12 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
       <div class="gem-header">
         <div class="gem-num">18</div>
         <div class="gem-title-block">
-          <div class="gem-name"><a href="https://mikadono.family/" target="_blank" rel="noopener">帝乃三姉妹は案外、チョロい。</a></div>
-          <div class="gem-sub">2025年 / ラブコメ・ハーレム・コメディ</div>
+          <div class="gem-name"><a href="https://mikadono.family/" target="_blank" rel="noopener">帝乃三姉妹は<wbr>案外、<wbr>チョロい。</a></div>
+          <div class="gem-sub"><span class="nb">2025年</span> / <span class="nb">ラブコメ・ハーレム・コメディ</span></div>
         </div>
       </div>
-      <div class="gem-body">「チョロい」という言葉が本作の全てを表しています。帝乃三姉妹が主人公(ポンコツ)に対しての接し方が話が進むにつれ変わる点に注目です。そして帝乃三姉妹はチョロいという設定に気付きます。帝乃三姉妹はその分野でのTOPです。それに主人公(ポンコツ)が絡むシーンは秀逸です</div>
-      <div class="gem-point"><strong>推しポイント：</strong>帝乃三姉妹はその分野(歌劇団・空手・将棋)でのTOPです。でも主人公(ポンコツ)と接すると帝乃三姉妹がチョロく感じます。ラブコメとしての幸福感が高いです。</div>
+      <div class="gem-body">「チョロい」という<wbr>言葉が<wbr>本作の<wbr>全てを<wbr>表しています。<wbr>帝乃三姉妹が<wbr>主人公<wbr>（ポンコツ）に<wbr>対しての<wbr>接し方が話が<wbr>進むに<wbr>つれ変わる点に<wbr>注目です。<wbr>そして<wbr>帝乃三姉妹は<wbr>チョロいという<wbr>設定に<wbr>気づきます。<wbr>帝乃三姉妹はその<wbr>分野での<wbr>TOPです。<wbr>それに<wbr>主人公<wbr>（ポンコツ）が<wbr>絡むシーンは<wbr>秀逸です</div>
+      <div class="gem-point"><strong>推しポイント：</strong>帝乃三姉妹はその分野<wbr>（歌劇団・空手・将棋）での<wbr>TOPです。でも<wbr>主人公<wbr>（ポンコツ）と<wbr>接すると<wbr>帝乃三姉妹が<wbr>チョロく<wbr>感じます。<wbr>ラブコメと<wbr>しての<wbr>幸福感が<wbr>高いです。</div>
       <div class="streaming-row">
         <a href="https://animestore.docomo.ne.jp/" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
         <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -420,8 +427,8 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
     </div>
 
     <h2>まとめ</h2>
-    <p>隠れた名作は毎クール必ずあります。話題になっていないからといって面白くないわけではなく、むしろ話題作の陰で静かに輝いている作品に出会えたときの感動は格別です。今回紹介した18本、是非配信でチェックしてみてください。</p>
-    <p>ANIMEDBは、こういう「埋もれかけている名作」を見つける手助けが出来るサイトでありたいと思っています。また気になった作品があればXやInstagramでも感想をお送りください。</p>
+    <p>隠れた<wbr>名作は<wbr>毎クール必ず<wbr>あります。<wbr>話題に<wbr>なっていないからと<wbr>いって<wbr>面白くないわけではなく、<wbr>むしろ<wbr>話題作の陰で<wbr>静かに<wbr>輝いている<wbr>作品に<wbr>出会えた<wbr>ときの<wbr>感動は<wbr>格別です。<wbr>今回紹介した<wbr>18本、<wbr>ぜひ配信で<wbr>チェックしてみてください。</p>
+    <p>ANIMEDBは、<wbr>こういう<wbr>「埋もれかけている名作」を<wbr>見つける<wbr>手助けが<wbr>できる<wbr>サイトでありたいと<wbr>思っています。また気に<wbr>なった<wbr>作品が<wbr>あればXや<wbr>Instagramでも<wbr>感想を<wbr>お送りください。</p>
   </div>
 
   <a href="https://anime-db.jp/blog/" class="back-btn">← ブログ一覧に戻る</a>

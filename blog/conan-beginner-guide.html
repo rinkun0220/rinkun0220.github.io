@@ -79,6 +79,13 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
 .footer-link{color:var(--text-muted);text-decoration:none;font-size:.85rem}.footer-link:hover{color:#fff}
 .copyright{font-size:.8rem;color:rgba(255,255,255,0.3)}
 .related-guides{margin:40px 0 28px;padding:22px 24px;background:var(--bg-card);border:1px solid var(--border-color);border-radius:14px}.related-guides-title{font-size:1.05rem;font-weight:700;color:#fff;margin:0 0 14px}.related-guides ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}.related-guides a{display:block;text-decoration:none;padding:12px 14px;border:1px solid var(--border-color);border-radius:10px;transition:border-color .2s,background .2s}.related-guides a:hover{border-color:var(--accent);background:rgba(255,255,255,0.03)}.related-guides .rg-name{display:block;color:#fff;font-weight:700;font-size:.95rem;line-height:1.5}.related-guides .rg-desc{display:block;color:var(--text-muted);font-size:.82rem;line-height:1.7;margin-top:2px}
+/* 日本語の改行を自然にする設定（文節単位で改行・行頭禁則・1文字だけの行を避ける） */
+body{line-break:strict;overflow-wrap:break-word}
+@supports (word-break:auto-phrase){body{word-break:auto-phrase}}
+:has(> wbr){word-break:keep-all}
+p,li,dd,td,th{text-wrap:pretty}
+.nb{white-space:nowrap}
+h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-title,.pick-name,.next-article-title{text-wrap:balance}
 </style>
 </head>
 <body>
@@ -98,119 +105,119 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
   </div>
 
   <span class="article-tag">🕵️ 名探偵コナン特集</span>
-  <h1 class="article-title">名探偵コナン初心者ガイド<br>【親から子へ、今から見せるならこの順番で】</h1>
+  <h1 class="article-title">名探偵コナン<wbr>初心者ガイド<br>【親から<wbr>子へ、<wbr>今から<wbr>見せるならこの<wbr>順番で】</h1>
   <div class="article-meta">
     <span>📅 2026年9月更新</span><span>✍️ ANIMEDB管理人</span><span>⏱ 読了目安：約9分</span>
   </div>
 
   <div class="alert-box">
-    <strong>🕵️ 原作・アニメ8割、劇場版は全29作品視聴済み</strong><br>
-    管理人自身が子供の頃から追いかけてきたシリーズです。自分の子供世代に「そろそろ見せてみようかな」というタイミングが来たので、これから初めて名探偵コナンに触れる小学生高学年くらいのお子さんと、それを見せる親世代の両方に向けて、無理なく入っていける道筋をまとめました。
+    <strong>🕵️ 原作・アニメ8割、<wbr>劇場版は<wbr>全29作品視聴済み</strong><br>
+    管理人自身が<wbr>子供の<wbr>頃から<wbr>追いかけてきた<wbr>シリーズです。<wbr>自分の<wbr>子供世代に<wbr>「そろそろ<wbr>見せてみようかな」という<wbr>タイミングが<wbr>来たので、<wbr>これから<wbr>初めて<wbr>名探偵コナンに<wbr>触れる<wbr>小学生高学年くらいの<wbr>お子さんと、<wbr>それを<wbr>見せる<wbr>親世代の<wbr>両方に<wbr>向けて、<wbr>無理なく<wbr>入っていける<wbr>道筋を<wbr>まとめました。
   </div>
 
   <div class="toc">
-    <div class="toc-title">📋 このページの構成</div>
+    <div class="toc-title">📋 この<wbr>ページの構成</div>
     <div class="toc-grid">
-      <a href="#start">1. どこから見始めるべきか</a>
-      <a href="#episodes">2. 序盤の観るべき回をピックアップ</a>
-      <a href="#movies">3. 映画から入るならこの6本</a>
-      <a href="#anime-original">4. アニオリとの付き合い方</a>
-      <a href="#manga">5. 原作で追う場合のペース感</a>
-      <a href="#next">6. 次のステップ</a>
+      <a href="#start">1. どこから<wbr>見始める<wbr>べきか</a>
+      <a href="#episodes">2. 序盤の<wbr>観るべき回を<wbr>ピックアップ</a>
+      <a href="#movies">3. 映画から<wbr>入るならこの<wbr>6本</a>
+      <a href="#anime-original">4. アニオリとの<wbr>付き合い<wbr>方</a>
+      <a href="#manga">5. 原作で追う<wbr>場合の<wbr>ペース感</a>
+      <a href="#next">6. 次の<wbr>ステップ</a>
     </div>
   </div>
 
   <div class="article-body">
 
-    <h2 id="start">1. どこから見始めるべきか</h2>
-    <p>まず知っておいてほしいのが、名探偵コナンは1996年にアニメ放送が始まり、2026年1月時点でテレビアニメだけで1188話、劇場版は今年公開の最新作を含めて通算29作品というとんでもないボリュームのシリーズだということです。全部を1話から見ようとすると、単純計算でも500時間を超えます。</p>
+    <h2 id="start">1. どこから<wbr>見始める<wbr>べきか</h2>
+    <p>まず<wbr>知って<wbr>おいてほしいのが、<wbr>名探偵コナンは<wbr>1996年に<wbr>アニメ放送が<wbr>始まり、<wbr>2026年1月時点で<wbr>TVアニメだけで<wbr>1188話、<wbr>劇場版は<wbr>今年公開の<wbr>最新作を<wbr>含めて<wbr>通算29作品と<wbr>いうとんでもない<wbr>ボリュームの<wbr>シリーズだという<wbr>ことです。<wbr>全部を<wbr>1話から<wbr>見ようと<wbr>すると、<wbr>単純計算でも<wbr>500時間を<wbr>超えます。</p>
     <div class="stat-row">
       <div class="stat-box"><div class="stat-num">1996年〜</div><div class="stat-label">アニメ放送開始</div></div>
       <div class="stat-box"><div class="stat-num">1188話</div><div class="stat-label">2026年1月時点</div></div>
-      <div class="stat-box"><div class="stat-num">29作品</div><div class="stat-label">劇場版（2026年時点）</div></div>
+      <div class="stat-box"><div class="stat-num">29作品</div><div class="stat-label">劇場版<wbr>（2026年時点）</div></div>
     </div>
-    <p>だからこそ、子供に「1話から全部見せなきゃ」と気負う必要はありません。おすすめは、まず次で紹介する序盤の数話で基本設定（工藤新一が何故江戸川コナンになったのか）だけ押さえてから、単発で楽しめる劇場版に寄り道する、という入り方です。本編は気に入った時に少しずつ追いつけばよく、むしろ「腰を据えて全部見る」より「気になったところから摘み食いする」方が、長寿シリーズとの付き合い方としては続きやすいと感じています。</p>
+    <p>だからこそ、<wbr>子供に<wbr>「1話から全部<wbr>見せなきゃ」と<wbr>気負う<wbr>必要は<wbr>ありません。<wbr>おすすめは、まず次で<wbr>紹介する<wbr>序盤の<wbr>数話で<wbr>基本設定<wbr>（工藤新一が<wbr>なぜ江戸川コナンに<wbr>なったのか）だけ押さえてから、<wbr>単発で<wbr>楽しめる<wbr>劇場版に<wbr>寄り道する、という<wbr>入り方です。<wbr>本編は<wbr>気に入った時に<wbr>少しずつ<wbr>追いつけば<wbr>よく、<wbr>むしろ<wbr>「腰を据えて全部見る」より<wbr>「気に<wbr>なった<wbr>ところから<wbr>摘み食いする」方が、<wbr>長寿シリーズとの<wbr>付き合い方と<wbr>しては<wbr>続きやすいと<wbr>感じています。</p>
 
-    <h2 id="episodes">2. 序盤の観るべき回をピックアップ</h2>
-    <p>本編を1話から見る場合、最低限ここまでは押さえておきたいという回を選びました。</p>
-    <div class="diff-note"><strong>原作漫画とは差異があります。</strong>ここで紹介する回は、アニメ版の内容をもとにしています。放送初期のアニメは、原作漫画と展開や登場人物の出番が異なる回（アニメオリジナルの回を含む）があるため、アニメを見てから原作を読むと「あれ？」と混乱することがあります。違いがあるものと思って、気軽に楽しんでください。</div>
+    <h2 id="episodes">2. 序盤の<wbr>観るべき回を<wbr>ピックアップ</h2>
+    <p>本編を<wbr>1話から見る<wbr>場合、<wbr>最低限ここまでは<wbr>押さえて<wbr>おきたいという回を<wbr>選びました。</p>
+    <div class="diff-note"><strong>原作漫画とは<wbr>差異が<wbr>あります。</strong><wbr>ここで<wbr>紹介する<wbr>回は、<wbr>アニメ版の<wbr>内容を<wbr>もとにしています。<wbr>放送初期の<wbr>アニメは、<wbr>原作漫画と<wbr>展開や<wbr>登場人物の<wbr>出番が<wbr>異なる回<wbr>（アニメオリジナルの回を<wbr>含む）がある<wbr>ため、<wbr>アニメを<wbr>見てから<wbr>原作を<wbr>読むと<wbr>「あれ？」と<wbr>混乱する<wbr>ことがあります。<wbr>違いがある<wbr>ものと<wbr>思って、<wbr>気軽に<wbr>楽しんでください。</div>
 
     <div class="gem-card">
       <div class="gem-header">
         <div class="gem-num">1</div>
         <div class="gem-title-block">
-          <div class="gem-name">第1話「ジェットコースター殺人事件」</div>
+          <div class="gem-name">第1話<wbr>「ジェットコースター殺人事件」</div>
           <div class="gem-sub">1996年1月8日放送</div>
         </div>
       </div>
-      <div class="gem-body">シリーズ全ての出発点です。高校生探偵・工藤新一が、謎の組織に薬を飲まされて体を小学生に縮められてしまう、という基本設定がここで語られます。ここを見ずに他の回から入ると、コナンの正体を知っている前提の話がほとんどなので混乱してしまいます。</div>
-      <div class="gem-point"><strong>ここだけは外せない：</strong>コナンが何故小学生の姿なのか、という一番の謎がここで明かされます。</div>
+      <div class="gem-body">シリーズ全ての<wbr>出発点です。<wbr>高校生探偵・工藤新一が、謎の<wbr>組織に薬を<wbr>飲まされて体を<wbr>小学生に<wbr>縮められてしまう、という<wbr>基本設定が<wbr>ここで<wbr>語られます。<wbr>ここを<wbr>見ずに他の<wbr>回から<wbr>入ると、<wbr>コナンの<wbr>正体を<wbr>知っている<wbr>前提の話が<wbr>ほとんどなので<wbr>混乱してしまいます。</div>
+      <div class="gem-point"><strong>ここだけは<wbr>外せない：</strong>コナンがなぜ<wbr>小学生の<wbr>姿なのか、という<wbr>一番の謎が<wbr>ここで<wbr>明かされます。</div>
     </div>
 
     <div class="gem-card">
       <div class="gem-header">
         <div class="gem-num">2</div>
         <div class="gem-title-block">
-          <div class="gem-name">第2話「社長令嬢誘拐事件」</div>
+          <div class="gem-name">第2話<wbr>「社長令嬢誘拐事件」</div>
           <div class="gem-sub">1996年1月15日放送</div>
         </div>
       </div>
-      <div class="gem-body">コナンが毛利小五郎・蘭の毛利探偵事務所に居候することになった経緯が描かれる回です。「江戸川コナン」という名前がどう決まったかもここで分かります（原作漫画では第1話にあたるFILE.1に含まれる場面で、アニメでは第2話に描かれます）。以降の話の舞台となる毛利探偵事務所が登場する、生活面での基本設定回です。</div>
-      <div class="gem-point"><strong>ここが分かる：</strong>コナンが何故毛利探偵事務所で暮らしているのか。</div>
+      <div class="gem-body">コナンが<wbr>毛利小五郎・蘭の<wbr>毛利探偵事務所に<wbr>居候する<wbr>ことになった<wbr>経緯が<wbr>描かれる<wbr>回です。<wbr>「江戸川コナン」という<wbr>名前がどう<wbr>決まったかも<wbr>ここで<wbr>分かります<wbr>（原作漫画では<wbr>第1話に<wbr>あたる<wbr>FILE.1に<wbr>含まれる<wbr>場面で、<wbr>アニメでは<wbr>第2話に<wbr>描かれます）。<wbr>以降の話の<wbr>舞台となる<wbr>毛利探偵事務所が<wbr>登場する、<wbr>生活面での<wbr>基本設定回です。</div>
+      <div class="gem-point"><strong>ここが<wbr>分かる：</strong>コナンがなぜ<wbr>毛利探偵事務所で<wbr>暮らしているのかという<wbr>点です。</div>
     </div>
 
     <div class="gem-card">
       <div class="gem-header">
         <div class="gem-num">3</div>
         <div class="gem-title-block">
-          <div class="gem-name">第3話「アイドル密室殺人事件」</div>
+          <div class="gem-name">第3話<wbr>「アイドル密室殺人事件」</div>
           <div class="gem-sub">1996年1月22日放送</div>
         </div>
       </div>
-      <div class="gem-body">阿笠博士が発明した蝶ネクタイ型変声機が初めて登場し、コナンが小五郎の声を借りて推理を披露する「眠りの小五郎」のスタイルが初めて見られる回です。小五郎を眠らせる腕時計型麻酔銃は、アニメでは次に紹介する第6話から登場します。以降の話の「お約束」を理解するための回です。</div>
-      <div class="gem-point"><strong>ここが分かる：</strong>コナンが事件を解決する時の、お決まりの推理スタイル。</div>
+      <div class="gem-body">阿笠博士が<wbr>発明した<wbr>蝶ネクタイ型変声機が<wbr>初めて<wbr>登場し、<wbr>コナンが<wbr>小五郎の声を<wbr>借りて<wbr>推理を<wbr>披露する<wbr>「眠りの小五郎」の<wbr>スタイルが<wbr>初めて<wbr>見られる<wbr>回です。<wbr>小五郎を<wbr>眠らせる<wbr>腕時計型麻酔銃は、<wbr>アニメでは次に<wbr>紹介する<wbr>第6話から<wbr>登場します。<wbr>以降の話の<wbr>「お約束」を<wbr>理解する<wbr>ための<wbr>回です。</div>
+      <div class="gem-point"><strong>ここが<wbr>分かる：</strong>コナンが<wbr>事件を<wbr>解決する<wbr>時の、<wbr>お決まりの<wbr>推理スタイルです。</div>
     </div>
 
     <div class="gem-card">
       <div class="gem-header">
         <div class="gem-num">4</div>
         <div class="gem-title-block">
-          <div class="gem-name">第6話「バレンタイン殺人事件」</div>
+          <div class="gem-name">第6話<wbr>「バレンタイン殺人事件」</div>
           <div class="gem-sub">1996年2月12日放送</div>
         </div>
       </div>
-      <div class="gem-body">コナンの代名詞ともいえる腕時計型麻酔銃が、初めて登場する回です。この麻酔銃で毛利小五郎を眠らせ、蝶ネクタイ型変声機で声を借りて推理を披露するという「眠りの小五郎」のお約束が、ここで出そろいます。</div>
-      <div class="gem-point"><strong>ここが分かる：</strong>コナンが小五郎を眠らせて推理させる仕組みと、もう一つのお約束。</div>
+      <div class="gem-body">コナンの<wbr>代名詞とも<wbr>いえる<wbr>腕時計型麻酔銃が、<wbr>初めて<wbr>登場する<wbr>回です。この<wbr>麻酔銃で<wbr>毛利小五郎を<wbr>眠らせ、<wbr>蝶ネクタイ型変声機で声を<wbr>借りて<wbr>推理を<wbr>披露するという<wbr>「眠りの小五郎」の<wbr>お約束が、<wbr>ここで<wbr>出そろいます。</div>
+      <div class="gem-point"><strong>ここが<wbr>分かる：</strong>コナンが<wbr>小五郎を<wbr>眠らせて<wbr>推理させる<wbr>仕組みと、もう<wbr>一つの<wbr>お約束です。</div>
     </div>
 
     <div class="gem-card">
       <div class="gem-header">
         <div class="gem-num">5</div>
         <div class="gem-title-block">
-          <div class="gem-name">第128話「黒の組織10億円強奪事件」</div>
+          <div class="gem-name">第128話<wbr>「黒の<wbr>組織10億円強奪事件」</div>
           <div class="gem-sub">1998年12月14日放送</div>
         </div>
       </div>
-      <div class="gem-body">後にコナンの仲間になる灰原哀（正体は宮野志保）の姉・宮野明美が、原作の設定に合わせて描かれる回です。アニメでは、これより前の放送初期（1996年）にも一度登場しており、原作の展開とすり合わせるために、この回であらためて宮野明美として登場しました。妹を組織から抜けさせようとする姉の想いが描かれる、シリーズ屈指の切ない回で、灰原哀というキャラクターの背景を理解するうえで欠かせません。</div>
-      <div class="gem-point"><strong>ここが分かる：</strong>のちに仲間になる灰原哀が、何故組織から逃げてきたのか。</div>
+      <div class="gem-body">後に<wbr>コナンの<wbr>仲間になる<wbr>灰原哀<wbr>（正体は宮野志保）の<wbr>姉・宮野明美が、<wbr>原作の<wbr>設定に<wbr>合わせて<wbr>描かれる<wbr>回です。<wbr>アニメでは、<wbr>これより前の<wbr>放送初期<wbr>（1996年）にも一度<wbr>登場しており、<wbr>原作の<wbr>展開と<wbr>すり合わせる<wbr>ために、<wbr>この回であらためて<wbr>宮野明美として<wbr>登場しました。妹を<wbr>組織から<wbr>抜けさせようとする姉の<wbr>想いが<wbr>描かれる、<wbr>シリーズ屈指の<wbr>切ない回で、<wbr>灰原哀という<wbr>キャラクターの<wbr>背景を<wbr>理解する<wbr>うえで<wbr>欠かせません。</div>
+      <div class="gem-point"><strong>ここが<wbr>分かる：</strong>のちに<wbr>仲間になる<wbr>灰原哀が、なぜ<wbr>組織から<wbr>逃げてきたのかという<wbr>点です。</div>
     </div>
 
-    <h2 id="movies">3. 映画から入るならこの6本</h2>
-    <p>劇場版は全29作品を観ていますが、その中でも「これから見る人」にまず薦めたい6本です。基本的に1本ずつ独立した話なので、本編を追いつく前に映画から入っても問題なく楽しめます。公開年順に並べているので、シリーズの雰囲気の広がりも合わせて感じてもらえると思います。</p>
-    <p style="font-size:.82rem;color:var(--text-muted);margin:-6px 0 18px;">※劇場版は、2026年8月末で各動画配信サービスでの配信が終了しています（2026年10月時点）。配信は例年、春の新作公開に合わせて期間限定で行われる傾向があるため、DVD・Blu-rayのレンタルなどでもご覧いただけます。</p>
+    <h2 id="movies">3. 映画から<wbr>入るならこの6本</h2>
+    <p>劇場版は<wbr>全29作品を<wbr>観ていますが、その<wbr>中でも<wbr>「これから見る人」にまず<wbr>薦めたい<wbr>6本です。<wbr>基本的に<wbr>1本ずつ<wbr>独立した<wbr>話なので、<wbr>本編を<wbr>追いつく前に<wbr>映画から<wbr>入っても<wbr>問題なく<wbr>楽しめます。<wbr>公開年順に<wbr>並べているので、<wbr>シリーズの<wbr>雰囲気の<wbr>広がりも合わせて<wbr>感じて<wbr>もらえると<wbr>思います。</p>
+    <p style="font-size:.82rem;color:var(--text-muted);margin:-6px 0 18px;">※劇場版は、<wbr>2026年8月末で<wbr>各動画配信サービスでの<wbr>配信が<wbr>終了しています<wbr>（2026年10月時点）。<wbr>配信は<wbr>例年、春の<wbr>新作公開に<wbr>合わせて<wbr>期間限定で<wbr>行われる<wbr>傾向がある<wbr>ため、<wbr>DVD・Blu-rayの<wbr>レンタルなどでも<wbr>ご覧いただけます。</p>
 
-    <p>管理人が初めて観た劇場版は「時計じかけの摩天楼」で、いちばん好きな劇場版は「ベイカー街の亡霊」です。「時計じかけの摩天楼」は、冒頭の説明がしっかりしていて、劇場版からでも、コナンの世界観が理解できます。のちに、コナン映画には爆発（爆弾）が付きものなんだな、とも気づきました。</p>
+    <p>管理人が<wbr>初めて観た<wbr>劇場版は<wbr>「時計じかけの摩天楼」で、一番<wbr>好きな<wbr>劇場版は<wbr>「ベイカー街の亡霊」です。<wbr>「時計じかけの摩天楼」は、<wbr>冒頭の<wbr>説明が<wbr>しっかりしていて、<wbr>劇場版からでも、<wbr>コナンの<wbr>世界観が<wbr>理解できます。<wbr>のちに、<wbr>コナン映画には爆発<wbr>（爆弾）が<wbr>付きもの<wbr>なんだな、とも<wbr>気づきました。</p>
 
     <div class="gem-card">
       <div class="gem-header">
         <div class="gem-num">1</div>
         <div class="gem-title-block">
-          <div class="gem-name">名探偵コナン 時計じかけの摩天楼</div>
-          <div class="gem-sub">1997年4月19日公開 / 劇場版第1作 / 監督：こだま兼嗣</div>
+          <div class="gem-name">名探偵コナン 時計じかけの<wbr>摩天楼</div>
+          <div class="gem-sub"><span class="nb">1997年4月19日公開</span> / <span class="nb">劇場版第1作</span> / <span class="nb">監督：こだま兼嗣</span></div>
         </div>
       </div>
-      <div class="gem-body">記念すべき劇場版第1作です。連続爆破事件を仕掛ける犯人を追う中で、蘭と新一の絆が事件解決の鍵になります。登場人物がまだ少なく、後の作品に比べてシンプルな構成なので、映画から入る一本目として一番おすすめです。</div>
-      <div class="gem-point"><strong>おすすめの理由：</strong>シリーズの原点であり、余計な前提知識がいらない一本。</div>
+      <div class="gem-body">記念すべき<wbr>劇場版第1作です。<wbr>連続爆破事件を<wbr>仕掛ける<wbr>犯人を追う<wbr>中で、蘭と<wbr>新一の絆が<wbr>事件解決の鍵に<wbr>なります。<wbr>登場人物がまだ<wbr>少なく、後の<wbr>作品に<wbr>比べて<wbr>シンプルな<wbr>構成なので、<wbr>映画から入る<wbr>一本目として一番<wbr>おすすめです。</div>
+      <div class="gem-point"><strong>おすすめの<wbr>理由：</strong>シリーズの<wbr>原点であり、<wbr>余計な<wbr>前提知識が<wbr>いらない<wbr>一本です。</div>
     </div>
 
     <div class="gem-card">
@@ -218,24 +225,24 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
         <div class="gem-num">2</div>
         <div class="gem-title-block">
           <div class="gem-name">名探偵コナン ベイカー街の亡霊</div>
-          <div class="gem-sub">2002年4月20日公開 / 劇場版第6作 / 監督：こだま兼嗣</div>
+          <div class="gem-sub"><span class="nb">2002年4月20日公開</span> / <span class="nb">劇場版第6作</span> / <span class="nb">監督：こだま兼嗣</span></div>
         </div>
       </div>
-      <div class="gem-body">新型VRゲーム「コクーン」の発表会に招待されたコナンが、暴走したAI「ノアズ・アーク」に支配されたシャーロック・ホームズの世界を舞台に、50人の子供たちの命を救うため奮闘する一作です。推理アニメとSF・ゲーム世界が融合した、シリーズでも屈指のスケール感が魅力です。</div>
-      <div class="gem-point"><strong>おすすめの理由：</strong>VR世界という子供にも分かりやすい舞台設定で、王道の名作として名高い一本。</div>
-      <div class="gem-point"><strong>管理人がいちばん好きな場面：</strong>毛利蘭が、コナンのために列車から飛び降りるシーンです。ノアズアークの世界から脱出するための行動です。</div>
+      <div class="gem-body">新型VRゲーム<wbr>「コクーン」の<wbr>発表会に<wbr>招待された<wbr>コナンが、<wbr>暴走したAI<wbr>「ノアズ・アーク」に<wbr>支配された<wbr>シャーロック・ホームズの<wbr>世界を<wbr>舞台に、<wbr>50人の<wbr>子供たちの命を救う<wbr>ため奮闘する<wbr>一作です。<wbr>推理アニメと<wbr>SF・ゲーム世界が<wbr>融合した、<wbr>シリーズでも<wbr>屈指の<wbr>スケール感が<wbr>魅力です。</div>
+      <div class="gem-point"><strong>おすすめの<wbr>理由：</strong>VR世界という<wbr>子供にも<wbr>分かりやすい<wbr>舞台設定で、<wbr>王道の<wbr>名作として<wbr>名高い<wbr>一本です。</div>
+      <div class="gem-point"><strong>管理人が一番<wbr>好きな<wbr>場面：</strong>毛利蘭が、<wbr>コナンの<wbr>ために<wbr>列車から<wbr>飛び降りる<wbr>シーンです。<wbr>ノアズアークの<wbr>世界から<wbr>脱出する<wbr>ための<wbr>行動です。</div>
     </div>
 
     <div class="gem-card">
       <div class="gem-header">
         <div class="gem-num">3</div>
         <div class="gem-title-block">
-          <div class="gem-name">名探偵コナン 探偵たちの鎮魂歌</div>
-          <div class="gem-sub">2006年4月15日公開 / 劇場版第10作（10周年記念） / 監督：山本泰一郎</div>
+          <div class="gem-name">名探偵コナン 探偵たちの<wbr>鎮魂歌</div>
+          <div class="gem-sub"><span class="nb">2006年4月15日公開</span> / <span class="nb">劇場版第10作<wbr>（10周年記念）</span> / <span class="nb">監督：山本泰一郎</span></div>
         </div>
       </div>
-      <div class="gem-body">横浜のテーマパークを訪れた小五郎とコナンが、「12時間以内に事件を解決しなければ全員を爆死させる」という謎の脅迫を受ける一作です。シリーズ10周年記念として、怪盗キッドを含むレギュラーキャラがほぼ全員登場するオールスター編で、コナンの世界の広さを一気に味わえます。</div>
-      <div class="gem-point"><strong>おすすめの理由：</strong>怪盗キッドをはじめ主要キャラが勢揃いする、お祭り感のある一本。</div>
+      <div class="gem-body">横浜の<wbr>テーマパークを<wbr>訪れた<wbr>小五郎と<wbr>コナンが、<wbr>「12時間以内に<wbr>事件を<wbr>解決しなければ<wbr>全員を<wbr>爆死させる」という謎の<wbr>脅迫を<wbr>受ける<wbr>一作です。<wbr>シリーズ10周年記念と<wbr>して、<wbr>怪盗キッドを含む<wbr>レギュラーキャラが<wbr>ほぼ全員登場する<wbr>オールスター編で、<wbr>コナンの<wbr>世界の<wbr>広さを<wbr>一気に<wbr>味わえます。</div>
+      <div class="gem-point"><strong>おすすめの<wbr>理由：</strong>怪盗キッドを<wbr>はじめ主要キャラが<wbr>勢揃いする、<wbr>お祭り感のある<wbr>一本です。</div>
     </div>
 
     <div class="gem-card">
@@ -243,11 +250,11 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
         <div class="gem-num">4</div>
         <div class="gem-title-block">
           <div class="gem-name">名探偵コナン から紅の恋歌</div>
-          <div class="gem-sub">2017年4月15日公開 / 劇場版第21作 / 監督：静野孔文</div>
+          <div class="gem-sub"><span class="nb">2017年4月15日公開</span> / <span class="nb">劇場版第21作</span> / <span class="nb">監督：静野孔文</span></div>
         </div>
       </div>
-      <div class="gem-body">大阪・京都を舞台に、百人一首の高校生大会を巡って事件が連続する一作です。服部平次の恋敵・大岡紅葉が初登場し、平次と和葉の関係にも大きく踏み込みます。公開時の興行収入68.8億円は、当時のシリーズ最高記録です。それだけ幅広い層に評価された一本です。</div>
-      <div class="gem-point"><strong>おすすめの理由：</strong>百人一首という日本文化を絡めたミステリーと、平次たちの関西コンビの魅力が詰まった一本。</div>
+      <div class="gem-body">大阪・<wbr>京都を<wbr>舞台に、<wbr>百人一首の<wbr>高校生大会を<wbr>巡って<wbr>事件が<wbr>連続する<wbr>一作です。<wbr>服部平次の<wbr>恋敵・大岡紅葉が<wbr>初登場し、<wbr>平次と<wbr>和葉の<wbr>関係にも<wbr>大きく<wbr>踏み込みます。<wbr>公開時の<wbr>興行収入68.8億円は、<wbr>当時の<wbr>シリーズ最高記録です。<wbr>それだけ幅広い層に<wbr>評価された<wbr>一本です。</div>
+      <div class="gem-point"><strong>おすすめの<wbr>理由：</strong>百人一首という<wbr>日本文化を<wbr>絡めた<wbr>ミステリーと、<wbr>平次たちの関西<wbr>コンビの<wbr>魅力が<wbr>詰まった<wbr>一本です。</div>
     </div>
 
     <div class="gem-card">
@@ -255,43 +262,43 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
         <div class="gem-num">5</div>
         <div class="gem-title-block">
           <div class="gem-name">名探偵コナン ハロウィンの花嫁</div>
-          <div class="gem-sub">2022年4月15日公開 / 劇場版第25作 / 監督：満仲勧</div>
+          <div class="gem-sub"><span class="nb">2022年4月15日公開</span> / <span class="nb">劇場版第25作</span> / <span class="nb">監督：満仲勧</span></div>
         </div>
       </div>
-      <div class="gem-body">高木刑事と佐藤刑事の結婚式に招待されたコナンたちが、謎の殺し屋プラーミャによる連続爆破テロに巻き込まれる一作です。公開時の興行収入97.8億円は、当時のシリーズ最高記録です（その後の作品で更に更新されています）。派手なアクションと本格ミステリーのバランスが良く、近年の作品から入りたい人にまず薦めたい一本です。</div>
-      <div class="gem-point"><strong>おすすめの理由：</strong>高水準の興行成績が示す通り、近年のコナン映画のクオリティの高さが一番分かりやすく詰まっている。</div>
+      <div class="gem-body">高木刑事と<wbr>佐藤刑事の<wbr>結婚式に<wbr>招待された<wbr>コナンたちが、謎の<wbr>殺し屋プラーミャによる<wbr>連続爆破テロに<wbr>巻き込まれる<wbr>一作です。<wbr>公開時の<wbr>興行収入97.8億円は、<wbr>当時の<wbr>シリーズ最高記録です（その後の<wbr>作品で<wbr>さらに<wbr>更新されています）。<wbr>派手な<wbr>アクションと<wbr>本格ミステリーの<wbr>バランスが<wbr>良く、<wbr>近年の<wbr>作品から<wbr>入りたい人にまず<wbr>薦めたい<wbr>一本です。</div>
+      <div class="gem-point"><strong>おすすめの<wbr>理由：</strong>高水準の<wbr>興行成績が<wbr>示す通り、<wbr>近年の<wbr>コナン映画の<wbr>クオリティの<wbr>高さが一番<wbr>分かりやすく<wbr>詰まっています。</div>
     </div>
 
     <div class="gem-card">
       <div class="gem-header">
         <div class="gem-num">6</div>
         <div class="gem-title-block">
-          <div class="gem-name">名探偵コナン 100万ドルの五稜星</div>
-          <div class="gem-sub">2024年4月12日公開 / 劇場版第27作 / 監督：永岡智佳</div>
+          <div class="gem-name">名探偵コナン 100万ドルの<wbr>五稜星</div>
+          <div class="gem-sub"><span class="nb">2024年4月12日公開</span> / <span class="nb">劇場版第27作</span> / <span class="nb">監督：永岡智佳</span></div>
         </div>
       </div>
-      <div class="gem-body">北海道・函館を舞台に、怪盗キッドが狙う新選組副長・土方歳三ゆかりの日本刀と、謎の剣士、そして隠された「お宝」をめぐる事件に、コナンと服部平次が挑む一作です。公開時の興行収入158億円は、当時のシリーズ最高記録です。キッドと平次の活躍が光り、謎解きとアクションの両方が楽しめる、近年の作品から入りたい人にも薦めたい一本です。</div>
-      <div class="gem-point"><strong>おすすめの理由：</strong>新一とそっくりな怪盗キッドの顔に、一つの答えが示される一本。最後まで観て下さい。</div>
+      <div class="gem-body">北海道・函館を<wbr>舞台に、<wbr>怪盗キッドが狙う<wbr>新選組副長・土方歳三ゆかりの<wbr>日本刀と、謎の<wbr>剣士、そして<wbr>隠された<wbr>「お宝」を<wbr>めぐる<wbr>事件に、<wbr>コナンと<wbr>服部平次が挑む<wbr>一作です。<wbr>公開時の<wbr>興行収入158億円は、<wbr>当時の<wbr>シリーズ最高記録です。<wbr>キッドと<wbr>平次の<wbr>活躍が<wbr>光り、<wbr>謎解きと<wbr>アクションの<wbr>両方が<wbr>楽しめる、<wbr>近年の<wbr>作品から<wbr>入りたい<wbr>人にも<wbr>薦めたい<wbr>一本です。</div>
+      <div class="gem-point"><strong>おすすめの<wbr>理由：</strong>新一と<wbr>そっくりな<wbr>怪盗キッドの<wbr>顔に、<wbr>一つの<wbr>答えが<wbr>示される<wbr>一本です。<wbr>最後まで<wbr>観てください。</div>
     </div>
 
-    <h2 id="anime-original">4. アニオリとの付き合い方</h2>
-    <p>1188話もある本編には、原作にはないアニメオリジナル回（通称「アニオリ」）もかなりの数含まれています。原作準拠の回だけに絞って追いかけると、視聴時間はおおよそ6割程度まで圧縮出来ると言われています。子供と一緒に見る場合、最初から全部を律儀に追う必要はなく、「アニオリは息抜き回」くらいに割り切って、テンポが気になってきたら原作準拠の回を優先して見進める、というくらいの気軽さがちょうどいいと感じています。</p>
+    <h2 id="anime-original">4. アニオリとの<wbr>付き合い方</h2>
+    <p>1188話もある<wbr>本編には、<wbr>原作にはない<wbr>アニメオリジナル回<wbr>（通称「アニオリ」）も<wbr>かなりの<wbr>数含まれています。<wbr>原作準拠の<wbr>回だけに<wbr>絞って<wbr>追いかけると、<wbr>視聴時間は<wbr>おおよそ6割程度まで<wbr>圧縮できると<wbr>言われています。<wbr>子供と<wbr>一緒に見る<wbr>場合、<wbr>最初から<wbr>全部を<wbr>律儀に追う<wbr>必要は<wbr>なく、<wbr>「アニオリは息抜き回」くらいに割り<wbr>切って、<wbr>テンポが気に<wbr>なってきたら<wbr>原作準拠の回を<wbr>優先して<wbr>見進める、という<wbr>くらいの<wbr>気軽さが<wbr>ちょうど<wbr>いいと<wbr>感じています。</p>
 
-    <p>管理人がいちばん好きなアニメオリジナルの事件は、第184話「呪いの仮面は冷たく笑う」（1時間スペシャル）です。ファンの間でも、真っ先にあがる事件の一つだと思います。特に、トリックの手順と仕組みが好きです。ネタバレになるので、中身はここには書きません。</p>
+    <p>管理人が一番<wbr>好きな<wbr>アニメオリジナルの<wbr>事件は、<wbr>第184話<wbr>「呪いの<wbr>仮面は<wbr>冷たく笑う」<wbr>（1時間スペシャル）です。<wbr>ファンの<wbr>間でも、<wbr>真っ先に<wbr>あがる<wbr>事件の<wbr>一つだと<wbr>思います。<wbr>特に、<wbr>トリックの<wbr>手順と<wbr>仕組みが<wbr>好きです。<wbr>ネタバレに<wbr>なるので、<wbr>中身は<wbr>ここには<wbr>書きません。</p>
 
-    <h2 id="manga">5. 原作で追う場合のペース感</h2>
-    <p>アニメより先に話が進んでいる原作漫画を電子書籍でまとめ買いして追う、という入り方もおすすめです。1冊がコンパクトなので、寝る前に1〜2話ずつというペースでも子供が自分のペースで読み進めやすく、アニメで基本設定を掴んだあとに原作でどんどん先を追いかける、という流れが作りやすいシリーズだと思います。</p>
+    <h2 id="manga">5. 原作で追う<wbr>場合の<wbr>ペース感</h2>
+    <p>アニメより先に話が<wbr>進んでいる<wbr>原作漫画を<wbr>電子書籍で<wbr>まとめ買いして<wbr>追う、という<wbr>入り方も<wbr>おすすめです。<wbr>1冊が<wbr>コンパクトなので、寝る前に<wbr>1〜2話ずつという<wbr>ペースでも<wbr>子供が<wbr>自分の<wbr>ペースで<wbr>読み進めやすく、<wbr>アニメで<wbr>基本設定を<wbr>掴んだ<wbr>あとに<wbr>原作で<wbr>どんどん先を<wbr>追いかける、という<wbr>流れが<wbr>作りやすい<wbr>シリーズだと<wbr>思います。</p>
 
-    <p>アニメと原作で、印象が変わった話もあります。管理人は、アニメ第219話「集められた名探偵！工藤新一VS怪盗キッド」を先に観て、そのあとで原作（単行本第30巻 FILE.5「惨劇」）を読みました。「集められた名探偵」の印象は、アニメよりも原作のほうが強く、集められた探偵たちのキャラクターが、原作ではより印象に残りました。</p>
+    <p>アニメと<wbr>原作で、<wbr>印象が<wbr>変わった話も<wbr>あります。<wbr>管理人は、<wbr>アニメ第219話<wbr>「集められた<wbr>名探偵！<wbr>工藤新一VS怪盗キッド」を先に<wbr>観て、その<wbr>あとで原作<wbr>（単行本第30巻 FILE.5<wbr>「惨劇」）を<wbr>読みました。<wbr>「集められた名探偵」の<wbr>印象は、<wbr>アニメよりも<wbr>原作の<wbr>ほうが<wbr>強く、<wbr>集められた<wbr>探偵たちの<wbr>キャラクターが、<wbr>原作ではより<wbr>印象に<wbr>残りました。</p>
 
-    <h2 id="next">6. 次のステップ</h2>
-    <p>序盤の観るべき回と映画6本で基本的な世界観に慣れてきたら、次は黒の組織を巡る本格的な展開へ進むのがおすすめです。ここから先は緊張感のある話が増えてくるので、子供の成長に合わせて少しずつ踏み込んでいくのがちょうどいいペースだと思います。管理人自身、子供の頃に見始めて今も追いかけているシリーズです。今度は自分の子供世代に、同じように少しずつ手渡していけたらと思っています。</p>
+    <h2 id="next">6. 次の<wbr>ステップ</h2>
+    <p>序盤の<wbr>観るべき回と<wbr>映画6本で<wbr>基本的な<wbr>世界観に<wbr>慣れてきたら、次は黒の<wbr>組織を巡る<wbr>本格的な<wbr>展開へ<wbr>進むのが<wbr>おすすめです。<wbr>ここから先は<wbr>緊張感のある話が<wbr>増えてくるので、<wbr>子供の<wbr>成長に<wbr>合わせて少し<wbr>ずつ踏み込んでいくのが<wbr>ちょうどいい<wbr>ペースだと<wbr>思います。<wbr>管理人自身、<wbr>子供の頃に<wbr>見始めて今も<wbr>追いかけている<wbr>シリーズです。<wbr>今度は<wbr>自分の<wbr>子供世代に、<wbr>同じように<wbr>少しずつ<wbr>手渡していけたらと<wbr>思っています。</p>
 
     <a href="https://anime-db.jp/blog/conan-advanced-guide.html" class="next-article">
       <div style="flex:1">
-        <div class="next-article-label">🕵️ 慣れてきたら次はこちら</div>
-        <div class="next-article-title">名探偵コナン上級ガイド【正体判明ミステリーを時系列で整理：新出先生〜あの方編】</div>
-        <div class="next-article-desc">黒の組織編に進む準備が出来たら、新出先生・沖矢昴・安室透・世良真純からRUM編、そして黒幕「あの方」の正体まで、時系列で整理した続編ガイドへ。</div>
+        <div class="next-article-label">🕵️ 慣れてきたら次は<wbr>こちら</div>
+        <div class="next-article-title">名探偵コナン上級ガイド【正体判明ミステリーを<wbr>時系列で<wbr>整理：新出先生〜あの<wbr>方編】</div>
+        <div class="next-article-desc">黒の<wbr>組織編に進む<wbr>準備が<wbr>できたら、<wbr>新出先生・沖矢昴・安室透・世良真純から<wbr>RUM編、そして黒幕<wbr>「あの方」の<wbr>正体まで、<wbr>時系列で<wbr>整理した<wbr>続編ガイドへ<wbr>お進みください。</div>
       </div>
       <div class="next-article-arrow">→</div>
     </a>
@@ -299,11 +306,11 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
   </div>
 
   <section class="related-guides" aria-label="関連ガイド">
-    <h2 class="related-guides-title">関連ガイド（名探偵コナン）</h2>
+    <h2 class="related-guides-title">関連<wbr>ガイド<wbr>（名探偵コナン）</h2>
     <ul>
-      <li><a href="https://anime-db.jp/blog/conan-advanced-guide.html"><span class="rg-name">名探偵コナン上級ガイド</span><span class="rg-desc">新出先生・沖矢昴・安室透からRUM編、「あの方」まで、正体判明ミステリーを時系列で整理しています。</span></a></li>
-      <li><a href="https://anime-db.jp/blog/conan-romance-guide.html"><span class="rg-name">名探偵コナン恋愛名場面ガイド</span><span class="rg-desc">新一×蘭、園子×京極、平次×和葉、高木×佐藤、快斗×青子の5組を時系列で振り返ります。</span></a></li>
-      <li><a href="https://anime-db.jp/blog/conan-genetics-guide.html"><span class="rg-name">名探偵コナン「親から子へ」名探偵の血筋ガイド</span><span class="rg-desc">工藤家・服部家・毛利家・黒羽家に受け継がれた推理力と特技を整理しています。</span></a></li>
+      <li><a href="https://anime-db.jp/blog/conan-advanced-guide.html"><span class="rg-name">名探偵コナン上級ガイド</span><span class="rg-desc">新出先生・沖矢昴・安室透から<wbr>RUM編、<wbr>「あの方」まで、<wbr>正体判明ミステリーを<wbr>時系列で<wbr>整理しています。</span></a></li>
+      <li><a href="https://anime-db.jp/blog/conan-romance-guide.html"><span class="rg-name">名探偵コナン恋愛名場面ガイド</span><span class="rg-desc">新一×蘭、<wbr>園子×京極、<wbr>平次×和葉、<wbr>高木×佐藤、<wbr>快斗×青子の<wbr>5組を<wbr>時系列で<wbr>振り返ります。</span></a></li>
+      <li><a href="https://anime-db.jp/blog/conan-genetics-guide.html"><span class="rg-name">名探偵コナン<wbr>「親から子へ」<wbr>名探偵の<wbr>血筋ガイド</span><span class="rg-desc">工藤家・服部家・<wbr>毛利家・黒羽家に<wbr>受け継がれた<wbr>推理力と<wbr>特技を<wbr>整理しています。</span></a></li>
     </ul>
   </section>
 

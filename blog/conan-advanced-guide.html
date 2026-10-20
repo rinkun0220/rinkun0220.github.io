@@ -76,6 +76,13 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
 .footer-link{color:var(--text-muted);text-decoration:none;font-size:.85rem}.footer-link:hover{color:#fff}
 .copyright{font-size:.8rem;color:rgba(255,255,255,0.3)}
 .related-guides{margin:40px 0 28px;padding:22px 24px;background:var(--bg-card);border:1px solid var(--border-color);border-radius:14px}.related-guides-title{font-size:1.05rem;font-weight:700;color:#fff;margin:0 0 14px}.related-guides ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}.related-guides a{display:block;text-decoration:none;padding:12px 14px;border:1px solid var(--border-color);border-radius:10px;transition:border-color .2s,background .2s}.related-guides a:hover{border-color:var(--accent);background:rgba(255,255,255,0.03)}.related-guides .rg-name{display:block;color:#fff;font-weight:700;font-size:.95rem;line-height:1.5}.related-guides .rg-desc{display:block;color:var(--text-muted);font-size:.82rem;line-height:1.7;margin-top:2px}
+/* 日本語の改行を自然にする設定（文節単位で改行・行頭禁則・1文字だけの行を避ける） */
+body{line-break:strict;overflow-wrap:break-word}
+@supports (word-break:auto-phrase){body{word-break:auto-phrase}}
+:has(> wbr){word-break:keep-all}
+p,li,dd,td,th{text-wrap:pretty}
+.nb{white-space:nowrap}
+h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-title,.pick-name,.next-article-title{text-wrap:balance}
 </style>
 </head>
 <body>
@@ -95,69 +102,69 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
   </div>
 
   <span class="article-tag">🕵️ 名探偵コナン特集・上級編</span>
-  <h1 class="article-title">名探偵コナン上級ガイド<br>【正体判明ミステリーを時系列で整理：新出先生〜あの方編】</h1>
+  <h1 class="article-title">名探偵コナン<wbr>上級ガイド<br>【正体判明ミステリーを<wbr>時系列で<wbr>整理：新出先生〜あの<wbr>方編】</h1>
   <div class="article-meta">
     <span>📅 2026年9月更新</span><span>✍️ ANIMEDB管理人</span><span>⏱ 読了目安：約8分</span>
   </div>
 
   <div class="alert-box">
-    <strong>⚠️ ネタバレ全開の上級編です</strong><br>
-    こちらは「<a href="/blog/conan-beginner-guide.html" style="color:#fff;">名探偵コナン初心者ガイド</a>」の続編です。黒の組織を巡る人間関係は、名探偵コナンの中でも特に入り組んでいる部分です。ここでは「新出先生」から、組織の大物幹部「RUM」、そして組織の頂点に君臨する「あの方」まで、正体判明の流れを時系列で整理しました。まだ本編を追いついていない人・これから追いつく楽しみを取っておきたい人は、閲覧をおすすめしません。
+    <strong>⚠️ ネタバレ全開の<wbr>上級編です</strong><br>
+    こちらは<wbr>「<a href="/blog/conan-beginner-guide.html" style="color:#fff;">名探偵コナン初心者ガイド</a>」の<wbr>続編です。黒の<wbr>組織を巡る<wbr>人間関係は、<wbr>名探偵コナンの<wbr>中でも特に入り<wbr>組んでいる<wbr>部分です。<wbr>ここでは<wbr>「新出先生」から、<wbr>組織の<wbr>大物幹部<wbr>「RUM」、<wbr>そして<wbr>組織の<wbr>頂点に<wbr>君臨する<wbr>「あの方」まで、<wbr>正体判明の<wbr>流れを<wbr>時系列で<wbr>整理しました。まだ<wbr>本編を<wbr>追いついていない人・<wbr>これから<wbr>追いつく<wbr>楽しみを<wbr>取って<wbr>おきたい<wbr>人は、<wbr>閲覧を<wbr>おすすめしません。
   </div>
 
   <div class="toc">
-    <div class="toc-title">📋 このページの構成</div>
+    <div class="toc-title">📋 この<wbr>ページの構成</div>
     <div class="toc-grid">
-      <a href="#family">1. まずは相関図：赤井三兄妹</a>
-      <a href="#araide">2. 新出先生 → 正体はベルモット</a>
+      <a href="#family">1. まずは<wbr>相関図：赤井三兄妹</a>
+      <a href="#araide">2. 新出先生 → 正体は<wbr>ベルモット</a>
       <a href="#hondou">3. 本堂瑛祐シリーズ</a>
       <a href="#okiya">4. 沖矢昴シリーズ</a>
       <a href="#sera">5. 世良真純シリーズ</a>
       <a href="#amuro">6. 安室透シリーズ</a>
-      <a href="#rum">7. その後のRUM編</a>
-      <a href="#boss">8. 組織の頂点「あの方」</a>
+      <a href="#rum">7. その後の<wbr>RUM編</a>
+      <a href="#boss">8. 組織の頂点<wbr>「あの方」</a>
       <a href="#summary">9. まとめ</a>
     </div>
   </div>
 
   <div class="article-body">
 
-    <h2 id="family">1. まずは相関図：赤井三兄妹</h2>
-    <p>この先に出てくる名前を混同しないために、先に一番大事な家族関係を整理しておきます。父・赤井務武と母・メアリーの間に生まれた3人兄弟が、それぞれ違う名字を名乗って登場するのが、このミステリーを分かりにくくしている一番の理由です。</p>
+    <h2 id="family">1. まずは<wbr>相関図：赤井三兄妹</h2>
+    <p>この先に<wbr>出てくる<wbr>名前を<wbr>混同しない<wbr>ために、先に一番<wbr>大事な<wbr>家族関係を<wbr>整理しておきます。<wbr>父・赤井務武と<wbr>母・メアリーの間に<wbr>生まれた<wbr>3人兄弟が、<wbr>それぞれ違う<wbr>名字を<wbr>名乗って<wbr>登場するのが、この<wbr>ミステリーを<wbr>分かりに<wbr>くくしている<wbr>一番の<wbr>理由です。</p>
     <div class="family-box">
-      <div class="family-parent">父：赤井務武（17年前から行方不明）<br>×<br>母：メアリー赤井（諜報機関MI6所属、現在は「メアリー世良」を名乗る）</div>
+      <div class="family-parent">父：赤井務武<wbr>（17年前から行方不明）<br>×<br>母：メアリー赤井<wbr>（諜報機関MI6所属、<wbr>現在は<wbr>「メアリー世良」を<wbr>名乗る）</div>
       <div class="family-row">
         <div class="family-item">
-          <div class="f-real">本名：赤井秀一（長男）</div>
+          <div class="f-real">本名：赤井秀一<wbr>（長男）</div>
           <div class="f-alias">沖矢昴</div>
           <div class="f-role">FBI捜査官</div>
         </div>
         <div class="family-item">
-          <div class="f-real">本名：赤井秀吉（次男）</div>
+          <div class="f-real">本名：赤井秀吉<wbr>（次男）</div>
           <div class="f-alias">羽田秀吉</div>
-          <div class="f-role">プロ棋士（養子）</div>
+          <div class="f-role">プロ棋士<wbr>（養子）</div>
         </div>
         <div class="family-item">
-          <div class="f-real">本名：赤井真純（三女）</div>
+          <div class="f-real">本名：赤井真純<wbr>（三女）</div>
           <div class="f-alias">世良真純</div>
           <div class="f-role">女子高生探偵</div>
         </div>
       </div>
     </div>
-    <p>次男の秀吉だけ「羽田」という別の名字を名乗っていますが、これは後で紹介する「羽田浩司」とは別人です。浩司の遺志を継ぐために、高校卒業後に養子として羽田家に入ったという経緯があります。名前が似ているので、ここだけ先に区別しておくと後が読みやすくなります。</p>
+    <p>次男の<wbr>秀吉だけ<wbr>「羽田」という別の<wbr>名字を<wbr>名乗っていますが、<wbr>これは後で<wbr>紹介する<wbr>「羽田浩司」とは<wbr>別人です。<wbr>浩司の<wbr>遺志を継ぐ<wbr>ために、<wbr>高校卒業後に<wbr>養子として<wbr>羽田家に<wbr>入ったという<wbr>経緯が<wbr>あります。<wbr>名前が<wbr>似ているので、<wbr>ここだけ先に<wbr>区別しておくと後が<wbr>読みやすくなります。</p>
 
-    <h2 id="araide">2. 新出先生 → 正体はベルモット</h2>
+    <h2 id="araide">2. 新出先生 → 正体は<wbr>ベルモット</h2>
     <div class="gem-card">
       <div class="gem-header">
         <div class="gem-num">1</div>
         <div class="gem-title-block">
           <div class="gem-name">新出先生</div>
-          <div class="gem-sub">初登場：アニメ第170〜171話「暗闇の中の死角」／正体判明：アニメ第345話「黒の組織と真っ向勝負」</div>
+          <div class="gem-sub">初登場：アニメ第170〜171話<wbr>「暗闇の中の死角」<wbr>／正体判明：アニメ第345話<wbr>「黒の組織と真っ向勝負」</div>
         </div>
       </div>
-      <div class="gem-body">米花町の医院の先生として登場した新出先生は、実は黒の組織の幹部「ベルモット」が長期間なりすましていた変装でした。声までそっくりに変えられるベルモットの変装術の高さを象徴する存在で、正体が発覚したのはずっと後になってからでした。本物の新出先生は、その間FBIによってアメリカに避難させられていました。</div>
-      <div class="gem-point"><strong>ここが分かる：</strong>ベルモットは声まで変えられるほど変装が得意で、身近な人物になりすませてしまう、ということ。</div>
-      <div class="gem-point"><strong>管理人がいちばん衝撃を受けた展開：</strong>新出先生が、ベルモットの変装だったことです。</div>
+      <div class="gem-body">米花町の<wbr>医院の<wbr>先生として<wbr>登場した<wbr>新出先生は、実は黒の<wbr>組織の幹部<wbr>「ベルモット」が<wbr>長期間なりすましていた<wbr>変装でした。<wbr>声まで<wbr>そっくりに<wbr>変えられる<wbr>ベルモットの<wbr>変装術の<wbr>高さを<wbr>象徴する<wbr>存在で、<wbr>正体が<wbr>発覚したのは<wbr>ずっと後に<wbr>なってからでした。<wbr>本物の<wbr>新出先生は、その間<wbr>FBIに<wbr>よって<wbr>アメリカに<wbr>避難させられていました。</div>
+      <div class="gem-point"><strong>ここが<wbr>分かる：</strong>ベルモットは<wbr>声まで<wbr>変えられるほど<wbr>変装が<wbr>得意で、<wbr>身近な<wbr>人物に<wbr>なりすませてしまう、という<wbr>ことです。</div>
+      <div class="gem-point"><strong>管理人が一番<wbr>衝撃を<wbr>受けた<wbr>展開：</strong>新出先生が、<wbr>ベルモットの<wbr>変装だった<wbr>ことです。</div>
     </div>
 
     <h2 id="hondou">3. 本堂瑛祐シリーズ</h2>
@@ -166,11 +173,11 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
         <div class="gem-num">2</div>
         <div class="gem-title-block">
           <div class="gem-name">本堂瑛祐</div>
-          <div class="gem-sub">初登場：アニメ第429〜430話「もう戻れない二人」</div>
+          <div class="gem-sub">初登場：アニメ第429〜430話<wbr>「もう戻れない二人」</div>
         </div>
       </div>
-      <div class="gem-body">蘭のクラスに転校してきた高校生です。おっちょこちょいに見えて実は鋭い推理力を持つ二面性のキャラクターです。正体はCIA捜査官の家系に生まれた少年で、行方不明になった姉・瑛海を探しています。黒の組織そのものの人物ではありませんが、組織周辺の人物とのつながりを通して物語に関わってくる、少し変わった立ち位置のキャラクターです。</div>
-      <div class="gem-point"><strong>ここが分かる：</strong>黒の組織を巡る話には、組織の外側からその影を追いかける人物も登場する、ということ。</div>
+      <div class="gem-body">蘭の<wbr>クラスに<wbr>転校してきた<wbr>高校生です。<wbr>おっちょこちょいに<wbr>見えて実は鋭い<wbr>推理力を持つ<wbr>二面性の<wbr>キャラクターです。<wbr>正体は<wbr>CIA捜査官の<wbr>家系に<wbr>生まれた<wbr>少年で、行方<wbr>不明に<wbr>なった<wbr>姉・瑛海を<wbr>探しています。黒の組織その<wbr>ものの<wbr>人物ではありませんが、<wbr>組織周辺の<wbr>人物との<wbr>つながりを<wbr>通して<wbr>物語に<wbr>関わってくる、少し<wbr>変わった<wbr>立ち位置の<wbr>キャラクターです。</div>
+      <div class="gem-point"><strong>ここが<wbr>分かる：</strong>黒の<wbr>組織を巡る<wbr>話には、<wbr>組織の<wbr>外側からその影を<wbr>追いかける<wbr>人物も<wbr>登場する、という<wbr>ことです。</div>
     </div>
 
     <h2 id="okiya">4. 沖矢昴シリーズ</h2>
@@ -179,11 +186,11 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
         <div class="gem-num">3</div>
         <div class="gem-title-block">
           <div class="gem-name">沖矢昴</div>
-          <div class="gem-sub">初登場：アニメ第509話「赤・白・黄と少年探偵団」／正体判明：アニメ第783話「緋色の真相」</div>
+          <div class="gem-sub">初登場：アニメ第509話<wbr>「赤・白・黄と<wbr>少年探偵団」<wbr>／正体判明：アニメ第783話<wbr>「緋色の真相」</div>
         </div>
       </div>
-      <div class="gem-body">コナンの勧めで、空き家になっていた工藤邸に居候することになった、東都大学工学部の大学院生です。実は赤井三兄妹の長男・赤井秀一（FBI捜査官）が、組織に「死んだこと」にするため、この姿で正体を隠して生活していた。というのが真相です。灰原哀は初対面の頃から沖矢に何かを感じ取っており、コナンは早い段階からこの計画に関わっていました。</div>
-      <div class="gem-point"><strong>ここが分かる：</strong>組織を欺くため、味方側の人間が「別人として生きる」という大掛かりな作戦が進んでいたこと。</div>
+      <div class="gem-body">コナンの<wbr>勧めで、<wbr>空き家に<wbr>なっていた<wbr>工藤邸に<wbr>居候する<wbr>ことになった、<wbr>東都大学工学部の<wbr>大学院生です。実は<wbr>赤井三兄妹の<wbr>長男・赤井秀一<wbr>（FBI捜査官）が、<wbr>組織に<wbr>「死んだこと」にする<wbr>ため、この姿で<wbr>正体を<wbr>隠して<wbr>生活していました。と<wbr>いうのが<wbr>真相です。<wbr>灰原哀は<wbr>初対面の<wbr>頃から<wbr>沖矢に<wbr>何かを<wbr>感じ取っており、<wbr>コナンは早い<wbr>段階からこの<wbr>計画に<wbr>関わっていました。</div>
+      <div class="gem-point"><strong>ここが<wbr>分かる：</strong>組織を欺く<wbr>ため、<wbr>味方側の<wbr>人間が<wbr>「別人として生きる」という<wbr>大掛かりな<wbr>作戦が<wbr>進んでいた<wbr>ことです。</div>
     </div>
 
     <h2 id="sera">5. 世良真純シリーズ</h2>
@@ -192,11 +199,11 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
         <div class="gem-num">4</div>
         <div class="gem-title-block">
           <div class="gem-name">世良真純</div>
-          <div class="gem-sub">赤井三兄妹の末っ子（三女）</div>
+          <div class="gem-sub">赤井三兄妹の<wbr>末っ子<wbr>（三女）</div>
         </div>
       </div>
-      <div class="gem-body">推理力に優れた女子高生探偵です。本名は「赤井真純」ですが、父が危険な事件に巻き込まれたことをきっかけに、身の安全のため母の旧姓「世良」を名乗っています。表向きはアメリカからの帰国子女とされていますが、実際はイギリスから来日。幼い姿に変えられてしまった母親を元に戻す方法を探すため、日本にやってきました。</div>
-      <div class="gem-point"><strong>ここが分かる：</strong>沖矢昴（兄）とはまた別の事情で、赤井家の人間がそれぞれ違う名前を名乗って行動していること。</div>
+      <div class="gem-body">推理力に<wbr>優れた<wbr>女子高生探偵です。<wbr>本名は<wbr>「赤井真純」ですが、父が<wbr>危険な<wbr>事件に<wbr>巻き込まれた<wbr>ことを<wbr>きっかけに、身の<wbr>安全の<wbr>ため母の旧姓<wbr>「世良」を<wbr>名乗っています。<wbr>表向きは<wbr>アメリカからの<wbr>帰国子女と<wbr>されていますが、<wbr>実際は<wbr>イギリスから<wbr>来日しています。幼い姿に<wbr>変えられてしまった<wbr>母親を元に<wbr>戻す方法を<wbr>探すため、<wbr>日本に<wbr>やってきました。</div>
+      <div class="gem-point"><strong>ここが<wbr>分かる：</strong>沖矢昴<wbr>（兄）とはまた別の<wbr>事情で、<wbr>赤井家の<wbr>人間が<wbr>それぞれ違う<wbr>名前を<wbr>名乗って<wbr>行動している<wbr>ことです。</div>
     </div>
 
     <h2 id="amuro">6. 安室透シリーズ</h2>
@@ -205,26 +212,26 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
         <div class="gem-num">5</div>
         <div class="gem-title-block">
           <div class="gem-name">安室透</div>
-          <div class="gem-sub">3つの顔を持つ「トリプルフェイス」</div>
+          <div class="gem-sub">3つの顔を持つ<wbr>「トリプルフェイス」</div>
         </div>
       </div>
-      <div class="gem-body">喫茶店ポアロでアルバイトしながら毛利小五郎に弟子入りする私立探偵「安室透」です。その正体は、警察庁および都道府県警の警備部門(公安警察）「降谷零」で、黒の組織の中では「バーボン」というコードネームで潜入捜査を行っています。探偵・公安・組織員という3つの顔を同時に使い分ける、赤井家とはまた違うタイプの「正体を隠した味方」です。</div>
-      <div class="gem-point"><strong>ここが分かる：</strong>組織に潜入しているのは赤井家だけでなく、公安警察の人間もいる、ということ。</div>
+      <div class="gem-body">喫茶店ポアロで<wbr>アルバイトしながら<wbr>毛利小五郎に<wbr>弟子入りする<wbr>私立探偵<wbr>「安室透」です。その<wbr>正体は、<wbr>警察庁および都道府県警の<wbr>警備部門(公安警察）<wbr>「降谷零」で、黒の<wbr>組織の<wbr>中では<wbr>「バーボン」という<wbr>コードネームで<wbr>潜入捜査を<wbr>行っています。<wbr>探偵・公安・組織員という<wbr>3つの顔を<wbr>同時に<wbr>使い分ける、<wbr>赤井家とはまた違う<wbr>タイプの<wbr>「正体を隠した味方」です。</div>
+      <div class="gem-point"><strong>ここが<wbr>分かる：</strong>組織に<wbr>潜入しているのは<wbr>赤井家だけでなく、<wbr>公安警察の<wbr>人間も<wbr>いる、という<wbr>ことです。</div>
     </div>
 
-    <h2 id="rum">7. その後のRUM編</h2>
-    <p>赤井家・安室透の正体が分かってきたころ、物語は「組織の大物幹部RUM（ラム）は誰なのか」という、シリーズ最大級の謎に進みます。この謎を解く鍵になるのが、17年前に起きたある事件です。</p>
+    <h2 id="rum">7. その後の<wbr>RUM編</h2>
+    <p>赤井家・安室透の<wbr>正体が<wbr>分かってきた<wbr>ころ、<wbr>物語は<wbr>「組織の<wbr>大物幹部RUM<wbr>（ラム）は<wbr>誰なのか」と<wbr>いう、<wbr>シリーズ最大級の謎に<wbr>進みます。この謎を解く鍵に<wbr>なるのが、<wbr>17年前に<wbr>起きたある<wbr>事件です。</p>
 
     <div class="gem-card">
       <div class="gem-header">
         <div class="gem-num">6</div>
         <div class="gem-title-block">
           <div class="gem-name">羽田浩司</div>
-          <div class="gem-sub">17年前に命を落とした天才棋士</div>
+          <div class="gem-sub">17年前に命を<wbr>落とした<wbr>天才棋士</div>
         </div>
       </div>
-      <div class="gem-body">世良真純の兄・秀吉が「養子になってでも夢を継ぎたい」と思うほど憧れていた天才棋士です。羽田家は赤井家の家族ぐるみの友人で、17年前、アメリカで組織に命を狙われて亡くなりました。この事件の真相を追いかけることが、RUMの正体にたどり着く最大の手がかりになります。</div>
-      <div class="gem-point"><strong>ここが分かる：</strong>17年前の事件が、現在の物語全てにつながる出発点になっていること。</div>
+      <div class="gem-body">世良真純の<wbr>兄・秀吉が<wbr>「養子に<wbr>なってでも夢を<wbr>継ぎたい」と思うほど<wbr>憧れていた<wbr>天才棋士です。<wbr>羽田家は<wbr>赤井家の<wbr>家族ぐるみの<wbr>友人で、<wbr>17年前、<wbr>アメリカで<wbr>組織に命を<wbr>狙われて<wbr>亡くなりました。この<wbr>事件の<wbr>真相を<wbr>追いかける<wbr>ことが、<wbr>RUMの<wbr>正体に<wbr>たどり着く<wbr>最大の手が<wbr>かりに<wbr>なります。</div>
+      <div class="gem-point"><strong>ここが<wbr>分かる：</strong>17年前の<wbr>事件が、<wbr>現在の<wbr>物語全てに<wbr>つながる<wbr>出発点に<wbr>なっている<wbr>ことです。</div>
     </div>
 
     <div class="gem-card">
@@ -235,8 +242,8 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
           <div class="gem-sub">本名：レイチェル・浅香</div>
         </div>
       </div>
-      <div class="gem-body">羽田浩司事件の現場に居合わせたボディーガードで、RUMの声を直接聞いている数少ない生存者です。事件当時から現在の姿になるまでの間、正体を隠しながら生きてきました。コナンが通っている帝丹小学校の副担任と初登場しました。RUMにとっては「顔と声を知られている危険人物」として、今も命を狙われ続けています。</div>
-      <div class="gem-point"><strong>ここが分かる：</strong>17年前の事件を目撃した人物が、今もこの物語の中で生きて動いている、ということ。</div>
+      <div class="gem-body">羽田浩司事件の<wbr>現場に<wbr>居合わせた<wbr>ボディーガードで、<wbr>RUMの声を<wbr>直接聞いている<wbr>数少ない<wbr>生存者です。<wbr>事件当時から<wbr>現在の姿に<wbr>なるまでの<wbr>間、<wbr>正体を<wbr>隠しながら<wbr>生きてきました。<wbr>コナンが<wbr>通っている<wbr>帝丹小学校の<wbr>副担任と<wbr>初登場しました。<wbr>RUMに<wbr>とっては<wbr>「顔と声を<wbr>知られている<wbr>危険人物」と<wbr>して、今も命を<wbr>狙われ続けています。</div>
+      <div class="gem-point"><strong>ここが<wbr>分かる：</strong>17年前の<wbr>事件を<wbr>目撃した<wbr>人物が、今もこの<wbr>物語の中で<wbr>生きて<wbr>動いている、という<wbr>ことです。</div>
     </div>
 
     <div class="gem-card">
@@ -244,11 +251,11 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
         <div class="gem-num">8</div>
         <div class="gem-title-block">
           <div class="gem-name">黒田兵衛</div>
-          <div class="gem-sub">元RUM最有力候補、降谷零の上司</div>
+          <div class="gem-sub">元RUM最有力候補、<wbr>降谷零の上司</div>
         </div>
       </div>
-      <div class="gem-body">警視庁刑事部捜査第一課の管理官です。前任の松本清長が警視正に昇進して管理官職を退いたことに伴い、その後任として就任しました。長野県警の捜査一課長として初登場し、10年近く意識不明で入院していたのち、50歳で長野県警から警視庁へ異動してきたという経歴を持つ、大柄で右目が義眼の人物です。黒ずくめの組織No.2「RUM」の最有力候補として長らくファンの間でも疑われていましたが、その正体は警察庁および都道府県警の警備部門(公安警察)、降谷零（安室透）の上司でした。実は17年前、警察庁警備局警備企画課に所属していた時期に羽田浩司事件そのものに関わっており、17年前の真相を語るうえで欠かせない人物の一人です。</div>
-      <div class="gem-point"><strong>ここが分かる：</strong>RUM候補として名前が挙がった人物の中にも、17年前の事件と直接つながる人物がいたこと。</div>
+      <div class="gem-body">警視庁刑事部捜査第一課の<wbr>管理官です。<wbr>前任の<wbr>松本清長が<wbr>警視正に<wbr>昇進して<wbr>管理官職を<wbr>退いたことに<wbr>伴い、<wbr>その後任として<wbr>就任しました。<wbr>長野県警の<wbr>捜査一課長として<wbr>初登場し、<wbr>10年近く<wbr>意識不明で<wbr>入院していたのち、<wbr>50歳で<wbr>長野県警から<wbr>警視庁へ<wbr>異動してきたという<wbr>経歴を<wbr>持つ、<wbr>大柄で<wbr>右目が<wbr>義眼の<wbr>人物です。<wbr>黒ずくめの<wbr>組織No.2<wbr>「RUM」の<wbr>最有力候補として<wbr>長らく<wbr>ファンの<wbr>間でも<wbr>疑われていましたが、その<wbr>正体は<wbr>警察庁および都道府県警の<wbr>警備部門<wbr>（公安警察）、<wbr>降谷零<wbr>（安室透）の<wbr>上司でした。実は<wbr>17年前、<wbr>警察庁警備局警備企画課に<wbr>所属していた<wbr>時期に<wbr>羽田浩司事件その<wbr>ものに<wbr>関わっており、<wbr>17年前の<wbr>真相を<wbr>語るうえで<wbr>欠かせない<wbr>人物の<wbr>一人です。</div>
+      <div class="gem-point"><strong>ここが<wbr>分かる：</strong>RUM候補として<wbr>名前が<wbr>挙がった<wbr>人物の<wbr>中にも、<wbr>17年前の<wbr>事件と<wbr>直接つながる<wbr>人物がいた<wbr>ことです。</div>
     </div>
 
     <div class="gem-card">
@@ -256,36 +263,36 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
         <div class="gem-num">9</div>
         <div class="gem-title-block">
           <div class="gem-name">RUMの正体</div>
-          <div class="gem-sub">米花町の寿司職人・脇田兼則</div>
+          <div class="gem-sub">米花町の<wbr>寿司職人・脇田兼則</div>
         </div>
       </div>
-      <div class="gem-body">長年ファンの間でも予想が分かれていた組織No.2「RUM」です。その正体は、毛利探偵事務所のすぐ近くにある寿司店「米花いろは寿司」で働く職人、脇田兼則でした。身近な生活圏のすぐそばに大物幹部が潜んでいた、という衝撃の結末は、新出先生の一件とはまた違う形で「身近な人物が実は組織の一員だった」というシリーズのテーマを締めくくっています。</div>
-      <div class="gem-point"><strong>ここが分かる：</strong>物語の始まりからずっと近くにいた人物が、実は最大級の黒幕だったということ。</div>
+      <div class="gem-body">長年ファンの<wbr>間でも<wbr>予想が<wbr>分かれていた<wbr>組織No.2<wbr>「RUM」です。その<wbr>正体は、<wbr>毛利探偵事務所のすぐ<wbr>近くにある<wbr>寿司店<wbr>「米花いろは寿司」で働く<wbr>職人、<wbr>脇田兼則でした。<wbr>身近な<wbr>生活圏のすぐ<wbr>そばに<wbr>大物幹部が<wbr>潜んでいた、という<wbr>衝撃の<wbr>結末は、<wbr>新出先生の<wbr>一件とはまた違う形で<wbr>「身近な<wbr>人物が実は<wbr>組織の<wbr>一員だった」という<wbr>シリーズの<wbr>テーマを<wbr>締めくくっています。</div>
+      <div class="gem-point"><strong>ここが<wbr>分かる：</strong>物語の<wbr>始まりから<wbr>ずっと<wbr>近くにいた<wbr>人物が、実は<wbr>最大級の<wbr>黒幕だったという<wbr>ことです。</div>
     </div>
 
-    <h2 id="boss">8. 組織の頂点「あの方」</h2>
-    <p>RUMが組織のナンバー2にあたる大物幹部だったのに対して、その、更に上にいるのが黒の組織そのもののトップ「あの方」です。長年、正体はおろか性別すらも謎とされてきましたが、羽田浩司事件を更に掘り下げる中で、その手がかりが浮かび上がってきます。</p>
+    <h2 id="boss">8. 組織の頂点<wbr>「あの方」</h2>
+    <p>RUMが<wbr>組織の<wbr>ナンバー2に<wbr>あたる<wbr>大物幹部だったのに<wbr>対して、<wbr>その、<wbr>さらに上に<wbr>いるのが黒の組織その<wbr>ものの<wbr>トップ「あの方」です。<wbr>長年、<wbr>正体は<wbr>おろか<wbr>性別すらも謎と<wbr>されてきましたが、<wbr>羽田浩司事件を<wbr>さらに<wbr>掘り下げる<wbr>中で、その手が<wbr>かりが<wbr>浮かび<wbr>上がってきます。</p>
 
     <div class="gem-card">
       <div class="gem-header">
         <div class="gem-num">10</div>
         <div class="gem-title-block">
-          <div class="gem-name">あの方の正体 → 烏丸蓮耶</div>
-          <div class="gem-sub">正体判明：アニメ第942話「マリアをさがせ」後編</div>
+          <div class="gem-name">あの方の<wbr>正体 → 烏丸蓮耶</div>
+          <div class="gem-sub">正体判明：アニメ第942話<wbr>「マリアをさがせ」後編</div>
         </div>
       </div>
-      <div class="gem-body">工藤新一の父・工藤優作が「日本で一番の権力者」と警告するほどの人物です。手がかりになったのは、羽田浩司が命を落とす直前に残した暗号のようなダイイングメッセージでした。それを解き明かすと浮かび上がってきたのが「烏丸蓮耶（からすま れんや）」という名前です。100億円を超えるとも言われる財宝を持ち、40年ほど前の時点ですでに100歳を超えていたとされる、謎に包まれた大富豪です。シンボルは烏（からす）で、組織のあちこちに、この烏のマークが隠されています。</div>
-      <div class="gem-point"><strong>ここが分かる：</strong>RUMよりも更に上に、姿を見せない本当のトップがいて、17年前の事件はその存在にたどり着くための入り口だったこと。</div>
+      <div class="gem-body">工藤新一の<wbr>父・工藤優作が<wbr>「日本で一番の権力者」と<wbr>警告する<wbr>ほどの<wbr>人物です。手が<wbr>かりに<wbr>なったのは、<wbr>羽田浩司が命を<wbr>落とす直前に<wbr>残した<wbr>暗号のような<wbr>ダイイングメッセージでした。<wbr>それを<wbr>解き明かすと<wbr>浮かび<wbr>上がってきたのが<wbr>「烏丸蓮耶<wbr>（からすま れんや）」という<wbr>名前です。<wbr>100億円を<wbr>超えるとも<wbr>言われる<wbr>財宝を<wbr>持ち、<wbr>40年ほど前の<wbr>時点ですでに<wbr>100歳を<wbr>超えていたとされる、謎に<wbr>包まれた<wbr>大富豪です。<wbr>シンボルは烏<wbr>（からす）で、<wbr>組織の<wbr>あちこちに、この烏の<wbr>マークが<wbr>隠されています。</div>
+      <div class="gem-point"><strong>ここが<wbr>分かる：</strong>RUMよりも<wbr>さらに<wbr>上に、姿を<wbr>見せない<wbr>本当の<wbr>トップが<wbr>いて、<wbr>17年前の<wbr>事件はその<wbr>存在に<wbr>たどり着く<wbr>ための<wbr>入り口だった<wbr>ことです。</div>
     </div>
 
     <h2 id="summary">9. まとめ</h2>
-    <p>整理すると、赤井三兄妹（沖矢昴・羽田秀吉・世良真純）と安室透という「正体を隠して組織に立ち向かう味方側」の物語が積み重なった先に、17年前の羽田浩司事件という「全ての出発点」が見えてきて、組織ナンバー2のRUM、そして更にその上にいる真のトップ「あの方（烏丸蓮耶）」へとたどり着く、という構成になっています。新出先生の一件も含めて、名探偵コナンは「見慣れた顔の裏に、もう一つの正体が隠れている」という仕掛けを、身近な人物から組織のトップまで何段階にも重ねて使いながら物語を広げてきたシリーズだと言えます。整理しながら見返すと、これまで気づかなかった伏線に気づけるはずです。</p>
+    <p>整理すると、<wbr>赤井三兄妹<wbr>（沖矢昴・羽田秀吉・世良真純）と<wbr>安室透という<wbr>「正体を<wbr>隠して<wbr>組織に<wbr>立ち向かう<wbr>味方側」の<wbr>物語が<wbr>積み重なった<wbr>先に、<wbr>17年前の<wbr>羽田浩司事件という<wbr>「全ての出発点」が<wbr>見えてきて、<wbr>組織ナンバー2の<wbr>RUM、そして<wbr>さらにその上にいる真の<wbr>トップ「あの方（烏丸蓮耶）」へと<wbr>たどり着く、という<wbr>構成に<wbr>なっています。<wbr>新出先生の<wbr>一件も<wbr>含めて、<wbr>名探偵コナンは<wbr>「見慣れた顔の<wbr>裏に、もう<wbr>一つの<wbr>正体が<wbr>隠れている」という<wbr>仕掛けを、<wbr>身近な<wbr>人物から<wbr>組織の<wbr>トップまで<wbr>何段階にも<wbr>重ねて<wbr>使いながら<wbr>物語を<wbr>広げてきた<wbr>シリーズだと<wbr>言えます。<wbr>整理しながら<wbr>見返すと、<wbr>これまで<wbr>気づかなかった<wbr>伏線に<wbr>気づけるはずです。</p>
 
     <a href="https://anime-db.jp/blog/conan-romance-guide.html" class="next-article">
       <div style="flex:1">
-        <div class="next-article-label">💕 正体編を読み終えたら一息はこちら</div>
-        <div class="next-article-title">名探偵コナン恋愛名場面ガイド【新一×蘭・園子×京極・高木×佐藤・快斗×青子を時系列で振り返る】</div>
-        <div class="next-article-desc">事件解決とはまた違う視点から、怪盗キッド編を含む5組のカップルの名場面を時系列で振り返る記事です。正体編の緊張感から離れて、一息つきたいときにどうぞ。</div>
+        <div class="next-article-label">💕 正体編を<wbr>読み終えたら<wbr>一息は<wbr>こちら</div>
+        <div class="next-article-title">名探偵コナン恋愛名場面ガイド【新一×蘭・園子×京極・高木×佐藤・快斗×青子を<wbr>時系列で<wbr>振り返る】</div>
+        <div class="next-article-desc">事件解決とはまた違う<wbr>視点から、<wbr>怪盗キッド編を含む<wbr>5組の<wbr>カップルの<wbr>名場面を<wbr>時系列で<wbr>振り返る<wbr>記事です。<wbr>正体編の<wbr>緊張感から<wbr>離れて、<wbr>一息つきたい<wbr>ときに<wbr>どうぞ。</div>
       </div>
       <div class="next-article-arrow">→</div>
     </a>
@@ -293,11 +300,11 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
   </div>
 
   <section class="related-guides" aria-label="関連ガイド">
-    <h2 class="related-guides-title">関連ガイド（名探偵コナン）</h2>
+    <h2 class="related-guides-title">関連<wbr>ガイド<wbr>（名探偵コナン）</h2>
     <ul>
-      <li><a href="https://anime-db.jp/blog/conan-beginner-guide.html"><span class="rg-name">名探偵コナン初心者ガイド</span><span class="rg-desc">親から子へ、今から見せるならこの順番で。序盤の神回、映画6本、原作の追い方をまとめています。</span></a></li>
-      <li><a href="https://anime-db.jp/blog/conan-romance-guide.html"><span class="rg-name">名探偵コナン恋愛名場面ガイド</span><span class="rg-desc">新一×蘭、園子×京極、平次×和葉、高木×佐藤、快斗×青子の5組を時系列で振り返ります。</span></a></li>
-      <li><a href="https://anime-db.jp/blog/conan-genetics-guide.html"><span class="rg-name">名探偵コナン「親から子へ」名探偵の血筋ガイド</span><span class="rg-desc">工藤家・服部家・毛利家・黒羽家に受け継がれた推理力と特技を整理しています。</span></a></li>
+      <li><a href="https://anime-db.jp/blog/conan-beginner-guide.html"><span class="rg-name">名探偵コナン初心者ガイド</span><span class="rg-desc">親から<wbr>子へ、<wbr>今から<wbr>見せるならこの<wbr>順番で<wbr>どうぞ。<wbr>序盤の<wbr>神回、<wbr>映画6本、<wbr>原作の追い方を<wbr>まとめています。</span></a></li>
+      <li><a href="https://anime-db.jp/blog/conan-romance-guide.html"><span class="rg-name">名探偵コナン恋愛名場面ガイド</span><span class="rg-desc">新一×蘭、<wbr>園子×京極、<wbr>平次×和葉、<wbr>高木×佐藤、<wbr>快斗×青子の<wbr>5組を<wbr>時系列で<wbr>振り返ります。</span></a></li>
+      <li><a href="https://anime-db.jp/blog/conan-genetics-guide.html"><span class="rg-name">名探偵コナン<wbr>「親から子へ」<wbr>名探偵の<wbr>血筋ガイド</span><span class="rg-desc">工藤家・服部家・<wbr>毛利家・黒羽家に<wbr>受け継がれた<wbr>推理力と<wbr>特技を<wbr>整理しています。</span></a></li>
     </ul>
   </section>
 

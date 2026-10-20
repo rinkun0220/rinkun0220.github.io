@@ -68,6 +68,13 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
 .footer-links{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;margin-bottom:16px}
 .footer-link{color:var(--text-muted);text-decoration:none;font-size:.85rem}.footer-link:hover{color:#fff}
 .copyright{font-size:.8rem;color:rgba(255,255,255,0.3)}
+/* 日本語の改行を自然にする設定（文節単位で改行・行頭禁則・1文字だけの行を避ける） */
+body{line-break:strict;overflow-wrap:break-word}
+@supports (word-break:auto-phrase){body{word-break:auto-phrase}}
+:has(> wbr){word-break:keep-all}
+p,li,dd,td,th{text-wrap:pretty}
+.nb{white-space:nowrap}
+h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-title,.pick-name,.next-article-title{text-wrap:balance}
 </style>
 </head>
 <body>
@@ -83,18 +90,18 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
   <div class="breadcrumb">
     <a href="https://anime-db.jp/">ホーム</a><span>›</span>
     <a href="https://anime-db.jp/blog/">ブログ</a><span>›</span>
-    アニメを見る前に必ずチェックする項目6つ
+    アニメを見る前に必ず<wbr>チェックする<wbr>項目6つ
   </div>
 
   <span class="article-tag">🔍 管理人の軸</span>
-  <h1 class="article-title">アニメを見る前に必ずチェックする項目6つ<br>【管理人の選び方】</h1>
+  <h1 class="article-title">アニメを見る前に必ず<wbr>チェックする<wbr>項目6つ<br>【管理人の<wbr>選び方】</h1>
   <div class="article-meta">
     <span>📅 2026年8月</span><span>✍️ ANIMEDB管理人</span><span>⏱ 読了目安：約7分</span>
   </div>
 
   <div class="alert-box">
-    <strong>🔍 「何故その作品を薦めるのか」の答え</strong><br>
-    毎クール70本前後のアニメが放送される中で、全部を追いかけるのは現実的に不可能です。このサイトで脚本家・監督・制作会社・声優・主題歌アーティストと、色々な切り口で特集記事を作ってきましたが、今回はその大元にある「管理人が何を見て、何を判断材料にしているか」を1本の記事としてまとめました。逆に言えば、この記事はサイト内の各特集記事への入り口でもあります。
+    <strong>🔍 「なぜその<wbr>作品を<wbr>薦めるのか」の答え</strong><br>
+    毎クール70本前後の<wbr>アニメが<wbr>放送される<wbr>中で、<wbr>全部を<wbr>追いかけるのは<wbr>現実的に<wbr>不可能です。この<wbr>サイトで<wbr>脚本家・監督・<wbr>制作会社・声優・主題歌アーティストと、<wbr>色々な<wbr>切り口で<wbr>特集記事を<wbr>作ってきましたが、<wbr>今回はその<wbr>大元にある<wbr>「管理人が何を<wbr>見て、何を<wbr>判断材料に<wbr>しているか」を<wbr>1本の<wbr>記事として<wbr>まとめました。逆に<wbr>言えば、この<wbr>記事は<wbr>サイト内の<wbr>各特集記事への<wbr>入り口でもあります。
   </div>
 
   <div class="toc">
@@ -105,8 +112,8 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
       <a href="#check3">3. 制作会社</a>
       <a href="#check4">4. 声優</a>
       <a href="#check5">5. 主題歌アーティスト</a>
-      <a href="#check6">6. 1話の掴みと原作の有無</a>
-      <a href="#myflow">★ 管理人の実際のチェックの流れ</a>
+      <a href="#check6">6. 1話の<wbr>掴みと<wbr>原作の<wbr>有無</a>
+      <a href="#myflow">★ 管理人の<wbr>実際の<wbr>チェックの流れ</a>
     </div>
   </div>
 
@@ -117,13 +124,13 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
         <div class="gem-num">1</div>
         <div class="gem-title-block">
           <div class="gem-name">脚本家</div>
-          <div class="gem-sub">物語の骨格を作る人</div>
+          <div class="gem-sub">物語の<wbr>骨格を作る人</div>
         </div>
       </div>
-      <div class="gem-body">アニメの満足度は、実は監督や作画以上に脚本家で決まることが多いと思っています。同じ原作でも、脚本家によって台詞回しやエピソードの取捨選択、話数構成のテンポがまるで変わります。特にオリジナルアニメや、原作からの改変が多い作品では、脚本家買いが一番当たりやすい選び方だと感じています。</div>
-      <div class="gem-point"><strong>チェックの仕方：</strong>放送前の公式サイトやニュースで「シリーズ構成」「脚本」のクレジットを確認しましょう。過去に好きだった作品の脚本家を覚えておくと、次の当たりを引きやすくなります。</div>
+      <div class="gem-body">アニメの<wbr>満足度は、実は<wbr>監督や<wbr>作画以上に<wbr>脚本家で<wbr>決まる<wbr>ことが<wbr>多いと<wbr>思っています。同じ<wbr>原作でも、<wbr>脚本家に<wbr>よって<wbr>台詞回しや<wbr>エピソードの<wbr>取捨選択、<wbr>話数構成の<wbr>テンポが<wbr>まるで<wbr>変わります。特に<wbr>オリジナルアニメや、<wbr>原作からの<wbr>改変が多い<wbr>作品では、<wbr>脚本家買いが一番<wbr>当たりやすい<wbr>選び方だと<wbr>感じています。</div>
+      <div class="gem-point"><strong>チェックの<wbr>仕方：</strong>放送前の<wbr>公式サイトや<wbr>ニュースで<wbr>「シリーズ構成」<wbr>「脚本」の<wbr>クレジットを<wbr>確認しましょう。<wbr>過去に<wbr>好きだった<wbr>作品の<wbr>脚本家を<wbr>覚えて<wbr>おくと、次の<wbr>当たりを<wbr>引きやすくなります。</div>
       <div class="link-row">
-        <a href="https://anime-db.jp/blog/scriptwriter-favorites.html" class="badge linkto">→ 脚本家8人の代表作まとめ</a>
+        <a href="https://anime-db.jp/blog/scriptwriter-favorites.html" class="badge linkto">→ 脚本家8人の<wbr>代表作まとめ</a>
       </div>
     </div>
 
@@ -132,13 +139,13 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
         <div class="gem-num">2</div>
         <div class="gem-title-block">
           <div class="gem-name">監督</div>
-          <div class="gem-sub">画面の"呼吸"を決める人</div>
+          <div class="gem-sub">画面の<wbr>"呼吸"を<wbr>決める人</div>
         </div>
       </div>
-      <div class="gem-body">脚本が骨格なら、監督は作品全体の「呼吸」だと思っています。カット割りのテンポ、間の取り方、感情シーンでどれだけ画面に語らせるか。同じ脚本でも監督が違えば全く別の作品になります。特に静かな余韻を残す作風が好きな管理人にとって、監督は脚本家と同じくらい重要な判断材料になっています。</div>
-      <div class="gem-point"><strong>チェックの仕方：</strong>過去に感動した作品の監督名を控えておき、新作のスタッフ欄で名前を見つけたら期待値を上げましょう。逆に「合わなかった監督」を把握しておくのも、無駄な視聴時間を減らすコツです。</div>
+      <div class="gem-body">脚本が<wbr>骨格なら、<wbr>監督は<wbr>作品全体の<wbr>「呼吸」だと<wbr>思っています。<wbr>カット割りの<wbr>テンポ、間の<wbr>取り方、<wbr>感情シーンで<wbr>どれだけ<wbr>画面に<wbr>語らせるかという<wbr>点です。同じ<wbr>脚本でも<wbr>監督が<wbr>違えば全く別の<wbr>作品に<wbr>なります。特に<wbr>静かな<wbr>余韻を残す<wbr>作風が<wbr>好きな<wbr>管理人に<wbr>とって、<wbr>監督は<wbr>脚本家と同じ<wbr>くらい<wbr>重要な<wbr>判断材料に<wbr>なっています。</div>
+      <div class="gem-point"><strong>チェックの<wbr>仕方：</strong>過去に<wbr>感動した<wbr>作品の<wbr>監督名を<wbr>控えておき、<wbr>新作の<wbr>スタッフ欄で<wbr>名前を<wbr>見つけたら<wbr>期待値を<wbr>上げましょう。逆に<wbr>「合わなかった監督」を<wbr>把握しておくのも、<wbr>無駄な<wbr>視聴時間を<wbr>減らす<wbr>コツです。</div>
       <div class="link-row">
-        <a href="https://anime-db.jp/blog/director-favorites.html" class="badge linkto">→ 監督8人の代表作まとめ</a>
+        <a href="https://anime-db.jp/blog/director-favorites.html" class="badge linkto">→ 監督8人の<wbr>代表作まとめ</a>
       </div>
     </div>
 
@@ -147,13 +154,13 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
         <div class="gem-num">3</div>
         <div class="gem-title-block">
           <div class="gem-name">制作会社</div>
-          <div class="gem-sub">"沼が一番深い"チェック項目</div>
+          <div class="gem-sub">"沼が一番深い<wbr>"チェック項目</div>
         </div>
       </div>
-      <div class="gem-body">正直に言うと、これが管理人にとって一番沼が深いチェック項目です。制作会社ごとに得意なジャンルや画作りの傾向があり、「この会社が作るなら間違いない」という感覚が積み重なっていくと、初見の作品でも安心して飛び込めるようになります。</div>
-      <div class="gem-point"><strong>チェックの仕方：</strong>アニメーション制作のクレジットを確認しましょう。原作や監督だけでなく、どのスタジオが手掛けているかで、作画の傾向や演出の癖がある程度予測出来ます。</div>
+      <div class="gem-body">正直に<wbr>言うと、<wbr>これが<wbr>管理人に<wbr>とって<wbr>一番沼が深い<wbr>チェック項目です。<wbr>制作会社ごとに<wbr>得意な<wbr>ジャンルや<wbr>画作りの<wbr>傾向が<wbr>あり、<wbr>「この<wbr>会社が<wbr>作るなら<wbr>間違いない」という<wbr>感覚が<wbr>積み重なっていくと、<wbr>初見の<wbr>作品でも<wbr>安心して<wbr>飛び込めるようになります。</div>
+      <div class="gem-point"><strong>チェックの<wbr>仕方：</strong>アニメーション制作の<wbr>クレジットを<wbr>確認しましょう。<wbr>原作や<wbr>監督だけでなく、どの<wbr>スタジオが<wbr>手掛けているかで、<wbr>作画の<wbr>傾向や<wbr>演出の癖がある<wbr>程度予測できます。</div>
       <div class="link-row">
-        <a href="https://anime-db.jp/blog/studio-favorites.html" class="badge linkto">→ 制作会社16社の代表作まとめ</a>
+        <a href="https://anime-db.jp/blog/studio-favorites.html" class="badge linkto">→ 制作会社16社の<wbr>代表作まとめ</a>
       </div>
     </div>
 
@@ -162,15 +169,15 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
         <div class="gem-num">4</div>
         <div class="gem-title-block">
           <div class="gem-name">声優</div>
-          <div class="gem-sub">主役級から変幻自在の演技派まで</div>
+          <div class="gem-sub">主役級から<wbr>変幻自在の<wbr>演技派まで</div>
         </div>
       </div>
-      <div class="gem-body">声優は単純にキャスト目当てで見る作品を選ぶこともあれば、逆に「この声優が出ているなら安心」という信頼のバロメーターとして働くこともあります。主役級の若手はもちろん、役ごとに変幻自在の芝居を見せる声優がキャストに入っているかどうかも、密かに重視しているポイントです。男性声優、女性声優、変幻自在の演技力を持つ声優、主役級声優と、切り口別に特集記事を作ってきたのもこのこだわりの表れです。</div>
-      <div class="gem-point"><strong>チェックの仕方：</strong>キャスト欄を見て、知っている声優が何人いるかをざっくり数えてみましょう。特に「この人が出ているとハズレが少ない」という自分なりのリストを持っておくと選びやすくなります。</div>
+      <div class="gem-body">声優は<wbr>単純に<wbr>キャスト目当てで<wbr>見る作品を<wbr>選ぶことも<wbr>あれば、逆に<wbr>「この<wbr>声優が<wbr>出ているなら<wbr>安心」という<wbr>信頼の<wbr>バロメーターとして働く<wbr>こともあります。<wbr>主役級の<wbr>若手は<wbr>もちろん、<wbr>役ごとに<wbr>変幻自在の<wbr>芝居を<wbr>見せる<wbr>声優が<wbr>キャストに<wbr>入っているかどうかも、<wbr>密かに<wbr>重視している<wbr>ポイントです。<wbr>男性声優、<wbr>女性声優、<wbr>変幻自在の<wbr>演技力を<wbr>持つ声優、<wbr>主役級声優と、<wbr>切り口別に<wbr>特集記事を<wbr>作ってきたのもこの<wbr>こだわりの<wbr>表れです。</div>
+      <div class="gem-point"><strong>チェックの<wbr>仕方：</strong>キャスト欄を<wbr>見て、<wbr>知っている<wbr>声優が<wbr>何人いるかを<wbr>ざっくり数えてみましょう。特に<wbr>「この人が<wbr>出ていると<wbr>ハズレが<wbr>少ない」という<wbr>自分なりの<wbr>リストを<wbr>持っておくと<wbr>選びやすくなります。</div>
       <div class="link-row">
         <a href="https://anime-db.jp/blog/male-seiyuu-favorites.html" class="badge linkto">→ 男性声優9人</a>
         <a href="https://anime-db.jp/blog/female-seiyuu-favorites.html" class="badge linkto">→ 女性声優8人</a>
-        <a href="https://anime-db.jp/blog/legend-seiyuu-favorites.html" class="badge linkto">→ 変幻自在の演技力を持つ声優9人</a>
+        <a href="https://anime-db.jp/blog/legend-seiyuu-favorites.html" class="badge linkto">→ 変幻自在の<wbr>演技力を<wbr>持つ声優9人</a>
         <a href="https://anime-db.jp/blog/nextgen-seiyuu-favorites.html" class="badge linkto">→ 主役級声優11人</a>
       </div>
     </div>
@@ -180,13 +187,13 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
         <div class="gem-num">5</div>
         <div class="gem-title-block">
           <div class="gem-name">主題歌アーティスト</div>
-          <div class="gem-sub">1話を最後まで見る後押しになる</div>
+          <div class="gem-sub">1話を<wbr>最後まで<wbr>見る後押しになる</div>
         </div>
       </div>
-      <div class="gem-body">主題歌だけで作品の良し悪しが決まるわけではありませんが、好きなアーティストが主題歌を担当していると「とりあえず1話は見よう」という後押しになるのは間違いありません。OP・EDのクオリティは、制作陣が作品にどれだけ力を入れているかのバロメーターになっている感覚もあります。</div>
-      <div class="gem-point"><strong>チェックの仕方：</strong>放送前に発表される主題歌情報とアーティスト名をチェックしましょう。タイアップの歴史が長いアーティストは、アニメとの相性を分かっている場合が多いです。</div>
+      <div class="gem-body">主題歌だけで<wbr>作品の<wbr>良し悪しが<wbr>決まるわけではありませんが、<wbr>好きな<wbr>アーティストが<wbr>主題歌を<wbr>担当していると<wbr>「とりあえず<wbr>1話は<wbr>見よう」という<wbr>後押しに<wbr>なるのは<wbr>間違い<wbr>ありません。<wbr>OP・EDの<wbr>クオリティは、<wbr>制作陣が<wbr>作品に<wbr>どれだけ力を<wbr>入れているかの<wbr>バロメーターに<wbr>なっている<wbr>感覚も<wbr>あります。</div>
+      <div class="gem-point"><strong>チェックの<wbr>仕方：</strong>放送前に<wbr>発表される<wbr>主題歌情報と<wbr>アーティスト名を<wbr>チェックしましょう。<wbr>タイアップの<wbr>歴史が長い<wbr>アーティストは、<wbr>アニメとの<wbr>相性を<wbr>分かっている<wbr>場合が<wbr>多いです。</div>
       <div class="link-row">
-        <a href="https://anime-db.jp/blog/artist-anime-favorites.html" class="badge linkto">→ アーティスト11組が手掛けたアニメまとめ</a>
+        <a href="https://anime-db.jp/blog/artist-anime-favorites.html" class="badge linkto">→ アーティスト11組が<wbr>手掛けた<wbr>アニメまとめ</a>
       </div>
     </div>
 
@@ -194,32 +201,32 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
       <div class="gem-header">
         <div class="gem-num">6</div>
         <div class="gem-title-block">
-          <div class="gem-name">1話の掴みと原作の有無</div>
-          <div class="gem-sub">スタッフ情報だけでは判断出来ない部分</div>
+          <div class="gem-name">1話の<wbr>掴みと<wbr>原作の有無</div>
+          <div class="gem-sub">スタッフ情報だけでは<wbr>判断できない部分</div>
         </div>
       </div>
-      <div class="gem-body">ここまでの5項目はいわば「見る前の期待値」を決める要素ですが、最終的にものを言うのは1話そのものの掴みです。どれだけスタッフが豪華でも、1話で世界観や見せ方に引っかかりを感じなければ視聴継続は難しくなります。あわせて、原作の有無も見ていますが、原作そのものはチェックしません。アニメだけで判断します。</div>
-      <div class="gem-point"><strong>チェックの仕方：</strong>1話は「ながら見」ではなく一度きちんと集中して見てみましょう。原作つきの作品でも、管理人は原作を読まずにアニメだけで判断しています。原作を調べるかどうかは、お好みで構いません。</div>
+      <div class="gem-body">ここまでの<wbr>5項目は<wbr>いわば<wbr>「見る前の期待値」を<wbr>決める<wbr>要素ですが、<wbr>最終的に<wbr>ものを<wbr>言うのは1話その<wbr>ものの<wbr>掴みです。<wbr>どれだけスタッフが<wbr>豪華でも、<wbr>1話で<wbr>世界観や<wbr>見せ方に<wbr>引っかかりを<wbr>感じなければ<wbr>視聴継続は<wbr>難しくなります。<wbr>あわせて、<wbr>原作の<wbr>有無も<wbr>見ていますが、原作その<wbr>ものは<wbr>チェックしません。<wbr>アニメだけで<wbr>判断します。</div>
+      <div class="gem-point"><strong>チェックの<wbr>仕方：</strong>1話は<wbr>「ながら見」ではなく<wbr>一度きちんと<wbr>集中して<wbr>見てみましょう。<wbr>原作つきの<wbr>作品でも、<wbr>管理人は<wbr>原作を<wbr>読まずに<wbr>アニメだけで<wbr>判断しています。<wbr>原作を<wbr>調べるかどうかは、<wbr>お好みで<wbr>構いません。</div>
     </div>
 
-    <h2>結局どれを一番重視するか</h2>
-    <p>あえて優先順位をつけるなら、脚本家＞監督＞制作会社＞声優＞主題歌の順になります。ただしこれはあくまで「初見の作品を選ぶとき」の話で、すでに気になっている作品であれば、この順番はほとんど意味を持ちません。逆に言えば、この6項目は「観るかどうか迷っている作品の背中を押すための判断材料」に近いものです。</p>
+    <h2>結局<wbr>どれを一番<wbr>重視するか</h2>
+    <p>あえて<wbr>優先順位を<wbr>つけるなら、<wbr>脚本家＞監督＞制作会社＞声優＞主題歌の順に<wbr>なります。<wbr>ただし<wbr>これは<wbr>あくまで<wbr>「初見の作品を選ぶとき」の<wbr>話で、<wbr>すでに気に<wbr>なっている<wbr>作品であれば、この<wbr>順番は<wbr>ほとんど<wbr>意味を<wbr>持ちません。逆に<wbr>言えば、この<wbr>6項目は<wbr>「観るかどうか<wbr>迷っている<wbr>作品の<wbr>背中を<wbr>押すための<wbr>判断材料」に近い<wbr>ものです。</p>
 
-    <h2 id="myflow">管理人の実際のチェックの流れ</h2>
-    <p>ここまでが見る項目です。実際の流れも紹介します。まず、放送の約1か月前に各サイトが出す、次のシーズンのアニメ一覧を見ます。管理人はほぼ、アニメイトタイムズの一覧を参考にしています。そこで気になった作品について、次にPV、最後にスタッフ欄を見ます。PVでは、とくに作画、その中でも登場人物の表情を見ています。</p>
-    <p>ただし、放送前から話題になっている作品（主に続編）は、前のシーズンや数年前の作品であっても、必ずチェックの対象に入れます。2027年開始の作品も同じです。いま楽しみにしているのは、2027年冬の<a href="https://sakamotodays.jp/" target="_blank" rel="noopener">「SAKAMOTO DAYS」第2期</a>です。1期が、日本殺し屋養成所（JCC）への潜入まで進んだので、これから物語が面白くなりそうだと感じているからです。</p>
-    <div class="gem-point"><strong>スタッフが良くても合わないことがあります：</strong>スタッフ欄を見て期待しても、合わなかった作品はあります。管理人の場合は「上伊那ぼたん、酔へる姿は百合の花」がそうでした。スタッフは判断材料の一つで、最後は自分の目で見て決めるものです。</div>
-    <p>声優は、放送前のティザーの段階で、<a href="https://anime-db.jp/blog/legend-seiyuu-favorites.html">変幻自在の演技力を持つ声優</a>が数人確定している作品かどうかも見ています。管理人の場合、そうした作品は良かったことが多く、合わなかった作品の例は、そうした声優が出ていない作品でした。</p>
-    <p>放送前に知っていた情報が少なくても、当たる作品はあります。管理人の場合は「Vivy -Fluorite Eye's Song-」がそうでした。くわしくは<a href="https://anime-db.jp/blog/unexpected-hits.html">期待していなかったのに心を掴まれた作品の記事</a>で紹介しています。</p>
-    <p>観続けると決めるのは、1話の終わりです。1話の終わりまで観て、続きが気になるかどうかで決めています。</p>
-    <p>1話切りの基準は、とても単純です。「もういいかな」と心で感じたときです。累計の視聴作品数が把握できなくなったころから、この感覚はほぼ当たるようになりました。切った作品でも、その後の話題の広がり方を見て、戻るかどうかを決めます。</p>
-    <p>原作はチェックしません。逆に、気になるところで終わったのに、次の放送がいつか分からない作品は、あとから気になってきます。このサイトを作ってからは、「ぐらんぶる Season 3」がそうです。</p>
+    <h2 id="myflow">管理人の<wbr>実際の<wbr>チェックの流れ</h2>
+    <p>ここまでが見る<wbr>項目です。<wbr>実際の<wbr>流れも<wbr>紹介します。<wbr>まず、<wbr>放送の<wbr>約1か<wbr>月前に<wbr>各サイトが<wbr>出す、次の<wbr>シーズンの<wbr>アニメ一覧を<wbr>見ます。<wbr>管理人は<wbr>ほぼ、<wbr>アニメイトタイムズの<wbr>一覧を<wbr>参考に<wbr>しています。<wbr>そこで気に<wbr>なった<wbr>作品に<wbr>ついて、次に<wbr>PV、<wbr>最後に<wbr>スタッフ欄を<wbr>見ます。<wbr>PVでは、とくに<wbr>作画、その<wbr>中でも<wbr>登場人物の<wbr>表情を<wbr>見ています。</p>
+    <p>ただし、<wbr>放送前から<wbr>話題に<wbr>なっている作品<wbr>（主に続編）は、前の<wbr>シーズンや<wbr>数年前の<wbr>作品であっても、必ず<wbr>チェックの<wbr>対象に<wbr>入れます。<wbr>2027年開始の<wbr>作品も<wbr>同じです。<wbr>いま楽しみに<wbr>しているのは、<wbr>2027年冬の<a href="https://sakamotodays.jp/" target="_blank" rel="noopener"><wbr>「SAKAMOTO DAYS」<wbr>第2期</a>です。<wbr>1期が、<wbr>日本殺し屋養成所<wbr>（JCC）への<wbr>潜入まで<wbr>進んだので、<wbr>これから<wbr>物語が<wbr>面白くなりそうだと<wbr>感じているからです。</p>
+    <div class="gem-point"><strong>スタッフが<wbr>良くても<wbr>合わない<wbr>ことがあります：</strong>スタッフ欄を見て<wbr>期待しても、<wbr>合わなかった<wbr>作品は<wbr>あります。<wbr>管理人の<wbr>場合は<wbr>「上伊那ぼたん、<wbr>酔へる姿は<wbr>百合の<wbr>花」が<wbr>そうでした。<wbr>スタッフは<wbr>判断材料の<wbr>一つで、<wbr>最後は<wbr>自分の目で見て<wbr>決める<wbr>ものです。</div>
+    <p>声優は、<wbr>放送前の<wbr>ティザーの<wbr>段階で、<a href="https://anime-db.jp/blog/legend-seiyuu-favorites.html"><wbr>変幻自在の<wbr>演技力を持つ<wbr>声優</a>が<wbr>数人確定している<wbr>作品か<wbr>どうかも<wbr>見ています。<wbr>管理人の<wbr>場合、<wbr>そうした<wbr>作品は<wbr>良かったことが<wbr>多く、<wbr>合わなかった<wbr>作品の<wbr>例は、<wbr>そうした<wbr>声優が<wbr>出ていない<wbr>作品でした。</p>
+    <p>放送前に<wbr>知っていた<wbr>情報が<wbr>少なくても、<wbr>当たる<wbr>作品は<wbr>あります。<wbr>管理人の<wbr>場合は<wbr>「Vivy -Fluorite Eye's Song-」が<wbr>そうでした。<wbr>くわしくは<a href="https://anime-db.jp/blog/unexpected-hits.html"><wbr>期待していなかったのに心を<wbr>掴まれた<wbr>作品の<wbr>記事</a>で<wbr>紹介しています。</p>
+    <p>観続けると<wbr>決めるのは、<wbr>1話の<wbr>終わりです。<wbr>1話の<wbr>終わりまで<wbr>観て、<wbr>続きが気に<wbr>なるかどうかで<wbr>決めています。</p>
+    <p>1話切りの<wbr>基準は、<wbr>とても<wbr>単純です。<wbr>「もういいかな」と心で<wbr>感じた<wbr>ときです。<wbr>累計の<wbr>視聴作品数が<wbr>把握できなくなった<wbr>ころから、この<wbr>感覚はほぼ<wbr>当たるようになりました。<wbr>切った<wbr>作品でも、<wbr>その後の<wbr>話題の<wbr>広がり方を<wbr>見て、<wbr>戻るかどうかを<wbr>決めます。</p>
+    <p>原作は<wbr>チェックしません。<wbr>逆に、気になる<wbr>ところで<wbr>終わったのに、次の<wbr>放送が<wbr>いつか<wbr>分からない<wbr>作品は、<wbr>あとから気に<wbr>なってきます。この<wbr>サイトを<wbr>作ってからは、<wbr>「ぐらんぶる Season 3」が<wbr>そうです。</p>
 
-    <p>1話で切った作品に、あとから戻って観て良かったと感じた作品は、ありません。1クールの放送が70本前後と多く、すべてを観続けることはできないからです。観続けている作品は、絞った作品だけで、その裏で、さらに10作品以上を観て、1話で切っています。</p>
-    <p>これから新作のチェックを始める方には、まず、友達からの紹介もおすすめします。</p>
+    <p>1話で<wbr>切った<wbr>作品に、<wbr>あとから<wbr>戻って観て<wbr>良かったと<wbr>感じた<wbr>作品は、<wbr>ありません。<wbr>1クールの<wbr>放送が<wbr>70本前後と<wbr>多く、<wbr>全てを<wbr>観続ける<wbr>ことは<wbr>できないからです。<wbr>観続けている<wbr>作品は、<wbr>絞った<wbr>作品だけで、その<wbr>裏で、<wbr>さらに<wbr>10作品以上を<wbr>観て、<wbr>1話で<wbr>切っています。</p>
+    <p>これから<wbr>新作の<wbr>チェックを<wbr>始める<wbr>方には、<wbr>まず、<wbr>友達からの<wbr>紹介も<wbr>おすすめします。</p>
 
     <h2>まとめ</h2>
-    <p>このサイトで作ってきた脚本家・監督・制作会社・声優・アーティストの特集記事は、実は全てこの6項目のどれかに対応しています。バラバラに見えていた特集記事も、こうして1本の軸でまとめると、管理人がどういう視点でアニメを見ているかが伝わりやすくなるのではないかと思います。気になる項目があれば、是非リンク先の特集記事もあわせてチェックしてみてください。</p>
+    <p>この<wbr>サイトで<wbr>作ってきた<wbr>脚本家・監督・<wbr>制作会社・声優・アーティストの<wbr>特集記事は、実は全てこの<wbr>6項目の<wbr>どれかに<wbr>対応しています。<wbr>バラバラに<wbr>見えていた<wbr>特集記事も、<wbr>こうして<wbr>1本の軸で<wbr>まとめると、<wbr>管理人が<wbr>どういう<wbr>視点で<wbr>アニメを<wbr>見ているかが<wbr>伝わりやすくなるのではないかと<wbr>思います。気になる<wbr>項目が<wbr>あれば、<wbr>ぜひリンク先の<wbr>特集記事も<wbr>あわせて<wbr>チェックしてみてください。</p>
   </div>
 
   <a href="https://anime-db.jp/blog/" class="back-btn">← ブログ一覧に戻る</a>

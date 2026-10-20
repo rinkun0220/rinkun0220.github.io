@@ -59,6 +59,7 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
 .eval-chip.a{background:rgba(255,165,2,0.15);color:var(--star-color);border:1px solid rgba(255,165,2,0.3)}
 .eval-chip.b{background:rgba(37,99,235,0.15);color:#60a5fa;border:1px solid rgba(37,99,235,0.3)}
 .eval-label{font-size:.7rem;color:var(--text-muted);margin-right:2px}
+.eval-pair{display:inline-flex;align-items:center;white-space:nowrap}
 .streaming-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
 .badge{font-size:.7rem;font-weight:600;padding:3px 10px;border-radius:4px;text-decoration:none;background:transparent;border:1px solid currentColor}
 .badge.danime{color:#e08a45}.badge.amazon{color:#4aa8d8}.badge.netflix{color:#d9636f}.badge.official{background:#444;border:1px solid rgba(255,255,255,0.15);color:#f1f2f6}
@@ -69,6 +70,13 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
 .footer-link{color:var(--text-muted);text-decoration:none;font-size:.85rem}.footer-link:hover{color:#fff}
 .copyright{font-size:.8rem;color:rgba(255,255,255,0.3)}
 .rating-guide-note{font-size:.88rem;color:var(--text-muted);margin:-8px 0 28px;line-height:1.8}.rating-guide-note a{color:var(--accent);text-decoration:underline}
+/* 日本語の改行を自然にする設定（文節単位で改行・行頭禁則・1文字だけの行を避ける） */
+body{line-break:strict;overflow-wrap:break-word}
+@supports (word-break:auto-phrase){body{word-break:auto-phrase}}
+:has(> wbr){word-break:keep-all}
+p,li,dd,td,th{text-wrap:pretty}
+.nb{white-space:nowrap}
+h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-title,.pick-name,.next-article-title{text-wrap:balance}
 </style>
 </head>
 <body>
@@ -88,34 +96,34 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
   </div>
 
   <span class="article-tag">🔥 ランキング</span>
-  <h1 class="article-title">バトルアニメ歴代おすすめランキング10選【作画・演出・迫力で選出】</h1>
+  <h1 class="article-title">バトルアニメ歴代おすすめランキング10選【作画・演出・迫力で<wbr>選出】</h1>
   <div class="article-meta">
     <span>📅 2026年5月10日</span><span>✍️ ANIMEDB管理人</span><span>⏱ 読了目安：約6分</span>
   </div>
 
   <div class="article-body">
-    <p>「作画がすごい」「バトルシーンが熱い」——そう感じたアニメを独自の基準でランキングしました。単純に強さや人気だけでなく、<strong>戦闘シーンの演出・作画クオリティ・物語との連動性</strong>を総合的に評価しています。「また見返したい」と思わせる戦闘があるかどうかを最重視しました。</p>
+    <p>「作画がすごい」<wbr>「バトルシーンが熱い」<wbr>——そう<wbr>感じた<wbr>アニメを<wbr>独自の<wbr>基準で<wbr>ランキングしました。<wbr>単純に<wbr>強さや<wbr>人気だけでなく、<strong><wbr>戦闘シーンの<wbr>演出・作画クオリティ・物語との<wbr>連動性</strong>を<wbr>総合的に<wbr>評価しています。<wbr>「また見返したい」と<wbr>思わせる<wbr>戦闘が<wbr>あるかどうかを<wbr>最重視しました。</p>
 
     <div class="toc">
       <div class="toc-title">📋 目次</div>
       <ol>
         <li><a href="#criteria">評価基準</a></li>
         <li><a href="#ranking">歴代ベスト10</a></li>
-        <li><a href="#myview">管理人がバトルアニメで見るところ</a></li>
+        <li><a href="#myview">管理人が<wbr>バトルアニメで<wbr>見るところ</a></li>
         <li><a href="#summary">まとめ</a></li>
       </ol>
     </div>
 
-    <p class="rating-guide-note">※★の点数は管理人スコア（10点満点）です。評価の基準は<a href="https://anime-db.jp/blog/rating-criteria.html">こちら</a>をご覧ください。</p>
+    <p class="rating-guide-note">※★の<wbr>点数は<wbr>管理人スコア<wbr>（10点満点）です。<wbr>評価の<wbr>基準は<a href="https://anime-db.jp/blog/rating-criteria.html"><wbr>こちら</a>を<wbr>ご覧ください。</p>
 
-    <h2 id="criteria">評価基準について</h2>
+    <h2 id="criteria">評価基準に<wbr>ついて</h2>
     <ul>
-      <li><strong>作画クオリティ</strong>：全話を通した安定性と、名シーンの質</li>
-      <li><strong>演出の面白さ</strong>：カメラワーク・音楽・テンポの工夫</li>
-      <li><strong>ストーリーとの連動</strong>：戦闘がドラマを前進させているか</li>
-      <li><strong>「また見たい」度</strong>：バトルシーンを繰り返し見たくなるか</li>
+      <li><strong>作画クオリティ</strong>：全話を<wbr>通した<wbr>安定性と、<wbr>名シーンの質</li>
+      <li><strong>演出の<wbr>面白さ</strong>：カメラワーク・音楽・テンポの工夫</li>
+      <li><strong>ストーリーとの<wbr>連動</strong>：戦闘が<wbr>ドラマを<wbr>前進させているか</li>
+      <li><strong>「また見たい」<wbr>度</strong>：バトルシーンを<wbr>繰り返し見たくなるか</li>
     </ul>
-    <p>各作品の項目別チップ（S・A・B）は、上の項目ごとの管理人評価です。目安はSが9.0〜10.0、Aが8.0〜8.9、Bが7.0〜7.9で、詳しい基準は<a href="https://anime-db.jp/blog/rating-criteria.html" style="color:var(--accent);">評価基準の記事</a>で解説しています。</p>
+    <p>各作品の<wbr>項目別チップ<wbr>（S・A・B）は、上の<wbr>項目ごとの<wbr>管理人評価です。<wbr>目安はSが<wbr>9.0〜10.0、Aが<wbr>8.0〜8.9、Bが<wbr>7.0〜7.9で、<wbr>詳しい<wbr>基準は<a href="https://anime-db.jp/blog/rating-criteria.html" style="color:var(--accent);"><wbr>評価基準の<wbr>記事</a>で<wbr>解説しています。</p>
 
     <h2 id="ranking">🔥 歴代バトルアニメ ベスト10</h2>
 
@@ -123,9 +131,9 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
       <div class="rank-num gold">1</div>
       <div class="rank-body">
         <div class="rank-title">鬼滅の刃</div>
-        <div class="rank-sub">2019年〜 / ufotable</div>
+        <div class="rank-sub"><span class="nb">2019年〜</span> / <span class="nb">ufotable</span></div>
         <div class="rank-score">★ 9.3 / 10</div>
-        <div class="rank-text">ufotableの映像技術がバトルアニメの水準を塗り替えた作品です。水の呼吸・炎の呼吸など各キャラクターの戦闘スタイルを視覚的に表現した演出は革命的で、今でも「アニメの戦闘シーンの最高峰」として語られます。遊郭編・刀鍛冶の里編は特に作画クオリティが凄まじく、映画クオリティが毎週テレビで見られるという前代未聞の体験を提供してくれました。</div>
+        <div class="rank-text">ufotableの<wbr>映像技術が<wbr>バトルアニメの<wbr>水準を塗り<wbr>替えた<wbr>作品です。水の<wbr>呼吸・炎の<wbr>呼吸など<wbr>各キャラクターの<wbr>戦闘スタイルを<wbr>視覚的に<wbr>表現した<wbr>演出は<wbr>革命的で、<wbr>今でも<wbr>「アニメの<wbr>戦闘シーンの<wbr>最高峰」として<wbr>語られます。<wbr>遊郭編・刀鍛冶の<wbr>里編は特に<wbr>作画クオリティが<wbr>凄まじく、<wbr>映画クオリティが毎週<wbr>テレビで<wbr>見られるという<wbr>前代未聞の<wbr>体験を<wbr>提供してくれました。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
           <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -133,9 +141,9 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
           <a href="https://kimetsu.com/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
         </div>
         <div class="eval-row">
-          <span class="eval-label">作画</span><span class="eval-chip s">S</span>
-          <span class="eval-label">演出</span><span class="eval-chip s">S</span>
-          <span class="eval-label">感情移入</span><span class="eval-chip s">S</span>
+          <span class="eval-pair"><span class="eval-label">作画</span><span class="eval-chip s">S</span></span>
+          <span class="eval-pair"><span class="eval-label">演出</span><span class="eval-chip s">S</span></span>
+          <span class="eval-pair"><span class="eval-label">感情移入</span><span class="eval-chip s">S</span></span>
         </div>
       </div>
     </div>
@@ -144,9 +152,9 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
       <div class="rank-num silver">2</div>
       <div class="rank-body">
         <div class="rank-title">進撃の巨人</div>
-        <div class="rank-sub">2013年〜2023年 / Wit Studio / MAPPA</div>
+        <div class="rank-sub"><span class="nb">2013年〜2023年</span> / <span class="nb">Wit Studio</span> / <span class="nb">MAPPA</span></div>
         <div class="rank-score">★ 9.1 / 10</div>
-        <div class="rank-text">立体機動装置を使った三次元アクションを完璧に映像化しています。前半のWit Studioによる疾走感あふれる演出と、後半MAPPAが担った重厚なバトル描写、双方に異なる魅力があります。戦闘が常にストーリーの緊張感と連動しており、誰が死んでもおかしくない緊迫感が全話を通して維持されています。バトルアニメとして、そして物語として最高峰の一本です。</div>
+        <div class="rank-text">立体<wbr>機動装置を<wbr>使った<wbr>三次元アクションを<wbr>完璧に<wbr>映像化しています。<wbr>前半の<wbr>Wit Studioによる<wbr>疾走感あ<wbr>ふれる<wbr>演出と、<wbr>後半MAPPAが<wbr>担った<wbr>重厚な<wbr>バトル描写、<wbr>双方に<wbr>異なる<wbr>魅力が<wbr>あります。<wbr>戦闘が常に<wbr>ストーリーの<wbr>緊張感と<wbr>連動しており、誰が<wbr>死んでも<wbr>おかしくない<wbr>緊迫感が<wbr>全話を<wbr>通して<wbr>維持されています。<wbr>バトルアニメと<wbr>して、そして<wbr>物語として<wbr>最高峰の<wbr>一本です。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
           <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -154,9 +162,9 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
           <a href="https://shingeki.net/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
         </div>
         <div class="eval-row">
-          <span class="eval-label">作画</span><span class="eval-chip s">S</span>
-          <span class="eval-label">ストーリー連動</span><span class="eval-chip s">S</span>
-          <span class="eval-label">緊張感</span><span class="eval-chip s">S</span>
+          <span class="eval-pair"><span class="eval-label">作画</span><span class="eval-chip s">S</span></span>
+          <span class="eval-pair"><span class="eval-label">ストーリー連動</span><span class="eval-chip s">S</span></span>
+          <span class="eval-pair"><span class="eval-label">緊張感</span><span class="eval-chip s">S</span></span>
         </div>
       </div>
     </div>
@@ -164,10 +172,10 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
     <div class="rank-card">
       <div class="rank-num bronze">3</div>
       <div class="rank-body">
-        <div class="rank-title">HUNTER×HUNTER（2011年版）</div>
-        <div class="rank-sub">2011年〜2014年 / Madhouse</div>
+        <div class="rank-title">HUNTER×HUNTER<wbr>（2011年版）</div>
+        <div class="rank-sub"><span class="nb">2011年〜2014年</span> / <span class="nb">Madhouse</span></div>
         <div class="rank-score">★ 9.0 / 10</div>
-        <div class="rank-text">念能力という独自の戦闘システムが生む頭脳戦バトルの完成形です。ゴンとキルアの友情、ヒソカの不気味さ、蟻編のメルエムとの戦いと、原作の緻密な物語構造——全てが噛み合った名作です。作画はMadhouseの安定感があり、特に蟻編のクライマックスは語り草になっています。</div>
+        <div class="rank-text">念能力という<wbr>独自の<wbr>戦闘システムが生む<wbr>頭脳戦バトルの<wbr>完成形です。<wbr>ゴンと<wbr>キルアの<wbr>友情、<wbr>ヒソカの<wbr>不気味さ、<wbr>蟻編の<wbr>メルエムとの<wbr>戦いと、<wbr>原作の<wbr>緻密な<wbr>物語構造——全てが<wbr>噛み合った<wbr>名作です。<wbr>作画は<wbr>Madhouseの<wbr>安定感が<wbr>あり、特に<wbr>蟻編の<wbr>クライマックスは<wbr>語り草に<wbr>なっています。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
           <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -175,9 +183,9 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
           <a href="http://www.ntv.co.jp/hunterhunter/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
         </div>
         <div class="eval-row">
-          <span class="eval-label">頭脳戦</span><span class="eval-chip s">S</span>
-          <span class="eval-label">キャラ</span><span class="eval-chip s">S</span>
-          <span class="eval-label">作画</span><span class="eval-chip a">A</span>
+          <span class="eval-pair"><span class="eval-label">頭脳戦</span><span class="eval-chip s">S</span></span>
+          <span class="eval-pair"><span class="eval-label">キャラ</span><span class="eval-chip s">S</span></span>
+          <span class="eval-pair"><span class="eval-label">作画</span><span class="eval-chip a">A</span></span>
         </div>
       </div>
     </div>
@@ -185,10 +193,10 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
     <div class="rank-card">
       <div class="rank-num">4</div>
       <div class="rank-body">
-        <div class="rank-title">葬送のフリーレン</div>
-        <div class="rank-sub">2023年〜 / Madhouse</div>
+        <div class="rank-title">葬送の<wbr>フリーレン</div>
+        <div class="rank-sub"><span class="nb">2023年〜</span> / <span class="nb">Madhouse</span></div>
         <div class="rank-score">★ 8.9 / 10</div>
-        <div class="rank-text">バトルアニメとしての枠組みでは語られにくいですが、一級魔法使い試験編の戦闘描写はMadhouseの静かな作画美が炸裂する名シーンの連続です。「派手さ」ではなく「魔法使いの戦いのリアリティ」を追求した演出が独自で、バトルの新しい表現方法を示した作品として外せません。</div>
+        <div class="rank-text">バトルアニメと<wbr>しての<wbr>枠組みでは<wbr>語られに<wbr>くいですが、<wbr>一級魔法使い試験編の<wbr>戦闘描写は<wbr>Madhouseの<wbr>静かな<wbr>作画美が<wbr>炸裂する<wbr>名シーンの<wbr>連続です。<wbr>「派手さ」ではなく<wbr>「魔法使いの<wbr>戦いの<wbr>リアリティ」を<wbr>追求した<wbr>演出が<wbr>独自で、<wbr>バトルの<wbr>新しい<wbr>表現方法を<wbr>示した<wbr>作品として<wbr>外せません。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
           <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -196,9 +204,9 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
           <a href="https://frieren-anime.jp/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
         </div>
         <div class="eval-row">
-          <span class="eval-label">演出</span><span class="eval-chip s">S</span>
-          <span class="eval-label">独自性</span><span class="eval-chip s">S</span>
-          <span class="eval-label">余韻</span><span class="eval-chip s">S</span>
+          <span class="eval-pair"><span class="eval-label">演出</span><span class="eval-chip s">S</span></span>
+          <span class="eval-pair"><span class="eval-label">独自性</span><span class="eval-chip s">S</span></span>
+          <span class="eval-pair"><span class="eval-label">余韻</span><span class="eval-chip s">S</span></span>
         </div>
       </div>
     </div>
@@ -207,9 +215,9 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
       <div class="rank-num">5</div>
       <div class="rank-body">
         <div class="rank-title">呪術廻戦</div>
-        <div class="rank-sub">2020年〜 / MAPPA</div>
+        <div class="rank-sub"><span class="nb">2020年〜</span> / <span class="nb">MAPPA</span></div>
         <div class="rank-score">★ 8.8 / 10</div>
-        <div class="rank-text">MAPPAが投入した圧倒的な作画リソースが生んだ現代バトルアニメの最前線です。五条悟のバトルシーンは「どうやって作っているんだ」と言いたくなるほどのクオリティで、何度見ても飽きません。渋谷事変は近年のアニメ史に残る神話的な盛り上がりを見せました。</div>
+        <div class="rank-text">MAPPAが<wbr>投入した<wbr>圧倒的な<wbr>作画リソースが<wbr>生んだ<wbr>現代バトルアニメの<wbr>最前線です。<wbr>五条悟の<wbr>バトルシーンは<wbr>「どうやって<wbr>作っているんだ」と<wbr>言いたくなる<wbr>ほどの<wbr>クオリティで、何度<wbr>見ても<wbr>飽きません。<wbr>渋谷事変は<wbr>近年の<wbr>アニメ史に残る<wbr>神話的な盛り<wbr>上がりを<wbr>見せました。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
           <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -217,9 +225,9 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
           <a href="https://jujutsukaisen.jp/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
         </div>
         <div class="eval-row">
-          <span class="eval-label">作画</span><span class="eval-chip s">S</span>
-          <span class="eval-label">演出</span><span class="eval-chip s">S</span>
-          <span class="eval-label">盛り上がり</span><span class="eval-chip s">S</span>
+          <span class="eval-pair"><span class="eval-label">作画</span><span class="eval-chip s">S</span></span>
+          <span class="eval-pair"><span class="eval-label">演出</span><span class="eval-chip s">S</span></span>
+          <span class="eval-pair"><span class="eval-label">盛り<wbr>上がり</span><span class="eval-chip s">S</span></span>
         </div>
       </div>
     </div>
@@ -228,9 +236,9 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
       <div class="rank-num">6</div>
       <div class="rank-body">
         <div class="rank-title">ヴィンランド・サガ</div>
-        <div class="rank-sub">2019年〜 / Wit Studio / MAPPA</div>
+        <div class="rank-sub"><span class="nb">2019年〜</span> / <span class="nb">Wit Studio</span> / <span class="nb">MAPPA</span></div>
         <div class="rank-score">★ 8.7 / 10</div>
-        <div class="rank-text">ヴァイキングを舞台にした重厚な歴史バトルです。殺陣の重さと痛さがリアルに伝わる戦闘描写が特徴で、「格好いいバトル」ではなく「戦争の残酷さ」を描いている点が他のバトルアニメとは一線を画します。2期の農場編は戦闘が少ないですが、それもまた別の意味で傑作です。</div>
+        <div class="rank-text">ヴァイキングを<wbr>舞台にした<wbr>重厚な<wbr>歴史バトルです。<wbr>殺陣の<wbr>重さと<wbr>痛さが<wbr>リアルに<wbr>伝わる<wbr>戦闘描写が<wbr>特徴で、<wbr>「格好いいバトル」ではなく<wbr>「戦争の残酷さ」を<wbr>描いている点が他の<wbr>バトルアニメとは<wbr>一線を<wbr>画します。<wbr>2期の<wbr>農場編は<wbr>戦闘が<wbr>少ないですが、<wbr>それもまた別の<wbr>意味で<wbr>傑作です。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
           <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -238,9 +246,9 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
           <a href="https://vinlandsaga.jp/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
         </div>
         <div class="eval-row">
-          <span class="eval-label">リアリティ</span><span class="eval-chip s">S</span>
-          <span class="eval-label">物語</span><span class="eval-chip s">S</span>
-          <span class="eval-label">迫力</span><span class="eval-chip a">A</span>
+          <span class="eval-pair"><span class="eval-label">リアリティ</span><span class="eval-chip s">S</span></span>
+          <span class="eval-pair"><span class="eval-label">物語</span><span class="eval-chip s">S</span></span>
+          <span class="eval-pair"><span class="eval-label">迫力</span><span class="eval-chip a">A</span></span>
         </div>
       </div>
     </div>
@@ -249,9 +257,9 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
       <div class="rank-num">7</div>
       <div class="rank-body">
         <div class="rank-title">ダンダダン</div>
-        <div class="rank-sub">2024年〜 / Science SARU</div>
+        <div class="rank-sub"><span class="nb">2024年〜</span> / <span class="nb">Science SARU</span></div>
         <div class="rank-score">★ 8.6 / 10</div>
-        <div class="rank-text">Science SARUが全力を投入したカオスな作画バトルです。UFO・霊・オカルトが混在する世界での戦闘は予測不能で、毎話「次どんな演出が来るんだ」とワクワクさせてくれます。若い世代のアニメーターたちが躍動した作品として、今後のバトルアニメの指針になりそうです。</div>
+        <div class="rank-text">Science SARUが<wbr>全力を<wbr>投入した<wbr>カオスな<wbr>作画バトルです。<wbr>UFO・霊・オカルトが<wbr>混在する<wbr>世界での<wbr>戦闘は<wbr>予測不能で、毎話<wbr>「次どんな<wbr>演出が<wbr>来るんだ」と<wbr>ワクワクさせてくれます。若い<wbr>世代の<wbr>アニメーターたちが<wbr>躍動した<wbr>作品と<wbr>して、<wbr>今後の<wbr>バトルアニメの<wbr>指針に<wbr>なりそうです。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
           <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -259,9 +267,9 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
           <a href="https://anime-dandadan.com/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
         </div>
         <div class="eval-row">
-          <span class="eval-label">演出</span><span class="eval-chip s">S</span>
-          <span class="eval-label">独自性</span><span class="eval-chip s">S</span>
-          <span class="eval-label">作画</span><span class="eval-chip s">S</span>
+          <span class="eval-pair"><span class="eval-label">演出</span><span class="eval-chip s">S</span></span>
+          <span class="eval-pair"><span class="eval-label">独自性</span><span class="eval-chip s">S</span></span>
+          <span class="eval-pair"><span class="eval-label">作画</span><span class="eval-chip s">S</span></span>
         </div>
       </div>
     </div>
@@ -270,18 +278,18 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
       <div class="rank-num">8</div>
       <div class="rank-body">
         <div class="rank-title">ドラゴンボール超 ブロリー</div>
-        <div class="rank-sub">2018年 / 東映アニメーション（劇場版）</div>
+        <div class="rank-sub"><span class="nb">2018年</span> / <span class="nb">東映アニメーション<wbr>（劇場版）</span></div>
         <div class="rank-score">★ 8.5 / 10</div>
-        <div class="rank-text">劇場版という枠を使いきった作画爆発のバトル映画です。特にクライマックスの戦闘シーンはアニメーターが限界まで作画に挑んだ迫力ある映像体験で、映画館で見た多くの人が「凄い」と口にした作品です。</div>
+        <div class="rank-text">劇場版という枠を<wbr>使いきった<wbr>作画爆発の<wbr>バトル映画です。特に<wbr>クライマックスの<wbr>戦闘シーンは<wbr>アニメーターが<wbr>限界まで<wbr>作画に<wbr>挑んだ<wbr>迫力ある<wbr>映像体験で、<wbr>映画館で見た<wbr>多くの人が<wbr>「すごい」と口にした<wbr>作品です。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
           <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
           <a href="https://netflix.com" target="_blank" rel="noopener" class="badge netflix">Netflix</a>
         </div>
         <div class="eval-row">
-          <span class="eval-label">作画</span><span class="eval-chip s">S</span>
-          <span class="eval-label">迫力</span><span class="eval-chip s">S</span>
-          <span class="eval-label">ストーリー</span><span class="eval-chip b">B</span>
+          <span class="eval-pair"><span class="eval-label">作画</span><span class="eval-chip s">S</span></span>
+          <span class="eval-pair"><span class="eval-label">迫力</span><span class="eval-chip s">S</span></span>
+          <span class="eval-pair"><span class="eval-label">ストーリー</span><span class="eval-chip b">B</span></span>
         </div>
       </div>
     </div>
@@ -289,10 +297,10 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
     <div class="rank-card">
       <div class="rank-num">9</div>
       <div class="rank-body">
-        <div class="rank-title">僕のヒーローアカデミア</div>
-        <div class="rank-sub">2016年〜 / BONES</div>
+        <div class="rank-title">僕の<wbr>ヒーローアカデミア</div>
+        <div class="rank-sub"><span class="nb">2016年〜</span> / <span class="nb">BONES</span></div>
         <div class="rank-score">★ 8.2 / 10</div>
-        <div class="rank-text">BONESのアクション作画とヒーローものの王道が合わさった作品です。デクの成長を通じて「頑張ること」のカタルシスを最大限引き出す演出が巧みです。USJvs敵連合、オールマイトvsオールフォーワンなど名バトルが多く、シーズン通してハズレがありません。</div>
+        <div class="rank-text">BONESの<wbr>アクション作画と<wbr>ヒーローものの<wbr>王道が<wbr>合わさった<wbr>作品です。<wbr>デクの<wbr>成長を<wbr>通じて<wbr>「頑張ること」の<wbr>カタルシスを<wbr>最大限引き出す<wbr>演出が<wbr>巧みです。<wbr>USJvs敵連合、<wbr>オールマイトvsオールフォーワンなど<wbr>名バトルが<wbr>多く、<wbr>シーズン通して<wbr>ハズレが<wbr>ありません。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
           <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -300,9 +308,9 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
           <a href="https://heroaca.com/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
         </div>
         <div class="eval-row">
-          <span class="eval-label">熱さ</span><span class="eval-chip s">S</span>
-          <span class="eval-label">作画</span><span class="eval-chip a">A</span>
-          <span class="eval-label">王道感</span><span class="eval-chip s">S</span>
+          <span class="eval-pair"><span class="eval-label">熱さ</span><span class="eval-chip s">S</span></span>
+          <span class="eval-pair"><span class="eval-label">作画</span><span class="eval-chip a">A</span></span>
+          <span class="eval-pair"><span class="eval-label">王道感</span><span class="eval-chip s">S</span></span>
         </div>
       </div>
     </div>
@@ -311,9 +319,9 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
       <div class="rank-num">10</div>
       <div class="rank-body">
         <div class="rank-title">刃牙（バキ）</div>
-        <div class="rank-sub">2018年〜 / TMS Entertainment</div>
+        <div class="rank-sub"><span class="nb">2018年〜</span> / <span class="nb">TMS Entertainment</span></div>
         <div class="rank-score">★ 7.8 / 10</div>
-        <div class="rank-text">格闘技バトルの密度が突き抜けた作品です。常識では考えられない戦闘描写は、リアルさを超えて笑ってしまうほどですが、それが逆に唯一無二の魅力になっています。「バキ的なノリ」という言葉がネットで使われるほど、独自のバトル文化を生み出した作品です。</div>
+        <div class="rank-text">格闘技バトルの<wbr>密度が<wbr>突き抜けた<wbr>作品です。<wbr>常識では<wbr>考えられない<wbr>戦闘描写は、<wbr>リアルさを<wbr>超えて笑ってしまう<wbr>ほどですが、<wbr>それが逆に<wbr>唯一無二の<wbr>魅力に<wbr>なっています。<wbr>「バキ的なノリ」という<wbr>言葉が<wbr>ネットで<wbr>使われる<wbr>ほど、<wbr>独自の<wbr>バトル文化を<wbr>生み出した<wbr>作品です。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
           <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -321,22 +329,22 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
           <a href="https://baki-anime.jp/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
         </div>
         <div class="eval-row">
-          <span class="eval-label">カオス度</span><span class="eval-chip s">S</span>
-          <span class="eval-label">格闘描写</span><span class="eval-chip a">A</span>
-          <span class="eval-label">迫力</span><span class="eval-chip a">A</span>
+          <span class="eval-pair"><span class="eval-label">カオス度</span><span class="eval-chip s">S</span></span>
+          <span class="eval-pair"><span class="eval-label">格闘描写</span><span class="eval-chip a">A</span></span>
+          <span class="eval-pair"><span class="eval-label">迫力</span><span class="eval-chip a">A</span></span>
         </div>
       </div>
     </div>
 
-    <h2 id="myview">管理人がバトルアニメで見るところ</h2>
-    <p>管理人がバトルアニメでいちばん重視するのは、「戦術」と「戦闘シーン」です。力の大きさで押し切るのではなく、戦いの中で頭を使っているか、それが映像としてどう見えるかを見ています。</p>
-    <div class="callout"><strong>いちばん好きな戦闘シーン：</strong>「鬼滅の刃 竈門炭治郎 立志編」第19話「ヒノカミ」の、竈門炭治郎＆禰豆子 vs 累です。</div>
-    <p>苦手なのは、強さのインフレです。典型的なのはドラゴンボールZ以降の流れで、管理人の感覚では、物語はドラゴンボールで完結しています。バトルアニメにハマったきっかけも、そのドラゴンボールでした。観ていたのは小学3年生のころで、クラスメイトが「ドラゴンボール終わった」と話していたのを覚えています。</p>
-    <p>作画が良くても、物語が合わなかった作品もあります。「刃牙」がそうで、格闘描写の迫力は圧倒的ですが、物語の部分は管理人には合わず、10位にしています。</p>
-    <p>初心者向けも上級者向けも、1本だけ選ぶなら「鬼滅の刃」です。劇場版も含めて、それしかないと考えています。</p>
+    <h2 id="myview">管理人が<wbr>バトルアニメで<wbr>見るところ</h2>
+    <p>管理人が<wbr>バトルアニメで<wbr>一番重視するのは、<wbr>「戦術」と<wbr>「戦闘シーン」です。力の<wbr>大きさで<wbr>押し切るのではなく、<wbr>戦いの中で頭を<wbr>使っているか、<wbr>それが<wbr>映像としてどう<wbr>見えるかを<wbr>見ています。</p>
+    <div class="callout"><strong>一番<wbr>好きな<wbr>戦闘シーン：</strong><wbr>「鬼滅の<wbr>刃 竈門炭治郎 立志編」<wbr>第19話<wbr>「ヒノカミ」の、<wbr>竈門炭治郎＆禰豆子 vs 累です。</div>
+    <p>苦手なのは、<wbr>強さの<wbr>インフレです。<wbr>典型的なのは<wbr>ドラゴンボールZ以降の<wbr>流れで、<wbr>管理人の<wbr>感覚では、<wbr>物語は<wbr>ドラゴンボールで<wbr>完結しています。<wbr>バトルアニメに<wbr>ハマった<wbr>きっかけも、その<wbr>ドラゴンボールでした。<wbr>観ていたのは<wbr>小学3年生の<wbr>ころで、<wbr>クラスメイトが<wbr>「ドラゴンボール終わった」と<wbr>話していたのを<wbr>覚えています。</p>
+    <p>作画が<wbr>良くても、<wbr>物語が<wbr>合わなかった<wbr>作品も<wbr>あります。<wbr>「刃牙」が<wbr>そうで、<wbr>格闘描写の<wbr>迫力は<wbr>圧倒的ですが、<wbr>物語の<wbr>部分は<wbr>管理人には<wbr>合わず、<wbr>10位に<wbr>しています。</p>
+    <p>初心者向けも<wbr>上級者向けも、<wbr>1本だけ<wbr>選ぶなら<wbr>「鬼滅の刃」です。<wbr>劇場版も<wbr>含めて、<wbr>それしか<wbr>ないと<wbr>考えています。</p>
 
     <h2 id="summary">まとめ</h2>
-    <p>バトルアニメの面白さは「強い敵が出てきてヒーローが勝つ」だけではありません。<strong>演出・作画・ドラマが一体になったとき</strong>、バトルシーンは視聴者の感情を揺さぶる最高のエンタメになります。今回紹介した10作品はそれぞれが異なるアプローチでバトルの面白さを追求した傑作ぞろいです。未見の作品があれば是非この機会に。</p></div>
+    <p>バトルアニメの<wbr>面白さは<wbr>「強い敵が<wbr>出てきて<wbr>ヒーローが<wbr>勝つ」だけではありません。<strong><wbr>演出・作画・ドラマが<wbr>一体に<wbr>なった<wbr>とき</strong>、<wbr>バトルシーンは<wbr>視聴者の<wbr>感情を<wbr>揺さぶる<wbr>最高の<wbr>エンタメに<wbr>なります。<wbr>今回紹介した<wbr>10作品は<wbr>それぞれが<wbr>異なる<wbr>アプローチで<wbr>バトルの<wbr>面白さを<wbr>追求した<wbr>傑作ぞろいです。<wbr>未見の<wbr>作品が<wbr>あれば、ぜひこの<wbr>機会に<wbr>ご覧ください。</p></div>
 
   <a href="https://anime-db.jp/blog/" class="back-btn">← ブログ一覧に戻る</a>
 </div>

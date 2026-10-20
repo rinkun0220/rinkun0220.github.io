@@ -78,6 +78,13 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
 .footer-links{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;margin-bottom:16px}
 .footer-link{color:var(--text-muted);text-decoration:none;font-size:.85rem}.footer-link:hover{color:#fff}
 .copyright{font-size:.8rem;color:rgba(255,255,255,0.3)}
+/* 日本語の改行を自然にする設定（文節単位で改行・行頭禁則・1文字だけの行を避ける） */
+body{line-break:strict;overflow-wrap:break-word}
+@supports (word-break:auto-phrase){body{word-break:auto-phrase}}
+:has(> wbr){word-break:keep-all}
+p,li,dd,td,th{text-wrap:pretty}
+.nb{white-space:nowrap}
+h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-title,.pick-name,.next-article-title{text-wrap:balance}
 </style>
 </head>
 <body>
@@ -93,22 +100,22 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
   <div class="breadcrumb">
     <a href="https://anime-db.jp/">ホーム</a><span>›</span>
     <a href="https://anime-db.jp/blog/">ブログ</a><span>›</span>
-    女性声優8人の代表作まとめ
+    女性声優8人の<wbr>代表作まとめ
   </div>
 
   <span class="article-tag">🎙 女性声優特集</span>
-  <h1 class="article-title">女性声優8人の代表作まとめ<br>【花澤香菜・早見沙織・佐倉綾音・種﨑敦美・水瀬いのり 他】</h1>
+  <h1 class="article-title">女性声優8人の<wbr>代表作まとめ<br>【花澤香菜・早見沙織・佐倉綾音・種﨑敦美・<wbr>水瀬いのり&nbsp;他】</h1>
   <div class="article-meta">
     <span>📅 2026年9月更新</span><span>✍️ ANIMEDB管理人</span><span>⏱ 読了目安：約7分</span><span>※文中敬称略</span>
   </div>
 
   <div class="alert-box">
-    <strong>🎙 声優買いという視点で見逃しをチェック</strong><br>
-    声で選ぶアニメも立派な楽しみ方。ここでは女性声優8人の代表作をまとめました。見逃している作品がないか、自分用のチェックリストとして作りましたが、同じ声優が好きな方の参考にもなれば。
+    <strong>🎙 声優買いという<wbr>視点で<wbr>見逃しを<wbr>チェック</strong><br>
+    声で<wbr>選ぶアニメも<wbr>立派な<wbr>楽しみ方です。<wbr>ここでは<wbr>女性声優8人の<wbr>代表作を<wbr>まとめました。<wbr>見逃している<wbr>作品が<wbr>ないか、<wbr>自分用の<wbr>チェックリストとして<wbr>作りましたが、同じ<wbr>声優が<wbr>好きな方の<wbr>参考にも<wbr>なれば<wbr>幸いです。
   </div>
 
   <div class="toc">
-    <div class="toc-title">📋 このページの構成</div>
+    <div class="toc-title">📋 この<wbr>ページの構成</div>
     <div class="toc-grid">
       <a href="#hanazawa">1. 花澤香菜</a>
       <a href="#hayami">2. 早見沙織</a>
@@ -124,16 +131,16 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
   <div class="article-body">
 
     <div class="creator-block" id="hanazawa">
-      <div class="creator-head"><span class="creator-name">花澤香菜</span><span class="creator-kana">はなざわ かな</span></div>
-      <p class="creator-intro">透明感のある声と、繊細な心理描写を得意とする実力派声優です。可憐なヒロインから狂気を秘めた役柄まで幅広く演じ分けます。</p>
-      <p class="creator-intro">管理人の花澤香菜さんのイメージを覆したのは、「宇宙よりも遠い場所」の小淵沢報瀬です。それまでは、可愛いキャラクターを演じている印象でしたが、この作品では、ほぼ真逆のキャラクターを演じていました。第12話「宇宙よりも遠い場所」で、報瀬が母親のノートパソコンを見つけ、3年間送り続けたメールが一斉に届く演出には、泣きました。（※ネタバレを含みます）</p>
+      <div class="creator-head"><span class="creator-name">花澤香菜</span><span class="creator-kana">はな<wbr>ざわ かな</span></div>
+      <p class="creator-intro">透明感のある<wbr>声と、<wbr>繊細な<wbr>心理描写を<wbr>得意とする<wbr>実力派声優です。<wbr>可憐な<wbr>ヒロインから<wbr>狂気を<wbr>秘めた<wbr>役柄まで<wbr>幅広く<wbr>演じ分けます。</p>
+      <p class="creator-intro">管理人の<wbr>花澤香菜さんの<wbr>イメージを<wbr>覆したのは、<wbr>「宇宙よりも遠い場所」の<wbr>小淵沢報瀬です。<wbr>それまでは、<wbr>可愛い<wbr>キャラクターを<wbr>演じている<wbr>印象でしたが、この<wbr>作品では、<wbr>ほぼ真逆の<wbr>キャラクターを<wbr>演じていました。<wbr>第12話<wbr>「宇宙よりも遠い場所」で、<wbr>報瀬が<wbr>母親の<wbr>ノートパソコンを<wbr>見つけ、<wbr>3年間送り続けた<wbr>メールが<wbr>一斉に届く<wbr>演出には、<wbr>泣きました。<wbr>（※ネタバレを含みます）</p>
       <a href="https://x.com/hanazawa_staff" target="_blank" rel="noopener" class="official-link">🔗 花澤香菜 公式X</a>
 
       <div class="gem-card">
         <div class="gem-header"><div class="gem-num">1</div><div class="gem-title-block">
-          <div class="gem-name">PSYCHO-PASS サイコパス</div><div class="gem-sub">2012年〜 / SFサスペンス / 常守朱役</div>
+          <div class="gem-name">PSYCHO-PASS サイコパス</div><div class="gem-sub"><span class="nb">2012年〜</span> / <span class="nb">SFサスペンス</span> / <span class="nb">常守朱役</span></div>
         </div></div>
-        <div class="gem-body">正義感の強い新米刑事・常守朱を演じています。理想と現実の狭間で揺れ動く心情を丁寧に表現した一本です。</div>
+        <div class="gem-body">正義感の強い<wbr>新米刑事・常守朱を<wbr>演じています。<wbr>理想と<wbr>現実の<wbr>狭間で<wbr>揺れ動く<wbr>心情を<wbr>丁寧に<wbr>表現した<wbr>一本です。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp/" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
           <a href="https://psycho-pass.com/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
@@ -142,9 +149,9 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
 
       <div class="gem-card">
         <div class="gem-header"><div class="gem-num">2</div><div class="gem-title-block">
-          <div class="gem-name">orange</div><div class="gem-sub">2016年 / 青春・SF / 高宮菜穂役</div>
+          <div class="gem-name">orange</div><div class="gem-sub"><span class="nb">2016年</span> / <span class="nb">青春・SF</span> / <span class="nb">高宮菜穂役</span></div>
         </div></div>
-        <div class="gem-body">未来からの手紙をきっかけに過去をやり直そうとする主人公・菜穂を演じます。切なさと優しさが同居する一本です。</div>
+        <div class="gem-body">未来からの<wbr>手紙を<wbr>きっかけに<wbr>過去を<wbr>やり直そうとする<wbr>主人公・菜穂を<wbr>演じます。<wbr>切なさと<wbr>優しさが<wbr>同居する<wbr>一本です。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp/" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
           <a href="https://www.amazon.co.jp/s?k=orange+%E3%82%A2%E3%83%8B%E3%83%A1&i=instant-video" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -154,9 +161,9 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
 
       <div class="gem-card">
         <div class="gem-header"><div class="gem-num">3</div><div class="gem-title-block">
-          <div class="gem-name">〈物語〉シリーズ</div><div class="gem-sub">2009年〜 / 会話劇・ミステリー / 千石撫子役</div>
+          <div class="gem-name">〈物語〉シリーズ</div><div class="gem-sub"><span class="nb">2009年〜</span> / <span class="nb">会話劇・ミステリー</span> / <span class="nb">千石撫子役</span></div>
         </div></div>
-        <div class="gem-body">アニメファンなら誰もが思い浮かべる代名詞的な役どころです。健気な後輩・撫子を演じ、物語が進むにつれて変化していく心情の演じ分けが見事です。</div>
+        <div class="gem-body">アニメファンなら<wbr>誰もが<wbr>思い浮かべる<wbr>代名詞的な<wbr>役どころです。<wbr>健気な<wbr>後輩・撫子を<wbr>演じ、<wbr>物語が<wbr>進むに<wbr>つれて<wbr>変化していく<wbr>心情の<wbr>演じ分けが<wbr>見事です。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp/" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
           <a href="https://www.amazon.co.jp/s?k=%E7%89%A9%E8%AA%9E%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA&i=instant-video" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -166,15 +173,15 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
     </div>
 
     <div class="creator-block" id="hayami">
-      <div class="creator-head"><span class="creator-name">早見沙織</span><span class="creator-kana">はやみ さおり</span></div>
-      <p class="creator-intro">清楚で芯の強いヒロインを演じさせたら随一です。落ち着いた声質でありながら、感情の振れ幅を丁寧に表現する実力派です。</p>
+      <div class="creator-head"><span class="creator-name">早見沙織</span><span class="creator-kana">は<wbr>やみ さおり</span></div>
+      <p class="creator-intro">清楚で芯の強い<wbr>ヒロインを<wbr>演じさせたら<wbr>随一です。<wbr>落ち着いた<wbr>声質でありながら、<wbr>感情の<wbr>振れ幅を<wbr>丁寧に<wbr>表現する<wbr>実力派です。</p>
       <a href="https://x.com/hayami_official" target="_blank" rel="noopener" class="official-link">🔗 早見沙織 公式X</a>
 
       <div class="gem-card">
         <div class="gem-header"><div class="gem-num">1</div><div class="gem-title-block">
-          <div class="gem-name">赤髪の白雪姫</div><div class="gem-sub">2015年〜 / ファンタジー・恋愛 / 白雪役</div>
+          <div class="gem-name">赤髪の白雪姫</div><div class="gem-sub"><span class="nb">2015年〜</span> / <span class="nb">ファンタジー・恋愛</span> / <span class="nb">白雪役</span></div>
         </div></div>
-        <div class="gem-body">薬草師として自立して生きる主人公・白雪を演じます。芯の強いヒロイン像を丁寧に表現している一本です。</div>
+        <div class="gem-body">薬草師として<wbr>自立して<wbr>生きる<wbr>主人公・白雪を<wbr>演じます。芯の強い<wbr>ヒロイン像を<wbr>丁寧に<wbr>表現している<wbr>一本です。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp/" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
           <a href="http://www.clarines-kingdom.com/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
@@ -183,9 +190,9 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
 
       <div class="gem-card">
         <div class="gem-header"><div class="gem-num">2</div><div class="gem-title-block">
-          <div class="gem-name">賭ケグルイ</div><div class="gem-sub">2017年〜 / ギャンブル・サスペンス / 蛇喰夢子役</div>
+          <div class="gem-name">賭ケグルイ</div><div class="gem-sub"><span class="nb">2017年〜</span> / <span class="nb">ギャンブル・サスペンス</span> / <span class="nb">蛇喰夢子役</span></div>
         </div></div>
-        <div class="gem-body">賭け事に異常な執着を見せる主人公・夢子を演じます。清楚な声質からは想像しづらい狂気の表現が話題になりました。</div>
+        <div class="gem-body">賭け事に<wbr>異常な<wbr>執着を<wbr>見せる<wbr>主人公・夢子を<wbr>演じます。<wbr>清楚な<wbr>声質からは<wbr>想像しづらい<wbr>狂気の<wbr>表現が<wbr>話題に<wbr>なりました。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp/" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
           <a href="https://kakegurui-anime.com/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
@@ -194,9 +201,9 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
 
       <div class="gem-card">
         <div class="gem-header"><div class="gem-num">3</div><div class="gem-title-block">
-          <div class="gem-name">鬼滅の刃</div><div class="gem-sub">2019年〜 / バトル・時代劇 / 胡蝶しのぶ役</div>
+          <div class="gem-name">鬼滅の刃</div><div class="gem-sub"><span class="nb">2019年〜</span> / <span class="nb">バトル・時代劇</span> / <span class="nb">胡蝶しのぶ役</span></div>
         </div></div>
-        <div class="gem-body">アニメファンなら誰もが思い浮かべる代名詞的な役どころです。柔らかな物腰の裏に強さを秘めた蟲柱・しのぶを演じています。</div>
+        <div class="gem-body">アニメファンなら<wbr>誰もが<wbr>思い浮かべる<wbr>代名詞的な<wbr>役どころです。<wbr>柔らかな<wbr>物腰の裏に<wbr>強さを<wbr>秘めた<wbr>蟲柱・しのぶを<wbr>演じています。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp/" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
           <a href="https://kimetsu.com/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
@@ -206,14 +213,14 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
 
     <div class="creator-block" id="sakura">
       <div class="creator-head"><span class="creator-name">佐倉綾音</span><span class="creator-kana">さくら あやね</span></div>
-      <p class="creator-intro">親しみやすい声とコミカルな芝居で人気を集める声優です。日常系からラブコメまで、幅広いヒロイン役をこなします。</p>
-      <span class="no-sns-note">公式SNSアカウントは非公開（本人はSNSを利用していないと明言）</span>
+      <p class="creator-intro">親しみやすい声と<wbr>コミカルな<wbr>芝居で<wbr>人気を<wbr>集める<wbr>声優です。<wbr>日常系から<wbr>ラブコメまで、<wbr>幅広い<wbr>ヒロイン役を<wbr>こなします。</p>
+      <span class="no-sns-note">公式SNSアカウントは<wbr>非公開<wbr>（本人は<wbr>SNSを<wbr>利用していないと<wbr>明言）</span>
 
       <div class="gem-card">
         <div class="gem-header"><div class="gem-num">1</div><div class="gem-title-block">
-          <div class="gem-name">夢喰いメリー</div><div class="gem-sub">2011年 / ファンタジー / メリー・ナイトメア役</div>
+          <div class="gem-name">夢喰いメリー</div><div class="gem-sub"><span class="nb">2011年</span> / <span class="nb">ファンタジー</span> / <span class="nb">メリー・ナイトメア役</span></div>
         </div></div>
-        <div class="gem-body">「これも佐倉綾音さんだったんだ」と気づく人も多そうな、キャリア初期の一本です。夢の世界からやってきたメリーを演じています。</div>
+        <div class="gem-body">「これも<wbr>佐倉綾音さんだったんだ」と<wbr>気づく人も<wbr>多そうな、<wbr>キャリア初期の<wbr>一本です。夢の<wbr>世界から<wbr>やってきた<wbr>メリーを<wbr>演じています。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp/" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
           <a href="https://www.amazon.co.jp/s?k=%E5%A4%A2%E5%96%B0%E3%81%84%E3%83%A1%E3%83%AA%E3%83%BC&i=instant-video" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -223,9 +230,9 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
 
       <div class="gem-card">
         <div class="gem-header"><div class="gem-num">2</div><div class="gem-title-block">
-          <div class="gem-name">新幹線変形ロボ シンカリオン</div><div class="gem-sub">2018年〜 / ロボット・子供向け / 速杉ハヤト役</div>
+          <div class="gem-name">新幹線変形ロボ シンカリオン</div><div class="gem-sub"><span class="nb">2018年〜</span> / <span class="nb">ロボット・<wbr>子供向け</span> / <span class="nb">速杉ハヤト役</span></div>
         </div></div>
-        <div class="gem-body">新幹線型ロボットを操る主人公・ハヤトを演じます。少年主人公として真っ直ぐな演技を見せた一本です。</div>
+        <div class="gem-body">新幹線型ロボットを操る<wbr>主人公・ハヤトを<wbr>演じます。<wbr>少年主人公として<wbr>まっすぐな<wbr>演技を<wbr>見せた<wbr>一本です。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp/" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
           <a href="https://www.amazon.co.jp/s?k=%E3%82%B7%E3%83%B3%E3%82%AB%E3%83%AA%E3%82%AA%E3%83%B3&i=instant-video" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -235,9 +242,9 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
 
       <div class="gem-card">
         <div class="gem-header"><div class="gem-num">3</div><div class="gem-title-block">
-          <div class="gem-name">やはり俺の青春ラブコメはまちがっている。</div><div class="gem-sub">2013年〜 / ラブコメ・青春 / 一色いろは役</div>
+          <div class="gem-name">やはり俺の<wbr>青春ラブコメは<wbr>まちがっている。</div><div class="gem-sub"><span class="nb">2013年〜</span> / <span class="nb">ラブコメ・青春</span> / <span class="nb">一色いろは役</span></div>
         </div></div>
-        <div class="gem-body">アニメファンなら誰もが思い浮かべる代名詞的な役どころです。裏表のある性格を絶妙な塩梅で表現するコミカルな演技が持ち味です。</div>
+        <div class="gem-body">アニメファンなら<wbr>誰もが<wbr>思い浮かべる<wbr>代名詞的な<wbr>役どころです。<wbr>裏表のある<wbr>性格を<wbr>絶妙な<wbr>塩梅で<wbr>表現する<wbr>コミカルな<wbr>演技が<wbr>持ち味です。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp/" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
           <a href="https://www.amazon.co.jp/s?k=%E4%BF%BA%E3%82%AC%E3%82%A4%E3%83%AB&i=instant-video" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -248,14 +255,14 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
 
     <div class="creator-block" id="tanezaki">
       <div class="creator-head"><span class="creator-name">種﨑敦美</span><span class="creator-kana">たねざき あつみ</span></div>
-      <p class="creator-intro">少年役から大人の女性まで幅広く演じ分ける実力派です。落ち着いたトーンの中に温かみのある芝居が特徴です。</p>
+      <p class="creator-intro">少年役から<wbr>大人の<wbr>女性まで<wbr>幅広く<wbr>演じ分ける<wbr>実力派です。<wbr>落ち着いた<wbr>トーンの中に<wbr>温かみのある<wbr>芝居が<wbr>特徴です。</p>
       <a href="https://x.com/tanezakiatsumi" target="_blank" rel="noopener" class="official-link">🔗 種﨑敦美 公式X</a>
 
       <div class="gem-card">
         <div class="gem-header"><div class="gem-num">1</div><div class="gem-title-block">
-          <div class="gem-name">ドラゴンクエスト ダイの大冒険</div><div class="gem-sub">2020年〜 / ファンタジー・冒険 / ダイ役</div>
+          <div class="gem-name">ドラゴンクエスト ダイの<wbr>大冒険</div><div class="gem-sub"><span class="nb">2020年〜</span> / <span class="nb">ファンタジー・冒険</span> / <span class="nb">ダイ役</span></div>
         </div></div>
-        <div class="gem-body">魔王軍を倒すため旅立つ少年ダイを演じます。少年の真っ直ぐな成長を説得力ある芝居で見せている一本です。</div>
+        <div class="gem-body">魔王軍を<wbr>倒すため旅立つ少年<wbr>ダイを<wbr>演じます。<wbr>少年の<wbr>まっすぐな<wbr>成長を<wbr>説得力ある<wbr>芝居で<wbr>見せている<wbr>一本です。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp/" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
           <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -265,9 +272,9 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
 
       <div class="gem-card">
         <div class="gem-header"><div class="gem-num">2</div><div class="gem-title-block">
-          <div class="gem-name">葬送のフリーレン</div><div class="gem-sub">2023年〜 / ファンタジー・ロードムービー / フリーレン役</div>
+          <div class="gem-name">葬送の<wbr>フリーレン</div><div class="gem-sub"><span class="nb">2023年〜</span> / <span class="nb">ファンタジー・ロードムービー</span> / <span class="nb">フリーレン役</span></div>
         </div></div>
-        <div class="gem-body">長い時を生きるエルフの魔法使い・フリーレンを演じます。静けさの中に積み重なる感情の演技が高く評価されている一本です。</div>
+        <div class="gem-body">長い時を<wbr>生きる<wbr>エルフの<wbr>魔法使い・フリーレンを<wbr>演じます。<wbr>静けさの中に<wbr>積み重なる<wbr>感情の<wbr>演技が高く<wbr>評価されている<wbr>一本です。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp/" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
           <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -277,9 +284,9 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
 
       <div class="gem-card">
         <div class="gem-header"><div class="gem-num">3</div><div class="gem-title-block">
-          <div class="gem-name">SPY×FAMILY</div><div class="gem-sub">2022年〜 / コメディ・アクション / アーニャ・フォージャー役</div>
+          <div class="gem-name">SPY×FAMILY</div><div class="gem-sub"><span class="nb">2022年〜</span> / <span class="nb">コメディ・アクション</span> / <span class="nb">アーニャ・フォージャー役</span></div>
         </div></div>
-        <div class="gem-body">アニメファンなら誰もが思い浮かべる代名詞的な役どころです。超能力を持つ少女・アーニャを、舌足らずな喋り方と表情豊かな芝居で作品の顔にしました。</div>
+        <div class="gem-body">アニメファンなら<wbr>誰もが<wbr>思い浮かべる<wbr>代名詞的な<wbr>役どころです。<wbr>超能力を持つ<wbr>少女・アーニャを、<wbr>舌足らずな<wbr>喋り方と<wbr>表情豊かな<wbr>芝居で<wbr>作品の顔に<wbr>しました。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp/" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
           <a href="https://spy-family.net/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
@@ -289,14 +296,14 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
 
     <div class="creator-block" id="minase">
       <div class="creator-head"><span class="creator-name">水瀬いのり</span><span class="creator-kana">みなせ いのり</span></div>
-      <p class="creator-intro">柔らかく甘い声質を活かし、癒し系ヒロインを中心に幅広く活躍しています。歌手活動でも高い人気を誇るマルチな声優です。</p>
+      <p class="creator-intro">柔らかく甘い<wbr>声質を<wbr>活かし、<wbr>癒し系ヒロインを<wbr>中心に<wbr>幅広く<wbr>活躍しています。<wbr>歌手活動でも高い<wbr>人気を誇る<wbr>マルチな<wbr>声優です。</p>
       <a href="https://x.com/inoriminase" target="_blank" rel="noopener" class="official-link">🔗 水瀬いのり 公式X</a>
 
       <div class="gem-card">
         <div class="gem-header"><div class="gem-num">1</div><div class="gem-title-block">
-          <div class="gem-name">心が叫びたがってるんだ。</div><div class="gem-sub">2015年 / 青春・ドラマ / 成瀬順役</div>
+          <div class="gem-name">心が<wbr>叫びたがってるんだ。</div><div class="gem-sub"><span class="nb">2015年</span> / <span class="nb">青春・ドラマ</span> / <span class="nb">成瀬順役</span></div>
         </div></div>
-        <div class="gem-body">言葉を発することが出来なくなった主人公・順を演じています。声を封じられた役柄という難しい表現に挑んだ一本です。</div>
+        <div class="gem-body">言葉を<wbr>発する<wbr>ことができなくなった<wbr>主人公・順を<wbr>演じています。声を<wbr>封じられた<wbr>役柄という<wbr>難しい<wbr>表現に<wbr>挑んだ<wbr>一本です。</div>
         <div class="streaming-row">
           <a href="https://www.amazon.co.jp/s?k=%E5%BF%83%E3%81%8C%E5%8F%AB%E3%81%B3%E3%81%9F%E3%81%8C%E3%81%A3%E3%81%A6%E3%82%8B%E3%82%93%E3%81%A0&i=instant-video" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
           <a href="https://www.kokosake.jp/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
@@ -305,9 +312,9 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
 
       <div class="gem-card">
         <div class="gem-header"><div class="gem-num">2</div><div class="gem-title-block">
-          <div class="gem-name">少女終末旅行</div><div class="gem-sub">2017年 / SF・日常 / チト役</div>
+          <div class="gem-name">少女終末旅行</div><div class="gem-sub"><span class="nb">2017年</span> / <span class="nb">SF・日常</span> / <span class="nb">チト役</span></div>
         </div></div>
-        <div class="gem-body">荒廃した世界を旅する少女チトを演じています。静かな終末世界の空気を落ち着いた芝居で支えた一本です。</div>
+        <div class="gem-body">荒廃した<wbr>世界を<wbr>旅する<wbr>少女チトを<wbr>演じています。<wbr>静かな<wbr>終末世界の<wbr>空気を<wbr>落ち着いた<wbr>芝居で<wbr>支えた<wbr>一本です。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp/" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
           <a href="https://girls-last-tour.com/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
@@ -316,9 +323,9 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
 
       <div class="gem-card">
         <div class="gem-header"><div class="gem-num">3</div><div class="gem-title-block">
-          <div class="gem-name">ご注文はうさぎですか?</div><div class="gem-sub">2014年〜 / 日常・喫茶店 / 香風智乃役</div>
+          <div class="gem-name">ご注文は<wbr>うさぎですか?</div><div class="gem-sub"><span class="nb">2014年〜</span> / <span class="nb">日常・喫茶店</span> / <span class="nb">香風智乃役</span></div>
         </div></div>
-        <div class="gem-body">アニメファンなら誰もが思い浮かべる代名詞的な役どころです。喫茶店の看板娘・チノを、落ち着いた口調としっかり者の一面で演じています。</div>
+        <div class="gem-body">アニメファンなら<wbr>誰もが<wbr>思い浮かべる<wbr>代名詞的な<wbr>役どころです。<wbr>喫茶店の<wbr>看板娘・チノを、<wbr>落ち着いた<wbr>口調と<wbr>しっかり者の<wbr>一面で<wbr>演じています。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp/" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
           <a href="https://gochiusa.com/01/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
@@ -328,14 +335,14 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
 
     <div class="creator-block" id="ishikawa">
       <div class="creator-head"><span class="creator-name">石川由依</span><span class="creator-kana">いしかわ ゆい</span></div>
-      <p class="creator-intro">舞台俳優としての基礎に裏打ちされた、静かな息遣いにも感情が宿る芝居が持ち味です。無口で寡黙なキャラクターの内に秘めた決意を演じさせたら随一です。</p>
+      <p class="creator-intro">舞台俳優と<wbr>しての<wbr>基礎に<wbr>裏打ちされた、<wbr>静かな<wbr>息遣いにも<wbr>感情が宿る<wbr>芝居が<wbr>持ち味です。<wbr>無口で<wbr>寡黙な<wbr>キャラクターの内に<wbr>秘めた<wbr>決意を<wbr>演じさせたら<wbr>随一です。</p>
       <a href="https://x.com/YUI_STAFF" target="_blank" rel="noopener" class="official-link">🔗 石川由依 公式X</a>
 
       <div class="gem-card">
         <div class="gem-header"><div class="gem-num">1</div><div class="gem-title-block">
-          <div class="gem-name">進撃の巨人</div><div class="gem-sub">2013年〜 / ダークファンタジー・バトル / ミカサ・アッカーマン役</div>
+          <div class="gem-name">進撃の巨人</div><div class="gem-sub"><span class="nb">2013年〜</span> / <span class="nb">ダークファンタジー・バトル</span> / <span class="nb">ミカサ・アッカーマン役</span></div>
         </div></div>
-        <div class="gem-body">寡黙で強いヒロイン・ミカサを演じ、国際的な評価を獲得するきっかけとなった代表作です。低めのトーンと正確な間合いで、決意と脆さが同居する演技を見せます。</div>
+        <div class="gem-body">寡黙で強い<wbr>ヒロイン・ミカサを<wbr>演じ、<wbr>国際的な<wbr>評価を<wbr>獲得する<wbr>きっかけと<wbr>なった<wbr>代表作です。<wbr>低めの<wbr>トーンと<wbr>正確な<wbr>間合いで、<wbr>決意と<wbr>脆さが<wbr>同居する<wbr>演技を<wbr>見せます。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp/" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
           <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -346,9 +353,9 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
 
       <div class="gem-card">
         <div class="gem-header"><div class="gem-num">2</div><div class="gem-title-block">
-          <div class="gem-name">ヴァイオレット・エヴァーガーデン</div><div class="gem-sub">2018年 / ヒューマンドラマ / ヴァイオレット役</div>
+          <div class="gem-name">ヴァイオレット・<wbr>エヴァーガーデン</div><div class="gem-sub"><span class="nb">2018年</span> / <span class="nb">ヒューマンドラマ</span> / <span class="nb">ヴァイオレット役</span></div>
         </div></div>
-        <div class="gem-body">感情を知らない元少女兵が「愛してる」の意味を探す物語の主演です。感情表現が徐々に豊かになっていく過程を繊細に演じ切った代表作です。</div>
+        <div class="gem-body">感情を<wbr>知らない<wbr>元少女兵が<wbr>「愛してる」の<wbr>意味を探す<wbr>物語の<wbr>主演です。<wbr>感情表現が<wbr>徐々に<wbr>豊かに<wbr>なっていく<wbr>過程を<wbr>繊細に<wbr>演じ切った<wbr>代表作です。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp/" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
           <a href="https://www.amazon.co.jp/s?k=%E3%83%B4%E3%82%A1%E3%82%A4%E3%82%AA%E3%83%AC%E3%83%83%E3%83%88%E3%82%A8%E3%83%B4%E3%82%A1%E3%83%BC%E3%82%AC%E3%83%BC%E3%83%87%E3%83%B3&i=instant-video" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -359,14 +366,14 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
 
     <div class="creator-block" id="taketatsu">
       <div class="creator-head"><span class="creator-name">竹達彩奈</span><span class="creator-kana">たけたつ あやな</span></div>
-      <p class="creator-intro">「あやち」の愛称で親しまれる人気声優です。愛らしい声質を活かしつつ、ツンデレから内気な役まで幅広く演じ分ける実力を持っています。</p>
+      <p class="creator-intro">「あやち」の<wbr>愛称で<wbr>親しまれる<wbr>人気声優です。<wbr>愛らしい<wbr>声質を<wbr>活かしつつ、<wbr>ツンデレから<wbr>内気な<wbr>役まで<wbr>幅広く<wbr>演じ分ける<wbr>実力を<wbr>持っています。</p>
       <a href="https://x.com/Ayana_take" target="_blank" rel="noopener" class="official-link">🔗 竹達彩奈 公式X</a>
 
       <div class="gem-card">
         <div class="gem-header"><div class="gem-num">1</div><div class="gem-title-block">
-          <div class="gem-name">けいおん!</div><div class="gem-sub">2009年〜 / 日常・音楽 / 中野梓役</div>
+          <div class="gem-name">けいおん!</div><div class="gem-sub"><span class="nb">2009年〜</span> / <span class="nb">日常・音楽</span> / <span class="nb">中野梓役</span></div>
         </div></div>
-        <div class="gem-body">後輩ギタリストとして軽音部に加入する中野梓（あずにゃん）を演じます。しっかり者の一面と、先輩たちに振り回される可愛らしさのギャップが持ち味です。</div>
+        <div class="gem-body">後輩ギタリストとして<wbr>軽音部に<wbr>加入する<wbr>中野梓<wbr>（あずにゃん）を<wbr>演じます。<wbr>しっかり者の<wbr>一面と、<wbr>先輩たちに<wbr>振り回される<wbr>可愛らしさの<wbr>ギャップが<wbr>持ち味です。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp/" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
           <a href="https://www.kyotoanimation.co.jp/works/k-on/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
@@ -375,9 +382,9 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
 
       <div class="gem-card">
         <div class="gem-header"><div class="gem-num">2</div><div class="gem-title-block">
-          <div class="gem-name">ソードアート・オンライン</div><div class="gem-sub">2012年〜 / 異世界ファンタジー / リーファ役</div>
+          <div class="gem-name">ソードアート・オンライン</div><div class="gem-sub"><span class="nb">2012年〜</span> / <span class="nb">異世界ファンタジー</span> / <span class="nb">リーファ役</span></div>
         </div></div>
-        <div class="gem-body">主人公キリトの義理の妹・直葉（リーファ）を演じます。兄への複雑な想いを抱える少女を、繊細な芝居で表現しています。</div>
+        <div class="gem-body">主人公キリトの<wbr>義理の<wbr>妹・直葉<wbr>（リーファ）を<wbr>演じます。<wbr>兄への<wbr>複雑な<wbr>想いを<wbr>抱える<wbr>少女を、<wbr>繊細な<wbr>芝居で<wbr>表現しています。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp/" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
           <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -387,9 +394,9 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
 
       <div class="gem-card">
         <div class="gem-header"><div class="gem-num">3</div><div class="gem-title-block">
-          <div class="gem-name">五等分の花嫁</div><div class="gem-sub">2019年〜 / ラブコメ / 中野二乃役</div>
+          <div class="gem-name">五等分の花嫁</div><div class="gem-sub"><span class="nb">2019年〜</span> / <span class="nb">ラブコメ</span> / <span class="nb">中野二乃役</span></div>
         </div></div>
-        <div class="gem-body">五つ子の次女・二乃を演じます。当初はツンとした態度だが、徐々に素直になっていく変化を丁寧な芝居で見せています。</div>
+        <div class="gem-body">五つ子の<wbr>次女・<wbr>二乃を<wbr>演じます。<wbr>当初は<wbr>ツンとした<wbr>態度ですが、<wbr>徐々に<wbr>素直に<wbr>なっていく<wbr>変化を<wbr>丁寧な<wbr>芝居で<wbr>見せています。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp/" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
           <a href="https://www.amazon.co.jp/s?k=%E4%BA%94%E7%AD%89%E5%88%86%E3%81%AE%E8%8A%B1%E5%98%89&i=instant-video" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -400,14 +407,14 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
 
     <div class="creator-block" id="higashiyama">
       <div class="creator-head"><span class="creator-name">東山奈央</span><span class="creator-kana">ひがしやま なお</span></div>
-      <p class="creator-intro">透明感のある歌声と演技力を併せ持つ実力派です。歌手活動でも高い評価を得ており、幅広いジャンルの主演・準主演を務めています。</p>
+      <p class="creator-intro">透明感のある<wbr>歌声と<wbr>演技力を併せ持つ<wbr>実力派です。<wbr>歌手活動でも高い<wbr>評価を<wbr>得ており、<wbr>幅広い<wbr>ジャンルの<wbr>主演・準主演を<wbr>務めています。</p>
       <a href="https://x.com/naobou_official" target="_blank" rel="noopener" class="official-link">🔗 東山奈央 公式X</a>
 
       <div class="gem-card">
         <div class="gem-header"><div class="gem-num">1</div><div class="gem-title-block">
-          <div class="gem-name">スパイ教室</div><div class="gem-sub">2023年〜 / スパイ・アクション / ジビア役</div>
+          <div class="gem-name">スパイ教室</div><div class="gem-sub"><span class="nb">2023年〜</span> / <span class="nb">スパイ・アクション</span> / <span class="nb">ジビア役</span></div>
         </div></div>
-        <div class="gem-body">世界最強のスパイ養成機関に集められた少女の一人・ジビアを演じます。粗野で戦闘的な役柄を活き活きと演じています。</div>
+        <div class="gem-body">世界最強の<wbr>スパイ養成機関に<wbr>集められた<wbr>少女の<wbr>一人・ジビアを<wbr>演じます。<wbr>粗野で<wbr>戦闘的な<wbr>役柄を<wbr>活き活きと<wbr>演じています。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp/" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
           <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
@@ -417,9 +424,9 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
 
       <div class="gem-card">
         <div class="gem-header"><div class="gem-num">2</div><div class="gem-title-block">
-          <div class="gem-name">この音とまれ!</div><div class="gem-sub">2019年〜 / 青春・音楽 / 久遠愛役</div>
+          <div class="gem-name">この音とまれ!</div><div class="gem-sub"><span class="nb">2019年〜</span> / <span class="nb">青春・音楽</span> / <span class="nb">久遠愛役</span></div>
         </div></div>
-        <div class="gem-body">箏曲部を一人で守り続けてきた部長・久遠愛を演じます。不器用ながらまっすぐな部長の姿を丁寧な芝居で表現しています。</div>
+        <div class="gem-body">箏曲部を<wbr>一人で<wbr>守り続けてきた<wbr>部長・久遠愛を<wbr>演じます。<wbr>不器用ながらまっすぐな<wbr>部長の姿を<wbr>丁寧な<wbr>芝居で<wbr>表現しています。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp/" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
         </div>
@@ -427,15 +434,15 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
     </div>
 
     <h2>まとめ</h2>
-    <p>声優買いという視点でアニメを見返すと、「この声、あの作品の人だったのか」という発見があります。ここに載っている作品でまだ見ていないものがあれば、是非チェックしてみてください。</p>
-    <p>この記事はあくまで管理人個人の「見逃しチェックリスト」です。他にもおすすめの出演作があれば、XやInstagramで教えてもらえると嬉しいです。</p>
-    <p>声優の名前から探したい方は、「<a href="https://anime-db.jp/directory.html" style="color:#fff;">声優・スタッフ名鑑</a>」もご利用ください。紹介している声優を、名前から探せます。</p>
+    <p>声優買いという<wbr>視点で<wbr>アニメを<wbr>見返すと、<wbr>「この<wbr>声、あの<wbr>作品の<wbr>人だったのか」という<wbr>発見が<wbr>あります。<wbr>ここに<wbr>載っている<wbr>作品でまだ<wbr>見ていない<wbr>ものが<wbr>あれば、<wbr>ぜひチェックしてみてください。</p>
+    <p>この<wbr>記事は<wbr>あくまで<wbr>管理人個人の<wbr>「見逃しチェックリスト」です。<wbr>他にも<wbr>おすすめの<wbr>出演作が<wbr>あれば、Xや<wbr>Instagramで<wbr>教えて<wbr>もらえると<wbr>嬉しいです。</p>
+    <p>声優の<wbr>名前から<wbr>探したい方は、<wbr>「<a href="https://anime-db.jp/directory.html" style="color:#fff;">声優・スタッフ名鑑</a>」も<wbr>ご利用ください。<wbr>紹介している<wbr>声優を、<wbr>名前から<wbr>探せます。</p>
 
     <a href="https://anime-db.jp/directory.html" class="next-article">
       <div style="flex:1">
-        <div class="next-article-label">🗂️ 名前から探すならこちら</div>
+        <div class="next-article-label">🗂️ 名前から<wbr>探すなら<wbr>こちら</div>
         <div class="next-article-title">声優・スタッフ名鑑</div>
-        <div class="next-article-desc">ここまでに紹介した声優や、監督・脚本家・制作会社・アーティストの名前から、代表作の解説へすぐに移動できます。</div>
+        <div class="next-article-desc">ここまでに<wbr>紹介した<wbr>声優や、<wbr>監督・脚本家・<wbr>制作会社・アーティストの<wbr>名前から、<wbr>代表作の<wbr>解説へ<wbr>すぐに<wbr>移動できます。</div>
       </div>
       <div class="next-article-arrow">→</div>
     </a>
@@ -443,12 +450,12 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
   </div>
 
   <section class="related-guides" aria-label="関連記事">
-    <h2 class="related-guides-title">関連記事（声優特集）</h2>
+    <h2 class="related-guides-title">関連記事<wbr>（声優特集）</h2>
     <ul>
-      <li><a href="https://anime-db.jp/blog/legend-seiyuu-favorites.html"><span class="rg-name">変幻自在の演技力を持つ声優9人まとめ</span><span class="rg-desc">役ごとに変幻自在の芝居を見せ、作品の質を底上げする声優9人の代表作を紹介。</span></a></li>
-      <li><a href="https://anime-db.jp/blog/nextgen-seiyuu-favorites.html"><span class="rg-name">主役級声優11人まとめ</span><span class="rg-desc">今、主役級として活躍する声優11人の代表作を紹介。悠木碧は別格として特別収録。</span></a></li>
-      <li><a href="https://anime-db.jp/blog/male-seiyuu-favorites.html"><span class="rg-name">男性声優9人の代表作まとめ</span><span class="rg-desc">男性声優9人の代表作を紹介。声優買いという視点でアニメを掘り下げたい人向け。</span></a></li>
-      <li><a href="https://anime-db.jp/directory.html"><span class="rg-name">声優・スタッフ名鑑</span><span class="rg-desc">声優や監督などの名前から、紹介している記事へジャンプできます。</span></a></li>
+      <li><a href="https://anime-db.jp/blog/legend-seiyuu-favorites.html"><span class="rg-name">変幻自在の<wbr>演技力を<wbr>持つ声優9人まとめ</span><span class="rg-desc">役ごとに<wbr>変幻自在の<wbr>芝居を<wbr>見せ、<wbr>作品の質を<wbr>底上げする<wbr>声優9人の<wbr>代表作を<wbr>紹介します。</span></a></li>
+      <li><a href="https://anime-db.jp/blog/nextgen-seiyuu-favorites.html"><span class="rg-name">主役級声優11人まとめ</span><span class="rg-desc">今、<wbr>主役級として<wbr>活躍する<wbr>声優11人の<wbr>代表作を<wbr>紹介します。<wbr>悠木碧は<wbr>別格として<wbr>特別収録しています。</span></a></li>
+      <li><a href="https://anime-db.jp/blog/male-seiyuu-favorites.html"><span class="rg-name">男性声優9人の<wbr>代表作まとめ</span><span class="rg-desc">男性声優9人の<wbr>代表作を<wbr>紹介します。<wbr>声優買いという<wbr>視点で<wbr>アニメを<wbr>掘り下げたい<wbr>人向けです。</span></a></li>
+      <li><a href="https://anime-db.jp/directory.html"><span class="rg-name">声優・スタッフ名鑑</span><span class="rg-desc">声優や<wbr>監督などの<wbr>名前から、<wbr>紹介している<wbr>記事へ<wbr>ジャンプできます。</span></a></li>
     </ul>
   </section>
 
