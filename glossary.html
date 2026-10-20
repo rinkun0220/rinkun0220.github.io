@@ -96,6 +96,13 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
 .footer-link { color: var(--text-muted); text-decoration: none; font-size: 0.85rem; }
 .footer-link:hover { color: #fff; }
 .copyright { font-size: 0.8rem; color: rgba(255,255,255,0.3); }
+/* 日本語の改行を自然にする設定（文節単位で改行・行頭禁則・1文字だけの行を避ける） */
+body{line-break:strict;overflow-wrap:break-word}
+@supports (word-break:auto-phrase){body{word-break:auto-phrase}}
+:has(> wbr){word-break:keep-all}
+p,li,dd,td,th{text-wrap:pretty}
+.nb{white-space:nowrap}
+h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-title,.pick-name,.next-article-title{text-wrap:balance}
 </style>
 </head>
 <body>
@@ -115,107 +122,107 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
   <div class="page-head">
     <span class="page-tag">📖 初心者向け</span>
     <h1 class="page-title">アニメ初心者向け用語集</h1>
-    <p class="page-desc">アニメのレビューサイトやSNSでよく見かけるけど、ちゃんと意味を説明されたことがない言葉。このページでは、中学生の頃から深夜アニメを見始めた方にも分かるように、出来るだけやさしい言葉で解説しています。</p>
+    <p class="page-desc">アニメの<wbr>レビューサイトや<wbr>SNSでよく<wbr>見かけますが、<wbr>ちゃんと<wbr>意味を<wbr>説明された<wbr>ことがない<wbr>言葉です。この<wbr>ページでは、<wbr>中学生の<wbr>頃から<wbr>深夜アニメを<wbr>見始めた<wbr>方にも<wbr>分かるように、<wbr>できるだけやさしい<wbr>言葉で<wbr>解説しています。</p>
   </div>
 
   <div class="intro-box">
-    <strong>💡 このページの使い方</strong><br>
-    ANIMEDBのブログ記事を読んでいて「この言葉、意味がよく分からない」と思ったら、このページで調べてみてください。スマホの場合は、分からない言葉をコピー（または切り取り）して、ブラウザのウェブ検索に貼り付けて検索出来ます。専門用語というより、アニメファンの間でなんとなく使われている「業界っぽい言葉」を中心にまとめています。パソコンの場合は、Ctrl+F（Macは Command+F）でも、このページ内の言葉を探せます。
+    <strong>💡 この<wbr>ページの<wbr>使い方</strong><br>
+    ANIMEDBの<wbr>ブログ記事を<wbr>読んでいて<wbr>「この<wbr>言葉、<wbr>意味がよく<wbr>分からない」と<wbr>思ったら、この<wbr>ページで<wbr>調べてみてください。<wbr>スマホの<wbr>場合は、<wbr>分からない<wbr>言葉を<wbr>コピー<wbr>（または切り取り）<wbr>して、<wbr>ブラウザの<wbr>ウェブ検索に<wbr>貼り付けて<wbr>検索できます。<wbr>専門用語と<wbr>いうより、<wbr>アニメファンの間で<wbr>なんとなく<wbr>使われている<wbr>「業界っぽい言葉」を<wbr>中心に<wbr>まとめています。<wbr>パソコンの<wbr>場合は、<wbr>Ctrl+F<wbr>（Macは Command+F）でも、この<wbr>ページ内の<wbr>言葉を<wbr>探せます。
   </div>
 
-  <h2 class="cat-title">🎬 作品づくりに関する言葉</h2>
+  <h2 class="cat-title">🎬 作品づくりに<wbr>関する言葉</h2>
   <div class="term-grid">
 
     <div class="term-card">
       <div class="term-name">シリーズ構成 <span class="term-yomi">しりーずこうせい</span></div>
-      <div class="term-desc">アニメ全体の「話の組み立て方」を決める人のこと。原作のどのエピソードを、どの順番で、何話に分けてアニメにするかを設計する仕事です。脚本家が兼任することも多いポジションです。</div>
-      <div class="term-example"><strong>例：</strong>「シリーズ構成が上手いから、原作にないオリジナル回でも違和感がない」</div>
+      <div class="term-desc">アニメ全体の<wbr>「話の組み立て方」を<wbr>決める人の<wbr>ことです。<wbr>原作のどの<wbr>エピソードを、どの<wbr>順番で、<wbr>何話に<wbr>分けて<wbr>アニメに<wbr>するかを<wbr>設計する<wbr>仕事です。<wbr>脚本家が<wbr>兼任する<wbr>ことも多い<wbr>ポジションです。</div>
+      <div class="term-example"><strong>例：</strong><wbr>「シリーズ構成が<wbr>上手いから、<wbr>原作にない<wbr>オリジナル回でも<wbr>違和感が<wbr>ない」</div>
     </div>
 
     <div class="term-card">
       <div class="term-name">脚本 <span class="term-yomi">きゃくほん</span></div>
-      <div class="term-desc">各話ごとの台詞や場面の流れを文章で書く仕事、またはその文章そのもの。同じ話でも、脚本を書く人によって台詞のニュアンスや間の取り方が変わります。</div>
+      <div class="term-desc">各話ごとの<wbr>台詞や<wbr>場面の<wbr>流れを<wbr>文章で書く<wbr>仕事、<wbr>またはその文章その<wbr>ものです。同じ<wbr>話でも、<wbr>脚本を書く人に<wbr>よって<wbr>台詞の<wbr>ニュアンスや間の<wbr>取り方が<wbr>変わります。</div>
     </div>
 
     <div class="term-card">
       <div class="term-name">監督 <span class="term-yomi">かんとく</span></div>
-      <div class="term-desc">アニメ全体の映像面をまとめるリーダー。カメラワークのようなカット割りや、間の取り方、色使いなど、「画面の雰囲気」を決める人です。同じ脚本でも監督が違うと印象が大きく変わります。</div>
+      <div class="term-desc">アニメ全体の<wbr>映像面を<wbr>まとめる<wbr>リーダーです。<wbr>カメラワークのような<wbr>カット割りや、間の<wbr>取り方、<wbr>色使いなど、<wbr>「画面の雰囲気」を<wbr>決める<wbr>人です。同じ<wbr>脚本でも<wbr>監督が<wbr>違うと<wbr>印象が<wbr>大きく<wbr>変わります。</div>
     </div>
 
     <div class="term-card">
-      <div class="term-name">制作会社 <span class="term-yomi">せいさくがいしゃ</span></div>
-      <div class="term-desc">実際にアニメの映像（作画・撮影・編集など）を作っているスタジオのこと。P.A.WORKSや京都アニメーションなど、会社ごとに得意な絵柄や作風の傾向があります。</div>
+      <div class="term-name">制作会社 <span class="term-yomi">せいさくが<wbr>いしゃ</span></div>
+      <div class="term-desc">実際に<wbr>アニメの映像<wbr>（作画・撮影・編集など）を<wbr>作っている<wbr>スタジオの<wbr>ことです。<wbr>P.A.WORKSや<wbr>京都アニメーションなど、<wbr>会社ごとに<wbr>得意な<wbr>絵柄や<wbr>作風の<wbr>傾向が<wbr>あります。</div>
     </div>
 
     <div class="term-card" id="sakugahoukai">
-      <div class="term-name">作画崩壊 <span class="term-yomi">さくがほうかい</span></div>
-      <div class="term-desc">キャラクターの顔や体のバランスが、その回だけ極端に崩れて見えてしまうこと。制作スケジュールが厳しいときに起こりやすいと言われています。</div>
+      <div class="term-name">作画崩壊 <span class="term-yomi">さくが<wbr>ほうかい</span></div>
+      <div class="term-desc">キャラクターの顔や体の<wbr>バランスが、その<wbr>回だけ<wbr>極端に<wbr>崩れて<wbr>見えてしまう<wbr>ことです。<wbr>制作スケジュールが<wbr>厳しい<wbr>ときに<wbr>起こりやすいと<wbr>言われています。</div>
     </div>
 
     <div class="term-card">
-      <div class="term-name">アニメ制作ガチャ <span class="term-yomi">あにめせいさくガチャ</span></div>
-      <div class="term-desc">原作ファンの間で使われるネットスラングで、アニメ化が発表された瞬間に「どこの制作会社が作るのか」を、ソーシャルゲームの「ガチャ」になぞらえた言葉です。ufotable・京都アニメーション・MAPPA・ボンズなど、映像美や原作再現度への信頼が厚い会社が担当すると「SSR（大当たり）」、逆に<a href="/glossary.html#sakugahoukai" style="color:var(--star-color)">作画崩壊</a>などクオリティが下がってしまうと「ハズレ（爆死）」と呼ばれます。ハズレは制作会社の実力不足だけでなく、過酷なスケジュールや製作委員会の予算制限といった、業界の構造的な事情が原因になっていることも多いと言われています。</div>
-      <div class="term-example"><strong>豆知識：</strong>最近は制作会社名だけでなく、同じ会社内でも「どのチーム」「どの監督・作画監督」が担当するかまで見て判断するファンが増えています。</div>
+      <div class="term-name">アニメ制作ガチャ <span class="term-yomi">あに<wbr>めせいさく<wbr>ガチャ</span></div>
+      <div class="term-desc">原作ファンの間で<wbr>使われる<wbr>ネットスラングで、<wbr>アニメ化が<wbr>発表された<wbr>瞬間に<wbr>「どこの<wbr>制作会社が<wbr>作るのか」を、<wbr>ソーシャルゲームの<wbr>「ガチャ」に<wbr>なぞらえた<wbr>言葉です。<wbr>ufotable・京都アニメーション・MAPPA・ボンズなど、<wbr>映像美や<wbr>原作再現度への<wbr>信頼が厚い<wbr>会社が<wbr>担当すると<wbr>「SSR（大当たり）」、逆に<a href="/glossary.html#sakugahoukai" style="color:var(--star-color)"><wbr>作画崩壊</a>など<wbr>クオリティが<wbr>下がってしまうと<wbr>「ハズレ（爆死）」と<wbr>呼ばれます。<wbr>ハズレは<wbr>制作会社の<wbr>実力不足だけでなく、<wbr>過酷な<wbr>スケジュールや<wbr>製作委員会の<wbr>予算制限と<wbr>いった、<wbr>業界の<wbr>構造的な<wbr>事情が<wbr>原因に<wbr>なっている<wbr>ことも<wbr>多いと<wbr>言われています。</div>
+      <div class="term-example"><strong>豆知識：</strong><wbr>最近は<wbr>制作会社名だけでなく、同じ<wbr>会社内でも<wbr>「どのチーム」<wbr>「どの監督・作画監督」が<wbr>担当するかまで見て<wbr>判断する<wbr>ファンが<wbr>増えています。</div>
     </div>
 
     <div class="term-card">
       <div class="term-name">尺 <span class="term-yomi">しゃく</span></div>
-      <div class="term-desc">1話あたりの時間の長さのこと。「尺が足りない」は、伝えたい内容に対して放送時間が短すぎる、という意味で使われます。</div>
+      <div class="term-desc">1話あたりの<wbr>時間の<wbr>長さの<wbr>ことです。<wbr>「尺が足りない」は、<wbr>伝えたい<wbr>内容に<wbr>対して<wbr>放送時間が<wbr>短すぎる、という<wbr>意味で<wbr>使われます。</div>
     </div>
 
   </div>
 
-  <h2 class="cat-title">📺 放送・配信に関する言葉</h2>
+  <h2 class="cat-title">📺 放送・配信に<wbr>関する言葉</h2>
   <div class="term-grid">
 
     <div class="term-card">
       <div class="term-name">クール</div>
-      <div class="term-desc">アニメの放送期間を数える単位で、1クール＝約3ヶ月（12〜13話）が基本です。「2クール」なら約6ヶ月、24〜26話ということになります。「今クール」は「今の季節に放送中の作品」という意味で使われます。</div>
+      <div class="term-desc">アニメの<wbr>放送期間を<wbr>数える<wbr>単位で、<wbr>1クール＝約3か月<wbr>（12〜13話）が<wbr>基本です。<wbr>「2クール」なら<wbr>約6か月、<wbr>24〜26話という<wbr>ことになります。<wbr>「今クール」は<wbr>「今の<wbr>季節に<wbr>放送中の<wbr>作品」という<wbr>意味で<wbr>使われます。</div>
     </div>
 
     <div class="term-card">
-      <div class="term-name">深夜アニメ <span class="term-yomi">しんやあにめ</span></div>
-      <div class="term-desc">主に22時以降に放送されるアニメのこと。子ども向けの夕方アニメと違い、大人向けの複雑なストーリーや過激な表現が使われることも多いジャンルです。ANIMEDBが主に扱っているのもこの深夜アニメです。</div>
+      <div class="term-name">深夜アニメ <span class="term-yomi">しんや<wbr>あにめ</span></div>
+      <div class="term-desc">主に<wbr>22時以降に<wbr>放送される<wbr>アニメの<wbr>ことです。<wbr>子ども<wbr>向けの<wbr>夕方アニメと<wbr>違い、<wbr>大人向けの<wbr>複雑な<wbr>ストーリーや<wbr>過激な<wbr>表現が<wbr>使われる<wbr>ことも多い<wbr>ジャンルです。<wbr>ANIMEDBが主に<wbr>扱っているのもこの<wbr>深夜アニメです。</div>
     </div>
 
     <div class="term-card">
       <div class="term-name">見放題 <span class="term-yomi">みほうだい</span></div>
-      <div class="term-desc">月額料金の中に含まれていて、追加料金なしで何度でも見られる配信方式のこと。これに対して「レンタル」は1本ごとに別料金がかかる方式です。ANIMEDBの配信バッジは、基本的にこの見放題のサービスを優先して紹介しています。</div>
+      <div class="term-desc">月額料金の中に<wbr>含まれていて、<wbr>追加料金なしで<wbr>何度でも<wbr>見られる<wbr>配信方式の<wbr>ことです。<wbr>これに<wbr>対して<wbr>「レンタル」は<wbr>1本ごとに<wbr>別料金が<wbr>かかる<wbr>方式です。<wbr>ANIMEDBの<wbr>配信バッジは、<wbr>基本的にこの<wbr>見放題の<wbr>サービスを<wbr>優先して<wbr>紹介しています。</div>
     </div>
 
     <div class="term-card">
-      <div class="term-name">独占配信 <span class="term-yomi">どくせんはいしん</span></div>
-      <div class="term-desc">その作品が、特定の配信サービス1つでしか見られない状態のこと。「Netflix独占」と書かれている作品は、他のどのサービスに登録しても見ることが出来ません。</div>
+      <div class="term-name">独占配信 <span class="term-yomi">どく<wbr>せんは<wbr>いしん</span></div>
+      <div class="term-desc">その<wbr>作品が、<wbr>特定の<wbr>配信サービス1つでしか<wbr>見られない<wbr>状態の<wbr>ことです。<wbr>「Netflix独占」と<wbr>書かれている<wbr>作品は、他のどの<wbr>サービスに<wbr>登録しても<wbr>見ることができません。</div>
     </div>
 
     <div class="term-card">
-      <div class="term-name">一挙配信 <span class="term-yomi">いっきょはいしん</span></div>
-      <div class="term-desc">まだ放送されていない話、または既に放送された話を、まとめて一気に配信すること。「一挙放送」とも呼ばれます。</div>
+      <div class="term-name">一挙配信 <span class="term-yomi">いっきょは<wbr>いしん</span></div>
+      <div class="term-desc">まだ<wbr>放送されていない<wbr>話、<wbr>または<wbr>すでに<wbr>放送された<wbr>話を、<wbr>まとめて<wbr>一気に<wbr>配信する<wbr>ことです。<wbr>「一挙放送」とも<wbr>呼ばれます。</div>
     </div>
 
     <div class="term-card">
       <div class="term-name">円盤 <span class="term-yomi">えんばん</span></div>
-      <div class="term-desc">Blu-rayやDVDのこと。2010年代まではアニメの人気度を測る代表的な指標でしたが、2020年代に入るとネット配信が主流になり、国内外の配信サイトの再生ランキングがその役割を担うようになりました。管理人の印象では、このランキング競争の弊害で<a href="/glossary.html#kyomuwaku" style="color:var(--star-color)">虚無枠</a>が増えているように感じています。</div>
+      <div class="term-desc">Blu-rayや<wbr>DVDの<wbr>ことです。<wbr>2010年代までは<wbr>アニメの<wbr>人気度を測る<wbr>代表的な<wbr>指標でしたが、<wbr>2020年代に<wbr>入ると<wbr>ネット配信が<wbr>主流に<wbr>なり、<wbr>国内外の<wbr>配信サイトの<wbr>再生ランキングがその<wbr>役割を<wbr>担うようになりました。<wbr>管理人の<wbr>印象では、この<wbr>ランキング競争の<wbr>弊害で<a href="/glossary.html#kyomuwaku" style="color:var(--star-color)"><wbr>虚無枠</a>が<wbr>増えているように<wbr>感じています。</div>
     </div>
 
   </div>
 
-  <h2 class="cat-title">🎭 ジャンル・作品タイプに関する言葉</h2>
+  <h2 class="cat-title">🎭 ジャンル・作品タイプに<wbr>関する言葉</h2>
   <div class="term-grid">
 
     <div class="term-card">
       <div class="term-name">なろう系</div>
-      <div class="term-desc">小説投稿サイト「小説家になろう」発の作品によく見られる、お決まりの設定やパターンを指す言葉。「異世界転生」「主人公が最強」「ハーレム」などの要素が組み合わさった作品を指すことが多いです。もともとは特定サイトの名前ですが、今ではジャンル名のように使われています。</div>
+      <div class="term-desc">小説投稿サイト<wbr>「小説家になろう」発の<wbr>作品によく<wbr>見られる、<wbr>お決まりの<wbr>設定や<wbr>パターンを指す<wbr>言葉です。<wbr>「異世界転生」<wbr>「主人公が最強」<wbr>「ハーレム」などの<wbr>要素が<wbr>組み合わさった<wbr>作品を<wbr>指すことが<wbr>多いです。<wbr>もともとは<wbr>特定サイトの<wbr>名前ですが、<wbr>今では<wbr>ジャンル名のように<wbr>使われています。</div>
     </div>
 
     <div class="term-card">
       <div class="term-name">原作 <span class="term-yomi">げんさく</span></div>
-      <div class="term-desc">アニメの元になった漫画・小説・ゲームなどの作品のこと。「原作つき」はこうした元ネタがある作品、「オリジナルアニメ」は最初からアニメとして作られた作品を指します。</div>
+      <div class="term-desc">アニメの元に<wbr>なった<wbr>漫画・小説・<wbr>ゲームなどの<wbr>作品の<wbr>ことです。<wbr>「原作つき」は<wbr>こうした<wbr>元ネタがある<wbr>作品、<wbr>「オリジナルアニメ」は<wbr>最初から<wbr>アニメとして<wbr>作られた<wbr>作品を<wbr>指します。</div>
     </div>
 
     <div class="term-card">
       <div class="term-name">二次創作 <span class="term-yomi">にじそうさく</span></div>
-      <div class="term-desc">ファンが元の作品（一次創作）を元に、自分で作ったイラストや小説などのこと。同人誌やファンアートなどが該当します。</div>
+      <div class="term-desc">ファンが元の作品<wbr>（一次創作）を<wbr>元に、<wbr>自分で<wbr>作った<wbr>イラストや<wbr>小説などの<wbr>ことです。<wbr>同人誌や<wbr>ファンアートなどが<wbr>該当します。</div>
     </div>
 
   </div>
@@ -225,34 +232,34 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
 
     <div class="term-card">
       <div class="term-name">0話切り <span class="term-yomi">ぜろわぎり</span></div>
-      <div class="term-desc">本編の1話すら見ず、アニメ公式サイトのPVやYouTubeの動画などを見た時点で「自分には合わない」と判断し、視聴対象から外すこと。毎クール大量のアニメが放送されるため、全部を最後まで見るのは現実的に難しく、2020年代以降はこうした取捨選択をする視聴者が増えています。</div>
+      <div class="term-desc">本編の<wbr>1話すら<wbr>見ず、<wbr>アニメ公式サイトの<wbr>PVや<wbr>YouTubeの<wbr>動画などを見た<wbr>時点で<wbr>「自分には合わない」と<wbr>判断し、<wbr>視聴対象から外す<wbr>ことです。<wbr>毎クール大量の<wbr>アニメが<wbr>放送される<wbr>ため、<wbr>全部を<wbr>最後まで<wbr>見るのは<wbr>現実的に<wbr>難しく、<wbr>2020年代以降は<wbr>こうした<wbr>取捨選択をする<wbr>視聴者が<wbr>増えています。</div>
     </div>
 
     <div class="term-card">
       <div class="term-name">1話切り <span class="term-yomi">いっわぎり</span></div>
-      <div class="term-desc">1話を見た時点で「自分には合わない」と判断し、それ以降を見るのをやめること。毎クール大量のアニメが放送されるため、全部を最後まで見るのは現実的に難しく、多くの視聴者がこの取捨選択をしています。</div>
-      <div class="term-example"><strong>関連記事：</strong>ANIMEDBでは<a href="/blog/rating-criteria.html" style="color:var(--star-color)">管理人の1話切り基準</a>も紹介しています。</div>
+      <div class="term-desc">1話を見た<wbr>時点で<wbr>「自分には合わない」と<wbr>判断し、<wbr>それ以降を<wbr>見るのを<wbr>やめる<wbr>ことです。<wbr>毎クール大量の<wbr>アニメが<wbr>放送される<wbr>ため、<wbr>全部を<wbr>最後まで<wbr>見るのは<wbr>現実的に<wbr>難しく、<wbr>多くの<wbr>視聴者がこの<wbr>取捨選択を<wbr>しています。</div>
+      <div class="term-example"><strong>関連<wbr>記事：</strong>ANIMEDBでは<a href="/blog/rating-criteria.html" style="color:var(--star-color)"><wbr>管理人の<wbr>1話切り基準</a>も<wbr>紹介しています。</div>
     </div>
 
     <div class="term-card">
       <div class="term-name">神アニメ <span class="term-yomi">かみあにめ</span></div>
-      <div class="term-desc">「非常に完成度が高い」「感動した」など、視聴者から絶賛されているアニメを指すネットスラング。あくまで口コミベースの評価で、公式な賞などではありません。</div>
+      <div class="term-desc">「非常に完成度が高い」<wbr>「感動した」など、<wbr>視聴者から<wbr>絶賛されている<wbr>アニメを<wbr>指すネットスラングです。<wbr>あくまで<wbr>口コミベースの<wbr>評価で、<wbr>公式な<wbr>賞などではありません。</div>
     </div>
 
     <div class="term-card">
-      <div class="term-name">覇権アニメ <span class="term-yomi">はけんあにめ</span></div>
-      <div class="term-desc">その季節に放送されている作品の中で、話題性・人気ともに一番盛り上がっている作品を指す言葉。円盤の売上や配信の再生数などが根拠として語られることが多いです。</div>
+      <div class="term-name">覇権アニメ <span class="term-yomi">は<wbr>けんあにめ</span></div>
+      <div class="term-desc">その<wbr>季節に<wbr>放送されている<wbr>作品の<wbr>中で、<wbr>話題性・<wbr>人気ともに一番盛り<wbr>上がっている<wbr>作品を指す<wbr>言葉です。<wbr>円盤の<wbr>売上や<wbr>配信の<wbr>再生数などが<wbr>根拠として<wbr>語られる<wbr>ことが<wbr>多いです。</div>
     </div>
 
     <div class="term-card" id="kyomuwaku">
       <div class="term-name">虚無枠 <span class="term-yomi">きょむわく</span></div>
-      <div class="term-desc"><strong>管理人が勝手に作った言葉（造語）で、公式な用語ではありません。</strong>ネタにもされず、絶賛もされず、見終わっても何も残らないまま、話題にもならず静かに埋もれてしまう作品のことを、管理人がこう呼んでいます。似たような設定の作品が多く並ぶ中で起きやすいと感じています。「つまらない作品」という意味ではなく、特定の作品を指す言葉でもありません。ANIMEDBの<a href="/blog/worst-anime-honest.html" style="color:var(--star-color)">「話題にならないのに、なぜ続編だけは続くのか」の記事</a>でも詳しく触れています。</div>
+      <div class="term-desc"><strong>管理人が<wbr>勝手に<wbr>作った言葉<wbr>（造語）で、<wbr>公式な<wbr>用語ではありません。</strong><wbr>ネタにも<wbr>されず、<wbr>絶賛も<wbr>されず、<wbr>見終わっても何も<wbr>残らないまま、<wbr>話題にもならず<wbr>静かに<wbr>埋もれてしまう<wbr>作品の<wbr>ことを、<wbr>管理人がこう<wbr>呼んでいます。<wbr>似たような<wbr>設定の<wbr>作品が多く<wbr>並ぶ中で<wbr>起きやすいと<wbr>感じています。<wbr>「つまらない作品」という<wbr>意味ではなく、<wbr>特定の<wbr>作品を指す<wbr>言葉でもありません。<wbr>ANIMEDBの<a href="/blog/worst-anime-honest.html" style="color:var(--star-color)"><wbr>「話題に<wbr>ならないのに、<wbr>なぜ続編だけは<wbr>続くのか」の<wbr>記事</a>でも<wbr>詳しく<wbr>触れています。</div>
     </div>
 
   </div>
 
   <div class="link-row">
-    他にも気になる言葉があれば、<a href="/contact.html">お問い合わせフォーム</a>から教えてください。随時追加していきます。
+    他にも気になる<wbr>言葉が<wbr>あれば、<a href="/contact.html"><wbr>お問い合わせフォーム</a>から<wbr>教えてください。随時<wbr>追加していきます。
   </div>
 </main>
 

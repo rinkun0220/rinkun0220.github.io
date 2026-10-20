@@ -91,6 +91,13 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
 .reveal-rank-table th, .reveal-rank-table td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--border-color); color: var(--text-muted); }
 .reveal-rank-table th { color: var(--text-main); }
 .tool-guide{max-width:880px;margin:40px auto 28px;padding:0 20px}.tool-guide h2{font-size:1.05rem;font-weight:700;color:var(--text-main);margin:0 0 12px}.tool-guide h3{font-size:.92rem;font-weight:700;color:var(--accent);margin:20px 0 8px}.tool-guide p{font-size:.88rem;color:var(--text-muted);line-height:1.95;margin:0 0 12px}.tool-guide a{color:var(--star-color);text-decoration:none}.tool-guide a:hover{text-decoration:underline}
+/* 日本語の改行を自然にする設定（文節単位で改行・行頭禁則・1文字だけの行を避ける） */
+body{line-break:strict;overflow-wrap:break-word}
+@supports (word-break:auto-phrase){body{word-break:auto-phrase}}
+:has(> wbr){word-break:keep-all}
+p,li,dd,td,th{text-wrap:pretty}
+.nb{white-space:nowrap}
+h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-title,.pick-name,.next-article-title{text-wrap:balance}
 </style>
 </head>
 <body>
@@ -109,13 +116,13 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
 <main>
   <div class="page-head">
     <span class="page-tag">🎚️ 体験型シミュレーター</span>
-    <h1 class="page-title">このアニメ、何点つける？</h1>
-    <p class="page-desc">脚本・作画演出・キャラ・音楽の4項目を、見た作品のイメージでスライダーに合わせてみてください。ANIMEDBの<a href="/blog/rating-criteria.html" style="color:var(--star-color);text-decoration:none;">評価基準</a>に沿って、S〜Cの判定を返します。</p>
+    <h1 class="page-title">この<wbr>アニメ、<wbr>何点つける？</h1>
+    <p class="page-desc">脚本・作画演出・キャラ・音楽の<wbr>4項目を、見た<wbr>作品の<wbr>イメージで<wbr>スライダーに<wbr>合わせてみてください。<wbr>ANIMEDBの<a href="/blog/rating-criteria.html" style="color:var(--star-color);text-decoration:none;"><wbr>評価基準</a>に<wbr>沿って、<wbr>S〜Cの<wbr>判定を<wbr>返します。</p>
   </div>
 
     <div class="reveal-section">
     <h2 class="reveal-title">ANIMEDB評価基準の内訳</h2>
-    <p class="reveal-note">このシミュレーターは、ANIMEDB管理人が実際のレビューで使っている加重平均の考え方をそのまま再現しています。脚本を最も重視するのは、管理人自身が「脚本派」を公言しているためです（詳しくは<a href="/blog/rating-criteria.html" style="color:var(--star-color)">評価基準の記事</a>で解説しています）。</p>
+    <p class="reveal-note">この<wbr>シミュレーターは、<wbr>ANIMEDB管理人が<wbr>実際の<wbr>レビューで<wbr>使っている<wbr>加重平均の<wbr>考え方を<wbr>そのまま<wbr>再現しています。<wbr>脚本を最も<wbr>重視するのは、<wbr>管理人自身が<wbr>「脚本派」を<wbr>公言している<wbr>ためです<wbr>（詳しくは<a href="/blog/rating-criteria.html" style="color:var(--star-color)"><wbr>評価基準の<wbr>記事</a>で<wbr>解説しています）。</p>
     <table class="reveal-rank-table">
       <tr><th>項目</th><th>配点比率</th></tr>
       <tr><td>✍️ 脚本・構成</td><td>40%</td></tr>
@@ -125,47 +132,47 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
     </table>
     <table class="reveal-rank-table">
       <tr><th>判定</th><th>加重スコア</th><th>目安</th></tr>
-      <tr><td>S</td><td>9.0以上</td><td>積極的に人に薦めたくなる作品</td></tr>
-      <tr><td>A</td><td>8.0〜8.9</td><td>大きな欠点がなく安定して面白い作品</td></tr>
+      <tr><td>S</td><td>9.0以上</td><td>積極的に人に<wbr>薦めたくなる作品</td></tr>
+      <tr><td>A</td><td>8.0〜8.9</td><td>大きな<wbr>欠点がなく<wbr>安定して<wbr>面白い作品</td></tr>
       <tr><td>B</td><td>7.0〜7.9</td><td>楽しめるが気になる点もある作品</td></tr>
-      <tr><td>C</td><td>6.9以下</td><td>視聴は続けられるが積極的な理由は見つからない作品</td></tr>
+      <tr><td>C</td><td>6.9以下</td><td>視聴は<wbr>続けられるが<wbr>積極的な<wbr>理由は<wbr>見つからない作品</td></tr>
     </table>
   </div>
 
 <div class="sim-card">
     <div class="slider-group">
-      <div class="slider-label"><span class="slider-name">✍️ 脚本・構成</span><span class="slider-value" id="val-script">5</span></div>
+      <div class="slider-label"><span class="slider-name">✍️ 脚本・<wbr>構成</span><span class="slider-value" id="val-script">5</span></div>
       <input type="range" min="0" max="10" value="5" class="slider-input" id="slider-script" oninput="updateSim()">
-      <div class="slider-desc">話の構成、伏線の張り方、台詞の説得力</div>
+      <div class="slider-desc">話の<wbr>構成、<wbr>伏線の<wbr>張り方、<wbr>台詞の<wbr>説得力</div>
     </div>
     <div class="slider-group">
       <div class="slider-label"><span class="slider-name">🎬 作画・演出</span><span class="slider-value" id="val-visual">5</span></div>
       <input type="range" min="0" max="10" value="5" class="slider-input" id="slider-visual" oninput="updateSim()">
-      <div class="slider-desc">映像のクオリティ、カット割り、動きの気持ちよさ</div>
+      <div class="slider-desc">映像の<wbr>クオリティ、<wbr>カット割り、<wbr>動きの<wbr>気持ちよさ</div>
     </div>
     <div class="slider-group">
       <div class="slider-label"><span class="slider-name">💖 キャラクター</span><span class="slider-value" id="val-chara">5</span></div>
       <input type="range" min="0" max="10" value="5" class="slider-input" id="slider-chara" oninput="updateSim()">
-      <div class="slider-desc">キャラクターの魅力、関係性、声優の演技</div>
+      <div class="slider-desc">キャラクターの<wbr>魅力、<wbr>関係性、<wbr>声優の演技</div>
     </div>
     <div class="slider-group">
       <div class="slider-label"><span class="slider-name">🎵 音楽・主題歌</span><span class="slider-value" id="val-music">5</span></div>
       <input type="range" min="0" max="10" value="5" class="slider-input" id="slider-music" oninput="updateSim()">
-      <div class="slider-desc">劇伴のクオリティ、OP・EDとの相性</div>
+      <div class="slider-desc">劇伴の<wbr>クオリティ、<wbr>OP・EDとの相性</div>
     </div>
   </div>
 
   <div class="result-box" id="resultBox"></div>
 
-  <div class="sim-note">脚本を最重視した加重平均で判定しています。詳しい配点の考え方は<a href="/blog/rating-criteria.html">評価基準の記事</a>で解説しています。</div>
+  <div class="sim-note">脚本を<wbr>最重視した<wbr>加重平均で<wbr>判定しています。<wbr>詳しい<wbr>配点の<wbr>考え方は<a href="/blog/rating-criteria.html"><wbr>評価基準の<wbr>記事</a>で<wbr>解説しています。</div>
   <section class="tool-guide">
-    <h2>シミュレーターの使い方と点数の考え方</h2>
-    <h3>スコアの計算方法</h3>
-    <p>4つのスライダーを0〜10で動かすと、脚本・構成40%、作画・演出25%、キャラクター25%、音楽10%の配点で加重平均を計算し、小数点第1位までのスコアとS〜Cの判定を表示します。例えば全項目を8にすると加重スコアは8.0でA判定になります。一方、演出とキャラクターを9、音楽を8にしても、脚本が6だと加重スコアは7.7でB判定にとどまります。脚本の配点が最も大きいため、他の項目が高くても脚本の弱さは点数に響きやすい仕組みです。</p>
-    <h3>おすすめの使い方</h3>
-    <p>見終わった作品を思い浮かべながら、まずいちばん印象に残った項目から動かしてみてください。5を「可もなく不可もなく」の基準にして、そこから良かった点は上へ、気になった点は下へ動かすと、自分の感覚に近い点数を出しやすくなります。同じ作品を友人と別々に採点して見比べると、人によって重視するポイントが違うことがよく分かります。</p>
-    <h3>点数はあくまで目安です</h3>
-    <p>ここで出る判定は、ANIMEDB管理人が「脚本派」として作品を見ている考え方を再現した目安であり、作品の価値を決めるものではありません。C判定でも、好みに合えば忘れられない作品になることがあります。配点の理由や各項目で何を見ているかは<a href="/blog/rating-criteria.html">評価基準の記事</a>で詳しく説明しています。自分が何を重視するタイプなのかを知りたいときは、<a href="/viewer-type.html">視聴傾向診断「あなたは何派？」</a>もどうぞ。</p>
+    <h2>シミュレーターの<wbr>使い方と<wbr>点数の<wbr>考え方</h2>
+    <h3>スコアの<wbr>計算方法</h3>
+    <p>4つの<wbr>スライダーを<wbr>0〜10で<wbr>動かすと、<wbr>脚本・<wbr>構成40%、<wbr>作画・演出25%、<wbr>キャラクター25%、<wbr>音楽10%の<wbr>配点で<wbr>加重平均を<wbr>計算し、<wbr>小数点第1位までの<wbr>スコアと<wbr>S〜Cの<wbr>判定を<wbr>表示します。<wbr>例えば<wbr>全項目を8に<wbr>すると<wbr>加重スコアは<wbr>8.0で<wbr>A判定に<wbr>なります。<wbr>一方、<wbr>演出と<wbr>キャラクターを<wbr>9、<wbr>音楽を8に<wbr>しても、<wbr>脚本が<wbr>6だと<wbr>加重スコアは<wbr>7.7で<wbr>B判定にと<wbr>どまります。<wbr>脚本の<wbr>配点が最も<wbr>大きいため、他の<wbr>項目が<wbr>高くても<wbr>脚本の<wbr>弱さは<wbr>点数に<wbr>響きやすい<wbr>仕組みです。</p>
+    <h3>おすすめの<wbr>使い方</h3>
+    <p>見終わった<wbr>作品を<wbr>思い浮かべながら、まず一番<wbr>印象に<wbr>残った<wbr>項目から<wbr>動かしてみてください。5を<wbr>「可もなく不可もなく」の<wbr>基準に<wbr>して、<wbr>そこから<wbr>良かった点は<wbr>上へ、気に<wbr>なった点は下へ<wbr>動かすと、<wbr>自分の<wbr>感覚に近い<wbr>点数を<wbr>出しやすくなります。同じ<wbr>作品を<wbr>友人と<wbr>別々に<wbr>採点して<wbr>見比べると、人に<wbr>よって<wbr>重視する<wbr>ポイントが<wbr>違うことがよく<wbr>分かります。</p>
+    <h3>点数は<wbr>あくまで<wbr>目安です</h3>
+    <p>ここで出る<wbr>判定は、<wbr>ANIMEDB管理人が<wbr>「脚本派」として<wbr>作品を<wbr>見ている<wbr>考え方を<wbr>再現した<wbr>目安であり、<wbr>作品の<wbr>価値を<wbr>決める<wbr>ものではありません。<wbr>C判定でも、<wbr>好みに<wbr>合えば<wbr>忘れられない<wbr>作品に<wbr>なることがあります。<wbr>配点の<wbr>理由や<wbr>各項目で何を<wbr>見ているかは<a href="/blog/rating-criteria.html"><wbr>評価基準の<wbr>記事</a>で<wbr>詳しく<wbr>説明しています。<wbr>自分が何を<wbr>重視する<wbr>タイプなのかを<wbr>知りたい<wbr>ときは、<a href="/viewer-type.html"><wbr>視聴傾向診断<wbr>「あなたは何派？」</a>も<wbr>どうぞ。</p>
   </section>
 </main>
 
@@ -205,7 +212,7 @@ function updateSim() {
     comment = 'ANIMEDB基準だとA評価です。大きな欠点がなく安定して面白い、ジャンルが好きな人に自信を持って薦められる作品ですね。';
   } else if (score >= 7.0) {
     rank = 'B'; rankClass = 'b';
-    comment = 'ANIMEDB基準だとB評価です。楽しめるけれど、どこか気になる点がある。ファン向け・原作既読者向けになりやすいタイプです。';
+    comment = 'ANIMEDB基準だとB評価です。楽しめるけれど、どこか気になる点があります。ファン向け・原作既読者向けになりやすいタイプです。';
   } else {
     rank = 'C'; rankClass = 'c';
     comment = 'ANIMEDB基準だとC評価です。視聴は続けられるけれど、積極的に薦める理由が見つからない、という判定です。ただしC評価だからといって悪い作品というわけではありません。';

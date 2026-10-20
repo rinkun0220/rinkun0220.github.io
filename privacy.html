@@ -112,7 +112,14 @@
     footer nav { margin-bottom: 10px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
     footer nav a { color: var(--text-muted); }
     footer nav a:hover { color: var(--accent2); }
-  </style>
+  /* 日本語の改行を自然にする設定（文節単位で改行・行頭禁則・1文字だけの行を避ける） */
+body{line-break:strict;overflow-wrap:break-word}
+@supports (word-break:auto-phrase){body{word-break:auto-phrase}}
+:has(> wbr){word-break:keep-all}
+p,li,dd,td,th{text-wrap:pretty}
+.nb{white-space:nowrap}
+h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-title,.pick-name,.next-article-title{text-wrap:balance}
+</style>
 </head>
 <body>
   <header>
@@ -127,79 +134,79 @@
 
     <section>
       <h2>はじめに</h2>
-      <p>ANIMEDB（以下「当サイト」）は、ユーザーのプライバシーを尊重し、個人情報の保護に努めます。本プライバシーポリシーは、当サイトにおける個人情報の取り扱いについて説明するものです。</p>
+      <p>ANIMEDB<wbr>（以下「当サイト」）は、<wbr>ユーザーの<wbr>プライバシーを<wbr>尊重し、<wbr>個人情報の<wbr>保護に<wbr>努めます。<wbr>本プライバシーポリシーは、<wbr>当サイトに<wbr>おける<wbr>個人情報の<wbr>取り扱いに<wbr>ついて<wbr>説明する<wbr>ものです。</p>
     </section>
 
     <section>
       <h2>収集する情報</h2>
-      <p>当サイトでは、以下の情報を収集する場合があります。</p>
+      <p>当サイトでは、<wbr>以下の<wbr>情報を<wbr>収集する<wbr>場合が<wbr>あります。</p>
       <ul>
-        <li>お問い合わせフォームを通じてご提供いただいたメールアドレス・お名前・メッセージ内容</li>
-        <li>サイト利用時のアクセスログ（IPアドレス、ブラウザ種別、参照元URL、アクセス日時など）</li>
-        <li>Cookie等を通じた閲覧履歴・行動情報</li>
+        <li>お問い合わせフォームを<wbr>通じて<wbr>ご提供いただいた<wbr>メールアドレス・<wbr>お名前・メッセージ内容</li>
+        <li>サイト利用時の<wbr>アクセスログ<wbr>（IPアドレス、<wbr>ブラウザ種別、<wbr>参照元URL、<wbr>アクセス日時など）</li>
+        <li>Cookie等を<wbr>通じた<wbr>閲覧履歴・<wbr>行動情報</li>
       </ul>
     </section>
 
     <section>
-      <h2>Cookieおよびアクセス解析について</h2>
-      <p>当サイトでは、Google Analytics（Googleアナリティクス）を使用してアクセス状況を分析しています。Google Analyticsはトラフィックデータ収集のためにCookieを使用します。このデータは匿名で収集されており、個人を特定するものではありません。</p>
-      <p>Google AnalyticsのデータはGoogleのプライバシーポリシーに基づき管理されます。詳細は<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Googleのプライバシーポリシー</a>をご確認ください。</p>
-      <p>ブラウザの設定でCookieを無効にすることが出来ますが、その場合サイトの一部機能が利用出来なくなる場合があります。</p>
+      <h2>Cookieおよびアクセス解析に<wbr>ついて</h2>
+      <p>当サイトでは、<wbr>Google Analytics<wbr>（Googleアナリティクス）を<wbr>使用して<wbr>アクセス状況を<wbr>分析しています。<wbr>Google Analyticsは<wbr>トラフィックデータ収集の<wbr>ために<wbr>Cookieを<wbr>使用します。この<wbr>データは<wbr>匿名で<wbr>収集されており、<wbr>個人を<wbr>特定する<wbr>ものではありません。</p>
+      <p>Google Analyticsの<wbr>データは<wbr>Googleの<wbr>プライバシーポリシーに<wbr>基づき管理されます。<wbr>詳細は<a href="https://policies.google.com/privacy" target="_blank" rel="noopener"><wbr>Googleの<wbr>プライバシーポリシー</a>を<wbr>ご確認ください。</p>
+      <p>ブラウザの<wbr>設定で<wbr>Cookieを<wbr>無効にする<wbr>ことができますが、その<wbr>場合サイトの一部<wbr>機能が<wbr>利用できなくなる<wbr>場合が<wbr>あります。</p>
     </section>
 
     <section>
-      <h2>広告配信について（Google AdSenseなど）</h2>
-      <p>当サイトでは、Google AdSenseをはじめとする第三者配信事業者による広告を掲載する場合があります。これらの配信事業者は、ユーザーが当サイトや他のウェブサイトを訪問した際の情報に基づいて、ユーザーの興味に応じた広告（パーソナライズ広告）を表示するために、Cookie（匿名の識別子を含む）を使用することがあります。</p>
-      <p>Googleが広告Cookieを使用することにより、Googleおよびそのパートナーは、ユーザーが当サイトや他のサイトにアクセスした際の情報に基づいて広告を配信します。ユーザーは、<a href="https://adssettings.google.com/" target="_blank" rel="noopener">Googleの広告設定ページ</a>にアクセスすることで、パーソナライズ広告を無効にすることが出来ます。</p>
-      <p>またパーソナライズ広告に使用されるCookie全般について無効化を希望する場合は、<a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener">www.aboutads.info</a>（外部サイト）からオプトアウトの設定が可能です。</p>
+      <h2>広告配信に<wbr>ついて<wbr>（Google AdSenseなど）</h2>
+      <p>当サイトでは、<wbr>Google AdSenseを<wbr>はじめとする<wbr>第三者配信事業者による<wbr>広告を<wbr>掲載する<wbr>場合が<wbr>あります。<wbr>これらの<wbr>配信事業者は、<wbr>ユーザーが<wbr>当サイトや他の<wbr>ウェブサイトを<wbr>訪問した際の<wbr>情報に<wbr>基づいて、<wbr>ユーザーの<wbr>興味に<wbr>応じた広告<wbr>（パーソナライズ広告）を<wbr>表示する<wbr>ために、<wbr>Cookie<wbr>（匿名の識別子を含む）を<wbr>使用する<wbr>ことがあります。</p>
+      <p>Googleが<wbr>広告Cookieを<wbr>使用する<wbr>ことにより、<wbr>Googleおよびその<wbr>パートナーは、<wbr>ユーザーが<wbr>当サイトや他の<wbr>サイトに<wbr>アクセスした際の<wbr>情報に<wbr>基づいて<wbr>広告を<wbr>配信します。<wbr>ユーザーは、<a href="https://adssettings.google.com/" target="_blank" rel="noopener"><wbr>Googleの<wbr>広告設定ページ</a>に<wbr>アクセスする<wbr>ことで、<wbr>パーソナライズ広告を<wbr>無効にする<wbr>ことができます。</p>
+      <p>また<wbr>パーソナライズ広告に<wbr>使用される<wbr>Cookie全般に<wbr>ついて<wbr>無効化を<wbr>希望する<wbr>場合は、<a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener"><wbr>www.aboutads.info</a><wbr>（外部サイト）から<wbr>オプトアウトの<wbr>設定が<wbr>可能です。</p>
     </section>
 
     <section>
-      <h2>個人情報の利用目的</h2>
-      <p>収集した個人情報は、以下の目的で利用します。</p>
+      <h2>個人情報の<wbr>利用目的</h2>
+      <p>収集した<wbr>個人情報は、<wbr>以下の<wbr>目的で<wbr>利用します。</p>
       <ul>
-        <li>お問い合わせへの回答・連絡</li>
-        <li>サービスの改善・統計分析</li>
-        <li>法令に基づく対応</li>
+        <li>お問い合わせへの<wbr>回答・連絡</li>
+        <li>サービスの<wbr>改善・統計分析</li>
+        <li>法令に<wbr>基づく対応</li>
       </ul>
     </section>
 
     <section>
-      <h2>第三者への情報提供</h2>
-      <p>当サイトは、法令に基づく場合を除き、ユーザーの同意なく個人情報を第三者に提供することはありません。</p>
+      <h2>第三者への<wbr>情報提供</h2>
+      <p>当サイトは、<wbr>法令に<wbr>基づく<wbr>場合を<wbr>除き、<wbr>ユーザーの<wbr>同意なく<wbr>個人情報を<wbr>第三者に<wbr>提供する<wbr>ことは<wbr>ありません。</p>
     </section>
 
     <section>
-      <h2>個人情報の管理・開示</h2>
-      <p>ユーザーご本人から個人情報の開示・訂正・削除を求められた場合は、合理的な範囲で対応いたします。<a href="./contact.html">お問い合わせフォーム</a>よりご連絡ください。</p>
+      <h2>個人情報の<wbr>管理・開示</h2>
+      <p>ユーザーご本人から<wbr>個人情報の<wbr>開示・訂正・削除を<wbr>求められた<wbr>場合は、<wbr>合理的な<wbr>範囲で<wbr>対応いたします。<a href="./contact.html"><wbr>お問い合わせフォーム</a>より<wbr>ご連絡ください。</p>
     </section>
 
     <section>
-      <h2>著作権・転載について</h2>
-      <p>当サイトに掲載している文章、レビュー、評価（管理人スコア）、ランキング、デザイン、プログラムなどの著作権は、ANIMEDB管理人に帰属します。</p>
+      <h2>著作権・転載に<wbr>ついて</h2>
+      <p>当サイトに<wbr>掲載している<wbr>文章、<wbr>レビュー、評価<wbr>（管理人スコア）、<wbr>ランキング、<wbr>デザイン、<wbr>プログラムなどの<wbr>著作権は、<wbr>ANIMEDB管理人に<wbr>帰属します。</p>
       <ul>
-        <li>無断での転載・複製・改変・再配布・販売、およびAI学習などへの無断利用を禁止します。</li>
-        <li>引用される場合は、出典として該当ページのURLを明記してください。</li>
-        <li>転載や利用をご希望の場合は、事前に<a href="./contact.html">お問い合わせフォーム</a>よりご連絡ください。</li>
+        <li>無断での<wbr>転載・複製・改変・再配布・販売、<wbr>およびAI学習などへの<wbr>無断利用を<wbr>禁止します。</li>
+        <li>引用される<wbr>場合は、<wbr>出典として<wbr>該当ページの<wbr>URLを<wbr>明記してください。</li>
+        <li>転載や<wbr>利用を<wbr>ご希望の<wbr>場合は、<wbr>事前に<a href="./contact.html"><wbr>お問い合わせフォーム</a>より<wbr>ご連絡ください。</li>
       </ul>
-      <p>作品のタイトル、画像、キャスト・スタッフの名称などに関する権利は、各権利者に帰属します。掲載内容に問題がある場合は、お問い合わせフォームよりご連絡ください。確認のうえ、対応いたします。</p>
+      <p>作品の<wbr>タイトル、<wbr>画像、<wbr>キャスト・スタッフの<wbr>名称などに<wbr>関する<wbr>権利は、<wbr>各権利者に<wbr>帰属します。<wbr>掲載内容に<wbr>問題がある<wbr>場合は、<wbr>お問い合わせフォームより<wbr>ご連絡ください。<wbr>確認の<wbr>うえ、<wbr>対応いたします。</p>
     </section>
 
     <section>
       <h2>プライバシーポリシーの変更</h2>
-      <p>本ポリシーは、必要に応じて予告なく変更される場合があります。変更後のポリシーは当ページに掲載した時点で効力を持つものとします。</p>
+      <p>本ポリシーは、<wbr>必要に<wbr>応じて<wbr>予告なく<wbr>変更される<wbr>場合が<wbr>あります。<wbr>変更後の<wbr>ポリシーは<wbr>当ページに<wbr>掲載した<wbr>時点で<wbr>効力を<wbr>持つものとします。</p>
     </section>
 
     <section>
       <h2>お問い合わせ</h2>
-      <p>本プライバシーポリシーに関するご質問・ご意見は、<a href="./contact.html">お問い合わせフォーム</a>よりお送りください。</p>
+      <p>本プライバシーポリシーに<wbr>関する<wbr>ご質問・ご意見は、<a href="./contact.html"><wbr>お問い合わせフォーム</a>より<wbr>お送りください。</p>
     </section>
   </main>
 
   <footer>
     <nav>
       <a href="./index.html">ホーム</a>
-      <a href="./about.html">開発者の思い</a>
+      <a href="./about.html">開発者の<wbr>思い</a>
       <a href="./privacy.html">プライバシーポリシー</a>
       <a href="./contact.html">お問い合わせ</a>
     </nav>

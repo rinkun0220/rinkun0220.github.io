@@ -104,6 +104,13 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
 .reveal-card .rc-desc { font-size: 0.85rem; color: var(--text-muted); line-height: 1.7; }
 .reveal-card .rc-works { font-size: 0.78rem; color: var(--star-color); margin-top: 8px; display: block; }
 .tool-guide{max-width:880px;margin:40px auto 28px;padding:0 20px}.tool-guide h2{font-size:1.05rem;font-weight:700;color:var(--text-main);margin:0 0 12px}.tool-guide h3{font-size:.92rem;font-weight:700;color:var(--accent);margin:20px 0 8px}.tool-guide p{font-size:.88rem;color:var(--text-muted);line-height:1.95;margin:0 0 12px}.tool-guide a{color:var(--star-color);text-decoration:none}.tool-guide a:hover{text-decoration:underline}
+/* 日本語の改行を自然にする設定（文節単位で改行・行頭禁則・1文字だけの行を避ける） */
+body{line-break:strict;overflow-wrap:break-word}
+@supports (word-break:auto-phrase){body{word-break:auto-phrase}}
+:has(> wbr){word-break:keep-all}
+p,li,dd,td,th{text-wrap:pretty}
+.nb{white-space:nowrap}
+h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-title,.pick-name,.next-article-title{text-wrap:balance}
 </style>
 </head>
 <body>
@@ -123,35 +130,35 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
   <div class="page-head">
     <span class="page-tag">🧭 視聴傾向診断</span>
     <h1 class="page-title">あなたは何派？</h1>
-    <p class="page-desc">脚本派、演出派、キャラ萌え派、考察派、雰囲気派——あなたがアニメのどこに一番惹かれているタイプか、5つの質問で診断します。</p>
+    <p class="page-desc">脚本派、<wbr>演出派、<wbr>キャラ萌え派、<wbr>考察派、<wbr>雰囲気派——あなたが<wbr>アニメの<wbr>どこに一番<wbr>惹かれている<wbr>タイプか、<wbr>5つの<wbr>質問で<wbr>診断します。</p>
   </div>
 
     <div class="reveal-section">
-    <h2 class="reveal-title">診断で分かる5つの視聴者タイプ</h2>
+    <h2 class="reveal-title">診断で<wbr>分かる<wbr>5つの<wbr>視聴者タイプ</h2>
     <div class="reveal-grid">
       <div class="reveal-card">
         <span class="rc-name">✍️ 脚本派</span>
-        <span class="rc-desc">あなたは脚本派です。話の構成、伏線の張り方、台詞の一つ一つに注目するタイプ。「何故この展開になったのか」を理解して初めて満足出来る、物語の設計そのものを楽しむ視聴者です。</span>
+        <span class="rc-desc">あなたは<wbr>脚本派です。話の<wbr>構成、<wbr>伏線の<wbr>張り方、<wbr>台詞の一つ<wbr>一つに<wbr>注目する<wbr>タイプです。<wbr>「なぜこの<wbr>展開に<wbr>なったのか」を<wbr>理解して<wbr>初めて<wbr>満足できる、<wbr>物語の設計その<wbr>ものを<wbr>楽しむ<wbr>視聴者です。</span>
         
       </div>
       <div class="reveal-card">
         <span class="rc-name">🎬 演出派</span>
-        <span class="rc-desc">あなたは演出派です。カット割り、色使い、動きの気持ちよさなど、画面そのものが持つ表現力に強く反応するタイプ。同じ脚本でも「魅せ方」で評価が大きく変わる、映像作品としてのアニメを見ている視聴者です。</span>
+        <span class="rc-desc">あなたは<wbr>演出派です。<wbr>カット割り、<wbr>色使い、<wbr>動きの<wbr>気持ちよさなど、画面その<wbr>ものが持つ<wbr>表現力に強く<wbr>反応する<wbr>タイプです。同じ<wbr>脚本でも<wbr>「魅せ方」で<wbr>評価が<wbr>大きく<wbr>変わる、<wbr>映像作品と<wbr>しての<wbr>アニメを<wbr>見ている<wbr>視聴者です。</span>
         
       </div>
       <div class="reveal-card">
         <span class="rc-name">💖 キャラ萌え派</span>
-        <span class="rc-desc">あなたはキャラ萌え派です。ストーリーの巧拙よりも、キャラクターの魅力・関係性・声優の演技に強く惹かれるタイプ。「このキャラがいるから見続けられる」という原動力を大事にしている視聴者です。</span>
+        <span class="rc-desc">あなたは<wbr>キャラ萌え派です。<wbr>ストーリーの<wbr>巧拙よりも、<wbr>キャラクターの<wbr>魅力・関係性・声優の<wbr>演技に強く<wbr>惹かれる<wbr>タイプです。<wbr>「この<wbr>キャラが<wbr>いるから<wbr>見続けられる」という<wbr>原動力を<wbr>大事に<wbr>している<wbr>視聴者です。</span>
         
       </div>
       <div class="reveal-card">
         <span class="rc-name">🔍 考察派</span>
-        <span class="rc-desc">あなたは考察派です。表面的なストーリーよりも、その奥にあるテーマやメタファー、伏線の意図を読み解くことに喜びを感じるタイプ。見終わった後も頭の中で反芻し続ける視聴者です。</span>
+        <span class="rc-desc">あなたは<wbr>考察派です。<wbr>表面的な<wbr>ストーリーよりも、その奥にある<wbr>テーマや<wbr>メタファー、<wbr>伏線の<wbr>意図を<wbr>読み解く<wbr>ことに<wbr>喜びを<wbr>感じる<wbr>タイプです。<wbr>見終わった後も頭の中で<wbr>反芻し続ける<wbr>視聴者です。</span>
         
       </div>
       <div class="reveal-card">
         <span class="rc-name">🌙 雰囲気派</span>
-        <span class="rc-desc">あなたは雰囲気派です。ストーリーの起伏よりも、作品全体が持つ空気感・音楽・間の取り方に浸ることを大切にするタイプ。「なんとなく好き」という感覚を大事に出来る視聴者です。</span>
+        <span class="rc-desc">あなたは<wbr>雰囲気派です。<wbr>ストーリーの<wbr>起伏よりも、<wbr>作品全体が持つ<wbr>空気感・音楽・間の<wbr>取り方に浸る<wbr>ことを<wbr>大切にする<wbr>タイプです。<wbr>「なんとなく好き」という<wbr>感覚を<wbr>大事に<wbr>できる<wbr>視聴者です。</span>
         
       </div>
     </div>
@@ -161,7 +168,7 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
 
   <div id="startScreen">
     <div class="q-card">
-      <p style="font-size:0.95rem; color:var(--text-muted); margin-bottom:24px; line-height:1.9;">ANIMEDB管理人は「脚本派」を公言しています。<br>あなたはどのタイプでしょうか？</p>
+      <p style="font-size:0.95rem; color:var(--text-muted); margin-bottom:24px; line-height:1.9;">ANIMEDB管理人は<wbr>「脚本派」を<wbr>公言しています。<br>あなたはどの<wbr>タイプでしょうか？</p>
       <button class="start-btn" onclick="startQuiz()">診断をはじめる →</button>
     </div>
   </div>
@@ -170,13 +177,13 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
 
   <div id="resultScreen" class="hidden"></div>
   <section class="tool-guide">
-    <h2>診断の仕組みと5タイプの違い</h2>
+    <h2>診断の<wbr>仕組みと<wbr>5タイプの違い</h2>
     <h3>結果の決まり方</h3>
-    <p>5つの質問の選択肢には、それぞれ脚本派・演出派・キャラ萌え派・考察派・雰囲気派のポイントが割り振られています。回答のたびにポイントが加算され、最後に合計がいちばん高かったタイプが結果として表示されます。上位2タイプの差が1ポイント以内のときは、2つの要素を併せ持つバランス型として、2番目のタイプも結果画面に添えられます。</p>
-    <h3>似ているタイプの違い</h3>
-    <p>脚本派と考察派はどちらも物語に注目しますが、脚本派は構成や伏線の巧さといった「作りの上手さ」を、考察派はその奥にあるテーマや意図の「読み解き」を楽しむタイプです。同じように、演出派は映像表現そのものに反応し、雰囲気派は音楽や間の取り方を含めた作品全体の空気感に浸ります。キャラ萌え派は、ストーリーの巧拙よりもキャラクターや声優の演技が見続ける原動力になります。</p>
-    <h3>どのタイプが優れているということはありません</h3>
-    <p>タイプに優劣はなく、同じ作品でも見るポイントが違えば感想も変わります。結果が気に入らなければ、その日の気分で答えを変えて試してみてください。結果画面では、演出派には<a href="/studio-diagnosis.html">制作会社診断</a>、キャラ萌え派には<a href="/directory.html">声優・スタッフ名鑑</a>、雰囲気派には<a href="/hidden-gems-gacha.html">埋もれた名作ガチャ</a>などをおすすめとして案内しています。ANIMEDB管理人は脚本派を公言しており、その考え方は<a href="/blog/rating-criteria.html">評価基準の記事</a>にまとめています。</p>
+    <p>5つの<wbr>質問の<wbr>選択肢には、<wbr>それぞれ脚本派・演出派・キャラ萌え派・考察派・雰囲気派の<wbr>ポイントが<wbr>割り振られています。<wbr>回答の<wbr>たびに<wbr>ポイントが<wbr>加算され、<wbr>最後に<wbr>合計が一番<wbr>高かった<wbr>タイプが<wbr>結果として<wbr>表示されます。<wbr>上位2タイプの差が<wbr>1ポイント以内の<wbr>ときは、<wbr>2つの<wbr>要素を併せ持つ<wbr>バランス型と<wbr>して、<wbr>2番目の<wbr>タイプも結果<wbr>画面に<wbr>添えられます。</p>
+    <h3>似ている<wbr>タイプの違い</h3>
+    <p>脚本派と<wbr>考察派は<wbr>どちらも<wbr>物語に<wbr>注目しますが、<wbr>脚本派は<wbr>構成や<wbr>伏線の<wbr>巧さと<wbr>いった<wbr>「作りの上手さ」を、<wbr>考察派はその奥にある<wbr>テーマや<wbr>意図の<wbr>「読み解き」を<wbr>楽しむ<wbr>タイプです。<wbr>同じように、<wbr>演出派は<wbr>映像表現その<wbr>ものに<wbr>反応し、<wbr>雰囲気派は<wbr>音楽や間の<wbr>取り方を<wbr>含めた<wbr>作品全体の<wbr>空気感に<wbr>浸ります。<wbr>キャラ萌え派は、<wbr>ストーリーの<wbr>巧拙よりも<wbr>キャラクターや<wbr>声優の<wbr>演技が<wbr>見続ける<wbr>原動力に<wbr>なります。</p>
+    <h3>どの<wbr>タイプが<wbr>優れているという<wbr>ことは<wbr>ありません</h3>
+    <p>タイプに<wbr>優劣は<wbr>なく、同じ<wbr>作品でも見る<wbr>ポイントが<wbr>違えば<wbr>感想も<wbr>変わります。<wbr>結果が<wbr>気に入らなければ、その日の<wbr>気分で<wbr>答えを<wbr>変えて<wbr>試してみてください。結果<wbr>画面では、<wbr>演出派には<a href="/studio-diagnosis.html"><wbr>制作会社診断</a>、<wbr>キャラ萌え派には<a href="/directory.html"><wbr>声優・スタッフ名鑑</a>、<wbr>雰囲気派には<a href="/hidden-gems-gacha.html"><wbr>埋もれた<wbr>名作ガチャ</a>などを<wbr>おすすめとして<wbr>案内しています。<wbr>ANIMEDB管理人は<wbr>脚本派を<wbr>公言しており、その<wbr>考え方は<a href="/blog/rating-criteria.html"><wbr>評価基準の<wbr>記事</a>に<wbr>まとめています。</p>
   </section>
 </main>
 
@@ -248,31 +255,31 @@ const results = {
   script: {
     emoji: "✍️",
     name: "脚本派",
-    desc: "あなたは脚本派です。話の構成、伏線の張り方、台詞の一つひとつに注目するタイプ。「なぜこの展開になったのか」を理解して初めて満足できる、物語の設計そのものを楽しむ視聴者です。",
+    desc: "あなたは脚本派です。話の構成、伏線の張り方、台詞の一つ一つに注目するタイプです。「なぜこの展開になったのか」を理解して初めて満足できる、物語の設計そのものを楽しむ視聴者です。",
     tip: "ANIMEDB管理人も脚本派を公言しています。<a href='/blog/rating-criteria.html' style='color:var(--star-color)'>評価基準の記事</a>で詳しく語っているので、共感できる部分が多いはずです。"
   },
   enshutsu: {
     emoji: "🎬",
     name: "演出派",
-    desc: "あなたは演出派です。カット割り、色使い、動きの気持ちよさなど、画面そのものが持つ表現力に強く反応するタイプ。同じ脚本でも「魅せ方」で評価が大きく変わる、映像作品としてのアニメを見ている視聴者です。",
+    desc: "あなたは演出派です。カット割り、色使い、動きの気持ちよさなど、画面そのものが持つ表現力に強く反応するタイプです。同じ脚本でも「魅せ方」で評価が大きく変わる、映像作品としてのアニメを見ている視聴者です。",
     tip: "演出のこだわりが強い制作会社が気になるなら、<a href='/studio-diagnosis.html' style='color:var(--star-color)'>制作会社診断</a>も試してみてください。"
   },
   chara: {
     emoji: "💖",
     name: "キャラ萌え派",
-    desc: "あなたはキャラ萌え派です。ストーリーの巧拙よりも、キャラクターの魅力・関係性・声優の演技に強く惹かれるタイプ。「このキャラがいるから見続けられる」という原動力を大事にしている視聴者です。",
+    desc: "あなたはキャラ萌え派です。ストーリーの巧拙よりも、キャラクターの魅力・関係性・声優の演技に強く惹かれるタイプです。「このキャラがいるから見続けられる」という原動力を大事にしている視聴者です。",
     tip: "好きなキャラを演じている声優を辿ってみるのもおすすめです。<a href='/directory.html' style='color:var(--star-color)'>声優・スタッフ名鑑</a>から探してみてください。"
   },
   kousatsu: {
     emoji: "🔍",
     name: "考察派",
-    desc: "あなたは考察派です。表面的なストーリーよりも、その奥にあるテーマやメタファー、伏線の意図を読み解くことに喜びを感じるタイプ。見終わった後も頭の中で反芻し続ける視聴者です。",
+    desc: "あなたは考察派です。表面的なストーリーよりも、その奥にあるテーマやメタファー、伏線の意図を読み解くことに喜びを感じるタイプです。見終わった後も頭の中で反芻し続ける視聴者です。",
     tip: "<a href='/blog/worst-anime-honest.html' style='color:var(--star-color)'>虚無枠を扱った記事</a>も、考察派の視点で読むと面白いはずです。"
   },
   funiki: {
     emoji: "🌙",
     name: "雰囲気派",
-    desc: "あなたは雰囲気派です。ストーリーの起伏よりも、作品全体が持つ空気感・音楽・間の取り方に浸ることを大切にするタイプ。「なんとなく好き」という感覚を大事にできる視聴者です。",
+    desc: "あなたは雰囲気派です。ストーリーの起伏よりも、作品全体が持つ空気感・音楽・間の取り方に浸ることを大切にするタイプです。「なんとなく好き」という感覚を大事にできる視聴者です。",
     tip: "<a href='/hidden-gems-gacha.html' style='color:var(--star-color)'>埋もれた名作ガチャ</a>で、雰囲気重視の日常系作品に偶然出会ってみるのもおすすめです。"
   }
 };

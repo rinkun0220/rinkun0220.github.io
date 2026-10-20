@@ -108,6 +108,13 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
 .reveal-rank-table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 0.85rem; }
 .reveal-rank-table th, .reveal-rank-table td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--border-color); color: var(--text-muted); }
 .reveal-rank-table th { color: var(--text-main); }
+/* 日本語の改行を自然にする設定（文節単位で改行・行頭禁則・1文字だけの行を避ける） */
+body{line-break:strict;overflow-wrap:break-word}
+@supports (word-break:auto-phrase){body{word-break:auto-phrase}}
+:has(> wbr){word-break:keep-all}
+p,li,dd,td,th{text-wrap:pretty}
+.nb{white-space:nowrap}
+h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-title,.pick-name,.next-article-title{text-wrap:balance}
 </style>
 </head>
 <body>
@@ -127,79 +134,79 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
   <div class="page-head">
     <span class="page-tag">❓ クイズ企画</span>
     <h1 class="page-title">この人は誰？</h1>
-    <p class="page-desc">代表作のヒントだけで、声優・脚本家・監督・制作会社・アーティストを当てる4択クイズ。ANIMEDBの名鑑データ全47件から出題します。</p>
+    <p class="page-desc">代表作の<wbr>ヒントだけで、<wbr>声優・脚本家・監督・<wbr>制作会社・アーティストを<wbr>当てる<wbr>4択クイズ。<wbr>ANIMEDBの<wbr>名鑑データ全47件から<wbr>出題します。</p>
     <p style="font-size:.78rem;color:var(--text-muted);margin-top:-24px;margin-bottom:32px;">※文中敬称略</p>
   </div>
 
     <div class="reveal-section">
-    <h2 class="reveal-title">出題プール一覧（全47件）</h2>
-    <p class="reveal-note">クイズには声優・脚本家・監督・制作会社・アーティストの中から、代表作のヒントとともに出題されます。出題対象はこちらの一覧の通りです。</p>
+    <h2 class="reveal-title">出題プール一覧<wbr>（全47件）</h2>
+    <p class="reveal-note">クイズには<wbr>声優・脚本家・監督・<wbr>制作会社・アーティストの<wbr>中から、<wbr>代表作の<wbr>ヒントとともに<wbr>出題されます。<wbr>出題対象は<wbr>こちらの<wbr>一覧の<wbr>通りです。</p>
       <div class="reveal-group">
         <div class="reveal-group-title">声優（24件）</div>
         <ul class="reveal-list">
-          <li><b>中村悠一</b> — CLANNAD（岡崎朋也役）</li>
-          <li><b>杉田智和</b> — 電脳冒険記ウェブダイバー（グラディオン役）</li>
-          <li><b>津田健次郎</b> — ID:INVADED イド:インヴェイデッド（鳴瓢秋人役）</li>
-          <li><b>梶裕貴</b> — 進撃の巨人（エレン・イェーガー役）</li>
-          <li><b>松岡禎丞</b> — ソードアート・オンライン（キリト役）</li>
-          <li><b>内田雄馬</b> — シャングリラ・フロンティア（サンラク／陽務楽郎役）</li>
-          <li><b>花澤香菜</b> — PSYCHO-PASS サイコパス（常守朱役）</li>
-          <li><b>早見沙織</b> — 赤髪の白雪姫（白雪役）</li>
-          <li><b>佐倉綾音</b> — 夢喰いメリー（メリー・ナイトメア役）</li>
-          <li><b>種﨑敦美</b> — ドラゴンクエスト ダイの大冒険（ダイ役）</li>
-          <li><b>水瀬いのり</b> — 心が叫びたがってるんだ。（成瀬順役）</li>
-          <li><b>大塚芳忠</b> — 幼女戦記（ハンス・フォン・ゼートゥーア役）</li>
-          <li><b>石田彰</b> — 文豪ストレイドッグス（フョードル・D役）</li>
-          <li><b>三木眞一郎</b> — 機動戦士ガンダム00（ロックオン・ストラトス役）</li>
+          <li><b>中村悠一</b> — CLANNAD<wbr>（岡崎朋也役）</li>
+          <li><b>杉田智和</b> — 電脳冒険記ウェブダイバー<wbr>（グラディオン役）</li>
+          <li><b>津田健次郎</b> — ID:INVADED イド:インヴェイデッド<wbr>（鳴瓢秋人役）</li>
+          <li><b>梶裕貴</b> — 進撃の巨人<wbr>（エレン・イェーガー役）</li>
+          <li><b>松岡禎丞</b> — ソードアート・オンライン<wbr>（キリト役）</li>
+          <li><b>内田雄馬</b> — シャングリラ・フロンティア<wbr>（サンラク／陽務楽郎役）</li>
+          <li><b>花澤香菜</b> — PSYCHO-PASS サイコパス<wbr>（常守朱役）</li>
+          <li><b>早見沙織</b> — 赤髪の<wbr>白雪姫<wbr>（白雪役）</li>
+          <li><b>佐倉綾音</b> — 夢喰い<wbr>メリー<wbr>（メリー・ナイトメア役）</li>
+          <li><b>種﨑敦美</b> — ドラゴンクエスト ダイの<wbr>大冒険<wbr>（ダイ役）</li>
+          <li><b>水瀬いのり</b> — 心が<wbr>叫びたがってるんだ。<wbr>（成瀬順役）</li>
+          <li><b>大塚芳忠</b> — 幼女戦記<wbr>（ハンス・フォン・ゼートゥーア役）</li>
+          <li><b>石田彰</b> — 文豪ストレイドッグス<wbr>（フョードル・D役）</li>
+          <li><b>三木眞一郎</b> — 機動戦士ガンダム00<wbr>（ロックオン・ストラトス役）</li>
           <li><b>井上喜久子</b> — ハッピーシュガーライフ（さとうの叔母役）</li>
-          <li><b>林原めぐみ</b> — 名探偵コナン（灰原哀役）</li>
-          <li><b>沢城みゆき</b> — Fate/Apocrypha（赤のセイバー／モードレッド役）</li>
-          <li><b>悠木碧</b> — 魔法少女まどか☆マギカ（鹿目まどか役）</li>
-          <li><b>羊宮妃那</b> — 僕の心のヤバイやつ（山田杏奈役）</li>
-          <li><b>鈴代紗弓</b> — ぼっち・ざ・ろっく！（伊地知虹夏役）</li>
-          <li><b>夏吉ゆうこ</b> — 超かぐや姫！（かぐや役）</li>
-          <li><b>大塚剛央</b> — 【推しの子】（アクア役）</li>
-          <li><b>関根明良</b> — 天幕のジャードゥーガル（シタラ役）</li>
-          <li><b>千葉翔也</b> — アオのハコ（猪股大喜役）</li>
+          <li><b>林原めぐ<wbr>み</b> — 名探偵コナン<wbr>（灰原哀役）</li>
+          <li><b>沢城みゆき</b> — Fate/Apocrypha<wbr>（赤の<wbr>セイバー／モードレッド役）</li>
+          <li><b>悠木碧</b> — 魔法少女まどか☆<wbr>マギカ<wbr>（鹿目まどか役）</li>
+          <li><b>羊宮妃那</b> — 僕の心の<wbr>ヤバイやつ<wbr>（山田杏奈役）</li>
+          <li><b>鈴代紗弓</b> — ぼっち・ざ・ろっく!<wbr>（伊地知虹夏役）</li>
+          <li><b>夏吉ゆう<wbr>こ</b> — 超かぐや姫!<wbr>（かぐや役）</li>
+          <li><b>大塚剛央</b> — 【推しの子】<wbr>（アクア役）</li>
+          <li><b>関根<wbr>明良</b> — 天幕の<wbr>ジャードゥーガル<wbr>（シタラ役）</li>
+          <li><b>千葉翔也</b> — アオのハコ<wbr>（猪股大喜役）</li>
         </ul>
       </div>      <div class="reveal-group">
         <div class="reveal-group-title">脚本家（5件）</div>
         <ul class="reveal-list">
-          <li><b>吉田玲子</b> — けいおん!（None）</li>
-          <li><b>岡田麿里</b> — あの日見た花の名前を僕達はまだ知らない。（None）</li>
-          <li><b>花田十輝</b> — 宇宙よりも遠い場所（None）</li>
-          <li><b>横手美智子</b> — SHIROBAKO（None）</li>
-          <li><b>あおしまたかし</b> — みつどもえ（None）</li>
+          <li><b>吉田玲子</b> — けい<wbr>おん!<wbr>（None）</li>
+          <li><b>岡田麿里</b> — あの<wbr>日見た花の<wbr>名前を<wbr>僕達はまだ<wbr>知らない。<wbr>（None）</li>
+          <li><b>花田十輝</b> — 宇宙よりも遠い場所<wbr>（None）</li>
+          <li><b>横手美智子</b> — SHIROBAKO<wbr>（None）</li>
+          <li><b>あ<wbr>おしまたかし</b> — みつどもえ<wbr>（None）</li>
         </ul>
       </div>      <div class="reveal-group">
         <div class="reveal-group-title">監督（4件）</div>
         <ul class="reveal-list">
-          <li><b>長井龍雪</b> — あの日見た花の名前を僕達はまだ知らない。（None）</li>
-          <li><b>石原立也</b> — CLANNAD / CLANNAD AFTER STORY（None）</li>
-          <li><b>石立太一</b> — 境界の彼方（None）</li>
-          <li><b>水島努</b> — ガールズ&パンツァー（None）</li>
+          <li><b>長井龍雪</b> — あの<wbr>日見た花の<wbr>名前を<wbr>僕達はまだ<wbr>知らない。<wbr>（None）</li>
+          <li><b>石原立也</b> — CLANNAD / CLANNAD AFTER STORY<wbr>（None）</li>
+          <li><b>石立太一</b> — 境界の彼方<wbr>（None）</li>
+          <li><b>水島努</b> — ガールズ&パンツァー<wbr>（None）</li>
         </ul>
       </div>      <div class="reveal-group">
-        <div class="reveal-group-title">制作会社（6件）</div>
+        <div class="reveal-group-title">制作会社<wbr>（6件）</div>
         <ul class="reveal-list">
           <li><b>P.A.WORKS</b> — SHIROBAKO（None）</li>
-          <li><b>京都アニメーション</b> — 響け!ユーフォニアム（None）</li>
-          <li><b>CloverWorks</b> — 約束のネバーランド（None）</li>
-          <li><b>A-1 Pictures</b> — ソードアート・オンライン（None）</li>
-          <li><b>wit studio</b> — 進撃の巨人（1〜3期）（None）</li>
-          <li><b>MAPPA</b> — 呪術廻戦（None）</li>
+          <li><b>京都アニメーション</b> — 響け!ユーフォニアム<wbr>（None）</li>
+          <li><b>CloverWorks</b> — 約束の<wbr>ネバーランド<wbr>（None）</li>
+          <li><b>A-1 Pictures</b> — ソードアート・オンライン<wbr>（None）</li>
+          <li><b>wit studio</b> — 進撃の巨人<wbr>（1〜3期）<wbr>（None）</li>
+          <li><b>MAPPA</b> — 呪術廻戦<wbr>（None）</li>
         </ul>
       </div>      <div class="reveal-group">
-        <div class="reveal-group-title">アーティスト（8件）</div>
+        <div class="reveal-group-title">アーティスト<wbr>（8件）</div>
         <ul class="reveal-list">
-          <li><b>米津玄師</b> — チェンソーマン（None）</li>
-          <li><b>中島美嘉</b> — 機動戦士ガンダムSEED（None）</li>
-          <li><b>Mrs. GREEN APPLE</b> — 炎炎ノ消防隊（None）</li>
-          <li><b>Official髭男dism</b> — SPY×FAMILY（第1期）（None）</li>
-          <li><b>YOASOBI（幾田りらソロ含む）</b> — 【推しの子】（None）</li>
-          <li><b>Aimer</b> — 鬼滅の刃 遊郭編（None）</li>
-          <li><b>LiSA</b> — 鬼滅の刃（第1期）（None）</li>
-          <li><b>King Gnu</b> — 呪術廻戦 渋谷事変（None）</li>
+          <li><b>米津玄師</b> — チェンソーマン<wbr>（None）</li>
+          <li><b>中島美嘉</b> — 機動戦士ガンダムSEED<wbr>（None）</li>
+          <li><b>Mrs. GREEN APPLE</b> — 炎炎ノ消防隊<wbr>（None）</li>
+          <li><b>Official髭男dism</b> — SPY×FAMILY<wbr>（第1期）<wbr>（None）</li>
+          <li><b>YOASOBI<wbr>（幾田りらソロ含む）</b> — 【推しの子】<wbr>（None）</li>
+          <li><b>Aimer</b> — 鬼滅の<wbr>刃 遊郭編<wbr>（None）</li>
+          <li><b>LiSA</b> — 鬼滅の刃<wbr>（第1期）<wbr>（None）</li>
+          <li><b>King Gnu</b> — 呪術廻戦 渋谷事変<wbr>（None）</li>
         </ul>
       </div>
   </div>
@@ -208,7 +215,7 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
 
   <div id="startScreen">
     <div class="start-card">
-      <p style="font-size:0.92rem; color:var(--text-muted); margin-bottom:22px; line-height:1.9;">全10問。作品タイトルとジャンルだけをヒントに、正体を当ててください。</p>
+      <p style="font-size:0.92rem; color:var(--text-muted); margin-bottom:22px; line-height:1.9;">全10問。<wbr>作品タイトルと<wbr>ジャンルだけを<wbr>ヒントに、<wbr>正体を<wbr>当ててください。</p>
       <button class="start-btn" onclick="startQuiz()">クイズをはじめる →</button>
     </div>
   </div>
@@ -406,7 +413,7 @@ const pool = [
     "name": "鈴代紗弓",
     "id": "suzushiro",
     "category": "声優",
-    "work": "ぼっち・ざ・ろっく！",
+    "work": "ぼっち・ざ・ろっく!",
     "genre": "音楽・コメディ",
     "role": "伊地知虹夏役",
     "link": "nextgen-seiyuu-favorites.html"
@@ -415,7 +422,7 @@ const pool = [
     "name": "夏吉ゆうこ",
     "id": "natsuyoshi",
     "category": "声優",
-    "work": "超かぐや姫！",
+    "work": "超かぐや姫!",
     "genre": "コメディ・ファンタジー",
     "role": "かぐや役",
     "link": "nextgen-seiyuu-favorites.html"

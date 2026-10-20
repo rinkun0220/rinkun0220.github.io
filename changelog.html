@@ -108,6 +108,13 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
 .footer-link { color: var(--text-muted); text-decoration: none; font-size: 0.85rem; }
 .footer-link:hover { color: #fff; }
 .copyright { font-size: 0.8rem; color: rgba(255,255,255,0.3); }
+/* 日本語の改行を自然にする設定（文節単位で改行・行頭禁則・1文字だけの行を避ける） */
+body{line-break:strict;overflow-wrap:break-word}
+@supports (word-break:auto-phrase){body{word-break:auto-phrase}}
+:has(> wbr){word-break:keep-all}
+p,li,dd,td,th{text-wrap:pretty}
+.nb{white-space:nowrap}
+h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-title,.pick-name,.next-article-title{text-wrap:balance}
 </style>
 </head>
 <body>
@@ -126,16 +133,16 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
 <main>
   <div class="page-head">
     <span class="page-tag">🛠️ お知らせ</span>
-    <h1 class="page-title">更新履歴・お知らせ</h1>
-    <p class="page-desc">ANIMEDBの更新内容を随時記録しています。新しい記事の追加や、配信情報の修正、サイトの機能改善などをこちらでお知らせします。</p>
+    <h1 class="page-title">更新履歴・<wbr>お知らせ</h1>
+    <p class="page-desc">ANIMEDBの<wbr>更新内容を随時<wbr>記録しています。<wbr>新しい<wbr>記事の<wbr>追加や、<wbr>配信情報の<wbr>修正、<wbr>サイトの<wbr>機能改善などを<wbr>こちらで<wbr>お知らせします。</p>
   </div>
 
   <div class="pinned-box">
     <div class="pinned-label">📌 固定表示</div>
-    <div class="pinned-title">🥚 隠しミニゲーム「スタジオランナー」が遊べます</div>
+    <div class="pinned-title">🥚 隠しミニゲーム<wbr>「スタジオランナー」が<wbr>遊べます</div>
     <div class="pinned-desc">
-      TOPページ左上の<strong>ロゴを5回タップ（クリック）</strong>すると、隠しミニゲームへのリンクが出現します。制作会社を擬人化したキャラクターで3Dコースを駆け抜けるアクションゲームです。<br>
-      直接遊びたい方は<a href="/pixel-quest.html">こちら → スタジオランナーを今すぐ遊ぶ</a>
+      TOPページ左上の<strong><wbr>ロゴを<wbr>5回タップ<wbr>（クリック）</strong><wbr>すると、<wbr>隠しミニゲームへの<wbr>リンクが<wbr>出現します。<wbr>制作会社を<wbr>擬人化した<wbr>キャラクターで<wbr>3Dコースを<wbr>駆け抜ける<wbr>アクションゲームです。<br>
+      直接遊びたい方は<a href="/pixel-quest.html"><wbr>こちら → スタジオランナーを<wbr>今すぐ遊ぶ</a>
     </div>
   </div>
 
@@ -146,10 +153,10 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
       <div class="log-card">
         <div class="log-tags"><span class="log-tag new">新規</span><span class="log-tag improve">改良</span></div>
         <ul class="log-list">
-          <li>「<a href="/blog/toaru-guide.html">「とある」シリーズの見る順番ガイド</a>」を公開しました。</li>
-          <li>「<a href="/about.html">運営者について</a>」に、管理人のプロフィール、視聴スタイル、記事の作り方と情報の出どころ、今後の予定を追加しました。</li>
-          <li>「<a href="/games.html">診断・ガチャ・ミニゲーム</a>」に、診断とミニゲームを作った理由を追加しました。「<a href="/contact.html">お問い合わせ</a>」に、返信の目安を追加しました。</li>
-          <li>記事の投稿者の表記「ANIMEDB編集部」を、「ANIMEDB管理人」にそろえました。</li>
+          <li>「<a href="/blog/toaru-guide.html">「とある」シリーズの見る<wbr>順番ガイド</a>」を<wbr>公開しました。</li>
+          <li>「<a href="/about.html">運営者について</a>」に、<wbr>管理人の<wbr>プロフィール、<wbr>視聴スタイル、<wbr>記事の<wbr>作り方と<wbr>情報の<wbr>出どころ、<wbr>今後の<wbr>予定を<wbr>追加しました。</li>
+          <li>「<a href="/games.html">診断・ガチャ・ミニゲーム</a>」に、<wbr>診断と<wbr>ミニゲームを<wbr>作った<wbr>理由を<wbr>追加しました。<wbr>「<a href="/contact.html">お問い合わせ</a>」に、<wbr>返信の<wbr>目安を<wbr>追加しました。</li>
+          <li>記事の<wbr>投稿者の表記<wbr>「ANIMEDB編集部」を、<wbr>「ANIMEDB管理人」に<wbr>そろえました。</li>
         </ul>
       </div>
     </div>
@@ -159,10 +166,10 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
       <div class="log-card">
         <div class="log-tags"><span class="log-tag improve">改良</span></div>
         <ul class="log-list">
-          <li>評価基準・恋愛・バトル・異世界・見る前のチェック項目・思い出・コナンの各ガイド、声優・脚本家・監督・制作会社・アーティストの特集、2026年の春・夏・秋のまとめ、隠れた名作の記事に、管理人が実際に見て感じたことを追記しました。</li>
-          <li>「<a href="/blog/director-favorites.html">監督</a>」「<a href="/blog/scriptwriter-favorites.html">脚本家</a>」「<a href="/blog/studio-favorites.html">制作会社</a>」「<a href="/blog/artist-anime-favorites.html">アーティスト</a>」のまとめ記事に、次に読む記事への案内と関連記事の一覧を追加しました。あわせて、タイトルや説明文の「好きな」「管理人が信頼する」を外し、制作会社の目印を「★ 注目の制作会社」に変えました。制作会社まとめの紹介文にあった「特にP.A.WORKSは一番のお気に入り」も削除しました。</li>
-          <li>ブログ一覧と各記事の「読了目安」を、実際の文章の長さに合わせて直しました。ブログ一覧の名探偵コナンの特集は、一覧の最後に移しました。</li>
-          <li>「運営者について」に、「評価の作り方」「更新の方針と訂正について」「サイトを作った理由」を追加しました。</li>
+          <li>評価基準・恋愛・バトル・異世界・見る前の<wbr>チェック項目・<wbr>思い出・コナンの<wbr>各ガイド、<wbr>声優・脚本家・監督・<wbr>制作会社・アーティストの<wbr>特集、<wbr>2026年の<wbr>春・夏・秋の<wbr>まとめ、<wbr>隠れた<wbr>名作の<wbr>記事に、<wbr>管理人が<wbr>実際に見て<wbr>感じた<wbr>ことを<wbr>追記しました。</li>
+          <li>「<a href="/blog/director-favorites.html">監督</a>」<wbr>「<a href="/blog/scriptwriter-favorites.html">脚本家</a>」<wbr>「<a href="/blog/studio-favorites.html">制作会社</a>」<wbr>「<a href="/blog/artist-anime-favorites.html">アーティスト</a>」の<wbr>まとめ記事に、次に<wbr>読む記事への<wbr>案内と関連<wbr>記事の<wbr>一覧を<wbr>追加しました。<wbr>あわせて、<wbr>タイトルや<wbr>説明文の<wbr>「好きな」<wbr>「管理人が信頼する」を<wbr>外し、<wbr>制作会社の<wbr>目印を「★ 注目の制作会社」に<wbr>変えました。<wbr>制作会社まとめの<wbr>紹介文に<wbr>あった<wbr>「特に<wbr>P.A.WORKSは<wbr>一番の<wbr>お気に入り」も<wbr>削除しました。</li>
+          <li>ブログ一覧と<wbr>各記事の<wbr>「読了目安」を、<wbr>実際の<wbr>文章の<wbr>長さに<wbr>合わせて<wbr>直しました。<wbr>ブログ一覧の<wbr>名探偵コナンの<wbr>特集は、<wbr>一覧の<wbr>最後に<wbr>移しました。</li>
+          <li>「運営者について」に、<wbr>「評価の作り方」<wbr>「更新の<wbr>方針と<wbr>訂正に<wbr>ついて」<wbr>「サイトを作った理由」を<wbr>追加しました。</li>
         </ul>
       </div>
     </div>
@@ -172,11 +179,11 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
       <div class="log-card">
         <div class="log-tags"><span class="log-tag fix">修正</span><span class="log-tag improve">改良</span></div>
         <ul class="log-list">
-          <li>「<a href="/blog/worst-anime-honest.html">話題にならないのに、なぜ続編だけは続くのか【管理人の本音】</a>」を、作品のレビューをやめて、1つのテーマに絞った記事に書き直しました。以前のタイトルは「正直しんどかったアニメ5選」でした。異世界もの・追放系・悪役令嬢ものの量産と、続編が続く理由を考えています。「虚無枠」は管理人が作った言葉であることも書きました。</li>
-          <li>「<a href="/blog/unexpected-hits.html">見る前は期待してなかったのに刺さった作品6選</a>」を、5選から6選に変更し、作品を入れ替えました。6作品すべてに、公式サイトのボタンを付けました。記事の枠の色も、他の記事に合わせました。</li>
-          <li>「虚無枠」は管理人の造語であることを、記事と用語集にはっきり書きました。「<a href="/glossary.html">用語集</a>」の説明と、「<a href="/blog/rating-criteria.html">評価基準</a>」の記事の案内文も、新しい記事の内容に合わせて直しました。</li>
-          <li>「<a href="/blog/isekai-top10.html">異世界転生アニメおすすめ10選</a>」の「本好きの下剋上」の説明で、第4期について「放送中です」としていた部分を「放送されました」に直しました。</li>
-          <li>「<a href="/blog/nextgen-seiyuu-favorites.html">主役級声優</a>」まわりの表記を「主役級」にそろえ、「<a href="/blog/legend-seiyuu-favorites.html">変幻自在の演技力を持つ声優</a>」の記事の冒頭の文章が内容と食い違っていた部分を直しました。「声優・スタッフ名鑑」の呼び方も、サイト内でそろえました。</li>
+          <li>「<a href="/blog/worst-anime-honest.html">話題に<wbr>ならないのに、<wbr>なぜ続編だけは<wbr>続くのか<wbr>【管理人の<wbr>本音】</a>」を、<wbr>作品の<wbr>レビューを<wbr>やめて、<wbr>1つの<wbr>テーマに<wbr>絞った<wbr>記事に<wbr>書き直しました。<wbr>以前の<wbr>タイトルは<wbr>「正直しんどかった<wbr>アニメ5選」でした。<wbr>異世界もの・追放系・悪役令嬢ものの<wbr>量産と、<wbr>続編が続く<wbr>理由を<wbr>考えています。<wbr>「虚無枠」は<wbr>管理人が<wbr>作った<wbr>言葉である<wbr>ことも<wbr>書きました。</li>
+          <li>「<a href="/blog/unexpected-hits.html">見る前は<wbr>期待してなかったのに<wbr>刺さった<wbr>作品6選</a>」を、<wbr>5選から<wbr>6選に<wbr>変更し、<wbr>作品を<wbr>入れ替えました。<wbr>6作品全てに、<wbr>公式サイトの<wbr>ボタンを<wbr>付けました。<wbr>記事の枠の<wbr>色も、他の<wbr>記事に<wbr>合わせました。</li>
+          <li>「虚無枠」は<wbr>管理人の<wbr>造語である<wbr>ことを、<wbr>記事と<wbr>用語集にはっきり<wbr>書きました。<wbr>「<a href="/glossary.html">用語集</a>」の<wbr>説明と、<wbr>「<a href="/blog/rating-criteria.html">評価基準</a>」の<wbr>記事の<wbr>案内文も、<wbr>新しい<wbr>記事の<wbr>内容に<wbr>合わせて<wbr>直しました。</li>
+          <li>「<a href="/blog/isekai-top10.html">異世界転生アニメおすすめ10選</a>」の<wbr>「本好きの下剋上」の<wbr>説明で、<wbr>第4期に<wbr>ついて<wbr>「放送中です」と<wbr>していた<wbr>部分を<wbr>「放送されました」に<wbr>直しました。</li>
+          <li>「<a href="/blog/nextgen-seiyuu-favorites.html">主役級声優</a>」まわりの<wbr>表記を<wbr>「主役級」に<wbr>そろえ、<wbr>「<a href="/blog/legend-seiyuu-favorites.html">変幻自在の<wbr>演技力を<wbr>持つ声優</a>」の<wbr>記事の<wbr>冒頭の<wbr>文章が<wbr>内容と食い<wbr>違っていた<wbr>部分を<wbr>直しました。<wbr>「声優・スタッフ名鑑」の<wbr>呼び方も、<wbr>サイト内で<wbr>そろえました。</li>
         </ul>
       </div>
     </div>
@@ -186,10 +193,10 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
       <div class="log-card">
         <div class="log-tags"><span class="log-tag improve">改良</span></div>
         <ul class="log-list">
-          <li>ブログ一覧の声優特集の並び順を、「<a href="/blog/legend-seiyuu-favorites.html">変幻自在の演技力を持つ声優</a>」「<a href="/blog/nextgen-seiyuu-favorites.html">主役級声優</a>」「<a href="/blog/male-seiyuu-favorites.html">男性声優</a>」「<a href="/blog/female-seiyuu-favorites.html">女性声優</a>」の順に変えました。</li>
-          <li>声優特集の4つの記事に、次に読む記事への案内と、関連記事の一覧（声優・スタッフ名鑑へのリンクつき）を追加しました。</li>
-          <li>声優特集の名前を変えました。「名バイプレイヤー声優特集」は「変幻自在の演技力を持つ声優特集」に、「今の主役級声優特集」は「主役級声優特集」にしています。記事のタイトル、声優・スタッフ名鑑、「アニメを見る前にチェックする項目」の記事の説明も、あわせて直しました。</li>
-          <li>男性声優・女性声優の記事のタイトルと説明文から「好きな」「管理人が信頼する」を外しました。ブログ一覧の監督・脚本家・制作会社の説明文からも「管理人が信頼する」を外しています。</li>
+          <li>ブログ一覧の<wbr>声優特集の<wbr>並び順を、<wbr>「<a href="/blog/legend-seiyuu-favorites.html">変幻自在の<wbr>演技力を<wbr>持つ声優</a>」<wbr>「<a href="/blog/nextgen-seiyuu-favorites.html">主役級声優</a>」<wbr>「<a href="/blog/male-seiyuu-favorites.html">男性声優</a>」<wbr>「<a href="/blog/female-seiyuu-favorites.html">女性声優</a>」の順に<wbr>変えました。</li>
+          <li>声優特集の<wbr>4つの<wbr>記事に、次に<wbr>読む記事への<wbr>案内と、関連<wbr>記事の一覧<wbr>（声優・スタッフ名鑑への<wbr>リンクつき）を<wbr>追加しました。</li>
+          <li>声優特集の<wbr>名前を<wbr>変えました。<wbr>「名バイプレイヤー声優特集」は<wbr>「変幻自在の<wbr>演技力を<wbr>持つ声優特集」に、<wbr>「今の主役級声優特集」は<wbr>「主役級声優特集」に<wbr>しています。<wbr>記事の<wbr>タイトル、<wbr>声優・スタッフ名鑑、<wbr>「アニメを見る前に<wbr>チェックする<wbr>項目」の<wbr>記事の<wbr>説明も、<wbr>あわせて<wbr>直しました。</li>
+          <li>男性声優・女性声優の<wbr>記事の<wbr>タイトルと<wbr>説明文から<wbr>「好きな」<wbr>「管理人が信頼する」を<wbr>外しました。<wbr>ブログ一覧の<wbr>監督・脚本家・<wbr>制作会社の<wbr>説明文からも<wbr>「管理人が信頼する」を<wbr>外しています。</li>
         </ul>
       </div>
     </div>
@@ -199,11 +206,11 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
       <div class="log-card">
         <div class="log-tags"><span class="log-tag fix">修正</span><span class="log-tag improve">改良</span></div>
         <ul class="log-list">
-          <li>「<a href="/privacy.html">プライバシーポリシー</a>」の「著作権・転載について」の説明を直しました。アニメの画像などの権利は、それぞれの作品の権利を持つ会社や人のものです。当サイトのものと読めてしまう書き方だったため、直しました（サイトの説明用ファイル「README」「LICENSE」も同じ内容に直しています）。</li>
-          <li>ブログ記事に入っていた、画面には見えない小さな外部の画像（アクセスの計測用）を削除しました。見た目や内容は変わりません。</li>
-          <li>TOPページの「今、注目の作品」のラベルを「注目の作品」に変えました。</li>
-          <li>「とある暗部の少女共棲」のおすすめ文章を追加しました。</li>
-          <li>この更新履歴のラベルを、日本語の表示（修正・改良・新規など）に変えました。</li>
+          <li>「<a href="/privacy.html">プライバシーポリシー</a>」の<wbr>「著作権・転載について」の<wbr>説明を<wbr>直しました。<wbr>アニメの<wbr>画像などの<wbr>権利は、<wbr>それぞれの<wbr>作品の<wbr>権利を持つ<wbr>会社や人の<wbr>ものです。<wbr>当サイトの<wbr>ものと<wbr>読めてしまう<wbr>書き方だった<wbr>ため、<wbr>直しました<wbr>（サイトの<wbr>説明用ファイル<wbr>「README」<wbr>「LICENSE」も同じ<wbr>内容に<wbr>直しています）。</li>
+          <li>ブログ記事に<wbr>入っていた、<wbr>画面には<wbr>見えない<wbr>小さな<wbr>外部の画像<wbr>（アクセスの計測用）を<wbr>削除しました。見た目や<wbr>内容は<wbr>変わりません。</li>
+          <li>TOPページの<wbr>「今、注目の作品」の<wbr>ラベルを<wbr>「注目の作品」に<wbr>変えました。</li>
+          <li>「とある暗部の少女共棲」の<wbr>おすすめ文章を<wbr>追加しました。</li>
+          <li>この<wbr>更新履歴の<wbr>ラベルを、<wbr>日本語の表示<wbr>（修正・改良・新規など）に<wbr>変えました。</li>
         </ul>
       </div>
     </div>
@@ -213,7 +220,7 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
       <div class="log-card">
         <div class="log-tags"><span class="log-tag fix">修正</span></div>
         <ul class="log-list">
-          <li>「<a href="/blog/2026-spring-all.html">2026年春アニメ作品を見た感想まとめ【完全版】</a>」の「来期（夏クール）注目作」にある「幼女戦記 II」のリンク先が誤っていたため、公式サイトに修正しました。あわせて、サイト内の外部リンク（作品・制作会社の公式サイト、公式Xなど）が開けることを一通り確認しました。</li>
+          <li>「<a href="/blog/2026-spring-all.html">2026年春アニメ作品を見た<wbr>感想まとめ【完全版】</a>」の<wbr>「来期<wbr>（夏クール）<wbr>注目作」にある<wbr>「幼女戦記 II」の<wbr>リンク先が<wbr>誤っていた<wbr>ため、<wbr>公式サイトに<wbr>修正しました。<wbr>あわせて、<wbr>サイト内の<wbr>外部リンク<wbr>（作品・<wbr>制作会社の<wbr>公式サイト、<wbr>公式Xなど）が<wbr>開ける<wbr>ことを<wbr>一通り<wbr>確認しました。</li>
         </ul>
       </div>
     </div>
@@ -223,13 +230,13 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
       <div class="log-card">
         <div class="log-tags"><span class="log-tag new">新規</span><span class="log-tag improve">改良</span></div>
         <ul class="log-list">
-          <li>脚本家・監督・声優の特集記事6本（<a href="/blog/scriptwriter-favorites.html">脚本家</a>／<a href="/blog/director-favorites.html">監督</a>／<a href="/blog/female-seiyuu-favorites.html">女性声優</a>／<a href="/blog/male-seiyuu-favorites.html">男性声優</a>／<a href="/blog/legend-seiyuu-favorites.html">名バイプレイヤー声優</a>／<a href="/blog/nextgen-seiyuu-favorites.html">次世代声優</a>）に、公式Xへのリンクを追加しました。公式アカウントを確認できた15名分で、事務所・スタッフ運営の公式アカウントも含みます。本人のものと確認できないアカウントは載せていません。</li>
-          <li>「X（Twitter）」「X（旧Twitter）」と表記していた箇所を、「X」に統一しました（「<a href="/">TOPページ</a>」「<a href="/about.html">開発者の思い</a>」ページ、ブログ「<a href="/blog/rating-criteria.html">S評価とA評価、何が違うのか</a>」、およびこの更新履歴内）。</li>
-          <li>「<a href="/glossary.html">アニメ初心者向け用語集</a>」の冒頭の説明を書き直しました。スマートフォンでは、分からない言葉をコピー（または切り取り）してブラウザのウェブ検索に貼り付ける方法、パソコンでは Ctrl+F（Macは Command+F）でページ内を探す方法を案内しています。</li>
-          <li>「<a href="/blog/autumn2026-recommend.html">2026年秋アニメ おすすめ10選</a>」の作品リンクの色を、サイトの配色になじむ色に変えました。リンク先は変わりません。</li>
-          <li>「<a href="/blog/conan-beginner-guide.html">名探偵コナン初心者ガイド</a>」の見出しと本文の「神回」という表現を、「観るべき回」に統一しました。</li>
-          <li>ブログ記事の一部で、不自然な言い回しや、同じ言葉の繰り返しを直しました。根拠のない断定的な表現も、やわらかい言い方に改めています。</li>
-          <li>サイト全体の本文で、「出来る」「全て」「是非」「一つ」など、漢字で書けるひらがなを漢字表記に統一しました。作品名の表記は変えていません。</li>
+          <li>脚本家・監督・声優の<wbr>特集記事6本<wbr>（<a href="/blog/scriptwriter-favorites.html">脚本家</a>／<a href="/blog/director-favorites.html">監督</a>／<a href="/blog/female-seiyuu-favorites.html">女性声優</a>／<a href="/blog/male-seiyuu-favorites.html">男性声優</a>／<a href="/blog/legend-seiyuu-favorites.html">名バイプレイヤー声優</a>／<a href="/blog/nextgen-seiyuu-favorites.html">次世代声優</a>）に、<wbr>公式Xへの<wbr>リンクを<wbr>追加しました。<wbr>公式アカウントを<wbr>確認できた<wbr>15名分で、<wbr>事務所・スタッフ運営の<wbr>公式アカウントも<wbr>含みます。<wbr>本人の<wbr>ものと<wbr>確認できない<wbr>アカウントは<wbr>載せていません。</li>
+          <li>「X（Twitter）」「X<wbr>（旧Twitter）」と<wbr>表記していた<wbr>箇所を、<wbr>「X」に<wbr>統一しました（「<a href="/">TOPページ</a>」<wbr>「<a href="/about.html">開発者の思い</a>」<wbr>ページ、<wbr>ブログ<wbr>「<a href="/blog/rating-criteria.html">S評価と<wbr>A評価、何が<wbr>違うのか</a>」、<wbr>およびこの<wbr>更新履歴内）。</li>
+          <li>「<a href="/glossary.html">アニメ初心者向け用語集</a>」の<wbr>冒頭の<wbr>説明を<wbr>書き直しました。<wbr>スマートフォンでは、<wbr>分からない<wbr>言葉を<wbr>コピー<wbr>（または切り取り）して<wbr>ブラウザの<wbr>ウェブ検索に<wbr>貼り付ける<wbr>方法、<wbr>パソコンでは Ctrl+F<wbr>（Macは Command+F）で<wbr>ページ内を<wbr>探す方法を<wbr>案内しています。</li>
+          <li>「<a href="/blog/autumn2026-recommend.html">2026年秋アニメ おすすめ10選</a>」の<wbr>作品リンクの<wbr>色を、<wbr>サイトの<wbr>配色に<wbr>なじむ色に<wbr>変えました。<wbr>リンク先は<wbr>変わりません。</li>
+          <li>「<a href="/blog/conan-beginner-guide.html">名探偵コナン初心者ガイド</a>」の<wbr>見出しと<wbr>本文の<wbr>「神回」という<wbr>表現を、<wbr>「観るべき回」に<wbr>統一しました。</li>
+          <li>ブログ記事の<wbr>一部で、<wbr>不自然な<wbr>言い回しや、同じ<wbr>言葉の<wbr>繰り返しを<wbr>直しました。<wbr>根拠のない<wbr>断定的な<wbr>表現も、<wbr>やわらかい<wbr>言い方に<wbr>改めています。</li>
+          <li>サイト全体の<wbr>本文で、<wbr>「できる」<wbr>「全て」<wbr>「ぜひ」<wbr>「一つ」など、<wbr>漢字で<wbr>書ける<wbr>ひらがなを<wbr>漢字表記に<wbr>統一しました。<wbr>作品名の<wbr>表記は<wbr>変えていません。</li>
         </ul>
       </div>
     </div>
@@ -239,9 +246,9 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
       <div class="log-card">
         <div class="log-tags"><span class="log-tag improve">改良</span></div>
         <ul class="log-list">
-          <li>「<a href="/">TOPページ</a>」の「海外で今シーズン注目のアニメ」の注意書きを読みやすくしました。※ごとに行を分け、スマートフォンで折り返しても2行目以降がそろうようにしています。★の点数の説明は次の行に表示します。</li>
-          <li>「<a href="/">TOPページ</a>」の説明文の改行位置を調整しました。「各種動画配信サービスへの繋がりをまとめました。」のあとで改行して、読みやすくしています。パソコンでは「開発者の思い」を別の行に、スマートフォンでは前の文に続けて表示します。</li>
-          <li>「<a href="/">TOPページ</a>」の見出し「ANIMEDB｜今クールの注目アニメをピックアップ。またアニメの入口の幅を増やすためのサイトです。」を、スマートフォンでは「ピックアップ。」のあとで改行して表示するようにしました。パソコンでは今までどおり1行です。</li>
+          <li>「<a href="/">TOPページ</a>」の<wbr>「海外で<wbr>今シーズン注目の<wbr>アニメ」の<wbr>注意書きを<wbr>読みやすくしました。<wbr>※ごとに行を<wbr>分け、<wbr>スマートフォンで<wbr>折り返しても<wbr>2行目以降が<wbr>そろうように<wbr>しています。★の<wbr>点数の<wbr>説明は次の行に<wbr>表示します。</li>
+          <li>「<a href="/">TOPページ</a>」の<wbr>説明文の<wbr>改行位置を<wbr>調整しました。「各<wbr>種動画配信サービスへの<wbr>つながりを<wbr>まとめました。」の<wbr>あとで<wbr>改行して、<wbr>読みやすくしています。<wbr>パソコンでは<wbr>「開発者の思い」を別の<wbr>行に、<wbr>スマートフォンでは前の文に<wbr>続けて<wbr>表示します。</li>
+          <li>「<a href="/">TOPページ</a>」の<wbr>見出し<wbr>「ANIMEDB｜今クールの<wbr>注目アニメを<wbr>ピックアップ。また<wbr>アニメの<wbr>入口の幅を<wbr>増やすための<wbr>サイトです。」を、<wbr>スマートフォンでは<wbr>「ピックアップ。」の<wbr>あとで<wbr>改行して<wbr>表示するようにしました。<wbr>パソコンでは<wbr>今まで<wbr>どおり1行です。</li>
         </ul>
       </div>
     </div>
@@ -251,9 +258,9 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
       <div class="log-card">
         <div class="log-tags"><span class="log-tag fix">修正</span><span class="log-tag improve">改良</span></div>
         <ul class="log-list">
-          <li>「<a href="/">TOPページ</a>」の「海外で今シーズン注目のアニメ」の行が表示されない問題を修正しました。これまで使っていた海外のデータ元（MyAnimeList）に数日間つながらなかったため、データの取得元をAniListに変更しています。★はAniListユーザーの平均評価（10点満点換算）で、作品をクリックするとAniListの作品ページが開きます。</li>
-          <li>「<a href="/">TOPページ</a>」の「海外で今シーズン注目のアニメ」と「国内で注目のアニメ（管理人セレクト）」に、作品の画像・タイトルをクリックしたときの移動先（AniListの作品ページ／公式サイト）の説明を追加しました。あわせて、海外の行では配信サービスのボタンが検索リンクであること、実際に配信されているとは限らないことも明記しています。</li>
-          <li>「<a href="/privacy.html">プライバシーポリシー</a>」に「著作権・転載について」の項目を追加しました。</li>
+          <li>「<a href="/">TOPページ</a>」の<wbr>「海外で<wbr>今シーズン注目の<wbr>アニメ」の行が<wbr>表示されない<wbr>問題を<wbr>修正しました。<wbr>これまで<wbr>使っていた<wbr>海外の<wbr>データ元<wbr>（MyAnimeList）に<wbr>数日間つながらなかった<wbr>ため、<wbr>データの<wbr>取得元を<wbr>AniListに<wbr>変更しています。★は<wbr>AniListユーザーの<wbr>平均評価<wbr>（10点満点換算）で、<wbr>作品を<wbr>クリックすると<wbr>AniListの<wbr>作品ページが<wbr>開きます。</li>
+          <li>「<a href="/">TOPページ</a>」の<wbr>「海外で<wbr>今シーズン注目の<wbr>アニメ」と<wbr>「国内で<wbr>注目の<wbr>アニメ<wbr>（管理人セレクト）」に、<wbr>作品の<wbr>画像・タイトルを<wbr>クリックした<wbr>ときの<wbr>移動先<wbr>（AniListの<wbr>作品ページ／公式サイト）の<wbr>説明を<wbr>追加しました。<wbr>あわせて、<wbr>海外の<wbr>行では<wbr>配信サービスの<wbr>ボタンが<wbr>検索リンクである<wbr>こと、<wbr>実際に<wbr>配信されているとは<wbr>限らない<wbr>ことも<wbr>明記しています。</li>
+          <li>「<a href="/privacy.html">プライバシーポリシー</a>」に<wbr>「著作権・転載について」の<wbr>項目を<wbr>追加しました。</li>
         </ul>
       </div>
     </div>
@@ -263,8 +270,8 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
       <div class="log-card">
         <div class="log-tags"><span class="log-tag improve">改良</span></div>
         <ul class="log-list">
-          <li>「<a href="/">TOPページ</a>」の上部の大きな表示（今、注目の作品）の画像が荒く見える問題を改善しました。作品の画像を大きいサイズに変え、右側にくっきり表示するようにしています。</li>
-          <li>TOPページ上部の大きな表示を5作品から10作品に増やしました。「<a href="/blog/autumn2026-recommend.html">2026年秋アニメ おすすめ10選</a>」と同じ10作品が、管理人スコアの高い順に切り替わります。</li>
+          <li>「<a href="/">TOPページ</a>」の<wbr>上部の<wbr>大きな表示<wbr>（今、注目の作品）の<wbr>画像が荒く<wbr>見える<wbr>問題を<wbr>改善しました。<wbr>作品の<wbr>画像を<wbr>大きい<wbr>サイズに<wbr>変え、<wbr>右側に<wbr>くっきり<wbr>表示するように<wbr>しています。</li>
+          <li>TOPページ上部の<wbr>大きな<wbr>表示を<wbr>5作品から<wbr>10作品に<wbr>増やしました。<wbr>「<a href="/blog/autumn2026-recommend.html">2026年秋アニメ おすすめ10選</a>」と同じ<wbr>10作品が、<wbr>管理人スコアの高い順に切り<wbr>替わります。</li>
         </ul>
       </div>
     </div>
@@ -274,8 +281,8 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
       <div class="log-card">
         <div class="log-tags"><span class="log-tag fix">修正</span><span class="log-tag improve">改良</span></div>
         <ul class="log-list">
-          <li>「<a href="/">TOPページ</a>」の上部の大きな表示（今、注目の作品）が、なかなか表示されない・画像が出ない場合がある不具合を修正しました。「国内で注目のアニメ（管理人セレクト）」の上位5作品を表示する方式に変更し、ページを開いてすぐ表示されるようにしています。あわせて、表示の点数を「管理人スコア」に統一しました。</li>
-          <li>TOPページの「海外で今シーズン注目のアニメ」は、データ提供元（MyAnimeList）の応答が遅い場合に、表示までに時間がかかったり、正しくない内容が出たりしていました。応答があったときだけ表示するように変更し、通信の待ち時間も短くしています。</li>
+          <li>「<a href="/">TOPページ</a>」の<wbr>上部の<wbr>大きな表示<wbr>（今、注目の作品）が、<wbr>なかなか<wbr>表示されない・画像が<wbr>出ない<wbr>場合がある<wbr>不具合を<wbr>修正しました。<wbr>「国内で<wbr>注目の<wbr>アニメ<wbr>（管理人セレクト）」の<wbr>上位5作品を<wbr>表示する<wbr>方式に<wbr>変更し、<wbr>ページを<wbr>開いてすぐ<wbr>表示されるように<wbr>しています。<wbr>あわせて、<wbr>表示の<wbr>点数を<wbr>「管理人スコア」に<wbr>統一しました。</li>
+          <li>TOPページの<wbr>「海外で<wbr>今シーズン注目の<wbr>アニメ」は、<wbr>データ提供元<wbr>（MyAnimeList）の<wbr>応答が遅い<wbr>場合に、<wbr>表示までに<wbr>時間が<wbr>かかったり、<wbr>正しくない<wbr>内容が<wbr>出たりしていました。<wbr>応答が<wbr>あった<wbr>ときだけ<wbr>表示するように<wbr>変更し、<wbr>通信の<wbr>待ち時間も<wbr>短くしています。</li>
         </ul>
       </div>
     </div>
@@ -285,17 +292,17 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
       <div class="log-card">
         <div class="log-tags"><span class="log-tag fix">修正</span><span class="log-tag improve">改良</span></div>
         <ul class="log-list">
-          <li>「<a href="/blog/conan-romance-guide.html">名探偵コナン恋愛名場面ガイド</a>」の服部平次×遠山和葉の項目を、10月10日の最終回の放送を受けて更新しました。「茜色の千秋楽」が3週にわたってアニメ化され、告白成立までが描かれたことを反映しています。</li>
-          <li>名探偵コナンの4記事（<a href="/blog/conan-beginner-guide.html">初心者ガイド</a>・<a href="/blog/conan-advanced-guide.html">上級ガイド</a>・<a href="/blog/conan-romance-guide.html">恋愛名場面ガイド</a>・<a href="/blog/conan-genetics-guide.html">血筋ガイド</a>）の末尾に「関連ガイド」欄を追加し、記事どうしを行き来しやすくしました。</li>
-          <li>バトルアニメ・異世界・恋愛の3つのランキング記事（<a href="/blog/battle-anime-top10.html">バトル</a>・<a href="/blog/isekai-top10.html">異世界</a>・<a href="/blog/romance-top10.html">恋愛</a>）を、★の点数が高い順に並べ替えました。</li>
-          <li>「<a href="/blog/rating-criteria.html">S評価とA評価、何が違うのか</a>」へのリンクを追加しました。2026年春・夏の感想まとめ、2026年秋アニメおすすめ10選、各ランキング記事、TOPページに「★の点数は管理人スコア（10点満点）、S・A・B・Cの基準はこちら」という案内を入れています。あわせて、春・夏の感想まとめの目次から「（必見）」などの括弧書きを削除しました。</li>
-          <li>「<a href="/games.html">診断・ガチャ一覧</a>」の「埋もれた名作ガチャ」のカードを、ほかのカードと同じ白いバッジ・標準の配色にそろえました。また、一番下の「気になるウワサ」のカードを「スタジオランナー」へ直接遊びに行けるカードに変更し、目立つ赤系の配色にしました。</li>
-          <li>診断ページ4つ（<a href="/anime-profile.html">アニメ履歴書</a>・<a href="/rating-simulator.html">このアニメ、何点つける？</a>・<a href="/viewer-type.html">あなたは何派？</a>・<a href="/scriptwriter-diagnosis.html">脚本家診断</a>）に、診断の仕組み・結果の見方・使い方の説明を追加しました。</li>
-          <li>ミニゲーム「<a href="/pixel-quest.html">スタジオランナー</a>」のPC操作を改善しました。マウスでレーンが切り替わる位置を、画面の中央を基準にした固定の位置に変え、レーンの境目の少し手前で動き出すようにしました。クリックした位置のレーンへすぐ移動でき、レーンの移動も速くしています。</li>
-          <li>スタジオランナーのスマホ操作を改善しました。左右のスワイプを、指を離したあとではなく、指が動いた時点で反応するようにしています。</li>
-          <li>スタジオランナーに、遊び方・キャラクター・操作方法の説明を追加しました。隠しゲームとしての扱いをやめ、通常のミニゲームのページとして、検索にも表示されるようにしています。</li>
-          <li>スタジオランナーに「ゴール」を追加しました。スコアが1200点に届くとクリアとなり、1回のプレイがおよそ2分以内で終わります。ゴールまでの進み具合を示すバーとゴールゲートを表示し、クリアタイムとベストタイムも確認できます。</li>
-          <li>「<a href="/contact.html">お問い合わせ</a>」ページに、問い合わせ前の案内（掲載情報の誤り・不具合・リクエスト・評価について）、返信について、運営者情報を追加しました。「<a href="/about.html">開発者の思い</a>」ページにも、サイトでできること、評価について、情報の更新と訂正についての説明を追加し、各ページのフッターから行き来できるようにしています。</li>
+          <li>「<a href="/blog/conan-romance-guide.html">名探偵コナン恋愛名場面ガイド</a>」の<wbr>服部平次×遠山和葉の<wbr>項目を、<wbr>10月10日の<wbr>最終回の<wbr>放送を<wbr>受けて<wbr>更新しました。<wbr>「茜色の千秋楽」が<wbr>3週に<wbr>わたって<wbr>アニメ化され、<wbr>告白成立までが<wbr>描かれた<wbr>ことを<wbr>反映しています。</li>
+          <li>名探偵コナンの<wbr>4記事<wbr>（<a href="/blog/conan-beginner-guide.html">初心者ガイド</a>・<a href="/blog/conan-advanced-guide.html">上級ガイド</a>・<a href="/blog/conan-romance-guide.html">恋愛名場面ガイド</a>・<a href="/blog/conan-genetics-guide.html">血筋ガイド</a>）の<wbr>末尾に<wbr>「関連ガイド」欄を<wbr>追加し、<wbr>記事どうしを<wbr>行き来しやすくしました。</li>
+          <li>バトルアニメ・異世界・恋愛の<wbr>3つの<wbr>ランキング記事<wbr>（<a href="/blog/battle-anime-top10.html">バトル</a>・<a href="/blog/isekai-top10.html">異世界</a>・<a href="/blog/romance-top10.html">恋愛</a>）を、★の<wbr>点数が<wbr>高い順に<wbr>並べ替えました。</li>
+          <li>「<a href="/blog/rating-criteria.html">S評価と<wbr>A評価、何が<wbr>違うのか</a>」への<wbr>リンクを<wbr>追加しました。<wbr>2026年春・夏の<wbr>感想まとめ、<wbr>2026年秋アニメおすすめ10選、<wbr>各ランキング記事、<wbr>TOPページに<wbr>「★の<wbr>点数は<wbr>管理人スコア<wbr>（10点満点）、<wbr>S・A・B・Cの<wbr>基準は<wbr>こちら」という<wbr>案内を<wbr>入れています。<wbr>あわせて、<wbr>春・夏の<wbr>感想まとめの<wbr>目次から<wbr>「（必見）」などの<wbr>括弧書きを<wbr>削除しました。</li>
+          <li>「<a href="/games.html">診断・ガチャ一覧</a>」の<wbr>「埋もれた名作ガチャ」の<wbr>カードを、<wbr>ほかの<wbr>カードと同じ白い<wbr>バッジ・標準の<wbr>配色に<wbr>そろえました。<wbr>また、<wbr>一番下の<wbr>「気になるウワサ」の<wbr>カードを<wbr>「スタジオランナー」へ<wbr>直接遊びに<wbr>行ける<wbr>カードに<wbr>変更し、<wbr>目立つ赤系の<wbr>配色に<wbr>しました。</li>
+          <li>診断ページ4つ<wbr>（<a href="/anime-profile.html">アニメ履歴書</a>・<a href="/rating-simulator.html">この<wbr>アニメ、<wbr>何点つける？</a>・<a href="/viewer-type.html">あなたは<wbr>何派？</a>・<a href="/scriptwriter-diagnosis.html">脚本家診断</a>）に、<wbr>診断の<wbr>仕組み・結果の<wbr>見方・<wbr>使い方の<wbr>説明を<wbr>追加しました。</li>
+          <li>ミニゲーム<wbr>「<a href="/pixel-quest.html">スタジオランナー</a>」の<wbr>PC操作を<wbr>改善しました。<wbr>マウスで<wbr>レーンが切り<wbr>替わる<wbr>位置を、<wbr>画面の<wbr>中央を<wbr>基準にした<wbr>固定の<wbr>位置に<wbr>変え、<wbr>レーンの<wbr>境目の少し<wbr>手前で<wbr>動き出すようにしました。<wbr>クリックした<wbr>位置の<wbr>レーンへすぐ<wbr>移動でき、<wbr>レーンの<wbr>移動も<wbr>速くしています。</li>
+          <li>スタジオランナーの<wbr>スマホ操作を<wbr>改善しました。<wbr>左右の<wbr>スワイプを、指を<wbr>離した<wbr>あとではなく、指が<wbr>動いた<wbr>時点で<wbr>反応するように<wbr>しています。</li>
+          <li>スタジオランナーに、<wbr>遊び方・キャラクター・<wbr>操作方法の<wbr>説明を<wbr>追加しました。<wbr>隠しゲームと<wbr>しての<wbr>扱いを<wbr>やめ、<wbr>通常の<wbr>ミニゲームの<wbr>ページと<wbr>して、<wbr>検索にも<wbr>表示されるように<wbr>しています。</li>
+          <li>スタジオランナーに<wbr>「ゴール」を<wbr>追加しました。<wbr>スコアが<wbr>1200点に<wbr>届くと<wbr>クリアと<wbr>なり、<wbr>1回の<wbr>プレイが<wbr>およそ2分以内で<wbr>終わります。<wbr>ゴールまでの<wbr>進み具合を示す<wbr>バーと<wbr>ゴールゲートを<wbr>表示し、<wbr>クリアタイムと<wbr>ベストタイムも<wbr>確認できます。</li>
+          <li>「<a href="/contact.html">お問い合わせ</a>」<wbr>ページに、<wbr>問い合わせ前の案内<wbr>（掲載情報の<wbr>誤り・<wbr>不具合・リクエスト・評価に<wbr>ついて）、<wbr>返信に<wbr>ついて、<wbr>運営者情報を<wbr>追加しました。<wbr>「<a href="/about.html">開発者の思い</a>」<wbr>ページにも、<wbr>サイトで<wbr>できる<wbr>こと、<wbr>評価に<wbr>ついて、<wbr>情報の<wbr>更新と<wbr>訂正に<wbr>ついての<wbr>説明を<wbr>追加し、<wbr>各ページの<wbr>フッターから<wbr>行き来できるように<wbr>しています。</li>
         </ul>
       </div>
     </div>
@@ -305,14 +312,14 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
       <div class="log-card">
         <div class="log-tags"><span class="log-tag new">新規</span><span class="log-tag fix">修正</span><span class="log-tag improve">改良</span></div>
         <ul class="log-list">
-          <li>2026年10月7日に放送が始まった「世界最強の魔女、始めました」を、TOPページ「国内で注目のアニメ（管理人セレクト）」と「<a href="/blog/autumn2026-recommend.html">2026年秋アニメ おすすめ10選</a>」に追加しました。管理人スコアは8.0点で、9位です。</li>
-          <li>「FX戦士くるみちゃん」の管理人スコアを8.2点から8.0点に変更し、10位になりました。</li>
-          <li>TOPページの秋アニメのバナー、ブログ一覧の記事カード、記事内の表記を「10選」に更新しました。あわせて読了目安を8分から9分に変更しています。</li>
-          <li>「<a href="/blog/memories-anime.html">管理人が思い出に残るアニメ</a>」に「DEATH NOTE」を追加し、5選から6選に拡充しました。</li>
-          <li>「<a href="/blog/nextgen-seiyuu-favorites.html">今の主役級を担う声優まとめ</a>」に井上ほの花さんを追加し、10人から11人に拡充しました。代表作として「アン・シャーリー」「薫る花は凛と咲く」「凶乱令嬢ニア・リストン」を紹介しています。</li>
-          <li>隠しミニゲーム「スタジオランナー」のPC操作を改善しました。マウスカーソルを左右に動かすとキャラクターが横位置についてくる方式に変更し、クリックでジャンプできます。左右移動の反応も速くしています。</li>
-          <li>スタジオランナーで、リフレッシュレートの高いモニター（120Hz・144Hzなど）で遊ぶとゲームの進行が速くなってしまう問題を修正しました。1秒間に60回の一定の間隔で処理するようにしています。</li>
-          <li>10月7日・8日の更新履歴の記述を、現在の「10選」と順位（FX戦士くるみちゃんが10位）に合わせて訂正しました。</li>
+          <li>2026年10月7日に<wbr>放送が<wbr>始まった<wbr>「世界最強の<wbr>魔女、<wbr>始めました」を、<wbr>TOPページ<wbr>「国内で<wbr>注目の<wbr>アニメ<wbr>（管理人セレクト）」と<wbr>「<a href="/blog/autumn2026-recommend.html">2026年秋アニメ おすすめ10選</a>」に<wbr>追加しました。<wbr>管理人スコアは<wbr>8.0点で、<wbr>9位です。</li>
+          <li>「FX戦士くるみちゃん」の<wbr>管理人スコアを<wbr>8.2点から<wbr>8.0点に<wbr>変更し、<wbr>10位に<wbr>なりました。</li>
+          <li>TOPページの<wbr>秋アニメの<wbr>バナー、<wbr>ブログ一覧の<wbr>記事カード、<wbr>記事内の<wbr>表記を<wbr>「10選」に<wbr>更新しました。<wbr>あわせて<wbr>読了目安を<wbr>8分から<wbr>9分に<wbr>変更しています。</li>
+          <li>「<a href="/blog/memories-anime.html">管理人が<wbr>思い出に残る<wbr>アニメ</a>」に<wbr>「DEATH NOTE」を<wbr>追加し、<wbr>5選から<wbr>6選に<wbr>拡充しました。</li>
+          <li>「<a href="/blog/nextgen-seiyuu-favorites.html">今の<wbr>主役級を担う<wbr>声優まとめ</a>」に<wbr>井上ほの<wbr>花さんを<wbr>追加し、<wbr>10人から<wbr>11人に<wbr>拡充しました。<wbr>代表作として<wbr>「アン・シャーリー」<wbr>「薫る花は凛と咲く」<wbr>「凶乱令嬢ニア・リストン」を<wbr>紹介しています。</li>
+          <li>隠しミニゲーム<wbr>「スタジオランナー」の<wbr>PC操作を<wbr>改善しました。<wbr>マウスカーソルを<wbr>左右に<wbr>動かすと<wbr>キャラクターが<wbr>横位置に<wbr>ついてくる<wbr>方式に<wbr>変更し、<wbr>クリックで<wbr>ジャンプできます。左右<wbr>移動の<wbr>反応も<wbr>速くしています。</li>
+          <li>スタジオランナーで、<wbr>リフレッシュレートの高い<wbr>モニター<wbr>（120Hz・144Hzなど）で<wbr>遊ぶと<wbr>ゲームの<wbr>進行が<wbr>速くなってしまう<wbr>問題を<wbr>修正しました。<wbr>1秒間に<wbr>60回の<wbr>一定の<wbr>間隔で<wbr>処理するように<wbr>しています。</li>
+          <li>10月7日・<wbr>8日の<wbr>更新履歴の<wbr>記述を、<wbr>現在の<wbr>「10選」と順位<wbr>（FX戦士くる<wbr>みちゃんが<wbr>10位）に<wbr>合わせて<wbr>訂正しました。</li>
         </ul>
       </div>
     </div>
@@ -322,10 +329,10 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
       <div class="log-card">
         <div class="log-tags"><span class="log-tag fix">修正</span><span class="log-tag improve">改良</span></div>
         <ul class="log-list">
-          <li>「アン・シャーリー」と「#ゾンビさがしてます」の管理人スコアを、どちらも8.4点に変更しました。</li>
-          <li>「追放されたチート付与魔術師は気ままなセカンドライフを謳歌する。」の管理人スコアを8.9点に変更しました。</li>
-          <li>スコアの変更にあわせて、TOPページ「国内で注目のアニメ（管理人セレクト）」と「<a href="/blog/autumn2026-recommend.html">2026年秋アニメ おすすめ10選</a>」の並びを、管理人スコアの高い順にそろえました。現在の順位は、薬屋のひとりごと 第3期、氷の城壁 第2期、アオのハコ Season2、追放されたチート付与魔術師、らんま1/2 第3期、とある暗部の少女共棲、アン・シャーリー、#ゾンビさがしてます、世界最強の魔女、始めました、FX戦士くるみちゃんです。</li>
-          <li>10月7日の更新履歴の内容に、現在の順位と合わない記述があったため訂正しました。FX戦士くるみちゃんの順位を10位に、「#ゾンビさがしてます」にスコアが付いたため、「最後に置いている」という記述を削除しています。</li>
+          <li>「アン・シャーリー」と<wbr>「#ゾンビさがしてます」の<wbr>管理人スコアを、<wbr>どちらも<wbr>8.4点に<wbr>変更しました。</li>
+          <li>「追放された<wbr>チート付与魔術師は<wbr>気ままな<wbr>セカンドライフを<wbr>謳歌する。」の<wbr>管理人スコアを<wbr>8.9点に<wbr>変更しました。</li>
+          <li>スコアの<wbr>変さらに<wbr>あわせて、<wbr>TOPページ<wbr>「国内で<wbr>注目の<wbr>アニメ<wbr>（管理人セレクト）」と<wbr>「<a href="/blog/autumn2026-recommend.html">2026年秋アニメ おすすめ10選</a>」の<wbr>並びを、<wbr>管理人スコアの高い順に<wbr>そろえました。<wbr>現在の<wbr>順位は、<wbr>薬屋の<wbr>ひとりごと 第3期、氷の<wbr>城壁 第2期、<wbr>アオの<wbr>ハコ Season2、<wbr>追放された<wbr>チート付与魔術師、<wbr>らんま1/2 第3期、とある<wbr>暗部の<wbr>少女共棲、<wbr>アン・シャーリー、<wbr>#ゾンビさが<wbr>してます、<wbr>世界最強の<wbr>魔女、<wbr>始めました、<wbr>FX戦士くる<wbr>みちゃんです。</li>
+          <li>10月7日の<wbr>更新履歴の<wbr>内容に、<wbr>現在の<wbr>順位と<wbr>合わない<wbr>記述が<wbr>あった<wbr>ため訂正しました。<wbr>FX戦士くる<wbr>みちゃんの<wbr>順位を<wbr>10位に、<wbr>「#ゾンビさがしてます」に<wbr>スコアが<wbr>付いた<wbr>ため、<wbr>「最後に置いている」という<wbr>記述を<wbr>削除しています。</li>
         </ul>
       </div>
     </div>
@@ -335,12 +342,12 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
       <div class="log-card">
         <div class="log-tags"><span class="log-tag new">新規</span><span class="log-tag improve">改良</span></div>
         <ul class="log-list">
-          <li>「<a href="/blog/autumn2026-recommend.html">2026年秋アニメ おすすめ9選</a>」に、「追放されたチート付与魔術師は気ままなセカンドライフを謳歌する。」「アン・シャーリー」「#ゾンビさがしてます」の3作品を追加し、6選から9選に拡充しました。</li>
-          <li>作品の追加にあわせて、記事内の作品は管理人スコアの高い順に並べています。FX戦士くるみちゃんは6位から10位になりました。</li>
-          <li>TOPページの秋アニメのバナーと、ブログ一覧の記事カードの表記を「9選」に更新しました。あわせて読了目安を6分から8分に変更しています。</li>
-          <li>TOPページ「国内で注目のアニメ（管理人セレクト）」に、「アン・シャーリー」を追加しました。2025年春にNHK Eテレで放送された作品で、2026年秋はフジテレビでの再放送のため、シーズン表記は「2025 春（再放送）」としています。</li>
-          <li>同欄の作品を、管理人スコアの高い順（左から）に並べ替えました。また、「凶乱令嬢ニア・リストン」を同欄から外しました。</li>
-          <li>TOPページの秋アニメのバナー下にあった4枚（「2025年 隠れた名作」「制作会社診断」「埋もれた名作ガチャ」「あなたは何派？」）を、<a href="/blog/">ブログ</a>・<a href="/glossary.html">用語集</a>・<a href="/directory.html">名鑑</a>・<a href="/games.html">診断・ガチャ一覧</a>へのバナー4枚に差し替えました。各ページへ移動しやすくするためです。診断・ガチャは「診断・ガチャ一覧」から、「2025年 隠れた名作」の記事はブログ一覧から、引き続き開けます。</li>
+          <li>「<a href="/blog/autumn2026-recommend.html">2026年秋アニメ おすすめ9選</a>」に、<wbr>「追放された<wbr>チート付与魔術師は<wbr>気ままな<wbr>セカンドライフを<wbr>謳歌する。」<wbr>「アン・シャーリー」<wbr>「#ゾンビさがしてます」の<wbr>3作品を<wbr>追加し、<wbr>6選から<wbr>9選に<wbr>拡充しました。</li>
+          <li>作品の<wbr>追加に<wbr>あわせて、<wbr>記事内の<wbr>作品は<wbr>管理人スコアの高い順に<wbr>並べています。<wbr>FX戦士くる<wbr>みちゃんは<wbr>6位から<wbr>10位に<wbr>なりました。</li>
+          <li>TOPページの<wbr>秋アニメの<wbr>バナーと、<wbr>ブログ一覧の<wbr>記事カードの<wbr>表記を<wbr>「9選」に<wbr>更新しました。<wbr>あわせて<wbr>読了目安を<wbr>6分から<wbr>8分に<wbr>変更しています。</li>
+          <li>TOPページ<wbr>「国内で<wbr>注目の<wbr>アニメ<wbr>（管理人セレクト）」に、<wbr>「アン・シャーリー」を<wbr>追加しました。<wbr>2025年春に<wbr>NHK Eテレで<wbr>放送された<wbr>作品で、<wbr>2026年秋は<wbr>フジテレビでの<wbr>再放送の<wbr>ため、<wbr>シーズン表記は<wbr>「2025 春<wbr>（再放送）」と<wbr>しています。</li>
+          <li>同欄の<wbr>作品を、<wbr>管理人スコアの高い順<wbr>（左から）に<wbr>並べ替えました。<wbr>また、<wbr>「凶乱令嬢ニア・リストン」を<wbr>同欄から<wbr>外しました。</li>
+          <li>TOPページの<wbr>秋アニメの<wbr>バナー下に<wbr>あった4枚（「2025年 隠れた<wbr>名作」<wbr>「制作会社診断」<wbr>「埋もれた名作ガチャ」<wbr>「あなたは何派？」）を、<a href="/blog/"><wbr>ブログ</a>・<a href="/glossary.html">用語集</a>・<a href="/directory.html">名鑑</a>・<a href="/games.html">診断・ガチャ一覧</a>への<wbr>バナー4枚に<wbr>差し替えました。<wbr>各ページへ<wbr>移動しやすくする<wbr>ためです。<wbr>診断・ガチャは<wbr>「診断・ガチャ一覧」から、<wbr>「2025年 隠れた<wbr>名作」の<wbr>記事は<wbr>ブログ一覧から、<wbr>引き続き開けます。</li>
         </ul>
       </div>
     </div>
@@ -350,16 +357,16 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
       <div class="log-card">
         <div class="log-tags"><span class="log-tag new">新規</span><span class="log-tag fix">修正</span><span class="log-tag improve">改良</span></div>
         <ul class="log-list">
-          <li>名探偵コナン初心者ガイドの「序盤の神回ピックアップ」で、第5話「新幹線大爆破事件」を、腕時計型麻酔銃が初めて登場する第6話「バレンタイン殺人事件」に差し替えました。第5話はアニメ版では黒ずくめの2人組がジンとウォッカ本人ではなく別人だったため、紹介から外しています。</li>
-          <li>同ガイドの第128話「黒の組織10億円強奪事件」について、「宮野明美が最初で最後に登場する回」という記述を、アニメ放送初期にも一度登場しており、この回で原作に合わせてあらためて描かれたという内容に訂正しました。</li>
-          <li>「序盤の神回ピックアップ」の冒頭に、「原作漫画とは差異があります」という注意書きを追加しました。放送初期のアニメは原作と展開や登場人物の出番が異なる回があるため、見比べたときに混乱しないようにしています。</li>
-          <li>「映画から入るならこの6本」に、6本目として「名探偵コナン 100万ドルの五稜星」を追加しました（紹介は結末に触れない内容です）。あわせて、見出しや本文の本数の表記を5本から6本に変更しました。</li>
-          <li>劇場版が2026年8月末で各動画配信サービスでの配信を終了したため、映画カードの配信バッジを外し、その旨の注記を追加しました。</li>
-          <li>ブログ一覧の名探偵コナン初心者ガイドのカードの紹介文を、「映画5選つき」から「映画6選つき」に修正しました。</li>
-          <li>初心者ガイドの第1話の紹介から「江戸川コナンを名乗る」という記述を外しました。アニメでは江戸川コナンの名前が決まるのは第2話のため、第2話の紹介に、原作漫画では第1話（FILE.1）に含まれる場面であることを補足しています。</li>
-          <li>同ガイドの第3話の紹介を、蝶ネクタイ型変声機が初登場し「眠りの小五郎」のスタイルが初めて見られる回であること、腕時計型麻酔銃はアニメでは第6話から登場することが伝わる書き方に修正しました。</li>
-          <li>名探偵の血筋ガイド（conan-genetics-guide）に「おまけ：工藤家と黒羽家のつながり」を追加し、工藤優作と黒羽盗一が双子の兄弟であること、新一と快斗がいとこ同士であることを掲載しました（劇場版「100万ドルの五稜星」のネタバレを含む旨の注意書きつき）。</li>
-          <li>2026年夏アニメ作品を見た感想まとめ：S評価の同スコア（9.0）の2作品について、作品カードの並びを全作品評価まとめ表と同じ順（ぐらんぶる Season 3、ヤニねこ）にそろえました。</li>
+          <li>名探偵コナン初心者ガイドの<wbr>「序盤の<wbr>神回ピックアップ」で、<wbr>第5話<wbr>「新幹線大爆破事件」を、<wbr>腕時計型麻酔銃が<wbr>初めて<wbr>登場する<wbr>第6話<wbr>「バレンタイン殺人事件」に<wbr>差し替えました。<wbr>第5話は<wbr>アニメ版では<wbr>黒ずくめの<wbr>2人組が<wbr>ジンと<wbr>ウォッカ本人ではなく<wbr>別人だった<wbr>ため、<wbr>紹介から<wbr>外しています。</li>
+          <li>同ガイドの<wbr>第128話<wbr>「黒の<wbr>組織10億円強奪事件」に<wbr>ついて、<wbr>「宮野明美が<wbr>最初で<wbr>最後に<wbr>登場する<wbr>回」という<wbr>記述を、<wbr>アニメ放送初期にも一度<wbr>登場しており、この回で<wbr>原作に<wbr>合わせてあらためて<wbr>描かれたという<wbr>内容に<wbr>訂正しました。</li>
+          <li>「序盤の<wbr>神回ピックアップ」の<wbr>冒頭に、<wbr>「原作漫画とは<wbr>差異が<wbr>あります」という<wbr>注意書きを<wbr>追加しました。<wbr>放送初期の<wbr>アニメは<wbr>原作と<wbr>展開や<wbr>登場人物の<wbr>出番が<wbr>異なる回がある<wbr>ため、<wbr>見比べた<wbr>ときに<wbr>混乱しないように<wbr>しています。</li>
+          <li>「映画から<wbr>入るならこの<wbr>6本」に、<wbr>6本目として<wbr>「名探偵コナン 100万ドルの<wbr>五稜星」を<wbr>追加しました<wbr>（紹介は<wbr>結末に<wbr>触れない<wbr>内容です）。<wbr>あわせて、<wbr>見出しや<wbr>本文の<wbr>本数の<wbr>表記を<wbr>5本から<wbr>6本に<wbr>変更しました。</li>
+          <li>劇場版が<wbr>2026年8月末で<wbr>各動画配信サービスでの<wbr>配信を<wbr>終了した<wbr>ため、<wbr>映画カードの<wbr>配信バッジを<wbr>外し、その旨の<wbr>注記を<wbr>追加しました。</li>
+          <li>ブログ一覧の<wbr>名探偵コナン初心者ガイドの<wbr>カードの<wbr>紹介文を、<wbr>「映画5選つき」から<wbr>「映画6選つき」に<wbr>修正しました。</li>
+          <li>初心者ガイドの<wbr>第1話の<wbr>紹介から<wbr>「江戸川コナンを名乗る」という<wbr>記述を<wbr>外しました。<wbr>アニメでは<wbr>江戸川コナンの<wbr>名前が<wbr>決まるのは<wbr>第2話の<wbr>ため、<wbr>第2話の<wbr>紹介に、<wbr>原作漫画では<wbr>第1話<wbr>（FILE.1）に<wbr>含まれる<wbr>場面である<wbr>ことを<wbr>補足しています。</li>
+          <li>同ガイドの<wbr>第3話の<wbr>紹介を、<wbr>蝶ネクタイ型変声機が<wbr>初登場し<wbr>「眠りの小五郎」の<wbr>スタイルが<wbr>初めて<wbr>見られる<wbr>回である<wbr>こと、<wbr>腕時計型麻酔銃は<wbr>アニメでは<wbr>第6話から<wbr>登場する<wbr>ことが<wbr>伝わる<wbr>書き方に<wbr>修正しました。</li>
+          <li>名探偵の<wbr>血筋ガイド<wbr>（conan-genetics-guide）に<wbr>「おまけ：工藤家と<wbr>黒羽家の<wbr>つながり」を<wbr>追加し、<wbr>工藤優作と<wbr>黒羽盗一が<wbr>双子の<wbr>兄弟である<wbr>こと、<wbr>新一と<wbr>快斗が<wbr>いとこ同士である<wbr>ことを<wbr>掲載しました<wbr>（劇場版<wbr>「100万ドルの五稜星」の<wbr>ネタバレを<wbr>含む旨の注意<wbr>書きつき）。</li>
+          <li>2026年夏アニメ作品を見た<wbr>感想まとめ：S評価の<wbr>同スコア<wbr>（9.0）の<wbr>2作品に<wbr>ついて、<wbr>作品カードの<wbr>並びを<wbr>全作品評価まとめ表と同じ順<wbr>（ぐらんぶる Season 3、<wbr>ヤニねこ）に<wbr>そろえました。</li>
         </ul>
       </div>
     </div>
@@ -369,12 +376,12 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
       <div class="log-card">
         <div class="log-tags"><span class="log-tag fix">修正</span><span class="log-tag improve">改良</span></div>
         <ul class="log-list">
-          <li>2026年春アニメ作品を見た感想まとめ（2026-spring-all）の作品カードを、S・A・B評価の各区分の中で管理人スコアの高い順に並べ替えました。</li>
-          <li>同スコアの作品（マリッジトキシンとRe:ゼロから始める異世界生活 4th season、杖と剣のウィストリア Season 2と淡島百景）は、全作品評価まとめ表と同じ並び順にそろえています。</li>
-          <li>評価基準の記事（rating-criteria）の点数基準（S：9.0〜／A：8.0〜8.9／B：7.0〜7.9／C：6.9以下）と照らし合わせ、評価区分が基準とずれていた作品を修正しました。</li>
-          <li>2026年春アニメ作品を見た感想まとめ：ようこそ実力至上主義の教室へ 4th Season（8.9）をS評価からA評価に変更し、A評価の先頭に移動しました。</li>
-          <li>2026年夏アニメ作品を見た感想まとめ：無職転生Ⅲ（6.9）と乙女ゲー世界はモブに厳しい世界です2（6.8）をB評価からC評価に変更しました。点数は変えていません。B評価の作品がなくなったため、B評価の項目をC評価の項目に置き換えています。</li>
-          <li>ブログ一覧の「2026年夏アニメ作品を見た感想まとめ」カードの紹介文を、春アニメのカードと同じ書き方（作品を視聴し、1話から最終話まで追った感想と評価をまとめた旨）に統一しました。</li>
+          <li>2026年春アニメ作品を見た<wbr>感想まとめ<wbr>（2026-spring-all）の<wbr>作品カードを、<wbr>S・A・B評価の<wbr>各区分の中で<wbr>管理人スコアの高い順に<wbr>並べ替えました。</li>
+          <li>同スコアの作品<wbr>（マリッジトキシンと<wbr>Re:ゼロから<wbr>始める<wbr>異世界生活 4th season、杖と剣の<wbr>ウィストリア Season 2と<wbr>淡島百景）は、<wbr>全作品評価まとめ表と同じ<wbr>並び順に<wbr>そろえています。</li>
+          <li>評価基準の記事<wbr>（rating-criteria）の<wbr>点数基準<wbr>（S：9.0〜／A：8.0〜8.9／B：7.0〜7.9／C：6.9以下）と<wbr>照らし合わせ、<wbr>評価区分が<wbr>基準と<wbr>ずれていた<wbr>作品を<wbr>修正しました。</li>
+          <li>2026年春アニメ作品を見た<wbr>感想まとめ：ようこそ<wbr>実力至上主義の<wbr>教室へ 4th Season<wbr>（8.9）を<wbr>S評価から<wbr>A評価に<wbr>変更し、<wbr>A評価の<wbr>先頭に<wbr>移動しました。</li>
+          <li>2026年夏アニメ作品を見た<wbr>感想まとめ：無職転生Ⅲ<wbr>（6.9）と<wbr>乙女ゲー世界は<wbr>モブに<wbr>厳しい<wbr>世界です2<wbr>（6.8）を<wbr>B評価から<wbr>C評価に<wbr>変更しました。<wbr>点数は<wbr>変えていません。<wbr>B評価の<wbr>作品が<wbr>なくなった<wbr>ため、<wbr>B評価の<wbr>項目を<wbr>C評価の<wbr>項目に<wbr>置き換えています。</li>
+          <li>ブログ一覧の<wbr>「2026年夏アニメ作品を見た<wbr>感想まとめ」<wbr>カードの<wbr>紹介文を、<wbr>春アニメの<wbr>カードと同じ<wbr>書き方<wbr>（作品を<wbr>視聴し、<wbr>1話から<wbr>最終話まで<wbr>追った<wbr>感想と<wbr>評価を<wbr>まとめた<wbr>旨）に<wbr>統一しました。</li>
         </ul>
       </div>
     </div>
@@ -384,9 +391,9 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
       <div class="log-card">
         <div class="log-tags"><span class="log-tag new">新規</span></div>
         <ul class="log-list">
-          <li>TOPページ「国内で注目のアニメ（管理人セレクト）」に、2026年秋アニメ「#ゾンビさがしてます」を追加しました。</li>
-          <li>作品画像・タイトルから公式サイト（zommasu.com）へ移動できます。放送開始直後のため、評価点は「--」と表示しています。</li>
-          <li>配信サービスは公式サイトの配信情報をもとに、dアニメストアとAmazon Prime Videoのバッジを表示しています。</li>
+          <li>TOPページ<wbr>「国内で<wbr>注目の<wbr>アニメ<wbr>（管理人セレクト）」に、<wbr>2026年秋アニメ<wbr>「#ゾンビさがしてます」を<wbr>追加しました。</li>
+          <li>作品画像・タイトルから<wbr>公式サイト<wbr>（zommasu.com）へ<wbr>移動できます。<wbr>放送開始直後の<wbr>ため、<wbr>評価点は<wbr>「--」と<wbr>表示しています。</li>
+          <li>配信サービスは<wbr>公式サイトの<wbr>配信情報を<wbr>もとに、<wbr>dアニメストアと<wbr>Amazon Prime Videoの<wbr>バッジを<wbr>表示しています。</li>
         </ul>
       </div>
     </div>
@@ -396,9 +403,9 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
       <div class="log-card">
         <div class="log-tags"><span class="log-tag new">新規</span></div>
         <ul class="log-list">
-          <li>男性声優・女性声優特集の未確認作品について公式サイトを調査し、ハイキュー!!・フルーツバスケット・遊☆戯☆王デュエルモンスターズ・黒子のバスケ・ID:INVADED イド:インヴェイデッド・ドラゴンクエスト ダイの大冒険・少女終末旅行・新幹線変形ロボ シンカリオン・赤髪の白雪姫の9作品に公式サイトリンクを追加しました。</li>
-          <li>フルーツバスケットは次世代声優特集にも同じ公式リンクを反映しました。</li>
-          <li>マクロスF・電脳冒険記ウェブダイバーの2作品は、公式サイトが既に閉鎖されアーカイブのみ残存していることを確認し、引き続きリンクなしとしています。</li>
+          <li>男性声優・女性声優特集の<wbr>未確認作品に<wbr>ついて<wbr>公式サイトを<wbr>調査し、<wbr>ハイキュー!!・フルーツバスケット・遊☆戯☆<wbr>王デュエルモンスターズ・黒子の<wbr>バスケ・ID:INVADED イド:インヴェイデッド・<wbr>ドラゴンクエスト ダイの<wbr>大冒険・少女終末旅行・新幹線変形ロボ シンカリオン・赤髪の<wbr>白雪姫の<wbr>9作品に<wbr>公式サイトリンクを<wbr>追加しました。</li>
+          <li>フルーツバスケットは<wbr>次世代声優特集にも同じ<wbr>公式リンクを<wbr>反映しました。</li>
+          <li>マクロスF・電脳冒険記ウェブダイバーの<wbr>2作品は、<wbr>公式サイトが<wbr>すでに<wbr>閉鎖されアーカイブのみ<wbr>残存している<wbr>ことを<wbr>確認し、<wbr>引き続きリンクなしと<wbr>しています。</li>
         </ul>
       </div>
     </div>
@@ -408,26 +415,26 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
       <div class="log-card">
         <div class="log-tags"><span class="log-tag new">新規</span><span class="log-tag fix">修正</span><span class="log-tag improve">改良</span></div>
         <ul class="log-list">
-          <li>管理人が個別にファクトチェックした公式サイト情報をもとに、監督・脚本家・アーティスト・制作会社・声優特集の各記事へ公式サイトリンクを21件追加しました。</li>
-          <li>これにより脚本家特集（scriptwriter-favorites）は全エントリへの公式リンク付与が完了しました。</li>
-          <li>ナナマルサンバツ・少女革命ウテナ・平家物語の3作品のみ、公式サイトが確認できず引き続きリンクなしとしています。</li>
-          <li>unexpected-hits.html冒頭の案内ボックスの色味（赤）が、記事本文の「裏切られポイント」ボックス（緑）と合っておらず浮いて見えたため、落ち着いた緑系の配色に統一しました。</li>
-          <li>監督・脚本家・アーティスト・制作会社の特集記事4本に、追加で公式サイトリンクを62件追加しました（ドラゴンボール・千と千尋の神隠し・君の名は。・DEATH NOTE・コードギアス・チェンソーマンなど）。</li>
-          <li>既存の声優特集・バトルアニメ記事（battle-anime-top10 / female-seiyuu-favorites / legend-seiyuu-favorites / nextgen-seiyuu-favorites）にも、新たに確認できた公式サイトを6件バックフィルしました。</li>
-          <li>公式サイトが確認できなかった作品（約20件）は、誤ったリンクを避けるため引き続きリンクなしとしています。</li>
-          <li>監督・脚本家・アーティスト・制作会社の特集記事4本（director-favorites / scriptwriter-favorites / artist-anime-favorites / studio-favorites）に、公式サイトへのリンク（🌐 公式バッジ）を計44件追加しました。</li>
-          <li>公式サイトが確認できなかった作品は、誤ったリンクを避けるため引き続きリンクなしとしています。検索ツールの利用制限により未調査の作品も多く残っており、今後継続して調査・追加予定です。</li>
-          <li>声優特集記事4本（男性声優・女性声優・名バイプレイヤー声優・次世代の主役級声優）の代表作紹介に、各作品の公式サイトへのリンク（🌐 公式バッジ）を計64件追加しました。</li>
-          <li>公式サイトが確認できなかった作品は、誤ったリンクを避けるため引き続きリンクなしとしています。残りの監督・脚本家・制作会社・アーティストの特集記事は今後対応予定です。</li>
-          <li>恋愛アニメランキング・意外な名作（隠れたヒット作）の2記事について、前回保留していた公式サイトリンクの調査を再開し、8件を追加しました。</li>
-          <li>残り2件（ハチミツとクローバー・君に届け）は、現在も開ける公式サイトが見つからなかったため、引き続きリンクなしとしています。</li>
-          <li>ブログのアニメ紹介記事8本（2026年春アニメ特集・2026年夏アニメ特集・2026年秋アニメ特集・バトルアニメランキング・異世界アニメランキング・恋愛アニメランキング・名探偵コナン初心者ガイド・微妙なアニメ正直レビュー）に、各作品の公式サイトへのリンク（🌐 公式バッジ）を計57件追加しました。</li>
-          <li>公式サイトが確認できなかった作品（放送終了済みでキャンペーンサイトが閉鎖されている場合など）は、誤ったリンクを避けるためリンクを追加せず見送りました。声優・監督・脚本家・制作会社・アーティストの特集記事は未対応で、今後の対応を予定しています。</li>
-          <li>「隠れた名作」「思い出のアニメ」記事などにある「🌐 公式」バッジの文字色が、未設定のままブラウザ標準の青色リンクになっていた不具合を修正しました（サイトの配色に合わせた白系の文字色に統一）。</li>
-          <li>声優・スタッフ名鑑（directory.html）の検索ボックスで、カタカナ入力（例：「ハナザワ」「タカマツ」）が該当する名前にヒットしない不具合を修正しました。</li>
-          <li>検索時にカタカナ・ひらがなを自動変換して比較するようにし、ひらがな・カタカナ・漢字のいずれで入力しても絞り込めるようにしました。</li>
-          <li>ブログ記事17本（これまで構造化データが未設定だった記事）に、記事であることを検索エンジンに伝えるJSON-LD（Article構造化データ）を追加しました。</li>
-          <li>sitemap.xmlに漏れていた5ページ（コナンガイド4記事＋隠しゲームページ）を追加しました。</li>
+          <li>管理人が<wbr>個別に<wbr>ファクトチェックした<wbr>公式サイト情報を<wbr>もとに、<wbr>監督・脚本家・アーティスト・<wbr>制作会社・声優特集の<wbr>各記事へ<wbr>公式サイトリンクを<wbr>21件追加しました。</li>
+          <li>これにより<wbr>脚本家特集<wbr>（scriptwriter-favorites）は<wbr>全エントリへの<wbr>公式リンク付与が<wbr>完了しました。</li>
+          <li>ナナマルサンバツ・少女革命ウテナ・平家物語の<wbr>3作品のみ、<wbr>公式サイトが<wbr>確認できず<wbr>引き続きリンクなしと<wbr>しています。</li>
+          <li>unexpected-hits.html冒頭の<wbr>案内ボックスの色味<wbr>（赤）が、<wbr>記事本文の<wbr>「裏切られポイント」ボックス<wbr>（緑）と<wbr>合っておらず<wbr>浮いて<wbr>見えた<wbr>ため、<wbr>落ち着いた<wbr>緑系の<wbr>配色に<wbr>統一しました。</li>
+          <li>監督・脚本家・アーティスト・<wbr>制作会社の<wbr>特集記事4本に、<wbr>追加で<wbr>公式サイトリンクを<wbr>62件追加しました<wbr>（ドラゴンボール・千と<wbr>千尋の<wbr>神隠し・君の<wbr>名は。・<wbr>DEATH NOTE・コードギアス・チェンソーマンなど）。</li>
+          <li>既存の<wbr>声優特集・バトルアニメ記事<wbr>（battle-anime-top10 / female-seiyuu-favorites / legend-seiyuu-favorites / nextgen-seiyuu-favorites）にも、<wbr>新たに<wbr>確認できた<wbr>公式サイトを<wbr>6件バックフィルしました。</li>
+          <li>公式サイトが<wbr>確認できなかった作品<wbr>（約20件）は、<wbr>誤った<wbr>リンクを<wbr>避ける<wbr>ため引き続きリンクなしと<wbr>しています。</li>
+          <li>監督・脚本家・アーティスト・<wbr>制作会社の<wbr>特集記事4本<wbr>（director-favorites / scriptwriter-favorites / artist-anime-favorites / studio-favorites）に、<wbr>公式サイトへの<wbr>リンク<wbr>（🌐 公式バッジ）を<wbr>計44件追加しました。</li>
+          <li>公式サイトが<wbr>確認できなかった<wbr>作品は、<wbr>誤った<wbr>リンクを<wbr>避ける<wbr>ため引き続きリンクなしと<wbr>しています。<wbr>検索ツールの<wbr>利用制限により<wbr>未調査の<wbr>作品も多く<wbr>残っており、今後<wbr>継続して<wbr>調査・追加予定です。</li>
+          <li>声優特集記事4本<wbr>（男性声優・女性声優・名バイプレイヤー声優・次世代の<wbr>主役級声優）の<wbr>代表作紹介に、<wbr>各作品の<wbr>公式サイトへの<wbr>リンク<wbr>（🌐 公式バッジ）を<wbr>計64件追加しました。</li>
+          <li>公式サイトが<wbr>確認できなかった<wbr>作品は、<wbr>誤った<wbr>リンクを<wbr>避ける<wbr>ため引き続きリンクなしと<wbr>しています。<wbr>残りの<wbr>監督・脚本家・<wbr>制作会社・アーティストの<wbr>特集記事は<wbr>今後対応予定です。</li>
+          <li>恋愛アニメランキング・意外な名作<wbr>（隠れたヒット作）の<wbr>2記事に<wbr>ついて、<wbr>前回保留していた<wbr>公式サイトリンクの<wbr>調査を<wbr>再開し、<wbr>8件を<wbr>追加しました。</li>
+          <li>残り2件<wbr>（ハチミツと<wbr>クローバー・君に<wbr>届け）は、<wbr>現在も<wbr>開ける<wbr>公式サイトが<wbr>見つからなかった<wbr>ため、<wbr>引き続きリンクなしと<wbr>しています。</li>
+          <li>ブログの<wbr>アニメ紹介記事8本<wbr>（2026年春アニメ特集・2026年夏アニメ特集・2026年秋アニメ特集・バトルアニメランキング・異世界アニメランキング・恋愛アニメランキング・名探偵コナン初心者ガイド・微妙な<wbr>アニメ正直レビュー）に、<wbr>各作品の<wbr>公式サイトへの<wbr>リンク<wbr>（🌐 公式バッジ）を<wbr>計57件追加しました。</li>
+          <li>公式サイトが<wbr>確認できなかった作品<wbr>（放送終了済みで<wbr>キャンペーンサイトが<wbr>閉鎖されている<wbr>場合など）は、<wbr>誤った<wbr>リンクを<wbr>避ける<wbr>ためリンクを<wbr>追加せず<wbr>見送りました。<wbr>声優・監督・脚本家・<wbr>制作会社・アーティストの<wbr>特集記事は<wbr>未対応で、<wbr>今後の<wbr>対応を<wbr>予定しています。</li>
+          <li>「隠れた名作」<wbr>「思い出のアニメ」<wbr>記事などにある<wbr>「🌐 公式」<wbr>バッジの<wbr>文字色が、<wbr>未設定のまま<wbr>ブラウザ標準の<wbr>青色リンクに<wbr>なっていた<wbr>不具合を<wbr>修正しました<wbr>（サイトの<wbr>配色に<wbr>合わせた<wbr>白系の<wbr>文字色に<wbr>統一）。</li>
+          <li>声優・スタッフ名鑑<wbr>（directory.html）の<wbr>検索ボックスで、<wbr>カタカナ入力<wbr>（例：<wbr>「ハナザワ」<wbr>「タカマツ」）が<wbr>該当する<wbr>名前に<wbr>ヒットしない<wbr>不具合を<wbr>修正しました。</li>
+          <li>検索時に<wbr>カタカナ・<wbr>ひらがなを<wbr>自動変換して<wbr>比較するようにし、<wbr>ひらが<wbr>な・カタカナ・漢字の<wbr>いずれで<wbr>入力しても<wbr>絞り込めるようにしました。</li>
+          <li>ブログ記事17本（これまで<wbr>構造化データが<wbr>未設定だった<wbr>記事）に、<wbr>記事である<wbr>ことを<wbr>検索エンジンに<wbr>伝える<wbr>JSON-LD<wbr>（Article構造化データ）を<wbr>追加しました。</li>
+          <li>sitemap.xmlに<wbr>漏れていた<wbr>5ページ<wbr>（コナンガイド4記事＋隠しゲームページ）を<wbr>追加しました。</li>
         </ul>
       </div>
     </div>
@@ -437,15 +444,15 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
       <div class="log-card">
         <div class="log-tags"><span class="log-tag improve">改良</span><span class="log-tag fix">修正</span></div>
         <ul class="log-list">
-          <li>ブログ全26記事の文体を見直し、だ・である調が混在していた箇所をすべて「です・ます調」に統一しました。作品タイトルやセリフの引用、年代・ジャンルなどのラベル表記はそのまま残し、地の文（解説・紹介文）のみを丁寧な表現に揃えています。</li>
-          <li>TOPページ「国内で注目のアニメ（管理人セレクト）」内の8作品（薬屋のひとりごと 第3期／氷の城壁 第2期／アオのハコ Season2／らんま1/2 第3期／とある暗部の少女共棲／FX戦士くるみちゃん／凶乱令嬢ニア・リストン／追放されたチート付与魔術師は気ままなセカンドライフを謳歌する。）で、サーバーに保存した画像をそのまま表示していた箇所を、MyAnimeList（Jikan API）の公式配信画像への直リンクに差し替えました。ページ内の他の箇所と同じ仕組みに統一し、著作権リスクを低減しています。</li>
-          <li>上記の差し替え直後、8作品のうち4作品（薬屋のひとりごと 第3期／氷の城壁 第2期／アオのハコ Season2／らんま1/2 第3期）で参照先URLが誤っており画像が表示されない不具合があったため、正しい画像URLに修正しました。あわせて8作品すべての画像に、万一読み込みに失敗した場合の代替表示（プレースホルダー画像）を追加しています。</li>
-          <li>「国内で注目のアニメ（管理人セレクト）」の見出し下に、作品画像をMyAnimeListのデータベースから取得している旨の注記を追加しました。</li>
-          <li>TOPページ「海外で今シーズン注目のアニメ」の見出し下に、MyAnimeListのデータを自動集計して表示している旨の出典表記を追加しました。</li>
-          <li>「<a href="/directory.html">声優・スタッフ名鑑</a>」「<a href="/games.html">診断・ガチャ一覧</a>」のページ説明文を拡充し、ページの目的や更新方針がより伝わるようにしました。</li>
-          <li>秋アニメ開始にあわせて、TOPページの動作確認を実施。「国内で注目のアニメ」「2026年10月開始おすすめアニメ」などサイト側で手入力している箇所はすべて秋アニメの内容に更新済みであることを確認しました。</li>
-          <li>meta keywordsタグに残っていた「2026夏アニメ」の表記を「2026秋アニメ」に修正しました。</li>
-          <li>上段のヒーロー枠と「海外で今シーズン注目のアニメ」は外部API（Jikan/MyAnimeList）からリアルタイムで取得する仕組みのため、サイト側のコードは正常に動作していますが、MAL側のシーズン切り替えが数日遅れており、本日時点ではまだ2026年夏アニメが表示されています。MAL側の更新が反映され次第、自動的に秋アニメに切り替わる見込みです。</li>
+          <li>ブログ全26記事の<wbr>文体を<wbr>見直し、<wbr>だ・である調が<wbr>混在していた<wbr>箇所を全て<wbr>「です・ます調」に<wbr>統一しました。<wbr>作品タイトルや<wbr>セリフの<wbr>引用、<wbr>年代・ジャンルなどの<wbr>ラベル表記は<wbr>そのまま<wbr>残し、地の文<wbr>（解説・紹介文）のみを<wbr>丁寧な<wbr>表現に<wbr>揃えています。</li>
+          <li>TOPページ<wbr>「国内で<wbr>注目の<wbr>アニメ<wbr>（管理人セレクト）」内の<wbr>8作品<wbr>（薬屋の<wbr>ひとりごと 第3期／氷の<wbr>城壁 第2期／アオの<wbr>ハコ Season2／らんま1/2 第3期／とある<wbr>暗部の<wbr>少女共棲／FX戦士くる<wbr>みちゃん／凶乱令嬢ニア・リストン／追放された<wbr>チート付与魔術師は<wbr>気ままな<wbr>セカンドライフを<wbr>謳歌する。）で、<wbr>サーバーに<wbr>保存した<wbr>画像を<wbr>そのまま<wbr>表示していた<wbr>箇所を、<wbr>MyAnimeList<wbr>（Jikan API）の<wbr>公式配信画像への<wbr>直リンクに<wbr>差し替えました。<wbr>ページ内の他の<wbr>箇所と同じ<wbr>仕組みに<wbr>統一し、<wbr>著作権リスクを<wbr>低減しています。</li>
+          <li>上記の<wbr>差し替え直後、<wbr>8作品の<wbr>うち4作品<wbr>（薬屋の<wbr>ひとりごと 第3期／氷の<wbr>城壁 第2期／アオの<wbr>ハコ Season2／らんま1/2 第3期）で<wbr>参照先URLが<wbr>誤っており画像が<wbr>表示されない<wbr>不具合が<wbr>あった<wbr>ため、<wbr>正しい<wbr>画像URLに<wbr>修正しました。<wbr>あわせて<wbr>8作品全ての<wbr>画像に、<wbr>万一読み込みに<wbr>失敗した<wbr>場合の<wbr>代替表示<wbr>（プレースホルダー画像）を<wbr>追加しています。</li>
+          <li>「国内で<wbr>注目の<wbr>アニメ<wbr>（管理人セレクト）」の<wbr>見出し下に、<wbr>作品画像を<wbr>MyAnimeListの<wbr>データベースから<wbr>取得している旨の<wbr>注記を<wbr>追加しました。</li>
+          <li>TOPページ<wbr>「海外で<wbr>今シーズン注目の<wbr>アニメ」の<wbr>見出し下に、<wbr>MyAnimeListの<wbr>データを<wbr>自動集計して<wbr>表示している旨の<wbr>出典表記を<wbr>追加しました。</li>
+          <li>「<a href="/directory.html">声優・スタッフ名鑑</a>」<wbr>「<a href="/games.html">診断・ガチャ一覧</a>」の<wbr>ページ説明文を<wbr>拡充し、<wbr>ページの<wbr>目的や<wbr>更新方針がより<wbr>伝わるようにしました。</li>
+          <li>秋アニメ開始に<wbr>あわせて、<wbr>TOPページの<wbr>動作確認を<wbr>実施。<wbr>「国内で注目のアニメ」<wbr>「2026年10月開始おすすめアニメ」など<wbr>サイト側で<wbr>手入力している<wbr>箇所は全て<wbr>秋アニメの<wbr>内容に<wbr>更新済みである<wbr>ことを<wbr>確認しました。</li>
+          <li>meta keywordsタグに<wbr>残っていた<wbr>「2026夏アニメ」の<wbr>表記を<wbr>「2026秋アニメ」に<wbr>修正しました。</li>
+          <li>上段の<wbr>ヒーロー枠と<wbr>「海外で<wbr>今シーズン注目の<wbr>アニメ」は<wbr>外部API<wbr>（Jikan/MyAnimeList）から<wbr>リアルタイムで<wbr>取得する<wbr>仕組みの<wbr>ため、<wbr>サイト側の<wbr>コードは<wbr>正常に<wbr>動作していますが、<wbr>MAL側の<wbr>シーズン切り<wbr>替えが<wbr>数日遅れており、本日<wbr>時点ではまだ<wbr>2026年夏アニメが<wbr>表示されています。<wbr>MAL側の<wbr>更新が<wbr>反映され次第、<wbr>自動的に<wbr>秋アニメに切り<wbr>替わる<wbr>見込みです。</li>
         </ul>
       </div>
     </div>
@@ -455,9 +462,9 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
       <div class="log-card">
         <div class="log-tags"><span class="log-tag fix">修正</span></div>
         <ul class="log-list">
-          <li>「<a href="/blog/checklist-anime.html">アニメを見る前に必ずチェックする項目6つ</a>」の関連記事リンクのバッジが、サイトの配色から浮いた青色になっていた点を修正しました。サイトのアクセントカラーに合わせた控えめな配色に変更しています。</li>
-          <li>「<a href="/blog/studio-favorites.html">好きな制作会社16社の代表作まとめ</a>」の残り4作品（平家物語・きみの色・夜は短し歩けよ乙女・ウマ娘 プリティーダービー）も確認し、「夜は短し歩けよ乙女」「ウマ娘 プリティーダービー」にAmazon追加。「平家物語」「きみの色」は現状の表示で問題ないことを確認しました。</li>
-          <li>これでサイト内全21ファイル・263作品の配信サービスバッジのファクトチェックが完了しました。</li>
+          <li>「<a href="/blog/checklist-anime.html">アニメを見る前に必ず<wbr>チェックする<wbr>項目6つ</a>」の関連<wbr>記事リンクの<wbr>バッジが、<wbr>サイトの<wbr>配色から<wbr>浮いた<wbr>青色に<wbr>なっていた点を<wbr>修正しました。<wbr>サイトの<wbr>アクセントカラーに<wbr>合わせた<wbr>控えめな<wbr>配色に<wbr>変更しています。</li>
+          <li>「<a href="/blog/studio-favorites.html">好きな<wbr>制作会社16社の<wbr>代表作まとめ</a>」の残り<wbr>4作品<wbr>（平家物語・きみの<wbr>色・夜は<wbr>短し歩けよ乙女・ウマ娘 プリティーダービー）も<wbr>確認し、<wbr>「夜は短し歩けよ乙女」<wbr>「ウマ娘 プリティーダービー」に<wbr>Amazon追加。<wbr>「平家物語」<wbr>「きみの色」は<wbr>現状の<wbr>表示で<wbr>問題ない<wbr>ことを<wbr>確認しました。</li>
+          <li>これで<wbr>サイト内全21ファイル・263作品の<wbr>配信サービスバッジの<wbr>ファクトチェックが<wbr>完了しました。</li>
         </ul>
       </div>
     </div>
@@ -467,16 +474,16 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
       <div class="log-card">
         <div class="log-tags"><span class="log-tag fix">修正</span><span class="log-tag improve">改良</span></div>
         <ul class="log-list">
-          <li>配信サービスバッジのファクトチェックの続きとして、「<a href="/blog/male-seiyuu-favorites.html">男性声優9人まとめ</a>」「<a href="/blog/nextgen-seiyuu-favorites.html">次世代の主役級10人まとめ</a>」「<a href="/blog/scriptwriter-favorites.html">好きな脚本家8人の代表作まとめ</a>」「<a href="/blog/studio-favorites.html">好きな制作会社16社の代表作まとめ</a>」の配信バッジを2026年9月30日時点の実際の配信状況と照合しました。</li>
-          <li>dアニメ・Amazon・Netflixの追加/削除、および「ヴァイオレット・エヴァーガーデン」のNetflix独占配信化、「true tears」「プロメア」のサブスク配信終了など、多数の誤りを修正しました。</li>
-          <li>これで全21ファイル・263作品のファクトチェックがほぼ完了しました（一部、検索リソースの都合で未確認のまま残っている作品が数点あります）。</li>
-          <li>サイト内の配信サービスバッジ（dアニメ・Amazon・Netflixなど）を2026年9月30日時点の実際の配信状況と照合するファクトチェックを実施しました。</li>
-          <li>「<a href="/blog/isekai-top10.html">異世界転生アニメおすすめ10選</a>」「<a href="/blog/battle-anime-top10.html">バトルアニメおすすめ10選</a>」「<a href="/blog/hidden-gems-2023-2024.html">2023〜2024年 隠れた名作18選</a>」「<a href="/blog/hidden-gems-2025-all.html">2025年 隠れた名作18選</a>」「<a href="/blog/2026-spring-all.html">2026年春アニメ感想まとめ</a>」「<a href="/blog/conan-beginner-guide.html">名探偵コナン映画 初心者向けガイド</a>」で、配信終了・配信追加などの変更を反映しました。</li>
-          <li>「<a href="/blog/artist-anime-favorites.html">好きなアーティスト作品まとめ</a>」「<a href="/blog/director-favorites.html">好きな監督作品まとめ</a>」「<a href="/blog/female-seiyuu-favorites.html">女性声優8人まとめ</a>」「<a href="/blog/legend-seiyuu-favorites.html">名バイプレイヤー9人まとめ</a>」「<a href="/blog/male-seiyuu-favorites.html">男性声優9人まとめ</a>」でも配信バッジの誤りを一部修正しました。</li>
-          <li>作品数が非常に多いため、一部の記事（声優・脚本家・制作会社まとめの一部）はまだ確認中です。順次追加でチェックしていきます。</li>
-          <li>「<a href="/blog/isekai-top10.html">異世界転生アニメおすすめ10選</a>」の「本好きの下剋上」の放送年表記を修正しました。2026年から第4期がWIT STUDIO制作で放送中であることを反映しています。</li>
-          <li>「<a href="/blog/hidden-gems-2023-2024.html">2023〜2024年 隠れた名作18選</a>」のデザインを「<a href="/blog/hidden-gems-2025-all.html">2025年 隠れた名作18選</a>」と統一しました。目次・番号バッジ・公式サイトリンクを追加しています。</li>
-          <li>隠しゲーム「スタジオランナー」で、PC（マウス操作）だとレーン移動ができずジャンプしかできない不具合を修正しました。スマホと同様、クリック＝ジャンプ、左右ドラッグ＝レーン移動に対応しています。</li>
+          <li>配信サービスバッジの<wbr>ファクトチェックの<wbr>続きと<wbr>して、<wbr>「<a href="/blog/male-seiyuu-favorites.html">男性声優9人まとめ</a>」<wbr>「<a href="/blog/nextgen-seiyuu-favorites.html">次世代の<wbr>主役級10人まとめ</a>」<wbr>「<a href="/blog/scriptwriter-favorites.html">好きな<wbr>脚本家8人の<wbr>代表作まとめ</a>」<wbr>「<a href="/blog/studio-favorites.html">好きな<wbr>制作会社16社の<wbr>代表作まとめ</a>」の<wbr>配信バッジを<wbr>2026年9月30日時点の<wbr>実際の<wbr>配信状況と<wbr>照合しました。</li>
+          <li>dアニメ・Amazon・Netflixの<wbr>追加/削除、<wbr>および<wbr>「ヴァイオレット・<wbr>エヴァーガーデン」の<wbr>Netflix独占配信化、<wbr>「true tears」<wbr>「プロメア」の<wbr>サブスク配信終了など、<wbr>多数の<wbr>誤りを<wbr>修正しました。</li>
+          <li>これで<wbr>全21ファイル・263作品の<wbr>ファクトチェックがほぼ<wbr>完了しました<wbr>（一部、<wbr>検索リソースの<wbr>都合で<wbr>未確認のまま<wbr>残っている<wbr>作品が<wbr>数点あります）。</li>
+          <li>サイト内の<wbr>配信サービスバッジ<wbr>（dアニメ・Amazon・Netflixなど）を<wbr>2026年9月30日時点の<wbr>実際の<wbr>配信状況と<wbr>照合する<wbr>ファクトチェックを<wbr>実施しました。</li>
+          <li>「<a href="/blog/isekai-top10.html">異世界転生アニメおすすめ10選</a>」<wbr>「<a href="/blog/battle-anime-top10.html">バトルアニメおすすめ10選</a>」<wbr>「<a href="/blog/hidden-gems-2023-2024.html">2023〜2024年 隠れた<wbr>名作18選</a>」<wbr>「<a href="/blog/hidden-gems-2025-all.html">2025年 隠れた<wbr>名作18選</a>」<wbr>「<a href="/blog/2026-spring-all.html">2026年春アニメ感想まとめ</a>」<wbr>「<a href="/blog/conan-beginner-guide.html">名探偵コナン映画 初心者向けガイド</a>」で、<wbr>配信終了・配信追加などの<wbr>変更を<wbr>反映しました。</li>
+          <li>「<a href="/blog/artist-anime-favorites.html">好きな<wbr>アーティスト作品まとめ</a>」<wbr>「<a href="/blog/director-favorites.html">好きな監督作品まとめ</a>」<wbr>「<a href="/blog/female-seiyuu-favorites.html">女性声優8人まとめ</a>」<wbr>「<a href="/blog/legend-seiyuu-favorites.html">名バイプレイヤー9人まとめ</a>」<wbr>「<a href="/blog/male-seiyuu-favorites.html">男性声優9人まとめ</a>」でも<wbr>配信バッジの<wbr>誤りを一部<wbr>修正しました。</li>
+          <li>作品数が<wbr>非常に<wbr>多いため、<wbr>一部の記事<wbr>（声優・脚本家・<wbr>制作会社まとめの<wbr>一部）はまだ<wbr>確認中です。<wbr>順次追加で<wbr>チェックしていきます。</li>
+          <li>「<a href="/blog/isekai-top10.html">異世界転生アニメおすすめ10選</a>」の<wbr>「本好きの下剋上」の<wbr>放送年表記を<wbr>修正しました。<wbr>2026年から<wbr>第4期が<wbr>WIT STUDIO制作で<wbr>放送中である<wbr>ことを<wbr>反映しています。</li>
+          <li>「<a href="/blog/hidden-gems-2023-2024.html">2023〜2024年 隠れた<wbr>名作18選</a>」の<wbr>デザインを<wbr>「<a href="/blog/hidden-gems-2025-all.html">2025年 隠れた<wbr>名作18選</a>」と<wbr>統一しました。<wbr>目次・番号バッジ・<wbr>公式サイトリンクを<wbr>追加しています。</li>
+          <li>隠しゲーム<wbr>「スタジオランナー」で、PC<wbr>（マウス操作）だと<wbr>レーン<wbr>移動が<wbr>できずジャンプしかできない<wbr>不具合を<wbr>修正しました。<wbr>スマホと<wbr>同様、<wbr>クリック＝ジャンプ、<wbr>左右ドラッグ＝レーン移動に<wbr>対応しています。</li>
         </ul>
       </div>
     </div>
@@ -486,10 +493,10 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
       <div class="log-card">
         <div class="log-tags"><span class="log-tag fix">修正</span><span class="log-tag new">新規</span><span class="log-tag improve">改良</span></div>
         <ul class="log-list">
-          <li>隠しゲーム「スタジオランナー」の難易度を調整しました。速度が際限なく上がり続け、途中から障害物の間隔が人間の反応速度を超えてしまう不具合があったため、速度に上限を設け、障害物同士の間隔を「距離」ではなく「時間」基準に変更しています。</li>
-          <li><a href="/glossary.html">用語集</a>に「アニメ制作ガチャ」の項目を追加しました。</li>
-          <li>「<a href="/blog/spring2026-recommend.html">2026年夏アニメ作品を見た感想まとめ</a>」の無職転生Ⅲの感想を、第2クール2027年放送決定のニュースを反映して更新しました。</li>
-          <li>同記事内の評価カードの並び順を、管理人評価の点数順に修正しました。</li>
+          <li>隠しゲーム<wbr>「スタジオランナー」の<wbr>難易度を<wbr>調整しました。<wbr>速度が<wbr>際限なく<wbr>上がり続け、<wbr>途中から<wbr>障害物の<wbr>間隔が<wbr>人間の<wbr>反応速度を<wbr>超えてしまう<wbr>不具合が<wbr>あった<wbr>ため、<wbr>速度に<wbr>上限を<wbr>設け、<wbr>障害物同士の<wbr>間隔を<wbr>「距離」ではなく<wbr>「時間」<wbr>基準に<wbr>変更しています。</li>
+          <li><a href="/glossary.html">用語集</a>に<wbr>「アニメ制作ガチャ」の<wbr>項目を<wbr>追加しました。</li>
+          <li>「<a href="/blog/spring2026-recommend.html">2026年夏アニメ作品を見た<wbr>感想まとめ</a>」の<wbr>無職転生Ⅲの<wbr>感想を、<wbr>第2クール2027年放送決定の<wbr>ニュースを<wbr>反映して<wbr>更新しました。</li>
+          <li>同記事内の<wbr>評価カードの<wbr>並び順を、<wbr>管理人評価の<wbr>点数順に<wbr>修正しました。</li>
         </ul>
       </div>
     </div>
@@ -499,8 +506,8 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
       <div class="log-card">
         <div class="log-tags"><span class="log-tag improve">改良</span><span class="log-tag new">新規</span></div>
         <ul class="log-list">
-          <li>「<a href="/blog/conan-advanced-guide.html">名探偵コナン上級ガイド</a>」から「<a href="/blog/conan-genetics-guide.html">名探偵コナン血筋ガイド</a>」への導線（おすすめ記事リンク）を追加し、初心者ガイド→上級ガイド→血筋ガイドの順で読み進められるようにしました。</li>
-          <li>「国内で注目のアニメ（管理人セレクト）」欄に「凶乱令嬢ニア・リストン」「追放されたチート付与魔術師は気ままなセカンドライフを謳歌する。」の2作品を追加しました。</li>
+          <li>「<a href="/blog/conan-advanced-guide.html">名探偵コナン上級ガイド</a>」から<wbr>「<a href="/blog/conan-genetics-guide.html">名探偵コナン血筋ガイド</a>」への導線<wbr>（おすすめ記事リンク）を<wbr>追加し、<wbr>初心者ガイド→上級ガイド→血筋ガイドの順で<wbr>読み進められるようにしました。</li>
+          <li>「国内で<wbr>注目の<wbr>アニメ<wbr>（管理人セレクト）」欄に<wbr>「凶乱令嬢ニア・リストン」<wbr>「追放された<wbr>チート付与魔術師は<wbr>気ままな<wbr>セカンドライフを<wbr>謳歌する。」の<wbr>2作品を<wbr>追加しました。</li>
         </ul>
       </div>
     </div>
@@ -510,13 +517,13 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
       <div class="log-card">
         <div class="log-tags"><span class="log-tag fix">修正</span><span class="log-tag improve">改良</span><span class="log-tag new">新規</span></div>
         <ul class="log-list">
-          <li>スマートフォンでブログ記事を開いた際、ヘッダーのナビゲーションが画面幅に収まらず文字が崩れて表示される不具合を修正しました（全26記事）。</li>
-          <li>「国内で注目のアニメ（管理人セレクト）」欄に、各作品のティザービジュアルを設定しました。</li>
-          <li>TOP画面上部のスライドショーで、作品が切り替わる瞬間にタイトル文字が重なって表示されてしまう不具合を修正しました。</li>
-          <li>TOPページの「今シーズンの注目アニメ」の下に、「国内で注目のアニメ（管理人セレクト）」欄を新設しました。上段は海外でも人気のMyAnimeListの最新データ、下段は管理人が厳選した国内注目作品と、視点の異なる2段構成になりました。</li>
-          <li>「<a href="/blog/autumn2026-recommend.html">2026年秋アニメ おすすめ6選</a>」に最新の配信情報を追記しました（dアニメ・Amazon Prime・Netflixのみ掲載）。</li>
-          <li>「<a href="/blog/isekai-top10.html">異世界転生アニメおすすめ10選</a>」「<a href="/blog/romance-top10.html">泣けるラブコメアニメおすすめ10選</a>」「<a href="/blog/battle-anime-top10.html">バトルアニメ歴代おすすめランキング10選</a>」の各作品に配信サイトリンクを追加しました（dアニメ・Amazon Prime・Netflixのみ、配信状況が確認できたもののみ掲載）。</li>
-          <li>TOPページ「2026年10月開始おすすめアニメ！」の6作品にも配信サイトリンクを追加しました。</li>
+          <li>スマートフォンで<wbr>ブログ記事を<wbr>開いた<wbr>際、<wbr>ヘッダーの<wbr>ナビゲーションが<wbr>画面幅に<wbr>収まらず<wbr>文字が<wbr>崩れて<wbr>表示される<wbr>不具合を<wbr>修正しました<wbr>（全26記事）。</li>
+          <li>「国内で<wbr>注目の<wbr>アニメ<wbr>（管理人セレクト）」欄に、<wbr>各作品の<wbr>ティザービジュアルを<wbr>設定しました。</li>
+          <li>TOP画面上部の<wbr>スライドショーで、<wbr>作品が切り<wbr>替わる<wbr>瞬間に<wbr>タイトル文字が<wbr>重なって<wbr>表示されてしまう<wbr>不具合を<wbr>修正しました。</li>
+          <li>TOPページの<wbr>「今シーズンの<wbr>注目アニメ」の<wbr>下に、<wbr>「国内で<wbr>注目の<wbr>アニメ<wbr>（管理人セレクト）」欄を<wbr>新設しました。<wbr>上段は<wbr>海外でも<wbr>人気の<wbr>MyAnimeListの<wbr>最新データ、<wbr>下段は<wbr>管理人が<wbr>厳選した<wbr>国内注目作品と、<wbr>視点の<wbr>異なる<wbr>2段構成に<wbr>なりました。</li>
+          <li>「<a href="/blog/autumn2026-recommend.html">2026年秋アニメ おすすめ6選</a>」に<wbr>最新の<wbr>配信情報を<wbr>追記しました<wbr>（dアニメ・Amazon Prime・Netflixのみ<wbr>掲載）。</li>
+          <li>「<a href="/blog/isekai-top10.html">異世界転生アニメおすすめ10選</a>」<wbr>「<a href="/blog/romance-top10.html">泣ける<wbr>ラブコメアニメおすすめ10選</a>」<wbr>「<a href="/blog/battle-anime-top10.html">バトルアニメ歴代おすすめランキング10選</a>」の<wbr>各作品に<wbr>配信サイトリンクを<wbr>追加しました<wbr>（dアニメ・Amazon Prime・Netflixのみ、<wbr>配信状況が<wbr>確認できた<wbr>もののみ<wbr>掲載）。</li>
+          <li>TOPページ<wbr>「2026年10月開始おすすめアニメ！」の<wbr>6作品にも<wbr>配信サイトリンクを<wbr>追加しました。</li>
         </ul>
       </div>
     </div>
@@ -526,7 +533,7 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
       <div class="log-card">
         <div class="log-tags"><span class="log-tag improve">改良</span></div>
         <ul class="log-list">
-          <li>TOPページの「2026年7月(夏クール)おすすめアニメ！」固定セクションを削除しました（季節の切り替えに伴う定例メンテナンス）。</li>
+          <li>TOPページの<wbr>「2026年7月<wbr>（夏クール）<wbr>おすすめアニメ！」<wbr>固定セクションを<wbr>削除しました<wbr>（季節の切り<wbr>替えに伴う<wbr>定例メンテナンス）。</li>
         </ul>
       </div>
     </div>
@@ -536,7 +543,7 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
       <div class="log-card">
         <div class="log-tags"><span class="log-tag improve">改良</span></div>
         <ul class="log-list">
-          <li>「<a href="/blog/spring2026-recommend.html">2026年夏アニメ作品を見た感想まとめ</a>」の「無職転生Ⅲ ～異世界行ったら本気だす～」レビューを更新しました。終盤3話で老ルーデウスの登場から盛り上がった点を追記しています（評価は6.9のまま変更なし）。</li>
+          <li>「<a href="/blog/spring2026-recommend.html">2026年夏アニメ作品を見た<wbr>感想まとめ</a>」の<wbr>「無職転生Ⅲ 〜異世界行ったら<wbr>本気だす〜」<wbr>レビューを<wbr>更新しました。<wbr>終盤3話で<wbr>老ルーデウスの<wbr>登場から盛り<wbr>上がった点を<wbr>追記しています<wbr>（評価は<wbr>6.9のまま<wbr>変更なし）。</li>
         </ul>
       </div>
     </div>
@@ -546,7 +553,7 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
       <div class="log-card">
         <div class="log-tags"><span class="log-tag new">新規</span></div>
         <ul class="log-list">
-          <li>「<a href="/blog/spring2026-recommend.html">2026年夏アニメ作品を見た感想まとめ</a>」に「花ざかりの君たちへ」をA評価（8.3）として追加しました（全10作品→11作品）。</li>
+          <li>「<a href="/blog/spring2026-recommend.html">2026年夏アニメ作品を見た<wbr>感想まとめ</a>」に<wbr>「花ざかりの君たちへ」を<wbr>A評価<wbr>（8.3）として<wbr>追加しました<wbr>（全10作品→11作品）。</li>
         </ul>
       </div>
     </div>
@@ -556,10 +563,10 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
       <div class="log-card">
         <div class="log-tags"><span class="log-tag improve">改良</span><span class="log-tag new">新規</span></div>
         <ul class="log-list">
-          <li>「<a href="/directory.html">声優・スタッフ名鑑</a>」にも、実在の方のお名前を敬称略で記載している旨の注記（※文中敬称略）を追加しました。</li>
-          <li>「<a href="/director-diagnosis.html">あなたに合う監督診断</a>」に、「<a href="/blog/director-favorites.html">好きな監督8人の代表作まとめ</a>」には既にいた高松信司が抜けていたため追加しました（診断結果・質問の選択肢・登場監督一覧をすべて8名に対応）。</li>
-          <li>「<a href="/director-diagnosis.html">監督診断</a>」「<a href="/scriptwriter-diagnosis.html">脚本家診断</a>」「<a href="/who-is-this.html">この人は誰？</a>」の3ページに、実在の方のお名前を敬称略で記載している旨の注記（※文中敬称略）を追加しました。</li>
-          <li>「<a href="/blog/hidden-gems-2025-all.html">2025年に見逃した隠れた名作アニメ18選</a>」から「観ないともったいない！」の説明ボックスを削除し、「<a href="/blog/hidden-gems-2023-2024.html">2023~2024年に見逃した隠れた名作アニメ18選</a>」とページ構成の統一感を出しました（見出し・タイトルタグ・ブログ一覧カードに残っていた「【観ないともったいない！】」も合わせて削除）。</li>
+          <li>「<a href="/directory.html">声優・スタッフ名鑑</a>」にも、<wbr>実在の方の<wbr>お名前を<wbr>敬称略で<wbr>記載している旨の注記<wbr>（※文中敬称略）を<wbr>追加しました。</li>
+          <li>「<a href="/director-diagnosis.html">あなたに合う監督診断</a>」に、<wbr>「<a href="/blog/director-favorites.html">好きな<wbr>監督8人の<wbr>代表作まとめ</a>」には<wbr>すでにいた<wbr>高松信司が<wbr>抜けていた<wbr>ため追加しました<wbr>（診断結果・質問の<wbr>選択肢・登場監督一覧を全て<wbr>8名に<wbr>対応）。</li>
+          <li>「<a href="/director-diagnosis.html">監督診断</a>」<wbr>「<a href="/scriptwriter-diagnosis.html">脚本家診断</a>」<wbr>「<a href="/who-is-this.html">この人は誰？</a>」の<wbr>3ページに、<wbr>実在の方の<wbr>お名前を<wbr>敬称略で<wbr>記載している旨の注記<wbr>（※文中敬称略）を<wbr>追加しました。</li>
+          <li>「<a href="/blog/hidden-gems-2025-all.html">2025年に<wbr>見逃した<wbr>隠れた<wbr>名作アニメ18選</a>」から<wbr>「観ないともったいない！」の<wbr>説明ボックスを<wbr>削除し、<wbr>「<a href="/blog/hidden-gems-2023-2024.html">2023〜2024年に<wbr>見逃した<wbr>隠れた<wbr>名作アニメ18選</a>」と<wbr>ページ構成の<wbr>統一感を<wbr>出しました<wbr>（見出し・タイトルタグ・ブログ一覧カードに<wbr>残っていた<wbr>「【観ないともったいない！】」も<wbr>合わせて<wbr>削除）。</li>
         </ul>
       </div>
     </div>
@@ -569,7 +576,7 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
       <div class="log-card">
         <div class="log-tags"><span class="log-tag improve">改良</span></div>
         <ul class="log-list">
-          <li>「<a href="/blog/conan-beginner-guide.html">名探偵コナン初心者ガイド</a>」の最後に、「<a href="/blog/conan-advanced-guide.html">名探偵コナン上級ガイド</a>」への案内カードを追加しました。初心者ガイドを読み終えた流れで上級ガイドに進めるよう、記事間の導線をつなげています。</li>
+          <li>「<a href="/blog/conan-beginner-guide.html">名探偵コナン初心者ガイド</a>」の<wbr>最後に、<wbr>「<a href="/blog/conan-advanced-guide.html">名探偵コナン上級ガイド</a>」への<wbr>案内カードを<wbr>追加しました。<wbr>初心者ガイドを<wbr>読み終えた<wbr>流れで<wbr>上級ガイドに<wbr>進めるよう、<wbr>記事間の<wbr>導線を<wbr>つなげています。</li>
         </ul>
       </div>
     </div>
@@ -579,8 +586,8 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
       <div class="log-card">
         <div class="log-tags"><span class="log-tag fix">修正</span></div>
         <ul class="log-list">
-          <li>PWA設定ファイル（manifest.json）に残っていた旧サイト構成時代のパス（/animedb1.2/）を、現在のサイト構成に合わせて修正しました（表示上の影響はありません）。</li>
-          <li>「<a href="/blog/2026-spring-all.html">2026年春アニメ作品を見た感想まとめ</a>」で、「淡島百景」（管理人評価8.3・A評価判定）がB評価作品の一覧に誤って掲載されていたのを、正しくA評価作品の一覧に移動しました。</li>
+          <li>PWA設定ファイル<wbr>（manifest.json）に<wbr>残っていた<wbr>旧サイト構成時代のパス<wbr>（/animedb1.2/）を、<wbr>現在の<wbr>サイト構成に<wbr>合わせて<wbr>修正しました<wbr>（表示上の<wbr>影響は<wbr>ありません）。</li>
+          <li>「<a href="/blog/2026-spring-all.html">2026年春アニメ作品を見た<wbr>感想まとめ</a>」で、<wbr>「淡島百景」<wbr>（管理人評価8.3・A評価判定）が<wbr>B評価作品の<wbr>一覧に<wbr>誤って<wbr>掲載されていたのを、<wbr>正しく<wbr>A評価作品の<wbr>一覧に<wbr>移動しました。</li>
         </ul>
       </div>
     </div>
@@ -590,26 +597,26 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
       <div class="log-card">
         <div class="log-tags"><span class="log-tag improve">改良</span><span class="log-tag fix">修正</span><span class="log-tag new">新規</span></div>
         <ul class="log-list">
-          <li>「<a href="/games.html">診断・ガチャ一覧</a>」ページで、「視聴傾向診断（あなたは何派？）」を一番上に配置しました。</li>
-          <li>「<a href="/anime-profile.html">あなたのアニメ履歴書</a>」（履歴書診断）にも、他の診断系コンテンツと同様に静的コンテンツを追加しました。診断で分かる5つのステータス・4つの視聴タイプ・4つの視聴スタイルを、ページを開いた時点で読めるようにしています。</li>
-          <li>「<a href="/blog/conan-romance-guide.html#heizikazuha">名探偵コナン恋愛名場面ガイド</a>」の服部平次×遠山和葉の項目を修正しました。TVアニメ2026年9月26日〜10月10日放送は「茜色の千秋楽（告白成立エピソード）」そのもののアニメ化であり、告白成立後の原作展開（FILE.1157「星空の下で…」）は現時点でアニメ化未発表のため、誤解のないよう項目を分けました。</li>
-          <li><a href="/blog/">ブログ一覧ページ</a>の「最新記事」の並び順を、レビュー記事5本→特集記事4本の順に変更しました。</li>
-          <li>「<a href="/blog/conan-advanced-guide.html#rum">名探偵コナン上級ガイド</a>」のRUM編に「黒田兵衛」の項目を追加しました。元RUM最有力候補であり、17年前の羽田浩司事件にも関わっていた人物です。</li>
-          <li>「<a href="/blog/conan-romance-guide.html">名探偵コナン恋愛名場面ガイド</a>」に「服部平次×遠山和葉」を追加し、全5組の特集に更新しました。原作106巻での告白成立に加え、2026年9月26日〜10月10日にTVアニメ化される「茜色の千秋楽」の情報も掲載しています。</li>
-          <li>診断・ガチャ・シミュレーター系のコンテンツ（監督診断／制作会社診断／脚本家診断／視聴タイプ診断／この人は誰？クイズ／埋もれた名作ガチャ／評価シミュレーター）に、結果や出題対象を事前に読める一覧セクションを追加しました。これまでJavaScriptの実行後にしか表示されなかった内容を、ページを開いた時点で読めるようにしています。</li>
-          <li>「<a href="/blog/conan-beginner-guide.html">名探偵コナン初心者ガイド</a>」の第5話の紹介文を修正しました。ジン・ウォッカの初登場は第1話のため、「初めて登場する回」ではなく「物語として関わる回」という表現に訂正しました。</li>
-          <li>「<a href="/blog/conan-genetics-guide.html">名探偵コナン「親から子へ」名探偵の血筋ガイド</a>」「<a href="/blog/conan-advanced-guide.html">名探偵コナン上級ガイド</a>」の家族構成の表示で、スマホ表示時に文中で不自然に改行されていた箇所を、父・母それぞれ改行して表示されるように調整しました。</li>
-          <li>「<a href="/blog/conan-genetics-guide.html">名探偵コナン「親から子へ」名探偵の血筋ガイド</a>」の工藤優作の代表作シリーズ名を、「夜の署長」から正しくは「ナイトバロン」に修正しました。</li>
-          <li>「<a href="/blog/conan-beginner-guide.html">名探偵コナン初心者ガイド</a>」のHuluリンクが正しく機能していなかった不具合を修正し、Hulu公式のコナン映画配信一覧ページへのリンクに差し替えました。あわせて「ハロウィンの花嫁」の興行収入に関する記述（誤って「シリーズ歴代1位」としていました）と、「から紅の恋歌」の記述を、最新の興行収入データに基づいて修正しました。</li>
-          <li>「<a href="/blog/conan-advanced-guide.html">名探偵コナン上級ガイド</a>」の沖矢昴の紹介文を、「大学の非常勤講師」から正しくは「東都大学工学部の大学院生（工藤邸に居候）」に修正しました。</li>
-          <li>「<a href="/blog/conan-romance-guide.html">名探偵コナン恋愛名場面ガイド</a>」の快斗×青子の項目に、2人が厳密には姉妹作「まじっく快斗」の主人公であることの注記を追加しました。</li>
-          <li>新記事「<a href="/blog/conan-genetics-guide.html">名探偵コナン「親から子へ」名探偵の血筋ガイド【工藤家・服部家・毛利家・黒羽家】</a>」を公開しました。新一・平次・蘭・快斗の推理力や特技が、実は親から受け継いだものであることを、4つの家族に注目して解説しています。</li>
-          <li>「<a href="/blog/conan-beginner-guide.html">名探偵コナン初心者ガイド</a>」の映画5選の配信リンクを、全話・全作品を視聴できるHuluのみに整理しました。</li>
-          <li>新記事「<a href="/blog/conan-romance-guide.html">名探偵コナン恋愛名場面ガイド【新一×蘭・園子×京極・高木×佐藤・快斗×青子を時系列で振り返る】</a>」を公開しました。事件解決とはまた違う視点から、怪盗キッド編を含む4組のカップルの名場面を時系列で振り返っています。</li>
-          <li>新記事「<a href="/blog/conan-advanced-guide.html">名探偵コナン上級ガイド【正体判明ミステリーを時系列で整理：新出先生〜あの方編】</a>」を公開しました。初心者ガイドの続編（ネタバレ全開）。新出先生・沖矢昴・世良真純・安室透・RUM、そして黒の組織の頂点「あの方」まで、正体判明の流れを時系列で整理しています。</li>
-          <li>新記事「<a href="/blog/conan-beginner-guide.html">名探偵コナン初心者ガイド【親から子へ、今から見せるならこの順番で】</a>」を公開しました。原作・アニメ8割、劇場版全29作品視聴済みの管理人が、序盤の神回・おすすめ映画5選・アニオリとの付き合い方などをまとめています。</li>
-          <li>「<a href="/blog/spring2026-recommend.html">2026年夏アニメ作品を見た感想まとめ</a>」の「ぐらんぶる Season 3」をA評価からS評価に格上げしました（最終2話「沖縄再上陸」の出来の良さを踏まえて再評価）。あわせて、抜けていた「黄泉のツガイ」の行が「全作品評価まとめ表」に反映されていなかった不具合も修正しました。</li>
-          <li>「<a href="/blog/director-favorites.html">好きな監督の代表作まとめ</a>」に高松信司を追加し、7人→8人に拡充しました（<a href="/directory.html">名鑑</a>・関連ページのリンクも合わせて更新）。</li>
+          <li>「<a href="/games.html">診断・ガチャ一覧</a>」<wbr>ページで、<wbr>「視聴傾向診断<wbr>（あなたは何派？）」を<wbr>一番上に<wbr>配置しました。</li>
+          <li>「<a href="/anime-profile.html">あなたのアニメ履歴書</a>」<wbr>（履歴書診断）にも、他の<wbr>診断系コンテンツと<wbr>同様に<wbr>静的コンテンツを<wbr>追加しました。<wbr>診断で<wbr>分かる<wbr>5つの<wbr>ステータス・<wbr>4つの<wbr>視聴タイプ・<wbr>4つの<wbr>視聴スタイルを、<wbr>ページを<wbr>開いた<wbr>時点で<wbr>読めるように<wbr>しています。</li>
+          <li>「<a href="/blog/conan-romance-guide.html#heizikazuha">名探偵コナン恋愛名場面ガイド</a>」の<wbr>服部平次×遠山和葉の<wbr>項目を<wbr>修正しました。<wbr>TVアニメ2026年9月26日〜10月10日放送は<wbr>「茜色の<wbr>千秋楽<wbr>（告白成立エピソード）」その<wbr>ものの<wbr>アニメ化であり、<wbr>告白成立後の<wbr>原作展開<wbr>（FILE.1157<wbr>「星空の下で…」）は<wbr>現時点で<wbr>アニメ化未発表の<wbr>ため、<wbr>誤解の<wbr>ないよう項目を<wbr>分けました。</li>
+          <li><a href="/blog/">ブログ一覧ページ</a>の<wbr>「最新記事」の<wbr>並び順を、<wbr>レビュー記事5本→<wbr>特集記事4本の順に<wbr>変更しました。</li>
+          <li>「<a href="/blog/conan-advanced-guide.html#rum">名探偵コナン上級ガイド</a>」の<wbr>RUM編に<wbr>「黒田兵衛」の<wbr>項目を<wbr>追加しました。<wbr>元RUM最有力候補であり、<wbr>17年前の<wbr>羽田浩司事件にも<wbr>関わっていた<wbr>人物です。</li>
+          <li>「<a href="/blog/conan-romance-guide.html">名探偵コナン恋愛名場面ガイド</a>」に<wbr>「服部平次×遠山和葉」を<wbr>追加し、<wbr>全5組の<wbr>特集に<wbr>更新しました。<wbr>原作106巻での<wbr>告白成立に<wbr>加え、<wbr>2026年9月26日〜10月10日に<wbr>TVアニメ化される<wbr>「茜色の千秋楽」の<wbr>情報も<wbr>掲載しています。</li>
+          <li>診断・ガチャ・シミュレーター系の<wbr>コンテンツ<wbr>（監督診断／制作会社診断／脚本家診断／視聴タイプ診断／この人は<wbr>誰？<wbr>クイズ／埋もれた<wbr>名作ガチャ／評価シミュレーター）に、<wbr>結果や<wbr>出題対象を<wbr>事前に<wbr>読める<wbr>一覧セクションを<wbr>追加しました。<wbr>これまで<wbr>JavaScriptの<wbr>実行後にしか<wbr>表示されなかった<wbr>内容を、<wbr>ページを<wbr>開いた<wbr>時点で<wbr>読めるように<wbr>しています。</li>
+          <li>「<a href="/blog/conan-beginner-guide.html">名探偵コナン初心者ガイド</a>」の<wbr>第5話の<wbr>紹介文を<wbr>修正しました。<wbr>ジン・ウォッカの<wbr>初登場は<wbr>第1話の<wbr>ため、<wbr>「初めて登場する回」ではなく<wbr>「物語として関わる回」という<wbr>表現に<wbr>訂正しました。</li>
+          <li>「<a href="/blog/conan-genetics-guide.html">名探偵コナン<wbr>「親から子へ」<wbr>名探偵の<wbr>血筋ガイド</a>」<wbr>「<a href="/blog/conan-advanced-guide.html">名探偵コナン上級ガイド</a>」の<wbr>家族構成の<wbr>表示で、<wbr>スマホ表示時に<wbr>文中で<wbr>不自然に<wbr>改行されていた<wbr>箇所を、<wbr>父・母それぞれ改行して<wbr>表示されるように<wbr>調整しました。</li>
+          <li>「<a href="/blog/conan-genetics-guide.html">名探偵コナン<wbr>「親から子へ」<wbr>名探偵の<wbr>血筋ガイド</a>」の<wbr>工藤優作の<wbr>代表作シリーズ名を、<wbr>「夜の署長」から<wbr>正しくは<wbr>「ナイトバロン」に<wbr>修正しました。</li>
+          <li>「<a href="/blog/conan-beginner-guide.html">名探偵コナン初心者ガイド</a>」の<wbr>Huluリンクが<wbr>正しく<wbr>機能していなかった<wbr>不具合を<wbr>修正し、<wbr>Hulu公式の<wbr>コナン映画配信一覧ページへの<wbr>リンクに<wbr>差し替えました。<wbr>あわせて<wbr>「ハロウィンの花嫁」の<wbr>興行収入に<wbr>関する記述<wbr>（誤って<wbr>「シリーズ歴代1位」と<wbr>していました）と、<wbr>「から紅の恋歌」の<wbr>記述を、<wbr>最新の<wbr>興行収入データに<wbr>基づいて<wbr>修正しました。</li>
+          <li>「<a href="/blog/conan-advanced-guide.html">名探偵コナン上級ガイド</a>」の<wbr>沖矢昴の<wbr>紹介文を、<wbr>「大学の非常勤講師」から<wbr>正しくは<wbr>「東都大学工学部の<wbr>大学院生<wbr>（工藤邸に居候）」に<wbr>修正しました。</li>
+          <li>「<a href="/blog/conan-romance-guide.html">名探偵コナン恋愛名場面ガイド</a>」の<wbr>快斗×青子の<wbr>項目に、<wbr>2人が<wbr>厳密には<wbr>姉妹作<wbr>「まじっく快斗」の<wbr>主人公である<wbr>ことの<wbr>注記を<wbr>追加しました。</li>
+          <li>新記事<wbr>「<a href="/blog/conan-genetics-guide.html">名探偵コナン<wbr>「親から子へ」<wbr>名探偵の<wbr>血筋ガイド【工藤家・服部家・<wbr>毛利家・黒羽家】</a>」を<wbr>公開しました。<wbr>新一・<wbr>平次・蘭・快斗の<wbr>推理力や<wbr>特技が、実は<wbr>親から<wbr>受け継いだものである<wbr>ことを、<wbr>4つの<wbr>家族に<wbr>注目して<wbr>解説しています。</li>
+          <li>「<a href="/blog/conan-beginner-guide.html">名探偵コナン初心者ガイド</a>」の<wbr>映画5選の<wbr>配信リンクを、<wbr>全話・全作品を<wbr>視聴できる<wbr>Huluのみに<wbr>整理しました。</li>
+          <li>新記事<wbr>「<a href="/blog/conan-romance-guide.html">名探偵コナン恋愛名場面ガイド【新一×蘭・園子×京極・高木×佐藤・快斗×青子を<wbr>時系列で<wbr>振り返る】</a>」を<wbr>公開しました。<wbr>事件解決とはまた違う<wbr>視点から、<wbr>怪盗キッド編を含む<wbr>4組の<wbr>カップルの<wbr>名場面を<wbr>時系列で振り<wbr>返っています。</li>
+          <li>新記事<wbr>「<a href="/blog/conan-advanced-guide.html">名探偵コナン上級ガイド【正体判明ミステリーを<wbr>時系列で<wbr>整理：新出先生〜あの<wbr>方編】</a>」を<wbr>公開しました。<wbr>初心者ガイドの続編<wbr>（ネタバレ全開）。<wbr>新出先生・沖矢昴・世良真純・安室透・RUM、そして黒の<wbr>組織の頂点<wbr>「あの方」まで、<wbr>正体判明の<wbr>流れを<wbr>時系列で<wbr>整理しています。</li>
+          <li>新記事<wbr>「<a href="/blog/conan-beginner-guide.html">名探偵コナン初心者ガイド【親から<wbr>子へ、<wbr>今から<wbr>見せるならこの<wbr>順番で】</a>」を<wbr>公開しました。<wbr>原作・アニメ8割、<wbr>劇場版全29作品視聴済みの<wbr>管理人が、<wbr>序盤の<wbr>神回・おすすめ映画5選・アニオリとの<wbr>付き合い方などを<wbr>まとめています。</li>
+          <li>「<a href="/blog/spring2026-recommend.html">2026年夏アニメ作品を見た<wbr>感想まとめ</a>」の<wbr>「ぐらんぶる Season 3」を<wbr>A評価から<wbr>S評価に<wbr>格上げしました<wbr>（最終2話<wbr>「沖縄再上陸」の<wbr>出来の<wbr>良さを<wbr>踏まえて<wbr>再評価）。<wbr>あわせて、<wbr>抜けていた<wbr>「黄泉のツガイ」の行が<wbr>「全作品評価まとめ表」に<wbr>反映されていなかった<wbr>不具合も<wbr>修正しました。</li>
+          <li>「<a href="/blog/director-favorites.html">好きな<wbr>監督の<wbr>代表作まとめ</a>」に<wbr>高松信司を<wbr>追加し、<wbr>7人→8人に<wbr>拡充しました<wbr>（<a href="/directory.html">名鑑</a>・関連<wbr>ページの<wbr>リンクも<wbr>合わせて<wbr>更新）。</li>
         </ul>
       </div>
     </div>
@@ -619,7 +626,7 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
       <div class="log-card">
         <div class="log-tags"><span class="log-tag improve">改良</span></div>
         <ul class="log-list">
-          <li>「<a href="/director-diagnosis.html">あなたに合う監督診断</a>」の診断ロジックを改善しました。質問数を5問→7問に増やし、選択肢ごとの加点も複数の監督にまたがるよう調整することで、結果がはっきり分かれやすくなりました（同点になった場合の判定方法も、特定の監督に偏らないよう見直しています）。</li>
+          <li>「<a href="/director-diagnosis.html">あなたに合う監督診断</a>」の<wbr>診断ロジックを<wbr>改善しました。<wbr>質問数を<wbr>5問→7問に<wbr>増やし、<wbr>選択肢ごとの<wbr>加点も<wbr>複数の<wbr>監督に<wbr>またがるよう調整する<wbr>ことで、<wbr>結果が<wbr>はっきり<wbr>分かれやすくなりました<wbr>（同点に<wbr>なった<wbr>場合の<wbr>判定方法も、<wbr>特定の<wbr>監督に<wbr>偏らないよう<wbr>見直しています）。</li>
         </ul>
       </div>
     </div>
@@ -629,8 +636,8 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
       <div class="log-card">
         <div class="log-tags"><span class="log-tag new">新規</span><span class="log-tag improve">改良</span></div>
         <ul class="log-list">
-          <li>「<a href="/glossary.html">用語集</a>」に新しい言葉「0話切り」を追加しました（本編を見る前にPVやYouTube動画の時点で視聴対象から外すこと。「1話切り」のひとつ上に追加）。</li>
-          <li>「<a href="/glossary.html">用語集</a>」の「円盤」の解説を加筆しました（2020年代の配信ランキング移行と、<a href="/glossary.html#kyomuwaku">虚無枠</a>が増えている背景についての管理人の考えを追記し、用語ページ内でリンクするようにしました）。</li>
+          <li>「<a href="/glossary.html">用語集</a>」に<wbr>新しい言葉<wbr>「0話切り」を<wbr>追加しました<wbr>（本編を見る前に<wbr>PVや<wbr>YouTube動画の<wbr>時点で<wbr>視聴対象から外す<wbr>こと。<wbr>「1話切り」の<wbr>ひとつ上に<wbr>追加）。</li>
+          <li>「<a href="/glossary.html">用語集</a>」の<wbr>「円盤」の<wbr>解説を<wbr>加筆しました<wbr>（2020年代の<wbr>配信ランキング移行と、<a href="/glossary.html#kyomuwaku"><wbr>虚無枠</a>が<wbr>増えている<wbr>背景に<wbr>ついての<wbr>管理人の<wbr>考えを<wbr>追記し、<wbr>用語ページ内で<wbr>リンクするようにしました）。</li>
         </ul>
       </div>
     </div>
@@ -640,7 +647,7 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
       <div class="log-card">
         <div class="log-tags"><span class="log-tag new">新規</span></div>
         <ul class="log-list">
-          <li>「<a href="/blog/spring2026-recommend.html">2026年夏アニメ作品を見た感想まとめ</a>」に「黄泉のツガイ」（荒川弘原作／BONES制作、2026年4月〜連続2クール）をA評価として追加しました（全9作品→10作品）。</li>
+          <li>「<a href="/blog/spring2026-recommend.html">2026年夏アニメ作品を見た<wbr>感想まとめ</a>」に<wbr>「黄泉のツガイ」<wbr>（荒川弘原作／BONES制作、<wbr>2026年4月〜連続2クール）を<wbr>A評価として<wbr>追加しました<wbr>（全9作品→10作品）。</li>
         </ul>
       </div>
     </div>
@@ -650,14 +657,14 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
       <div class="log-card">
         <div class="log-tags"><span class="log-tag new">新規</span><span class="log-tag fix">修正</span></div>
         <ul class="log-list">
-          <li>「<a href="/blog/hidden-gems-2023-2024.html">2023〜2024年に見逃した隠れた名作アニメ</a>」を5選から18選に拡充しました（お兄ちゃんはおしまい!・ダークギャザリング・ミギとダリ・Girls Band Cry・忘却バッテリー・逃げ上手の若君・天穂のサクナヒメ・トリリオンゲームなど13作品を追加）。</li>
-          <li>ブログ一覧ページと「<a href="/hidden-gems-gacha.html">埋もれた名作ガチャ</a>」内の同記事へのリンク表記も18選に更新しました。</li>
-          <li>「<a href="/hidden-gems-gacha.html">埋もれた名作ガチャ</a>」に追加した13作品を新規収録し、作品数を100作品→113作品に拡充しました（TOPページ・診断/ガチャ一覧の表記も更新）。</li>
-          <li>「<a href="/blog/worst-anime-honest.html">正直しんどかったアニメ</a>」記事の「虚無枠」問題の見出し・本文中の年数表記を「2024〜2025年」から「2023年頃から」に統一しました。</li>
-          <li>「<a href="/blog/checklist-anime.html">見るアニメの選び方チェックリスト</a>」内の各特集記事へのリンク表記が軒並み古い人数・社数のままだったのを修正しました（脚本家5→8人、監督4→7人、制作会社6→16社、男性声優6→9人、女性声優5→8人、名バイプレイヤー6→9人、次世代の主役級6→10人、アーティスト8→11組）。</li>
-          <li>「<a href="/blog/male-seiyuu-favorites.html">好きな男性声優の代表作まとめ</a>」で、本文には9人分（花江夏樹・神谷浩史・下野紘を含む）のプロフィールが存在するのに、見出しとパンくずだけ「6人」のまま追加3名が反映されていなかった矛盾を修正しました。</li>
-          <li>ヘッダー背景の透明度をサイト全体で調整しました（不透明度95〜90%→98%）。キービジュアル画像がヘッダーに透けて見え、明るく白っぽくなってしまう現象を解消し、全ページで落ち着いたトーンに統一しました。</li>
-          <li>TOPページなどのナビゲーション（🏠ホーム・📝ブログ・📖用語集・🗂️名鑑・🎮診断/ガチャ）の絵文字アイコンをモノトーン化し、配信バッジと同じ落ち着いた見た目に統一しました。</li>
+          <li>「<a href="/blog/hidden-gems-2023-2024.html">2023〜2024年に<wbr>見逃した<wbr>隠れた<wbr>名作アニメ</a>」を<wbr>5選から<wbr>18選に<wbr>拡充しました<wbr>（お兄ちゃんは<wbr>おしまい!・ダークギャザリング・ミギと<wbr>ダリ・Girls Band Cry・忘却バッテリー・逃げ上手の<wbr>若君・天穂の<wbr>サクナヒメ・トリリオンゲームなど<wbr>13作品を<wbr>追加）。</li>
+          <li>ブログ一覧ページと<wbr>「<a href="/hidden-gems-gacha.html">埋もれた名作ガチャ</a>」内の<wbr>同記事への<wbr>リンク表記も<wbr>18選に<wbr>更新しました。</li>
+          <li>「<a href="/hidden-gems-gacha.html">埋もれた名作ガチャ</a>」に<wbr>追加した<wbr>13作品を<wbr>新規収録し、<wbr>作品数を<wbr>100作品→113作品に<wbr>拡充しました<wbr>（TOPページ・診断/ガチャ一覧の<wbr>表記も<wbr>更新）。</li>
+          <li>「<a href="/blog/worst-anime-honest.html">正直しんどかった<wbr>アニメ</a>」<wbr>記事の<wbr>「虚無枠」<wbr>問題の<wbr>見出し・本文中の<wbr>年数表記を<wbr>「2024〜2025年」から<wbr>「2023年頃から」に<wbr>統一しました。</li>
+          <li>「<a href="/blog/checklist-anime.html">見る<wbr>アニメの<wbr>選び方チェックリスト</a>」内の<wbr>各特集記事への<wbr>リンク表記が<wbr>軒並み古い<wbr>人数・社数の<wbr>ままだったのを<wbr>修正しました<wbr>（脚本家5→8人、<wbr>監督4→7人、<wbr>制作会社6→16社、<wbr>男性声優6→9人、<wbr>女性声優5→8人、<wbr>名バイプレイヤー6→9人、<wbr>次世代の<wbr>主役級6→10人、<wbr>アーティスト8→11組）。</li>
+          <li>「<a href="/blog/male-seiyuu-favorites.html">好きな<wbr>男性声優の<wbr>代表作まとめ</a>」で、<wbr>本文には<wbr>9人分<wbr>（花江夏樹・神谷浩史・下野紘を<wbr>含む）の<wbr>プロフィールが<wbr>存在するのに、<wbr>見出しと<wbr>パンくずだけ<wbr>「6人」のまま<wbr>追加3名が<wbr>反映されていなかった<wbr>矛盾を<wbr>修正しました。</li>
+          <li>ヘッダー背景の<wbr>透明度を<wbr>サイト全体で<wbr>調整しました<wbr>（不透明度95〜90%→98%）。<wbr>キービジュアル画像が<wbr>ヘッダーに<wbr>透けて<wbr>見え、<wbr>明るく<wbr>白っぽくなってしまう<wbr>現象を<wbr>解消し、<wbr>全ページで<wbr>落ち着いた<wbr>トーンに<wbr>統一しました。</li>
+          <li>TOPページなどの<wbr>ナビゲーション<wbr>（🏠ホーム・📝ブログ・📖用語集・🗂️名鑑・🎮診断/ガチャ）の<wbr>絵文字アイコンを<wbr>モノトーン化し、<wbr>配信バッジと同じ<wbr>落ち着いた見た目に<wbr>統一しました。</li>
         </ul>
       </div>
     </div>
@@ -667,11 +674,11 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
       <div class="log-card">
         <div class="log-tags"><span class="log-tag new">新規</span><span class="log-tag fix">修正</span></div>
         <ul class="log-list">
-          <li>「<a href="/hidden-gems-gacha.html">埋もれた名作ガチャ</a>」の作品数を74作品→100作品に拡充しました（蟲師・輪るピングドラム・千年女優・Angel Beats!・電脳コイル・天空のエスカフローネなど、歴代の隠れた名作を追加）。</li>
-          <li><a href="/games.html">診断・ガチャ一覧</a>の表記も更新しました。</li>
-          <li>「あなたに合う監督診断」ページ（director-diagnosis.html）が、9月7日の更新時にファイルを取り違え、「声優・スタッフ名鑑」ページと同じ内容になってしまっていた重大な不具合を修正しました。</li>
-          <li>この機会に診断結果へ新海誠・山田尚子・幾原邦彦の3名を追加し、名鑑ページと同じ計7名から診断できるようにしました。</li>
-          <li>TOPページ・about.htmlのInstagramボタンが、統一したはずの配色（X・TikTokと同じ黒）に反映されておらず、旧来の虹色グラデーションのままだった反映漏れを修正しました。</li>
+          <li>「<a href="/hidden-gems-gacha.html">埋もれた名作ガチャ</a>」の<wbr>作品数を<wbr>74作品→100作品に<wbr>拡充しました<wbr>（蟲師・輪る<wbr>ピングドラム・<wbr>千年女優・Angel Beats!・電脳コイル・天空の<wbr>エスカフローネなど、<wbr>歴代の<wbr>隠れた<wbr>名作を<wbr>追加）。</li>
+          <li><a href="/games.html">診断・ガチャ一覧</a>の<wbr>表記も<wbr>更新しました。</li>
+          <li>「あなたに合う監督診断」<wbr>ページ<wbr>（director-diagnosis.html）が、<wbr>9月7日の<wbr>更新時に<wbr>ファイルを<wbr>取り違え、<wbr>「声優・スタッフ名鑑」<wbr>ページと同じ<wbr>内容に<wbr>なってしまっていた<wbr>重大な<wbr>不具合を<wbr>修正しました。</li>
+          <li>この<wbr>機会に<wbr>診断結果へ<wbr>新海誠・山田尚子・幾原邦彦の<wbr>3名を<wbr>追加し、<wbr>名鑑ページと同じ<wbr>計7名から<wbr>診断できるようにしました。</li>
+          <li>TOPページ・about.htmlの<wbr>Instagramボタンが、<wbr>統一したはずの配色<wbr>（X・TikTokと同じ<wbr>黒）に<wbr>反映されておらず、<wbr>旧来の<wbr>虹色グラデーションの<wbr>ままだった<wbr>反映漏れを<wbr>修正しました。</li>
         </ul>
       </div>
     </div>
@@ -681,15 +688,15 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
       <div class="log-card">
         <div class="log-tags"><span class="log-tag improve">改良</span><span class="log-tag fix">修正</span><span class="log-tag new">新規</span></div>
         <ul class="log-list">
-          <li>TOPページの診断・ガチャ・隠れた名作バナー4種から、広告的に見える「光る演出」を完全に廃止し、他の通常カードと同じ落ち着いた枠線に統一しました。</li>
-          <li>「TRENDING」バッジ（実際に表示されていたJS側の箇所）も「今、注目の作品」に修正しました。</li>
-          <li>作品詳細のスコア表示を「MAL評価」と明記し、MyAnimeListのユーザー評価データであることを注記しました（出典を明確にすることで、より誠実な表示に）。</li>
-          <li>`sitemap.xml`を全面更新しました（21件→38件、存在しない古いURLを削除し、診断・ガチャ系ページや新規ブログ記事を追加）。</li>
-          <li>配信サービスのバッジ（dアニメ・Amazon・Netflix等）のデザインを、塗りつぶしボタン風から控えめな枠線スタイルに変更しました（TOPページ＋ブログ18記事）。AdSense審査対策として「他サイトへの誘導」という印象を和らげる目的です。</li>
-          <li>TOPページの「埋もれた名作ガチャ」バナーに残っていた古い作品数表記（全23作品）を、正しい全74作品に修正しました。</li>
-          <li>「<a href="/hidden-gems-gacha.html">埋もれた名作ガチャ</a>」の作品数を23作品→74作品に大幅拡充しました（オッドタクシー・宝石の国・Vivy・デカダンス・氷菓など、歴代の隠れた名作を追加）。</li>
-          <li><a href="/games.html">診断・ガチャ一覧</a>の表記も更新しました。</li>
-          <li>TOPページの見出しを「【独自レビュー】管理人が選ぶ！2026年7月開始おすすめアニメ！」から「【独自レビュー】管理人が選ぶ！2026年7月(夏クール)おすすめアニメ！」に変更しました。</li>
+          <li>TOPページの<wbr>診断・ガチャ・隠れた<wbr>名作バナー4種から、<wbr>広告的に<wbr>見える<wbr>「光る演出」を<wbr>完全に<wbr>廃止し、他の<wbr>通常カードと同じ<wbr>落ち着いた<wbr>枠線に<wbr>統一しました。</li>
+          <li>「TRENDING」<wbr>バッジ<wbr>（実際に<wbr>表示されていた<wbr>JS側の<wbr>箇所）も<wbr>「今、注目の作品」に<wbr>修正しました。</li>
+          <li>作品詳細の<wbr>スコア表示を<wbr>「MAL評価」と<wbr>明記し、<wbr>MyAnimeListの<wbr>ユーザー評価データである<wbr>ことを<wbr>注記しました<wbr>（出典を<wbr>明確にする<wbr>ことで、より<wbr>誠実な<wbr>表示に）。</li>
+          <li>`sitemap.xml`を全面<wbr>更新しました<wbr>（21件→38件、<wbr>存在しない古い<wbr>URLを<wbr>削除し、<wbr>診断・ガチャ系ページや<wbr>新規ブログ記事を<wbr>追加）。</li>
+          <li>配信サービスの<wbr>バッジ<wbr>（dアニメ・Amazon・Netflix等）の<wbr>デザインを、<wbr>塗りつぶしボタン風から<wbr>控えめな<wbr>枠線スタイルに<wbr>変更しました<wbr>（TOPページ＋ブログ18記事）。<wbr>AdSense審査対策として<wbr>「他サイトへの誘導」という<wbr>印象を<wbr>和らげる<wbr>目的です。</li>
+          <li>TOPページの<wbr>「埋もれた名作ガチャ」<wbr>バナーに<wbr>残っていた古い<wbr>作品数表記<wbr>（全23作品）を、<wbr>正しい<wbr>全74作品に<wbr>修正しました。</li>
+          <li>「<a href="/hidden-gems-gacha.html">埋もれた名作ガチャ</a>」の<wbr>作品数を<wbr>23作品→74作品に<wbr>大幅拡充しました<wbr>（オッドタクシー・宝石の<wbr>国・Vivy・デカダンス・氷菓など、<wbr>歴代の<wbr>隠れた<wbr>名作を<wbr>追加）。</li>
+          <li><a href="/games.html">診断・ガチャ一覧</a>の<wbr>表記も<wbr>更新しました。</li>
+          <li>TOPページの<wbr>見出しを<wbr>「【独自レビュー】管理人が<wbr>選ぶ！<wbr>2026年7月開始おすすめアニメ！」から<wbr>「【独自レビュー】管理人が<wbr>選ぶ！<wbr>2026年7月<wbr>（夏クール）<wbr>おすすめアニメ！」に<wbr>変更しました。</li>
         </ul>
       </div>
     </div>
@@ -699,16 +706,16 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
       <div class="log-card">
         <div class="log-tags"><span class="log-tag fix">修正</span><span class="log-tag improve">改良</span><span class="log-tag fix">変更</span></div>
         <ul class="log-list">
-          <li>「<a href="/blog/spring2026-recommend.html">2026年夏アニメ作品を見た感想まとめ</a>」「<a href="/blog/2026-spring-all.html">2026年春アニメ作品を見た感想まとめ</a>」内の配信バッジ（dアニメ・Amazon・Netflix）が、クリックしても反応しない不具合を修正しました。</li>
-          <li>原因はバッジが`&lt;span&gt;`要素（リンク機能なし）になっていたことでした。全51箇所を正しい`&lt;a href&gt;`リンクに修正しました。</li>
-          <li>TOPページの「🎁 公式グッズ」「🛍️ コラボグッズ」バッジを削除しました（A8.net解約に伴う対応）。</li>
-          <li>残っていたA8.netの計測タグ（トラッキング画像）も全て削除しました。</li>
-          <li><a href="/about.html">開発者の思い</a>ページに、管理人の視聴歴（23年）・月間視聴本数（12本前後）など、具体的なプロフィール情報を追加しました。</li>
-          <li>サイト全体（TOPページ・ブログ記事21本）から、ABEMA・DMM TV・U-NEXTの配信バッジを削除しました（代替サービスに移行のため）。</li>
-          <li>該当するA8.netのアフィリエイト計測タグも合わせて削除しました。</li>
-          <li><a href="/blog/">ブログ一覧ページ</a>の記事の並び順を整理しました（季節レビュー→ジャンル別ランキング・隠れた名作→管理人の軸→特集記事、の自然な流れに変更）。</li>
-          <li>「2026年春アニメ作品を見た感想まとめ」のタグを、他のレビュー記事と統一して緑色の「レビュー」表記に変更しました。</li>
-          <li>「<a href="/blog/spring2026-recommend.html">2026年夏アニメ作品を見た感想まとめ</a>」内、無職転生Ⅲの評価をS評価（9.2）からB評価（6.9）に見直しました（1〜2話のエリス修行編がピークで、以降の日常パートが長く続く点を踏まえて）。</li>
+          <li>「<a href="/blog/spring2026-recommend.html">2026年夏アニメ作品を見た<wbr>感想まとめ</a>」<wbr>「<a href="/blog/2026-spring-all.html">2026年春アニメ作品を見た<wbr>感想まとめ</a>」内の<wbr>配信バッジ<wbr>（dアニメ・Amazon・Netflix）が、<wbr>クリックしても<wbr>反応しない<wbr>不具合を<wbr>修正しました。</li>
+          <li>原因は<wbr>バッジが<wbr>`&lt;span&gt;`要素<wbr>（リンク機能なし）に<wbr>なっていた<wbr>ことでした。<wbr>全51箇所を<wbr>正しい<wbr>`&lt;a href&gt;`リンクに<wbr>修正しました。</li>
+          <li>TOPページの<wbr>「🎁 公式グッズ」<wbr>「🛍️ コラボグッズ」<wbr>バッジを<wbr>削除しました<wbr>（A8.net解約に伴う<wbr>対応）。</li>
+          <li>残っていた<wbr>A8.netの<wbr>計測タグ<wbr>（トラッキング画像）も全て<wbr>削除しました。</li>
+          <li><a href="/about.html">開発者の<wbr>思い</a>ページに、<wbr>管理人の<wbr>視聴歴<wbr>（23年）・月間視聴本数<wbr>（12本前後）など、<wbr>具体的な<wbr>プロフィール情報を<wbr>追加しました。</li>
+          <li>サイト全体<wbr>（TOPページ・ブログ記事21本）から、<wbr>ABEMA・DMM TV・U-NEXTの<wbr>配信バッジを<wbr>削除しました<wbr>（代替サービスに<wbr>移行の<wbr>ため）。</li>
+          <li>該当する<wbr>A8.netの<wbr>アフィリエイト計測タグも<wbr>合わせて<wbr>削除しました。</li>
+          <li><a href="/blog/">ブログ一覧ページ</a>の<wbr>記事の<wbr>並び順を<wbr>整理しました<wbr>（季節レビュー→ジャンル別ランキング・隠れた<wbr>名作→管理人の<wbr>軸→特集記事、の<wbr>自然な<wbr>流れに<wbr>変更）。</li>
+          <li>「2026年春アニメ作品を見た<wbr>感想まとめ」の<wbr>タグを、他の<wbr>レビュー記事と<wbr>統一して<wbr>緑色の<wbr>「レビュー」<wbr>表記に<wbr>変更しました。</li>
+          <li>「<a href="/blog/spring2026-recommend.html">2026年夏アニメ作品を見た<wbr>感想まとめ</a>」内、<wbr>無職転生Ⅲの<wbr>評価を<wbr>S評価<wbr>（9.2）から<wbr>B評価<wbr>（6.9）に<wbr>見直しました<wbr>（1〜2話の<wbr>エリス修行編が<wbr>ピークで、<wbr>以降の<wbr>日常パートが長く続く点を<wbr>踏まえて）。</li>
         </ul>
       </div>
     </div>
@@ -718,8 +725,8 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
       <div class="log-card">
         <div class="log-tags"><span class="log-tag new">新規</span></div>
         <ul class="log-list">
-          <li>声優特集4記事に計12名を追加しました：<a href="/blog/male-seiyuu-favorites.html">男性声優</a>（花江夏樹・神谷浩史・下野紘を追加、6→9人）／<a href="/blog/female-seiyuu-favorites.html">女性声優</a>（石川由依・竹達彩奈・東山奈央を追加、5→8人）／<a href="/blog/legend-seiyuu-favorites.html">名バイプレイヤー</a>（山寺宏一・大塚明夫・中井和哉を追加、6→9人）／<a href="/blog/nextgen-seiyuu-favorites.html">次世代主役級</a>（高橋李依・伊藤美来・石見舞菜香を追加、7→10人）。</li>
-          <li><a href="/directory.html">声優・スタッフ名鑑</a>にも同じく12名を追加しました。</li>
+          <li>声優特集4記事に<wbr>計12名を<wbr>追加しました：<a href="/blog/male-seiyuu-favorites.html">男性声優</a><wbr>（花江夏樹・神谷浩史・下野紘を<wbr>追加、<wbr>6→9人）<wbr>／<a href="/blog/female-seiyuu-favorites.html">女性声優</a><wbr>（石川由依・竹達彩奈・<wbr>東山奈央を<wbr>追加、<wbr>5→8人）<wbr>／<a href="/blog/legend-seiyuu-favorites.html">名バイプレイヤー</a><wbr>（山寺宏一・<wbr>大塚明夫・中井和哉を<wbr>追加、<wbr>6→9人）<wbr>／<a href="/blog/nextgen-seiyuu-favorites.html">次世代主役級</a><wbr>（高橋李依・伊藤美来・石見舞菜香を<wbr>追加、<wbr>7→10人）。</li>
+          <li><a href="/directory.html">声優・スタッフ名鑑</a>にも<wbr>同じく<wbr>12名を<wbr>追加しました。</li>
         </ul>
       </div>
     </div>
@@ -729,29 +736,29 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
       <div class="log-card">
         <div class="log-tags"><span class="log-tag new">新規</span><span class="log-tag fix">修正</span><span class="log-tag improve">改良</span></div>
         <ul class="log-list">
-          <li>「<a href="/blog/artist-anime-favorites.html">好きなアーティストが手掛けたアニメまとめ</a>」に緑黄色社会・ずっと真夜中でいいのに。・BUMP OF CHICKENを追加し、8組→11組に拡充しました。</li>
-          <li>「<a href="/blog/studio-favorites.html">好きな制作会社の代表作まとめ</a>」に10社を追加し、6社→16社に拡充しました（<a href="/studio-diagnosis.html">制作会社診断</a>と同じラインナップになりました）。</li>
-          <li>スタジオジブリ作品は現在国内サブスクで配信されていないため、その旨を明記しています。</li>
-          <li>「<a href="/blog/scriptwriter-favorites.html">好きな脚本家の代表作まとめ</a>」に虚淵玄・大河内一楼・上江洲誠を追加し、5人→8人に拡充しました。</li>
-          <li>「<a href="/blog/director-favorites.html">好きな監督の代表作まとめ</a>」に新海誠・山田尚子・幾原邦彦を追加し、4人→7人に拡充しました。</li>
-          <li>隠しミニゲーム「スタジオランナー」に3レーンの左右移動を追加しました。障害物はジャンプで飛び越えるか、レーン移動で避けるかを選べるようになりました。</li>
-          <li>操作方法：PC＝矢印キー、スマホ＝左右スワイプでレーン移動、タップでジャンプ。</li>
-          <li>「スタジオランナー」が引き続き起動しない件について、複数の対策を追加しました。</li>
-          <li>Three.js読み込み元をより安定したCDN（jsDelivr）に変更。</li>
-          <li>画面表示直後は要素のサイズが正しく取得できないことがあるため、1フレーム待ってから3D初期化するよう修正。</li>
-          <li>サイズ取得に失敗した場合の固定サイズフォールバックを追加。</li>
-          <li>ライブラリ読み込み自体に失敗した場合、真っ黒画面ではなくエラーメッセージを表示するよう変更。</li>
-          <li>隠しミニゲーム「スタジオランナー」の3D画面が真っ黒になり起動しない重大な不具合を修正しました。</li>
-          <li>原因はThree.jsライブラリの読み込みURLが存在しないバージョン（r150）を指定していたことでした。cdnjsで実在する正しいバージョン（r128）に修正しました。</li>
-          <li>隠しミニゲーム「スタジオランナー」をThree.js（3D描画ライブラリ）を用いた疑似3D視点にリニューアルしました。</li>
-          <li>キャラクターは3Dモデル化（魔法少女風／コジプロのみおじさん風）、コース・障害物も奥行きのある3D表現に変更しました。</li>
-          <li>ゲームロジック（ジャンプ物理・難易度上昇・コジプロ専用ハードモード・小島監督ネタ）はそのまま維持しています。</li>
-          <li>TOPページの保険用データ（BACKUP_DATA）を、夏アニメから秋アニメ（薬屋のひとりごと第3期／氷の城壁第2期／アオのハコSeason2／らんま1/2第3期）に更新しました。外部API取得が万が一失敗しても、10月以降は秋アニメが表示されるようにするための事前対応です。</li>
-          <li>TOPページに「【独自レビュー】管理人が選ぶ！2026年10月開始おすすめアニメ！」セクションを新設しました（<a href="/blog/autumn2026-recommend.html">秋アニメ記事</a>より6作品を掲載、7月開始セクションの上に配置）。</li>
-          <li>薬屋のひとりごと第3期／氷の城壁第2期／アオのハコSeason2／らんま1/2第3期／とある暗部の少女共棲／FX戦士くるみちゃんを紹介。</li>
-          <li>「<a href="/blog/autumn2026-recommend.html">2026年秋アニメ おすすめ6選</a>」を公開しました（薬屋のひとりごと第3期／氷の城壁第2期／アオのハコSeason2／らんま1/2第3期／とある暗部の少女共棲／FX戦士くるみちゃん）。</li>
-          <li>TOPページのバナーを夏アニメ記事から秋アニメ記事に差し替えました。</li>
-          <li>ブログトップに新記事のカードを追加しました。</li>
+          <li>「<a href="/blog/artist-anime-favorites.html">好きな<wbr>アーティストが<wbr>手掛けた<wbr>アニメまとめ</a>」に<wbr>緑黄色社会・ずっと<wbr>真夜中で<wbr>いいのに。・<wbr>BUMP OF CHICKENを<wbr>追加し、<wbr>8組→11組に<wbr>拡充しました。</li>
+          <li>「<a href="/blog/studio-favorites.html">好きな<wbr>制作会社の<wbr>代表作まとめ</a>」に<wbr>10社を<wbr>追加し、<wbr>6社→16社に<wbr>拡充しました<wbr>（<a href="/studio-diagnosis.html">制作会社診断</a>と同じ<wbr>ラインナップに<wbr>なりました）。</li>
+          <li>スタジオジブリ作品は<wbr>現在国内サブスクで<wbr>配信されていないため、その旨を<wbr>明記しています。</li>
+          <li>「<a href="/blog/scriptwriter-favorites.html">好きな<wbr>脚本家の<wbr>代表作まとめ</a>」に<wbr>虚淵玄・大河内一楼・上江洲誠を<wbr>追加し、<wbr>5人→8人に<wbr>拡充しました。</li>
+          <li>「<a href="/blog/director-favorites.html">好きな<wbr>監督の<wbr>代表作まとめ</a>」に<wbr>新海誠・山田尚子・幾原邦彦を<wbr>追加し、<wbr>4人→7人に<wbr>拡充しました。</li>
+          <li>隠しミニゲーム<wbr>「スタジオランナー」に<wbr>3レーンの左右<wbr>移動を<wbr>追加しました。<wbr>障害物は<wbr>ジャンプで<wbr>飛び越えるか、<wbr>レーン移動で<wbr>避けるかを<wbr>選べるようになりました。</li>
+          <li>操作方法：PC＝矢印キー、<wbr>スマホ＝左右スワイプで<wbr>レーン移動、<wbr>タップで<wbr>ジャンプ。</li>
+          <li>「スタジオランナー」が<wbr>引き続き<wbr>起動しない件に<wbr>ついて、<wbr>複数の<wbr>対策を<wbr>追加しました。</li>
+          <li>Three.js読み込み元をより<wbr>安定した<wbr>CDN<wbr>（jsDelivr）に<wbr>変更。</li>
+          <li>画面表示直後は<wbr>要素の<wbr>サイズが<wbr>正しく<wbr>取得できない<wbr>ことがある<wbr>ため、<wbr>1フレーム待ってから<wbr>3D初期化する<wbr>よう修正。</li>
+          <li>サイズ取得に<wbr>失敗した<wbr>場合の<wbr>固定サイズフォールバックを<wbr>追加。</li>
+          <li>ライブラリ読み込み自体に<wbr>失敗した<wbr>場合、<wbr>真っ黒画面ではなく<wbr>エラーメッセージを<wbr>表示する<wbr>よう変更。</li>
+          <li>隠しミニゲーム<wbr>「スタジオランナー」の<wbr>3D画面が<wbr>真っ黒になり<wbr>起動しない<wbr>重大な<wbr>不具合を<wbr>修正しました。</li>
+          <li>原因は<wbr>Three.jsライブラリの<wbr>読み込みURLが<wbr>存在しない<wbr>バージョン<wbr>（r150）を<wbr>指定していた<wbr>ことでした。<wbr>cdnjsで<wbr>実在する<wbr>正しい<wbr>バージョン<wbr>（r128）に<wbr>修正しました。</li>
+          <li>隠しミニゲーム<wbr>「スタジオランナー」を<wbr>Three.js<wbr>（3D描画ライブラリ）を<wbr>用いた<wbr>疑似3D視点に<wbr>リニューアルしました。</li>
+          <li>キャラクターは<wbr>3Dモデル化<wbr>（魔法少女風／コジプロのみ<wbr>おじさん<wbr>風）、<wbr>コース・障害物も<wbr>奥行きのある<wbr>3D表現に<wbr>変更しました。</li>
+          <li>ゲームロジック<wbr>（ジャンプ物理・難易度上昇・コジプロ専用ハードモード・<wbr>小島監督ネタ）は<wbr>そのまま<wbr>維持しています。</li>
+          <li>TOPページの<wbr>保険用データ<wbr>（BACKUP_DATA）を、<wbr>夏アニメから<wbr>秋アニメ<wbr>（薬屋の<wbr>ひとりごと<wbr>第3期／氷の<wbr>城壁第2期／アオの<wbr>ハコSeason2／らんま1/2第3期）に<wbr>更新しました。<wbr>外部API取得が万が<wbr>一失敗しても、<wbr>10月以降は<wbr>秋アニメが<wbr>表示されるようにする<wbr>ための<wbr>事前対応です。</li>
+          <li>TOPページに<wbr>「【独自レビュー】管理人が<wbr>選ぶ！<wbr>2026年10月開始おすすめアニメ！」<wbr>セクションを<wbr>新設しました<wbr>（<a href="/blog/autumn2026-recommend.html">秋アニメ記事</a>より<wbr>6作品を<wbr>掲載、<wbr>7月開始セクションの上に<wbr>配置）。</li>
+          <li>薬屋の<wbr>ひとりごと<wbr>第3期／氷の<wbr>城壁第2期／アオの<wbr>ハコSeason2／らんま1/2第3期／とある<wbr>暗部の<wbr>少女共棲／FX戦士くる<wbr>みちゃんを<wbr>紹介。</li>
+          <li>「<a href="/blog/autumn2026-recommend.html">2026年秋アニメ おすすめ6選</a>」を<wbr>公開しました<wbr>（薬屋の<wbr>ひとりごと<wbr>第3期／氷の<wbr>城壁第2期／アオの<wbr>ハコSeason2／らんま1/2第3期／とある<wbr>暗部の<wbr>少女共棲／FX戦士くる<wbr>みちゃん）。</li>
+          <li>TOPページの<wbr>バナーを<wbr>夏アニメ記事から<wbr>秋アニメ記事に<wbr>差し替えました。</li>
+          <li>ブログトップに<wbr>新記事の<wbr>カードを<wbr>追加しました。</li>
         </ul>
       </div>
     </div>
@@ -761,8 +768,8 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
       <div class="log-card">
         <div class="log-tags"><span class="log-tag fix">整理</span></div>
         <ul class="log-list">
-          <li>TOPページの「【独自レビュー】管理人が選ぶ！2026年4月開始。見逃がしたら後悔するアニメ！」セクションを削除しました（10月からの秋アニメシーズン開始に伴い、季節外れとなったため）。</li>
-          <li>「2026年7月開始おすすめアニメ」セクションはそのまま残しています。</li>
+          <li>TOPページの<wbr>「【独自レビュー】管理人が<wbr>選ぶ！<wbr>2026年4月開始。<wbr>見逃が<wbr>したら<wbr>後悔する<wbr>アニメ！」<wbr>セクションを<wbr>削除しました<wbr>（10月からの<wbr>秋アニメシーズン開始に<wbr>伴い、<wbr>季節外れと<wbr>なった<wbr>ため）。</li>
+          <li>「2026年7月開始おすすめアニメ」<wbr>セクションは<wbr>そのまま<wbr>残しています。</li>
         </ul>
       </div>
     </div>
@@ -772,9 +779,9 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
       <div class="log-card">
         <div class="log-tags"><span class="log-tag fix">修正</span></div>
         <ul class="log-list">
-          <li>TOPページの「今シーズン注目アニメ」が更新されない問題を調査。外部API（Jikan API）の取得が失敗した際に表示される保険用の固定データ（BACKUP_DATA）が、2019〜2024年の古い作品のまま放置されていたことが直接の原因と判明。</li>
-          <li>BACKUP_DATAを2026年夏クールの実際の放送作品（幼女戦記II／無職転生III／ぐらんぶるSeason3／正反対な君と僕2クール目）に更新しました。</li>
-          <li>API取得自体が失敗し続けている根本原因（レート制限・通信エラーなど）については、ブラウザのコンソールログでの追加確認が必要です。</li>
+          <li>TOPページの<wbr>「今シーズン注目アニメ」が<wbr>更新されない<wbr>問題を<wbr>調査。<wbr>外部API<wbr>（Jikan API）の<wbr>取得が<wbr>失敗した際に<wbr>表示される<wbr>保険用の<wbr>固定データ<wbr>（BACKUP_DATA）が、<wbr>2019〜2024年の古い<wbr>作品のまま<wbr>放置されていた<wbr>ことが<wbr>直接の<wbr>原因と<wbr>判明。</li>
+          <li>BACKUP_DATAを<wbr>2026年夏クールの<wbr>実際の<wbr>放送作品<wbr>（幼女戦記II／無職転生III／ぐらんぶる<wbr>Season3／正反対な君と<wbr>僕2クール目）に<wbr>更新しました。</li>
+          <li>API取得自体が<wbr>失敗し続けている<wbr>根本原因<wbr>（レート制限・通信エラーなど）に<wbr>ついては、<wbr>ブラウザの<wbr>コンソールログでの<wbr>追加確認が<wbr>必要です。</li>
         </ul>
       </div>
     </div>
@@ -784,8 +791,8 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
       <div class="log-card">
         <div class="log-tags"><span class="log-tag new">新規</span></div>
         <ul class="log-list">
-          <li>「<a href="/anime-profile.html">あなたのアニメ履歴書</a>」を追加しました（6つの質問から視聴者タイプのステータスカードを生成、画像保存・Xシェア対応）。</li>
-          <li><a href="/games.html">診断・ガチャ一覧</a>に新カードを追加しました。</li>
+          <li>「<a href="/anime-profile.html">あなたのアニメ履歴書</a>」を<wbr>追加しました<wbr>（6つの<wbr>質問から<wbr>視聴者タイプの<wbr>ステータスカードを<wbr>生成、<wbr>画像保存・Xシェア対応）。</li>
+          <li><a href="/games.html">診断・ガチャ一覧</a>に<wbr>新カードを<wbr>追加しました。</li>
         </ul>
       </div>
     </div>
@@ -795,8 +802,8 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
       <div class="log-card">
         <div class="log-tags"><span class="log-tag improve">改良</span></div>
         <ul class="log-list">
-          <li>隠しミニゲーム「スタジオランナー」のキャラクターデザインを刷新しました。制作会社キャラは各社カラーの「魔法少女」風、コジマプロダクションだけ「サングラスのおじさん」風に変更しました。</li>
-          <li>キャラクター選択画面のアイコンにも新デザインを反映しました。</li>
+          <li>隠しミニゲーム<wbr>「スタジオランナー」の<wbr>キャラクターデザインを<wbr>刷新しました。<wbr>制作会社キャラは<wbr>各社カラーの<wbr>「魔法少女」風、<wbr>コジマプロダクションだけ<wbr>「サングラスのおじさん」風に<wbr>変更しました。</li>
+          <li>キャラクター選択画面の<wbr>アイコンにも<wbr>新デザインを<wbr>反映しました。</li>
         </ul>
       </div>
     </div>
@@ -807,8 +814,8 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
       <div class="log-card">
         <div class="log-tags"><span class="log-tag fix">修正</span></div>
         <ul class="log-list">
-          <li>TOPページのロゴ（隠しミニゲーム発見トリガー）が、PC・スマートフォンともにほぼ反応しない重大な不具合を修正しました。</li>
-          <li>原因は、クリック処理とタッチ処理が二重に設定されており、端末によっては互いを打ち消し合っていたことでした。タップ判定を1本化し、テキスト選択によるタップ阻害も防止する対策を追加しました。</li>
+          <li>TOPページのロゴ<wbr>（隠しミニゲーム発見トリガー）が、<wbr>PC・スマートフォンともに<wbr>ほぼ反応しない<wbr>重大な<wbr>不具合を<wbr>修正しました。</li>
+          <li>原因は、<wbr>クリック処理と<wbr>タッチ処理が<wbr>二重に<wbr>設定されており、<wbr>端末に<wbr>よっては<wbr>互いを<wbr>打ち消し合っていた<wbr>ことでした。<wbr>タップ判定を<wbr>1本化し、<wbr>テキスト選択による<wbr>タップ阻害も<wbr>防止する<wbr>対策を<wbr>追加しました。</li>
         </ul>
       </div>
     </div>
@@ -818,9 +825,9 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
       <div class="log-card">
         <div class="log-tags"><span class="log-tag improve">改良</span><span class="log-tag new">新規</span></div>
         <ul class="log-list">
-          <li>隠しミニゲーム「スタジオランナー」の難易度を大幅に引き上げました（速度上昇・障害物の頻度と高さ・連続配置パターンを強化）。</li>
-          <li>特別ゲストキャラクター「コジマプロダクション」選択時は、さらに難易度が上がる専用モードを追加しました。</li>
-          <li>コジマプロダクション選択時のセリフ・小ネタを追加しました。</li>
+          <li>隠しミニゲーム<wbr>「スタジオランナー」の<wbr>難易度を<wbr>大幅に<wbr>引き上げました<wbr>（速度上昇・障害物の<wbr>頻度と<wbr>高さ・<wbr>連続配置パターンを<wbr>強化）。</li>
+          <li>特別ゲストキャラクター<wbr>「コジマプロダクション」<wbr>選択時は、<wbr>さらに<wbr>難易度が<wbr>上がる<wbr>専用モードを<wbr>追加しました。</li>
+          <li>コジマプロダクション選択時の<wbr>セリフ・<wbr>小ネタを<wbr>追加しました。</li>
         </ul>
       </div>
     </div>
@@ -830,8 +837,8 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
       <div class="log-card">
         <div class="log-tags"><span class="log-tag improve">改良</span></div>
         <ul class="log-list">
-          <li>ヘッダーの表記を「🎮 診断・ガチャなど・ゲームも？」に変更しました。</li>
-          <li><a href="/games.html">診断・ガチャ一覧</a>の「埋もれた名作ガチャ」カードを、TOPページのガチャバナーと同じ配色（ゴールド系）に統一しました。</li>
+          <li>ヘッダーの<wbr>表記を<wbr>「🎮 診断・ガチャなど・ゲームも？」に<wbr>変更しました。</li>
+          <li><a href="/games.html">診断・ガチャ一覧</a>の<wbr>「埋もれた名作ガチャ」<wbr>カードを、<wbr>TOPページの<wbr>ガチャバナーと同じ配色<wbr>（ゴールド系）に<wbr>統一しました。</li>
         </ul>
       </div>
     </div>
@@ -841,10 +848,10 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
       <div class="log-card">
         <div class="log-tags"><span class="log-tag new">新規</span><span class="log-tag improve">改良</span></div>
         <ul class="log-list">
-          <li>「<a href="/scriptwriter-diagnosis.html">あなたに合う脚本家診断</a>」を追加しました。</li>
-          <li>「<a href="/director-diagnosis.html">あなたに合う監督診断</a>」を追加しました。</li>
-          <li>ヘッダーの表記を「🎮 診断・ガチャなど・ゲームも？」に変更し、見やすくしました。</li>
-          <li><a href="/games.html">診断・ガチャ一覧</a>の一番下に、隠しミニゲームへの手がかりカードを追加しました。</li>
+          <li>「<a href="/scriptwriter-diagnosis.html">あなたに合う<wbr>脚本家診断</a>」を<wbr>追加しました。</li>
+          <li>「<a href="/director-diagnosis.html">あなたに合う監督診断</a>」を<wbr>追加しました。</li>
+          <li>ヘッダーの<wbr>表記を<wbr>「🎮 診断・ガチャなど・ゲームも？」に<wbr>変更し、<wbr>見やすくしました。</li>
+          <li><a href="/games.html">診断・ガチャ一覧</a>の<wbr>一番下に、<wbr>隠しミニゲームへの手が<wbr>かりカードを<wbr>追加しました。</li>
         </ul>
       </div>
     </div>
@@ -854,11 +861,11 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
       <div class="log-card">
         <div class="log-tags"><span class="log-tag new">新規</span><span class="log-tag fix">修正</span></div>
         <ul class="log-list">
-          <li>「<a href="/who-is-this.html">この人は誰？声優・スタッフ当てクイズ</a>」を追加しました（<a href="/directory.html">名鑑</a>の全47件から出題される4択クイズ）。</li>
-          <li><a href="/games.html">診断・ガチャ一覧</a>に新カードを追加しました。</li>
-          <li>「<a href="/blog/nextgen-seiyuu-favorites.html">今の主役級を担う声優7人まとめ</a>」に悠木碧を別格枠として追加しました。</li>
-          <li>同記事内の誤り（ダンジョン飯マルシル役は種﨑敦美さんであり、悠木碧さんではありません）を修正し、「彼女、お借りします」七海麻美役に差し替えました。</li>
-          <li><a href="/directory.html">声優・スタッフ名鑑</a>に悠木碧を追加しました。</li>
+          <li>「<a href="/who-is-this.html">この人は<wbr>誰？<wbr>声優・スタッフ当て<wbr>クイズ</a>」を<wbr>追加しました<wbr>（<a href="/directory.html">名鑑</a>の<wbr>全47件から<wbr>出題される<wbr>4択クイズ）。</li>
+          <li><a href="/games.html">診断・ガチャ一覧</a>に<wbr>新カードを<wbr>追加しました。</li>
+          <li>「<a href="/blog/nextgen-seiyuu-favorites.html">今の<wbr>主役級を担う<wbr>声優7人まとめ</a>」に<wbr>悠木碧を<wbr>別格枠として<wbr>追加しました。</li>
+          <li>同記事内の誤り<wbr>（ダンジョン飯マルシル役は<wbr>種﨑敦美さんであり、<wbr>悠木碧さんではありません）を<wbr>修正し、<wbr>「彼女、お借りします」<wbr>七海麻美役に<wbr>差し替えました。</li>
+          <li><a href="/directory.html">声優・スタッフ名鑑</a>に<wbr>悠木碧を<wbr>追加しました。</li>
         </ul>
       </div>
     </div>
@@ -868,7 +875,7 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
       <div class="log-card">
         <div class="log-tags"><span class="log-tag fix">修正</span></div>
         <ul class="log-list">
-          <li>隠しミニゲーム「スタジオランナー」の発見トリガー（ロゴ5回タップ）が、スマートフォンで反応しない不具合を修正しました。</li>
+          <li>隠しミニゲーム<wbr>「スタジオランナー」の<wbr>発見トリガー<wbr>（ロゴ5回タップ）が、<wbr>スマートフォンで<wbr>反応しない<wbr>不具合を<wbr>修正しました。</li>
         </ul>
       </div>
     </div>
@@ -878,8 +885,8 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
       <div class="log-card">
         <div class="log-tags"><span class="log-tag new">新規</span></div>
         <ul class="log-list">
-          <li>「<a href="/blog/2026-spring-all.html">2026年春アニメ作品を見た感想まとめ</a>」に6作品を追加しました（マリッジトキシン／メイドさんは食べるだけ／ポンコツ風紀委員とスカート丈が不適切なJKの話／淡島百景／ただいま、おじゃまされます！／オタクに優しいギャルはいない!?）。</li>
-          <li>TOPページの「2026年4月開始」独自レビューコーナーの掲載作品を一部差し替えました（淡島百景・ポンコツ風紀委員とスカート丈が不適切なJKの話を追加）。</li>
+          <li>「<a href="/blog/2026-spring-all.html">2026年春アニメ作品を見た<wbr>感想まとめ</a>」に<wbr>6作品を<wbr>追加しました<wbr>（マリッジトキシン／メイドさんは<wbr>食べるだけ／ポンコツ風紀委員と<wbr>スカート丈が<wbr>不適切な<wbr>JKの<wbr>話／淡島百景／ただいま、<wbr>おじゃまされます!／オタクに<wbr>優しい<wbr>ギャルは<wbr>いない!?）。</li>
+          <li>TOPページの<wbr>「2026年4月開始」独<wbr>自レビューコーナーの<wbr>掲載作品を一部<wbr>差し替えました<wbr>（淡島百景・ポンコツ風紀委員と<wbr>スカート丈が<wbr>不適切な<wbr>JKの話を<wbr>追加）。</li>
         </ul>
       </div>
     </div>
@@ -889,14 +896,14 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
       <div class="log-card">
         <div class="log-tags"><span class="log-tag fix">確認</span><span class="log-tag new">新規</span><span class="log-tag improve">改良</span></div>
         <ul class="log-list">
-          <li>サイト全34ページ（TOP・診断/ガチャ系9ページ・blogトップ・ブログ記事20本・about/privacy/contact）のリンク切れを総点検 → 問題なし。</li>
-          <li>AdSense再審査に向けたセルフチェックリストの1項目目を消化。</li>
-          <li>「<a href="/pixel-quest.html">スタジオランナー</a>」に特別ゲストキャラクター「コジマプロダクション」を追加しました🎬（管理人が小島秀夫監督の作品を敬愛しているための、遊び心枠での特別出演です）。</li>
-          <li>このキャラクターでプレイすると、ゲームオーバー時に監督作品オマージュの小ネタが不定期に表示されます。</li>
-          <li>隠しミニゲーム「スタジオランナー」を追加しました（TOPページのロゴを5回クリックすると出現）。</li>
-          <li>「<a href="/games.html">このアニメ、何点つける？評価シミュレーター</a>」を追加しました。</li>
-          <li>ヘッダーのナビゲーションを整理しました（診断・視聴傾向・ガチャ・シミュレーターをまとめて表示）。</li>
-          <li>サイト全体の配色を調整し、彩度の高すぎる色を落ち着いたトーンに変更しました（TOPページ・診断系ページ・ブログ記事20本）。</li>
+          <li>サイト全34ページ<wbr>（TOP・診断/ガチャ系9ページ・blogトップ・<wbr>ブログ記事20本・<wbr>about/privacy/contact）の<wbr>リンク切れを<wbr>総点検 → 問題なし。</li>
+          <li>AdSense再審査に<wbr>向けた<wbr>セルフチェックリストの<wbr>1項目目を<wbr>消化。</li>
+          <li>「<a href="/pixel-quest.html">スタジオランナー</a>」に<wbr>特別ゲストキャラクター<wbr>「コジマプロダクション」を<wbr>追加しました🎬<wbr>（管理人が<wbr>小島秀夫監督の<wbr>作品を<wbr>敬愛している<wbr>ための、<wbr>遊び心枠での<wbr>特別出演です）。</li>
+          <li>この<wbr>キャラクターで<wbr>プレイすると、<wbr>ゲームオーバー時に<wbr>監督作品オマージュの<wbr>小ネタが<wbr>不定期に<wbr>表示されます。</li>
+          <li>隠しミニゲーム<wbr>「スタジオランナー」を<wbr>追加しました<wbr>（TOPページの<wbr>ロゴを<wbr>5回クリックすると<wbr>出現）。</li>
+          <li>「<a href="/games.html">この<wbr>アニメ、<wbr>何点つける？<wbr>評価シミュレーター</a>」を<wbr>追加しました。</li>
+          <li>ヘッダーの<wbr>ナビゲーションを<wbr>整理しました<wbr>（診断・視聴傾向・ガチャ・シミュレーターを<wbr>まとめて<wbr>表示）。</li>
+          <li>サイト全体の<wbr>配色を<wbr>調整し、<wbr>彩度の<wbr>高すぎる色を<wbr>落ち着いた<wbr>トーンに<wbr>変更しました<wbr>（TOPページ・診断系ページ・ブログ記事20本）。</li>
         </ul>
       </div>
     </div>
@@ -906,14 +913,14 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
       <div class="log-card">
         <div class="log-tags"><span class="log-tag new">新規</span></div>
         <ul class="log-list">
-          <li>「<a href="/studio-diagnosis.html">あなたに合う制作会社診断</a>」を追加しました（全16社対応）。</li>
-          <li>「<a href="/viewer-type.html">視聴傾向診断「あなたは何派？」</a>」を追加しました。</li>
-          <li>「<a href="/hidden-gems-gacha.html">埋もれた名作ガチャ</a>」を追加しました。</li>
-          <li>「<a href="/directory.html">声優・スタッフ名鑑</a>」を追加しました（横断検索対応）。</li>
-          <li>診断・ガチャコンテンツをまとめた<a href="/games.html">一覧ページ</a>を新設しました。</li>
-          <li>各診断結果にXシェア機能を追加しました。</li>
-          <li>アニメ初心者向け<a href="/glossary.html">用語集ページ</a>を新設しました。</li>
-          <li>更新履歴ページ（このページ）を新設しました。</li>
+          <li>「<a href="/studio-diagnosis.html">あなたに合う<wbr>制作会社診断</a>」を<wbr>追加しました<wbr>（全16社対応）。</li>
+          <li>「<a href="/viewer-type.html">視聴傾向診断<wbr>「あなたは何派？」</a>」を<wbr>追加しました。</li>
+          <li>「<a href="/hidden-gems-gacha.html">埋もれた名作ガチャ</a>」を<wbr>追加しました。</li>
+          <li>「<a href="/directory.html">声優・スタッフ名鑑</a>」を<wbr>追加しました<wbr>（横断検索対応）。</li>
+          <li>診断・ガチャコンテンツを<wbr>まとめた<a href="/games.html"><wbr>一覧ページ</a>を<wbr>新設しました。</li>
+          <li>各診断結果に<wbr>Xシェア機能を<wbr>追加しました。</li>
+          <li>アニメ初心者向け<a href="/glossary.html">用語集ページ</a>を<wbr>新設しました。</li>
+          <li>更新履歴ページ<wbr>（このページ）を<wbr>新設しました。</li>
         </ul>
       </div>
     </div>
@@ -923,8 +930,8 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
       <div class="log-card">
         <div class="log-tags"><span class="log-tag new">新規</span><span class="log-tag fix">修正</span></div>
         <ul class="log-list">
-          <li>お問い合わせフォームが実際に送信されない不具合を修正しました。</li>
-          <li>ブログに「<a href="/blog/unexpected-hits.html">見る前は期待してなかったのに刺さった作品5選</a>」を追加しました。</li>
+          <li>お問い合わせフォームが<wbr>実際に<wbr>送信されない<wbr>不具合を<wbr>修正しました。</li>
+          <li>ブログに<wbr>「<a href="/blog/unexpected-hits.html">見る前は<wbr>期待してなかったのに<wbr>刺さった<wbr>作品5選</a>」を<wbr>追加しました。</li>
         </ul>
       </div>
     </div>
@@ -934,12 +941,12 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
       <div class="log-card">
         <div class="log-tags"><span class="log-tag new">新規</span><span class="log-tag fix">修正</span></div>
         <ul class="log-list">
-          <li>ブログに「<a href="/blog/checklist-anime.html">アニメを見る前に必ずチェックする項目6つ</a>」を追加しました。</li>
-          <li>ブログに「<a href="/blog/rating-criteria.html">S評価とA評価、何が違うのか</a>」を追加しました。</li>
-          <li>ブログに「<a href="/blog/worst-anime-honest.html">正直しんどかったアニメ5選</a>」を追加しました。</li>
-          <li>制作会社特集にMAPPAを追加し、全6社まとめに更新しました。</li>
-          <li>サイト内の配信リンクを全記事にわたって精査し、実際には配信されていないサービスの誤記載を複数修正しました。</li>
-          <li>デザインの一部（バナーの枠線・配色）を調整しました。</li>
+          <li>ブログに<wbr>「<a href="/blog/checklist-anime.html">アニメを見る前に必ず<wbr>チェックする<wbr>項目6つ</a>」を<wbr>追加しました。</li>
+          <li>ブログに<wbr>「<a href="/blog/rating-criteria.html">S評価と<wbr>A評価、何が<wbr>違うのか</a>」を<wbr>追加しました。</li>
+          <li>ブログに<wbr>「<a href="/blog/worst-anime-honest.html">正直しんどかった<wbr>アニメ5選</a>」を<wbr>追加しました。</li>
+          <li>制作会社特集に<wbr>MAPPAを<wbr>追加し、<wbr>全6社まとめに<wbr>更新しました。</li>
+          <li>サイト内の<wbr>配信リンクを<wbr>全記事に<wbr>わたって<wbr>精査し、<wbr>実際には<wbr>配信されていない<wbr>サービスの<wbr>誤記載を<wbr>複数修正しました。</li>
+          <li>デザインの一部<wbr>（バナーの枠線・配色）を<wbr>調整しました。</li>
         </ul>
       </div>
     </div>
@@ -949,8 +956,8 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
       <div class="log-card">
         <div class="log-tags"><span class="log-tag new">新規</span></div>
         <ul class="log-list">
-          <li>サイトのドメインを現在の anime-db.jp に統一しました。</li>
-          <li>ブログ記事17本を公開しました（声優特集・脚本家特集・監督特集・制作会社特集・アーティスト特集・ランキング企画など）。</li>
+          <li>サイトの<wbr>ドメインを<wbr>現在の anime-db.jp に<wbr>統一しました。</li>
+          <li>ブログ記事17本を<wbr>公開しました<wbr>（声優特集・脚本家特集・監督特集・<wbr>制作会社特集・アーティスト特集・ランキング企画など）。</li>
         </ul>
       </div>
     </div>

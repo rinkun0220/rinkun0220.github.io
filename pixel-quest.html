@@ -14,7 +14,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
 <title>スタジオランナー｜制作会社キャラで走る3Dミニゲーム｜ANIMEDB</title>
 <link rel="canonical" href="https://anime-db.jp/pixel-quest.html">
-<meta name="description" content="ANIMEDBのミニゲーム「スタジオランナー」。アニメ制作会社を擬人化したキャラクターを選んで、3Dコースの障害物を避けながら走り抜けよう。スマホはタップとスワイプ、PCはマウスとキーボードで遊べます。">
+<meta name="description" content="ANIMEDBのミニゲーム「スタジオランナー」。アニメ制作会社を擬人化したキャラクターを選んで、3Dコースの障害物を避けながら走り抜けましょう。スマホはタップとスワイプ、PCはマウスとキーボードで遊べます。">
 <meta name="robots" content="index,follow">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4858195974765934" crossorigin="anonymous"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -96,6 +96,9 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
 .game-guide p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.95; margin: 0 0 12px; }
 .game-guide a { color: var(--star-color); text-decoration: none; }
 .game-guide a:hover { text-decoration: underline; }
+/* 日本語の改行を自然にする設定（ゲーム画面のレイアウトを崩さないよう、説明文の段落だけに適用） */
+p,li{line-break:strict;overflow-wrap:break-word;text-wrap:pretty}
+p:has(> wbr),li:has(> wbr){word-break:keep-all}
 </style>
 </head>
 <body>
@@ -112,11 +115,11 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
   <div class="page-head">
     <span class="page-tag">🎮 ミニゲーム</span>
     <h1 class="page-title">スタジオランナー <span style="font-size:.6em;color:var(--star-color);">3D</span></h1>
-    <p class="page-desc">制作会社を擬人化したキャラクターで、3Dコースを駆け抜けよう。ゴールまで走り切れば、1回およそ2分で遊び終わります。スマホはタップとスワイプ、PCはマウスとキーボードで遊べます。</p>
+    <p class="page-desc">制作会社を<wbr>擬人化した<wbr>キャラクターで、<wbr>3Dコースを<wbr>駆け抜けましょう。<wbr>ゴールまで<wbr>走り切れば、<wbr>1回およそ2分で<wbr>遊び終わります。<wbr>スマホは<wbr>タップと<wbr>スワイプ、<wbr>PCは<wbr>マウスと<wbr>キーボードで<wbr>遊べます。</p>
   </div>
 
   <div class="char-select active" id="charSelect">
-    <div class="char-select-title">キャラクターを選んでスタート</div>
+    <div class="char-select-title">キャラクターを<wbr>選んで<wbr>スタート</div>
     <div class="char-grid" id="charGrid"></div>
     <div id="kojimaIntro" style="display:none;font-size:.8rem;color:var(--accent);font-style:italic;margin-bottom:14px;line-height:1.7;"></div>
     <button class="start-btn" onclick="startGame()">スタート →</button>
@@ -129,7 +132,7 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
     </div>
     <div class="goal-bar"><div class="goal-fill" id="goalFill"></div><span class="goal-flag">🏁 GOAL</span></div>
     <div id="gameCanvasWrap"><span class="render-badge">3D RENDER</span></div>
-    <div class="game-hint">【スマホ】タップでジャンプ・左右スワイプでレーン移動　【PC】クリック／スペース・W・↑キーでジャンプ・マウスを左右に動かす／←→・A・Dキーでレーン移動</div>
+    <div class="game-hint">【スマホ】タップで<wbr>ジャンプ・左右スワイプで<wbr>レーン移動　【PC】クリック／スペース・W・↑キーで<wbr>ジャンプ・マウスを<wbr>左右に<wbr>動かす／←→・A・Dキーで<wbr>レーン移動</div>
   </div>
 
   <div class="gameover-box" id="gameoverBox">
@@ -144,14 +147,14 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
   </div>
 
   <section class="game-guide">
-    <h2>スタジオランナーの遊び方</h2>
+    <h2>スタジオランナーの<wbr>遊び方</h2>
     <h3>どんなゲーム？</h3>
-    <p>「スタジオランナー」は、アニメ制作会社を擬人化したキャラクターを選び、3Dのコースを走って障害物を避けるミニゲームです。コースは左・中央・右の3レーンに分かれていて、レーンを切り替えたりジャンプしたりして、次々に現れる赤い障害物をよけ続けます。障害物にぶつかるとゲームオーバーで、スコアが1200点に届くとゴール（クリア）です。ノーミスで走り切ると、1回およそ1分40秒から2分で遊び終わります。</p>
-    <h3>キャラクターとルール</h3>
-    <p>選べるのは、P.A.WORKS、京都アニメーション、CloverWorks、A-1 Pictures、wit studio、MAPPA、TRIGGER、サイエンスSARUの8社と、特別出演のコジマプロダクションです。8社は色が違うだけで、遊び方や難しさは同じです。コジマプロダクションを選ぶと、スピードが少し速く、障害物も高くなって難易度が上がります。スコアは走った距離に応じて増え、画面上のバーでゴールまでの進み具合を確かめられます。走るほどスピードも上がっていきますが、速さには上限があります。ゴールするとクリアタイムが表示されます。ベストスコアとベストタイムは、お使いのブラウザの中だけに保存されます。</p>
+    <p>「スタジオランナー」は、<wbr>アニメ制作会社を<wbr>擬人化した<wbr>キャラクターを<wbr>選び、<wbr>3Dの<wbr>コースを<wbr>走って<wbr>障害物を<wbr>避ける<wbr>ミニゲームです。<wbr>コースは<wbr>左・中央・右の<wbr>3レーンに<wbr>分かれていて、<wbr>レーンを切り<wbr>替えたりジャンプしたりして、<wbr>次々に<wbr>現れる赤い<wbr>障害物を<wbr>よけ続けます。<wbr>障害物に<wbr>ぶつかると<wbr>ゲームオーバーで、<wbr>スコアが<wbr>1200点に<wbr>届くと<wbr>ゴール<wbr>（クリア）です。<wbr>ノーミスで<wbr>走り切ると、<wbr>1回およそ1分40秒から<wbr>2分で<wbr>遊び終わります。</p>
+    <h3>キャラクターと<wbr>ルール</h3>
+    <p>選べるのは、<wbr>P.A.WORKS、<wbr>京都アニメーション、<wbr>CloverWorks、<wbr>A-1 Pictures、<wbr>wit studio、<wbr>MAPPA、<wbr>TRIGGER、<wbr>サイエンスSARUの<wbr>8社と、<wbr>特別出演の<wbr>コジマプロダクションです。<wbr>8社は色が<wbr>違うだけで、<wbr>遊び方や<wbr>難しさは<wbr>同じです。<wbr>コジマプロダクションを<wbr>選ぶと、<wbr>スピードが少し<wbr>速く、<wbr>障害物も<wbr>高くなって<wbr>難易度が<wbr>上がります。<wbr>スコアは<wbr>走った<wbr>距離に<wbr>応じて<wbr>増え、<wbr>画面上の<wbr>バーで<wbr>ゴールまでの<wbr>進み具合を<wbr>確かめられます。走るほど<wbr>スピードも<wbr>上がっていきますが、<wbr>速さには<wbr>上限が<wbr>あります。<wbr>ゴールすると<wbr>クリアタイムが<wbr>表示されます。<wbr>ベストスコアと<wbr>ベストタイムは、<wbr>お使いの<wbr>ブラウザの<wbr>中だけに<wbr>保存されます。</p>
     <h3>操作方法</h3>
-    <p>スマホでは、画面をタップするとジャンプし、左右にスワイプするとレーンを移動します。PCでは、マウスをクリックするか、スペース・W・↑キーを押すとジャンプします。レーンの移動は、マウスのカーソルを左右に動かすか、←→キーまたはA・Dキーで行います。3Dの描画には、WebGLに対応した最新のブラウザが必要です。</p>
-    <p>診断やガチャも用意しています。他のコンテンツは<a href="/games.html">診断・ガチャ一覧</a>から、制作会社のことをもっと知りたい方は<a href="/blog/studio-favorites.html">好きな制作会社16社の代表作まとめ</a>や<a href="/studio-diagnosis.html">制作会社診断</a>もどうぞ。</p>
+    <p>スマホでは、<wbr>画面を<wbr>タップすると<wbr>ジャンプし、<wbr>左右に<wbr>スワイプすると<wbr>レーンを<wbr>移動します。<wbr>PCでは、<wbr>マウスを<wbr>クリックするか、<wbr>スペース・W・↑キーを<wbr>押すと<wbr>ジャンプします。<wbr>レーンの<wbr>移動は、<wbr>マウスの<wbr>カーソルを<wbr>左右に<wbr>動かすか、<wbr>←→キーまたは<wbr>A・Dキーで<wbr>行います。<wbr>3Dの<wbr>描画には、<wbr>WebGLに<wbr>対応した<wbr>最新の<wbr>ブラウザが<wbr>必要です。</p>
+    <p>診断や<wbr>ガチャも<wbr>用意しています。他の<wbr>コンテンツは<a href="/games.html"><wbr>診断・ガチャ一覧</a>から、<wbr>制作会社の<wbr>ことを<wbr>もっと<wbr>知りたい方は<a href="/blog/studio-favorites.html"><wbr>好きな<wbr>制作会社16社の<wbr>代表作まとめ</a>や<a href="/studio-diagnosis.html"><wbr>制作会社診断</a>も<wbr>どうぞ。</p>
   </section>
 </main>
 

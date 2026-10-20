@@ -214,7 +214,14 @@
     .info-list li { font-size: 0.9rem; padding: 6px 0 6px 18px; position: relative; border-bottom: 1px solid var(--border); }
     .info-list li::before { content: "▸"; color: var(--accent); position: absolute; left: 0; }
     .info-list li:last-child { border-bottom: none; }
-  </style>
+  /* 日本語の改行を自然にする設定（文節単位で改行・行頭禁則・1文字だけの行を避ける） */
+body{line-break:strict;overflow-wrap:break-word}
+@supports (word-break:auto-phrase){body{word-break:auto-phrase}}
+:has(> wbr){word-break:keep-all}
+p,li,dd,td,th{text-wrap:pretty}
+.nb{white-space:nowrap}
+h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-title,.pick-name,.next-article-title{text-wrap:balance}
+</style>
 </head>
 <body>
   <header>
@@ -226,34 +233,34 @@
   <main>
     <section class="info-section info-first">
       <h2>お問い合わせの前に</h2>
-      <p>ANIMEDBは、アニメファンの管理人が個人で運営している情報サイトです。いただいたご連絡には管理人が一件ずつ目を通しています。内容によってはご返信までにお時間をいただくことがあります。あらかじめご了承ください。</p>
+      <p>ANIMEDBは、<wbr>アニメファンの<wbr>管理人が<wbr>個人で<wbr>運営している<wbr>情報サイトです。<wbr>いただいた<wbr>ご連絡には<wbr>管理人が<wbr>一件ずつ目を<wbr>通しています。<wbr>内容に<wbr>よっては<wbr>ご返信までに<wbr>お時間を<wbr>いただく<wbr>ことがあります。<wbr>あらかじめご了承ください。</p>
 
       <div class="info-card">
-        <h3>掲載情報の誤りを見つけたとき</h3>
-        <p>放送日、制作会社、スタッフ・キャストの名前、配信サービスの情報などの誤りは、種別「データの誤りについて」からお知らせください。該当ページのURLと、正しいと思われる内容（公式サイトなど、確認出来る出典があれば併せて）をご記入いただけると、確認が早く進みます。確認のうえ、記事やデータを訂正します。</p>
+        <h3>掲載情報の<wbr>誤りを<wbr>見つけたとき</h3>
+        <p>放送日、<wbr>制作会社、<wbr>スタッフ・キャストの<wbr>名前、<wbr>配信サービスの<wbr>情報などの<wbr>誤りは、種別<wbr>「データの誤りについて」から<wbr>お知らせ<wbr>ください。<wbr>該当ページの<wbr>URLと、<wbr>正しいと<wbr>思われる内容<wbr>（公式サイトなど、<wbr>確認できる<wbr>出典が<wbr>あれば<wbr>併せて）を<wbr>ご記入いただけると、<wbr>確認が早く<wbr>進みます。<wbr>確認の<wbr>うえ、<wbr>記事や<wbr>データを<wbr>訂正します。</p>
       </div>
 
       <div class="info-card">
-        <h3>不具合・表示の乱れを見つけたとき</h3>
-        <p>種別「不具合・バグ報告」から、症状が出たページのURL、ご利用の端末（パソコン、スマートフォンなど）、ブラウザの種類、どんな操作をしたときに起きたかをお書きください。診断ページやミニゲームの動作についてのご連絡も歓迎です。</p>
+        <h3>不具合・表示の<wbr>乱れを<wbr>見つけたとき</h3>
+        <p>種別<wbr>「不具合・バグ報告」から、<wbr>症状が出た<wbr>ページの<wbr>URL、<wbr>ご利用の端末<wbr>（パソコン、<wbr>スマートフォンなど）、<wbr>ブラウザの<wbr>種類、<wbr>どんな<wbr>操作をした<wbr>ときに<wbr>起きたかを<wbr>お書きください。<wbr>診断ページや<wbr>ミニゲームの<wbr>動作に<wbr>ついての<wbr>ご連絡も<wbr>歓迎です。</p>
       </div>
 
       <div class="info-card">
-        <h3>記事・機能のリクエスト</h3>
-        <p>「この作品を取り上げてほしい」「こんな診断やランキングがあると嬉しい」といったご要望は、種別「機能リクエスト」からどうぞ。全てをお約束することは出来ませんが、今後の記事づくりの参考にさせていただきます。</p>
+        <h3>記事・機能の<wbr>リクエスト</h3>
+        <p>「この<wbr>作品を<wbr>取り上げてほしい」<wbr>「こんな<wbr>診断や<wbr>ランキングが<wbr>あると<wbr>嬉しい」と<wbr>いった<wbr>ご要望は、種別<wbr>「機能リクエスト」から<wbr>どうぞ。<wbr>全てを<wbr>お約束する<wbr>ことは<wbr>できませんが、<wbr>今後の<wbr>記事づくりの<wbr>参考に<wbr>させていただきます。</p>
       </div>
 
       <div class="info-card">
-        <h3>評価・感想について</h3>
-        <p>当サイトの★の点数やS・A・B・Cの評価は、管理人個人の視聴経験にもとづく主観的なものです。ご意見が異なる場合も、一つの見方としてお読みいただければ幸いです。評価の付け方は<a href="./blog/rating-criteria.html">評価基準の記事</a>で公開しています。</p>
+        <h3>評価・感想に<wbr>ついて</h3>
+        <p>当サイトの★の<wbr>点数や<wbr>S・A・B・Cの<wbr>評価は、<wbr>管理人個人の<wbr>視聴経験にもとづく<wbr>主観的な<wbr>ものです。<wbr>ご意見が<wbr>異なる<wbr>場合も、<wbr>一つの<wbr>見方と<wbr>してお読みいただければ<wbr>幸いです。<wbr>評価の<wbr>付け方は<a href="./blog/rating-criteria.html"><wbr>評価基準の<wbr>記事</a>で<wbr>公開しています。</p>
       </div>
     </section>
 
     <h1 class="page-title">お問い合わせ</h1>
-    <p class="subtitle">ご意見・ご要望・不具合報告などお気軽にどうぞ。通常2〜3営業日以内にご返信いたします。</p>
+    <p class="subtitle">ご意見・ご要望・<wbr>不具合報告など<wbr>お気軽に<wbr>どうぞ。<wbr>通常2〜3営業日以内に<wbr>ご返信いたします。</p>
 
     <div class="form-card">
-      <div class="error-msg" id="errorMsg">送信に失敗しました。時間をおいて再度お試しいただくか、しばらくしてから再度ご連絡ください。</div>
+      <div class="error-msg" id="errorMsg">送信に<wbr>失敗しました。<wbr>時間を<wbr>おいて再度<wbr>お試しいただくか、<wbr>しばらくしてから再度<wbr>ご連絡ください。</div>
 
       <form id="contactForm">
         <div class="form-group">
@@ -284,7 +291,7 @@
         </div>
 
         <div class="privacy-note">
-          送信いただいた情報は、お問い合わせ対応のみに使用します。詳しくは<a href="./privacy.html">プライバシーポリシー</a>をご確認ください。
+          送信いただいた<wbr>情報は、<wbr>お問い合わせ対応のみに<wbr>使用します。<wbr>詳しくは<a href="./privacy.html"><wbr>プライバシーポリシー</a>を<wbr>ご確認ください。
         </div>
 
         <button type="submit" class="btn-submit" id="submitBtn">送信する</button>
@@ -292,33 +299,33 @@
 
       <div class="success-msg" id="successMsg">
         <div class="icon">✅</div>
-        <h3>送信が完了しました</h3>
-        <p>お問い合わせありがとうございます。<br>2〜3営業日以内にご返信いたします。</p>
+        <h3>送信が<wbr>完了しました</h3>
+        <p>お問い合わせ<wbr>ありがとう<wbr>ございます。<br>2〜3営業日以内に<wbr>ご返信いたします。</p>
       </div>
     </div>
 
     <section class="info-section">
       <h2>ご返信について</h2>
       <ul class="info-list">
-        <li>通常は2〜3営業日以内にご返信します。混み合う時期や、確認に時間がかかる内容の場合は、これより遅れることがあります。</li>
-        <li>ご記入いただいたメールアドレスは、ご返信のためにのみ使用します。取り扱いは<a href="./privacy.html">プライバシーポリシー</a>に記載しています。</li>
-        <li>広告の掲載内容についてのご連絡は、種別「広告について」を選び、表示されたページと状況をお知らせください。</li>
-        <li>営業・勧誘を目的とするご連絡や、公序良俗に反する内容には、ご返信出来ない場合があります。</li>
+        <li>通常は<wbr>2〜3営業日以内に<wbr>ご返信します。<wbr>混み合う<wbr>時期や、<wbr>確認に<wbr>時間が<wbr>かかる<wbr>内容の<wbr>場合は、<wbr>これより<wbr>遅れる<wbr>ことがあります。</li>
+        <li>ご記入いただいた<wbr>メールアドレスは、<wbr>ご返信の<wbr>ためにのみ<wbr>使用します。<wbr>取り扱いは<a href="./privacy.html"><wbr>プライバシーポリシー</a>に<wbr>記載しています。</li>
+        <li>広告の<wbr>掲載内容に<wbr>ついての<wbr>ご連絡は、種別<wbr>「広告について」を<wbr>選び、<wbr>表示された<wbr>ページと<wbr>状況を<wbr>お知らせ<wbr>ください。</li>
+        <li>営業・勧誘を<wbr>目的とする<wbr>ご連絡や、<wbr>公序良俗に<wbr>反する<wbr>内容には、<wbr>ご返信できない<wbr>場合が<wbr>あります。</li>
       </ul>
 
       <h2>運営者情報</h2>
       <div class="info-card">
-        <p>サイト名：ANIMEDB（<a href="https://anime-db.jp/">https://anime-db.jp/</a>）</p>
-        <p>運営：ANIMEDB管理人（個人運営）</p>
-        <p>返信：趣味で運営しているため、管理人の手が空いたときに返信します。お返事までに、時間がかかることがあります。</p>
-        <p>内容：今クールの注目アニメの紹介、レビュー・ランキング記事、声優・スタッフの紹介、診断コンテンツなど</p>
-        <p>サイトの成り立ちや管理人の自己紹介は<a href="./about.html">開発者の思い</a>に書いています。管理人は <a href="https://x.com/TsukuiKenta" target="_blank" rel="noopener noreferrer">X</a>・<a href="https://www.instagram.com/rinkun0220/" target="_blank" rel="noopener noreferrer">Instagram</a>・<a href="https://www.tiktok.com/@rinkun0220" target="_blank" rel="noopener noreferrer">TikTok</a> でも作品の感想を発信しています。</p>
+        <p>サイト名：ANIMEDB<wbr>（<a href="https://anime-db.jp/">https://anime-db.jp/</a>）</p>
+        <p>運営：ANIMEDB管理人<wbr>（個人運営）</p>
+        <p>返信：趣味で<wbr>運営している<wbr>ため、<wbr>管理人の手が<wbr>空いた<wbr>ときに<wbr>返信します。<wbr>お返事までに、<wbr>時間が<wbr>かかることがあります。</p>
+        <p>内容：今クールの<wbr>注目アニメの<wbr>紹介、<wbr>レビュー・ランキング記事、<wbr>声優・スタッフの<wbr>紹介、<wbr>診断コンテンツなど</p>
+        <p>サイトの成り<wbr>立ちや<wbr>管理人の<wbr>自己紹介は<a href="./about.html"><wbr>開発者の<wbr>思い</a>に<wbr>書いています。<wbr>管理人は <a href="https://x.com/TsukuiKenta" target="_blank" rel="noopener noreferrer">X</a>・<a href="https://www.instagram.com/rinkun0220/" target="_blank" rel="noopener noreferrer">Instagram</a>・<a href="https://www.tiktok.com/@rinkun0220" target="_blank" rel="noopener noreferrer">TikTok</a> でも<wbr>作品の<wbr>感想を<wbr>発信しています。</p>
       </div>
 
-      <h2>あわせてご覧ください</h2>
+      <h2>あわせて<wbr>ご覧ください</h2>
       <ul class="info-list">
-        <li><a href="./blog/">ブログ（レビュー・ランキング・考察）</a></li>
-        <li><a href="./changelog.html">更新履歴・お知らせ（修正や改善の記録）</a></li>
+        <li><a href="./blog/">ブログ<wbr>（レビュー・ランキング・考察）</a></li>
+        <li><a href="./changelog.html">更新履歴・<wbr>お知らせ<wbr>（修正や改善の記録）</a></li>
         <li><a href="./glossary.html">アニメ初心者向け用語集</a></li>
         <li><a href="./games.html">診断・ガチャ一覧</a></li>
       </ul>
@@ -328,7 +335,7 @@
   <footer>
     <nav>
       <a href="./index.html">ホーム</a>
-      <a href="./about.html">開発者の思い</a>
+      <a href="./about.html">開発者の<wbr>思い</a>
       <a href="./privacy.html">プライバシーポリシー</a>
       <a href="./contact.html">お問い合わせ</a>
     </nav>

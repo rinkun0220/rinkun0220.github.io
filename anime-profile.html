@@ -97,6 +97,13 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
 .reveal-list li { font-size: 0.82rem; color: var(--text-muted); line-height: 1.6; padding: 4px 0; border-bottom: 1px dashed var(--border-color); }
 .reveal-list li b { color: var(--text-main); font-weight: 600; }
 .tool-guide{max-width:880px;margin:40px auto 28px;padding:0 20px}.tool-guide h2{font-size:1.05rem;font-weight:700;color:var(--text-main);margin:0 0 12px}.tool-guide h3{font-size:.92rem;font-weight:700;color:var(--accent);margin:20px 0 8px}.tool-guide p{font-size:.88rem;color:var(--text-muted);line-height:1.95;margin:0 0 12px}.tool-guide a{color:var(--star-color);text-decoration:none}.tool-guide a:hover{text-decoration:underline}
+/* 日本語の改行を自然にする設定（文節単位で改行・行頭禁則・1文字だけの行を避ける） */
+body{line-break:strict;overflow-wrap:break-word}
+@supports (word-break:auto-phrase){body{word-break:auto-phrase}}
+:has(> wbr){word-break:keep-all}
+p,li,dd,td,th{text-wrap:pretty}
+.nb{white-space:nowrap}
+h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-title,.pick-name,.next-article-title{text-wrap:balance}
 </style>
 </head>
 <body>
@@ -115,36 +122,36 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
 <main>
   <div class="page-head">
     <span class="page-tag">📋 履歴書診断</span>
-    <h1 class="page-title">あなたのアニメ履歴書</h1>
-    <p class="page-desc">6つの質問から、あなたの"アニメ視聴者としてのプロフィールカード"を作成します。画像として保存・シェア出来ます。</p>
+    <h1 class="page-title">あなたの<wbr>アニメ履歴書</h1>
+    <p class="page-desc">6つの<wbr>質問から、<wbr>あなたの<wbr>"アニメ視聴者と<wbr>しての<wbr>プロフィールカード"を<wbr>作成します。<wbr>画像として<wbr>保存・シェアできます。</p>
   </div>
 
     <div class="reveal-section">
-    <h2 class="reveal-title">診断で分かる5つのステータス</h2>
-    <p class="reveal-note">6つの質問への回答から、以下の5項目を数値化してステータスカードを作成します。</p>
+    <h2 class="reveal-title">診断で<wbr>分かる<wbr>5つの<wbr>ステータス</h2>
+    <p class="reveal-note">6つの<wbr>質問への<wbr>回答から、<wbr>以下の<wbr>5項目を<wbr>数値化して<wbr>ステータスカードを<wbr>作成します。</p>
     <ul class="reveal-list">
-      <li><b>経験値</b> — アニメを見始めた時期の長さ</li>
-      <li><b>視聴の幅</b> — 1クールに視聴する本数</li>
-      <li><b>涙腺</b> — 感動しやすいジャンル・場面の傾向</li>
-      <li><b>こだわり</b> — 脚本・演出・キャラのどこを重視するか</li>
-      <li><b>継続力</b> — 一番長く追っているシリーズの年数</li>
+      <li><b>経験値</b> — アニメを<wbr>見始めた<wbr>時期の長さ</li>
+      <li><b>視聴の<wbr>幅</b> — 1クールに<wbr>視聴する本数</li>
+      <li><b>涙腺</b> — 感動しやすい<wbr>ジャンル・場面の傾向</li>
+      <li><b>こだわり</b> — 脚本・演出・キャラの<wbr>どこを<wbr>重視するか</li>
+      <li><b>継続力</b> — 一番長く<wbr>追っている<wbr>シリーズの年数</li>
     </ul>
     <div class="reveal-group">
-      <div class="reveal-group-title">診断で判定される視聴タイプ（4種）</div>
+      <div class="reveal-group-title">診断で<wbr>判定される<wbr>視聴タイプ<wbr>（4種）</div>
       <ul class="reveal-list">
-        <li><b>脚本派</b> — 脚本・構成の巧さを重視</li>
-        <li><b>演出派</b> — 作画・演出のクオリティを重視</li>
-        <li><b>キャラ萌え派</b> — キャラクター・声優の魅力を重視</li>
-        <li><b>自由派</b> — 特にこだわらず気楽に楽しむ</li>
+        <li><b>脚本派</b> — 脚本・<wbr>構成の<wbr>巧さを重視</li>
+        <li><b>演出派</b> — 作画・演出の<wbr>クオリティを重視</li>
+        <li><b>キャラ萌え派</b> — キャラクター・声優の<wbr>魅力を重視</li>
+        <li><b>自由派</b> — 特に<wbr>こだわらず<wbr>気楽に<wbr>楽しむ</li>
       </ul>
     </div>
     <div class="reveal-group">
-      <div class="reveal-group-title">診断で判定される視聴スタイル（4種）</div>
+      <div class="reveal-group-title">診断で<wbr>判定される<wbr>視聴スタイル<wbr>（4種）</div>
       <ul class="reveal-list">
-        <li><b>深夜アニメ探求者</b> — 深夜0時〜2時にリアルタイム視聴</li>
-        <li><b>スキマ視聴の達人</b> — 通勤・通学のスキマ時間に視聴</li>
-        <li><b>週末一気見タイプ</b> — 週末にまとめて一気見</li>
-        <li><b>コツコツ追走型</b> — 配信された分をこまめに視聴</li>
+        <li><b>深夜アニメ探求者</b> — 深夜0時〜2時に<wbr>リアルタイム視聴</li>
+        <li><b>スキマ視聴の<wbr>達人</b> — 通勤・通学の<wbr>スキマ時間に視聴</li>
+        <li><b>週末一気<wbr>見タイプ</b> — 週末に<wbr>まとめて一気見</li>
+        <li><b>コツコツ追走型</b> — 配信された分を<wbr>こまめに視聴</li>
       </ul>
     </div>
   </div>
@@ -153,7 +160,7 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
 
   <div id="startScreen">
     <div class="start-card">
-      <p style="font-size:0.92rem; color:var(--text-muted); margin-bottom:22px; line-height:1.9;">あなたの視聴スタイルをステータスカードにします。所要時間は約1分です。</p>
+      <p style="font-size:0.92rem; color:var(--text-muted); margin-bottom:22px; line-height:1.9;">あなたの<wbr>視聴スタイルを<wbr>ステータスカードに<wbr>します。<wbr>所要時間は<wbr>約1分です。</p>
       <button class="start-btn" onclick="startQuiz()">作成をはじめる →</button>
     </div>
   </div>
@@ -169,14 +176,14 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
     </div>
   </div>
   <section class="tool-guide">
-    <h2>この診断の仕組みと使い方</h2>
-    <h3>5つのステータスは何で決まる？</h3>
-    <p>「あなたのアニメ履歴書」は、6つの質問への回答から、経験値・視聴の幅・涙腺・こだわり・継続力の5項目を4段階のバーで表示するプロフィールカードを作る診断です。経験値はアニメを見始めた時期、視聴の幅は1クールに見る本数、涙腺は心を動かされたジャンル、こだわりは作品のどこを重視するか、継続力は一番長く追っているシリーズの年数をもとにしています。</p>
-    <h3>カード上部のタイプの見方</h3>
-    <p>カードの一番上には、4つ目の質問の回答で決まる「視聴タイプ」（脚本派・演出派・キャラ萌え派・自由派）と、最後の質問の回答で決まる「視聴スタイル」が、「脚本派 × 週末一気見タイプ」のように並んで表示されます。バーが長いほど優れているという意味ではありません。沢山の作品を追う人も、1作品をじっくり味わう人も、楽しみ方の違いを見える形にしたものです。</p>
-    <h3>保存・シェアと、回答の扱いについて</h3>
-    <p>できあがったカードは「画像を保存」でPNG画像として保存でき、「結果をシェア」からXに投稿出来ます。回答の集計はお使いのブラウザの中だけで行われ、選んだ回答の内容をANIMEDBのサーバーへ送信・保存することはありません。視聴環境や気分が変われば答えも変わるので、数か月後にもう一度作って見比べてみるのも面白いと思います。</p>
-    <p>重視するポイントをもっと細かく知りたい方は、5つのタイプに分けて診断する<a href="/viewer-type.html">「あなたは何派？」</a>や、評価の配点を試せる<a href="/rating-simulator.html">「このアニメ、何点つける？」</a>もあわせてどうぞ。</p>
+    <h2>この<wbr>診断の<wbr>仕組みと<wbr>使い方</h2>
+    <h3>5つの<wbr>ステータスは何で<wbr>決まる？</h3>
+    <p>「あなたのアニメ履歴書」は、<wbr>6つの<wbr>質問への<wbr>回答から、<wbr>経験値・視聴の<wbr>幅・涙腺・こだわり・継続力の<wbr>5項目を<wbr>4段階の<wbr>バーで<wbr>表示する<wbr>プロフィールカードを作る<wbr>診断です。<wbr>経験値は<wbr>アニメを<wbr>見始めた<wbr>時期、<wbr>視聴の幅は<wbr>1クールに見る<wbr>本数、<wbr>涙腺は心を<wbr>動かされた<wbr>ジャンル、<wbr>こだわりは<wbr>作品の<wbr>どこを<wbr>重視するか、<wbr>継続力は一番長く<wbr>追っている<wbr>シリーズの<wbr>年数を<wbr>もとにしています。</p>
+    <h3>カード上部の<wbr>タイプの見方</h3>
+    <p>カードの<wbr>一番上には、<wbr>4つ目の<wbr>質問の<wbr>回答で<wbr>決まる<wbr>「視聴タイプ」<wbr>（脚本派・演出派・キャラ萌え派・<wbr>自由派）と、<wbr>最後の<wbr>質問の<wbr>回答で<wbr>決まる<wbr>「視聴スタイル」が、<wbr>「脚本派 × 週末一気<wbr>見タイプ」のように<wbr>並んで<wbr>表示されます。<wbr>バーが<wbr>長いほど<wbr>優れているという<wbr>意味ではありません。<wbr>たくさんの<wbr>作品を追う<wbr>人も、<wbr>1作品を<wbr>じっくり<wbr>味わう<wbr>人も、<wbr>楽しみ方の<wbr>違いを<wbr>見える形にした<wbr>ものです。</p>
+    <h3>保存・シェアと、<wbr>回答の<wbr>扱いに<wbr>ついて</h3>
+    <p>できあがった<wbr>カードは<wbr>「画像を保存」で<wbr>PNG画像として<wbr>保存でき、<wbr>「結果をシェア」からXに<wbr>投稿できます。<wbr>回答の<wbr>集計は<wbr>お使いの<wbr>ブラウザの<wbr>中だけで<wbr>行われ、<wbr>選んだ回答の<wbr>内容を<wbr>ANIMEDBの<wbr>サーバーへ<wbr>送信・保存する<wbr>ことは<wbr>ありません。<wbr>視聴環境や<wbr>気分が<wbr>変われば<wbr>答えも<wbr>変わるので、数か<wbr>月後にもう一度<wbr>作って<wbr>見比べてみるのも<wbr>面白いと<wbr>思います。</p>
+    <p>重視する<wbr>ポイントを<wbr>もっと<wbr>細かく<wbr>知りたい方は、<wbr>5つの<wbr>タイプに<wbr>分けて<wbr>診断する<a href="/viewer-type.html"><wbr>「あなたは何派？」</a>や、<wbr>評価の<wbr>配点を<wbr>試せる<a href="/rating-simulator.html"><wbr>「この<wbr>アニメ、<wbr>何点つける？」</a>も<wbr>あわせて<wbr>どうぞ。</p>
   </section>
 </main>
 

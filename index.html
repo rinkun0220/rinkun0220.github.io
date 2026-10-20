@@ -234,13 +234,20 @@ main { margin-top: var(--nav-height); padding: 24px; min-height: calc(100vh - va
 .dmm-tv-btn {
     background: linear-gradient(135deg, #FFD700 0%, #FFAA00 100%);
     color: #1A1A1A;
-    /* ...中略... */
+}
 .dmm-tv-btn:hover::before {
     left: 100%;
 }
+/* 日本語の改行を自然にする設定（文節単位で改行・行頭禁則・1文字だけの行を避ける） */
+body{line-break:strict;overflow-wrap:break-word}
+@supports (word-break:auto-phrase){body{word-break:auto-phrase}}
+:has(> wbr){word-break:keep-all}
+p,li,dd,td,th{text-wrap:pretty}
+.nb{white-space:nowrap}
+h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-title,.pick-name,.next-article-title{text-wrap:balance}
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","name":"ANIMEDB","url":"https://anime-db.jp/","description":"1990年から最新まで全シーズン対応のアニメデータベース。","inLanguage":"ja"}
+{"@context":"https://schema.org","@type":"WebSite","name":"ANIMEDB","url":"https://anime-db.jp/","description":"1990年から最新まで全シーズン対応のアニメデータベースです。","inLanguage":"ja"}
 </script>
 </head>
 <body>
@@ -263,11 +270,11 @@ main { margin-top: var(--nav-height); padding: 24px; min-height: calc(100vh - va
     </div>
 
     <div class="adsense-seo-content" style="margin-bottom: 40px; animation: fadeIn 0.8s ease-out;">
-      <h1 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 16px; line-height: 1.4;">ANIMEDB｜今クールの注目アニメをピックアップ。<br class="sp-br">またアニメの入口の幅を増やすためのサイトです。</h1>
+      <h1 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 16px; line-height: 1.4;">ANIMEDB｜今クールの<wbr>注目アニメを<wbr>ピックアップします。<br class="sp-br">また<wbr>アニメの<wbr>入口の幅を<wbr>増やすための<wbr>サイトです。</h1>
       <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 16px; line-height: 1.8;">
-        当サイトは、毎クール70本前後放送されるアニメ作品の中から注目アニメをデータベースから検索。またアニメの入口の幅を広くするためにブログから、アニメを発掘するためのアニメサイトです。今クールの注目アニメ。アニメの入口の幅を増やすためのブログ。そこからピックアップしたアニメを各種動画配信サービスへの繋がりをまとめました。<br>力を入れているのが<a href="./blog/" style="color:var(--text-muted);text-decoration:none;">管理人が書いている<span style="color:var(--accent);">ブログ</span>です</a>。レビュー、ランキングから脚本家・監督・制作会社・音楽・声優の掘り下げまで、管理人の視点でブログを書いています。<br class="pc-br"><a href="./about.html" style="color:var(--text-muted);text-decoration:none;"><span style="color:var(--accent);">開発者の思い</span>を見て頂ければ幸いです。</a>
+        当サイトは、<wbr>毎クール70本前後<wbr>放送される<wbr>アニメ作品の<wbr>中から、<wbr>注目アニメを<wbr>データベースから<wbr>検索できます。<wbr>また、<wbr>アニメの<wbr>入口の幅を広くする<wbr>ために、<wbr>ブログから<wbr>アニメを<wbr>発掘する<wbr>ための<wbr>アニメサイトです。<wbr>「今クールの注目アニメ」と<wbr>「アニメの<wbr>入口の幅を<wbr>増やすための<wbr>ブログ」を<wbr>軸に、<wbr>そこから<wbr>ピックアップした<wbr>アニメと各<wbr>種動画配信サービスへの<wbr>つながりを<wbr>まとめました。<br>力を<wbr>入れているのが<a href="./blog/" style="color:var(--text-muted);text-decoration:none;"><wbr>管理人が<wbr>書いている<span style="color:var(--accent);"><wbr>ブログ</span>です</a>。<wbr>レビュー、<wbr>ランキングから<wbr>脚本家・監督・<wbr>制作会社・音楽・声優の掘り<wbr>下げまで、<wbr>管理人の<wbr>視点で<wbr>ブログを<wbr>書いています。<br class="pc-br"><a href="./about.html" style="color:var(--text-muted);text-decoration:none;"><span style="color:var(--accent);">開発者の<wbr>思い</span>を<wbr>見ていただければ<wbr>幸いです。</a>
       </p>
-      <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 8px;">X・Instagram・TikTokにも管理人の感想を投稿しています。是非フォローしてください。</p>
+      <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 8px;">X・Instagram・TikTokにも<wbr>管理人の<wbr>感想を<wbr>投稿しています。<wbr>ぜひフォローしてください。</p>
       <div style="display:flex; gap:10px; flex-wrap:wrap; margin-bottom: 24px;">
         <a href="https://x.com/TsukuiKenta" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:6px;background:#000;color:#fff;font-size:0.82rem;font-weight:700;padding:7px 14px;border-radius:20px;text-decoration:none;">𝕏 X</a>
         <a href="https://www.instagram.com/rinkun0220/" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:6px;background:#000;color:#fff;font-size:0.82rem;font-weight:700;padding:7px 14px;border-radius:20px;text-decoration:none;">📷 Instagram</a>
@@ -355,7 +362,7 @@ main { margin-top: var(--nav-height); padding: 24px; min-height: calc(100vh - va
 <a class="summer-banner" href="https://anime-db.jp/blog/autumn2026-recommend.html">
   <div class="summer-banner-badge">🍁 NEW · AUTUMN 2026</div>
   <div class="summer-banner-title">2026年秋アニメ おすすめ10選</div>
-  <div class="summer-banner-sub">📺 見逃し厳禁 · 独自視点でレビュー · 配信情報つき</div>
+  <div class="summer-banner-sub">📺 見逃し厳禁 · 独自視点で<wbr>レビュー · 配信情報つき</div>
   <div class="summer-banner-arrow">▶ 記事を読む →</div>
 </a>
 
@@ -375,7 +382,7 @@ main { margin-top: var(--nav-height); padding: 24px; min-height: calc(100vh - va
     ANIMEDBブログ
   </div>
   <div style="font-size:.85rem;color:#a4b0be;line-height:1.6;">
-    シーズンごとの感想まとめや、おすすめ作品、声優・監督・制作会社の特集記事を読めます。
+    シーズンごとの<wbr>感想まとめや、<wbr>おすすめ作品、<wbr>声優・監督・<wbr>制作会社の<wbr>特集記事を<wbr>読めます。
     <span style="color:#ff4757;font-weight:700;margin-left:8px;">ブログ一覧を見る →</span>
   </div>
 </a>
@@ -396,7 +403,7 @@ main { margin-top: var(--nav-height); padding: 24px; min-height: calc(100vh - va
     アニメ初心者向け用語集
   </div>
   <div style="font-size:.85rem;color:#a4b0be;line-height:1.6;">
-    「1話切り」「なろう系」「シリーズ構成」など、アニメサイトやSNSでよく見る言葉をやさしく解説します。
+    「1話切り」<wbr>「なろう系」<wbr>「シリーズ構成」など、<wbr>アニメサイトや<wbr>SNSでよく見る<wbr>言葉を<wbr>やさしく<wbr>解説します。
     <span style="color:#ffffff;font-weight:700;margin-left:8px;">用語集を見る →</span>
   </div>
 </a>
@@ -411,13 +418,13 @@ main { margin-top: var(--nav-height); padding: 24px; min-height: calc(100vh - va
    onmouseout="this.style.transform='';this.style.borderColor='var(--border-color)'">
   <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;">
     <span style="background:#ffffff;color:#14141c;font-size:.72rem;font-weight:800;padding:3px 10px;border-radius:20px;">🗂️ 名鑑</span>
-    <span style="color:#e0e0e0;font-size:.72rem;font-weight:700;">声優・脚本家・監督・制作会社・アーティスト</span>
+    <span style="color:#e0e0e0;font-size:.72rem;font-weight:700;">声優・脚本家・監督・<wbr>制作会社・アーティスト</span>
   </div>
   <div style="font-size:1.05rem;font-weight:800;color:#fff;margin-bottom:6px;line-height:1.5;">
     声優・スタッフ名鑑
   </div>
   <div style="font-size:.85rem;color:#a4b0be;line-height:1.6;">
-    名前から、ブログで取り上げた方の代表作や特集記事へジャンプ出来ます。
+    名前から、<wbr>ブログで<wbr>取り上げた方の<wbr>代表作や<wbr>特集記事へ<wbr>ジャンプできます。
     <span style="color:#ffffff;font-weight:700;margin-left:8px;">名鑑を見る →</span>
   </div>
 </a>
@@ -432,18 +439,18 @@ main { margin-top: var(--nav-height); padding: 24px; min-height: calc(100vh - va
    onmouseout="this.style.transform='';this.style.borderColor='var(--border-color)'">
   <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;">
     <span style="background:#ffffff;color:#14141c;font-size:.72rem;font-weight:800;padding:3px 10px;border-radius:20px;">🎮 診断・ガチャ</span>
-    <span style="color:#e0e0e0;font-size:.72rem;font-weight:700;">遊びながらアニメに出会える</span>
+    <span style="color:#e0e0e0;font-size:.72rem;font-weight:700;">遊びながら<wbr>アニメに<wbr>出会える</span>
   </div>
   <div style="font-size:1.05rem;font-weight:800;color:#fff;margin-bottom:6px;line-height:1.5;">
     診断・ガチャ一覧
   </div>
   <div style="font-size:.85rem;color:#a4b0be;line-height:1.6;">
-    制作会社診断、視聴傾向診断「あなたは何派？」、埋もれた名作ガチャなどをまとめています。
+    制作会社診断、<wbr>視聴傾向診断<wbr>「あなたは何派？」、<wbr>埋もれた<wbr>名作ガチャなどを<wbr>まとめています。
     <span style="color:#ffffff;font-weight:700;margin-left:8px;">一覧を見る →</span>
   </div>
 </a>
 
-          【独自レビュー】管理人が選ぶ！2026年10月開始おすすめアニメ！
+          【独自レビュー】管理人が<wbr>選ぶ！<wbr>2026年10月開始おすすめアニメ！
         </h2>
 
 <!-- ▼▼▼ 10月開始おすすめ・作品列全体の flex ラッパー ▼▼▼ -->
@@ -453,13 +460,13 @@ main { margin-top: var(--nav-height); padding: 24px; min-height: calc(100vh - va
   <div style="flex: 1; min-width: 250px; padding-bottom: 8px;">
     <a href="https://kusuriyanohitorigoto.jp/season3/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; display: block;">
       <h3 style="font-size: 1.05rem; color: #f0f0f0; margin-bottom: 8px; display: flex; align-items: center; gap: 6px;">
-        1. 薬屋のひとりごと 第3期
+        1. 薬屋の<wbr>ひとりごと 第3期
         <span style="font-size: 0.7rem; background: var(--accent); color: #fff; padding: 2px 6px; border-radius: 4px; font-weight: 600;">公式サイト →</span>
       </h3>
     </a>
     <p style="color: var(--text-main); font-size: 0.9rem; line-height: 1.6; text-align: justify; margin-bottom: 14px;">
-      <strong style="color: #e8eaf0;">「猫猫と壬氏の関係、ついに動き出す」</strong><br><br>
-      シリーズ累計5,700万部を超える人気作、待望の第3期。物語の舞台は後宮から市井へと移り、猫猫と壬氏の関係もいよいよ大きく動き出す転換点が描かれます。分割2クールというボリュームからも、シリーズ屈指の重要エピソードであることがうかがえます。12月には劇場版の公開も控えており、今期最も目が離せないシリーズの一つです。
+      <strong style="color: #e8eaf0;">「猫猫と<wbr>壬氏の<wbr>関係、<wbr>ついに<wbr>動き出す」</strong><br><br>
+      シリーズ累計5,700万部を<wbr>超える<wbr>人気作、<wbr>待望の<wbr>第3期です。<wbr>物語の<wbr>舞台は<wbr>後宮から<wbr>市井へと<wbr>移り、<wbr>猫猫と<wbr>壬氏の<wbr>関係も<wbr>いよいよ<wbr>大きく<wbr>動き出す転換点が<wbr>描かれます。<wbr>分割2クールという<wbr>ボリュームからも、<wbr>シリーズ屈指の<wbr>重要エピソードである<wbr>ことがうかが<wbr>えます。<wbr>12月には<wbr>劇場版の<wbr>公開も<wbr>控えており、<wbr>今期最も目が<wbr>離せない<wbr>シリーズの<wbr>一つです。
     </p>
     <div class="card-stream-badges">
       <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener noreferrer" class="badge danime">dアニメ</a>
@@ -472,13 +479,13 @@ main { margin-top: var(--nav-height); padding: 24px; min-height: calc(100vh - va
   <div style="flex: 1; min-width: 250px; padding-bottom: 8px;">
     <a href="https://korinojoheki-pr.com/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; display: block;">
       <h3 style="font-size: 1.05rem; color: #f0f0f0; margin-bottom: 8px; display: flex; align-items: center; gap: 6px;">
-        2. 氷の城壁 第2期
+        2. 氷の<wbr>城壁 第2期
         <span style="font-size: 0.7rem; background: var(--accent); color: #fff; padding: 2px 6px; border-radius: 4px; font-weight: 600;">公式サイト →</span>
       </h3>
     </a>
     <p style="color: var(--text-main); font-size: 0.9rem; line-height: 1.6; text-align: justify; margin-bottom: 14px;">
-      <strong style="color: #e8eaf0;">「不器用な二人の関係、2期はどう転がる？」</strong><br><br>
-      阿賀沢紅茶原作、静かな緊張感が漂う青春群像劇の第2期。人と壁を作ってしまう氷川小雪と、距離感ゼロで踏み込んでくる雨宮湊。1期のラストで動き出した二人の関係が、2期でどう転がっていくのかが最大の見どころです。
+      <strong style="color: #e8eaf0;">「不器用な<wbr>二人の<wbr>関係、<wbr>2期はどう<wbr>転がる？」</strong><br><br>
+      阿賀沢紅茶原作、<wbr>静かな<wbr>緊張感が漂う<wbr>青春群像劇の<wbr>第2期です。人と壁を<wbr>作ってしまう<wbr>氷川小雪と、<wbr>距離感ゼロで<wbr>踏み込んでくる<wbr>雨宮湊です。<wbr>1期の<wbr>ラストで<wbr>動き出した<wbr>二人の<wbr>関係が、<wbr>2期でどう<wbr>転がっていくのかが<wbr>最大の<wbr>見どころです。
     </p>
     <div class="card-stream-badges">
       <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener noreferrer" class="badge danime">dアニメ</a>
@@ -491,13 +498,13 @@ main { margin-top: var(--nav-height); padding: 24px; min-height: calc(100vh - va
   <div style="flex: 1; min-width: 250px; padding-bottom: 8px;">
     <a href="https://aonohako-anime.com/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; display: block;">
       <h3 style="font-size: 1.05rem; color: #f0f0f0; margin-bottom: 8px; display: flex; align-items: center; gap: 6px;">
-        3. アオのハコ Season2
+        3. アオの<wbr>ハコ Season2
         <span style="font-size: 0.7rem; background: var(--accent); color: #fff; padding: 2px 6px; border-radius: 4px; font-weight: 600;">公式サイト →</span>
       </h3>
     </a>
     <p style="color: var(--text-main); font-size: 0.9rem; line-height: 1.6; text-align: justify; margin-bottom: 14px;">
-      <strong style="color: #e8eaf0;">「世界が認めた青春ラブストーリー、堂々の2期」</strong><br><br>
-      バドミントン部の大喜と、バスケ部の先輩・千夏。等身大の恋と部活を描いた青春ラブストーリー第2期。1期は世界配信でクランチロール・アニメアワード2025最優秀ロマンス作品賞を受賞するなど、海外でも高く評価された実力派です。
+      <strong style="color: #e8eaf0;">「世界が<wbr>認めた<wbr>青春ラブストーリー、<wbr>堂々の<wbr>2期」</strong><br><br>
+      バドミントン部の<wbr>大喜と、<wbr>バスケ部の<wbr>先輩・千夏です。<wbr>等身大の恋と<wbr>部活を<wbr>描いた<wbr>青春ラブストーリー第2期です。<wbr>1期は<wbr>世界配信で<wbr>クランチロール・アニメアワード2025最優秀ロマンス作品賞を<wbr>受賞するなど、<wbr>海外でも高く<wbr>評価された<wbr>実力派です。
     </p>
     <div class="card-stream-badges">
       <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener noreferrer" class="badge danime">dアニメ</a>
@@ -515,8 +522,8 @@ main { margin-top: var(--nav-height); padding: 24px; min-height: calc(100vh - va
       </h3>
     </a>
     <p style="color: var(--text-main); font-size: 0.9rem; line-height: 1.6; text-align: justify; margin-bottom: 14px;">
-      <strong style="color: #e8eaf0;">「MAPPA制作の令和リメイク、いよいよ第3期」</strong><br><br>
-      高橋留美子による不朽の名作、MAPPA制作による令和リメイク第3期。水をかぶれば女に、お湯をかぶれば男に戻ってしまう乱馬と、許嫁のあかねが繰り広げるドタバタ格闘ラブコメディ。放送直後からNetflix独占配信という体制です。
+      <strong style="color: #e8eaf0;">「MAPPA制作の<wbr>令和リメイク、<wbr>いよいよ<wbr>第3期」</strong><br><br>
+      高橋留美子による<wbr>不朽の<wbr>名作、<wbr>MAPPA制作による<wbr>令和リメイク第3期です。水を<wbr>かぶれば<wbr>女に、<wbr>お湯を<wbr>かぶれば男に<wbr>戻ってしまう<wbr>乱馬と、<wbr>許嫁の<wbr>あかねが繰り<wbr>広げる<wbr>ドタバタ格闘ラブコメディです。<wbr>放送直後から<wbr>Netflix独占配信という<wbr>体制です。
     </p>
     <div class="card-stream-badges">
       <a href="https://netflix.com" target="_blank" rel="noopener noreferrer" class="badge netflix">Netflix</a>
@@ -527,13 +534,13 @@ main { margin-top: var(--nav-height); padding: 24px; min-height: calc(100vh - va
   <div style="flex: 1; min-width: 250px; padding-bottom: 8px;">
     <a href="https://toaru-project.com/item/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; display: block;">
       <h3 style="font-size: 1.05rem; color: #f0f0f0; margin-bottom: 8px; display: flex; align-items: center; gap: 6px;">
-        5. とある暗部の少女共棲
+        5. とある<wbr>暗部の<wbr>少女共棲
         <span style="font-size: 0.7rem; background: var(--accent); color: #fff; padding: 2px 6px; border-radius: 4px; font-weight: 600;">公式サイト →</span>
       </h3>
     </a>
     <p style="color: var(--text-main); font-size: 0.9rem; line-height: 1.6; text-align: justify; margin-bottom: 14px;">
-      <strong style="color: #e8eaf0;">「『とある』プロジェクト再始動、裏社会の少女たち」</strong><br><br>
-      学園都市の裏社会で暗躍する精鋭部隊「アイテム」に焦点を当てたダークな物語。監督は長井龍雪。青春の痛みを描く手腕が、暗部の少女たちの物語でどう活きるかにも注目です。「とある」シリーズに追いつけない、よく分からないという方にこそおすすめしたい、気軽に入れる入口の一作です。
+      <strong style="color: #e8eaf0;">「『とある』プロジェクト再始動、<wbr>裏社会の<wbr>少女たち」</strong><br><br>
+      学園都市の<wbr>裏社会で<wbr>暗躍する<wbr>精鋭部隊<wbr>「アイテム」に<wbr>焦点を<wbr>当てた<wbr>ダークな<wbr>物語です。<wbr>監督は<wbr>長井龍雪です。<wbr>青春の<wbr>痛みを描く<wbr>手腕が、<wbr>暗部の<wbr>少女たちの<wbr>物語でどう<wbr>活きるかにも<wbr>注目です。「とある」シリーズに<wbr>追いつけない、よく<wbr>分からないという<wbr>方にこそ<wbr>おすすめしたい、<wbr>気軽に<wbr>入れる<wbr>入口の<wbr>一作です。
     </p>
     <div class="card-stream-badges">
       <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener noreferrer" class="badge danime">dアニメ</a>
@@ -545,20 +552,20 @@ main { margin-top: var(--nav-height); padding: 24px; min-height: calc(100vh - va
   <div style="flex: 1; min-width: 250px; padding-bottom: 8px;">
     <a href="http://fxkurumi-info.com/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; display: block;">
       <h3 style="font-size: 1.05rem; color: #f0f0f0; margin-bottom: 8px; display: flex; align-items: center; gap: 6px;">
-        6. FX戦士くるみちゃん
+        6. FX戦士くる<wbr>みちゃん
         <span style="font-size: 0.7rem; background: var(--accent); color: #fff; padding: 2px 6px; border-radius: 4px; font-weight: 600;">公式サイト →</span>
       </h3>
     </a>
     <p style="color: var(--text-main); font-size: 0.9rem; line-height: 1.6; text-align: justify; margin-bottom: 14px;">
-      <strong style="color: #e8eaf0;">「女子大生がFXで2000万円を目指す異色コメディ」</strong><br><br>
-      ごく普通の女子大生・福賀くるみが、FX（外国為替証拠金取引）で2000万円を目指すという、令和らしい異色コメディ。チャートの値動きに一喜一憂する姿は、投資経験がある人ほど「あるある」と共感出来る作りです。
+      <strong style="color: #e8eaf0;">「女子大生が<wbr>FXで<wbr>2000万円を<wbr>目指す異色コメディ」</strong><br><br>
+      ごく<wbr>普通の<wbr>女子大生・<wbr>福賀くるみが、FX<wbr>（外国為替証拠金取引）で<wbr>2000万円を<wbr>目指すと<wbr>いう、<wbr>令和らしい<wbr>異色コメディです。<wbr>チャートの<wbr>値動きに<wbr>一喜一憂する<wbr>姿は、<wbr>投資経験がある<wbr>人ほど<wbr>「あるある」と<wbr>共感できる<wbr>作りです。
     </p>
     <div class="card-stream-badges">
       <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener noreferrer" class="badge danime">dアニメ</a>
       <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener noreferrer" class="badge amazon">Amazon</a>
       <a href="https://netflix.com" target="_blank" rel="noopener noreferrer" class="badge netflix">Netflix</a>
     </div>
-    <div style="font-size:.75rem;color:var(--text-muted);margin-top:6px;">※Amazon・Netflixは10月6日より配信開始予定</div>
+    <div style="font-size:.75rem;color:var(--text-muted);margin-top:6px;">※Amazon・Netflixは<wbr>10月6日より<wbr>配信開始予定</div>
   </div>
 
 </div>
@@ -570,10 +577,10 @@ main { margin-top: var(--nav-height); padding: 24px; min-height: calc(100vh - va
 
     <!-- ▼▼▼ 国内で注目のアニメ（管理人セレクト・手動更新） ▼▼▼ -->
     <section>
-      <h3 class="section-title">国内で注目のアニメ（管理人セレクト）</h3>
-      <p style="font-size:0.78rem;color:var(--text-muted);margin:-10px 0 16px;">※作品画像はMyAnimeListのデータベースから取得して表示しています。更新直後やMyAnimeList側の状況により、画像が一時的に表示されない場合があります。</p>
-      <p style="font-size:0.78rem;color:var(--text-muted);margin:-10px 0 16px;">※★の点数は管理人スコア（10点満点）です。評価の基準は<a href="/blog/rating-criteria.html" style="color:var(--accent);">こちら</a>をご覧ください。</p>
-      <p style="font-size:0.78rem;color:var(--text-muted);margin:-10px 0 16px;">※作品の画像・タイトルをクリックすると、その作品の公式サイトが新しいタブで開きます。</p>
+      <h3 class="section-title">国内で<wbr>注目の<wbr>アニメ<wbr>（管理人セレクト）</h3>
+      <p style="font-size:0.78rem;color:var(--text-muted);margin:-10px 0 16px;">※作品画像は<wbr>MyAnimeListの<wbr>データベースから<wbr>取得して<wbr>表示しています。<wbr>更新直後や<wbr>MyAnimeList側の<wbr>状況に<wbr>より、<wbr>画像が<wbr>一時的に<wbr>表示されない<wbr>場合が<wbr>あります。</p>
+      <p style="font-size:0.78rem;color:var(--text-muted);margin:-10px 0 16px;">※★の<wbr>点数は<wbr>管理人スコア<wbr>（10点満点）です。<wbr>評価の<wbr>基準は<a href="/blog/rating-criteria.html" style="color:var(--accent);"><wbr>こちら</a>を<wbr>ご覧ください。</p>
+      <p style="font-size:0.78rem;color:var(--text-muted);margin:-10px 0 16px;">※作品の<wbr>画像・タイトルを<wbr>クリックすると、その<wbr>作品の<wbr>公式サイトが<wbr>新しい<wbr>タブで<wbr>開きます。</p>
       <div class="scroll-row">
 
         <div class="anime-card">
@@ -586,7 +593,7 @@ main { margin-top: var(--nav-height); padding: 24px; min-height: calc(100vh - va
           <div class="card-info">
             <div>
               <a href="https://kusuriyanohitorigoto.jp/season3/" target="_blank" rel="noopener noreferrer" style="text-decoration:none;color:inherit;">
-                <div class="card-title">薬屋のひとりごと 第3期</div>
+                <div class="card-title">薬屋の<wbr>ひとりごと 第3期</div>
               </a>
               <div class="card-meta">2026 秋</div>
             </div>
@@ -608,7 +615,7 @@ main { margin-top: var(--nav-height); padding: 24px; min-height: calc(100vh - va
           <div class="card-info">
             <div>
               <a href="https://korinojoheki-pr.com/" target="_blank" rel="noopener noreferrer" style="text-decoration:none;color:inherit;">
-                <div class="card-title">氷の城壁 第2期</div>
+                <div class="card-title">氷の<wbr>城壁 第2期</div>
               </a>
               <div class="card-meta">2026 秋</div>
             </div>
@@ -630,7 +637,7 @@ main { margin-top: var(--nav-height); padding: 24px; min-height: calc(100vh - va
           <div class="card-info">
             <div>
               <a href="https://aonohako-anime.com/" target="_blank" rel="noopener noreferrer" style="text-decoration:none;color:inherit;">
-                <div class="card-title">アオのハコ Season2</div>
+                <div class="card-title">アオの<wbr>ハコ Season2</div>
               </a>
               <div class="card-meta">2026 秋</div>
             </div>
@@ -652,7 +659,7 @@ main { margin-top: var(--nav-height); padding: 24px; min-height: calc(100vh - va
           <div class="card-info">
             <div>
               <a href="https://sh-anime.shochiku.co.jp/chiifuyo-anime/" target="_blank" rel="noopener noreferrer" style="text-decoration:none;color:inherit;">
-                <div class="card-title">追放されたチート付与魔術師は気ままなセカンドライフを謳歌する。</div>
+                <div class="card-title">追放された<wbr>チート付与魔術師は<wbr>気ままな<wbr>セカンドライフを<wbr>謳歌する。</div>
               </a>
               <div class="card-meta">2026 秋</div>
             </div>
@@ -692,7 +699,7 @@ main { margin-top: var(--nav-height); padding: 24px; min-height: calc(100vh - va
           <div class="card-info">
             <div>
               <a href="https://toaru-project.com/item/" target="_blank" rel="noopener noreferrer" style="text-decoration:none;color:inherit;">
-                <div class="card-title">とある暗部の少女共棲</div>
+                <div class="card-title">とある<wbr>暗部の<wbr>少女共棲</div>
               </a>
               <div class="card-meta">2026 秋</div>
             </div>
@@ -715,7 +722,7 @@ main { margin-top: var(--nav-height); padding: 24px; min-height: calc(100vh - va
               <a href="https://anime-ann-e.jp/" target="_blank" rel="noopener noreferrer" style="text-decoration:none;color:inherit;">
                 <div class="card-title">アン・シャーリー</div>
               </a>
-              <div class="card-meta">2025 春（再放送）</div>
+              <div class="card-meta">2025 春<wbr>（再放送）</div>
             </div>
             <div class="card-stream-badges">
               <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener noreferrer" class="badge danime">dアニメ</a>
@@ -734,7 +741,7 @@ main { margin-top: var(--nav-height); padding: 24px; min-height: calc(100vh - va
           <div class="card-info">
             <div>
               <a href="https://zommasu.com/" target="_blank" rel="noopener noreferrer" style="text-decoration:none;color:inherit;">
-                <div class="card-title">#ゾンビさがしてます</div>
+                <div class="card-title">#ゾンビさが<wbr>してます</div>
               </a>
               <div class="card-meta">2026 秋</div>
             </div>
@@ -755,7 +762,7 @@ main { margin-top: var(--nav-height); padding: 24px; min-height: calc(100vh - va
           <div class="card-info">
             <div>
               <a href="https://sekamajo-anime.com/" target="_blank" rel="noopener noreferrer" style="text-decoration:none;color:inherit;">
-                <div class="card-title">世界最強の魔女、始めました</div>
+                <div class="card-title">世界最強の<wbr>魔女、<wbr>始めました</div>
               </a>
               <div class="card-meta">2026 秋</div>
             </div>
@@ -776,7 +783,7 @@ main { margin-top: var(--nav-height); padding: 24px; min-height: calc(100vh - va
           <div class="card-info">
             <div>
               <a href="http://fxkurumi-info.com/" target="_blank" rel="noopener noreferrer" style="text-decoration:none;color:inherit;">
-                <div class="card-title">FX戦士くるみちゃん</div>
+                <div class="card-title">FX戦士くる<wbr>みちゃん</div>
               </a>
               <div class="card-meta">2026 秋</div>
             </div>
@@ -796,17 +803,16 @@ main { margin-top: var(--nav-height); padding: 24px; min-height: calc(100vh - va
 
   <div id="panel-about" class="panel">
     <div class="text-page-content">
-      <h2>ANIMEDBに込めた思い</h2>
-      <p>数あるWebサイトの中から「ANIMEDB」に足を運んでいただき、本当にありがとうございます。</p>
-      <p>昨今、1クールのアニメ放映が70本前後と多くなっています。私もそうですがアニメ選び。過去の名作を忘れています。またキー局のアニメ枠の拡大により、アニメ被りでリアルタイム視聴も難しくなっております。配信サイトもありますが数日遅れの配信です。現在はその転換点だと感じています。その為に見逃し作品がないよう。ANIMEDBを創りました。データベースを参考に
-  新しい作品との出会い。過去の思い出のアニメ作品の見直しの場になれば開発者としてこれ以上の喜びはありません。その為に数多くのリンク先も創りました。あなたにとって良いアニメライフを！　　　　　　　　© 2026 ANIMEDB. All Rights Reserved.</p>
+      <h2>ANIMEDBに<wbr>込めた思い</h2>
+      <p>数ある<wbr>Webサイトの<wbr>中から<wbr>「ANIMEDB」に足を<wbr>運んでいただき、<wbr>本当に<wbr>ありがとう<wbr>ございます。</p>
+      <p>昨今、<wbr>1クールの<wbr>アニメ放映が<wbr>70本前後と<wbr>多くなっています。私も<wbr>そうですが、<wbr>アニメ選びに<wbr>追われて<wbr>過去の<wbr>名作を<wbr>忘れがちです。また<wbr>キー局の<wbr>アニメ枠の<wbr>拡大に<wbr>より、<wbr>アニメ被りで<wbr>リアルタイム視聴も<wbr>難しくなって<wbr>おります。<wbr>配信サイトも<wbr>ありますが<wbr>数日遅れの<wbr>配信です。<wbr>現在はその<wbr>転換点だと<wbr>感じています。その<wbr>ために、<wbr>見逃し作品が<wbr>ないようANIMEDBを<wbr>創りました。<wbr>データベースを<wbr>参考に<wbr>新しい<wbr>作品と<wbr>出会い、<wbr>過去の<wbr>思い出の<wbr>アニメ作品を<wbr>見直す場に<wbr>なれば、<wbr>開発者として<wbr>これ以上の<wbr>喜びは<wbr>ありません。その<wbr>ために、<wbr>数多くの<wbr>リンク先も<wbr>創りました。<wbr>あなたに<wbr>とって良い<wbr>アニメライフを！</p>
     </div>
   </div>
 
   <div id="panel-privacy" class="panel">
     <div class="text-page-content">
       <h2>プライバシーポリシー</h2>
-      <p>プライバシーポリシーの詳細は以下のページをご覧ください。</p>
+      <p>プライバシーポリシーの<wbr>詳細は<wbr>以下の<wbr>ページを<wbr>ご覧ください。</p>
       <div style="text-align: center; margin-top: 32px;">
         <a href="./privacy.html" class="search-btn" style="text-decoration: none; display: inline-block; padding: 14px 40px; font-size: 1.1rem;">プライバシーポリシーを見る →</a>
       </div>
@@ -816,7 +822,7 @@ main { margin-top: var(--nav-height); padding: 24px; min-height: calc(100vh - va
   <div id="panel-contact" class="panel">
     <div class="text-page-content">
       <h2>お問い合わせ</h2>
-      <p>当サイトに関するご要望、不具合のご報告、その他のお問い合わせは、以下のボタンよりお願いいたします。</p>
+      <p>当サイトに<wbr>関する<wbr>ご要望、<wbr>不具合の<wbr>ご報告、その他の<wbr>お問い合わせは、<wbr>以下の<wbr>ボタンより<wbr>お願いいたします。</p>
       <div style="text-align: center; margin-top: 32px;">
        <a href="./contact.html" class="search-btn" style="text-decoration: none; display: inline-block; padding: 14px 40px; font-size: 1.1rem;">お問い合わせ窓口へ →</a>
       </div>
@@ -826,7 +832,7 @@ main { margin-top: var(--nav-height); padding: 24px; min-height: calc(100vh - va
 
 <footer class="site-footer">
   <div class="footer-links">
-    <a href="./about.html" class="footer-link" style="text-decoration:none;color:#4a9eff;">開発者の思い</a>
+    <a href="./about.html" class="footer-link" style="text-decoration:none;color:#4a9eff;">開発者の<wbr>思い</a>
     <a href="./privacy.html" class="footer-link" style="text-decoration:none;">プライバシーポリシー</a>
     <a href="./contact.html" class="footer-link" style="text-decoration:none;">お問い合わせ</a>
     <a href="./changelog.html" class="footer-link" style="text-decoration:none;">更新履歴</a>

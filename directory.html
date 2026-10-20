@@ -93,6 +93,8 @@ main { margin-top: var(--nav-height); padding: 24px; max-width: 960px; margin-le
 .name-card .n-name { font-size: 0.92rem; font-weight: 700; color: #fff; }
 .name-card .n-role { font-size: 0.72rem; color: var(--text-muted); margin-top: 3px; }
 .name-card.hidden { display: none; }
+@media (max-width: 480px) { .name-card { padding: 14px 12px; } }
+.cat-link { white-space: nowrap; }
 
 .link-row { margin-top: 20px; padding: 20px 24px; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 14px; text-align: center; font-size: 0.9rem; color: var(--text-muted); }
 .link-row a { color: var(--accent); text-decoration: none; font-weight: 600; }
@@ -103,6 +105,13 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
 .footer-link { color: var(--text-muted); text-decoration: none; font-size: 0.85rem; }
 .footer-link:hover { color: #fff; }
 .copyright { font-size: 0.8rem; color: rgba(255,255,255,0.3); }
+/* 日本語の改行を自然にする設定（文節単位で改行・行頭禁則・1文字だけの行を避ける） */
+body{line-break:strict;overflow-wrap:break-word}
+@supports (word-break:auto-phrase){body{word-break:auto-phrase}}
+:has(> wbr){word-break:keep-all}
+p,li,dd,td,th{text-wrap:pretty}
+.nb{white-space:nowrap}
+h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-title,.pick-name,.next-article-title{text-wrap:balance}
 </style>
 </head>
 <body>
@@ -122,7 +131,7 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
   <div class="page-head">
     <span class="page-tag">🗂️ 横断検索</span>
     <h1 class="page-title">声優・スタッフ名鑑</h1>
-    <p class="page-desc">ANIMEDBのブログで紹介している声優・脚本家・監督・制作会社・アーティストを一覧にまとめました。普段ブログは作品やテーマ単位で書いているため、「この声、前にも聞いた気がする」「この人が関わった他の作品も知りたい」というときに、人物の名前から横断的に代表作へたどり着けるよう、このページを名鑑としてまとめています。名前をクリックすると、その方を取り上げている特集記事の該当箇所へジャンプします。検索ボックスにひらがな・カタカナ・漢字のいずれで入力しても絞り込めます。</p>
+    <p class="page-desc">ANIMEDBの<wbr>ブログで<wbr>紹介している<wbr>声優・脚本家・監督・<wbr>制作会社・アーティストを<wbr>一覧に<wbr>まとめました。<wbr>普段ブログは<wbr>作品や<wbr>テーマ単位で<wbr>書いている<wbr>ため、<wbr>「この<wbr>声、<wbr>前にも<wbr>聞いた気が<wbr>する」<wbr>「この人が<wbr>関わった他の<wbr>作品も<wbr>知りたい」という<wbr>ときに、<wbr>人物の<wbr>名前から<wbr>横断的に<wbr>代表作へた<wbr>どり着けるよう、この<wbr>ページを<wbr>名鑑として<wbr>まとめています。<wbr>名前を<wbr>クリックすると、その方を<wbr>取り上げている<wbr>特集記事の<wbr>該当箇所へ<wbr>ジャンプします。<wbr>検索ボックスに<wbr>ひらが<wbr>な・カタカナ・漢字の<wbr>いずれで<wbr>入力しても<wbr>絞り込めます。</p>
     <p style="font-size:.78rem;color:var(--text-muted);margin-top:-20px;margin-bottom:28px;">※文中敬称略</p>
   </div>
 
@@ -161,7 +170,7 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
   </div>
 
   <div class="cat-block">
-    <div class="cat-title">🎭 変幻自在の演技力を持つ声優 <a href="/blog/legend-seiyuu-favorites.html" class="cat-link">→ 特集記事を見る</a></div>
+    <div class="cat-title">🎭 変幻自在の<wbr>演技力を<wbr>持つ声優 <a href="/blog/legend-seiyuu-favorites.html" class="cat-link">→ 特集記事を見る</a></div>
     <div class="name-grid">
       <a href="/blog/legend-seiyuu-favorites.html#otsuka" class="name-card" data-name="大塚芳忠 おおつかほうちゅう"><div class="n-name">大塚芳忠</div><div class="n-role">声優</div></a>
       <a href="/blog/legend-seiyuu-favorites.html#ishida" class="name-card" data-name="石田彰 いしだあきら"><div class="n-name">石田彰</div><div class="n-role">声優</div></a>
@@ -253,21 +262,21 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
       <a href="/blog/artist-anime-favorites.html#lisa" class="name-card" data-name="LiSA リサ"><div class="n-name">LiSA</div><div class="n-role">アーティスト</div></a>
       <a href="/blog/artist-anime-favorites.html#kinggnu" class="name-card" data-name="King Gnu キングヌー"><div class="n-name">King Gnu</div><div class="n-role">アーティスト</div></a>
       <a href="/blog/artist-anime-favorites.html#ryokushaka" class="name-card" data-name="緑黄色社会 りょくおうしょくしゃかい"><div class="n-name">緑黄色社会</div><div class="n-role">アーティスト</div></a>
-      <a href="/blog/artist-anime-favorites.html#zutomayo" class="name-card" data-name="ずっと真夜中でいいのに。ずとまよ"><div class="n-name">ずっと真夜中でいいのに。</div><div class="n-role">アーティスト</div></a>
+      <a href="/blog/artist-anime-favorites.html#zutomayo" class="name-card" data-name="ずっと真夜中でいいのに。ずとまよ"><div class="n-name">ずっと<wbr>真夜中で<wbr>いいのに。</div><div class="n-role">アーティスト</div></a>
       <a href="/blog/artist-anime-favorites.html#bump" class="name-card" data-name="BUMP OF CHICKEN ばんぷおぶちきん"><div class="n-name">BUMP OF CHICKEN</div><div class="n-role">アーティスト</div></a>
     </div>
   </div>
 
   <div class="link-row" id="noResult" style="display:none;">
-    該当する名前が見つかりませんでした。別のキーワードで検索してみてください。
+    該当する<wbr>名前が<wbr>見つかりませんでした。別の<wbr>キーワードで<wbr>検索してみてください。
   </div>
 
   <div class="link-row">
-    このページに載っていない声優・スタッフの記事もあります。<a href="/blog/">ブログ一覧</a>から探してみてください。
+    この<wbr>ページに<wbr>載っていない<wbr>声優・スタッフの<wbr>記事も<wbr>あります。<a href="/blog/"><wbr>ブログ一覧</a>から<wbr>探してみてください。
   </div>
 
   <p style="color:var(--text-muted);font-size:0.85rem;line-height:1.8;margin-top:28px;">
-    掲載する人物やカテゴリは、ANIMEDBの各特集記事を書く中で「この方の代表作をまとめておきたい」と感じた範囲から、管理人が手作業で随時追加しています。網羅的な名鑑というよりは、ブログ記事と連動した索引としてご活用ください。
+    掲載する<wbr>人物や<wbr>カテゴリは、<wbr>ANIMEDBの<wbr>各特集記事を書く中で<wbr>「この方の<wbr>代表作を<wbr>まとめて<wbr>おきたい」と<wbr>感じた<wbr>範囲から、<wbr>管理人が<wbr>手作業で随時<wbr>追加しています。<wbr>網羅的な<wbr>名鑑と<wbr>いうよりは、<wbr>ブログ記事と<wbr>連動した<wbr>索引として<wbr>ご活用ください。
   </p>
 </main>
 

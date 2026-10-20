@@ -106,6 +106,13 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
 .reveal-card .rc-desc { font-size: 0.85rem; color: var(--text-muted); line-height: 1.7; }
 .reveal-card .rc-works { font-size: 0.78rem; color: var(--star-color); margin-top: 8px; display: block; }
 .tool-guide{max-width:880px;margin:40px auto 28px;padding:0 20px}.tool-guide h2{font-size:1.05rem;font-weight:700;color:var(--text-main);margin:0 0 12px}.tool-guide h3{font-size:.92rem;font-weight:700;color:var(--accent);margin:20px 0 8px}.tool-guide p{font-size:.88rem;color:var(--text-muted);line-height:1.95;margin:0 0 12px}.tool-guide a{color:var(--star-color);text-decoration:none}.tool-guide a:hover{text-decoration:underline}
+/* 日本語の改行を自然にする設定（文節単位で改行・行頭禁則・1文字だけの行を避ける） */
+body{line-break:strict;overflow-wrap:break-word}
+@supports (word-break:auto-phrase){body{word-break:auto-phrase}}
+:has(> wbr){word-break:keep-all}
+p,li,dd,td,th{text-wrap:pretty}
+.nb{white-space:nowrap}
+h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-title,.pick-name,.next-article-title{text-wrap:balance}
 </style>
 </head>
 <body>
@@ -124,38 +131,38 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
 <main>
   <div class="page-head">
     <span class="page-tag">✍️ 診断コンテンツ</span>
-    <h1 class="page-title">あなたに合う脚本家診断</h1>
-    <p class="page-desc">5つの質問に答えるだけで、あなたの好みに一番近いアニメ脚本家が分かります。所要時間は約1分です。</p>
+    <h1 class="page-title">あなたに合う<wbr>脚本家診断</h1>
+    <p class="page-desc">5つの<wbr>質問に<wbr>答えるだけで、<wbr>あなたの<wbr>好みに一番近い<wbr>アニメ脚本家が<wbr>分かります。<wbr>所要時間は<wbr>約1分です。</p>
     <p style="font-size:.78rem;color:var(--text-muted);margin-top:-24px;margin-bottom:32px;">※文中敬称略</p>
   </div>
 
     <div class="reveal-section">
-    <h2 class="reveal-title">診断に登場する脚本家たち（全5名）</h2>
+    <h2 class="reveal-title">診断に<wbr>登場する<wbr>脚本家たち<wbr>（全5名）</h2>
     <div class="reveal-grid">
       <div class="reveal-card">
         <span class="rc-name">吉田玲子</span>
-        <span class="rc-desc">あなたに一番近いのは吉田玲子です。日常の空気感と、キャラクター同士のさりげない会話を書かせたら随一の脚本家。派手な事件がなくても飽きさせない、いわゆる「日常もの」の名手というイメージが強いタイプです。</span>
-        <span class="rc-works">代表作：けいおん!　など</span>
+        <span class="rc-desc">あなたに一番<wbr>近いのは<wbr>吉田玲子です。<wbr>日常の<wbr>空気感と、<wbr>キャラクター同士の<wbr>さりげない<wbr>会話を<wbr>書かせたら<wbr>随一の<wbr>脚本家です。<wbr>派手な<wbr>事件が<wbr>なくても<wbr>飽きさせない、<wbr>いわゆる<wbr>「日常もの」の<wbr>名手という<wbr>イメージが強い<wbr>タイプです。</span>
+        <span class="rc-works">代表作：けい<wbr>おん!　など</span>
       </div>
       <div class="reveal-card">
         <span class="rc-name">岡田麿里</span>
-        <span class="rc-desc">あなたに一番近いのは岡田麿里です。感情のむき出し方が独特で、いわゆる「エモい」を体現するような脚本家。青春の痛みや後悔を容赦なく描く作風に強く惹かれるタイプです。</span>
-        <span class="rc-works">代表作：あの日見た花の名前を僕達はまだ知らない。　など</span>
+        <span class="rc-desc">あなたに一番<wbr>近いのは<wbr>岡田麿里です。<wbr>感情の<wbr>むき出し方が<wbr>独特で、<wbr>いわゆる<wbr>「エモい」を<wbr>体現するような<wbr>脚本家です。<wbr>青春の<wbr>痛みや<wbr>後悔を<wbr>容赦なく描く<wbr>作風に強く<wbr>惹かれる<wbr>タイプです。</span>
+        <span class="rc-works">代表作：あの<wbr>日見た花の<wbr>名前を<wbr>僕達はまだ<wbr>知らない。　など</span>
       </div>
       <div class="reveal-card">
         <span class="rc-name">花田十輝</span>
-        <span class="rc-desc">あなたに一番近いのは花田十輝です。テンポの良いコメディとラブコメを量産し続けている脚本家。原作ものの「間」の作り方が上手く、キャラの掛け合いが小気味良い作風に惹かれるタイプです。</span>
-        <span class="rc-works">代表作：宇宙よりも遠い場所　など</span>
+        <span class="rc-desc">あなたに一番<wbr>近いのは<wbr>花田十輝です。<wbr>テンポの良い<wbr>コメディと<wbr>ラブコメを<wbr>量産し続けている<wbr>脚本家です。<wbr>原作ものの<wbr>「間」の<wbr>作り方が<wbr>上手く、<wbr>キャラの<wbr>掛け合いが<wbr>小気味良い<wbr>作風に<wbr>惹かれる<wbr>タイプです。</span>
+        <span class="rc-works">代表作：宇宙よりも遠い<wbr>場所　など</span>
       </div>
       <div class="reveal-card">
         <span class="rc-name">横手美智子</span>
-        <span class="rc-desc">あなたに一番近いのは横手美智子です。シリアスからキッズ向けまで守備範囲が異様に広い脚本家。長期シリーズの構成を任されることが多く、物語を破綻させずに畳む手腕に定評があるタイプに惹かれます。</span>
+        <span class="rc-desc">あなたに一番<wbr>近いのは<wbr>横手美智子です。<wbr>シリアスから<wbr>キッズ向けまで<wbr>守備範囲が<wbr>異様に広い<wbr>脚本家です。<wbr>長期シリーズの<wbr>構成を<wbr>任される<wbr>ことが<wbr>多く、<wbr>物語を<wbr>破綻させずに畳む<wbr>手腕に<wbr>定評がある<wbr>タイプに<wbr>惹かれます。</span>
         <span class="rc-works">代表作：SHIROBAKO　など</span>
       </div>
       <div class="reveal-card">
-        <span class="rc-name">あおしまたかし</span>
-        <span class="rc-desc">あなたに一番近いのはあおしまたかしです。日常コメディの脚本・シリーズ構成を数多く手がける脚本家。キャラクターの魅力を引き出す話の並び順や緩急の作り方に、構成の妙を感じるタイプです。</span>
-        <span class="rc-works">代表作：みつどもえ　など</span>
+        <span class="rc-name">あ<wbr>おしまたかし</span>
+        <span class="rc-desc">あなたに一番<wbr>近いのは<wbr>あおしまたかしです。<wbr>日常コメディの<wbr>脚本・シリーズ構成を<wbr>数多く手がける<wbr>脚本家です。<wbr>キャラクターの<wbr>魅力を<wbr>引き出す話の<wbr>並び順や<wbr>緩急の<wbr>作り方に、<wbr>構成の妙を<wbr>感じる<wbr>タイプです。</span>
+        <span class="rc-works">代表作：みつども<wbr>え　など</span>
       </div>
     </div>
   </div>
@@ -164,7 +171,7 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
 
   <div id="startScreen">
     <div class="q-card">
-      <p style="font-size:0.95rem; color:var(--text-muted); margin-bottom:24px; line-height:1.9;">日常の空気感を書く人、感情をむき出しにする人、テンポで魅せる人——脚本家の個性は演出以上に、実は物語の骨格そのものを決めています。あなたの"好き"はどの脚本家に近いでしょうか？</p>
+      <p style="font-size:0.95rem; color:var(--text-muted); margin-bottom:24px; line-height:1.9;">日常の<wbr>空気感を書く<wbr>人、<wbr>感情を<wbr>むき出しにする<wbr>人、<wbr>テンポで<wbr>魅せる<wbr>人——脚本家の<wbr>個性は<wbr>演出以上に、実は<wbr>物語の骨格その<wbr>ものを<wbr>決めています。<wbr>あなたの<wbr>"好き"はどの<wbr>脚本家に<wbr>近いでしょうか？</p>
       <button class="start-btn" onclick="startQuiz()">診断をはじめる →</button>
     </div>
   </div>
@@ -173,13 +180,13 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
 
   <div id="resultScreen" class="hidden"></div>
   <section class="tool-guide">
-    <h2>診断の仕組みと、脚本家に注目して見るコツ</h2>
+    <h2>診断の<wbr>仕組みと、<wbr>脚本家に<wbr>注目して見るコツ</h2>
     <h3>結果の決まり方</h3>
-    <p>5つの質問の選択肢は、それぞれ吉田玲子・岡田麿里・花田十輝・横手美智子・あおしまたかしのいずれかに結び付いています。回答のたびにその脚本家のポイントが加算され、合計がいちばん高かった人が「あなたに合う脚本家」として表示されます。結果画面からは、他の4人の代表作を紹介するページにも移動出来ます。</p>
-    <h3>「脚本」と「シリーズ構成」の違い</h3>
-    <p>アニメには、各話の脚本を書く役割の他に、作品全体の流れや各話の配置を設計する「シリーズ構成」という役職があります。同じ人が両方を担当することも多く、シリーズ構成を担当した作品では、物語全体の骨格にその人の個性が強く表れやすくなります。担当者はオープニング・エンディングのクレジットや公式サイトのスタッフ欄で確認出来ます。</p>
-    <h3>この診断の位置づけ</h3>
-    <p>診断に登場する5人は、作風の違いが分かりやすい脚本家として管理人が選んだもので、全ての脚本家を網羅しているわけではありません。結果は「好みの傾向がどの作風に近いか」を示す遊び心のある目安です。気になる脚本家が見つかったら、<a href="/blog/scriptwriter-favorites.html">脚本家別おすすめ作品のまとめ</a>で代表作を探してみてください。脚本家を意識して見ると、同じジャンルの作品でも「この展開の運び方は好き」という自分の好みが見えてきます。</p>
+    <p>5つの<wbr>質問の<wbr>選択肢は、<wbr>それぞれ吉田玲子・岡田麿里・花田十輝・横手美智子・あ<wbr>おしまたかしの<wbr>いずれかに結び<wbr>付いています。<wbr>回答の<wbr>たびにその<wbr>脚本家の<wbr>ポイントが<wbr>加算され、<wbr>合計が一番<wbr>高かった人が<wbr>「あなたに合う脚本家」として<wbr>表示されます。結果<wbr>画面からは、他の<wbr>4人の<wbr>代表作を<wbr>紹介する<wbr>ページにも<wbr>移動できます。</p>
+    <h3>「脚本」と<wbr>「シリーズ構成」の違い</h3>
+    <p>アニメには、<wbr>各話の<wbr>脚本を書く<wbr>役割の<wbr>他に、<wbr>作品全体の<wbr>流れや<wbr>各話の<wbr>配置を<wbr>設計する<wbr>「シリーズ構成」という<wbr>役職が<wbr>あります。同じ人が<wbr>両方を<wbr>担当する<wbr>ことも<wbr>多く、<wbr>シリーズ構成を<wbr>担当した<wbr>作品では、<wbr>物語全体の<wbr>骨格にその人の<wbr>個性が強く<wbr>表れやすくなります。<wbr>担当者は<wbr>オープニング・エンディングの<wbr>クレジットや<wbr>公式サイトの<wbr>スタッフ欄で<wbr>確認できます。</p>
+    <h3>この<wbr>診断の<wbr>位置づけ</h3>
+    <p>診断に<wbr>登場する<wbr>5人は、<wbr>作風の<wbr>違いが<wbr>分かりやすい<wbr>脚本家として<wbr>管理人が<wbr>選んだ<wbr>もので、<wbr>全ての<wbr>脚本家を<wbr>網羅しているわけではありません。<wbr>結果は<wbr>「好みの<wbr>傾向がどの<wbr>作風に<wbr>近いか」を示す<wbr>遊び心のある<wbr>目安です。気になる<wbr>脚本家が<wbr>見つかったら、<a href="/blog/scriptwriter-favorites.html"><wbr>脚本家別おすすめ作品の<wbr>まとめ</a>で<wbr>代表作を<wbr>探してみてください。<wbr>脚本家を<wbr>意識して<wbr>見ると、同じ<wbr>ジャンルの<wbr>作品でも<wbr>「この<wbr>展開の<wbr>運び方は<wbr>好き」という<wbr>自分の<wbr>好みが<wbr>見えてきます。</p>
   </section>
 </main>
 
@@ -210,7 +217,7 @@ const questions = [
     text: "一番惹かれる脚本の魅力は？",
     options: [
       { label: "キャラ同士のさりげない会話劇", scores: { yoshida: 3 } },
-      { label: "感情の爆発、いわゆる"エモさ"", scores: { okada: 3 } },
+      { label: "感情の爆発、いわゆる「エモさ」", scores: { okada: 3 } },
       { label: "原作ものの「間」の作り方", scores: { hanada: 3 } },
       { label: "破綻させずに畳む構成力", scores: { yokote: 3 } },
       { label: "キャラの魅力を引き出す話の並び順", scores: { aoshima: 3 } }
@@ -250,33 +257,33 @@ const questions = [
 const results = {
   yoshida: {
     name: "吉田玲子",
-    desc: "あなたに一番近いのは吉田玲子です。日常の空気感と、キャラクター同士のさりげない会話を書かせたら随一の脚本家。派手な事件がなくても飽きさせない、いわゆる「日常もの」の名手というイメージが強いタイプです。",
+    desc: "あなたに一番近いのは吉田玲子です。日常の空気感と、キャラクター同士のさりげない会話を書かせたら随一の脚本家です。派手な事件がなくても飽きさせない、いわゆる「日常もの」の名手というイメージが強いタイプです。",
     works: "代表作：けいおん!　など",
     anchor: "yoshida",
     official: "https://x.com/yoshida_1967"
   },
   okada: {
     name: "岡田麿里",
-    desc: "あなたに一番近いのは岡田麿里です。感情のむき出し方が独特で、いわゆる「エモい」を体現するような脚本家。青春の痛みや後悔を容赦なく描く作風に強く惹かれるタイプです。",
+    desc: "あなたに一番近いのは岡田麿里です。感情のむき出し方が独特で、いわゆる「エモい」を体現するような脚本家です。青春の痛みや後悔を容赦なく描く作風に強く惹かれるタイプです。",
     works: "代表作：あの日見た花の名前を僕達はまだ知らない。　など",
     anchor: "okada"
   },
   hanada: {
     name: "花田十輝",
-    desc: "あなたに一番近いのは花田十輝です。テンポの良いコメディとラブコメを量産し続けている脚本家。原作ものの「間」の作り方が上手く、キャラの掛け合いが小気味良い作風に惹かれるタイプです。",
+    desc: "あなたに一番近いのは花田十輝です。テンポの良いコメディとラブコメを量産し続けている脚本家です。原作ものの「間」の作り方が上手く、キャラの掛け合いが小気味良い作風に惹かれるタイプです。",
     works: "代表作：宇宙よりも遠い場所　など",
     anchor: "hanada",
     official: "https://x.com/oitan125"
   },
   yokote: {
     name: "横手美智子",
-    desc: "あなたに一番近いのは横手美智子です。シリアスからキッズ向けまで守備範囲が異様に広い脚本家。長期シリーズの構成を任されることが多く、物語を破綻させずに畳む手腕に定評があるタイプに惹かれます。",
+    desc: "あなたに一番近いのは横手美智子です。シリアスからキッズ向けまで守備範囲が異様に広い脚本家です。長期シリーズの構成を任されることが多く、物語を破綻させずに畳む手腕に定評があるタイプに惹かれます。",
     works: "代表作：SHIROBAKO　など",
     anchor: "yokote"
   },
   aoshima: {
     name: "あおしまたかし",
-    desc: "あなたに一番近いのはあおしまたかしです。日常コメディの脚本・シリーズ構成を数多く手がける脚本家。キャラクターの魅力を引き出す話の並び順や緩急の作り方に、構成の妙を感じるタイプです。",
+    desc: "あなたに一番近いのはあおしまたかしです。日常コメディの脚本・シリーズ構成を数多く手がける脚本家です。キャラクターの魅力を引き出す話の並び順や緩急の作り方に、構成の妙を感じるタイプです。",
     works: "代表作：みつどもえ　など",
     anchor: "aoshima"
   }

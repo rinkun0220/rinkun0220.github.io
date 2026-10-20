@@ -105,6 +105,13 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
 .reveal-card .rc-name { font-weight: 700; color: var(--accent); margin-bottom: 6px; display: block; }
 .reveal-card .rc-desc { font-size: 0.85rem; color: var(--text-muted); line-height: 1.7; }
 .reveal-card .rc-works { font-size: 0.78rem; color: var(--star-color); margin-top: 8px; display: block; }
+/* 日本語の改行を自然にする設定（文節単位で改行・行頭禁則・1文字だけの行を避ける） */
+body{line-break:strict;overflow-wrap:break-word}
+@supports (word-break:auto-phrase){body{word-break:auto-phrase}}
+:has(> wbr){word-break:keep-all}
+p,li,dd,td,th{text-wrap:pretty}
+.nb{white-space:nowrap}
+h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-title,.pick-name,.next-article-title{text-wrap:balance}
 </style>
 </head>
 <body>
@@ -123,52 +130,52 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
 <main>
   <div class="page-head">
     <span class="page-tag">🎬 診断コンテンツ</span>
-    <h1 class="page-title">あなたに合う監督診断</h1>
-    <p class="page-desc">7つの質問に答えるだけで、あなたの好みに一番近いアニメ監督が分かります。所要時間は約1〜2分です。</p>
+    <h1 class="page-title">あなたに合う<wbr>監督診断</h1>
+    <p class="page-desc">7つの<wbr>質問に<wbr>答えるだけで、<wbr>あなたの<wbr>好みに一番近い<wbr>アニメ監督が<wbr>分かります。<wbr>所要時間は<wbr>約1〜2分です。</p>
     <p style="font-size:.78rem;color:var(--text-muted);margin-top:-24px;margin-bottom:32px;">※文中敬称略</p>
   </div>
 
     <div class="reveal-section">
-    <h2 class="reveal-title">診断に登場する監督たち（全8名）</h2>
+    <h2 class="reveal-title">診断に<wbr>登場する<wbr>監督たち<wbr>（全8名）</h2>
     <div class="reveal-grid">
       <div class="reveal-card">
         <span class="rc-name">長井龍雪</span>
-        <span class="rc-desc">あなたに一番近いのは長井龍雪です。脚本の岡田麿里とのタッグ作品を中心に、青春の痛みを真正面から描く監督。感情の爆発シーンの演出に強く惹かれるタイプです。</span>
-        <span class="rc-works">代表作：あの日見た花の名前を僕達はまだ知らない。　など</span>
+        <span class="rc-desc">あなたに一番<wbr>近いのは<wbr>長井龍雪です。<wbr>脚本の<wbr>岡田麿里との<wbr>タッグ作品を<wbr>中心に、<wbr>青春の<wbr>痛みを<wbr>真正面から描く<wbr>監督です。<wbr>感情の<wbr>爆発シーンの<wbr>演出に強く<wbr>惹かれる<wbr>タイプです。</span>
+        <span class="rc-works">代表作：あの<wbr>日見た花の<wbr>名前を<wbr>僕達はまだ<wbr>知らない。　など</span>
       </div>
       <div class="reveal-card">
         <span class="rc-name">石原立也</span>
-        <span class="rc-desc">あなたに一番近いのは石原立也です。京都アニメーションの土台を作った世代の監督。日常芝居の緻密さと、笑いとシリアスのバランス感覚に長けている作風に惹かれるタイプです。</span>
-        <span class="rc-works">代表作：涼宮ハルヒの憂鬱　など</span>
+        <span class="rc-desc">あなたに一番<wbr>近いのは<wbr>石原立也です。<wbr>京都アニメーションの<wbr>土台を<wbr>作った<wbr>世代の<wbr>監督です。<wbr>日常芝居の<wbr>緻密さと、笑いと<wbr>シリアスの<wbr>バランス感覚に<wbr>長けている<wbr>作風に<wbr>惹かれる<wbr>タイプです。</span>
+        <span class="rc-works">代表作：涼宮ハルヒの<wbr>憂鬱　など</span>
       </div>
       <div class="reveal-card">
         <span class="rc-name">石立太一</span>
-        <span class="rc-desc">あなたに一番近いのは石立太一です。京都アニメーションの次世代を担う監督。繊細な感情表現と、音楽・美術を活かした画作りの美しさに強く惹かれるタイプです。</span>
-        <span class="rc-works">代表作：ヴァイオレット・エヴァーガーデン　など</span>
+        <span class="rc-desc">あなたに一番<wbr>近いのは<wbr>石立太一です。<wbr>京都アニメーションの<wbr>次世代を担う<wbr>監督です。<wbr>繊細な<wbr>感情表現と、<wbr>音楽・美術を<wbr>活かした<wbr>画作りの<wbr>美しさに強く<wbr>惹かれる<wbr>タイプです。</span>
+        <span class="rc-works">代表作：ヴァイオレット・<wbr>エヴァーガーデン　など</span>
       </div>
       <div class="reveal-card">
         <span class="rc-name">水島努</span>
-        <span class="rc-desc">あなたに一番近いのは水島努です。ジャンルを問わない振れ幅の広さが持ち味。コメディからミリタリー、業界ものまで幅広く手掛け、どの作品もテンポの良さが光る作風に惹かれるタイプです。</span>
+        <span class="rc-desc">あなたに一番<wbr>近いのは<wbr>水島努です。<wbr>ジャンルを<wbr>問わない<wbr>振れ幅の<wbr>広さが<wbr>持ち味です。<wbr>コメディから<wbr>ミリタリー、<wbr>業界ものまで<wbr>幅広く<wbr>手掛け、どの<wbr>作品も<wbr>テンポの<wbr>良さが光る<wbr>作風に<wbr>惹かれる<wbr>タイプです。</span>
         <span class="rc-works">代表作：SHIROBAKO　など</span>
       </div>
       <div class="reveal-card">
         <span class="rc-name">新海誠</span>
-        <span class="rc-desc">あなたに一番近いのは新海誠です。CoMix Wave Films所属、個人制作出身という異色の経歴を持ちながら、緻密で美しい映像美と繊細な心理描写で『君の名は。』を国民的大ヒットに導いた監督。圧倒的な映像美に強く惹かれるタイプです。</span>
-        <span class="rc-works">代表作：君の名は。　など</span>
+        <span class="rc-desc">あなたに一番<wbr>近いのは<wbr>新海誠です。<wbr>CoMix Wave Films所属、<wbr>個人制作出身という<wbr>異色の<wbr>経歴を<wbr>持ちながら、<wbr>緻密で<wbr>美しい<wbr>映像美と<wbr>繊細な<wbr>心理描写で<wbr>『君の名は。』を<wbr>国民的大ヒットに<wbr>導いた<wbr>監督です。<wbr>圧倒的な<wbr>映像美に強く<wbr>惹かれる<wbr>タイプです。</span>
+        <span class="rc-works">代表作：君の<wbr>名は。　など</span>
       </div>
       <div class="reveal-card">
         <span class="rc-name">山田尚子</span>
-        <span class="rc-desc">あなたに一番近いのは山田尚子です。京都アニメーション出身、現在はサイエンスSARUに軸足を移す監督。キャラクターの視線や仕草といった、言葉にならない感情の機微を映像で語る手腕に定評があり、繊細な感情表現に強く惹かれるタイプです。</span>
-        <span class="rc-works">代表作：映画 聲の形　など</span>
+        <span class="rc-desc">あなたに一番<wbr>近いのは<wbr>山田尚子です。<wbr>京都アニメーション出身、<wbr>現在は<wbr>サイエンスSARUに<wbr>軸足を<wbr>移す監督です。<wbr>キャラクターの<wbr>視線や<wbr>仕草と<wbr>いった、<wbr>言葉に<wbr>ならない<wbr>感情の<wbr>機微を<wbr>映像で語る<wbr>手腕に<wbr>定評が<wbr>あり、<wbr>繊細な<wbr>感情表現に強く<wbr>惹かれる<wbr>タイプです。</span>
+        <span class="rc-works">代表作：映画 聲の<wbr>形　など</span>
       </div>
       <div class="reveal-card">
         <span class="rc-name">幾原邦彦</span>
-        <span class="rc-desc">あなたに一番近いのは幾原邦彦です。演劇的な演出とメタファーに満ちた独特の映像表現で、カルト的な人気を誇る監督。「イクニ」の愛称で親しまれ、社会的なテーマを寓話的に描く作風に強く惹かれるタイプです。</span>
+        <span class="rc-desc">あなたに一番<wbr>近いのは<wbr>幾原邦彦です。<wbr>演劇的な<wbr>演出と<wbr>メタファーに<wbr>満ちた<wbr>独特の<wbr>映像表現で、<wbr>カルト的な<wbr>人気を誇る<wbr>監督です。<wbr>「イクニ」の<wbr>愛称で<wbr>親しまれ、<wbr>社会的な<wbr>テーマを<wbr>寓話的に描く<wbr>作風に強く<wbr>惹かれる<wbr>タイプです。</span>
         <span class="rc-works">代表作：少女革命ウテナ　など</span>
       </div>
       <div class="reveal-card">
         <span class="rc-name">高松信司</span>
-        <span class="rc-desc">あなたに一番近いのは高松信司です。『銀魂』のブレイク以降、『男子高校生の日常』『坂本ですが？』では監督と全話脚本を兼任するなど、コメディ作品における圧倒的な脚本・演出センスに定評がある監督。テンポの良いギャグと緩急のついた演出に強く惹かれるタイプです。</span>
+        <span class="rc-desc">あなたに一番<wbr>近いのは<wbr>高松信司です。<wbr>『銀魂』の<wbr>ブレイク以降、<wbr>『男子高校生の日常』『坂本ですが？』では<wbr>監督と全話<wbr>脚本を<wbr>兼任するなど、<wbr>コメディ作品に<wbr>おける<wbr>圧倒的な<wbr>脚本・<wbr>演出センスに<wbr>定評がある<wbr>監督です。<wbr>テンポの良い<wbr>ギャグと<wbr>緩急の<wbr>ついた<wbr>演出に強く<wbr>惹かれる<wbr>タイプです。</span>
         <span class="rc-works">代表作：銀魂　など</span>
       </div>
     </div>
@@ -178,7 +185,7 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
 
   <div id="startScreen">
     <div class="q-card">
-      <p style="font-size:0.95rem; color:var(--text-muted); margin-bottom:24px; line-height:1.9;">感情を爆発させる演出、日常芝居の緻密さ、音楽と美術の調和、ジャンルを超えた振れ幅。監督ごとの"画面の作り方"は驚くほど違います。あなたの"好き"はどの監督に近いでしょうか？</p>
+      <p style="font-size:0.95rem; color:var(--text-muted); margin-bottom:24px; line-height:1.9;">感情を<wbr>爆発させる<wbr>演出、<wbr>日常芝居の<wbr>緻密さ、<wbr>音楽と<wbr>美術の<wbr>調和、<wbr>ジャンルを<wbr>超えた<wbr>振れ幅です。<wbr>監督ごとの<wbr>"画面の<wbr>作り方"は驚くほど<wbr>違います。<wbr>あなたの<wbr>"好き"はどの<wbr>監督に<wbr>近いでしょうか？</p>
       <button class="start-btn" onclick="startQuiz()">診断をはじめる →</button>
     </div>
   </div>
@@ -297,50 +304,50 @@ const questions = [
 const results = {
   nagai: {
     name: "長井龍雪",
-    desc: "あなたに一番近いのは長井龍雪です。脚本の岡田麿里とのタッグ作品を中心に、青春の痛みを真正面から描く監督。感情の爆発シーンの演出に強く惹かれるタイプです。",
+    desc: "あなたに一番近いのは長井龍雪です。脚本の岡田麿里とのタッグ作品を中心に、青春の痛みを真正面から描く監督です。感情の爆発シーンの演出に強く惹かれるタイプです。",
     works: "代表作：あの日見た花の名前を僕達はまだ知らない。　など",
     anchor: "nagai"
   },
   ishihara: {
     name: "石原立也",
-    desc: "あなたに一番近いのは石原立也です。京都アニメーションの土台を作った世代の監督。日常芝居の緻密さと、笑いとシリアスのバランス感覚に長けている作風に惹かれるタイプです。",
+    desc: "あなたに一番近いのは石原立也です。京都アニメーションの土台を作った世代の監督です。日常芝居の緻密さと、笑いとシリアスのバランス感覚に長けている作風に惹かれるタイプです。",
     works: "代表作：涼宮ハルヒの憂鬱　など",
     anchor: "ishihara"
   },
   ishidate: {
     name: "石立太一",
-    desc: "あなたに一番近いのは石立太一です。京都アニメーションの次世代を担う監督。繊細な感情表現と、音楽・美術を活かした画作りの美しさに強く惹かれるタイプです。",
+    desc: "あなたに一番近いのは石立太一です。京都アニメーションの次世代を担う監督です。繊細な感情表現と、音楽・美術を活かした画作りの美しさに強く惹かれるタイプです。",
     works: "代表作：ヴァイオレット・エヴァーガーデン　など",
     anchor: "ishidate"
   },
   mizushima: {
     name: "水島努",
-    desc: "あなたに一番近いのは水島努です。ジャンルを問わない振れ幅の広さが持ち味。コメディからミリタリー、業界ものまで幅広く手掛け、どの作品もテンポの良さが光る作風に惹かれるタイプです。",
+    desc: "あなたに一番近いのは水島努です。ジャンルを問わない振れ幅の広さが持ち味です。コメディからミリタリー、業界ものまで幅広く手掛け、どの作品もテンポの良さが光る作風に惹かれるタイプです。",
     works: "代表作：SHIROBAKO　など",
     anchor: "mizushima",
     official: "https://x.com/tsuki_akari"
   },
   shinkai: {
     name: "新海誠",
-    desc: "あなたに一番近いのは新海誠です。CoMix Wave Films所属、個人制作出身という異色の経歴を持ちながら、緻密で美しい映像美と繊細な心理描写で『君の名は。』を国民的大ヒットに導いた監督。圧倒的な映像美に強く惹かれるタイプです。",
+    desc: "あなたに一番近いのは新海誠です。CoMix Wave Films所属、個人制作出身という異色の経歴を持ちながら、緻密で美しい映像美と繊細な心理描写で『君の名は。』を国民的大ヒットに導いた監督です。圧倒的な映像美に強く惹かれるタイプです。",
     works: "代表作：君の名は。　など",
     anchor: "shinkai"
   },
   yamada: {
     name: "山田尚子",
-    desc: "あなたに一番近いのは山田尚子です。京都アニメーション出身、現在はサイエンスSARUに軸足を移す監督。キャラクターの視線や仕草といった、言葉にならない感情の機微を映像で語る手腕に定評があり、繊細な感情表現に強く惹かれるタイプです。",
+    desc: "あなたに一番近いのは山田尚子です。京都アニメーション出身、現在はサイエンスSARUに軸足を移す監督です。キャラクターの視線や仕草といった、言葉にならない感情の機微を映像で語る手腕に定評があり、繊細な感情表現に強く惹かれるタイプです。",
     works: "代表作：映画 聲の形　など",
     anchor: "yamada"
   },
   ikuhara: {
     name: "幾原邦彦",
-    desc: "あなたに一番近いのは幾原邦彦です。演劇的な演出とメタファーに満ちた独特の映像表現で、カルト的な人気を誇る監督。「イクニ」の愛称で親しまれ、社会的なテーマを寓話的に描く作風に強く惹かれるタイプです。",
+    desc: "あなたに一番近いのは幾原邦彦です。演劇的な演出とメタファーに満ちた独特の映像表現で、カルト的な人気を誇る監督です。「イクニ」の愛称で親しまれ、社会的なテーマを寓話的に描く作風に強く惹かれるタイプです。",
     works: "代表作：少女革命ウテナ　など",
     anchor: "ikuhara"
   },
   takamatsu: {
     name: "高松信司",
-    desc: "あなたに一番近いのは高松信司です。『銀魂』のブレイク以降、『男子高校生の日常』『坂本ですが？』では監督と全話脚本を兼任するなど、コメディ作品における圧倒的な脚本・演出センスに定評がある監督。テンポの良いギャグと緩急のついた演出に強く惹かれるタイプです。",
+    desc: "あなたに一番近いのは高松信司です。『銀魂』のブレイク以降、『男子高校生の日常』『坂本ですが？』では監督と全話脚本を兼任するなど、コメディ作品における圧倒的な脚本・演出センスに定評がある監督です。テンポの良いギャグと緩急のついた演出に強く惹かれるタイプです。",
     works: "代表作：銀魂　など",
     anchor: "takamatsu"
   }
