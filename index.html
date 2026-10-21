@@ -973,7 +973,7 @@ function currentAniListSeason() {
 
 async function fetchAniListSeason() {
   const { season, year } = currentAniListSeason();
-  const query = `query($y:Int,$s:MediaSeason){Page(perPage:20){media(season:$s,seasonYear:$y,type:ANIME,status:RELEASING,format_in:[TV,TV_SHORT,ONA],sort:POPULARITY_DESC,isAdult:false){id idMal title{native romaji} averageScore coverImage{large} siteUrl season seasonYear}}}`;
+  const query = `query($y:Int,$s:MediaSeason){Page(perPage:28){media(season:$s,seasonYear:$y,type:ANIME,status:RELEASING,format_in:[TV,TV_SHORT,ONA],sort:POPULARITY_DESC,isAdult:false){id idMal title{native romaji} averageScore coverImage{large} siteUrl season seasonYear}}}`;
   for (let i = 0; i < 2; i++) {
     const ctrl = new AbortController();
     const timer = setTimeout(() => ctrl.abort(), 8000);
