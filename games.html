@@ -73,6 +73,13 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
 .footer-link { color: var(--text-muted); text-decoration: none; font-size: 0.85rem; }
 .footer-link:hover { color: #fff; }
 .copyright { font-size: 0.8rem; color: rgba(255,255,255,0.3); }
+.games-h2{font-size:1.1rem;font-weight:800;color:#fff;margin:34px 0 8px;padding-left:12px;border-left:4px solid var(--accent);line-height:1.5}
+.games-lead{color:var(--text-muted);font-size:.85rem;line-height:1.8;margin:0 0 16px}
+.games-lead a{color:var(--star-color);text-decoration:none}.games-lead a:hover{text-decoration:underline}
+.game-facts{list-style:none;margin:14px 0 0;padding:12px 0 0;border-top:1px solid var(--border-color)}
+.game-facts li{font-size:.8rem;color:var(--text-muted);line-height:1.8}
+@media(min-width:521px){.game-facts li{display:flex;gap:12px}.game-facts b{flex:0 0 5.6em;margin:0}}
+.game-facts b{color:#fff;font-weight:700;margin-right:10px}
 /* 日本語の改行を自然にする設定（文節単位で改行・行頭禁則・1文字だけの行を避ける） */
 body{line-break:strict;overflow-wrap:anywhere}
 @supports (word-break:auto-phrase){body{word-break:auto-phrase}}
@@ -103,13 +110,19 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
     <p class="page-desc">読むだけじゃなく、<wbr>遊びながら<wbr>アニメに<wbr>出会える<wbr>コンテンツを<wbr>まとめました。<wbr>制作会社や<wbr>脚本家との<wbr>相性診断、<wbr>視聴タイプ診断、<wbr>ランダムに<wbr>1本おすすめする<wbr>「埋もれた名作ガチャ」など、<wbr>ANIMEDBが<wbr>独自に<wbr>作った<wbr>簡易診断・ミニゲームをこの<wbr>ページに<wbr>集約しています。<wbr>所要時間は<wbr>どれも<wbr>1〜2分程度なので、気になる<wbr>ものから<wbr>気軽に<wbr>試してみてください。</p>
   </div>
 
+  <p class="games-lead">ここには、<wbr>質問に<wbr>答える<wbr>診断が<wbr>5種類、<wbr>作品探しと<wbr>採点の<wbr>コンテンツが<wbr>2種類、<wbr>クイズと<wbr>ミニゲームが<wbr>2種類、<wbr>合わせて<wbr>9つの<wbr>コンテンツを<wbr>置いています。<wbr>どれも<wbr>ログインや<wbr>会員登録は<wbr>必要ありません。<wbr>診断の<wbr>回答内容を<wbr>ANIMEDBの<wbr>サーバーへ<wbr>送信する<wbr>こともありません<wbr>（サイト全体の<wbr>アクセス解析などに<wbr>ついては<a href="/privacy.html"><wbr>プライバシーポリシー</a>を<wbr>ご覧ください）。<wbr>迷った<wbr>ときは、<wbr>最初に<wbr>「あなたは何派？」を<wbr>試してみるのが<wbr>おすすめです。</p>
+
+  <h2 class="games-h2">質問に<wbr>答える診断<wbr>（5種類）</h2>
+  <p class="games-lead">好みに近い<wbr>視聴タイプや、<wbr>制作会社・脚本家・監督が<wbr>分かる<wbr>診断です。<wbr>どれも<wbr>5〜7問の<wbr>選択式です。</p>
+
   <a href="/viewer-type.html" class="game-card">
     <div class="game-top">
       <span class="game-badge">🧭 視聴傾向診断</span>
       <span class="game-meta">所要時間 約1分</span>
     </div>
-    <div class="game-title">あなたは何派？</div>
+    <h3 class="game-title">あなたは何派？</h3>
     <div class="game-desc">脚本派・演出派・キャラ萌え派・考察派・雰囲気派です。<wbr>あなたの<wbr>視聴タイプを<wbr>診断します。<span class="game-arrow"><wbr>診断してみる →</span></div>
+      <ul class="game-facts"><li><b>分かること</b><wbr>脚本派・演出派・キャラ萌え派・考察派・雰囲気派の<wbr>5タイプの<wbr>うち、一番近いもの</li><li><b>所要時間</b>5問・約1分</li><li><b>こんな人に</b><wbr>自分が<wbr>アニメの<wbr>どこに<wbr>惹かれているのか、<wbr>整理してみたい人</li></ul>
   </a>
 
   <a href="/studio-diagnosis.html" class="game-card">
@@ -117,35 +130,9 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       <span class="game-badge">🎯 診断コンテンツ</span>
       <span class="game-meta">所要時間 約1分</span>
     </div>
-    <div class="game-title">あなたに合う<wbr>制作会社診断</div>
+    <h3 class="game-title">あなたに合う<wbr>制作会社診断</h3>
     <div class="game-desc">5つの<wbr>質問に<wbr>答えるだけで、<wbr>あなたの<wbr>"好き"に近い<wbr>制作会社が<wbr>分かります。<wbr>全16社の<wbr>中から<wbr>診断します。<span class="game-arrow"><wbr>診断してみる →</span></div>
-  </a>
-
-  <a href="/hidden-gems-gacha.html" class="game-card">
-    <div class="game-top">
-      <span class="game-badge">🎰 ガチャ企画</span>
-      <span class="game-meta">全113作品から<wbr>ランダム抽選</span>
-    </div>
-    <div class="game-title">埋もれた<wbr>名作ガチャ</div>
-    <div class="game-desc">今日は何を<wbr>見るか<wbr>迷ったら、<wbr>ボタン一つで<wbr>1本ご提案します。<span class="game-arrow"><wbr>ガチャを引く →</span></div>
-  </a>
-
-  <a href="/rating-simulator.html" class="game-card">
-    <div class="game-top">
-      <span class="game-badge">🎚️ 体験型シミュレーター</span>
-      <span class="game-meta">所要時間 約1分</span>
-    </div>
-    <div class="game-title">この<wbr>アニメ、<wbr>何点つける？</div>
-    <div class="game-desc">脚本・作画演出・キャラ・音楽を<wbr>スライダーで<wbr>調整すると、<wbr>ANIMEDB基準で<wbr>S〜Cの<wbr>判定が<wbr>返ってきます。<span class="game-arrow"><wbr>試してみる →</span></div>
-  </a>
-
-  <a href="/who-is-this.html" class="game-card">
-    <div class="game-top">
-      <span class="game-badge">❓ クイズ企画</span>
-      <span class="game-meta">全10問・名鑑47件から出題</span>
-    </div>
-    <div class="game-title">この人は誰？</div>
-    <div class="game-desc">代表作の<wbr>ヒントだけで、<wbr>声優・脚本家・監督・<wbr>制作会社・アーティストを<wbr>当てる<wbr>4択クイズです。<span class="game-arrow"><wbr>挑戦してみる →</span></div>
+      <ul class="game-facts"><li><b>分かること</b><wbr>全16社の<wbr>中から、<wbr>好みに近い<wbr>制作会社</li><li><b>所要時間</b>5問・約1分</li><li><b>こんな人に</b><wbr>好きな<wbr>作品の<wbr>共通点を、<wbr>作った<wbr>会社という<wbr>切り口で<wbr>探したい人</li></ul>
   </a>
 
   <a href="/scriptwriter-diagnosis.html" class="game-card">
@@ -153,8 +140,9 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       <span class="game-badge">✍️ 診断コンテンツ</span>
       <span class="game-meta">所要時間 約1分</span>
     </div>
-    <div class="game-title">あなたに合う<wbr>脚本家診断</div>
+    <h3 class="game-title">あなたに合う<wbr>脚本家診断</h3>
     <div class="game-desc">5つの<wbr>質問に<wbr>答えるだけで、<wbr>あなたの<wbr>"好き"に近い<wbr>脚本家が<wbr>分かります。<span class="game-arrow"><wbr>診断してみる →</span></div>
+      <ul class="game-facts"><li><b>分かること</b><wbr>5名の<wbr>脚本家の<wbr>うち、<wbr>好みに近い人</li><li><b>所要時間</b>5問・約1分</li><li><b>こんな人に</b><wbr>物語の<wbr>書き手に<wbr>注目して、<wbr>作品を<wbr>選んでみたい人</li></ul>
   </a>
 
   <a href="/director-diagnosis.html" class="game-card">
@@ -162,8 +150,9 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       <span class="game-badge">🎬 診断コンテンツ</span>
       <span class="game-meta">所要時間 約1〜2分</span>
     </div>
-    <div class="game-title">あなたに合う<wbr>監督診断</div>
+    <h3 class="game-title">あなたに合う<wbr>監督診断</h3>
     <div class="game-desc">7つの<wbr>質問に<wbr>答えるだけで、<wbr>あなたの<wbr>"好き"に近い<wbr>監督が<wbr>分かります。<span class="game-arrow"><wbr>診断してみる →</span></div>
+      <ul class="game-facts"><li><b>分かること</b><wbr>8人の<wbr>監督の<wbr>うち、<wbr>好みに近い人</li><li><b>所要時間</b>7問・約1〜2分</li><li><b>こんな人に</b><wbr>映像の<wbr>見せ方や<wbr>演出の<wbr>好みから、<wbr>作品を<wbr>探したい人</li></ul>
   </a>
 
   <a href="/anime-profile.html" class="game-card">
@@ -171,8 +160,45 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       <span class="game-badge">📋 履歴書診断</span>
       <span class="game-meta">画像で<wbr>保存・シェア可能</span>
     </div>
-    <div class="game-title">あなたの<wbr>アニメ履歴書</div>
+    <h3 class="game-title">あなたの<wbr>アニメ履歴書</h3>
     <div class="game-desc">6つの<wbr>質問から、<wbr>あなたの<wbr>視聴者タイプを<wbr>ステータスカードにして<wbr>生成します。<span class="game-arrow"><wbr>作成してみる →</span></div>
+      <ul class="game-facts"><li><b>分かること</b><wbr>経験値・視聴の<wbr>幅・涙腺・こだわり・継続力の<wbr>5ステータスを<wbr>まとめた<wbr>カード<wbr>（画像で保存できます）</li><li><b>所要時間</b>6問・約1分</li><li><b>こんな人に</b><wbr>自分の<wbr>視聴スタイルを<wbr>カードに<wbr>して、<wbr>見せたい人</li></ul>
+  </a>
+
+  <h2 class="games-h2">作品に<wbr>出会う・点数を<wbr>つける<wbr>（2種類）</h2>
+  <p class="games-lead">ブログの<wbr>作品データや<wbr>評価基準を<wbr>使った、<wbr>作品探しと<wbr>採点の<wbr>コンテンツです。</p>
+
+  <a href="/hidden-gems-gacha.html" class="game-card">
+    <div class="game-top">
+      <span class="game-badge">🎰 ガチャ企画</span>
+      <span class="game-meta">全113作品から<wbr>ランダム抽選</span>
+    </div>
+    <h3 class="game-title">埋もれた<wbr>名作ガチャ</h3>
+    <div class="game-desc">今日は何を<wbr>見るか<wbr>迷ったら、<wbr>ボタン一つで<wbr>1本ご提案します。<span class="game-arrow"><wbr>ガチャを引く →</span></div>
+      <ul class="game-facts"><li><b>分かること</b><wbr>全113作品の<wbr>中から、<wbr>ランダムに<wbr>選ばれた1本</li><li><b>所要時間</b>ボタンを<wbr>押すだけ</li><li><b>こんな人に</b>今日見る<wbr>作品が<wbr>決められない<wbr>人や、<wbr>思いがけない<wbr>作品に<wbr>出会いたい人</li></ul>
+  </a>
+
+  <a href="/rating-simulator.html" class="game-card">
+    <div class="game-top">
+      <span class="game-badge">🎚️ 体験型シミュレーター</span>
+      <span class="game-meta">所要時間 約1分</span>
+    </div>
+    <h3 class="game-title">この<wbr>アニメ、<wbr>何点つける？</h3>
+    <div class="game-desc">脚本・作画演出・キャラ・音楽を<wbr>スライダーで<wbr>調整すると、<wbr>ANIMEDB基準で<wbr>S〜Cの<wbr>判定が<wbr>返ってきます。<span class="game-arrow"><wbr>試してみる →</span></div>
+      <ul class="game-facts"><li><b>分かること</b><wbr>脚本・作画演出・キャラ・音楽の<wbr>4項目の<wbr>点数から<wbr>出る、<wbr>S〜Cの判定</li><li><b>所要時間</b>約1分</li><li><b>こんな人に</b><wbr>見終わった<wbr>作品の<wbr>感想を、<wbr>点数で<wbr>整理したい人</li></ul>
+  </a>
+
+  <h2 class="games-h2">クイズ・ミニゲーム<wbr>（2種類）</h2>
+  <p class="games-lead">名前や<wbr>代表作を<wbr>覚える<wbr>クイズと、<wbr>息抜きに<wbr>遊べる<wbr>ミニゲームです。</p>
+
+  <a href="/who-is-this.html" class="game-card">
+    <div class="game-top">
+      <span class="game-badge">❓ クイズ企画</span>
+      <span class="game-meta">全10問・名鑑の<wbr>うち47件から出題</span>
+    </div>
+    <h3 class="game-title">この人は誰？</h3>
+    <div class="game-desc">代表作の<wbr>ヒントだけで、<wbr>声優・脚本家・監督・<wbr>制作会社・アーティストを<wbr>当てる<wbr>4択クイズです。<span class="game-arrow"><wbr>挑戦してみる →</span></div>
+      <ul class="game-facts"><li><b>分かること</b><wbr>声優・脚本家・監督・<wbr>制作会社・アーティストの<wbr>名前を、<wbr>代表作の<wbr>ヒントから<wbr>当てる<wbr>クイズ</li><li><b>所要時間</b>全10問<wbr>（目安は2〜3分）</li><li><b>こんな人に</b><wbr>名鑑に<wbr>載っている<wbr>人物の<wbr>名前と<wbr>代表作を、<wbr>遊びながら<wbr>覚えたい人</li></ul>
   </a>
 
   <a href="/pixel-quest.html" class="game-card" style="border-color: var(--accent); background: linear-gradient(135deg, #1c1018, #2b1219); box-shadow: 0 0 22px rgba(230,72,90,0.22);">
@@ -180,8 +206,9 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       <span class="game-badge" style="background:var(--accent);color:#fff;">🎮 ミニゲーム</span>
       <span class="game-meta">3Dランゲーム・スマホも<wbr>PCも対応</span>
     </div>
-    <div class="game-title">スタジオランナー</div>
+    <h3 class="game-title">スタジオランナー</h3>
     <div class="game-desc">制作会社を<wbr>擬人化した<wbr>キャラクターを<wbr>選んで、<wbr>3Dコースを<wbr>走り抜けましょう。<wbr>障害物を<wbr>よけて<wbr>ゴールを<wbr>目指す、<wbr>約2分で<wbr>遊び終わる<wbr>ミニゲームです。<span class="game-arrow" style="color:var(--accent);"><wbr>遊んでみる →</span></div>
+      <ul class="game-facts"><li><b>分かること</b><wbr>3レーンの<wbr>コースを<wbr>走り、<wbr>障害物を<wbr>よけて<wbr>1200点の<wbr>ゴールを<wbr>目指すミニゲーム</li><li><b>所要時間</b>約2分</li><li><b>こんな人に</b><wbr>診断の<wbr>合間に、<wbr>気軽に<wbr>遊びたい人</li></ul>
   </a>
 
   <p style="color:var(--text-muted);font-size:0.85rem;line-height:1.8;margin-top:12px;">

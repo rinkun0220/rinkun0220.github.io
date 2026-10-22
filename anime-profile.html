@@ -96,7 +96,7 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
 .reveal-list { list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 6px 16px; }
 .reveal-list li { font-size: 0.82rem; color: var(--text-muted); line-height: 1.6; padding: 4px 0; border-bottom: 1px dashed var(--border-color); }
 .reveal-list li b { color: var(--text-main); font-weight: 600; }
-.tool-guide{max-width:880px;margin:40px auto 28px;padding:0 20px}.tool-guide h2{font-size:1.05rem;font-weight:700;color:var(--text-main);margin:0 0 12px}.tool-guide h3{font-size:.92rem;font-weight:700;color:var(--accent);margin:20px 0 8px}.tool-guide p{font-size:.88rem;color:var(--text-muted);line-height:1.95;margin:0 0 12px}.tool-guide a{color:var(--star-color);text-decoration:none}.tool-guide a:hover{text-decoration:underline}
+.tool-guide{max-width:880px;margin:40px auto 28px;padding:0 20px}.tool-guide h2{font-size:1.05rem;font-weight:700;color:var(--text-main);margin:0 0 12px}.tool-guide h3{font-size:.92rem;font-weight:700;color:var(--accent);margin:20px 0 8px}.tool-guide p{font-size:.88rem;color:var(--text-muted);line-height:1.95;margin:0 0 12px}.tool-guide a{color:var(--star-color);text-decoration:none}.tool-guide a:hover{text-decoration:underline}.tool-guide.faq{margin-top:0}
 /* 日本語の改行を自然にする設定（文節単位で改行・行頭禁則・1文字だけの行を避ける） */
 body{line-break:strict;overflow-wrap:anywhere}
 @supports (word-break:auto-phrase){body{word-break:auto-phrase}}
@@ -185,6 +185,15 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
     <h3>保存・シェアと、<wbr>回答の<wbr>扱いに<wbr>ついて</h3>
     <p>できあがった<wbr>カードは<wbr>「画像を保存」で<wbr>PNG画像として<wbr>保存でき、<wbr>「結果をシェア」からXに<wbr>投稿できます。<wbr>回答の<wbr>集計は<wbr>お使いの<wbr>ブラウザの<wbr>中だけで<wbr>行われ、<wbr>選んだ回答の<wbr>内容を<wbr>ANIMEDBの<wbr>サーバーへ<wbr>送信・保存する<wbr>ことは<wbr>ありません。<wbr>視聴環境や<wbr>気分が<wbr>変われば<wbr>答えも<wbr>変わるので、数か<wbr>月後にもう一度<wbr>作って<wbr>見比べてみるのも<wbr>面白いと<wbr>思います。</p>
     <p>重視する<wbr>ポイントを<wbr>もっと<wbr>細かく<wbr>知りたい方は、<wbr>5つの<wbr>タイプに<wbr>分けて<wbr>診断する<a href="/viewer-type.html"><wbr>「あなたは何派？」</a>や、<wbr>評価の<wbr>配点を<wbr>試せる<a href="/rating-simulator.html"><wbr>「この<wbr>アニメ、<wbr>何点つける？」</a>も<wbr>あわせて<wbr>どうぞ。</p>
+  </section>
+  <section class="tool-guide faq">
+    <h2>よくある質問</h2>
+    <h3>所要時間はどの<wbr>くらいですか？</h3>
+    <p>質問は<wbr>6つで、<wbr>それぞれ選択肢から<wbr>1つ選ぶだけです。<wbr>約1分で<wbr>カードが<wbr>できあがります。</p>
+    <h3>同じ<wbr>答え方を<wbr>すると、毎回同じ<wbr>カードに<wbr>なりますか？</h3>
+    <p>は<wbr>い、同じ<wbr>答え方なら同じ<wbr>内容の<wbr>カードに<wbr>なります。<wbr>ステータスは<wbr>回答の<wbr>組み合わせから<wbr>決まる<wbr>仕組みで、<wbr>ランダムな<wbr>要素は<wbr>ありません。<wbr>視聴環境や<wbr>気分が<wbr>変われば<wbr>答えも<wbr>変わるので、<wbr>時間を<wbr>おいてもう一度<wbr>作ってみるのも<wbr>面白いと<wbr>思います。</p>
+    <h3>回答や<wbr>カードの<wbr>画像は<wbr>送信・<wbr>保存されますか？</h3>
+    <p>回答の<wbr>集計も<wbr>カード画像の<wbr>作成も、<wbr>お使いの<wbr>ブラウザの<wbr>中だけで<wbr>行われます。<wbr>回答の<wbr>内容や<wbr>画像を<wbr>ANIMEDBの<wbr>サーバーへ<wbr>送信したり、<wbr>保存したりする<wbr>ことは<wbr>ありません。<wbr>「画像を保存」を<wbr>押すと、<wbr>お使いの<wbr>端末に<wbr>PNG画像が<wbr>ダウンロードされます。<wbr>「結果をシェア」を<wbr>押した<wbr>ときだけ、Xの<wbr>投稿画面が<wbr>開きます。<wbr>サイト全体では、<wbr>ページの<wbr>閲覧状況の分析<wbr>（Google Analytics）や<wbr>広告の<wbr>配信を<wbr>行っています。<wbr>詳しくは<a href="/privacy.html"><wbr>プライバシーポリシー</a>を<wbr>ご覧ください。</p>
   </section>
 </main>
 

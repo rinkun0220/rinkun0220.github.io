@@ -85,6 +85,7 @@ main { margin-top: var(--nav-height); padding: 24px; max-width: 960px; margin-le
 
 .cat-block { margin-bottom: 40px; }
 .cat-title { font-size: 1.15rem; font-weight: 700; margin-bottom: 4px; padding-left: 12px; border-left: 4px solid var(--accent); display: flex; align-items: center; gap: 8px; }
+.cat-note { font-size: 0.8rem; color: var(--text-muted); line-height: 1.7; margin: 8px 0 0 16px; }
 .cat-link { font-size: 0.78rem; color: var(--text-muted); text-decoration: none; margin-left: 14px; padding-left: 12px; }
 .cat-link:hover { color: var(--accent); }
 .name-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; margin-top: 16px; }
@@ -105,6 +106,7 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
 .footer-link { color: var(--text-muted); text-decoration: none; font-size: 0.85rem; }
 .footer-link:hover { color: #fff; }
 .copyright { font-size: 0.8rem; color: rgba(255,255,255,0.3); }
+.tool-guide{max-width:880px;margin:40px auto 28px;padding:0}.tool-guide h2{font-size:1.05rem;font-weight:700;color:var(--text-main);margin:0 0 12px}.tool-guide h3{font-size:.92rem;font-weight:700;color:var(--accent);margin:20px 0 8px}.tool-guide p{font-size:.88rem;color:var(--text-muted);line-height:1.95;margin:0 0 12px}.tool-guide a{color:var(--star-color);text-decoration:none}.tool-guide a:hover{text-decoration:underline}
 /* 日本語の改行を自然にする設定（文節単位で改行・行頭禁則・1文字だけの行を避ける） */
 body{line-break:strict;overflow-wrap:anywhere}
 @supports (word-break:auto-phrase){body{word-break:auto-phrase}}
@@ -142,7 +144,8 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
   </div>
 
   <div class="cat-block">
-    <div class="cat-title">🎙️ 男性声優 <a href="/blog/male-seiyuu-favorites.html" class="cat-link">→ 特集記事を見る</a></div>
+    <h2 class="cat-title">🎙️ 男性声優 <a href="/blog/male-seiyuu-favorites.html" class="cat-link">→ 特集記事を見る</a></h2>
+    <p class="cat-note">管理人が<wbr>選んだ<wbr>男性声優9人です。<wbr>並び順は、<wbr>特集記事に<wbr>載っている<wbr>順番です。</p>
     <div class="name-grid">
       <a href="/blog/male-seiyuu-favorites.html#nakamura" class="name-card" data-name="中村悠一 なかむらゆういち"><div class="n-name">中村悠一</div><div class="n-role">声優</div></a>
       <a href="/blog/male-seiyuu-favorites.html#sugita" class="name-card" data-name="杉田智和 すぎたともかず"><div class="n-name">杉田智和</div><div class="n-role">声優</div></a>
@@ -157,7 +160,8 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
   </div>
 
   <div class="cat-block">
-    <div class="cat-title">🎙️ 女性声優 <a href="/blog/female-seiyuu-favorites.html" class="cat-link">→ 特集記事を見る</a></div>
+    <h2 class="cat-title">🎙️ 女性声優 <a href="/blog/female-seiyuu-favorites.html" class="cat-link">→ 特集記事を見る</a></h2>
+    <p class="cat-note">管理人が<wbr>選んだ<wbr>女性声優8人です。<wbr>並び順は、<wbr>特集記事に<wbr>載っている<wbr>順番です。</p>
     <div class="name-grid">
       <a href="/blog/female-seiyuu-favorites.html#hanazawa" class="name-card" data-name="花澤香菜 はなざわかな"><div class="n-name">花澤香菜</div><div class="n-role">声優</div></a>
       <a href="/blog/female-seiyuu-favorites.html#hayami" class="name-card" data-name="早見沙織 はやみさおり"><div class="n-name">早見沙織</div><div class="n-role">声優</div></a>
@@ -171,7 +175,8 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
   </div>
 
   <div class="cat-block">
-    <div class="cat-title">🎭 変幻自在の<wbr>演技力を<wbr>持つ声優 <a href="/blog/legend-seiyuu-favorites.html" class="cat-link">→ 特集記事を見る</a></div>
+    <h2 class="cat-title">🎭 変幻自在の<wbr>演技力を<wbr>持つ声優 <a href="/blog/legend-seiyuu-favorites.html" class="cat-link">→ 特集記事を見る</a></h2>
+    <p class="cat-note">役ごとに<wbr>芝居を<wbr>変える<wbr>演技力が<wbr>印象的な<wbr>声優9人です。<wbr>並び順は、<wbr>特集記事に<wbr>載っている<wbr>順番です。</p>
     <div class="name-grid">
       <a href="/blog/legend-seiyuu-favorites.html#otsuka" class="name-card" data-name="大塚芳忠 おおつかほうちゅう"><div class="n-name">大塚芳忠</div><div class="n-role">声優</div></a>
       <a href="/blog/legend-seiyuu-favorites.html#ishida" class="name-card" data-name="石田彰 いしだあきら"><div class="n-name">石田彰</div><div class="n-role">声優</div></a>
@@ -186,7 +191,8 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
   </div>
 
   <div class="cat-block">
-    <div class="cat-title">✨ 主役級声優 <a href="/blog/nextgen-seiyuu-favorites.html" class="cat-link">→ 特集記事を見る</a></div>
+    <h2 class="cat-title">✨ 主役級声優 <a href="/blog/nextgen-seiyuu-favorites.html" class="cat-link">→ 特集記事を見る</a></h2>
+    <p class="cat-note">今、<wbr>主役級として<wbr>活躍している<wbr>声優11人です。<wbr>これから<wbr>応援したい<wbr>声優を探す<wbr>ときに<wbr>どうぞ。<wbr>並び順は、<wbr>特集記事に<wbr>載っている<wbr>順番です。</p>
     <div class="name-grid">
       <a href="/blog/nextgen-seiyuu-favorites.html#yuki" class="name-card" data-name="悠木碧 ゆうきあおい"><div class="n-name">悠木碧 ★別格</div><div class="n-role">声優</div></a>
       <a href="/blog/nextgen-seiyuu-favorites.html#youmiya" class="name-card" data-name="羊宮妃那 ひつじみやひな"><div class="n-name">羊宮妃那</div><div class="n-role">声優</div></a>
@@ -198,11 +204,13 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       <a href="/blog/nextgen-seiyuu-favorites.html#takahashi" class="name-card" data-name="高橋李依 たかはしりえ"><div class="n-name">高橋李依</div><div class="n-role">声優</div></a>
       <a href="/blog/nextgen-seiyuu-favorites.html#itomiku" class="name-card" data-name="伊藤美来 いとうみく"><div class="n-name">伊藤美来</div><div class="n-role">声優</div></a>
       <a href="/blog/nextgen-seiyuu-favorites.html#iwami" class="name-card" data-name="石見舞菜香 いわみまなか"><div class="n-name">石見舞菜香</div><div class="n-role">声優</div></a>
+      <a href="/blog/nextgen-seiyuu-favorites.html#inoue" class="name-card" data-name="井上ほの花 いのうえほのか"><div class="n-name">井上ほの花</div><div class="n-role">声優</div></a>
     </div>
   </div>
 
   <div class="cat-block">
-    <div class="cat-title">✍️ 脚本家 <a href="/blog/scriptwriter-favorites.html" class="cat-link">→ 特集記事を見る</a></div>
+    <h2 class="cat-title">✍️ 脚本家 <a href="/blog/scriptwriter-favorites.html" class="cat-link">→ 特集記事を見る</a></h2>
+    <p class="cat-note">作品の<wbr>ストーリーを作る<wbr>脚本家8人です。<wbr>並び順は、<wbr>特集記事に<wbr>載っている<wbr>順番です。</p>
     <div class="name-grid">
       <a href="/blog/scriptwriter-favorites.html#yoshida" class="name-card" data-name="吉田玲子 よしだれいこ"><div class="n-name">吉田玲子</div><div class="n-role">脚本家</div></a>
       <a href="/blog/scriptwriter-favorites.html#okada" class="name-card" data-name="岡田麿里 おかだまり"><div class="n-name">岡田麿里</div><div class="n-role">脚本家</div></a>
@@ -216,7 +224,8 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
   </div>
 
   <div class="cat-block">
-    <div class="cat-title">🎬 監督 <a href="/blog/director-favorites.html" class="cat-link">→ 特集記事を見る</a></div>
+    <h2 class="cat-title">🎬 監督 <a href="/blog/director-favorites.html" class="cat-link">→ 特集記事を見る</a></h2>
+    <p class="cat-note">作品全体の<wbr>演出や<wbr>映像の<wbr>見せ方を<wbr>まとめる<wbr>監督8人です。<wbr>並び順は、<wbr>特集記事に<wbr>載っている<wbr>順番です。</p>
     <div class="name-grid">
       <a href="/blog/director-favorites.html#nagai" class="name-card" data-name="長井龍雪 ながいたつゆき"><div class="n-name">長井龍雪</div><div class="n-role">監督</div></a>
       <a href="/blog/director-favorites.html#ishihara" class="name-card" data-name="石原立也 いしはらたつや"><div class="n-name">石原立也</div><div class="n-role">監督</div></a>
@@ -230,7 +239,8 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
   </div>
 
   <div class="cat-block">
-    <div class="cat-title">🏢 制作会社 <a href="/blog/studio-favorites.html" class="cat-link">→ 特集記事を見る</a></div>
+    <h2 class="cat-title">🏢 制作会社 <a href="/blog/studio-favorites.html" class="cat-link">→ 特集記事を見る</a></h2>
+    <p class="cat-note">アニメの<wbr>映像を作る<wbr>制作会社16社です。<wbr>「制作会社診断」に<wbr>登場する<wbr>16社と<wbr>同じです。<wbr>並び順は、<wbr>特集記事に<wbr>載っている<wbr>順番です。</p>
     <div class="name-grid">
       <a href="/blog/studio-favorites.html#pawoks" class="name-card" data-name="P.A.WORKS ぴーえーわーくす"><div class="n-name">P.A.WORKS</div><div class="n-role">制作会社</div></a>
       <a href="/blog/studio-favorites.html#kyoani" class="name-card" data-name="京都アニメーション きょうとあにめーしょん"><div class="n-name">京都アニメーション</div><div class="n-role">制作会社</div></a>
@@ -252,7 +262,8 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
   </div>
 
   <div class="cat-block">
-    <div class="cat-title">🎵 主題歌アーティスト <a href="/blog/artist-anime-favorites.html" class="cat-link">→ 特集記事を見る</a></div>
+    <h2 class="cat-title">🎵 主題歌アーティスト <a href="/blog/artist-anime-favorites.html" class="cat-link">→ 特集記事を見る</a></h2>
+    <p class="cat-note">アニメの<wbr>オープニングや<wbr>エンディングを<wbr>担当した、<wbr>主題歌アーティスト11組です。<wbr>並び順は、<wbr>特集記事に<wbr>載っている<wbr>順番です。</p>
     <div class="name-grid">
       <a href="/blog/artist-anime-favorites.html#yonezu" class="name-card" data-name="米津玄師 よねづけんし"><div class="n-name">米津玄師</div><div class="n-role">アーティスト</div></a>
       <a href="/blog/artist-anime-favorites.html#nakashima" class="name-card" data-name="中島美嘉 なかしまみか"><div class="n-name">中島美嘉</div><div class="n-role">アーティスト</div></a>
@@ -279,6 +290,15 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
   <p style="color:var(--text-muted);font-size:0.85rem;line-height:1.8;margin-top:28px;">
     掲載する<wbr>人物や<wbr>カテゴリは、<wbr>ANIMEDBの<wbr>各特集記事を書く中で<wbr>「この方の<wbr>代表作を<wbr>まとめて<wbr>おきたい」と<wbr>感じた<wbr>範囲から、<wbr>管理人が<wbr>手作業で随時<wbr>追加しています。<wbr>網羅的な<wbr>名鑑と<wbr>いうよりは、<wbr>ブログ記事と<wbr>連動した<wbr>索引として<wbr>ご活用ください。
   </p>
+  <section class="tool-guide">
+    <h2>名鑑の<wbr>調べ方のコツ</h2>
+    <h3>名前の<wbr>一部でも<wbr>探せます</h3>
+    <p>検索ボックスには、<wbr>名前の<wbr>一部を<wbr>入れるだけで<wbr>探せます。<wbr>漢字の<wbr>名前の<wbr>ほか、<wbr>ひらがなや<wbr>カタカナの読み<wbr>（例：<wbr>「なかむら」<wbr>「ナカムラ」）でも<wbr>見つかります。<wbr>英字の<wbr>名前は、<wbr>大文字と<wbr>小文字を<wbr>区別しません。<wbr>制作会社は<wbr>「京都アニメ」のように短く<wbr>入れても<wbr>探せます。</p>
+    <h3>名前が<wbr>分からない<wbr>ときは</h3>
+    <p>カテゴリごとに<wbr>並んでいるので、<wbr>声優・脚本家・監督・<wbr>制作会社・アーティストの<wbr>中から気になる<wbr>区分を<wbr>開いてみてください。<wbr>各区分の<wbr>「特集記事を見る」から、その<wbr>区分の<wbr>全員を<wbr>まとめて<wbr>読めます。<wbr>人物の<wbr>カードを<wbr>押すと、<wbr>特集記事の<wbr>該当する<wbr>箇所に<wbr>移動して、<wbr>代表作や<wbr>配信先を<wbr>確認できます。</p>
+    <h3>名前を<wbr>覚えたい<wbr>ときは</h3>
+    <p>クイズ<a href="/who-is-this.html"><wbr>「この人は誰？」</a>では、<wbr>名鑑に<wbr>載っている<wbr>人物や<wbr>会社の<wbr>代表作を<wbr>ヒントに、<wbr>名前を<wbr>当てて<wbr>遊べます。<wbr>載っていない<wbr>人物の<wbr>記事は<a href="/blog/"><wbr>ブログ一覧</a>から<wbr>探せます。</p>
+  </section>
 </main>
 
 <footer>
