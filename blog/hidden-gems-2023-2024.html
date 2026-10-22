@@ -43,6 +43,7 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
 .toc-grid{display:grid;grid-template-columns:1fr 1fr;gap:4px 16px}
 @media(max-width:600px){.toc-grid{grid-template-columns:1fr}}
 .toc-grid a{color:var(--text-muted);text-decoration:none;font-size:.85rem;padding:3px 0}.toc-grid a:hover{color:var(--accent)}
+.toc-grid a{display:block}.toc-sub{display:block;font-size:.75rem;color:rgba(164,176,190,.7);line-height:1.5;margin-top:1px}
 .gem-card{background:var(--bg-card);border:1px solid var(--border-color);border-radius:14px;padding:24px 28px;margin:20px 0;scroll-margin-top:80px}
 .gem-header{display:flex;align-items:flex-start;gap:12px;margin-bottom:14px;flex-wrap:wrap}
 .gem-num{background:var(--accent);color:#fff;font-size:.85rem;font-weight:800;min-width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
@@ -102,24 +103,24 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
   <div class="toc">
     <div class="toc-title">📋 作品一覧<wbr>（全18作品）</div>
     <div class="toc-grid">
-      <a href="#gem1">1. ラーメン赤猫</a>
-      <a href="#gem2">2. 時々<wbr>ボソッと<wbr>ロシア語で<wbr>デレる隣の<wbr>アーリャさん</a>
-      <a href="#gem3">3. シャングリラ・フロンティア</a>
-      <a href="#gem4">4. 呪術廻戦 懐玉・玉折</a>
-      <a href="#gem5">5. 夜の<wbr>クラゲは<wbr>泳げない</a>
-      <a href="#gem6">6. お兄ちゃんは<wbr>おしまい!</a>
-      <a href="#gem7">7. ダークギャザリング</a>
-      <a href="#gem8">8. 好きな<wbr>子がめがねを<wbr>忘れた</a>
-      <a href="#gem9">9. ミギと<wbr>ダリ</a>
-      <a href="#gem10">10. 経験済みな<wbr>キミと、<wbr>経験ゼロな<wbr>オレが、<wbr>お付き合いする<wbr>話。</a>
-      <a href="#gem11">11. 16bitセンセーション -ANOTHER LAYER-</a>
-      <a href="#gem12">12. 望まぬ<wbr>不死の<wbr>冒険者</a>
-      <a href="#gem13">13. Girls Band Cry</a>
-      <a href="#gem14">14. 忘却バッテリー</a>
-      <a href="#gem15">15. 逃げ上手の<wbr>若君</a>
-      <a href="#gem16">16. 疑似ハーレム</a>
-      <a href="#gem17">17. 天穂の<wbr>サクナヒメ</a>
-      <a href="#gem18">18. トリリオンゲーム</a>
+      <a href="#gem1">1. ラーメン赤猫<span class="toc-sub">📌 猫が<wbr>好きで、夜に<wbr>ほっこりしたい人へ</span></a>
+      <a href="#gem2">2. 時々<wbr>ボソッと<wbr>ロシア語で<wbr>デレる隣の<wbr>アーリャさん<span class="toc-sub"><wbr>📌 ドキドキする<wbr>ラブコメが<wbr>好きな人へ</span></a>
+      <a href="#gem3">3. シャングリラ・フロンティア<span class="toc-sub">📌 ゲームを<wbr>知らなくても<wbr>熱くなりたい人へ</span></a>
+      <a href="#gem4">4. 呪術廻戦 懐玉・玉折<span class="toc-sub">📌 五条と<wbr>夏油の<wbr>過去が気になる人へ</span></a>
+      <a href="#gem5">5. 夜の<wbr>クラゲは<wbr>泳げない<span class="toc-sub"><wbr>📌 創作や<wbr>音楽の<wbr>青春が<wbr>好きな人へ</span></a>
+      <a href="#gem6">6. お兄ちゃんは<wbr>おしまい!<span class="toc-sub">📌 絵が<wbr>きれいな<wbr>日常コメディが<wbr>見たい人へ</span></a>
+      <a href="#gem7">7. ダークギャザリング<span class="toc-sub">📌 ホラーも<wbr>戦いも<wbr>楽しみたい人へ</span></a>
+      <a href="#gem8">8. 好きな<wbr>子がめがねを<wbr>忘れた<span class="toc-sub"><wbr>📌 甘いだけの<wbr>ラブコメが<wbr>見たい人へ</span></a>
+      <a href="#gem9">9. ミギと<wbr>ダリ<span class="toc-sub">📌 ダークな<wbr>ミステリーが<wbr>好きな人へ</span></a>
+      <a href="#gem10">10. 経験済みな<wbr>キミと、<wbr>経験ゼロな<wbr>オレが、<wbr>お付き合いする<wbr>話。<span class="toc-sub"><wbr>📌 不器用な恋の話が<wbr>好きな人へ</span></a>
+      <a href="#gem11">11. 16bitセンセーション -ANOTHER LAYER-<span class="toc-sub">📌 何かを作る人の熱い話が<wbr>好きな人へ</span></a>
+      <a href="#gem12">12. 望まぬ<wbr>不死の<wbr>冒険者<span class="toc-sub">📌 静かな<wbr>ダークファンタジーが<wbr>好きな人へ</span></a>
+      <a href="#gem13">13. Girls Band Cry<span class="toc-sub">📌 生々しい<wbr>青春ドラマが<wbr>見たい人へ</span></a>
+      <a href="#gem14">14. 忘却バッテリー<span class="toc-sub">📌 野球を<wbr>知らなくても<wbr>青春を<wbr>楽しみたい人へ</span></a>
+      <a href="#gem15">15. 逃げ上手の<wbr>若君<span class="toc-sub">📌 歴史も<wbr>戦いも<wbr>好きな人へ</span></a>
+      <a href="#gem16">16. 疑似ハーレム<span class="toc-sub">📌 一途な<wbr>ラブコメが<wbr>見たい人へ</span></a>
+      <a href="#gem17">17. 天穂の<wbr>サクナヒメ<span class="toc-sub">📌 骨太な<wbr>成長物語が<wbr>見たい人へ</span></a>
+      <a href="#gem18">18. トリリオンゲーム<span class="toc-sub">📌 痛快な<wbr>サクセス物語が<wbr>好きな人へ</span></a>
     </div>
   </div>
 

@@ -45,6 +45,7 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
 .toc-grid{display:grid;grid-template-columns:1fr 1fr;gap:4px 16px}
 @media(max-width:600px){.toc-grid{grid-template-columns:1fr}}
 .toc-grid a{color:var(--text-muted);text-decoration:none;font-size:.85rem;padding:3px 0}.toc-grid a:hover{color:var(--accent)}
+.toc-grid a{display:block}.toc-sub{display:block;font-size:.75rem;color:rgba(164,176,190,.7);line-height:1.5;margin-top:1px}
 .gem-card{background:var(--bg-card);border:1px solid var(--border-color);border-radius:14px;padding:24px 28px;margin:20px 0;scroll-margin-top:80px}
 .gem-header{display:flex;align-items:flex-start;gap:12px;margin-bottom:14px;flex-wrap:wrap}
 .gem-num{background:var(--accent);color:#fff;font-size:.85rem;font-weight:800;min-width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
@@ -104,24 +105,24 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
   <div class="toc">
     <div class="toc-title">📋 作品一覧<wbr>（全18作品）</div>
     <div class="toc-grid">
-      <a href="#gem1">1. 空色ユーティリティ</a>
-      <a href="#gem2">2. ギルドの<wbr>受付嬢ですが…</a>
-      <a href="#gem3">3. 笑顔の<wbr>たえない<wbr>職場です。</a>
-      <a href="#gem4">4. Turkey!</a>
-      <a href="#gem5">5. 九龍ジェネリックロマンス</a>
-      <a href="#gem6">6. 黒岩メダカに私の<wbr>可愛いが<wbr>通じない</a>
-      <a href="#gem7">7. 最後に<wbr>ひとつだけ<wbr>お願いしても<wbr>よろしいでしょうか</a>
-      <a href="#gem8">8. 友達の妹が<wbr>俺にだけウザい</a>
-      <a href="#gem9">9. 永久の<wbr>ユウグレ</a>
-      <a href="#gem10">10. 忍者と<wbr>殺し屋の<wbr>ふたりぐらし</a>
-      <a href="#gem11">11. 履いてください、<wbr>鷹峰さん</a>
-      <a href="#gem12">12. ばっどがーる</a>
-      <a href="#gem13">13. 花は<wbr>咲く、<wbr>修羅の如く</a>
-      <a href="#gem14">14. 日々は<wbr>過ぎれど<wbr>飯うまし</a>
-      <a href="#gem15">15. フードコートで、また<wbr>明日。</a>
-      <a href="#gem16">16. ブスに<wbr>花束を。</a>
-      <a href="#gem17">17. ボールパークで<wbr>つかまえて!</a>
-      <a href="#gem18">18. 帝乃三姉妹は<wbr>案外、<wbr>チョロい。</a>
+      <a href="#gem1">1. 空色ユーティリティ<span class="toc-sub">📌 一日の<wbr>疲れを<wbr>癒したい人へ</span></a>
+      <a href="#gem2">2. ギルドの<wbr>受付嬢ですが…<span class="toc-sub"><wbr>📌 仕事帰りに笑いたい人へ</span></a>
+      <a href="#gem3">3. 笑顔の<wbr>たえない<wbr>職場です。<span class="toc-sub"><wbr>📌 笑えて少し怖い話が<wbr>好きな人へ</span></a>
+      <a href="#gem4">4. Turkey!<span class="toc-sub">📌 先入観を<wbr>覆されたい人へ</span></a>
+      <a href="#gem5">5. 九龍ジェネリックロマンス<span class="toc-sub">📌 独特の<wbr>世界観に<wbr>浸りたい人へ</span></a>
+      <a href="#gem6">6. 黒岩メダカに私の<wbr>可愛いが<wbr>通じない<span class="toc-sub"><wbr>📌 テンポのよい<wbr>ラブコメが<wbr>見たい人へ</span></a>
+      <a href="#gem7">7. 最後に<wbr>ひとつだけ<wbr>お願いしても<wbr>よろしいでしょうか<span class="toc-sub"><wbr>📌 日常の<wbr>ストレスを<wbr>発散したい人へ</span></a>
+      <a href="#gem8">8. 友達の妹が<wbr>俺にだけウザい<span class="toc-sub"><wbr>📌 ウザかわいい<wbr>ヒロインが<wbr>好きな人へ</span></a>
+      <a href="#gem9">9. 永久の<wbr>ユウグレ<span class="toc-sub">📌 SFも<wbr>感動も<wbr>楽しみたい人へ</span></a>
+      <a href="#gem10">10. 忍者と<wbr>殺し屋の<wbr>ふたりぐらし<span class="toc-sub">📌 温かい<wbr>日常コメディが<wbr>見たい人へ</span></a>
+      <a href="#gem11">11. 履いてください、<wbr>鷹峰さん<span class="toc-sub"><wbr>📌 変わった<wbr>設定の<wbr>ラブコメが<wbr>好きな人へ</span></a>
+      <a href="#gem12">12. ばっどがーる<span class="toc-sub"><wbr>📌 キャラクターを<wbr>応援したい人へ</span></a>
+      <a href="#gem13">13. 花は<wbr>咲く、<wbr>修羅の如く<span class="toc-sub"><wbr>📌 熱い<wbr>青春ドラマが<wbr>見たい人へ</span></a>
+      <a href="#gem14">14. 日々は<wbr>過ぎれど<wbr>飯うまし<span class="toc-sub">📌 おいしい<wbr>ご飯の<wbr>描写が<wbr>好きな人へ</span></a>
+      <a href="#gem15">15. フードコートで、また<wbr>明日。<span class="toc-sub"><wbr>📌 ぼんやり<wbr>見られる<wbr>作品が<wbr>好きな人へ</span></a>
+      <a href="#gem16">16. ブスに<wbr>花束を。<span class="toc-sub"><wbr>📌 自己肯定感の<wbr>物語が気になる人へ</span></a>
+      <a href="#gem17">17. ボールパークで<wbr>つかまえて!<span class="toc-sub">📌 野球を<wbr>知らなくても<wbr>楽しみたい人へ</span></a>
+      <a href="#gem18">18. 帝乃三姉妹は<wbr>案外、<wbr>チョロい。<span class="toc-sub"><wbr>📌 甘い<wbr>ラブコメで<wbr>幸せに<wbr>なりたい人へ</span></a>
     </div>
   </div>
 
