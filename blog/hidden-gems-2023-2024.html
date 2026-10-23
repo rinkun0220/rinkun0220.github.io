@@ -66,6 +66,7 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
 .footer-links{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;margin-bottom:16px}
 .footer-link{color:var(--text-muted);text-decoration:none;font-size:.85rem}.footer-link:hover{color:#fff}
 .copyright{font-size:.8rem;color:rgba(255,255,255,0.3)}
+.badge.hulu{color:#4fd18b}.badge.fod{color:#e8b04a}.badge.disney{color:#7f9bff}
 /* 日本語の改行を自然にする設定（文節単位で改行・行頭禁則・1文字だけの行を避ける） */
 body{line-break:strict;overflow-wrap:anywhere}
 @supports (word-break:auto-phrase){body{word-break:auto-phrase}}
@@ -130,7 +131,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
 
 
     <h2>作品紹介：全18作品</h2>
-    <p>作品名は、<wbr>公式サイトへの<wbr>リンクに<wbr>なっています。<wbr>配信先の<wbr>バッジは、<wbr>各サービスの<wbr>トップページへ<wbr>つながります。</p>
+    <p>作品名は、<wbr>公式サイトへの<wbr>リンクに<wbr>なっています。<wbr>配信先の<wbr>バッジは、<wbr>2026年10月23日に<wbr>dアニメストアの<wbr>公式サイトの<wbr>検索と、<wbr>動画配信の<wbr>検索サービス<wbr>（JustWatch）で<wbr>確認した、<wbr>見放題の<wbr>配信サービスです。<wbr>Amazonは、<wbr>Prime Videoの<wbr>見放題だけを<wbr>載せていて、<wbr>レンタルや<wbr>追加チャンネルは<wbr>含みません。<wbr>バッジは<wbr>各サービスの<wbr>トップページへ<wbr>つながります。<wbr>配信状況は<wbr>変わるので、<wbr>視聴前に<wbr>各サービスで<wbr>最新の<wbr>状況を<wbr>確認してください。</p>
 
         <div class="gem-card" id="gem1">
       <div class="gem-header">
@@ -146,6 +147,9 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       <div class="streaming-row">
         <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
         <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
+        <a href="https://netflix.com" target="_blank" rel="noopener" class="badge netflix">Netflix</a>
+        <a href="https://www.hulu.jp/" target="_blank" rel="noopener" class="badge hulu">Hulu</a>
+        <a href="https://fod.fujitv.co.jp/" target="_blank" rel="noopener" class="badge fod">FOD</a>
         <a href="https://ramenakaneko.com/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
       </div>
     </div>
@@ -163,8 +167,9 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       <div class="gem-point"><strong>見逃し理由：</strong>タイトルが<wbr>長くて<wbr>検索されに<wbr>くかったです。でも<wbr>設定の<wbr>面白さは<wbr>本物です。</div>
       <div class="streaming-row">
         <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
-        <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
         <a href="https://netflix.com" target="_blank" rel="noopener" class="badge netflix">Netflix</a>
+        <a href="https://video.unext.jp/" target="_blank" rel="noopener" class="badge unext">U-NEXT</a>
+        <a href="https://www.hulu.jp/" target="_blank" rel="noopener" class="badge hulu">Hulu</a>
         <a href="https://roshidere.com/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
       </div>
     </div>
@@ -178,11 +183,16 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
         </div>
       </div>
       <div class="gem-body">クソゲーハンターが<wbr>VRMMOの<wbr>最高難易度ゲームに<wbr>挑む作品です。<wbr>ゲームを<wbr>楽しむ<wbr>ことへの<wbr>純粋な<wbr>熱量が<wbr>視聴者に<wbr>伝わってきて、<wbr>見ていて<wbr>気持ちのいい<wbr>作品です。<wbr>バトルシーンの<wbr>クオリティも<wbr>高く、特に<wbr>終盤の<wbr>ボス戦は今の<wbr>アニメの<wbr>水準でも<wbr>引けを<wbr>取らない<wbr>完成度です。</div>
-      <p class="gem-data"><strong>📌 作品データ</strong>原作は<wbr>硬梨菜さんの<wbr>Web小説（「小説家になろう」）で、<wbr>制作は<wbr>C2Cです。<wbr>2023年10月から<wbr>2クール連続で<wbr>放送され、<wbr>2024年10月からは<wbr>第2期が<wbr>始まりました。</p>
+      <p class="gem-data"><strong>📌 作品データ</strong>原作は<wbr>硬梨菜さんの<wbr>Web小説（「小説家になろう」）で、<wbr>制作は<wbr>C2Cです。<wbr>2023年10月から<wbr>2クール連続で<wbr>放送され、<wbr>2024年10月から<wbr>2025年3月までは、<wbr>第2期も<wbr>2クール放送されました。</p>
       <div class="gem-point"><strong>見逃し理由：</strong>ゲームアニメという<wbr>ジャンルの<wbr>先入観で<wbr>敬遠した人が<wbr>多いです。<wbr>実際は<wbr>ゲームを<wbr>知らなくても<wbr>楽しめます。</div>
       <div class="streaming-row">
         <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
         <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
+        <a href="https://netflix.com" target="_blank" rel="noopener" class="badge netflix">Netflix</a>
+        <a href="https://video.unext.jp/" target="_blank" rel="noopener" class="badge unext">U-NEXT</a>
+        <a href="https://www.hulu.jp/" target="_blank" rel="noopener" class="badge hulu">Hulu</a>
+        <a href="https://fod.fujitv.co.jp/" target="_blank" rel="noopener" class="badge fod">FOD</a>
+        <a href="https://www.disneyplus.com/ja-jp" target="_blank" rel="noopener" class="badge disney">Disney+</a>
         <a href="https://anime.shangrilafrontier.com/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
       </div>
     </div>
@@ -202,6 +212,10 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
         <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
         <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
         <a href="https://netflix.com" target="_blank" rel="noopener" class="badge netflix">Netflix</a>
+        <a href="https://video.unext.jp/" target="_blank" rel="noopener" class="badge unext">U-NEXT</a>
+        <a href="https://www.hulu.jp/" target="_blank" rel="noopener" class="badge hulu">Hulu</a>
+        <a href="https://fod.fujitv.co.jp/" target="_blank" rel="noopener" class="badge fod">FOD</a>
+        <a href="https://www.disneyplus.com/ja-jp" target="_blank" rel="noopener" class="badge disney">Disney+</a>
         <a href="https://jujutsukaisen.jp/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
       </div>
     </div>
@@ -219,6 +233,9 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       <div class="gem-point"><strong>見逃し理由：</strong>春クールは<wbr>ラインナップが<wbr>豊富で<wbr>埋もれてしまいました。でも<wbr>刺さる<wbr>人には深く<wbr>刺さる<wbr>作品です。</div>
       <div class="streaming-row">
         <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
+        <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
+        <a href="https://video.unext.jp/" target="_blank" rel="noopener" class="badge unext">U-NEXT</a>
+        <a href="https://fod.fujitv.co.jp/" target="_blank" rel="noopener" class="badge fod">FOD</a>
         <a href="https://yorukura-anime.com/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
       </div>
     </div>
@@ -236,7 +253,8 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       <div class="gem-point"><strong>見逃し理由：</strong>タイトルと<wbr>ジャケットの<wbr>インパクトで<wbr>「ネタアニメ」だと<wbr>誤解されがちです。<wbr>中身は<wbr>丁寧な<wbr>日常コメディです。</div>
       <div class="streaming-row">
         <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
-        <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
+        <a href="https://video.unext.jp/" target="_blank" rel="noopener" class="badge unext">U-NEXT</a>
+        <a href="https://www.hulu.jp/" target="_blank" rel="noopener" class="badge hulu">Hulu</a>
         <a href="https://onimai.jp/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
       </div>
     </div>
@@ -254,7 +272,9 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       <div class="gem-point"><strong>見逃し理由：</strong>同時期の<wbr>話題作の陰に<wbr>隠れがちでしたが、<wbr>2期制作も<wbr>決定した<wbr>実力派です。</div>
       <div class="streaming-row">
         <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
-        <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
+        <a href="https://netflix.com" target="_blank" rel="noopener" class="badge netflix">Netflix</a>
+        <a href="https://video.unext.jp/" target="_blank" rel="noopener" class="badge unext">U-NEXT</a>
+        <a href="https://fod.fujitv.co.jp/" target="_blank" rel="noopener" class="badge fod">FOD</a>
         <a href="https://darkgathering.jp/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
       </div>
     </div>
@@ -272,7 +292,9 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       <div class="gem-point"><strong>見逃し理由：</strong>ラブコメが<wbr>乱立する<wbr>クールに<wbr>埋もれがちでしたが、<wbr>「甘さ特化」という<wbr>ジャンルでは<wbr>頭一つ<wbr>抜けていました。</div>
       <div class="streaming-row">
         <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
-        <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
+        <a href="https://video.unext.jp/" target="_blank" rel="noopener" class="badge unext">U-NEXT</a>
+        <a href="https://www.hulu.jp/" target="_blank" rel="noopener" class="badge hulu">Hulu</a>
+        <a href="https://fod.fujitv.co.jp/" target="_blank" rel="noopener" class="badge fod">FOD</a>
         <a href="https://sh-anime.shochiku.co.jp/sukimega/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
       </div>
     </div>
@@ -286,11 +308,14 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
         </div>
       </div>
       <div class="gem-body">生き別れた<wbr>双子が<wbr>入れ替わりながら、母を死に<wbr>追いやった<wbr>人物への<wbr>復讐を<wbr>進めていく<wbr>ダークミステリーです。<wbr>独特な<wbr>色彩感覚と<wbr>デフォルメされた<wbr>キャラクターデザインが、<wbr>物語の<wbr>ブラックさと<wbr>不思議に<wbr>マッチしていて、他のどの<wbr>作品にも<wbr>似ていない<wbr>読後感を<wbr>残します。<wbr>伏線の<wbr>張り方も<wbr>丁寧です。</div>
-      <p class="gem-data"><strong>📌 作品データ</strong>2023年10月から<wbr>放送された<wbr>全13話の<wbr>作品です。<wbr>原作は<wbr>佐野菜見さんの漫画（「コミックハルタ」）で、<wbr>制作は<wbr>GEEKTOYSと<wbr>CompTownです。</p>
+      <p class="gem-data"><strong>📌 作品データ</strong>2023年10月から<wbr>放送された<wbr>全13話の<wbr>作品です。<wbr>原作は<wbr>佐野菜見さんの漫画（「ハルタ」）で、<wbr>制作は<wbr>GEEKTOYSと<wbr>CompTownです。</p>
       <div class="gem-point"><strong>見逃し理由：</strong>絵柄の<wbr>可愛さと<wbr>内容の<wbr>ダークさの<wbr>ギャップで<wbr>敬遠されがちでしたが、<wbr>ミステリー好きなら<wbr>間違いなく<wbr>刺さります。</div>
       <div class="streaming-row">
         <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
         <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
+        <a href="https://video.unext.jp/" target="_blank" rel="noopener" class="badge unext">U-NEXT</a>
+        <a href="https://www.hulu.jp/" target="_blank" rel="noopener" class="badge hulu">Hulu</a>
+        <a href="https://fod.fujitv.co.jp/" target="_blank" rel="noopener" class="badge fod">FOD</a>
         <a href="https://migitodali.com/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
       </div>
     </div>
@@ -309,7 +334,8 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       <div class="streaming-row">
         <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
         <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
-        <a href="https://netflix.com" target="_blank" rel="noopener" class="badge netflix">Netflix</a>
+        <a href="https://video.unext.jp/" target="_blank" rel="noopener" class="badge unext">U-NEXT</a>
+        <a href="https://www.hulu.jp/" target="_blank" rel="noopener" class="badge hulu">Hulu</a>
         <a href="https://kimizero.com/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
       </div>
     </div>
@@ -323,11 +349,10 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
         </div>
       </div>
       <div class="gem-body">1990年代の<wbr>美少女ゲーム業界に<wbr>タイムスリップしてしまうという<wbr>異色設定の<wbr>作品です。<wbr>当時の<wbr>同人・ゲーム制作現場を<wbr>リアルに<wbr>再現しつつ、<wbr>「好きなものを作る情熱」を<wbr>真正面から<wbr>描いていて、<wbr>クリエイター気質な<wbr>人ほど<wbr>刺さります。<wbr>懐かしさと<wbr>新鮮さが<wbr>同居した<wbr>不思議な<wbr>魅力が<wbr>あります。</div>
-      <p class="gem-data"><strong>📌 作品データ</strong>2023年10月から<wbr>放送された<wbr>全13話の<wbr>作品です。<wbr>原作は<wbr>若木民喜さんの<wbr>漫画で、<wbr>もとは<wbr>2016年の<wbr>コミックマーケットで<wbr>同人誌として<wbr>頒布されました。</p>
+      <p class="gem-data"><strong>📌 作品データ</strong>2023年10月から<wbr>放送された<wbr>全13話の<wbr>作品です。<wbr>原作は<wbr>みつみ美里さん、<wbr>甘露樹さん、<wbr>若木民喜さんによる<wbr>同人漫画で、<wbr>2016年の<wbr>コミックマーケット91で<wbr>初めて<wbr>同人誌として<wbr>頒布されました。<wbr>制作は<wbr>st.シルバーです。</p>
       <div class="gem-point"><strong>見逃し理由：</strong>ニッチな<wbr>業界ネタが<wbr>前面に<wbr>出ていた<wbr>ため層が<wbr>狭いと<wbr>思われがちでしたが、<wbr>物語と<wbr>しての<wbr>完成度は<wbr>高いです。</div>
       <div class="streaming-row">
         <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
-        <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
         <a href="https://16bitsensation-al.com/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
       </div>
     </div>
@@ -345,7 +370,8 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       <div class="gem-point"><strong>見逃し理由：</strong>地味な<wbr>作風と<wbr>タイトルの<wbr>長さで手に<wbr>取られに<wbr>くかったのですが、<wbr>じっくり系ダークファンタジーとして<wbr>良質です。</div>
       <div class="streaming-row">
         <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
-        <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
+        <a href="https://netflix.com" target="_blank" rel="noopener" class="badge netflix">Netflix</a>
+        <a href="https://www.hulu.jp/" target="_blank" rel="noopener" class="badge hulu">Hulu</a>
         <a href="https://nozomanufushi-anime.jp/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
       </div>
     </div>
@@ -364,6 +390,8 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       <div class="streaming-row">
         <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
         <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
+        <a href="https://video.unext.jp/" target="_blank" rel="noopener" class="badge unext">U-NEXT</a>
+        <a href="https://www.hulu.jp/" target="_blank" rel="noopener" class="badge hulu">Hulu</a>
         <a href="https://girls-band-cry.com/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
       </div>
     </div>
@@ -382,6 +410,11 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       <div class="streaming-row">
         <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
         <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
+        <a href="https://netflix.com" target="_blank" rel="noopener" class="badge netflix">Netflix</a>
+        <a href="https://video.unext.jp/" target="_blank" rel="noopener" class="badge unext">U-NEXT</a>
+        <a href="https://www.hulu.jp/" target="_blank" rel="noopener" class="badge hulu">Hulu</a>
+        <a href="https://fod.fujitv.co.jp/" target="_blank" rel="noopener" class="badge fod">FOD</a>
+        <a href="https://www.disneyplus.com/ja-jp" target="_blank" rel="noopener" class="badge disney">Disney+</a>
         <a href="https://boukyaku-battery.com/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
       </div>
     </div>
@@ -395,11 +428,14 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
         </div>
       </div>
       <div class="gem-body">北条時行という<wbr>実在の<wbr>少年武将を<wbr>主人公に<wbr>据えた<wbr>異色の<wbr>歴史アクションです。<wbr>「逃げる」<wbr>ことを<wbr>武器に<wbr>生き延びていくという<wbr>切り口が<wbr>新しく、<wbr>単なる合戦ものとは<wbr>一線を<wbr>画します。<wbr>少年漫画らしい<wbr>熱さと、<wbr>史実に<wbr>基づく<wbr>重みが<wbr>同居していて、<wbr>歴史好き・バトル好きどちらにも<wbr>刺さる<wbr>作品です。</div>
-      <p class="gem-data"><strong>📌 作品データ</strong>2024年7月から<wbr>放送された<wbr>第1期<wbr>（全12話）です。<wbr>原作は<wbr>松井優征さんの漫画（「週刊少年ジャンプ」）で、<wbr>制作は<wbr>CloverWorksです。</p>
+      <p class="gem-data"><strong>📌 作品データ</strong>2024年7月から<wbr>放送された<wbr>第1期<wbr>（全12話）です。<wbr>2026年7月から<wbr>10月までは、<wbr>第2期<wbr>（全12話）も<wbr>放送されました。<wbr>原作は<wbr>松井優征さんの漫画（「週刊少年ジャンプ」）で、<wbr>制作は<wbr>CloverWorksです。</p>
       <div class="gem-point"><strong>見逃し理由：</strong>マイナーな時代<wbr>（南北朝時代）を<wbr>扱っているため<wbr>取っつきに<wbr>くいと<wbr>思われがちですが、<wbr>説明が<wbr>丁寧で<wbr>誰でも<wbr>入りやすいです。</div>
       <div class="streaming-row">
         <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
         <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
+        <a href="https://netflix.com" target="_blank" rel="noopener" class="badge netflix">Netflix</a>
+        <a href="https://www.hulu.jp/" target="_blank" rel="noopener" class="badge hulu">Hulu</a>
+        <a href="https://www.disneyplus.com/ja-jp" target="_blank" rel="noopener" class="badge disney">Disney+</a>
         <a href="https://nigewaka.run/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
       </div>
     </div>
@@ -417,7 +453,9 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       <div class="gem-point"><strong>見逃し理由：</strong>タイトルだけ<wbr>見ると<wbr>量産型ハーレムものに<wbr>見えますが、<wbr>実際は<wbr>誠実な<wbr>一途ラブコメです。</div>
       <div class="streaming-row">
         <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
-        <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
+        <a href="https://video.unext.jp/" target="_blank" rel="noopener" class="badge unext">U-NEXT</a>
+        <a href="https://www.hulu.jp/" target="_blank" rel="noopener" class="badge hulu">Hulu</a>
+        <a href="https://fod.fujitv.co.jp/" target="_blank" rel="noopener" class="badge fod">FOD</a>
         <a href="https://gijiharem.com/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
       </div>
     </div>
@@ -436,6 +474,9 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       <div class="streaming-row">
         <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
         <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
+        <a href="https://netflix.com" target="_blank" rel="noopener" class="badge netflix">Netflix</a>
+        <a href="https://video.unext.jp/" target="_blank" rel="noopener" class="badge unext">U-NEXT</a>
+        <a href="https://www.hulu.jp/" target="_blank" rel="noopener" class="badge hulu">Hulu</a>
         <a href="https://sakuna-anime.com/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
       </div>
     </div>
@@ -454,6 +495,8 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       <div class="streaming-row">
         <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
         <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
+        <a href="https://video.unext.jp/" target="_blank" rel="noopener" class="badge unext">U-NEXT</a>
+        <a href="https://www.hulu.jp/" target="_blank" rel="noopener" class="badge hulu">Hulu</a>
         <a href="https://trilliongame-anime.com/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
       </div>
     </div>
