@@ -781,9 +781,9 @@ function selectAnswer(idx, name) {
   const feedback = document.getElementById('qFeedback');
   if (isCorrect) {
     score++;
-    feedback.innerHTML = `✅ 正解！ <a href="/blog/${q.link}#${q.id}" target="_blank" rel="noopener" style="color:var(--star-color);">→ ${q.name}の代表作をもっと見る</a>`;
+    feedback.innerHTML = `✅ 正解！ <a href="/blog/${q.link}#${q.id}" target="_blank" rel="noopener" style="color:var(--star-color);">→ ${q.name}の代表作をもっと観る</a>`;
   } else {
-    feedback.innerHTML = `❌ 不正解。正解は「${q.name}」でした。 <a href="/blog/${q.link}#${q.id}" target="_blank" rel="noopener" style="color:var(--star-color);">→ もっと見る</a>`;
+    feedback.innerHTML = `❌ 不正解。正解は「${q.name}」でした。 <a href="/blog/${q.link}#${q.id}" target="_blank" rel="noopener" style="color:var(--star-color);">→ もっと観る</a>`;
   }
   document.getElementById('nextBtn').style.display = 'inline-block';
 }
@@ -803,7 +803,7 @@ function showResult() {
   let emoji, comment;
   const rate = score / TOTAL_QUESTIONS;
   if (rate >= 0.9) { emoji = '🏆'; comment = 'ほぼ全問正解！ANIMEDBマスター認定です。'; }
-  else if (rate >= 0.7) { emoji = '🎉'; comment = 'かなりの正解率！名鑑をよく見ていますね。'; }
+  else if (rate >= 0.7) { emoji = '🎉'; comment = 'かなりの正解率！名鑑をよく観ていますね。'; }
   else if (rate >= 0.4) { emoji = '👍'; comment = 'まずまずの結果。名鑑を見返せばもっと伸ばせます。'; }
   else { emoji = '📖'; comment = 'これを機に名鑑をチェックしてみましょう。'; }
 

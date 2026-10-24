@@ -196,7 +196,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
 
   <div id="resultScreen" class="hidden"></div>
   <section class="tool-guide">
-    <h2>診断の<wbr>仕組みと、<wbr>監督に<wbr>注目して見るコツ</h2>
+    <h2>診断の<wbr>仕組みと、<wbr>監督に<wbr>注目して観るコツ</h2>
     <h3>結果の決まり方</h3>
     <p>7つの<wbr>質問の<wbr>選択肢は、<wbr>それぞれ8人の<wbr>監督の<wbr>いずれかに結び<wbr>付いています。<wbr>選んだ<wbr>選択肢では、一番近い<wbr>監督に<wbr>3点が<wbr>入り、<wbr>選択肢に<wbr>よっては近い<wbr>監督にも<wbr>1点が<wbr>入ります。<wbr>回答の<wbr>たびに<wbr>点数が<wbr>加算され、<wbr>合計が一番<wbr>高かった<wbr>監督が<wbr>「あなたに合う監督」として<wbr>表示されます。<wbr>同点に<wbr>なった<wbr>ときは、<wbr>同点の<wbr>監督の<wbr>中から<wbr>ランダムに<wbr>選ばれる<wbr>ため、同じ<wbr>答え方でも<wbr>結果が<wbr>変わる<wbr>ことがあります。結果<wbr>画面からは、他の<wbr>7人の<wbr>代表作を<wbr>紹介する<wbr>ページにも<wbr>移動できます。</p>
     <h3>「監督」は何をする人か</h3>
@@ -433,7 +433,7 @@ function showResult() {
     const o = results[k];
     return `<a href="/blog/director-favorites.html#${o.anchor}" class="other-item">
       <span class="other-name">${o.name}</span>
-      <span class="other-arrow">代表作を見る →</span>
+      <span class="other-arrow">代表作を観る →</span>
     </a>`;
   }).join('');
 
@@ -447,7 +447,7 @@ function showResult() {
       <div class="result-desc">${r.desc}</div>
       <div class="result-works">${r.works}</div>
       <div class="result-btns">
-        <a href="/blog/director-favorites.html#${r.anchor}" class="result-btn primary">代表作をもっと見る →</a>
+        <a href="/blog/director-favorites.html#${r.anchor}" class="result-btn primary">代表作をもっと観る →</a>
         <a href="https://x.com/intent/tweet?text=${shareText}&url=${shareUrl}" target="_blank" rel="noopener" class="result-btn share">𝕏 結果をシェア</a>
         <button class="result-btn secondary" onclick="restartQuiz()">もう一度診断する</button>
       </div>

@@ -131,7 +131,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
     <h2 class="reveal-title">診断で<wbr>分かる<wbr>5つの<wbr>ステータス</h2>
     <p class="reveal-note">6つの<wbr>質問への<wbr>回答から、<wbr>以下の<wbr>5項目を<wbr>数値化して<wbr>ステータスカードを<wbr>作成します。</p>
     <ul class="reveal-list">
-      <li><b>経験値</b> — アニメを<wbr>見始めた<wbr>時期の長さ</li>
+      <li><b>経験値</b> — アニメを<wbr>観始めた<wbr>時期の長さ</li>
       <li><b>視聴の<wbr>幅</b> — 1クールに<wbr>視聴する本数</li>
       <li><b>涙腺</b> — 感動しやすい<wbr>ジャンル・場面の傾向</li>
       <li><b>こだわり</b> — 脚本・演出・キャラの<wbr>どこを<wbr>重視するか</li>
@@ -179,7 +179,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
   <section class="tool-guide">
     <h2>この<wbr>診断の<wbr>仕組みと<wbr>使い方</h2>
     <h3>5つの<wbr>ステータスは何で<wbr>決まる？</h3>
-    <p>「あなたのアニメ履歴書」は、<wbr>6つの<wbr>質問への<wbr>回答から、<wbr>経験値・視聴の<wbr>幅・涙腺・こだわり・継続力の<wbr>5項目を<wbr>4段階の<wbr>バーで<wbr>表示する<wbr>プロフィールカードを作る<wbr>診断です。<wbr>経験値は<wbr>アニメを<wbr>見始めた<wbr>時期、<wbr>視聴の幅は<wbr>1クールに見る<wbr>本数、<wbr>涙腺は心を<wbr>動かされた<wbr>ジャンル、<wbr>こだわりは<wbr>作品の<wbr>どこを<wbr>重視するか、<wbr>継続力は一番長く<wbr>追っている<wbr>シリーズの<wbr>年数を<wbr>もとにしています。</p>
+    <p>「あなたのアニメ履歴書」は、<wbr>6つの<wbr>質問への<wbr>回答から、<wbr>経験値・視聴の<wbr>幅・涙腺・こだわり・継続力の<wbr>5項目を<wbr>4段階の<wbr>バーで<wbr>表示する<wbr>プロフィールカードを作る<wbr>診断です。<wbr>経験値は<wbr>アニメを<wbr>観始めた<wbr>時期、<wbr>視聴の幅は<wbr>1クールに観る<wbr>本数、<wbr>涙腺は心を<wbr>動かされた<wbr>ジャンル、<wbr>こだわりは<wbr>作品の<wbr>どこを<wbr>重視するか、<wbr>継続力は一番長く<wbr>追っている<wbr>シリーズの<wbr>年数を<wbr>もとにしています。</p>
     <h3>カード上部の<wbr>タイプの見方</h3>
     <p>カードの<wbr>一番上には、<wbr>4つ目の<wbr>質問の<wbr>回答で<wbr>決まる<wbr>「視聴タイプ」<wbr>（脚本派・演出派・キャラ萌え派・<wbr>自由派）と、<wbr>最後の<wbr>質問の<wbr>回答で<wbr>決まる<wbr>「視聴スタイル」が、<wbr>「脚本派 × 週末一気<wbr>見タイプ」のように<wbr>並んで<wbr>表示されます。<wbr>バーが<wbr>長いほど<wbr>優れているという<wbr>意味ではありません。<wbr>たくさんの<wbr>作品を追う<wbr>人も、<wbr>1作品を<wbr>じっくり<wbr>味わう<wbr>人も、<wbr>楽しみ方の<wbr>違いを<wbr>見える形にした<wbr>ものです。</p>
     <h3>保存・シェアと、<wbr>回答の<wbr>扱いに<wbr>ついて</h3>
@@ -210,7 +210,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
 <script>
 const questions = [
   {
-    text: "いつからアニメを見始めましたか？",
+    text: "いつからアニメを観始めましたか？",
     options: [
       { label: "物心つく前からずっと", stats: { keiken: 4 } },
       { label: "学生時代から", stats: { keiken: 3 } },
@@ -237,7 +237,7 @@ const questions = [
     ]
   },
   {
-    text: "アニメを見るときのこだわりは？",
+    text: "アニメを観るときのこだわりは？",
     options: [
       { label: "脚本・構成の巧さ", stats: { kodawari: 4, type: "脚本派" } },
       { label: "作画・演出のクオリティ", stats: { kodawari: 4, type: "演出派" } },
