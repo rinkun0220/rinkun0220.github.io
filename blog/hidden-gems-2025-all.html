@@ -69,6 +69,7 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
 .footer-link{color:var(--text-muted);text-decoration:none;font-size:.85rem}.footer-link:hover{color:#fff}
 .copyright{font-size:.8rem;color:rgba(255,255,255,0.3)}
 .badge.hulu{color:#4fd18b}.badge.fod{color:#e8b04a}.badge.disney{color:#7f9bff}
+.toc-item{padding:3px 0}.toc-item>a:first-child{display:block;padding:0}.toc-grid a.toc-off,.toc a.toc-off{display:inline-block;font-size:.72rem;line-height:1.2;padding:3px 10px;margin:4px 0 2px;border:1px solid rgba(255,255,255,.18);border-radius:999px;background:#444;color:#f1f2f6;text-decoration:none}.toc a.toc-off:hover{background:var(--accent);color:#fff}li>a.toc-off{margin:0 0 0 8px;vertical-align:middle}
 /* 日本語の改行を自然にする設定（文節単位で改行・行頭禁則・1文字だけの行を避ける） */
 body{line-break:strict;overflow-wrap:anywhere}
 @supports (word-break:auto-phrase){body{word-break:auto-phrase}}
@@ -106,24 +107,24 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
   <div class="toc">
     <div class="toc-title">📋 作品一覧<wbr>（全18作品）</div>
     <div class="toc-grid">
-      <a href="#gem1">1. 空色ユーティリティ<span class="toc-sub">🎯 一日の<wbr>疲れを<wbr>癒したい<wbr>人！</span></a>
-      <a href="#gem2">2. ギルドの<wbr>受付嬢ですが…<span class="toc-sub"><wbr>🎯 仕事帰りに笑いたい<wbr>人！</span></a>
-      <a href="#gem3">3. 笑顔の<wbr>たえない<wbr>職場です。<span class="toc-sub"><wbr>🎯 笑えて少し怖い話が<wbr>好きな<wbr>人！</span></a>
-      <a href="#gem4">4. Turkey!<span class="toc-sub">🎯 先入観を<wbr>覆されたい<wbr>人！</span></a>
-      <a href="#gem5">5. 九龍ジェネリックロマンス<span class="toc-sub">🎯 独特の<wbr>世界観に<wbr>浸りたい<wbr>人！</span></a>
-      <a href="#gem6">6. 黒岩メダカに私の<wbr>可愛いが<wbr>通じない<span class="toc-sub"><wbr>🎯 テンポのよい<wbr>ラブコメが<wbr>見たい<wbr>人！</span></a>
-      <a href="#gem7">7. 最後に<wbr>ひとつだけ<wbr>お願いしても<wbr>よろしいでしょうか<span class="toc-sub"><wbr>🎯 日常の<wbr>ストレスを<wbr>発散したい<wbr>人！</span></a>
-      <a href="#gem8">8. 友達の妹が<wbr>俺にだけウザい<span class="toc-sub"><wbr>🎯 ウザかわいい<wbr>ヒロインが<wbr>好きな<wbr>人！</span></a>
-      <a href="#gem9">9. 永久の<wbr>ユウグレ<span class="toc-sub">🎯 SFも<wbr>感動も<wbr>楽しみたい<wbr>人！</span></a>
-      <a href="#gem10">10. 忍者と<wbr>殺し屋の<wbr>ふたりぐらし<span class="toc-sub">🎯 温かい<wbr>日常コメディが<wbr>見たい<wbr>人！</span></a>
-      <a href="#gem11">11. 履いてください、<wbr>鷹峰さん<span class="toc-sub"><wbr>🎯 変わった<wbr>設定の<wbr>ラブコメが<wbr>好きな<wbr>人！</span></a>
-      <a href="#gem12">12. ばっどがーる<span class="toc-sub"><wbr>🎯 キャラクターを<wbr>応援したい<wbr>人！</span></a>
-      <a href="#gem13">13. 花は<wbr>咲く、<wbr>修羅の如く<span class="toc-sub"><wbr>🎯 熱い<wbr>青春ドラマが<wbr>見たい<wbr>人！</span></a>
-      <a href="#gem14">14. 日々は<wbr>過ぎれど<wbr>飯うまし<span class="toc-sub">🎯 おいしい<wbr>ご飯の<wbr>描写が<wbr>好きな<wbr>人！</span></a>
-      <a href="#gem15">15. フードコートで、また<wbr>明日。<span class="toc-sub"><wbr>🎯 ぼんやり<wbr>見られる<wbr>作品が<wbr>好きな<wbr>人！</span></a>
-      <a href="#gem16">16. ブスに<wbr>花束を。<span class="toc-sub"><wbr>🎯 自己肯定感の<wbr>物語が気になる<wbr>人！</span></a>
-      <a href="#gem17">17. ボールパークで<wbr>つかまえて!<span class="toc-sub">🎯 野球を<wbr>知らなくても<wbr>楽しみたい<wbr>人！</span></a>
-      <a href="#gem18">18. 帝乃三姉妹は<wbr>案外、<wbr>チョロい。<span class="toc-sub"><wbr>🎯 甘い<wbr>ラブコメで<wbr>幸せに<wbr>なりたい<wbr>人！</span></a>
+      <div class="toc-item"><a href="#gem1">1. 空色ユーティリティ<span class="toc-sub">🎯 一日の<wbr>疲れを<wbr>癒したい<wbr>人！</span></a><a class="toc-off" href="https://anime-sorairo-utility.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem2">2. ギルドの<wbr>受付嬢ですが…<span class="toc-sub"><wbr>🎯 仕事帰りに笑いたい<wbr>人！</span></a><a class="toc-off" href="https://girumasu.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem3">3. 笑顔の<wbr>たえない<wbr>職場です。<span class="toc-sub"><wbr>🎯 笑えて少し怖い話が<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://egatae.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem4">4. Turkey!<span class="toc-sub">🎯 先入観を<wbr>覆されたい<wbr>人！</span></a><a class="toc-off" href="https://turkey-project.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem5">5. 九龍ジェネリックロマンス<span class="toc-sub">🎯 独特の<wbr>世界観に<wbr>浸りたい<wbr>人！</span></a><a class="toc-off" href="https://kowloongr.jp/anime/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem6">6. 黒岩メダカに私の<wbr>可愛いが<wbr>通じない<span class="toc-sub"><wbr>🎯 テンポのよい<wbr>ラブコメが<wbr>見たい<wbr>人！</span></a><a class="toc-off" href="https://monaxmedaka.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem7">7. 最後に<wbr>ひとつだけ<wbr>お願いしても<wbr>よろしいでしょうか<span class="toc-sub"><wbr>🎯 日常の<wbr>ストレスを<wbr>発散したい<wbr>人！</span></a><a class="toc-off" href="https://saihito-anime.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem8">8. 友達の妹が<wbr>俺にだけウザい<span class="toc-sub"><wbr>🎯 ウザかわいい<wbr>ヒロインが<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://www.imouza-animation.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem9">9. 永久の<wbr>ユウグレ<span class="toc-sub">🎯 SFも<wbr>感動も<wbr>楽しみたい<wbr>人！</span></a><a class="toc-off" href="https://towanoyuugure.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem10">10. 忍者と<wbr>殺し屋の<wbr>ふたりぐらし<span class="toc-sub">🎯 温かい<wbr>日常コメディが<wbr>見たい<wbr>人！</span></a><a class="toc-off" href="https://ninkoro.jp/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem11">11. 履いてください、<wbr>鷹峰さん<span class="toc-sub"><wbr>🎯 変わった<wbr>設定の<wbr>ラブコメが<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://takaminesan.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem12">12. ばっどがーる<span class="toc-sub"><wbr>🎯 キャラクターを<wbr>応援したい<wbr>人！</span></a><a class="toc-off" href="https://badgirl-anime.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem13">13. 花は<wbr>咲く、<wbr>修羅の如く<span class="toc-sub"><wbr>🎯 熱い<wbr>青春ドラマが<wbr>見たい<wbr>人！</span></a><a class="toc-off" href="https://hanashura-anime.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem14">14. 日々は<wbr>過ぎれど<wbr>飯うまし<span class="toc-sub">🎯 おいしい<wbr>ご飯の<wbr>描写が<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://hibimeshi.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem15">15. フードコートで、また<wbr>明日。<span class="toc-sub"><wbr>🎯 ぼんやり<wbr>見られる<wbr>作品が<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://www.foodcourtjk-anime.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem16">16. ブスに<wbr>花束を。<span class="toc-sub"><wbr>🎯 自己肯定感の<wbr>物語が気になる<wbr>人！</span></a><a class="toc-off" href="https://busunihanatabawo.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem17">17. ボールパークで<wbr>つかまえて!<span class="toc-sub">🎯 野球を<wbr>知らなくても<wbr>楽しみたい<wbr>人！</span></a><a class="toc-off" href="https://anime-ballpark.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem18">18. 帝乃三姉妹は<wbr>案外、<wbr>チョロい。<span class="toc-sub"><wbr>🎯 甘い<wbr>ラブコメで<wbr>幸せに<wbr>なりたい<wbr>人！</span></a><a class="toc-off" href="https://mikadono.family/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
     </div>
   </div>
 

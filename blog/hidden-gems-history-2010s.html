@@ -68,6 +68,7 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
 .copyright{font-size:.8rem;color:rgba(255,255,255,0.3)}
 .gem-point a,.article-body p a{color:#7fb6ff;text-decoration:underline;text-underline-offset:3px}
 .badge.hulu{color:#4fd18b}.badge.fod{color:#e8b04a}.badge.disney{color:#7f9bff}.gem-nostream{font-size:.8rem;color:var(--text-muted)}
+.toc-item{padding:3px 0}.toc-item>a:first-child{display:block;padding:0}.toc-grid a.toc-off,.toc a.toc-off{display:inline-block;font-size:.72rem;line-height:1.2;padding:3px 10px;margin:4px 0 2px;border:1px solid rgba(255,255,255,.18);border-radius:999px;background:#444;color:#f1f2f6;text-decoration:none}.toc a.toc-off:hover{background:var(--accent);color:#fff}li>a.toc-off{margin:0 0 0 8px;vertical-align:middle}
 /* 日本語の改行を自然にする設定（文節単位で改行・行頭禁則・1文字だけの行を避ける） */
 body{line-break:strict;overflow-wrap:anywhere}
 @supports (word-break:auto-phrase){body{word-break:auto-phrase}}
@@ -105,43 +106,43 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
   <div class="toc">
     <div class="toc-title">📋 作品一覧<wbr>（全37作品）</div>
     <div class="toc-grid">
-      <a href="#gem1">1. Angel Beats!<span class="toc-sub">🎯 笑いと涙のある<wbr>青春ファンタジーが<wbr>好きな<wbr>人！</span></a>
-      <a href="#gem2">2. 輪る<wbr>ピングドラム<span class="toc-sub">🎯 謎の多い<wbr>不思議な<wbr>物語が<wbr>好きな<wbr>人！</span></a>
-      <a href="#gem3">3. あの夏で<wbr>待ってる<span class="toc-sub"><wbr>🎯 ひと夏の<wbr>切ない<wbr>恋愛ものが<wbr>好きな<wbr>人！</span></a>
-      <a href="#gem4">4. 氷菓<span class="toc-sub">🎯 青春と<wbr>日常ミステリーが<wbr>好きな<wbr>人！</span></a>
+      <div class="toc-item"><a href="#gem1">1. Angel Beats!<span class="toc-sub">🎯 笑いと涙のある<wbr>青春ファンタジーが<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://www.angelbeats.jp/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem2">2. 輪る<wbr>ピングドラム<span class="toc-sub">🎯 謎の多い<wbr>不思議な<wbr>物語が<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://penguindrum.jp/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem3">3. あの夏で<wbr>待ってる<span class="toc-sub"><wbr>🎯 ひと夏の<wbr>切ない<wbr>恋愛ものが<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://nbcuni.co.jp/anime/ichika-ichika/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem4">4. 氷菓<span class="toc-sub">🎯 青春と<wbr>日常ミステリーが<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://kotenbu.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
       <a href="#gem5">5. 人類は<wbr>衰退しました<span class="toc-sub"><wbr>🎯 風変わりな<wbr>世界観の<wbr>コメディが<wbr>好きな<wbr>人！</span></a>
       <a href="#gem6">6. 新世界より<span class="toc-sub"><wbr>🎯 重めの<wbr>SFサスペンスが<wbr>見たい<wbr>人！</span></a>
-      <a href="#gem7">7. たまこまーけっと<span class="toc-sub"><wbr>🎯 商店街の<wbr>あたたかい<wbr>日常が<wbr>見たい<wbr>人！</span></a>
+      <div class="toc-item"><a href="#gem7">7. たまこまーけっと<span class="toc-sub"><wbr>🎯 商店街の<wbr>あたたかい<wbr>日常が<wbr>見たい<wbr>人！</span></a><a class="toc-off" href="https://tamakomarket.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
       <a href="#gem8">8. まおゆう<wbr>魔王勇者<span class="toc-sub">🎯 会話で進む<wbr>知的な<wbr>ファンタジーが<wbr>好きな<wbr>人！</span></a>
-      <a href="#gem9">9. キルラキル<span class="toc-sub">🎯 勢いで<wbr>押し切る熱い<wbr>バトルが<wbr>好きな<wbr>人！</span></a>
-      <a href="#gem10">10. のんのんびより<span class="toc-sub"><wbr>🎯 田舎ぐらしののんびりした話が<wbr>好きな<wbr>人！</span></a>
-      <a href="#gem11">11. ノラガミ<span class="toc-sub">🎯 和風の<wbr>バトルファンタジーが<wbr>好きな<wbr>人！</span></a>
-      <a href="#gem12">12. ピンポン THE ANIMATION<span class="toc-sub">🎯 熱くて少し苦い<wbr>青春ものが<wbr>好きな<wbr>人！</span></a>
+      <div class="toc-item"><a href="#gem9">9. キルラキル<span class="toc-sub">🎯 勢いで<wbr>押し切る熱い<wbr>バトルが<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://www.kill-la-kill.jp/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem10">10. のんのんびより<span class="toc-sub"><wbr>🎯 田舎ぐらしののんびりした話が<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://nonnontv.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem11">11. ノラガミ<span class="toc-sub">🎯 和風の<wbr>バトルファンタジーが<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://noragami-anime.net/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem12">12. ピンポン THE ANIMATION<span class="toc-sub">🎯 熱くて少し苦い<wbr>青春ものが<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://www.pingpong-anime.tv/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
       <a href="#gem13">13. selector infected WIXOSS<span class="toc-sub">🎯 ダークな<wbr>少女バトルが<wbr>好きな<wbr>人！</span></a>
-      <a href="#gem14">14. 残響の<wbr>テロル<span class="toc-sub">🎯 緊張感のある<wbr>クライムサスペンスが<wbr>好きな<wbr>人！</span></a>
+      <div class="toc-item"><a href="#gem14">14. 残響の<wbr>テロル<span class="toc-sub">🎯 緊張感のある<wbr>クライムサスペンスが<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://terror-in-tokyo.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
       <a href="#gem15">15. 血界戦線<span class="toc-sub">🎯 個性の強い<wbr>バトルアクションが<wbr>見たい<wbr>人！</span></a>
-      <a href="#gem16">16. プラスティック・<wbr>メモリーズ<span class="toc-sub">🎯 切ない<wbr>SF恋愛ドラマを<wbr>見たい<wbr>人！</span></a>
+      <div class="toc-item"><a href="#gem16">16. プラスティック・<wbr>メモリーズ<span class="toc-sub">🎯 切ない<wbr>SF恋愛ドラマを<wbr>見たい<wbr>人！</span></a><a class="toc-off" href="https://www.plastic-memories.jp/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
       <a href="#gem17">17. 亜人<span class="toc-sub">🎯 緊張感のある<wbr>追走劇が<wbr>見たい<wbr>人！</span></a>
       <a href="#gem18">18. 灰と<wbr>幻想の<wbr>グリムガル<span class="toc-sub">🎯 地に足の<wbr>ついた<wbr>冒険ファンタジーが<wbr>好きな<wbr>人！</span></a>
       <a href="#gem19">19. 昭和元禄落語心中<span class="toc-sub">🎯 落語と人間<wbr>ドラマに<wbr>じっくり浸りたい<wbr>人！</span></a>
-      <a href="#gem20">20. ジョーカー・ゲーム<span class="toc-sub">🎯 スパイものの<wbr>頭脳戦が<wbr>好きな<wbr>人！</span></a>
-      <a href="#gem21">21. 甲鉄城の<wbr>カバネリ<span class="toc-sub">🎯 迫力のある<wbr>アクションが<wbr>見たい<wbr>人！</span></a>
-      <a href="#gem22">22. 文豪ストレイドッグス<span class="toc-sub">🎯 異能バトルが<wbr>好きな<wbr>人！</span></a>
-      <a href="#gem23">23. 91Days<span class="toc-sub">🎯 重い<wbr>クライムドラマが<wbr>好きな<wbr>人！</span></a>
-      <a href="#gem24">24. NEW GAME!<span class="toc-sub">🎯 もの<wbr>づくりの<wbr>お仕事コメディが<wbr>好きな<wbr>人！</span></a>
-      <a href="#gem25">25. 終末の<wbr>イゼッタ<span class="toc-sub">🎯 戦記ものと<wbr>ファンタジーを<wbr>一緒に<wbr>楽しみたい<wbr>人！</span></a>
-      <a href="#gem26">26. 終末なに<wbr>してますか？<wbr>忙しいですか？<wbr>救って<wbr>もらっていいですか？<span class="toc-sub"><wbr>🎯 切ない<wbr>ダークファンタジーが<wbr>好きな<wbr>人！</span></a>
-      <a href="#gem27">27. 賭ケグルイ<span class="toc-sub">🎯 勝負の<wbr>駆け引きが<wbr>好きな<wbr>人！</span></a>
-      <a href="#gem28">28. 少女終末旅行<span class="toc-sub">🎯 静かな<wbr>世界観に<wbr>ひたりたい<wbr>人！</span></a>
+      <div class="toc-item"><a href="#gem20">20. ジョーカー・ゲーム<span class="toc-sub">🎯 スパイものの<wbr>頭脳戦が<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://jokergame.jp/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem21">21. 甲鉄城の<wbr>カバネリ<span class="toc-sub">🎯 迫力のある<wbr>アクションが<wbr>見たい<wbr>人！</span></a><a class="toc-off" href="https://kabaneri.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem22">22. 文豪ストレイドッグス<span class="toc-sub">🎯 異能バトルが<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://bungo-stray-dogs.jp/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem23">23. 91Days<span class="toc-sub">🎯 重い<wbr>クライムドラマが<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://sh-anime.shochiku.co.jp/91days/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem24">24. NEW GAME!<span class="toc-sub">🎯 もの<wbr>づくりの<wbr>お仕事コメディが<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://newgame-anime.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem25">25. 終末の<wbr>イゼッタ<span class="toc-sub">🎯 戦記ものと<wbr>ファンタジーを<wbr>一緒に<wbr>楽しみたい<wbr>人！</span></a><a class="toc-off" href="https://sh-anime.shochiku.co.jp/izetta/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem26">26. 終末なに<wbr>してますか？<wbr>忙しいですか？<wbr>救って<wbr>もらっていいですか？<span class="toc-sub"><wbr>🎯 切ない<wbr>ダークファンタジーが<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://sukasuka-anime.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem27">27. 賭ケグルイ<span class="toc-sub">🎯 勝負の<wbr>駆け引きが<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://kakegurui-anime.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem28">28. 少女終末旅行<span class="toc-sub">🎯 静かな<wbr>世界観に<wbr>ひたりたい<wbr>人！</span></a><a class="toc-off" href="https://girls-last-tour.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
       <a href="#gem29">29. 宝石の<wbr>国<span class="toc-sub">🎯 美しい<wbr>映像の<wbr>幻想SFが<wbr>見たい<wbr>人！</span></a>
-      <a href="#gem30">30. 宇宙よりも遠い<wbr>場所<span class="toc-sub">🎯 友情と<wbr>挑戦の<wbr>青春ものが<wbr>見たい<wbr>人！</span></a>
-      <a href="#gem31">31. ハクメイと<wbr>ミコチ<span class="toc-sub">🎯 小さな<wbr>世界ののんびりした<wbr>日常が<wbr>見たい<wbr>人！</span></a>
-      <a href="#gem32">32. 恋は<wbr>雨上がりのように<span class="toc-sub"><wbr>🎯 静かな<wbr>大人の<wbr>恋愛ドラマが<wbr>好きな<wbr>人！</span></a>
-      <a href="#gem33">33. あ<wbr>そびあそばせ<span class="toc-sub">🎯 勢いのある<wbr>ギャグが<wbr>好きな<wbr>人！</span></a>
-      <a href="#gem34">34. ゾンビランドサガ<span class="toc-sub">🎯 勢いのある<wbr>アイドルコメディが<wbr>好きな<wbr>人！</span></a>
-      <a href="#gem35">35. からくりサーカス<span class="toc-sub">🎯 長い<wbr>大河ドラマ的な<wbr>バトルが<wbr>好きな<wbr>人！</span></a>
-      <a href="#gem36">36. 彼方の<wbr>アストラ<span class="toc-sub">🎯 SFの<wbr>サバイバルと<wbr>謎解きが<wbr>好きな<wbr>人！</span></a>
-      <a href="#gem37">37. 女子高生の<wbr>無駄づかい<span class="toc-sub"><wbr>🎯 テンポのいい<wbr>学園コメディが<wbr>好きな<wbr>人！</span></a>
+      <div class="toc-item"><a href="#gem30">30. 宇宙よりも遠い<wbr>場所<span class="toc-sub">🎯 友情と<wbr>挑戦の<wbr>青春ものが<wbr>見たい<wbr>人！</span></a><a class="toc-off" href="https://yorimoi.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem31">31. ハクメイと<wbr>ミコチ<span class="toc-sub">🎯 小さな<wbr>世界ののんびりした<wbr>日常が<wbr>見たい<wbr>人！</span></a><a class="toc-off" href="https://hakumiko.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem32">32. 恋は<wbr>雨上がりのように<span class="toc-sub"><wbr>🎯 静かな<wbr>大人の<wbr>恋愛ドラマが<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://www.koiame-anime.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem33">33. あ<wbr>そびあそばせ<span class="toc-sub">🎯 勢いのある<wbr>ギャグが<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://asobiasobase.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem34">34. ゾンビランドサガ<span class="toc-sub">🎯 勢いのある<wbr>アイドルコメディが<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://zombielandsaga.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem35">35. からくりサーカス<span class="toc-sub">🎯 長い<wbr>大河ドラマ的な<wbr>バトルが<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://karakuri-anime.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem36">36. 彼方の<wbr>アストラ<span class="toc-sub">🎯 SFの<wbr>サバイバルと<wbr>謎解きが<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://astra-anime.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem37">37. 女子高生の<wbr>無駄づかい<span class="toc-sub"><wbr>🎯 テンポのいい<wbr>学園コメディが<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://jyoshimuda.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
     </div>
   </div>
 

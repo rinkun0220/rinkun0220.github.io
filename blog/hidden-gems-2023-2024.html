@@ -67,6 +67,7 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
 .footer-link{color:var(--text-muted);text-decoration:none;font-size:.85rem}.footer-link:hover{color:#fff}
 .copyright{font-size:.8rem;color:rgba(255,255,255,0.3)}
 .badge.hulu{color:#4fd18b}.badge.fod{color:#e8b04a}.badge.disney{color:#7f9bff}
+.toc-item{padding:3px 0}.toc-item>a:first-child{display:block;padding:0}.toc-grid a.toc-off,.toc a.toc-off{display:inline-block;font-size:.72rem;line-height:1.2;padding:3px 10px;margin:4px 0 2px;border:1px solid rgba(255,255,255,.18);border-radius:999px;background:#444;color:#f1f2f6;text-decoration:none}.toc a.toc-off:hover{background:var(--accent);color:#fff}li>a.toc-off{margin:0 0 0 8px;vertical-align:middle}
 /* 日本語の改行を自然にする設定（文節単位で改行・行頭禁則・1文字だけの行を避ける） */
 body{line-break:strict;overflow-wrap:anywhere}
 @supports (word-break:auto-phrase){body{word-break:auto-phrase}}
@@ -104,24 +105,24 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
   <div class="toc">
     <div class="toc-title">📋 作品一覧<wbr>（全18作品）</div>
     <div class="toc-grid">
-      <a href="#gem1">1. ラーメン赤猫<span class="toc-sub">🎯 猫が<wbr>好きで、夜に<wbr>ほっこりしたい<wbr>人！</span></a>
-      <a href="#gem2">2. 時々<wbr>ボソッと<wbr>ロシア語で<wbr>デレる隣の<wbr>アーリャさん<span class="toc-sub"><wbr>🎯 ドキドキする<wbr>ラブコメが<wbr>好きな<wbr>人！</span></a>
-      <a href="#gem3">3. シャングリラ・フロンティア<span class="toc-sub">🎯 ゲームを<wbr>知らなくても<wbr>熱くなりたい<wbr>人！</span></a>
-      <a href="#gem4">4. 呪術廻戦 懐玉・玉折<span class="toc-sub">🎯 五条と<wbr>夏油の<wbr>過去が気になる<wbr>人！</span></a>
-      <a href="#gem5">5. 夜の<wbr>クラゲは<wbr>泳げない<span class="toc-sub"><wbr>🎯 創作や<wbr>音楽の<wbr>青春が<wbr>好きな<wbr>人！</span></a>
-      <a href="#gem6">6. お兄ちゃんは<wbr>おしまい!<span class="toc-sub">🎯 絵が<wbr>きれいな<wbr>日常コメディが<wbr>見たい<wbr>人！</span></a>
-      <a href="#gem7">7. ダークギャザリング<span class="toc-sub">🎯 ホラーも<wbr>戦いも<wbr>楽しみたい<wbr>人！</span></a>
-      <a href="#gem8">8. 好きな<wbr>子がめがねを<wbr>忘れた<span class="toc-sub"><wbr>🎯 甘いだけの<wbr>ラブコメが<wbr>見たい<wbr>人！</span></a>
-      <a href="#gem9">9. ミギと<wbr>ダリ<span class="toc-sub">🎯 ダークな<wbr>ミステリーが<wbr>好きな<wbr>人！</span></a>
-      <a href="#gem10">10. 経験済みな<wbr>キミと、<wbr>経験ゼロな<wbr>オレが、<wbr>お付き合いする<wbr>話。<span class="toc-sub"><wbr>🎯 不器用な恋の話が<wbr>好きな<wbr>人！</span></a>
-      <a href="#gem11">11. 16bitセンセーション -ANOTHER LAYER-<span class="toc-sub">🎯 何かを作る人の熱い話が<wbr>好きな<wbr>人！</span></a>
-      <a href="#gem12">12. 望まぬ<wbr>不死の<wbr>冒険者<span class="toc-sub">🎯 静かな<wbr>ダークファンタジーが<wbr>好きな<wbr>人！</span></a>
-      <a href="#gem13">13. Girls Band Cry<span class="toc-sub">🎯 生々しい<wbr>青春ドラマが<wbr>見たい<wbr>人！</span></a>
-      <a href="#gem14">14. 忘却バッテリー<span class="toc-sub">🎯 野球を<wbr>知らなくても<wbr>青春を<wbr>楽しみたい<wbr>人！</span></a>
-      <a href="#gem15">15. 逃げ上手の<wbr>若君<span class="toc-sub">🎯 歴史も<wbr>戦いも<wbr>好きな<wbr>人！</span></a>
-      <a href="#gem16">16. 疑似ハーレム<span class="toc-sub">🎯 一途な<wbr>ラブコメが<wbr>見たい<wbr>人！</span></a>
-      <a href="#gem17">17. 天穂の<wbr>サクナヒメ<span class="toc-sub">🎯 骨太な<wbr>成長物語が<wbr>見たい<wbr>人！</span></a>
-      <a href="#gem18">18. トリリオンゲーム<span class="toc-sub">🎯 痛快な<wbr>サクセス物語が<wbr>好きな<wbr>人！</span></a>
+      <div class="toc-item"><a href="#gem1">1. ラーメン赤猫<span class="toc-sub">🎯 猫が<wbr>好きで、夜に<wbr>ほっこりしたい<wbr>人！</span></a><a class="toc-off" href="https://ramenakaneko.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem2">2. 時々<wbr>ボソッと<wbr>ロシア語で<wbr>デレる隣の<wbr>アーリャさん<span class="toc-sub"><wbr>🎯 ドキドキする<wbr>ラブコメが<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://roshidere.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem3">3. シャングリラ・フロンティア<span class="toc-sub">🎯 ゲームを<wbr>知らなくても<wbr>熱くなりたい<wbr>人！</span></a><a class="toc-off" href="https://anime.shangrilafrontier.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem4">4. 呪術廻戦 懐玉・玉折<span class="toc-sub">🎯 五条と<wbr>夏油の<wbr>過去が気になる<wbr>人！</span></a><a class="toc-off" href="https://jujutsukaisen.jp/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem5">5. 夜の<wbr>クラゲは<wbr>泳げない<span class="toc-sub"><wbr>🎯 創作や<wbr>音楽の<wbr>青春が<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://yorukura-anime.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem6">6. お兄ちゃんは<wbr>おしまい!<span class="toc-sub">🎯 絵が<wbr>きれいな<wbr>日常コメディが<wbr>見たい<wbr>人！</span></a><a class="toc-off" href="https://onimai.jp/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem7">7. ダークギャザリング<span class="toc-sub">🎯 ホラーも<wbr>戦いも<wbr>楽しみたい<wbr>人！</span></a><a class="toc-off" href="https://darkgathering.jp/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem8">8. 好きな<wbr>子がめがねを<wbr>忘れた<span class="toc-sub"><wbr>🎯 甘いだけの<wbr>ラブコメが<wbr>見たい<wbr>人！</span></a><a class="toc-off" href="https://sh-anime.shochiku.co.jp/sukimega/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem9">9. ミギと<wbr>ダリ<span class="toc-sub">🎯 ダークな<wbr>ミステリーが<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://migitodali.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem10">10. 経験済みな<wbr>キミと、<wbr>経験ゼロな<wbr>オレが、<wbr>お付き合いする<wbr>話。<span class="toc-sub"><wbr>🎯 不器用な恋の話が<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://kimizero.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem11">11. 16bitセンセーション -ANOTHER LAYER-<span class="toc-sub">🎯 何かを作る人の熱い話が<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://16bitsensation-al.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem12">12. 望まぬ<wbr>不死の<wbr>冒険者<span class="toc-sub">🎯 静かな<wbr>ダークファンタジーが<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://nozomanufushi-anime.jp/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem13">13. Girls Band Cry<span class="toc-sub">🎯 生々しい<wbr>青春ドラマが<wbr>見たい<wbr>人！</span></a><a class="toc-off" href="https://girls-band-cry.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem14">14. 忘却バッテリー<span class="toc-sub">🎯 野球を<wbr>知らなくても<wbr>青春を<wbr>楽しみたい<wbr>人！</span></a><a class="toc-off" href="https://boukyaku-battery.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem15">15. 逃げ上手の<wbr>若君<span class="toc-sub">🎯 歴史も<wbr>戦いも<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://nigewaka.run/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem16">16. 疑似ハーレム<span class="toc-sub">🎯 一途な<wbr>ラブコメが<wbr>見たい<wbr>人！</span></a><a class="toc-off" href="https://gijiharem.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem17">17. 天穂の<wbr>サクナヒメ<span class="toc-sub">🎯 骨太な<wbr>成長物語が<wbr>見たい<wbr>人！</span></a><a class="toc-off" href="https://sakuna-anime.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem18">18. トリリオンゲーム<span class="toc-sub">🎯 痛快な<wbr>サクセス物語が<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://trilliongame-anime.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
     </div>
   </div>
 

@@ -68,6 +68,7 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
 .copyright{font-size:.8rem;color:rgba(255,255,255,0.3)}
 .gem-point a,.article-body p a{color:#7fb6ff;text-decoration:underline;text-underline-offset:3px}
 .badge.hulu{color:#4fd18b}.badge.fod{color:#e8b04a}.badge.disney{color:#7f9bff}.gem-nostream{font-size:.8rem;color:var(--text-muted)}
+.toc-item{padding:3px 0}.toc-item>a:first-child{display:block;padding:0}.toc-grid a.toc-off,.toc a.toc-off{display:inline-block;font-size:.72rem;line-height:1.2;padding:3px 10px;margin:4px 0 2px;border:1px solid rgba(255,255,255,.18);border-radius:999px;background:#444;color:#f1f2f6;text-decoration:none}.toc a.toc-off:hover{background:var(--accent);color:#fff}li>a.toc-off{margin:0 0 0 8px;vertical-align:middle}
 /* 日本語の改行を自然にする設定（文節単位で改行・行頭禁則・1文字だけの行を避ける） */
 body{line-break:strict;overflow-wrap:anywhere}
 @supports (word-break:auto-phrase){body{word-break:auto-phrase}}
@@ -105,31 +106,31 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
   <div class="toc">
     <div class="toc-title">📋 作品一覧<wbr>（全25作品）</div>
     <div class="toc-grid">
-      <a href="#gem1">1. 映像研には手を<wbr>出すな！<span class="toc-sub"><wbr>🎯 何かを作る人の熱い話が<wbr>好きな<wbr>人！</span></a>
-      <a href="#gem2">2. 恋する<wbr>小惑星<span class="toc-sub">🎯 星や<wbr>地学に<wbr>惹かれる<wbr>人！</span></a>
-      <a href="#gem3">3. かくしごと<span class="toc-sub"><wbr>🎯 親子の<wbr>日常コメディが<wbr>好きな<wbr>人！</span></a>
-      <a href="#gem4">4. デカダンス<span class="toc-sub">🎯 独特な<wbr>世界観の<wbr>SFが<wbr>見たい<wbr>人！</span></a>
-      <a href="#gem5">5. トニカクカワイイ<span class="toc-sub">🎯 甘い<wbr>夫婦の<wbr>ラブコメが<wbr>好きな<wbr>人！</span></a>
-      <a href="#gem6">6. アクダマドライブ<span class="toc-sub">🎯 悪役たちの<wbr>痛快な<wbr>群像劇が<wbr>好きな<wbr>人！</span></a>
+      <div class="toc-item"><a href="#gem1">1. 映像研には手を<wbr>出すな！<span class="toc-sub"><wbr>🎯 何かを作る人の熱い話が<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="http://eizouken-anime.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem2">2. 恋する<wbr>小惑星<span class="toc-sub">🎯 星や<wbr>地学に<wbr>惹かれる<wbr>人！</span></a><a class="toc-off" href="https://koiastv.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem3">3. かくしごと<span class="toc-sub"><wbr>🎯 親子の<wbr>日常コメディが<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://kakushigoto-anime.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem4">4. デカダンス<span class="toc-sub">🎯 独特な<wbr>世界観の<wbr>SFが<wbr>見たい<wbr>人！</span></a><a class="toc-off" href="https://decadence-anime.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem5">5. トニカクカワイイ<span class="toc-sub">🎯 甘い<wbr>夫婦の<wbr>ラブコメが<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://tonikawa.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem6">6. アクダマドライブ<span class="toc-sub">🎯 悪役たちの<wbr>痛快な<wbr>群像劇が<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://akudama-drive.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
       <a href="#gem7">7. どうにかなる日々<span class="toc-sub"><wbr>🎯 短編の<wbr>連なりのような<wbr>静かな<wbr>作品が<wbr>好きな<wbr>人！</span></a>
-      <a href="#gem8">8. 見える<wbr>子ちゃん<span class="toc-sub">🎯 ホラーが<wbr>苦手でも<wbr>楽しめる<wbr>コメディが<wbr>好きな<wbr>人！</span></a>
-      <a href="#gem9">9. オッドタクシー<span class="toc-sub">🎯 会話劇の<wbr>ミステリーが<wbr>好きな<wbr>人！</span></a>
-      <a href="#gem10">10. ましろのおと<span class="toc-sub"><wbr>🎯 音楽に<wbr>かける<wbr>青春が<wbr>好きな<wbr>人！</span></a>
-      <a href="#gem11">11. Vivy -Fluorite Eye's Song-<span class="toc-sub">🎯 歌と<wbr>AIの<wbr>SFドラマが<wbr>好きな<wbr>人！</span></a>
-      <a href="#gem12">12. さよなら私の<wbr>クラマー<span class="toc-sub">🎯 女子サッカーの<wbr>青春が<wbr>好きな<wbr>人！</span></a>
-      <a href="#gem13">13. か<wbr>げきしょうじょ!!<span class="toc-sub">🎯 舞台や<wbr>歌劇の<wbr>世界に<wbr>興味がある<wbr>人！</span></a>
-      <a href="#gem14">14. 白い砂の<wbr>アクアトープ<span class="toc-sub">🎯 水族館の<wbr>お仕事ドラマが<wbr>好きな<wbr>人！</span></a>
-      <a href="#gem15">15. サクガン<span class="toc-sub">🎯 少女の<wbr>冒険SFが<wbr>好きな<wbr>人！</span></a>
-      <a href="#gem16">16. さんかく窓の<wbr>外側は<wbr>夜<span class="toc-sub">🎯 ホラーと<wbr>バディものを両方<wbr>楽しみたい<wbr>人！</span></a>
-      <a href="#gem17">17. リアデイルの<wbr>大地にて<span class="toc-sub"><wbr>🎯 ゲーム世界ののんびりした<wbr>冒険が<wbr>好きな<wbr>人！</span></a>
-      <a href="#gem18">18. パリピ孔明<span class="toc-sub">🎯 音楽と<wbr>三国志の<wbr>コメディが<wbr>好きな<wbr>人！</span></a>
-      <a href="#gem19">19. サマータイムレンダ<span class="toc-sub">🎯 時間ものの<wbr>SFサスペンスが<wbr>好きな<wbr>人！</span></a>
-      <a href="#gem20">20. 組長娘と<wbr>世話係<span class="toc-sub">🎯 意外な<wbr>組み合わせの<wbr>コメディが<wbr>好きな<wbr>人！</span></a>
-      <a href="#gem21">21. スキップと<wbr>ローファー<span class="toc-sub">🎯 等身大の<wbr>青春ストーリーが<wbr>好きな<wbr>人！</span></a>
-      <a href="#gem22">22. 天国大魔境<span class="toc-sub">🎯 謎に<wbr>引き込まれる<wbr>SFが<wbr>好きな<wbr>人！</span></a>
-      <a href="#gem23">23. デッドマウント・デスプレイ<span class="toc-sub">🎯 癖のある<wbr>バトルアクションが<wbr>好きな<wbr>人！</span></a>
-      <a href="#gem24">24. WORLD DAI STAR<span class="toc-sub">🎯 舞台に<wbr>かける<wbr>青春が<wbr>好きな<wbr>人！</span></a>
-      <a href="#gem25">25. 小市民シリーズ<span class="toc-sub">🎯 日常の<wbr>謎解きが<wbr>好きな<wbr>人！</span></a>
+      <div class="toc-item"><a href="#gem8">8. 見える<wbr>子ちゃん<span class="toc-sub">🎯 ホラーが<wbr>苦手でも<wbr>楽しめる<wbr>コメディが<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://mierukochan.jp/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem9">9. オッドタクシー<span class="toc-sub">🎯 会話劇の<wbr>ミステリーが<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://oddtaxi.jp/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem10">10. ましろのおと<span class="toc-sub"><wbr>🎯 音楽に<wbr>かける<wbr>青春が<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://mashironooto-official.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem11">11. Vivy -Fluorite Eye's Song-<span class="toc-sub">🎯 歌と<wbr>AIの<wbr>SFドラマが<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://vivy-portal.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem12">12. さよなら私の<wbr>クラマー<span class="toc-sub">🎯 女子サッカーの<wbr>青春が<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://sayonara-cramer.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem13">13. か<wbr>げきしょうじょ!!<span class="toc-sub">🎯 舞台や<wbr>歌劇の<wbr>世界に<wbr>興味がある<wbr>人！</span></a><a class="toc-off" href="https://kageki-anime.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem14">14. 白い砂の<wbr>アクアトープ<span class="toc-sub">🎯 水族館の<wbr>お仕事ドラマが<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://aquatope-anime.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem15">15. サクガン<span class="toc-sub">🎯 少女の<wbr>冒険SFが<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://sakugan-anime.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem16">16. さんかく窓の<wbr>外側は<wbr>夜<span class="toc-sub">🎯 ホラーと<wbr>バディものを両方<wbr>楽しみたい<wbr>人！</span></a><a class="toc-off" href="https://sankakumado-anime.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem17">17. リアデイルの<wbr>大地にて<span class="toc-sub"><wbr>🎯 ゲーム世界ののんびりした<wbr>冒険が<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://leadale.net/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem18">18. パリピ孔明<span class="toc-sub">🎯 音楽と<wbr>三国志の<wbr>コメディが<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://paripikoumei-anime.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem19">19. サマータイムレンダ<span class="toc-sub">🎯 時間ものの<wbr>SFサスペンスが<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://summertime-anime.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem20">20. 組長娘と<wbr>世話係<span class="toc-sub">🎯 意外な<wbr>組み合わせの<wbr>コメディが<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://kumichomusume.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem21">21. スキップと<wbr>ローファー<span class="toc-sub">🎯 等身大の<wbr>青春ストーリーが<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://skip-and-loafer.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem22">22. 天国大魔境<span class="toc-sub">🎯 謎に<wbr>引き込まれる<wbr>SFが<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://tdm-anime.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem23">23. デッドマウント・デスプレイ<span class="toc-sub">🎯 癖のある<wbr>バトルアクションが<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://dmdp-anime.jp/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem24">24. WORLD DAI STAR<span class="toc-sub">🎯 舞台に<wbr>かける<wbr>青春が<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://www.world-dai-star.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem25">25. 小市民シリーズ<span class="toc-sub">🎯 日常の<wbr>謎解きが<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://shoshimin-anime.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
     </div>
   </div>
 
