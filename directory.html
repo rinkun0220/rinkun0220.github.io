@@ -106,7 +106,7 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
 .footer-link { color: var(--text-muted); text-decoration: none; font-size: 0.85rem; }
 .footer-link:hover { color: #fff; }
 .copyright { font-size: 0.8rem; color: rgba(255,255,255,0.3); }
-.tool-guide{max-width:880px;margin:40px auto 28px;padding:0}.tool-guide h2{font-size:1.05rem;font-weight:700;color:var(--text-main);margin:0 0 12px}.tool-guide h3{font-size:.92rem;font-weight:700;color:var(--accent);margin:20px 0 8px}.tool-guide p{font-size:.88rem;color:var(--text-muted);line-height:1.95;margin:0 0 12px}.tool-guide a{color:var(--star-color);text-decoration:none}.tool-guide a:hover{text-decoration:underline}
+.tool-guide{max-width:880px;margin:40px auto 28px;padding:0}.tool-guide h2{font-size:1.05rem;font-weight:700;color:var(--text-main);margin:0 0 12px}.tool-guide h3{font-size:.92rem;font-weight:700;color:var(--accent);margin:20px 0 8px}.tool-guide p{font-size:.88rem;color:var(--text-muted);line-height:1.95;margin:0 0 12px}.tool-guide a{color:var(--star-color);text-decoration:none}.tool-guide a:hover{text-decoration:underline}.tool-guide.dir-tips{margin:0 0 28px;max-width:none}
 /* 日本語の改行を自然にする設定（文節単位で改行・行頭禁則・1文字だけの行を避ける） */
 body{line-break:strict;overflow-wrap:anywhere}
 @supports (word-break:auto-phrase){body{word-break:auto-phrase}}
@@ -137,6 +137,16 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
     <p class="page-desc">ANIMEDBの<wbr>ブログで<wbr>紹介している<wbr>声優・脚本家・監督・<wbr>制作会社・アーティストを<wbr>一覧に<wbr>まとめました。<wbr>普段ブログは<wbr>作品や<wbr>テーマ単位で<wbr>書いている<wbr>ため、<wbr>「この<wbr>声、<wbr>前にも<wbr>聞いた気が<wbr>する」<wbr>「この人が<wbr>関わった他の<wbr>作品も<wbr>知りたい」という<wbr>ときに、<wbr>人物の<wbr>名前から<wbr>横断的に<wbr>代表作へた<wbr>どり着けるよう、この<wbr>ページを<wbr>名鑑として<wbr>まとめています。<wbr>名前を<wbr>クリックすると、その方を<wbr>取り上げている<wbr>特集記事の<wbr>該当箇所へ<wbr>ジャンプします。<wbr>検索ボックスに<wbr>ひらが<wbr>な・カタカナ・漢字の<wbr>いずれで<wbr>入力しても<wbr>絞り込めます。</p>
     <p style="font-size:.78rem;color:var(--text-muted);margin-top:-20px;margin-bottom:28px;">※文中敬称略</p>
   </div>
+
+  <section class="tool-guide dir-tips">
+    <h2>名鑑の<wbr>調べ方のコツ</h2>
+    <h3>名前の<wbr>一部でも<wbr>探せます</h3>
+    <p>検索ボックスには、<wbr>名前の<wbr>一部を<wbr>入れるだけで<wbr>探せます。<wbr>漢字の<wbr>名前の<wbr>ほか、<wbr>ひらがなや<wbr>カタカナの読み<wbr>（例：<wbr>「なかむら」<wbr>「ナカムラ」）でも<wbr>見つかります。<wbr>英字の<wbr>名前は、<wbr>大文字と<wbr>小文字を<wbr>区別しません。<wbr>制作会社は<wbr>「京都アニメ」のように短く<wbr>入れても<wbr>探せます。</p>
+    <h3>名前が<wbr>分からない<wbr>ときは</h3>
+    <p>カテゴリごとに<wbr>並んでいるので、<wbr>声優・脚本家・監督・<wbr>制作会社・アーティストの<wbr>中から気になる<wbr>区分を<wbr>開いてみてください。<wbr>各区分の<wbr>「特集記事を見る」から、その<wbr>区分の<wbr>全員を<wbr>まとめて<wbr>読めます。<wbr>人物の<wbr>カードを<wbr>押すと、<wbr>特集記事の<wbr>該当する<wbr>箇所に<wbr>移動して、<wbr>代表作や<wbr>配信先を<wbr>確認できます。</p>
+    <h3>名前を<wbr>覚えたい<wbr>ときは</h3>
+    <p>クイズ<a href="/who-is-this.html"><wbr>「この人は誰？」</a>では、<wbr>名鑑に<wbr>載っている<wbr>人物や<wbr>会社の<wbr>代表作を<wbr>ヒントに、<wbr>名前を<wbr>当てて<wbr>遊べます。<wbr>載っていない<wbr>人物の<wbr>記事は<a href="/blog/"><wbr>ブログ一覧</a>から<wbr>探せます。</p>
+  </section>
 
   <div class="search-box">
     <span>🔍</span>
@@ -290,15 +300,6 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
   <p style="color:var(--text-muted);font-size:0.85rem;line-height:1.8;margin-top:28px;">
     掲載する<wbr>人物や<wbr>カテゴリは、<wbr>ANIMEDBの<wbr>各特集記事を書く中で<wbr>「この方の<wbr>代表作を<wbr>まとめて<wbr>おきたい」と<wbr>感じた<wbr>範囲から、<wbr>管理人が<wbr>手作業で随時<wbr>追加しています。<wbr>網羅的な<wbr>名鑑と<wbr>いうよりは、<wbr>ブログ記事と<wbr>連動した<wbr>索引として<wbr>ご活用ください。
   </p>
-  <section class="tool-guide">
-    <h2>名鑑の<wbr>調べ方のコツ</h2>
-    <h3>名前の<wbr>一部でも<wbr>探せます</h3>
-    <p>検索ボックスには、<wbr>名前の<wbr>一部を<wbr>入れるだけで<wbr>探せます。<wbr>漢字の<wbr>名前の<wbr>ほか、<wbr>ひらがなや<wbr>カタカナの読み<wbr>（例：<wbr>「なかむら」<wbr>「ナカムラ」）でも<wbr>見つかります。<wbr>英字の<wbr>名前は、<wbr>大文字と<wbr>小文字を<wbr>区別しません。<wbr>制作会社は<wbr>「京都アニメ」のように短く<wbr>入れても<wbr>探せます。</p>
-    <h3>名前が<wbr>分からない<wbr>ときは</h3>
-    <p>カテゴリごとに<wbr>並んでいるので、<wbr>声優・脚本家・監督・<wbr>制作会社・アーティストの<wbr>中から気になる<wbr>区分を<wbr>開いてみてください。<wbr>各区分の<wbr>「特集記事を見る」から、その<wbr>区分の<wbr>全員を<wbr>まとめて<wbr>読めます。<wbr>人物の<wbr>カードを<wbr>押すと、<wbr>特集記事の<wbr>該当する<wbr>箇所に<wbr>移動して、<wbr>代表作や<wbr>配信先を<wbr>確認できます。</p>
-    <h3>名前を<wbr>覚えたい<wbr>ときは</h3>
-    <p>クイズ<a href="/who-is-this.html"><wbr>「この人は誰？」</a>では、<wbr>名鑑に<wbr>載っている<wbr>人物や<wbr>会社の<wbr>代表作を<wbr>ヒントに、<wbr>名前を<wbr>当てて<wbr>遊べます。<wbr>載っていない<wbr>人物の<wbr>記事は<a href="/blog/"><wbr>ブログ一覧</a>から<wbr>探せます。</p>
-  </section>
 </main>
 
 <footer>
