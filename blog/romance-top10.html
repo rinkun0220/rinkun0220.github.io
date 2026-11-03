@@ -66,7 +66,14 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
 .footer-link{color:var(--text-muted);text-decoration:none;font-size:.85rem}.footer-link:hover{color:#fff}
 .copyright{font-size:.8rem;color:rgba(255,255,255,0.3)}
 .rating-guide-note{font-size:.88rem;color:var(--text-muted);margin:-8px 0 28px;line-height:1.8}.rating-guide-note a{color:var(--accent);text-decoration:underline}
-/* 日本語の改行を自然にする設定（文節単位で改行・行頭禁則・1文字だけの行を避ける） */
+.next-article{display:flex;align-items:center;gap:18px;background:linear-gradient(135deg,rgba(255,71,87,0.14),rgba(255,107,129,0.06));border:2px solid var(--accent);border-radius:14px;padding:22px 26px;margin:36px 0 8px;text-decoration:none;transition:transform .2s,box-shadow .2s}
+.next-article:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(230,72,90,0.25)}
+.next-article-label{font-size:.72rem;font-weight:700;color:var(--accent);letter-spacing:.03em;margin-bottom:6px}
+.next-article-title{font-size:1.08rem;font-weight:700;color:#fff;line-height:1.5}
+.next-article-desc{font-size:.83rem;color:var(--text-muted);margin-top:6px;line-height:1.7}
+.next-article-arrow{font-size:1.7rem;color:var(--accent);flex-shrink:0}
+@media(max-width:600px){.next-article{flex-direction:row;padding:18px 20px}.next-article-arrow{font-size:1.3rem}}
+.related-guides{margin:40px 0 28px;padding:22px 24px;background:var(--bg-card);border:1px solid var(--border-color);border-radius:14px}.related-guides-title{font-size:1.05rem;font-weight:700;color:#fff;margin:0 0 14px}.related-guides ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}.related-guides a{display:block;text-decoration:none;padding:12px 14px;border:1px solid var(--border-color);border-radius:10px;transition:border-color .2s,background .2s}.related-guides a:hover{border-color:var(--accent);background:rgba(255,255,255,0.03)}.related-guides .rg-name{display:block;color:#fff;font-weight:700;font-size:.95rem;line-height:1.5}.related-guides .rg-desc{display:block;color:var(--text-muted);font-size:.82rem;line-height:1.7;margin-top:2px}/* 日本語の改行を自然にする設定（文節単位で改行・行頭禁則・1文字だけの行を避ける） */
 body{line-break:strict;overflow-wrap:anywhere}
 @supports (word-break:auto-phrase){body{word-break:auto-phrase}}
 :has(> wbr){word-break:keep-all}
@@ -112,6 +119,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
     </div>
 
     <p class="rating-guide-note">※★の<wbr>点数は<wbr>管理人スコア<wbr>（10点満点）です。<wbr>評価の<wbr>基準は<a href="https://anime-db.jp/blog/rating-criteria.html"><wbr>こちら</a>を<wbr>ご覧ください。</p>
+    <p class="rating-guide-note">※この<wbr>ランキングは、<wbr>ジャンルの<wbr>中から<wbr>管理人が<wbr>選んだ<wbr>10作品の<wbr>ため、<wbr>点数は<wbr>すべて<wbr>8.1点以上<wbr>（A評価以上）です。</p>
 
     <h2 id="ranking">💕 泣ける<wbr>ラブコメおすすめ10選</h2>
 
@@ -134,7 +142,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       <div class="rank-body">
         <div class="rank-title">その<wbr>着せ替え<wbr>人形は恋をする</div>
         <div class="rank-sub"><span class="nb">2022年</span> / <span class="nb">CloverWorks</span></div>
-        <div class="rank-score">★ 8.8 / 10</div>
+        <div class="rank-score">★ 8.9 / 10</div>
         <span class="rank-tag">初心者◎</span><span class="rank-tag green">コスプレ</span>
         <div class="rank-text">コスプレが<wbr>好きな<wbr>ギャル・海夢と、<wbr>ひな人形職人を<wbr>目指す<wbr>無口な<wbr>五条の<wbr>交流を<wbr>描いた<wbr>ラブコメです。<wbr>笑える<wbr>シーンが<wbr>多いのに<wbr>要所で<wbr>泣ける<wbr>バランスが<wbr>絶妙です。<wbr>CloverWorksの<wbr>作画クオリティも<wbr>高く、<wbr>最近の<wbr>ラブコメでは<wbr>間違いなく<wbr>トップクラスの<wbr>完成度です。<wbr>2期への<wbr>期待も<wbr>高まっています。</div>
         <div class="streaming-row">
@@ -151,7 +159,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       <div class="rank-body">
         <div class="rank-title">あの<wbr>日見た花の<wbr>名前を<wbr>僕達はまだ<wbr>知らない。</div>
         <div class="rank-sub"><span class="nb">2011年</span> / <span class="nb">A-1 Pictures</span></div>
-        <div class="rank-score">★ 8.7 / 10</div>
+        <div class="rank-score">★ 8.8 / 10</div>
         <span class="rank-tag green">号泣注意</span><span class="rank-tag blue">青春</span>
         <div class="rank-text">幼馴染グループと<wbr>幽霊と<wbr>なって<wbr>戻ってきた<wbr>メンバーの<wbr>再会と<wbr>別れを<wbr>描いた<wbr>感動作です。<wbr>ラブコメ要素と<wbr>切ない<wbr>余韻が<wbr>絶妙に<wbr>混じり合い、<wbr>最終話は<wbr>多くの<wbr>視聴者が<wbr>号泣したと<wbr>言われます。<wbr>今でも<wbr>「こんなに泣いたアニメ」の<wbr>上位に<wbr>挙がる<wbr>作品です。</div>
         <div class="streaming-row">
@@ -165,7 +173,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       <div class="rank-body">
         <div class="rank-title">やはり俺の<wbr>青春ラブコメは<wbr>まちがっている。</div>
         <div class="rank-sub"><span class="nb">2013年〜2020年</span> / <span class="nb">Brain's Base</span> / <span class="nb">feel.</span></div>
-        <div class="rank-score">★ 8.6 / 10</div>
+        <div class="rank-score">★ 8.7 / 10</div>
         <span class="rank-tag blue">セリフが<wbr>刺さる</span><span class="rank-tag"><wbr>思春期</span>
         <div class="rank-text">「ぼっち」な<wbr>主人公・八幡の<wbr>歪んだ<wbr>青春観と、<wbr>本物を<wbr>求める<wbr>葛藤を<wbr>描いた<wbr>深みのある<wbr>ラブコメです。<wbr>セリフの一つ<wbr>一つに<wbr>哲学が<wbr>あり、<wbr>読み返したくなる<wbr>言葉が<wbr>多いです。3期<wbr>（完結）での<wbr>八幡の<wbr>選択は、<wbr>長年の<wbr>ファンに<wbr>とって<wbr>最高の<wbr>結末でした。</div>
         <div class="streaming-row">
@@ -181,7 +189,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       <div class="rank-body">
         <div class="rank-title">かぐ<wbr>や様は<wbr>告らせたい</div>
         <div class="rank-sub"><span class="nb">2019年〜2022年</span> / <span class="nb">A-1 Pictures</span></div>
-        <div class="rank-score">★ 8.5 / 10</div>
+        <div class="rank-score">★ 8.6 / 10</div>
         <span class="rank-tag">頭脳戦ラブコメ</span><span class="rank-tag blue">ギャグ</span>
         <div class="rank-text">「告白させたい、でも<wbr>自分からは<wbr>告白しない」という<wbr>頭脳戦ラブコメです。<wbr>毎話の<wbr>心理戦が<wbr>笑えて、でも<wbr>要所で<wbr>グッとくる<wbr>展開が入る<wbr>構成が<wbr>巧みです。<wbr>最終章での<wbr>感動は<wbr>本物で、<wbr>シリーズを<wbr>通した<wbr>伏線回収の<wbr>完成度も<wbr>高いです。</div>
         <div class="streaming-row">
@@ -198,7 +206,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       <div class="rank-body">
         <div class="rank-title">ハチミツと<wbr>クローバー</div>
         <div class="rank-sub"><span class="nb">2005年</span> / <span class="nb">J.C.Staff</span></div>
-        <div class="rank-score">★ 8.3 / 10</div>
+        <div class="rank-score">★ 8.5 / 10</div>
         <span class="rank-tag blue">大人向け</span><span class="rank-tag green">青春</span>
         <div class="rank-text">美大を<wbr>舞台にした<wbr>大人の<wbr>青春ラブコメです。<wbr>片思い・失恋・夢と<wbr>現実のは<wbr>ざまで<wbr>揺れる<wbr>若者たちの姿が<wbr>リアルに<wbr>描かれ、<wbr>大学生以上が<wbr>観ると特に<wbr>刺さる<wbr>作品です。<wbr>甘くないほろ苦い<wbr>青春の味が<wbr>好きな<wbr>方には<wbr>必見です。</div>
         <div class="streaming-row">
@@ -212,7 +220,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       <div class="rank-body">
         <div class="rank-title">五等分の花嫁</div>
         <div class="rank-sub"><span class="nb">2019年〜2021年</span> / Bibury Animation Studios</div>
-        <div class="rank-score">★ 8.2 / 10</div>
+        <div class="rank-score">★ 8.4 / 10</div>
         <span class="rank-tag">ハーレム系</span><span class="rank-tag green">伏線回収</span>
         <div class="rank-text">5つ子ヒロインという<wbr>設定を<wbr>活かした<wbr>伏線と<wbr>謎解きが<wbr>楽しい<wbr>ラブコメです。<wbr>「誰が花嫁か」という謎が<wbr>最後まで<wbr>視聴者を<wbr>引っ張る<wbr>構成が<wbr>秀逸です。どの<wbr>ヒロインを<wbr>推すかで<wbr>盛り上がる<wbr>楽しさが<wbr>あり、<wbr>アニメとして盛り<wbr>上がれる<wbr>コンテンツとして<wbr>優秀な<wbr>作品です。</div>
         <div class="streaming-row">
@@ -229,7 +237,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       <div class="rank-body">
         <div class="rank-title">君に届け</div>
         <div class="rank-sub"><span class="nb">2009年〜</span> / <span class="nb">Production I.G</span></div>
-        <div class="rank-score">★ 8.1 / 10</div>
+        <div class="rank-score">★ 8.3 / 10</div>
         <span class="rank-tag">王道少女漫画</span><span class="rank-tag green">純愛</span>
         <div class="rank-text">陰キャな女の<wbr>子・爽子と<wbr>人気者・風早の<wbr>純愛を<wbr>描いた<wbr>王道少女漫画原作の<wbr>ラブコメです。<wbr>こじれずまっすぐに<wbr>進む恋愛描写が<wbr>清々しく、<wbr>「こんな<wbr>青春を<wbr>送りたかった」という<wbr>気持ちに<wbr>させてくれます。<wbr>純粋な<wbr>気持ちで<wbr>観られる、<wbr>大人に<wbr>なっても心が<wbr>洗われる<wbr>作品です。</div>
         <div class="streaming-row">
@@ -246,7 +254,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       <div class="rank-body">
         <div class="rank-title">あさがおと<wbr>加瀬さん。</div>
         <div class="rank-sub"><span class="nb">2018年</span> / <span class="nb">Lay-duce<wbr>（OVA）</span></div>
-        <div class="rank-score">★ 7.9 / 10</div>
+        <div class="rank-score">★ 8.2 / 10</div>
         <span class="rank-tag">百合</span><span class="rank-tag green">癒し</span>
         <div class="rank-text">女子高生2人の<wbr>穏やかな<wbr>恋愛を<wbr>描いた<wbr>百合OVAです。<wbr>甘さと<wbr>温もりに<wbr>満ちた<wbr>55分で、<wbr>観終わった後に<wbr>幸せな<wbr>気持ちに<wbr>なれる<wbr>作品です。<wbr>ラブコメとして<wbr>派手さは<wbr>ありませんが、この<wbr>静かな<wbr>感動は<wbr>唯一無二です。</div>
         <div class="streaming-row">
@@ -261,7 +269,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       <div class="rank-body">
         <div class="rank-title">orange</div>
         <div class="rank-sub"><span class="nb">2016年</span> / <span class="nb">Telecom Animation Film</span></div>
-        <div class="rank-score">★ 7.8 / 10</div>
+        <div class="rank-score">★ 8.1 / 10</div>
         <span class="rank-tag green">号泣注意</span><span class="rank-tag">タイムリープ</span>
         <div class="rank-text">未来の<wbr>自分から<wbr>届いた<wbr>手紙を<wbr>もとに、<wbr>友人を<wbr>救おうとする<wbr>青春ラブコメです。<wbr>重めの<wbr>テーマを扱い<wbr>つつも<wbr>青春の<wbr>輝きと<wbr>後悔の<wbr>切なさが<wbr>丁寧に<wbr>描かれ、<wbr>ラストは<wbr>号泣必至です。</div>
       </div>
@@ -284,8 +292,27 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
     <p>観る前と<wbr>観終わった<wbr>あとで、一番<wbr>印象が<wbr>変わった<wbr>恋愛アニメは、<wbr>「あの<wbr>日見た花の<wbr>名前を<wbr>僕達はまだ<wbr>知らない。」です。<wbr>なお、今の<wbr>年齢に<wbr>なって<wbr>初めて<wbr>刺さった<wbr>恋愛アニメは、まだ<wbr>見つかっていません。</p>
 
     <h2 id="summary">まとめ</h2>
-    <p>ラブコメアニメは<wbr>「軽いもの」という<wbr>イメージが<wbr>ありますが、<wbr>今回紹介した<wbr>10作品は<wbr>どれも<wbr>感情を<wbr>動かす力を<wbr>持っています。<wbr>笑いと涙が<wbr>共存するこの<wbr>ジャンルだからこそ、心の<wbr>底から<wbr>楽しめる<wbr>体験が<wbr>できます。ぜひ<wbr>今夜1本、<wbr>観てみてください。</p></div>
+    <p>ラブコメアニメは<wbr>「軽いもの」という<wbr>イメージが<wbr>ありますが、<wbr>今回紹介した<wbr>10作品は<wbr>どれも<wbr>感情を<wbr>動かす力を<wbr>持っています。<wbr>笑いと涙が<wbr>共存するこの<wbr>ジャンルだからこそ、心の<wbr>底から<wbr>楽しめる<wbr>体験が<wbr>できます。ぜひ<wbr>今夜1本、<wbr>観てみてください。</p>
 
+    <a href="https://anime-db.jp/blog/battle-anime-top10.html" class="next-article">
+      <div style="flex:1">
+        <div class="next-article-label">🔥 続けて読む</div>
+        <div class="next-article-title">バトルアニメ歴代おすすめランキング10選【作画・演出・迫力で<wbr>選出】</div>
+        <div class="next-article-desc">ラブコメの<wbr>次は、<wbr>作画と<wbr>演出で<wbr>選んだ<wbr>バトルアニメです。<wbr>戦闘シーンの<wbr>迫力を<wbr>重視した<wbr>10本を<wbr>紹介します。</div>
+      </div>
+      <div class="next-article-arrow">→</div>
+    </a>
+
+  </div>
+
+  <section class="related-guides" aria-label="関連記事">
+    <h2 class="related-guides-title">関連記事<wbr>（ランキング）</h2>
+    <ul>
+      <li><a href="https://anime-db.jp/blog/isekai-top10.html"><span class="rg-name">異世界転生アニメおすすめ10選</span><span class="rg-desc"><wbr>「チートで無双」だけではない、<wbr>独自の<wbr>魅力を<wbr>持った<wbr>異世界転生アニメを<wbr>10本選びました。</span></a></li>
+      <li><a href="https://anime-db.jp/blog/battle-anime-top10.html"><span class="rg-name">バトルアニメ歴代おすすめランキング10選</span><span class="rg-desc">作画・演出・物語との<wbr>連動を<wbr>軸に、<wbr>バトルアニメを<wbr>10本選びました。</span></a></li>
+      <li><a href="https://anime-db.jp/blog/rating-criteria.html"><span class="rg-name">S評価と<wbr>A評価、何が<wbr>違うのか<wbr>【管理人の<wbr>評価基準を<wbr>公開】</span><span class="rg-desc">ランキングの点数<wbr>（S・A・B・C）の<wbr>付け方を、<wbr>管理人が<wbr>公開しています。</span></a></li>
+    </ul>
+  </section>
   <a href="https://anime-db.jp/blog/" class="back-btn">← ブログ一覧に戻る</a>
 </div>
 

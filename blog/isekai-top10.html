@@ -68,7 +68,14 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
 .footer-link{color:var(--text-muted);text-decoration:none;font-size:.85rem;transition:color .2s}.footer-link:hover{color:#fff}
 .copyright{font-size:.8rem;color:rgba(255,255,255,0.3)}
 .rating-guide-note{font-size:.88rem;color:var(--text-muted);margin:-8px 0 28px;line-height:1.8}.rating-guide-note a{color:var(--accent);text-decoration:underline}
-/* 日本語の改行を自然にする設定（文節単位で改行・行頭禁則・1文字だけの行を避ける） */
+.next-article{display:flex;align-items:center;gap:18px;background:linear-gradient(135deg,rgba(255,71,87,0.14),rgba(255,107,129,0.06));border:2px solid var(--accent);border-radius:14px;padding:22px 26px;margin:36px 0 8px;text-decoration:none;transition:transform .2s,box-shadow .2s}
+.next-article:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(230,72,90,0.25)}
+.next-article-label{font-size:.72rem;font-weight:700;color:var(--accent);letter-spacing:.03em;margin-bottom:6px}
+.next-article-title{font-size:1.08rem;font-weight:700;color:#fff;line-height:1.5}
+.next-article-desc{font-size:.83rem;color:var(--text-muted);margin-top:6px;line-height:1.7}
+.next-article-arrow{font-size:1.7rem;color:var(--accent);flex-shrink:0}
+@media(max-width:600px){.next-article{flex-direction:row;padding:18px 20px}.next-article-arrow{font-size:1.3rem}}
+.related-guides{margin:40px 0 28px;padding:22px 24px;background:var(--bg-card);border:1px solid var(--border-color);border-radius:14px}.related-guides-title{font-size:1.05rem;font-weight:700;color:#fff;margin:0 0 14px}.related-guides ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}.related-guides a{display:block;text-decoration:none;padding:12px 14px;border:1px solid var(--border-color);border-radius:10px;transition:border-color .2s,background .2s}.related-guides a:hover{border-color:var(--accent);background:rgba(255,255,255,0.03)}.related-guides .rg-name{display:block;color:#fff;font-weight:700;font-size:.95rem;line-height:1.5}.related-guides .rg-desc{display:block;color:var(--text-muted);font-size:.82rem;line-height:1.7;margin-top:2px}/* 日本語の改行を自然にする設定（文節単位で改行・行頭禁則・1文字だけの行を避ける） */
 body{line-break:strict;overflow-wrap:anywhere}
 @supports (word-break:auto-phrase){body{word-break:auto-phrase}}
 :has(> wbr){word-break:keep-all}
@@ -117,6 +124,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
     </div>
 
     <p class="rating-guide-note">※★の<wbr>点数は<wbr>管理人スコア<wbr>（10点満点）です。<wbr>評価の<wbr>基準は<a href="https://anime-db.jp/blog/rating-criteria.html"><wbr>こちら</a>を<wbr>ご覧ください。</p>
+    <p class="rating-guide-note">※この<wbr>ランキングは、<wbr>ジャンルの<wbr>中から<wbr>管理人が<wbr>選んだ<wbr>10作品の<wbr>ため、<wbr>点数は<wbr>すべて<wbr>8.1点以上<wbr>（A評価以上）です。</p>
 
     <h2 id="criteria">選定基準に<wbr>ついて</h2>
     <p>今回の<wbr>ランキングは<wbr>以下の<wbr>基準で<wbr>選びました。<wbr>「評判が高い」だけでなく、<wbr>実際に<wbr>全話視聴した上で<wbr>独自に<wbr>評価しています。</p>
@@ -166,6 +174,23 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
     <div class="rank-card">
       <div class="rank-num bronze">3</div>
       <div class="rank-body">
+        <div class="rank-title">幼女戦記</div>
+        <div class="rank-sub"><span class="nb">2017年</span> / <span class="nb">NUT</span></div>
+        <div class="rank-score">★ 8.9 / 10</div>
+        <span class="rank-tag blue">ダーク系</span><span class="rank-tag">戦記もの</span>
+        <div class="rank-text">ブラック企業サラリーマンが<wbr>幼女に<wbr>転生し、<wbr>第一次大戦風の<wbr>異世界で<wbr>軍人として<wbr>出世していく<wbr>異色作です。<wbr>主人公の<wbr>打算的かつ合理的な<wbr>思考が<wbr>独特の<wbr>面白さを<wbr>生んでいます。<wbr>魔法と<wbr>戦争が<wbr>混合した<wbr>世界観の<wbr>設定が<wbr>細かく、<wbr>戦記・ミリタリー好きにも<wbr>刺さる<wbr>内容です。<wbr>劇場版も<wbr>クオリティが<wbr>高いです。</div>
+        <div class="streaming-row">
+          <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
+          <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
+          <a href="https://netflix.com" target="_blank" rel="noopener" class="badge netflix">Netflix</a>
+          <a href="https://youjo-senki.jp/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="rank-card">
+      <div class="rank-num">4</div>
+      <div class="rank-body">
         <div class="rank-title">Re:ゼロから<wbr>始める<wbr>異世界生活</div>
         <div class="rank-sub"><span class="nb">2016年〜2021年</span> / <span class="nb">WHITE FOX</span></div>
         <div class="rank-score">★ 8.8 / 10</div>
@@ -181,7 +206,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
     </div>
 
     <div class="rank-card">
-      <div class="rank-num">4</div>
+      <div class="rank-num">5</div>
       <div class="rank-body">
         <div class="rank-title">転生したら<wbr>スライムだった件</div>
         <div class="rank-sub"><span class="nb">2018年〜</span> / <span class="nb">8bit</span></div>
@@ -198,7 +223,24 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
     </div>
 
     <div class="rank-card">
-      <div class="rank-num">5</div>
+      <div class="rank-num">6</div>
+      <div class="rank-body">
+        <div class="rank-title">この<wbr>素晴らしい<wbr>世界に<wbr>祝福を!</div>
+        <div class="rank-sub"><span class="nb">2016年〜</span> / <span class="nb">J.C.Staff</span> / <span class="nb">DEEN</span></div>
+        <div class="rank-score">★ 8.3 / 10</div>
+        <span class="rank-tag">初心者◎</span><span class="rank-tag">ギャグ系</span>
+        <div class="rank-text">コメディ全振りの<wbr>異世界転生ものです。<wbr>無能な<wbr>パーティーメンバーたちとの<wbr>ドタバタ日常が<wbr>最大の<wbr>魅力で、<wbr>異世界転生の<wbr>「暗さ」とは<wbr>無縁の明るい<wbr>作風が<wbr>特徴です。<wbr>笑える<wbr>シーンの<wbr>密度が<wbr>高く、<wbr>気軽に<wbr>観られる<wbr>エンタメ枠として<wbr>優秀です。最近<wbr>公開された<wbr>劇場版も<wbr>評判が<wbr>高く、<wbr>シリーズと<wbr>しての<wbr>人気は<wbr>衰えていません。</div>
+        <div class="streaming-row">
+          <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
+          <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
+          <a href="https://netflix.com" target="_blank" rel="noopener" class="badge netflix">Netflix</a>
+          <a href="https://konosuba.com/1st/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="rank-card">
+      <div class="rank-num">7</div>
       <div class="rank-body">
         <div class="rank-title">本好きの下剋上</div>
         <div class="rank-sub"><span class="nb">2019年〜</span> / <span class="nb">Ajia-do→WIT STUDIO</span></div>
@@ -215,7 +257,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
     </div>
 
     <div class="rank-card">
-      <div class="rank-num">6</div>
+      <div class="rank-num">8</div>
       <div class="rank-body">
         <div class="rank-title">蜘蛛ですが、<wbr>なにか？</div>
         <div class="rank-sub"><span class="nb">2021年</span> / <span class="nb">Millepensee</span></div>
@@ -230,28 +272,11 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
     </div>
 
     <div class="rank-card">
-      <div class="rank-num">7</div>
-      <div class="rank-body">
-        <div class="rank-title">この<wbr>素晴らしい<wbr>世界に<wbr>祝福を!</div>
-        <div class="rank-sub"><span class="nb">2016年〜</span> / <span class="nb">J.C.Staff</span> / <span class="nb">DEEN</span></div>
-        <div class="rank-score">★ 8.0 / 10</div>
-        <span class="rank-tag">初心者◎</span><span class="rank-tag">ギャグ系</span>
-        <div class="rank-text">コメディ全振りの<wbr>異世界転生ものです。<wbr>無能な<wbr>パーティーメンバーたちとの<wbr>ドタバタ日常が<wbr>最大の<wbr>魅力で、<wbr>異世界転生の<wbr>「暗さ」とは<wbr>無縁の明るい<wbr>作風が<wbr>特徴です。<wbr>笑える<wbr>シーンの<wbr>密度が<wbr>高く、<wbr>気軽に<wbr>観られる<wbr>エンタメ枠として<wbr>優秀です。最近<wbr>公開された<wbr>劇場版も<wbr>評判が<wbr>高く、<wbr>シリーズと<wbr>しての<wbr>人気は<wbr>衰えていません。</div>
-        <div class="streaming-row">
-          <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
-          <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
-          <a href="https://netflix.com" target="_blank" rel="noopener" class="badge netflix">Netflix</a>
-          <a href="https://konosuba.com/1st/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="rank-card">
-      <div class="rank-num">8</div>
+      <div class="rank-num">9</div>
       <div class="rank-body">
         <div class="rank-title">オーバーロード</div>
         <div class="rank-sub"><span class="nb">2015年〜</span> / <span class="nb">Madhouse</span></div>
-        <div class="rank-score">★ 7.9 / 10</div>
+        <div class="rank-score">★ 8.1 / 10</div>
         <span class="rank-tag blue">ダーク系</span><span class="rank-tag">魔王視点</span>
         <div class="rank-text">「最強の魔王」<wbr>視点で描く<wbr>異色の<wbr>転生ものです。<wbr>主人公が<wbr>善人ではなく<wbr>支配者として<wbr>世界に<wbr>君臨していく<wbr>展開が<wbr>他作品にない<wbr>面白さを<wbr>生んでいます。<wbr>人間側が<wbr>圧倒的に弱い<wbr>立場で<wbr>描かれる<wbr>ため、<wbr>爽快感と<wbr>不気味さが<wbr>同居する<wbr>独特の<wbr>読後感が<wbr>あります。<wbr>王道とは<wbr>逆張りの<wbr>アプローチが<wbr>好きな<wbr>方には<wbr>たまらない<wbr>作品です。</div>
         <div class="streaming-row">
@@ -264,28 +289,11 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
     </div>
 
     <div class="rank-card">
-      <div class="rank-num">9</div>
-      <div class="rank-body">
-        <div class="rank-title">幼女戦記</div>
-        <div class="rank-sub"><span class="nb">2017年</span> / <span class="nb">NUT</span></div>
-        <div class="rank-score">★ 7.8 / 10</div>
-        <span class="rank-tag blue">ダーク系</span><span class="rank-tag">戦記もの</span>
-        <div class="rank-text">ブラック企業サラリーマンが<wbr>幼女に<wbr>転生し、<wbr>第一次大戦風の<wbr>異世界で<wbr>軍人として<wbr>出世していく<wbr>異色作です。<wbr>主人公の<wbr>打算的かつ合理的な<wbr>思考が<wbr>独特の<wbr>面白さを<wbr>生んでいます。<wbr>魔法と<wbr>戦争が<wbr>混合した<wbr>世界観の<wbr>設定が<wbr>細かく、<wbr>戦記・ミリタリー好きにも<wbr>刺さる<wbr>内容です。<wbr>劇場版も<wbr>クオリティが<wbr>高いです。</div>
-        <div class="streaming-row">
-          <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
-          <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener" class="badge amazon">Amazon</a>
-          <a href="https://netflix.com" target="_blank" rel="noopener" class="badge netflix">Netflix</a>
-          <a href="https://youjo-senki.jp/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="rank-card">
       <div class="rank-num">10</div>
       <div class="rank-body">
         <div class="rank-title">異世界食堂</div>
         <div class="rank-sub"><span class="nb">2017年〜</span> / <span class="nb">SILVER LINK.</span></div>
-        <div class="rank-score">★ 7.6 / 10</div>
+        <div class="rank-score">★ 8.1 / 10</div>
         <span class="rank-tag green">癒し系</span><span class="rank-tag">グルメ</span>
         <div class="rank-text">毎週<wbr>土曜日だけ異世界と<wbr>つながる<wbr>洋食屋<wbr>「ねこや」を<wbr>舞台にした<wbr>グルメ系転生ものです。<wbr>戦闘ゼロ、<wbr>日常の<wbr>温かさと食の<wbr>描写だけで全話<wbr>構成されています。<wbr>激しい<wbr>展開が<wbr>苦手な<wbr>方や、<wbr>ほっこりしたい夜に<wbr>おすすめの<wbr>作品です。<wbr>食事シーンの<wbr>描写が<wbr>丁寧で、<wbr>観ていると<wbr>本当に<wbr>お腹が<wbr>空いてきます。</div>
         <div class="streaming-row">
@@ -311,8 +319,27 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
     </ul>
 
     <h2 id="summary">まとめ</h2>
-    <p>異世界転生アニメは<wbr>「チートで無双するだけ」と<wbr>思われがちですが、<wbr>今回紹介した<wbr>10作品は<wbr>それぞれが<wbr>独自の<wbr>魅力を<wbr>持った<wbr>良作揃いです。<wbr>転生という<wbr>設定を<wbr>活かして<wbr>どんな<wbr>ドラマを<wbr>描くか<wbr>——そこに<wbr>各作品の<wbr>個性が<wbr>出ます。まだ<wbr>観ていない<wbr>作品が<wbr>あればぜひこの<wbr>機会に<wbr>チェックしてみてください。</p></div>
+    <p>異世界転生アニメは<wbr>「チートで無双するだけ」と<wbr>思われがちですが、<wbr>今回紹介した<wbr>10作品は<wbr>それぞれが<wbr>独自の<wbr>魅力を<wbr>持った<wbr>良作揃いです。<wbr>転生という<wbr>設定を<wbr>活かして<wbr>どんな<wbr>ドラマを<wbr>描くか<wbr>——そこに<wbr>各作品の<wbr>個性が<wbr>出ます。まだ<wbr>観ていない<wbr>作品が<wbr>あればぜひこの<wbr>機会に<wbr>チェックしてみてください。</p>
 
+    <a href="https://anime-db.jp/blog/romance-top10.html" class="next-article">
+      <div style="flex:1">
+        <div class="next-article-label">💕 続けて読む</div>
+        <div class="next-article-title">泣ける<wbr>ラブコメアニメおすすめ10選【感動保証】</div>
+        <div class="next-article-desc">異世界の<wbr>次は、<wbr>笑えて<wbr>最後は<wbr>泣ける<wbr>ラブコメです。<wbr>恋愛アニメが<wbr>苦手な<wbr>方でも<wbr>入りやすい<wbr>作品から、<wbr>号泣できる<wbr>名作までを<wbr>紹介します。</div>
+      </div>
+      <div class="next-article-arrow">→</div>
+    </a>
+
+  </div>
+
+  <section class="related-guides" aria-label="関連記事">
+    <h2 class="related-guides-title">関連記事<wbr>（ランキング）</h2>
+    <ul>
+      <li><a href="https://anime-db.jp/blog/romance-top10.html"><span class="rg-name">泣ける<wbr>ラブコメアニメおすすめ10選</span><span class="rg-desc">笑えて<wbr>最後は<wbr>泣ける、<wbr>ラブコメアニメを<wbr>10本選びました。<wbr>恋愛アニメが<wbr>苦手な<wbr>方でも<wbr>入りやすい<wbr>作品から<wbr>紹介します。</span></a></li>
+      <li><a href="https://anime-db.jp/blog/battle-anime-top10.html"><span class="rg-name">バトルアニメ歴代おすすめランキング10選</span><span class="rg-desc">作画・演出・物語との<wbr>連動を<wbr>軸に、<wbr>バトルアニメを<wbr>10本選びました。</span></a></li>
+      <li><a href="https://anime-db.jp/blog/rating-criteria.html"><span class="rg-name">S評価と<wbr>A評価、何が<wbr>違うのか<wbr>【管理人の<wbr>評価基準を<wbr>公開】</span><span class="rg-desc">ランキングの点数<wbr>（S・A・B・C）の<wbr>付け方を、<wbr>管理人が<wbr>公開しています。</span></a></li>
+    </ul>
+  </section>
   <a href="https://anime-db.jp/blog/" class="back-btn">← ブログ一覧に戻る</a>
 </div>
 

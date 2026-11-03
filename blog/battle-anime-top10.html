@@ -70,7 +70,14 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
 .footer-link{color:var(--text-muted);text-decoration:none;font-size:.85rem}.footer-link:hover{color:#fff}
 .copyright{font-size:.8rem;color:rgba(255,255,255,0.3)}
 .rating-guide-note{font-size:.88rem;color:var(--text-muted);margin:-8px 0 28px;line-height:1.8}.rating-guide-note a{color:var(--accent);text-decoration:underline}
-/* 日本語の改行を自然にする設定（文節単位で改行・行頭禁則・1文字だけの行を避ける） */
+.next-article{display:flex;align-items:center;gap:18px;background:linear-gradient(135deg,rgba(255,71,87,0.14),rgba(255,107,129,0.06));border:2px solid var(--accent);border-radius:14px;padding:22px 26px;margin:36px 0 8px;text-decoration:none;transition:transform .2s,box-shadow .2s}
+.next-article:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(230,72,90,0.25)}
+.next-article-label{font-size:.72rem;font-weight:700;color:var(--accent);letter-spacing:.03em;margin-bottom:6px}
+.next-article-title{font-size:1.08rem;font-weight:700;color:#fff;line-height:1.5}
+.next-article-desc{font-size:.83rem;color:var(--text-muted);margin-top:6px;line-height:1.7}
+.next-article-arrow{font-size:1.7rem;color:var(--accent);flex-shrink:0}
+@media(max-width:600px){.next-article{flex-direction:row;padding:18px 20px}.next-article-arrow{font-size:1.3rem}}
+.related-guides{margin:40px 0 28px;padding:22px 24px;background:var(--bg-card);border:1px solid var(--border-color);border-radius:14px}.related-guides-title{font-size:1.05rem;font-weight:700;color:#fff;margin:0 0 14px}.related-guides ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}.related-guides a{display:block;text-decoration:none;padding:12px 14px;border:1px solid var(--border-color);border-radius:10px;transition:border-color .2s,background .2s}.related-guides a:hover{border-color:var(--accent);background:rgba(255,255,255,0.03)}.related-guides .rg-name{display:block;color:#fff;font-weight:700;font-size:.95rem;line-height:1.5}.related-guides .rg-desc{display:block;color:var(--text-muted);font-size:.82rem;line-height:1.7;margin-top:2px}/* 日本語の改行を自然にする設定（文節単位で改行・行頭禁則・1文字だけの行を避ける） */
 body{line-break:strict;overflow-wrap:anywhere}
 @supports (word-break:auto-phrase){body{word-break:auto-phrase}}
 :has(> wbr){word-break:keep-all}
@@ -116,6 +123,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
     </div>
 
     <p class="rating-guide-note">※★の<wbr>点数は<wbr>管理人スコア<wbr>（10点満点）です。<wbr>評価の<wbr>基準は<a href="https://anime-db.jp/blog/rating-criteria.html"><wbr>こちら</a>を<wbr>ご覧ください。</p>
+    <p class="rating-guide-note">※この<wbr>ランキングは、<wbr>ジャンルの<wbr>中から<wbr>管理人が<wbr>選んだ<wbr>10作品の<wbr>ため、<wbr>点数は<wbr>すべて<wbr>8.1点以上<wbr>（A評価以上）です。</p>
 
     <h2 id="criteria">評価基準に<wbr>ついて</h2>
     <ul>
@@ -175,7 +183,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       <div class="rank-body">
         <div class="rank-title">HUNTER×HUNTER<wbr>（2011年版）</div>
         <div class="rank-sub"><span class="nb">2011年〜2014年</span> / <span class="nb">Madhouse</span></div>
-        <div class="rank-score">★ 9.0 / 10</div>
+        <div class="rank-score">★ 9.1 / 10</div>
         <div class="rank-text">念能力という<wbr>独自の<wbr>戦闘システムが生む<wbr>頭脳戦バトルの<wbr>完成形です。<wbr>ゴンと<wbr>キルアの<wbr>友情、<wbr>ヒソカの<wbr>不気味さ、<wbr>蟻編の<wbr>メルエムとの<wbr>戦いと、<wbr>原作の<wbr>緻密な<wbr>物語構造——全てが<wbr>噛み合った<wbr>名作です。<wbr>作画は<wbr>Madhouseの<wbr>安定感が<wbr>あり、特に<wbr>蟻編の<wbr>クライマックスは<wbr>語り草に<wbr>なっています。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
@@ -217,7 +225,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       <div class="rank-body">
         <div class="rank-title">呪術廻戦</div>
         <div class="rank-sub"><span class="nb">2020年〜</span> / <span class="nb">MAPPA</span></div>
-        <div class="rank-score">★ 8.8 / 10</div>
+        <div class="rank-score">★ 8.9 / 10</div>
         <div class="rank-text">MAPPAが<wbr>投入した<wbr>圧倒的な<wbr>作画リソースが<wbr>生んだ<wbr>現代バトルアニメの<wbr>最前線です。<wbr>五条悟の<wbr>バトルシーンは<wbr>「どうやって<wbr>作っているんだ」と<wbr>言いたくなる<wbr>ほどの<wbr>クオリティで、<wbr>何度観ても<wbr>飽きません。<wbr>渋谷事変は<wbr>近年の<wbr>アニメ史に残る<wbr>神話的な盛り<wbr>上がりを<wbr>見せました。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
@@ -238,7 +246,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       <div class="rank-body">
         <div class="rank-title">ヴィンランド・サガ</div>
         <div class="rank-sub"><span class="nb">2019年〜</span> / <span class="nb">Wit Studio</span> / <span class="nb">MAPPA</span></div>
-        <div class="rank-score">★ 8.7 / 10</div>
+        <div class="rank-score">★ 8.8 / 10</div>
         <div class="rank-text">ヴァイキングを<wbr>舞台にした<wbr>重厚な<wbr>歴史バトルです。<wbr>殺陣の<wbr>重さと<wbr>痛さが<wbr>リアルに<wbr>伝わる<wbr>戦闘描写が<wbr>特徴で、<wbr>「格好いいバトル」ではなく<wbr>「戦争の残酷さ」を<wbr>描いている点が他の<wbr>バトルアニメとは<wbr>一線を<wbr>画します。<wbr>2期の<wbr>農場編は<wbr>戦闘が<wbr>少ないですが、<wbr>それもまた別の<wbr>意味で<wbr>傑作です。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
@@ -259,7 +267,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       <div class="rank-body">
         <div class="rank-title">ダンダダン</div>
         <div class="rank-sub"><span class="nb">2024年〜</span> / <span class="nb">Science SARU</span></div>
-        <div class="rank-score">★ 8.6 / 10</div>
+        <div class="rank-score">★ 8.7 / 10</div>
         <div class="rank-text">Science SARUが<wbr>全力を<wbr>投入した<wbr>カオスな<wbr>作画バトルです。<wbr>UFO・霊・オカルトが<wbr>混在する<wbr>世界での<wbr>戦闘は<wbr>予測不能で、毎話<wbr>「次どんな<wbr>演出が<wbr>来るんだ」と<wbr>ワクワクさせてくれます。若い<wbr>世代の<wbr>アニメーターたちが<wbr>躍動した<wbr>作品と<wbr>して、<wbr>今後の<wbr>バトルアニメの<wbr>指針に<wbr>なりそうです。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
@@ -280,7 +288,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       <div class="rank-body">
         <div class="rank-title">ドラゴンボール超 ブロリー</div>
         <div class="rank-sub"><span class="nb">2018年</span> / <span class="nb">東映アニメーション<wbr>（劇場版）</span></div>
-        <div class="rank-score">★ 8.5 / 10</div>
+        <div class="rank-score">★ 8.7 / 10</div>
         <div class="rank-text">劇場版という枠を<wbr>使いきった<wbr>作画爆発の<wbr>バトル映画です。特に<wbr>クライマックスの<wbr>戦闘シーンは<wbr>アニメーターが<wbr>限界まで<wbr>作画に<wbr>挑んだ<wbr>迫力ある<wbr>映像体験で、<wbr>映画館で観た<wbr>多くの人が<wbr>「すごい」と口にした<wbr>作品です。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
@@ -300,7 +308,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       <div class="rank-body">
         <div class="rank-title">僕の<wbr>ヒーローアカデミア</div>
         <div class="rank-sub"><span class="nb">2016年〜</span> / <span class="nb">BONES</span></div>
-        <div class="rank-score">★ 8.2 / 10</div>
+        <div class="rank-score">★ 8.4 / 10</div>
         <div class="rank-text">BONESの<wbr>アクション作画と<wbr>ヒーローものの<wbr>王道が<wbr>合わさった<wbr>作品です。<wbr>デクの<wbr>成長を<wbr>通じて<wbr>「頑張ること」の<wbr>カタルシスを<wbr>最大限引き出す<wbr>演出が<wbr>巧みです。<wbr>USJvs敵連合、<wbr>オールマイトvsオールフォーワンなど<wbr>名バトルが<wbr>多く、<wbr>シーズン通して<wbr>ハズレが<wbr>ありません。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
@@ -321,7 +329,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       <div class="rank-body">
         <div class="rank-title">刃牙（バキ）</div>
         <div class="rank-sub"><span class="nb">2018年〜</span> / <span class="nb">TMS Entertainment</span></div>
-        <div class="rank-score">★ 7.8 / 10</div>
+        <div class="rank-score">★ 8.1 / 10</div>
         <div class="rank-text">格闘技バトルの<wbr>密度が<wbr>突き抜けた<wbr>作品です。<wbr>常識では<wbr>考えられない<wbr>戦闘描写は、<wbr>リアルさを<wbr>超えて笑ってしまう<wbr>ほどですが、<wbr>それが逆に<wbr>唯一無二の<wbr>魅力に<wbr>なっています。<wbr>「バキ的なノリ」という<wbr>言葉が<wbr>ネットで<wbr>使われる<wbr>ほど、<wbr>独自の<wbr>バトル文化を<wbr>生み出した<wbr>作品です。</div>
         <div class="streaming-row">
           <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
@@ -347,6 +355,14 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
     <h2 id="summary">まとめ</h2>
     <p>バトルアニメの<wbr>面白さは<wbr>「強い敵が<wbr>出てきて<wbr>ヒーローが<wbr>勝つ」だけではありません。<strong><wbr>演出・作画・ドラマが<wbr>一体に<wbr>なった<wbr>とき</strong>、<wbr>バトルシーンは<wbr>視聴者の<wbr>感情を<wbr>揺さぶる<wbr>最高の<wbr>エンタメに<wbr>なります。<wbr>今回紹介した<wbr>10作品は<wbr>それぞれが<wbr>異なる<wbr>アプローチで<wbr>バトルの<wbr>面白さを<wbr>追求した<wbr>傑作ぞろいです。<wbr>未見の<wbr>作品が<wbr>あれば、ぜひこの<wbr>機会に<wbr>ご覧ください。</p></div>
 
+  <section class="related-guides" aria-label="関連記事">
+    <h2 class="related-guides-title">関連記事<wbr>（ランキング）</h2>
+    <ul>
+      <li><a href="https://anime-db.jp/blog/isekai-top10.html"><span class="rg-name">異世界転生アニメおすすめ10選</span><span class="rg-desc"><wbr>「チートで無双」だけではない、<wbr>独自の<wbr>魅力を<wbr>持った<wbr>異世界転生アニメを<wbr>10本選びました。</span></a></li>
+      <li><a href="https://anime-db.jp/blog/romance-top10.html"><span class="rg-name">泣ける<wbr>ラブコメアニメおすすめ10選</span><span class="rg-desc">笑えて<wbr>最後は<wbr>泣ける、<wbr>ラブコメアニメを<wbr>10本選びました。<wbr>恋愛アニメが<wbr>苦手な<wbr>方でも<wbr>入りやすい<wbr>作品から<wbr>紹介します。</span></a></li>
+      <li><a href="https://anime-db.jp/blog/rating-criteria.html"><span class="rg-name">S評価と<wbr>A評価、何が<wbr>違うのか<wbr>【管理人の<wbr>評価基準を<wbr>公開】</span><span class="rg-desc">ランキングの点数<wbr>（S・A・B・C）の<wbr>付け方を、<wbr>管理人が<wbr>公開しています。</span></a></li>
+    </ul>
+  </section>
   <a href="https://anime-db.jp/blog/" class="back-btn">← ブログ一覧に戻る</a>
 </div>
 
