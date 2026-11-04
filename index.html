@@ -1247,30 +1247,12 @@ function showToastText(message) {
   setTimeout(() => { toast.classList.remove('show'); }, 3000);
 }
 
-let _eggClickCount = 0;
-let _eggClickTimer = null;
-function easterEggClick() {
-  _eggClickCount++;
-  clearTimeout(_eggClickTimer);
-  _eggClickTimer = setTimeout(() => { _eggClickCount = 0; }, 3000);
-  if (_eggClickCount >= 5) {
-    _eggClickCount = 0;
-    const toast = document.getElementById('toast');
-    if (!toast) return;
-    toast.innerHTML = '🥚 隠しゲームを発見！ <a href="/pixel-quest.html" style="color:#fff;text-decoration:underline;font-weight:800;">スタジオランナーで遊ぶ →</a>';
-    toast.classList.add('show');
-    clearTimeout(window._eggToastTimer);
-    window._eggToastTimer = setTimeout(() => { toast.classList.remove('show'); }, 6000);
-  }
-}
-// ロゴタップの検出は click イベント1本に統一（touchend + preventDefault との二重処理が
-// 端末によっては互いを打ち消し合い、タップがほぼ拾えなくなっていたための修正）
+// ロゴをクリックしたときは、ホームの表示に戻す
 (function() {
   const logoEl = document.querySelector('header .logo');
   if (!logoEl) return;
   logoEl.addEventListener('click', function(e) {
     try { switchPanel('home'); } catch (err) {}
-    easterEggClick();
   });
 })();
 
