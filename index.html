@@ -1310,5 +1310,85 @@ async function fetchWithCache(url, retries = 2) {
 }
 </script>
 
+
+<!-- ANIMEDB intro CM (shown once per browser, top page only) -->
+<style>
+.cmi-wrap{position:fixed;inset:0;z-index:100000;display:none;align-items:center;justify-content:center;background:rgba(5,8,14,.86);padding:16px;-webkit-overflow-scrolling:touch}
+.cmi-wrap.cmi-on{display:flex}
+.cmi-box{position:relative;width:min(94vw,960px);max-height:92vh;display:flex;flex-direction:column;gap:10px}
+.cmi-video{width:100%;aspect-ratio:16/9;max-height:70vh;background:#000;border-radius:14px;box-shadow:0 12px 40px rgba(0,0,0,.6);display:block;object-fit:contain}
+.cmi-close{position:absolute;top:-52px;right:0;width:48px;height:48px;border-radius:50%;border:2px solid rgba(255,255,255,.75);background:rgba(20,26,40,.9);color:#fff;font-size:26px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0}
+.cmi-close:hover,.cmi-close:focus-visible{background:#fff;color:#0b0f19;outline:none}
+.cmi-bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px;color:#cfd6e4;font-size:.85rem}
+.cmi-sound{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.6);border-radius:999px;padding:8px 16px;font-size:.9rem;cursor:pointer;min-height:40px}
+.cmi-enter{background:#ff4d6d;color:#fff;border:0;border-radius:999px;padding:10px 20px;font-size:.95rem;font-weight:700;cursor:pointer;min-height:44px}
+.cmi-note{flex:1 1 100%;text-align:center;opacity:.8}
+@media (max-width:600px){.cmi-close{top:-54px;right:2px}.cmi-note{font-size:.78rem}}
+@media (prefers-reduced-motion:reduce){.cmi-video{scroll-behavior:auto}}
+</style>
+<div class="cmi-wrap" id="cmiWrap" role="dialog" aria-modal="true" aria-label="ANIMEDBのCM（18秒）" hidden>
+  <div class="cmi-box">
+    <button type="button" class="cmi-close" id="cmiClose" aria-label="閉じる">&#10005;</button>
+    <video class="cmi-video" id="cmiVideo" playsinline muted preload="none" poster="/cm/animedb-cm-poster.jpg" controlslist="nodownload" disablepictureinpicture></video>
+    <div class="cmi-bar">
+      <button type="button" class="cmi-sound" id="cmiSound">音を出す</button>
+      <button type="button" class="cmi-enter" id="cmiEnter">ANIMEDBを見る</button>
+      <div class="cmi-note">✕ ボタン・Esc キー・画面の外側のタップで閉じます。閉じると、この訪問中は表示されません。<br>キャラクターはAIの助けを借りて制作したオリジナルです。</div>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  // ---- settings (案A: top page opens -> CM shows; closed once = not again during this visit) ----
+  var ONCE_EVER=false;     // true: show only once per browser (案B)
+  var SKIP_SEARCH=true;    // true: do not show to visitors arriving from search engines
+  var KEY='animedb_cm_v1';
+  function store(){try{return ONCE_EVER?localStorage:sessionStorage}catch(e){return null}}
+  function get(){var st=store();try{return st&&st.getItem(KEY)}catch(e){return null}}
+  function set(){var st=store();try{st&&st.setItem(KEY,String(Date.now()))}catch(e){}}
+  if(get())return;                                   // already closed (this visit / ever, per setting)
+  if(location.pathname.replace(/\/index\.html$/,'/')!=='/')return; // top page only
+  if(SKIP_SEARCH){try{ if(/(google|yahoo|bing|duckduckgo|baidu|ecosia)\./i.test(document.referrer))return; }catch(e){}}
+  var wrap=document.getElementById('cmiWrap'),v=document.getElementById('cmiVideo'),
+      closeB=document.getElementById('cmiClose'),snd=document.getElementById('cmiSound'),ent=document.getElementById('cmiEnter');
+  var lastFocus=null,done=false;
+  function close(){
+    if(done)return; done=true; set();
+    try{v.pause()}catch(e){}
+    v.removeAttribute('src'); try{v.load()}catch(e){}
+    wrap.classList.remove('cmi-on'); wrap.hidden=true;
+    document.documentElement.style.overflow=''; 
+    document.removeEventListener('keydown',onKey,true);
+    if(lastFocus&&lastFocus.focus)try{lastFocus.focus()}catch(e){}
+  }
+  function onKey(e){
+    if(e.key==='Escape'||e.key==='Esc'){e.preventDefault();close();}
+    else if(e.key==='Tab'){ // light focus trap
+      var f=[closeB,snd,ent].filter(function(x){return x&&!x.disabled}); if(!f.length)return;
+      var i=f.indexOf(document.activeElement);
+      if(e.shiftKey&&i<=0){e.preventDefault();f[f.length-1].focus();}
+      else if(!e.shiftKey&&(i===f.length-1||i<0)){e.preventDefault();f[0].focus();}
+    }
+  }
+  function open(){
+    lastFocus=document.activeElement;
+    v.src='/cm/animedb-cm.mp4';
+    wrap.hidden=false; wrap.classList.add('cmi-on');
+    document.documentElement.style.overflow='hidden';
+    document.addEventListener('keydown',onKey,true);
+    closeB.focus();
+    var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(!reduce){var p=v.play(); if(p&&p.catch)p.catch(function(){v.controls=true;});}
+    else v.controls=true;
+  }
+  closeB.addEventListener('click',close);
+  ent.addEventListener('click',close);
+  wrap.addEventListener('click',function(e){if(e.target===wrap)close();});
+  snd.addEventListener('click',function(){v.muted=!v.muted;snd.textContent=v.muted?'音を出す':'音を消す';try{v.play()}catch(e){}});
+  v.addEventListener('error',function(){close();});  // if it cannot play, step aside quietly
+  v.addEventListener('click',function(){ if(v.paused){v.play()}else{v.pause()} });
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',open);else open();
+})();
+</script>
 </body>
 </html>
