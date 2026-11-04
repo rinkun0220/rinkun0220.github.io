@@ -69,7 +69,14 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
 .gem-point a,.article-body p a{color:#7fb6ff;text-decoration:underline;text-underline-offset:3px}
 .badge.hulu{color:#4fd18b}.badge.fod{color:#e8b04a}.badge.disney{color:#7f9bff}.gem-nostream{font-size:.8rem;color:var(--text-muted)}
 .toc-item{padding:3px 0}.toc-item>a:first-child{display:block;padding:0}.toc-grid a.toc-off,.toc a.toc-off{display:inline-block;font-size:.72rem;line-height:1.2;padding:3px 10px;margin:4px 0 2px;border:1px solid rgba(255,255,255,.18);border-radius:999px;background:#444;color:#f1f2f6;text-decoration:none}.toc a.toc-off:hover{background:var(--accent);color:#fff}li>a.toc-off{margin:0 0 0 8px;vertical-align:middle}
-/* 日本語の改行を自然にする設定（文節単位で改行・行頭禁則・1文字だけの行を避ける） */
+.next-article{display:flex;align-items:center;gap:18px;background:linear-gradient(135deg,rgba(255,71,87,0.14),rgba(255,107,129,0.06));border:2px solid var(--accent);border-radius:14px;padding:22px 26px;margin:36px 0 8px;text-decoration:none;transition:transform .2s,box-shadow .2s}
+.next-article:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(230,72,90,0.25)}
+.next-article-label{font-size:.72rem;font-weight:700;color:var(--accent);letter-spacing:.03em;margin-bottom:6px}
+.next-article-title{font-size:1.08rem;font-weight:700;color:#fff;line-height:1.5}
+.next-article-desc{font-size:.83rem;color:var(--text-muted);margin-top:6px;line-height:1.7}
+.next-article-arrow{font-size:1.7rem;color:var(--accent);flex-shrink:0}
+@media(max-width:600px){.next-article{flex-direction:row;padding:18px 20px}.next-article-arrow{font-size:1.3rem}}
+.related-guides{margin:40px 0 28px;padding:22px 24px;background:var(--bg-card);border:1px solid var(--border-color);border-radius:14px}.related-guides-title{font-size:1.05rem;font-weight:700;color:#fff;margin:0 0 14px}.related-guides ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}.related-guides a{display:block;text-decoration:none;padding:12px 14px;border:1px solid var(--border-color);border-radius:10px;transition:border-color .2s,background .2s}.related-guides a:hover{border-color:var(--accent);background:rgba(255,255,255,0.03)}.related-guides .rg-name{display:block;color:#fff;font-weight:700;font-size:.95rem;line-height:1.5}.related-guides .rg-desc{display:block;color:var(--text-muted);font-size:.82rem;line-height:1.7;margin-top:2px}/* 日本語の改行を自然にする設定（文節単位で改行・行頭禁則・1文字だけの行を避ける） */
 body{line-break:strict;overflow-wrap:anywhere}
 @supports (word-break:auto-phrase){body{word-break:auto-phrase}}
 :has(> wbr){word-break:keep-all}
@@ -627,8 +634,30 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
 
     <h2>まとめ</h2>
     <p>今回は、<wbr>2020年代前半に<wbr>放送・<wbr>公開された<wbr>25本を<wbr>紹介しました。気になる<wbr>作品が<wbr>見つかったら、<wbr>「<a href="/hidden-gems-gacha.html">埋もれた名作ガチャ</a>」で<wbr>引いてみるのも<wbr>一つの<wbr>方法です。</p>
-    <p>ほかの<wbr>年代は、<wbr>「<a href="/blog/hidden-gems-history-2009.html">2009年以前の<wbr>隠れた<wbr>名作</a>」<wbr>「<a href="/blog/hidden-gems-history-2010s.html">2010年代の<wbr>隠れた<wbr>名作</a>」の<wbr>記事で<wbr>紹介しています。<wbr>2025年と<wbr>2023〜2024年の<wbr>作品は、<wbr>「<a href="/blog/hidden-gems-2025-all.html">2025年に<wbr>見逃した<wbr>隠れた<wbr>名作アニメ18選</a>」<wbr>「<a href="/blog/hidden-gems-2023-2024.html">2023〜2024年に<wbr>見逃した<wbr>隠れた<wbr>名作アニメ18選</a>」で<wbr>紹介しています。</p></div>
+    <p>ほかの<wbr>年代は、<wbr>「<a href="/blog/hidden-gems-history-2009.html">2009年以前の<wbr>隠れた<wbr>名作</a>」<wbr>「<a href="/blog/hidden-gems-history-2010s.html">2010年代の<wbr>隠れた<wbr>名作</a>」の<wbr>記事で<wbr>紹介しています。<wbr>2025年と<wbr>2023〜2024年の<wbr>作品は、<wbr>「<a href="/blog/hidden-gems-2025-all.html">2025年に<wbr>見逃した<wbr>隠れた<wbr>名作アニメ18選</a>」<wbr>「<a href="/blog/hidden-gems-2023-2024.html">2023〜2024年に<wbr>見逃した<wbr>隠れた<wbr>名作アニメ18選</a>」で<wbr>紹介しています。</p>
 
+    <a href="https://anime-db.jp/blog/hidden-gems-history-2010s.html" class="next-article">
+      <div style="flex:1">
+        <div class="next-article-label">💎 続けて読む</div>
+        <div class="next-article-title">2010年代の<wbr>隠れた<wbr>名作アニメ37選</div>
+        <div class="next-article-desc">氷菓・宝石の<wbr>国・キルラキルなど、<wbr>2010年代の<wbr>隠れた<wbr>名作を<wbr>放送順に<wbr>紹介します。<wbr>ガチャの<wbr>「詳しく見る」から<wbr>飛べます。</div>
+      </div>
+      <div class="next-article-arrow">→</div>
+    </a>
+
+  </div>
+
+  <section class="related-guides" aria-label="関連記事">
+    <h2 class="related-guides-title">関連記事<wbr>（隠れた名作）</h2>
+    <ul>
+      <li><a href="https://anime-db.jp/blog/hidden-gems-2026-all.html"><span class="rg-name">2026年に<wbr>見逃した<wbr>隠れた<wbr>名作アニメ18選</span><span class="rg-desc">冬アニメから<wbr>秋アニメまで、<wbr>話題作の陰で<wbr>見落と<wbr>されやすい<wbr>2026年の<wbr>隠れた<wbr>名作18選です。<wbr>公式サイトへの<wbr>リンクつきで<wbr>紹介します。</span></a></li>
+      <li><a href="https://anime-db.jp/blog/hidden-gems-2025-all.html"><span class="rg-name">2025年に<wbr>見逃した<wbr>隠れた<wbr>名作アニメ18選</span><span class="rg-desc">管理人が<wbr>全作品視聴した<wbr>2025年の<wbr>隠れた<wbr>名作18選です。<wbr>完成度は<wbr>高いのに<wbr>話題に<wbr>ならなかった<wbr>作品ばかりです。<wbr>配信先リンクつきです。</span></a></li>
+      <li><a href="https://anime-db.jp/blog/hidden-gems-2023-2024.html"><span class="rg-name">2023〜2024年に<wbr>見逃した<wbr>隠れた<wbr>名作アニメ18選</span><span class="rg-desc">話題作の陰で<wbr>見逃されが<wbr>ちだった<wbr>2023〜2024年の<wbr>良作を<wbr>ピックアップします。知る人ぞ知る<wbr>作品ばかりです。</span></a></li>
+      <li><a href="https://anime-db.jp/blog/hidden-gems-history-2010s.html"><span class="rg-name">2010年代の<wbr>隠れた<wbr>名作アニメ37選</span><span class="rg-desc">氷菓・宝石の<wbr>国・キルラキルなど、<wbr>2010年代の<wbr>隠れた<wbr>名作を<wbr>放送順に<wbr>紹介します。<wbr>ガチャの<wbr>「詳しく見る」から<wbr>飛べます。</span></a></li>
+      <li><a href="https://anime-db.jp/blog/hidden-gems-history-2009.html"><span class="rg-name">2009年以前の<wbr>隠れた<wbr>名作アニメ15選</span><span class="rg-desc">灰羽連盟・<wbr>千年女優・蟲師・電脳コイルなど、<wbr>2009年以前の<wbr>隠れた<wbr>名作を<wbr>紹介します。<wbr>放送時期・原作・<wbr>制作会社つきです。</span></a></li>
+      <li><a href="/hidden-gems-gacha.html"><span class="rg-name">埋もれた<wbr>名作ガチャ</span><span class="rg-desc">ここまでの<wbr>記事の<wbr>作品の<wbr>中から、今の<wbr>気分で<wbr>「次に観る1本」を<wbr>引いて<wbr>決められます。</span></a></li>
+    </ul>
+  </section>
   <a href="https://anime-db.jp/blog/" class="back-btn">← ブログ一覧に戻る</a>
 </div>
 
