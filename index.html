@@ -1329,7 +1329,7 @@ async function fetchWithCache(url, retries = 2) {
 <div class="cmi-wrap" id="cmiWrap" role="dialog" aria-modal="true" aria-label="ANIMEDBのCM（18秒）" hidden>
   <div class="cmi-box">
     <button type="button" class="cmi-close" id="cmiClose" aria-label="閉じる">&#10005;</button>
-    <video class="cmi-video" id="cmiVideo" playsinline muted preload="none" poster="/cm/animedb-cm-poster.jpg" controlslist="nodownload" disablepictureinpicture></video>
+    <video class="cmi-video" id="cmiVideo" playsinline muted preload="none" poster="/animedb-cm-poster.jpg" controlslist="nodownload" disablepictureinpicture></video>
     <div class="cmi-bar">
       <button type="button" class="cmi-sound" id="cmiSound">音を出す</button>
       <button type="button" class="cmi-enter" id="cmiEnter">ANIMEDBを見る</button>
@@ -1372,7 +1372,7 @@ async function fetchWithCache(url, retries = 2) {
   }
   function open(){
     lastFocus=document.activeElement;
-    v.src='/cm/animedb-cm.mp4';
+    v.src='/animedb-cm.mp4';
     wrap.hidden=false; wrap.classList.add('cmi-on');
     document.documentElement.style.overflow='hidden';
     document.addEventListener('keydown',onKey,true);
