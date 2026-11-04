@@ -80,6 +80,25 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
 .game-facts li{font-size:.8rem;color:var(--text-muted);line-height:1.8}
 @media(min-width:521px){.game-facts li{display:flex;gap:12px}.game-facts b{flex:0 0 5.6em;margin:0}}
 .game-facts b{color:#fff;font-weight:700;margin-right:10px}
+/* 案内役マスコット（4人そろって） */
+.mascot{height:auto;display:block;flex:none;pointer-events:none;user-select:none;-webkit-user-select:none;transform-origin:50% 92%;filter:drop-shadow(0 5px 8px rgba(0,0,0,.55));animation:mascot-sway 4.4s ease-in-out infinite;will-change:transform}
+@keyframes mascot-sway{0%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-5px) rotate(3deg)}100%{transform:translateY(0) rotate(-3deg)}}
+@keyframes bubble-bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+.guide-bubble{position:relative;background:#fff;color:#1b2233;border-radius:14px;padding:8px 13px 9px;font-size:.84rem;font-weight:700;line-height:1.6;max-width:320px;box-shadow:0 4px 14px rgba(0,0,0,.35);animation:bubble-bob 4.4s ease-in-out infinite}
+.guide-bubble::before{content:"";position:absolute;left:-8px;bottom:16px;border:8px solid transparent;border-left:0;border-right:9px solid #fff}
+.guide-name{display:block;font-size:.7rem;font-weight:800;color:#e6485a;letter-spacing:.04em;margin-bottom:1px}
+.guide-row{display:flex;align-items:flex-end;gap:12px;margin:0 0 16px}
+.guide-row .mascot{width:92px}
+@media (max-width:600px){.guide-row{gap:10px;margin-bottom:12px}.guide-row .mascot{width:62px}.guide-bubble{font-size:.78rem;padding:7px 11px 8px}.guide-bubble::before{bottom:12px}}
+@media (prefers-reduced-motion:reduce){.mascot,.guide-bubble{animation:none}}
+.guide-multi{align-items:flex-end;flex-wrap:wrap}
+.guide-group{display:flex;align-items:flex-end;gap:8px}
+.guide-group .mascot{width:80px}
+.guide-group .mascot:nth-child(2){animation-delay:-1.1s;animation-duration:4.9s}
+.guide-group .mascot:nth-child(3){animation-delay:-2.2s;animation-duration:5.3s}
+.guide-group .mascot:nth-child(4){animation-delay:-3.3s;animation-duration:4.6s}
+.guide-multi .guide-bubble{max-width:340px}
+@media (max-width:600px){.guide-multi{flex-direction:column;align-items:flex-start;gap:12px}.guide-group{gap:6px}.guide-group .mascot{width:58px}.guide-multi .guide-bubble{max-width:100%}.guide-multi .guide-bubble::before{left:26px;bottom:auto;top:-8px;border:8px solid transparent;border-top:0;border-bottom:9px solid #fff}}
 /* 日本語の改行を自然にする設定（文節単位で改行・行頭禁則・1文字だけの行を避ける） */
 body{line-break:strict;overflow-wrap:anywhere}
 @supports (word-break:auto-phrase){body{word-break:auto-phrase}}
@@ -105,6 +124,15 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
 
 <main>
   <div class="page-head">
+    <div class="guide-row guide-multi">
+    <div class="guide-group">
+      <img class="mascot mascot-tsutsuo" src="/tsutsuo.webp" width="80" height="81" alt="ANIMEDBのキャラクター「ツツオ」" decoding="async">
+      <img class="mascot mascot-yorumimi" src="/yorumimi.webp" width="80" height="86" alt="ANIMEDBのキャラクター「ヨルミミ」" decoding="async">
+      <img class="mascot mascot-hikari" src="/hikari.webp" width="80" height="89" alt="ANIMEDBのキャラクター「ヒカリ」" decoding="async">
+      <img class="mascot mascot-rokka" src="/rokka.webp" width="80" height="86" alt="ANIMEDBのキャラクター「ロッカ」" decoding="async">
+    </div>
+      <div class="guide-bubble"><span class="guide-name">みんなで<wbr>案内</span>診断や<wbr>ゲームは、<wbr>みんなで<wbr>ゆるっと<wbr>案内しますよ〜。気になる<wbr>ものから、<wbr>気軽に<wbr>遊んで<wbr>みてね〜</div>
+    </div>
     <span class="page-tag">🎮 遊びコンテンツ</span>
     <h1 class="page-title">診断・ガチャ一覧</h1>
     <p class="page-desc">読むだけじゃなく、<wbr>遊びながら<wbr>アニメに<wbr>出会える<wbr>コンテンツを<wbr>まとめました。<wbr>制作会社や<wbr>脚本家との<wbr>相性診断、<wbr>視聴タイプ診断、<wbr>ランダムに<wbr>1本おすすめする<wbr>「埋もれた名作ガチャ」など、<wbr>ANIMEDBが<wbr>独自に<wbr>作った<wbr>簡易診断・ミニゲームをこの<wbr>ページに<wbr>集約しています。<wbr>所要時間は<wbr>どれも<wbr>1〜2分程度なので、気になる<wbr>ものから<wbr>気軽に<wbr>試してみてください。</p>

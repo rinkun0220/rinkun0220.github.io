@@ -96,6 +96,17 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
 .footer-link { color: var(--text-muted); text-decoration: none; font-size: 0.85rem; }
 .footer-link:hover { color: #fff; }
 .copyright { font-size: 0.8rem; color: rgba(255,255,255,0.3); }
+/* 案内役マスコット「ヒカリ」 */
+.mascot{height:auto;display:block;flex:none;pointer-events:none;user-select:none;-webkit-user-select:none;transform-origin:50% 92%;filter:drop-shadow(0 5px 8px rgba(0,0,0,.55));animation:mascot-sway 4.4s ease-in-out infinite;will-change:transform}
+@keyframes mascot-sway{0%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-5px) rotate(3deg)}100%{transform:translateY(0) rotate(-3deg)}}
+@keyframes bubble-bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+.guide-bubble{position:relative;background:#fff;color:#1b2233;border-radius:14px;padding:8px 13px 9px;font-size:.84rem;font-weight:700;line-height:1.6;max-width:320px;box-shadow:0 4px 14px rgba(0,0,0,.35);animation:bubble-bob 4.4s ease-in-out infinite}
+.guide-bubble::before{content:"";position:absolute;left:-8px;bottom:16px;border:8px solid transparent;border-left:0;border-right:9px solid #fff}
+.guide-name{display:block;font-size:.7rem;font-weight:800;color:#e6485a;letter-spacing:.04em;margin-bottom:1px}
+.guide-row{display:flex;align-items:flex-end;gap:12px;margin:0 0 16px}
+.guide-row .mascot{width:92px}
+@media (max-width:600px){.guide-row{gap:10px;margin-bottom:12px}.guide-row .mascot{width:62px}.guide-bubble{font-size:.78rem;padding:7px 11px 8px}.guide-bubble::before{bottom:12px}}
+@media (prefers-reduced-motion:reduce){.mascot,.guide-bubble{animation:none}}
 /* 日本語の改行を自然にする設定（文節単位で改行・行頭禁則・1文字だけの行を避ける） */
 body{line-break:strict;overflow-wrap:anywhere}
 @supports (word-break:auto-phrase){body{word-break:auto-phrase}}
@@ -121,6 +132,10 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
 
 <main>
   <div class="page-head">
+    <div class="guide-row">
+      <img class="mascot mascot-hikari" src="/hikari.webp" width="92" height="102" alt="ANIMEDBのキャラクター「ヒカリ」" decoding="async">
+      <div class="guide-bubble"><span class="guide-name">ヒカリ</span>分からない<wbr>言葉は、<wbr>ここで<wbr>探してね〜。<wbr>ゆるっと<wbr>案内しますよ〜</div>
+    </div>
     <span class="page-tag">📖 初心者向け</span>
     <h1 class="page-title">アニメ初心者向け用語集</h1>
     <p class="page-desc">アニメの<wbr>レビューサイトや<wbr>SNSでよく<wbr>見かけますが、<wbr>ちゃんと<wbr>意味を<wbr>説明された<wbr>ことがない<wbr>言葉です。この<wbr>ページでは、<wbr>中学生の<wbr>頃から<wbr>深夜アニメを<wbr>観始めた<wbr>方にも<wbr>分かるように、<wbr>できるだけやさしい<wbr>言葉で<wbr>解説しています。</p>

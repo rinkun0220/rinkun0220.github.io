@@ -107,6 +107,17 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
 .footer-link:hover { color: #fff; }
 .copyright { font-size: 0.8rem; color: rgba(255,255,255,0.3); }
 .tool-guide{max-width:880px;margin:40px auto 28px;padding:0}.tool-guide h2{font-size:1.05rem;font-weight:700;color:var(--text-main);margin:0 0 12px}.tool-guide h3{font-size:.92rem;font-weight:700;color:var(--accent);margin:20px 0 8px}.tool-guide p{font-size:.88rem;color:var(--text-muted);line-height:1.95;margin:0 0 12px}.tool-guide a{color:var(--star-color);text-decoration:none}.tool-guide a:hover{text-decoration:underline}.tool-guide.dir-tips{margin:0 0 28px;max-width:none}
+/* 案内役マスコット「ロッカ」 */
+.mascot{height:auto;display:block;flex:none;pointer-events:none;user-select:none;-webkit-user-select:none;transform-origin:50% 92%;filter:drop-shadow(0 5px 8px rgba(0,0,0,.55));animation:mascot-sway 4.4s ease-in-out infinite;will-change:transform}
+@keyframes mascot-sway{0%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-5px) rotate(3deg)}100%{transform:translateY(0) rotate(-3deg)}}
+@keyframes bubble-bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+.guide-bubble{position:relative;background:#fff;color:#1b2233;border-radius:14px;padding:8px 13px 9px;font-size:.84rem;font-weight:700;line-height:1.6;max-width:320px;box-shadow:0 4px 14px rgba(0,0,0,.35);animation:bubble-bob 4.4s ease-in-out infinite}
+.guide-bubble::before{content:"";position:absolute;left:-8px;bottom:16px;border:8px solid transparent;border-left:0;border-right:9px solid #fff}
+.guide-name{display:block;font-size:.7rem;font-weight:800;color:#e6485a;letter-spacing:.04em;margin-bottom:1px}
+.guide-row{display:flex;align-items:flex-end;gap:12px;margin:0 0 16px}
+.guide-row .mascot{width:92px}
+@media (max-width:600px){.guide-row{gap:10px;margin-bottom:12px}.guide-row .mascot{width:62px}.guide-bubble{font-size:.78rem;padding:7px 11px 8px}.guide-bubble::before{bottom:12px}}
+@media (prefers-reduced-motion:reduce){.mascot,.guide-bubble{animation:none}}
 /* 日本語の改行を自然にする設定（文節単位で改行・行頭禁則・1文字だけの行を避ける） */
 body{line-break:strict;overflow-wrap:anywhere}
 @supports (word-break:auto-phrase){body{word-break:auto-phrase}}
@@ -132,6 +143,10 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
 
 <main>
   <div class="page-head">
+    <div class="guide-row">
+      <img class="mascot mascot-rokka" src="/rokka.webp" width="92" height="98" alt="ANIMEDBのキャラクター「ロッカ」" decoding="async">
+      <div class="guide-bubble"><span class="guide-name">ロッカ</span>声優さんや<wbr>スタッフさんを、<wbr>一緒に<wbr>探しましょ〜。<wbr>案内しますよ〜</div>
+    </div>
     <span class="page-tag">🗂️ 横断検索</span>
     <h1 class="page-title">声優・スタッフ名鑑</h1>
     <p class="page-desc">ANIMEDBの<wbr>ブログで<wbr>紹介している<wbr>声優・脚本家・監督・<wbr>制作会社・アーティストを<wbr>一覧に<wbr>まとめました。<wbr>普段ブログは<wbr>作品や<wbr>テーマ単位で<wbr>書いている<wbr>ため、<wbr>「この<wbr>声、<wbr>前にも<wbr>聞いた気が<wbr>する」<wbr>「この人が<wbr>関わった他の<wbr>作品も<wbr>知りたい」という<wbr>ときに、<wbr>人物の<wbr>名前から<wbr>横断的に<wbr>代表作へた<wbr>どり着けるよう、この<wbr>ページを<wbr>名鑑として<wbr>まとめています。<wbr>名前を<wbr>クリックすると、その方を<wbr>取り上げている<wbr>特集記事の<wbr>該当箇所へ<wbr>ジャンプします。<wbr>検索ボックスに<wbr>ひらが<wbr>な・カタカナ・漢字の<wbr>いずれで<wbr>入力しても<wbr>絞り込めます。</p>

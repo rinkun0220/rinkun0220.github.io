@@ -118,6 +118,23 @@ main { margin-top: var(--nav-height); padding: 24px; min-height: calc(100vh - va
 .panel.active { display: block !important; animation: fadeIn 0.4s ease-out; }
 @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
+/* 案内役マスコット「ツツオ」 */
+#panel-home{position:relative}
+.mascot{height:auto;display:block;flex:none;pointer-events:none;user-select:none;-webkit-user-select:none;transform-origin:50% 92%;filter:drop-shadow(0 5px 8px rgba(0,0,0,.55));animation:mascot-sway 4.4s ease-in-out infinite;will-change:transform}
+@keyframes mascot-sway{0%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-5px) rotate(3deg)}100%{transform:translateY(0) rotate(-3deg)}}
+@keyframes bubble-bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+.guide-bubble{position:relative;background:#fff;color:#1b2233;border-radius:14px;padding:8px 13px 9px;font-size:.84rem;font-weight:700;line-height:1.6;max-width:320px;box-shadow:0 4px 14px rgba(0,0,0,.35);animation:bubble-bob 4.4s ease-in-out infinite}
+.guide-bubble::before{content:"";position:absolute;left:-8px;bottom:16px;border:8px solid transparent;border-left:0;border-right:9px solid #fff}
+.guide-name{display:block;font-size:.7rem;font-weight:800;color:#e6485a;letter-spacing:.04em;margin-bottom:1px}
+.guide-row{display:flex;align-items:flex-end;gap:12px;margin:0 0 16px}
+.guide-row .mascot{width:92px}
+@media (max-width:600px){.guide-row{gap:10px;margin-bottom:12px}.guide-row .mascot{width:62px}.guide-bubble{font-size:.78rem;padding:7px 11px 8px}.guide-bubble::before{bottom:12px}}
+@media (prefers-reduced-motion:reduce){.mascot,.guide-bubble{animation:none}}
+.mascot-top{position:absolute;left:14px;top:14px;width:120px;z-index:6}
+.guide-top{position:absolute;left:146px;top:34px;z-index:6;pointer-events:none;max-width:min(300px,calc(100% - 170px))}
+@media (max-width:600px){.mascot-top{left:10px;top:10px;width:84px}.guide-top{left:102px;top:24px;max-width:calc(100% - 118px)}}
+@media (max-width:360px){.guide-top{font-size:.72rem;padding:6px 9px 7px}.guide-top .guide-name{display:none}}
+
 /* ヒーローセクション */
 .hero-slider { margin-bottom: 40px; border-radius: 16px; overflow: hidden; position: relative; height: 380px; background: var(--bg-darker); }
 .hero-item { position: absolute; width: 100%; height: 100%; opacity: 0; transition: opacity 0.8s ease; display: flex; align-items: flex-end; cursor: pointer; }
@@ -266,6 +283,8 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
 
 <main>
  <div id="panel-home" class="panel active">
+    <img class="mascot mascot-top" src="/tsutsuo.webp" width="120" height="122" alt="ANIMEDBのキャラクター「ツツオ」" decoding="async">
+    <div class="guide-bubble guide-top"><span class="guide-name">ツツオ</span>ようこそ〜！ 注目アニメを、<wbr>ゆるっと<wbr>案内しますよ〜</div>
     <div class="hero-slider" id="heroSlot">
       <div class="loader-wrap" style="display:flex;"><div class="loader"></div></div>
     </div>
