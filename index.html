@@ -1,31 +1,39 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<!-- Google tag (gtag.js) -->
+  <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-X4M05SEYCE"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
 
-  gtag('config', 'G-X4M05SEYCE');
+gtag('config', 'G-X4M05SEYCE');
 </script>
+  
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>アニメブログ｜ANIMEDB - 感想・考察・ランキング</title>
-<link rel="canonical" href="https://anime-db.jp/blog/">
-<meta name="description" content="2026年の春・夏・秋アニメの感想まとめ、おすすめランキング、作品考察などを掲載しています。ANIMEDB管理人による、独自のレビューです。">
-<meta name="robots" content="index,follow">
-<meta name="author" content="ANIMEDB">
-<meta property="og:title" content="アニメブログ｜ANIMEDB">
-<meta property="og:description" content="2026年の春・夏・秋アニメの感想まとめ、おすすめランキング、作品考察を掲載しています。">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://anime-db.jp/blog/">
 <meta name="google-adsense-account" content="ca-pub-4858195974765934">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4858195974765934" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>ANIMEDB｜今クールの注目アニメをピックアップ</title>
+<link rel="canonical" href="https://anime-db.jp/">
+<meta name="description" content="今シーズン放送中のアニメを網羅した、配信先まで分かる無料のアニメデータベースです。管理人独自のブログも公開しています。">
+<meta name="keywords" content="アニメ,2026秋アニメ,ランキング,神アニメ,泣けるアニメ,ANIMEDB,アニメDB,今期アニメ,アニメ一覧,dアニメストア">
+<meta name="robots" content="index,follow">
+<meta name="author" content="ANIMEDB">
+<meta property="og:title" content="ANIMEDB｜今クールの注目アニメをピックアップ">
+<meta property="og:description" content="今シーズン放送中のアニメを網羅した、配信先まで分かる無料のアニメデータベースです。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://anime-db.jp/">
+<meta property="og:site_name" content="ANIMEDB">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
 <style>
 :root {
   --bg-main: #0b0f19;
@@ -39,52 +47,79 @@
   --border-color: rgba(255,255,255,0.08);
   --nav-height: 64px;
 }
+
 * { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: 'Inter', 'Noto Sans JP', sans-serif; background: var(--bg-main); color: var(--text-main); line-height: 1.6; }
+body {
+  font-family: 'Inter', 'Noto Sans JP', sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* モーダル */
+#modalOv {
+  position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(4,6,10,0.85); backdrop-filter: blur(8px);
+  display: flex; justify-content: center; align-items: center;
+  z-index: -1; visibility: hidden; opacity: 0; transition: opacity 0.3s ease, visibility 0.3s;
+  cursor: pointer;
+}
+#modalOv.open {
+  z-index: 9999 !important; visibility: visible; opacity: 1;
+}
+.modal-body {
+  background: var(--bg-card); width: 90%; max-width: 600px; border-radius: 16px;
+  border: 1px solid var(--border-color); overflow: hidden; position: relative;
+  cursor: default; box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+  transform: translateY(20px); transition: transform 0.3s ease;
+}
+#modalOv.open .modal-body { transform: translateY(0); }
+.m-close-btn {
+  position: absolute; top: 16px; right: 16px; background: rgba(0,0,0,0.5); border: none;
+  color: #fff; width: 36px; height: 36px; border-radius: 50%; font-size: 20px;
+  cursor: pointer; z-index: 10; display: flex; align-items: center; justify-content: center;
+  transition: background 0.2s;
+}
+.m-close-btn:hover { background: var(--accent); }
+.m-info-block { padding: 54px 24px 24px 24px; max-height: 80vh; overflow-y: auto; }
+.m-title { font-size: 1.4rem; font-weight: 700; margin-bottom: 12px; color: #fff; padding-right: 30px; }
+.m-synopsis { font-size: 0.95rem; color: var(--text-muted); }
+
+/* ヘッダー */
 header {
-  height: var(--nav-height); background: rgba(11,15,25,0.98); backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border-color); display: flex; align-items: center;
+  height: var(--nav-height); background: rgba(11,15,25,0.98); backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255,71,87,0.15); display: flex; align-items: center;
   justify-content: space-between; padding: 0 24px; position: fixed; top: 0; width: 100%; z-index: 100;
+  box-shadow: 0 1px 20px rgba(0,0,0,0.4); gap: 12px;
 }
-.logo { font-size: 1.5rem; font-weight: 800; letter-spacing: 1px; text-decoration: none; flex-shrink: 0; }
+.logo { font-size: 1.5rem; font-weight: 800; letter-spacing: 1px; cursor: pointer; flex-shrink: 0; }
 .logo-a { color: #fff; } .logo-db { color: var(--accent); }
-.nav-links { display: flex; gap: 8px; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; -ms-overflow-style: none; }
+.nav-links { display: flex; gap: 4px; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; -ms-overflow-style: none; }
 .nav-links::-webkit-scrollbar { display: none; }
-.nav-item { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; font-weight: 500; padding: 8px 12px; border-radius: 6px; transition: all 0.2s; white-space: nowrap; flex-shrink: 0; }
-.nav-item:hover, .nav-item.active { color: #fff; background: rgba(255,255,255,0.05); }
-main { margin-top: var(--nav-height); padding: 40px 24px; max-width: 1100px; margin-left: auto; margin-right: auto; }
-.page-header { margin-bottom: 40px; }
-.page-header h1 { font-size: 2rem; font-weight: 800; margin-bottom: 8px; }
-.page-header h1 span { color: var(--accent); }
-.page-header p { color: var(--text-muted); font-size: 0.95rem; }
-.section-title { font-size: 1.3rem; font-weight: 700; margin: 40px 0 20px; display: flex; align-items: center; gap: 8px; }
-.section-title::before { content: ''; display: inline-block; width: 4px; height: 22px; background: var(--accent); border-radius: 2px; }
-.blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr)); gap: 24px; }
-.blog-card {
-  background: var(--bg-card); border-radius: 14px; overflow: hidden;
-  border: 1px solid var(--border-color); transition: transform 0.3s, border-color 0.3s;
-  text-decoration: none; display: flex; flex-direction: column;
+.nav-icon { filter: grayscale(1) opacity(.55); }
+.nav-item {
+  color: var(--text-muted); text-decoration: none; font-size: 0.85rem; font-weight: 600;
+  cursor: pointer; transition: all 0.2s; padding: 7px 14px; border-radius: 8px;
+  white-space: nowrap; display: inline-flex; align-items: center; gap: 5px;
+  border: 1px solid transparent; flex-shrink: 0;
 }
-.blog-card:hover { transform: translateY(-6px); border-color: rgba(255,255,255,0.2); }
-.blog-card-thumb {
-  width: 100%; height: 180px; object-fit: cover; background: linear-gradient(135deg, #1a2540, #0f1825);
-  display: flex; align-items: center; justify-content: center; font-size: 3rem;
+.nav-item:hover { color: #fff; background: rgba(255,255,255,0.07); border-color: rgba(255,255,255,0.08); }
+.nav-item.active { color: #fff; background: rgba(255,71,87,0.15); border-color: rgba(255,71,87,0.35); color: var(--accent); }
+@media (max-width: 768px) {
+  header { padding: 0 12px; }
+  .logo { font-size: 1.2rem; }
+  .nav-item { font-size: 0.78rem; padding: 6px 10px; }
 }
-.blog-card-body { padding: 20px; flex: 1; display: flex; flex-direction: column; }
-.blog-tag { display: inline-block; background: var(--accent); color: #fff; font-size: 0.7rem; font-weight: 700; padding: 3px 10px; border-radius: 20px; margin-bottom: 10px; }
-.blog-tag.season { background: #2563eb; }
-.blog-tag.ranking { background: #7c3aed; }
-.blog-tag.review { background: #059669; }
-.blog-tag.feature { background: #d97706; }
-.blog-card-title { font-size: 1rem; font-weight: 700; color: #fff; line-height: 1.5; margin-bottom: 10px; }
-.blog-card-desc { font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; flex: 1; }
-.blog-card-meta { margin-top: 14px; font-size: 0.8rem; color: rgba(255,255,255,0.3); }
-.site-footer { background: var(--bg-darker); border-top: 1px solid var(--border-color); padding: 30px 24px; text-align: center; margin-top: 60px; }
-.footer-links { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; margin-bottom: 16px; }
-.footer-link { color: var(--text-muted); text-decoration: none; font-size: 0.85rem; transition: color 0.2s; }
-.footer-link:hover { color: #fff; }
-.copyright { font-size: 0.8rem; color: rgba(255,255,255,0.3); }
-/* マスコット「ヨルミミ」 */
+
+/* メインコンテンツ */
+main { margin-top: var(--nav-height); padding: 24px; min-height: calc(100vh - var(--nav-height) - 150px); max-width: 1400px; margin-left: auto; margin-right: auto; overflow: visible; }
+.panel { display: none !important; }
+.panel.active { display: block !important; animation: fadeIn 0.4s ease-out; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+/* マスコット「ツツオ」 */
+#panel-home{position:relative}
 .mascot{height:auto;display:block;flex:none;pointer-events:none;user-select:none;-webkit-user-select:none;transform-origin:50% 92%;filter:drop-shadow(0 5px 8px rgba(0,0,0,.55));animation:mascot-sway 4.4s ease-in-out infinite;will-change:transform}
 @keyframes mascot-sway{0%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-5px) rotate(3deg)}100%{transform:translateY(0) rotate(-3deg)}}
 .guide-row{display:flex;align-items:flex-end;gap:8px;margin:0 0 10px}
@@ -94,6 +129,129 @@ main { margin-top: var(--nav-height); padding: 40px 24px; max-width: 1100px; mar
 .guide-row .mascot:nth-child(4){animation-delay:-3.3s;animation-duration:4.6s}
 @media (max-width:600px){.guide-row .mascot{width:62px}}
 @media (prefers-reduced-motion:reduce){.mascot{animation:none}}
+.mascot-top{position:absolute;left:14px;top:14px;width:120px;z-index:6}
+@media (max-width:600px){.mascot-top{left:10px;top:10px;width:84px}}
+
+/* ヒーローセクション */
+.hero-slider { margin-bottom: 40px; border-radius: 16px; overflow: hidden; position: relative; height: 380px; background: var(--bg-darker); }
+.hero-item { position: absolute; width: 100%; height: 100%; opacity: 0; transition: opacity 0.8s ease; display: flex; align-items: flex-end; cursor: pointer; }
+.hero-item.active { opacity: 1; z-index: 1; }
+.hero-bg { position: absolute; top:-12px; left:-12px; width:calc(100% + 24px); height:calc(100% + 24px); background-size: cover; background-position: center; filter: brightness(0.35) blur(10px); }
+/* 背景は縦長のポスターを横に引き伸ばすためぼかして雰囲気だけ使い、作品画像は右側にくっきり表示する */
+.hero-poster { position: absolute; right: 48px; top: 50%; transform: translateY(-50%); height: 320px; width: auto; max-width: 260px; object-fit: cover; border-radius: 10px; box-shadow: 0 8px 28px rgba(0,0,0,0.55); z-index: 2; }
+@media (max-width: 900px) { .hero-poster { display: none; } }
+@media (min-width: 901px) { .hero-content { max-width: calc(100% - 360px); } }
+.hero-content { position: relative; z-index: 2; padding: 40px; max-width: 800px; opacity: 0; transition: opacity 0.25s ease; }
+.hero-item.active .hero-content { opacity: 1; transition: opacity 0.3s ease 0.3s; }
+.hero-tag { background: var(--accent); color: #fff; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; display: inline-block; margin-bottom: 12px; }
+.hero-title { font-size: 2.2rem; font-weight: 800; margin-bottom: 12px; line-height: 1.3; text-shadow: 0 2px 4px rgba(0,0,0,0.5); }
+.hero-meta { display: flex; gap: 16px; font-size: 0.9rem; color: var(--text-muted); margin-bottom: 16px; }
+@media (max-width: 600px) { .hero-content { padding: 24px; } .hero-title { font-size: 1.5rem; } .hero-meta { margin-bottom: 12px; } }
+
+/* 検索・フィルター */
+.search-filter-wrapper { background: var(--bg-card); padding: 24px; border-radius: 16px; border: 1px solid var(--border-color); margin-bottom: 32px; }
+.search-box-row { display: flex; gap: 12px; margin-bottom: 16px; }
+.search-input { flex: 1; background: var(--bg-darker); border: 1px solid var(--border-color); border-radius: 8px; padding: 14px 16px; color: #fff; font-size: 1rem; transition: border-color 0.2s; }
+.search-input:focus { border-color: var(--accent); outline: none; }
+.search-btn { background: var(--accent); color: #fff; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; padding: 12px 24px; }
+.search-btn:hover { background: var(--accent-hover); }
+.filter-row { display: flex; flex-wrap: wrap; gap: 12px; }
+.filter-select { background: var(--bg-darker); color: #fff; border: 1px solid var(--border-color); border-radius: 6px; padding: 8px 12px; font-size: 0.9rem; }
+
+/* セクションタイトル */
+.section-title { font-size: 1.5rem; font-weight: 700; margin: 32px 0 16px 0; display: flex; align-items: center; gap: 8px; }
+.section-title::before { content: ''; display: inline-block; width: 4px; height: 24px; background: var(--accent); border-radius: 2px; }
+/* 「開発者の思い」の改行はPCだけ。スマホ（画面が狭い・タッチ操作中心）では改行せず前の文に続ける。
+   PC用サイト表示にしたスマホは画面幅が広く見えるため、幅だけでなくタッチ操作かどうかでも判定する */
+.adsense-seo-content .sp-br { display: none; }
+@media (max-width: 700px), (hover: none) and (pointer: coarse) { .adsense-seo-content .pc-br { display: none; } .adsense-seo-content .sp-br { display: inline; } }
+.adsense-seo-content p, .adsense-seo-content h1 { word-break: auto-phrase; line-break: strict; }
+
+.row-notes { margin: -10px 0 16px; }
+.row-notes .note-line { display: block; text-indent: 0; }
+.row-notes p { font-size: 0.78rem; color: var(--text-muted); margin: 0 0 4px; padding-left: 1em; text-indent: -1em; line-height: 1.6; }
+.scroll-row { display: flex; gap: 20px; overflow-x: auto; padding-bottom: 16px; scroll-behavior: smooth; }
+.scroll-row::-webkit-scrollbar { height: 8px; }
+.scroll-row::-webkit-scrollbar-track { background: transparent; }
+.scroll-row::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 4px; }
+
+/* カードデザイン */
+.anime-card {
+  flex: 0 0 220px; background: var(--bg-card); border-radius: 12px; overflow: hidden;
+  border: 1px solid var(--border-color); cursor: pointer; transition: transform 0.3s, border-color 0.3s;
+  position: relative; display: flex; flex-direction: column;
+}
+.anime-card:hover { transform: translateY(-6px); border-color: rgba(255,255,255,0.2); }
+.card-img-wrap { position: relative; width: 100%; padding-top: 142%; background: var(--bg-darker); overflow: hidden; }
+.card-img { position: absolute; top:0; left:0; width:100%; height:100%; object-fit: cover; transition: transform 0.5s; }
+.anime-card:hover .card-img { transform: scale(1.05); }
+.card-score-badge { position: absolute; top: 10px; left: 10px; background: rgba(11,15,25,0.85); backdrop-filter: blur(4px); padding: 4px 8px; border-radius: 6px; font-size: 0.8rem; font-weight: 700; color: var(--star-color); display: flex; align-items: center; gap: 4px; }
+.card-info { padding: 14px; flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
+.card-title { font-size: 0.95rem; font-weight: 600; color: #fff; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 8px; }
+.card-meta { font-size: 0.8rem; color: var(--text-muted); }
+
+/* 配信リンクバッジ */
+.card-stream-badges { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; z-index: 10; position: relative; }
+.badge { 
+  font-size: 0.65rem; font-weight: 600; padding: 3px 9px; border-radius: 4px; 
+  text-decoration: none; display: inline-block; transition: all 0.2s; 
+  background: transparent; border: 1px solid currentColor;
+}
+.badge:hover { opacity: 0.75; }
+.badge.abema { color: #4caf72; }
+.badge.colleize { color: #d9741f; }
+.badge.amnibus { color: #8a5fc4; }
+.stream-link.colleize { background: linear-gradient(135deg, #ff8c00, #ff6600); color: #fff; font-weight: 700; }
+.stream-link.amnibus { background: linear-gradient(135deg, #6a0dad, #9b30ff); color: #fff; font-weight: 700; }
+.badge.danime { color: #e08a45; }
+.badge.amazon { color: #4aa8d8; }
+.badge.netflix { color: #d9636f; }
+.badge.dmmtv { color: #b9d15f; } /* DMM TV */
+
+/* モーダル用の配信ボタン */
+.stream-links-block { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; padding-top: 14px; border-top: 1px dashed var(--border-color); }
+.stream-link {
+  display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+  padding: 10px 18px; border-radius: 8px; font-size: 0.9rem; font-weight: 700;
+  text-decoration: none; transition: all 0.2s; color: #fff; border: none;
+}
+.stream-link.abema { background: #33CC66; box-shadow: 0 4px 10px rgba(51,204,102,0.3); }
+.stream-link.abema:hover { background: #2eb85c; transform: translateY(-2px); }
+.stream-link.danime { background: #ff6600; box-shadow: 0 4px 10px rgba(255,102,0,0.3); }
+.stream-link.danime:hover { background: #e65c00; transform: translateY(-2px); }
+.stream-link.amazon { background: #00a8e1; box-shadow: 0 4px 10px rgba(0,168,225,0.3); }
+.stream-link.amazon:hover { background: #008fbf; transform: translateY(-2px); }
+.stream-link.netflix { background: #E50914; box-shadow: 0 4px 10px rgba(229,9,20,0.3); }
+.stream-link.netflix:hover { background: #b20710; transform: translateY(-2px); }
+.stream-link.dmmtv { background: #C8FF00; color: #111; font-weight:800; box-shadow: 0 4px 10px rgba(200,255,0,0.35); }
+.stream-link.dmmtv:hover { background: #b0e600; color: #111; transform: translateY(-2px); }
+
+/* 汎用テキストページ */
+.text-page-content { background: var(--bg-card); padding: 40px; border-radius: 16px; border: 1px solid var(--border-color); max-width: 900px; margin: 0 auto 40px auto; }
+.text-page-content h2 { font-size: 1.8rem; margin-bottom: 20px; color: #fff; border-bottom: 1px solid var(--border-color); padding-bottom: 10px; }
+.text-page-content h3 { font-size: 1.2rem; margin: 24px 0 12px 0; color: var(--accent); }
+.text-page-content p { color: var(--text-main); font-size: 0.95rem; margin-bottom: 16px; text-align: justify; }
+
+/* ユーティリティ */
+.anime-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 24px; }
+.loader-wrap { display: none; justify-content: center; align-items: center; padding: 40px 0; }
+.loader { width: 40px; height: 40px; border: 3px solid rgba(255,255,255,0.1); border-radius: 50%; border-top-color: var(--accent); animation: spin 1s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+#toast { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(100px); background: rgba(230,72,90,0.95); color: #fff; padding: 12px 24px; border-radius: 30px; font-weight: 600; font-size: 0.9rem; z-index: 10000; opacity: 0; transition: transform 0.3s, opacity 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.3); pointer-events: none;}
+#toast.show { opacity: 1; transform: translateX(-50%) translateY(0); pointer-events: auto; }
+.site-footer { background: var(--bg-darker); border-top: 1px solid var(--border-color); padding: 30px 24px; text-align: center; margin-top: 40px; }
+.footer-links { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; margin-bottom: 16px; }
+.footer-link { color: var(--text-muted); text-decoration: none; font-size: 0.85rem; cursor: pointer; transition: color 0.2s; }
+.footer-link:hover { color: #fff; }
+.copyright { font-size: 0.8rem; color: rgba(255,255,255,0.3); }
+  /* --- DMM TV 最高品質ボタンUI --- */
+.dmm-tv-btn {
+    background: linear-gradient(135deg, #FFD700 0%, #FFAA00 100%);
+    color: #1A1A1A;
+}
+.dmm-tv-btn:hover::before {
+    left: 100%;
+}
 /* 日本語の改行を自然にする設定（文節単位で改行・行頭禁則・1文字だけの行を避ける） */
 body{line-break:strict;overflow-wrap:anywhere}
 @supports (word-break:auto-phrase){body{word-break:auto-phrase}}
@@ -103,346 +261,1131 @@ td,th{overflow-wrap:anywhere}
 .nb{white-space:nowrap}
 h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-title,.pick-name,.next-article-title{text-wrap:balance}
 </style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"ANIMEDB","url":"https://anime-db.jp/","description":"1990年から最新まで全シーズン対応のアニメデータベースです。","inLanguage":"ja"}
+</script>
 </head>
 <body>
+
 <header>
-  <a href="https://anime-db.jp/" class="logo"><span class="logo-a">ANIME</span><span class="logo-db">DB</span></a>
-  <nav class="nav-links">
-    <a href="https://anime-db.jp/" class="nav-item">ホーム</a>
-    <a href="https://anime-db.jp/blog/" class="nav-item active">ブログ</a>
-    <a href="https://anime-db.jp/glossary.html" class="nav-item">用語集</a>
-    <a href="https://anime-db.jp/directory.html" class="nav-item">名鑑</a>
-    <a href="https://anime-db.jp/games.html" class="nav-item">診断・ガチャなど・ゲームも？</a>
-  </nav>
+  <div class="logo" style="touch-action: manipulation; -webkit-tap-highlight-color: transparent; -webkit-user-select: none; -moz-user-select: none; user-select: none; cursor: pointer;"><span class="logo-a">ANIME</span><span class="logo-db">DB</span></div>
+  <div class="nav-links">
+    <div class="nav-item active" id="nav-home" onclick="switchPanel('home')"><span class="nav-icon">🏠</span> ホーム</div>
+    <a href="/blog/" class="nav-item" style="text-decoration:none;"><span class="nav-icon">📝</span> ブログ</a>
+    <a href="/glossary.html" class="nav-item" style="text-decoration:none;"><span class="nav-icon">📖</span> 用語集</a>
+    <a href="/directory.html" class="nav-item" style="text-decoration:none;"><span class="nav-icon">🗂️</span> 名鑑</a>
+    <a href="/games.html" class="nav-item" style="text-decoration:none;"><span class="nav-icon">🎮</span> 診断・ガチャなど・ゲームも？</a>
+  </div>
 </header>
 
 <main>
-  <div class="page-header">
-    <div class="guide-row">
-      <img class="mascot " src="data:image/webp;base64,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" width="92" height="99" alt="ANIMEDBのキャラクター「ヨルミミ」" decoding="async">
+ <div id="panel-home" class="panel active">
+    <img class="mascot mascot-top" src="data:image/webp;base64,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" width="120" height="122" alt="ANIMEDBのキャラクター「ツツオ」" decoding="async">
+    <div class="hero-slider" id="heroSlot">
+      <div class="loader-wrap" style="display:flex;"><div class="loader"></div></div>
     </div>
-    <h1>アニメ<span>ブログ</span></h1>
-    <p>感想・考察・ランキングなど、<wbr>独自の<wbr>視点で<wbr>アニメを掘り<wbr>下げます。</p>
-    <p style="font-size:0.75rem;color:rgba(255,255,255,0.3);margin-top:6px;">※本サイトでは<wbr>制作者様の<wbr>お名前を<wbr>敬称略で<wbr>記載しております</p>
+
+    <div class="adsense-seo-content" style="margin-bottom: 40px; animation: fadeIn 0.8s ease-out;">
+      <h1 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 16px; line-height: 1.4;">ANIMEDB｜今クールの<wbr>注目アニメを<wbr>ピックアップします。<br class="sp-br">また<wbr>アニメの<wbr>入口の幅を<wbr>増やすための<wbr>サイトです。</h1>
+      <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 16px; line-height: 1.8;">
+        当サイトは、<wbr>毎クール70本前後<wbr>放送される<wbr>アニメ作品の<wbr>中から、<wbr>注目アニメを<wbr>データベースから<wbr>検索できます。<wbr>また、<wbr>アニメの<wbr>入口の幅を広くする<wbr>ために、<wbr>ブログから<wbr>アニメを<wbr>発掘する<wbr>ための<wbr>アニメサイトです。<wbr>「今クールの注目アニメ」と<wbr>「アニメの<wbr>入口の幅を<wbr>増やすための<wbr>ブログ」を<wbr>軸に、<wbr>そこから<wbr>ピックアップした<wbr>アニメと各<wbr>種動画配信サービスへの<wbr>つながりを<wbr>まとめました。<br>力を<wbr>入れているのが<a href="./blog/" style="color:var(--text-muted);text-decoration:none;"><wbr>管理人が<wbr>書いている<span style="color:var(--accent);"><wbr>ブログ</span>です</a>。<wbr>レビュー、<wbr>ランキングから<wbr>脚本家・監督・<wbr>制作会社・音楽・声優の掘り<wbr>下げまで、<wbr>管理人の<wbr>視点で<wbr>ブログを<wbr>書いています。<br class="pc-br"><a href="./about.html" style="color:var(--text-muted);text-decoration:none;"><span style="color:var(--accent);">開発者の<wbr>思い</span>を<wbr>見ていただければ<wbr>幸いです。</a>
+      </p>
+      <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 8px;">X・Instagram・TikTokにも<wbr>管理人の<wbr>感想を<wbr>投稿しています。<wbr>ぜひフォローしてください。</p>
+      <div style="display:flex; gap:10px; flex-wrap:wrap; margin-bottom: 24px;">
+        <a href="https://x.com/TsukuiKenta" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:6px;background:#000;color:#fff;font-size:0.82rem;font-weight:700;padding:7px 14px;border-radius:20px;text-decoration:none;">𝕏 X</a>
+        <a href="https://www.instagram.com/rinkun0220/" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:6px;background:#000;color:#fff;font-size:0.82rem;font-weight:700;padding:7px 14px;border-radius:20px;text-decoration:none;">📷 Instagram</a>
+        <a href="https://www.tiktok.com/@rinkun0220" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:6px;background:#010101;color:#fff;font-size:0.82rem;font-weight:700;padding:7px 14px;border-radius:20px;text-decoration:none;">🎵 TikTok</a>
+      </div>
+
+      <!-- 来期おすすめアニメ -->
+      <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px; padding: 24px; margin-bottom: 20px;">
+        <h2 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 16px; color: #fff; border-left: 4px solid var(--accent); padding-left: 10px;">
+          <!-- =============================================
+  【コピペ用】ANIMEDBトップページに追加するバナー
+  「## 【独自レビュー】管理人が選ぶ！2026年7月開始...」の
+  直前にこのコードを貼り付けてください
+============================================= -->
+
+<style>
+.summer-banner {
+  display: block;
+  background: linear-gradient(135deg, #0f0f0f 0%, #1a0a2e 45%, #0d1b3e 100%);
+  border: 1px solid #333;
+  border-left: 4px solid #ffffff;
+  border-radius: 10px;
+  padding: 18px 20px;
+  margin: 24px 0;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+.summer-banner::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, #ffffff, #ffffff, #ffffff);
+}
+.summer-banner:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(255, 255, 255, 0.2);
+  text-decoration: none;
+}
+.summer-banner-badge {
+  display: inline-block;
+  background: #ffffff;
+  color: #1a0a2e;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 2px 8px;
+  border-radius: 3px;
+  margin-bottom: 8px;
+}
+.summer-banner-title {
+  font-size: 17px;
+  font-weight: 900;
+  background: linear-gradient(135deg, #ffffff 0%, #ffe0a0 50%, #ff9f6b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 6px;
+  line-height: 1.3;
+}
+.summer-banner-sub {
+  font-size: 12px;
+  color: #aaa;
+  margin-bottom: 10px;
+}
+.summer-banner-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #ffffff;
+  color: #1a0a2e;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 20px;
+  transition: background 0.2s;
+}
+.summer-banner:hover .summer-banner-arrow {
+  background: #e0e0e0;
+}
+</style>
+
+<a class="summer-banner" href="https://anime-db.jp/blog/autumn2026-recommend.html">
+  <div class="summer-banner-badge">🍁 NEW · AUTUMN 2026</div>
+  <div class="summer-banner-title">2026年秋アニメ おすすめ10選</div>
+  <div class="summer-banner-sub">📺 見逃し厳禁 · 独自視点で<wbr>レビュー · 配信情報つき</div>
+  <div class="summer-banner-arrow">▶ 記事を読む →</div>
+</a>
+
+<!-- ブログバナー -->
+<a href="https://anime-db.jp/blog/" style="
+  display:block; background:linear-gradient(135deg,#1a0a00,#2a1000,#1a0a00);
+  border:1px solid var(--border-color); border-radius:14px; padding:22px 28px;
+  text-decoration:none; margin-bottom:12px;
+  transition:transform .2s,border-color .2s;
+" onmouseover="this.style.transform='translateY(-2px)';this.style.borderColor='rgba(255,255,255,0.25)'"
+   onmouseout="this.style.transform='';this.style.borderColor='var(--border-color)'">
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;">
+    <span style="background:#ffffff;color:#1a0a00;font-size:.72rem;font-weight:800;padding:3px 10px;border-radius:20px;">📝 ブログ</span>
+    <span style="color:#ffffff;font-size:.72rem;font-weight:700;">感想・考察・ランキング</span>
+  </div>
+  <div style="font-size:1.05rem;font-weight:800;color:#fff;margin-bottom:6px;line-height:1.5;">
+    ANIMEDBブログ
+  </div>
+  <div style="font-size:.85rem;color:#a4b0be;line-height:1.6;">
+    シーズンごとの<wbr>感想まとめや、<wbr>おすすめ作品、<wbr>声優・監督・<wbr>制作会社の<wbr>特集記事を<wbr>読めます。
+    <span style="color:#ff4757;font-weight:700;margin-left:8px;">ブログ一覧を見る →</span>
+  </div>
+</a>
+
+<!-- 用語集バナー -->
+<a href="https://anime-db.jp/glossary.html" style="
+  display:block; background:linear-gradient(135deg,#14141c,#20202c,#14141c);
+  border:1px solid var(--border-color); border-radius:14px; padding:22px 28px;
+  text-decoration:none; margin-bottom:12px;
+  transition:transform .2s,border-color .2s;
+" onmouseover="this.style.transform='translateY(-2px)';this.style.borderColor='rgba(255,255,255,0.25)'"
+   onmouseout="this.style.transform='';this.style.borderColor='var(--border-color)'">
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;">
+    <span style="background:#ffffff;color:#14141c;font-size:.72rem;font-weight:800;padding:3px 10px;border-radius:20px;">📖 用語集</span>
+    <span style="color:#e0e0e0;font-size:.72rem;font-weight:700;">アニメ初心者向け</span>
+  </div>
+  <div style="font-size:1.05rem;font-weight:800;color:#fff;margin-bottom:6px;line-height:1.5;">
+    アニメ初心者向け用語集
+  </div>
+  <div style="font-size:.85rem;color:#a4b0be;line-height:1.6;">
+    「1話切り」<wbr>「なろう系」<wbr>「シリーズ構成」など、<wbr>アニメサイトや<wbr>SNSでよく見る<wbr>言葉を<wbr>やさしく<wbr>解説します。
+    <span style="color:#ffffff;font-weight:700;margin-left:8px;">用語集を見る →</span>
+  </div>
+</a>
+
+<!-- 名鑑バナー -->
+<a href="https://anime-db.jp/directory.html" style="
+  display:block; background:linear-gradient(135deg,#14141c,#20202c,#14141c);
+  border:1px solid var(--border-color); border-radius:14px; padding:22px 28px;
+  text-decoration:none; margin-bottom:12px;
+  transition:transform .2s,border-color .2s;
+" onmouseover="this.style.transform='translateY(-2px)';this.style.borderColor='rgba(255,255,255,0.25)'"
+   onmouseout="this.style.transform='';this.style.borderColor='var(--border-color)'">
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;">
+    <span style="background:#ffffff;color:#14141c;font-size:.72rem;font-weight:800;padding:3px 10px;border-radius:20px;">🗂️ 名鑑</span>
+    <span style="color:#e0e0e0;font-size:.72rem;font-weight:700;">声優・脚本家・監督・<wbr>制作会社・アーティスト</span>
+  </div>
+  <div style="font-size:1.05rem;font-weight:800;color:#fff;margin-bottom:6px;line-height:1.5;">
+    声優・スタッフ名鑑
+  </div>
+  <div style="font-size:.85rem;color:#a4b0be;line-height:1.6;">
+    名前から、<wbr>ブログで<wbr>取り上げた方の<wbr>代表作や<wbr>特集記事へ<wbr>ジャンプできます。
+    <span style="color:#ffffff;font-weight:700;margin-left:8px;">名鑑を見る →</span>
+  </div>
+</a>
+
+<!-- 診断・ガチャ・ゲームバナー -->
+<a href="https://anime-db.jp/games.html" style="
+  display:block; background:linear-gradient(135deg,#14141c,#20202c,#14141c);
+  border:1px solid var(--border-color); border-radius:14px; padding:22px 28px;
+  text-decoration:none; margin-bottom:12px;
+  transition:transform .2s,border-color .2s;
+" onmouseover="this.style.transform='translateY(-2px)';this.style.borderColor='rgba(255,255,255,0.25)'"
+   onmouseout="this.style.transform='';this.style.borderColor='var(--border-color)'">
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;">
+    <span style="background:#ffffff;color:#14141c;font-size:.72rem;font-weight:800;padding:3px 10px;border-radius:20px;">🎮 診断・ガチャ</span>
+    <span style="color:#e0e0e0;font-size:.72rem;font-weight:700;">遊びながら<wbr>アニメに<wbr>出会える</span>
+  </div>
+  <div style="font-size:1.05rem;font-weight:800;color:#fff;margin-bottom:6px;line-height:1.5;">
+    診断・ガチャ一覧
+  </div>
+  <div style="font-size:.85rem;color:#a4b0be;line-height:1.6;">
+    制作会社診断、<wbr>視聴傾向診断<wbr>「あなたは何派？」、<wbr>埋もれた<wbr>名作ガチャなどを<wbr>まとめています。
+    <span style="color:#ffffff;font-weight:700;margin-left:8px;">一覧を見る →</span>
+  </div>
+</a>
+
+          【独自レビュー】管理人が<wbr>選ぶ！<wbr>2026年10月開始おすすめアニメ！
+        </h2>
+
+<!-- ▼▼▼ 10月開始おすすめ・作品列全体の flex ラッパー ▼▼▼ -->
+<div style="display: flex; flex-wrap: wrap; gap: 36px; align-items: flex-start;">
+
+  <!-- 作品1: 薬屋のひとりごと 第3期 -->
+  <div style="flex: 1; min-width: 250px; padding-bottom: 8px;">
+    <a href="https://kusuriyanohitorigoto.jp/season3/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; display: block;">
+      <h3 style="font-size: 1.05rem; color: #f0f0f0; margin-bottom: 8px; display: flex; align-items: center; gap: 6px;">
+        1. 薬屋の<wbr>ひとりごと 第3期
+        <span style="font-size: 0.7rem; background: var(--accent); color: #fff; padding: 2px 6px; border-radius: 4px; font-weight: 600;">公式サイト →</span>
+      </h3>
+    </a>
+    <p style="color: var(--text-main); font-size: 0.9rem; line-height: 1.6; text-align: justify; margin-bottom: 14px;">
+      <strong style="color: #e8eaf0;">「猫猫と<wbr>壬氏の<wbr>関係、<wbr>ついに<wbr>動き出す」</strong><br><br>
+      シリーズ累計5,700万部を<wbr>超える<wbr>人気作、<wbr>待望の<wbr>第3期です。<wbr>物語の<wbr>舞台は<wbr>後宮から<wbr>市井へと<wbr>移り、<wbr>猫猫と<wbr>壬氏の<wbr>関係も<wbr>いよいよ<wbr>大きく<wbr>動き出す転換点が<wbr>描かれます。<wbr>分割2クールという<wbr>ボリュームからも、<wbr>シリーズ屈指の<wbr>重要エピソードである<wbr>ことがうかが<wbr>えます。<wbr>12月には<wbr>劇場版の<wbr>公開も<wbr>控えており、<wbr>今期最も目が<wbr>離せない<wbr>シリーズの<wbr>一つです。
+    </p>
+    <div class="card-stream-badges">
+      <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener noreferrer" class="badge danime">dアニメ</a>
+      <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener noreferrer" class="badge amazon">Amazon</a>
+      <a href="https://netflix.com" target="_blank" rel="noopener noreferrer" class="badge netflix">Netflix</a>
+    </div>
   </div>
 
-  <div class="section-title">最新記事</div>
-  <div class="blog-grid">
-
-    <a href="./autumn2026-recommend.html" class="blog-card">
-      <div class="blog-card-thumb">🍁</div>
-      <div class="blog-card-body">
-        <span class="blog-tag review">レビュー</span>
-        <div class="blog-card-title">2026年秋アニメ おすすめ10選【見逃し厳禁】</div>
-        <div class="blog-card-desc">薬屋の<wbr>ひとりごと<wbr>第3期・氷の<wbr>城壁第2期・らんま1/2第3期など、<wbr>秋クール厳選10作品を<wbr>独自に<wbr>レビューします。</div>
-        <div class="blog-card-meta">2026年9月 · 読了目安 9分</div>
-      </div>
+  <!-- 作品2: 氷の城壁 第2期 -->
+  <div style="flex: 1; min-width: 250px; padding-bottom: 8px;">
+    <a href="https://korinojoheki-pr.com/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; display: block;">
+      <h3 style="font-size: 1.05rem; color: #f0f0f0; margin-bottom: 8px; display: flex; align-items: center; gap: 6px;">
+        2. 氷の<wbr>城壁 第2期
+        <span style="font-size: 0.7rem; background: var(--accent); color: #fff; padding: 2px 6px; border-radius: 4px; font-weight: 600;">公式サイト →</span>
+      </h3>
     </a>
+    <p style="color: var(--text-main); font-size: 0.9rem; line-height: 1.6; text-align: justify; margin-bottom: 14px;">
+      <strong style="color: #e8eaf0;">「不器用な<wbr>二人の<wbr>関係、<wbr>2期はどう<wbr>転がる？」</strong><br><br>
+      阿賀沢紅茶原作、<wbr>静かな<wbr>緊張感が漂う<wbr>青春群像劇の<wbr>第2期です。人と壁を<wbr>作ってしまう<wbr>氷川小雪と、<wbr>距離感ゼロで<wbr>踏み込んでくる<wbr>雨宮湊です。<wbr>1期の<wbr>ラストで<wbr>動き出した<wbr>二人の<wbr>関係が、<wbr>2期でどう<wbr>転がっていくのかが<wbr>最大の<wbr>見どころです。
+    </p>
+    <div class="card-stream-badges">
+      <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener noreferrer" class="badge danime">dアニメ</a>
+      <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener noreferrer" class="badge amazon">Amazon</a>
+      <a href="https://netflix.com" target="_blank" rel="noopener noreferrer" class="badge netflix">Netflix</a>
+    </div>
+  </div>
 
-    <a href="./spring2026-recommend.html" class="blog-card">
-      <div class="blog-card-thumb">☀️</div>
-      <div class="blog-card-body">
-        <span class="blog-tag review">レビュー</span>
-        <div class="blog-card-title">2026年夏アニメ作品を観た<wbr>感想まとめ【完全版】</div>
-        <div class="blog-card-desc">2026年夏クールの<wbr>放送作品を<wbr>視聴しました。<wbr>各作品の<wbr>1話〜最終話まで<wbr>追った<wbr>正直な<wbr>感想と<wbr>評価を<wbr>まとめました。</div>
-        <div class="blog-card-meta">2026年9月更新 · 読了目安 8分</div>
-      </div>
+  <!-- 作品3: アオのハコ Season2 -->
+  <div style="flex: 1; min-width: 250px; padding-bottom: 8px;">
+    <a href="https://aonohako-anime.com/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; display: block;">
+      <h3 style="font-size: 1.05rem; color: #f0f0f0; margin-bottom: 8px; display: flex; align-items: center; gap: 6px;">
+        3. アオの<wbr>ハコ Season2
+        <span style="font-size: 0.7rem; background: var(--accent); color: #fff; padding: 2px 6px; border-radius: 4px; font-weight: 600;">公式サイト →</span>
+      </h3>
     </a>
+    <p style="color: var(--text-main); font-size: 0.9rem; line-height: 1.6; text-align: justify; margin-bottom: 14px;">
+      <strong style="color: #e8eaf0;">「世界が<wbr>認めた<wbr>青春ラブストーリー、<wbr>堂々の<wbr>2期」</strong><br><br>
+      バドミントン部の<wbr>大喜と、<wbr>バスケ部の<wbr>先輩・千夏です。<wbr>等身大の恋と<wbr>部活を<wbr>描いた<wbr>青春ラブストーリー第2期です。<wbr>1期は<wbr>世界配信で<wbr>クランチロール・アニメアワード2025最優秀ロマンス作品賞を<wbr>受賞するなど、<wbr>海外でも高く<wbr>評価された<wbr>実力派です。
+    </p>
+    <div class="card-stream-badges">
+      <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener noreferrer" class="badge danime">dアニメ</a>
+      <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener noreferrer" class="badge amazon">Amazon</a>
+      <a href="https://netflix.com" target="_blank" rel="noopener noreferrer" class="badge netflix">Netflix</a>
+    </div>
+  </div>
 
-    <a href="./2026-spring-all.html" class="blog-card">
-      <div class="blog-card-thumb">🌸</div>
-      <div class="blog-card-body">
-        <span class="blog-tag review">レビュー</span>
-        <div class="blog-card-title">2026年春アニメ作品を観た<wbr>感想まとめ【完全版】</div>
-        <div class="blog-card-desc">2026年春クールの<wbr>放送作品を<wbr>視聴しました。<wbr>各作品の<wbr>1話〜最終話まで<wbr>追った<wbr>正直な<wbr>感想と<wbr>評価を<wbr>まとめました。</div>
-        <div class="blog-card-meta">2026年6月 · 読了目安 9分</div>
-      </div>
+  <!-- 作品4: らんま1/2 第3期 -->
+  <div style="flex: 1; min-width: 250px; padding-bottom: 8px;">
+    <a href="https://ranma-pr.com/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; display: block;">
+      <h3 style="font-size: 1.05rem; color: #f0f0f0; margin-bottom: 8px; display: flex; align-items: center; gap: 6px;">
+        4. らんま1/2 第3期
+        <span style="font-size: 0.7rem; background: var(--accent); color: #fff; padding: 2px 6px; border-radius: 4px; font-weight: 600;">公式サイト →</span>
+      </h3>
     </a>
+    <p style="color: var(--text-main); font-size: 0.9rem; line-height: 1.6; text-align: justify; margin-bottom: 14px;">
+      <strong style="color: #e8eaf0;">「MAPPA制作の<wbr>令和リメイク、<wbr>いよいよ<wbr>第3期」</strong><br><br>
+      高橋留美子による<wbr>不朽の<wbr>名作、<wbr>MAPPA制作による<wbr>令和リメイク第3期です。水を<wbr>かぶれば<wbr>女に、<wbr>お湯を<wbr>かぶれば男に<wbr>戻ってしまう<wbr>乱馬と、<wbr>許嫁の<wbr>あかねが繰り<wbr>広げる<wbr>ドタバタ格闘ラブコメディです。<wbr>放送直後から<wbr>Netflix独占配信という<wbr>体制です。
+    </p>
+    <div class="card-stream-badges">
+      <a href="https://netflix.com" target="_blank" rel="noopener noreferrer" class="badge netflix">Netflix</a>
+    </div>
+  </div>
 
-    <a href="./hidden-gems-2026-all.html" class="blog-card">
-      <div class="blog-card-thumb">💎</div>
-      <div class="blog-card-body">
-        <span class="blog-tag review">レビュー</span>
-        <div class="blog-card-title">2026年に<wbr>見逃した<wbr>隠れた<wbr>名作アニメ18選</div>
-        <div class="blog-card-desc">冬アニメから<wbr>秋アニメまで、<wbr>話題作の陰で<wbr>見落と<wbr>されやすい<wbr>2026年の<wbr>隠れた<wbr>名作18選です。<wbr>公式サイトへの<wbr>リンクつきで<wbr>紹介します。</div>
-        <div class="blog-card-meta">2026年11月 · 読了目安 9分</div>
-      </div>
+  <!-- 作品5: とある暗部の少女共棲 -->
+  <div style="flex: 1; min-width: 250px; padding-bottom: 8px;">
+    <a href="https://toaru-project.com/item/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; display: block;">
+      <h3 style="font-size: 1.05rem; color: #f0f0f0; margin-bottom: 8px; display: flex; align-items: center; gap: 6px;">
+        5. とある<wbr>暗部の<wbr>少女共棲
+        <span style="font-size: 0.7rem; background: var(--accent); color: #fff; padding: 2px 6px; border-radius: 4px; font-weight: 600;">公式サイト →</span>
+      </h3>
     </a>
+    <p style="color: var(--text-main); font-size: 0.9rem; line-height: 1.6; text-align: justify; margin-bottom: 14px;">
+      <strong style="color: #e8eaf0;">「『とある』プロジェクト再始動、<wbr>裏社会の<wbr>少女たち」</strong><br><br>
+      学園都市の<wbr>裏社会で<wbr>暗躍する<wbr>精鋭部隊<wbr>「アイテム」に<wbr>焦点を<wbr>当てた<wbr>ダークな<wbr>物語です。<wbr>監督は<wbr>長井龍雪です。<wbr>青春の<wbr>痛みを描く<wbr>手腕が、<wbr>暗部の<wbr>少女たちの<wbr>物語でどう<wbr>活きるかにも<wbr>注目です。「とある」シリーズに<wbr>追いつけない、よく<wbr>分からないという<wbr>方にこそ<wbr>おすすめしたい、<wbr>気軽に<wbr>入れる<wbr>入口の<wbr>一作です。
+    </p>
+    <div class="card-stream-badges">
+      <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener noreferrer" class="badge danime">dアニメ</a>
+    </div>
+  </div>
 
-    <a href="./hidden-gems-2025-all.html" class="blog-card">
-      <div class="blog-card-thumb">💎</div>
-      <div class="blog-card-body">
-        <span class="blog-tag review">レビュー</span>
-        <div class="blog-card-title">2025年に<wbr>見逃した<wbr>隠れた<wbr>名作アニメ18選</div>
-        <div class="blog-card-desc">管理人が<wbr>全作品視聴した<wbr>2025年の<wbr>隠れた<wbr>名作18選です。<wbr>完成度は<wbr>高いのに<wbr>話題に<wbr>ならなかった<wbr>作品ばかりです。<wbr>配信先リンクつきです。</div>
-        <div class="blog-card-meta">2026年10月更新 · 読了目安 9分</div>
-      </div>
+  <!-- 作品6: FX戦士くるみちゃん -->
+  <div style="flex: 1; min-width: 250px; padding-bottom: 8px;">
+    <a href="http://fxkurumi-info.com/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; display: block;">
+      <h3 style="font-size: 1.05rem; color: #f0f0f0; margin-bottom: 8px; display: flex; align-items: center; gap: 6px;">
+        6. FX戦士くる<wbr>みちゃん
+        <span style="font-size: 0.7rem; background: var(--accent); color: #fff; padding: 2px 6px; border-radius: 4px; font-weight: 600;">公式サイト →</span>
+      </h3>
     </a>
+    <p style="color: var(--text-main); font-size: 0.9rem; line-height: 1.6; text-align: justify; margin-bottom: 14px;">
+      <strong style="color: #e8eaf0;">「女子大生が<wbr>FXで<wbr>2000万円を<wbr>目指す異色コメディ」</strong><br><br>
+      ごく<wbr>普通の<wbr>女子大生・<wbr>福賀くるみが、FX<wbr>（外国為替証拠金取引）で<wbr>2000万円を<wbr>目指すと<wbr>いう、<wbr>令和らしい<wbr>異色コメディです。<wbr>チャートの<wbr>値動きに<wbr>一喜一憂する<wbr>姿は、<wbr>投資経験がある<wbr>人ほど<wbr>「あるある」と<wbr>共感できる<wbr>作りです。
+    </p>
+    <div class="card-stream-badges">
+      <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener noreferrer" class="badge danime">dアニメ</a>
+      <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener noreferrer" class="badge amazon">Amazon</a>
+      <a href="https://netflix.com" target="_blank" rel="noopener noreferrer" class="badge netflix">Netflix</a>
+    </div>
+    <div style="font-size:.75rem;color:var(--text-muted);margin-top:6px;">※Amazon・Netflixは<wbr>10月6日より<wbr>配信開始予定</div>
+  </div>
 
-    <a href="./hidden-gems-2023-2024.html" class="blog-card">
-      <div class="blog-card-thumb">💎</div>
-      <div class="blog-card-body">
-        <span class="blog-tag review">レビュー</span>
-        <div class="blog-card-title">2023〜2024年に<wbr>見逃した<wbr>隠れた<wbr>名作アニメ18選</div>
-        <div class="blog-card-desc">話題作の陰で<wbr>見逃されが<wbr>ちだった<wbr>2023〜2024年の<wbr>良作を<wbr>ピックアップします。知る人ぞ知る<wbr>作品ばかりです。</div>
-        <div class="blog-card-meta">2026年10月更新 · 読了目安 10分</div>
+</div>
+<!-- ▲▲▲ 10月開始おすすめ・作品列ここまで ▲▲▲ -->
+
+    </div>
+
+    <div id="homeRows"></div>
+
+    <!-- ▼▼▼ 国内で注目のアニメ（管理人セレクト・手動更新） ▼▼▼ -->
+    <section>
+      <h3 class="section-title">国内で<wbr>注目の<wbr>アニメ<wbr>（管理人セレクト）</h3>
+      <p style="font-size:0.78rem;color:var(--text-muted);margin:-10px 0 16px;">※作品画像は<wbr>MyAnimeListの<wbr>データベースから<wbr>取得して<wbr>表示しています。<wbr>更新直後や<wbr>MyAnimeList側の<wbr>状況に<wbr>より、<wbr>画像が<wbr>一時的に<wbr>表示されない<wbr>場合が<wbr>あります。</p>
+      <p style="font-size:0.78rem;color:var(--text-muted);margin:-10px 0 16px;">※★の<wbr>点数は<wbr>管理人スコア<wbr>（10点満点）です。<wbr>評価の<wbr>基準は<a href="/blog/rating-criteria.html" style="color:var(--accent);"><wbr>こちら</a>を<wbr>ご覧ください。</p>
+      <p style="font-size:0.78rem;color:var(--text-muted);margin:-10px 0 16px;">※作品の<wbr>画像・タイトルを<wbr>クリックすると、その<wbr>作品の<wbr>公式サイトが<wbr>新しい<wbr>タブで<wbr>開きます。</p>
+      <div class="scroll-row">
+
+        <div class="anime-card">
+          <a href="https://kusuriyanohitorigoto.jp/season3/" target="_blank" rel="noopener noreferrer" style="text-decoration:none;display:block;">
+            <div class="card-img-wrap">
+              <img src="https://cdn.myanimelist.net/images/anime/1949/159521.jpg" class="card-img" alt="薬屋のひとりごと 第3期" loading="lazy" onerror="this.src='https://via.placeholder.com/225x319/18181c/888898?text=No+Image'">
+              <div class="card-score-badge">★ 9.2</div>
+            </div>
+          </a>
+          <div class="card-info">
+            <div>
+              <a href="https://kusuriyanohitorigoto.jp/season3/" target="_blank" rel="noopener noreferrer" style="text-decoration:none;color:inherit;">
+                <div class="card-title">薬屋の<wbr>ひとりごと 第3期</div>
+              </a>
+              <div class="card-meta">2026 秋</div>
+            </div>
+            <div class="card-stream-badges">
+              <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener noreferrer" class="badge danime">dアニメ</a>
+              <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener noreferrer" class="badge amazon">Amazon</a>
+              <a href="https://netflix.com" target="_blank" rel="noopener noreferrer" class="badge netflix">Netflix</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="anime-card">
+          <a href="https://korinojoheki-pr.com/" target="_blank" rel="noopener noreferrer" style="text-decoration:none;display:block;">
+            <div class="card-img-wrap">
+              <img src="https://cdn.myanimelist.net/images/anime/1963/159754l.jpg" class="card-img" alt="氷の城壁 第2期" loading="lazy" onerror="this.src='https://via.placeholder.com/225x319/18181c/888898?text=No+Image'">
+              <div class="card-score-badge">★ 9.0</div>
+            </div>
+          </a>
+          <div class="card-info">
+            <div>
+              <a href="https://korinojoheki-pr.com/" target="_blank" rel="noopener noreferrer" style="text-decoration:none;color:inherit;">
+                <div class="card-title">氷の<wbr>城壁 第2期</div>
+              </a>
+              <div class="card-meta">2026 秋</div>
+            </div>
+            <div class="card-stream-badges">
+              <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener noreferrer" class="badge danime">dアニメ</a>
+              <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener noreferrer" class="badge amazon">Amazon</a>
+              <a href="https://netflix.com" target="_blank" rel="noopener noreferrer" class="badge netflix">Netflix</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="anime-card">
+          <a href="https://aonohako-anime.com/" target="_blank" rel="noopener noreferrer" style="text-decoration:none;display:block;">
+            <div class="card-img-wrap">
+              <img src="https://cdn.myanimelist.net/images/anime/1036/159741.jpg" class="card-img" alt="アオのハコ Season2" loading="lazy" onerror="this.src='https://via.placeholder.com/225x319/18181c/888898?text=No+Image'">
+              <div class="card-score-badge">★ 8.9</div>
+            </div>
+          </a>
+          <div class="card-info">
+            <div>
+              <a href="https://aonohako-anime.com/" target="_blank" rel="noopener noreferrer" style="text-decoration:none;color:inherit;">
+                <div class="card-title">アオの<wbr>ハコ Season2</div>
+              </a>
+              <div class="card-meta">2026 秋</div>
+            </div>
+            <div class="card-stream-badges">
+              <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener noreferrer" class="badge danime">dアニメ</a>
+              <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener noreferrer" class="badge amazon">Amazon</a>
+              <a href="https://netflix.com" target="_blank" rel="noopener noreferrer" class="badge netflix">Netflix</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="anime-card">
+          <a href="https://sh-anime.shochiku.co.jp/chiifuyo-anime/" target="_blank" rel="noopener noreferrer" style="text-decoration:none;display:block;">
+            <div class="card-img-wrap">
+              <img src="https://cdn.myanimelist.net/images/anime/1855/159934l.jpg" class="card-img" alt="追放されたチート付与魔術師は気ままなセカンドライフを謳歌する。" loading="lazy" onerror="this.src='https://via.placeholder.com/225x319/18181c/888898?text=No+Image'">
+              <div class="card-score-badge">★ 8.9</div>
+            </div>
+          </a>
+          <div class="card-info">
+            <div>
+              <a href="https://sh-anime.shochiku.co.jp/chiifuyo-anime/" target="_blank" rel="noopener noreferrer" style="text-decoration:none;color:inherit;">
+                <div class="card-title">追放された<wbr>チート付与魔術師は<wbr>気ままな<wbr>セカンドライフを<wbr>謳歌する。</div>
+              </a>
+              <div class="card-meta">2026 秋</div>
+            </div>
+            <div class="card-stream-badges">
+              <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener noreferrer" class="badge danime">dアニメ</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="anime-card">
+          <a href="https://ranma-pr.com/" target="_blank" rel="noopener noreferrer" style="text-decoration:none;display:block;">
+            <div class="card-img-wrap">
+              <img src="https://cdn.myanimelist.net/images/anime/1939/159199l.jpg" class="card-img" alt="らんま1/2 第3期" loading="lazy" onerror="this.src='https://via.placeholder.com/225x319/18181c/888898?text=No+Image'">
+              <div class="card-score-badge">★ 8.8</div>
+            </div>
+          </a>
+          <div class="card-info">
+            <div>
+              <a href="https://ranma-pr.com/" target="_blank" rel="noopener noreferrer" style="text-decoration:none;color:inherit;">
+                <div class="card-title">らんま1/2 第3期</div>
+              </a>
+              <div class="card-meta">2026 秋</div>
+            </div>
+            <div class="card-stream-badges">
+              <a href="https://netflix.com" target="_blank" rel="noopener noreferrer" class="badge netflix">Netflix</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="anime-card">
+          <a href="https://toaru-project.com/item/" target="_blank" rel="noopener noreferrer" style="text-decoration:none;display:block;">
+            <div class="card-img-wrap">
+              <img src="https://cdn.myanimelist.net/images/anime/1531/159988.jpg" class="card-img" alt="とある暗部の少女共棲" loading="lazy" onerror="this.src='https://via.placeholder.com/225x319/18181c/888898?text=No+Image'">
+              <div class="card-score-badge">★ 8.6</div>
+            </div>
+          </a>
+          <div class="card-info">
+            <div>
+              <a href="https://toaru-project.com/item/" target="_blank" rel="noopener noreferrer" style="text-decoration:none;color:inherit;">
+                <div class="card-title">とある<wbr>暗部の<wbr>少女共棲</div>
+              </a>
+              <div class="card-meta">2026 秋</div>
+            </div>
+            <div class="card-stream-badges">
+              <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener noreferrer" class="badge danime">dアニメ</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="anime-card">
+          <a href="https://anime-ann-e.jp/" target="_blank" rel="noopener noreferrer" style="text-decoration:none;display:block;">
+            <div class="card-img-wrap">
+              <img src="https://cdn.myanimelist.net/images/anime/1564/150049.jpg" class="card-img" alt="アン・シャーリー" loading="lazy" onerror="this.src='https://via.placeholder.com/225x319/18181c/888898?text=No+Image'">
+              <div class="card-score-badge">★ 8.4</div>
+            </div>
+          </a>
+          <div class="card-info">
+            <div>
+              <a href="https://anime-ann-e.jp/" target="_blank" rel="noopener noreferrer" style="text-decoration:none;color:inherit;">
+                <div class="card-title">アン・シャーリー</div>
+              </a>
+              <div class="card-meta">2025 春<wbr>（再放送）</div>
+            </div>
+            <div class="card-stream-badges">
+              <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener noreferrer" class="badge danime">dアニメ</a>
+              <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener noreferrer" class="badge amazon">Amazon</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="anime-card">
+          <a href="https://zommasu.com/" target="_blank" rel="noopener noreferrer" style="text-decoration:none;display:block;">
+            <div class="card-img-wrap">
+              <img src="https://cdn.myanimelist.net/images/anime/1151/160025.jpg" class="card-img" alt="#ゾンビさがしてます" loading="lazy" onerror="this.src='https://via.placeholder.com/225x319/18181c/888898?text=No+Image'">
+              <div class="card-score-badge">★ 8.4</div>
+            </div>
+          </a>
+          <div class="card-info">
+            <div>
+              <a href="https://zommasu.com/" target="_blank" rel="noopener noreferrer" style="text-decoration:none;color:inherit;">
+                <div class="card-title">#ゾンビさが<wbr>してます</div>
+              </a>
+              <div class="card-meta">2026 秋</div>
+            </div>
+            <div class="card-stream-badges">
+              <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener noreferrer" class="badge danime">dアニメ</a>
+              <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener noreferrer" class="badge amazon">Amazon</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="anime-card">
+          <a href="https://sekamajo-anime.com/" target="_blank" rel="noopener noreferrer" style="text-decoration:none;display:block;">
+            <div class="card-img-wrap">
+              <img src="https://cdn.myanimelist.net/images/anime/1341/159753.jpg" class="card-img" alt="世界最強の魔女、始めました" loading="lazy" onerror="this.src='https://via.placeholder.com/225x319/18181c/888898?text=No+Image'">
+              <div class="card-score-badge">★ 8.0</div>
+            </div>
+          </a>
+          <div class="card-info">
+            <div>
+              <a href="https://sekamajo-anime.com/" target="_blank" rel="noopener noreferrer" style="text-decoration:none;color:inherit;">
+                <div class="card-title">世界最強の<wbr>魔女、<wbr>始めました</div>
+              </a>
+              <div class="card-meta">2026 秋</div>
+            </div>
+            <div class="card-stream-badges">
+              <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener noreferrer" class="badge danime">dアニメ</a>
+              <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener noreferrer" class="badge amazon">Amazon</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="anime-card">
+          <a href="http://fxkurumi-info.com/" target="_blank" rel="noopener noreferrer" style="text-decoration:none;display:block;">
+            <div class="card-img-wrap">
+              <img src="https://cdn.myanimelist.net/images/anime/1928/160253.jpg" class="card-img" alt="FX戦士くるみちゃん" loading="lazy" onerror="this.src='https://via.placeholder.com/225x319/18181c/888898?text=No+Image'">
+              <div class="card-score-badge">★ 8.0</div>
+            </div>
+          </a>
+          <div class="card-info">
+            <div>
+              <a href="http://fxkurumi-info.com/" target="_blank" rel="noopener noreferrer" style="text-decoration:none;color:inherit;">
+                <div class="card-title">FX戦士くる<wbr>みちゃん</div>
+              </a>
+              <div class="card-meta">2026 秋</div>
+            </div>
+            <div class="card-stream-badges">
+              <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener noreferrer" class="badge danime">dアニメ</a>
+              <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener noreferrer" class="badge amazon">Amazon</a>
+              <a href="https://netflix.com" target="_blank" rel="noopener noreferrer" class="badge netflix">Netflix</a>
+            </div>
+          </div>
+        </div>
+
       </div>
-    </a>
+    </section>
+    <!-- ▲▲▲ 国内で注目のアニメここまで ▲▲▲ -->
 
-    <a href="./hidden-gems-history-2020s.html" class="blog-card">
-      <div class="blog-card-thumb">💎</div>
-      <div class="blog-card-body">
-        <span class="blog-tag review">レビュー</span>
-        <div class="blog-card-title">2020年代前半の<wbr>隠れた<wbr>名作アニメ25選</div>
-        <div class="blog-card-desc">映像研・オッドタクシー・サマータイムレンダなど、<wbr>2020年から<wbr>2024年の<wbr>隠れた<wbr>名作を<wbr>紹介します。<wbr>放送時期・原作・<wbr>制作会社つきです。</div>
-        <div class="blog-card-meta">2026年10月 · 読了目安 15分</div>
+  </div>
+
+  <div id="panel-about" class="panel">
+    <div class="text-page-content">
+      <h2>ANIMEDBに<wbr>込めた思い</h2>
+      <p>数ある<wbr>Webサイトの<wbr>中から<wbr>「ANIMEDB」に足を<wbr>運んでいただき、<wbr>本当に<wbr>ありがとう<wbr>ございます。</p>
+      <p>昨今、<wbr>1クールの<wbr>アニメ放映が<wbr>70本前後と<wbr>多くなっています。私も<wbr>そうですが、<wbr>アニメ選びに<wbr>追われて<wbr>過去の<wbr>名作を<wbr>忘れがちです。また<wbr>キー局の<wbr>アニメ枠の<wbr>拡大に<wbr>より、<wbr>アニメ被りで<wbr>リアルタイム視聴も<wbr>難しくなって<wbr>おります。<wbr>配信サイトも<wbr>ありますが<wbr>数日遅れの<wbr>配信です。<wbr>現在はその<wbr>転換点だと<wbr>感じています。その<wbr>ために、<wbr>見逃し作品が<wbr>ないようANIMEDBを<wbr>創りました。<wbr>データベースを<wbr>参考に<wbr>新しい<wbr>作品と<wbr>出会い、<wbr>過去の<wbr>思い出の<wbr>アニメ作品を<wbr>見直す場に<wbr>なれば、<wbr>開発者として<wbr>これ以上の<wbr>喜びは<wbr>ありません。その<wbr>ために、<wbr>数多くの<wbr>リンク先も<wbr>創りました。<wbr>あなたに<wbr>とって良い<wbr>アニメライフを！</p>
+    </div>
+  </div>
+
+  <div id="panel-privacy" class="panel">
+    <div class="text-page-content">
+      <h2>プライバシーポリシー</h2>
+      <p>プライバシーポリシーの<wbr>詳細は<wbr>以下の<wbr>ページを<wbr>ご覧ください。</p>
+      <div style="text-align: center; margin-top: 32px;">
+        <a href="./privacy.html" class="search-btn" style="text-decoration: none; display: inline-block; padding: 14px 40px; font-size: 1.1rem;">プライバシーポリシーを見る →</a>
       </div>
-    </a>
+    </div>
+  </div>
 
-    <a href="./hidden-gems-history-2010s.html" class="blog-card">
-      <div class="blog-card-thumb">💎</div>
-      <div class="blog-card-body">
-        <span class="blog-tag review">レビュー</span>
-        <div class="blog-card-title">2010年代の<wbr>隠れた<wbr>名作アニメ37選</div>
-        <div class="blog-card-desc">氷菓・宝石の<wbr>国・キルラキルなど、<wbr>2010年代の<wbr>隠れた<wbr>名作を<wbr>放送順に<wbr>紹介します。<wbr>ガチャの<wbr>「詳しく見る」から<wbr>飛べます。</div>
-        <div class="blog-card-meta">2026年10月 · 読了目安 22分</div>
+  <div id="panel-contact" class="panel">
+    <div class="text-page-content">
+      <h2>お問い合わせ</h2>
+      <p>当サイトに<wbr>関する<wbr>ご要望、<wbr>不具合の<wbr>ご報告、その他の<wbr>お問い合わせは、<wbr>以下の<wbr>ボタンより<wbr>お願いいたします。</p>
+      <div style="text-align: center; margin-top: 32px;">
+       <a href="./contact.html" class="search-btn" style="text-decoration: none; display: inline-block; padding: 14px 40px; font-size: 1.1rem;">お問い合わせ窓口へ →</a>
       </div>
-    </a>
-
-    <a href="./hidden-gems-history-2009.html" class="blog-card">
-      <div class="blog-card-thumb">💎</div>
-      <div class="blog-card-body">
-        <span class="blog-tag review">レビュー</span>
-        <div class="blog-card-title">2009年以前の<wbr>隠れた<wbr>名作アニメ15選</div>
-        <div class="blog-card-desc">灰羽連盟・<wbr>千年女優・蟲師・電脳コイルなど、<wbr>2009年以前の<wbr>隠れた<wbr>名作を<wbr>紹介します。<wbr>放送時期・原作・<wbr>制作会社つきです。</div>
-        <div class="blog-card-meta">2026年10月 · 読了目安 9分</div>
-      </div>
-    </a>
-
-    <a href="./isekai-top10.html" class="blog-card">
-      <div class="blog-card-thumb">⚔️</div>
-      <div class="blog-card-body">
-        <span class="blog-tag ranking">ランキング</span>
-        <div class="blog-card-title">異世界転生アニメおすすめ10選【2026年最新版】</div>
-        <div class="blog-card-desc">数多ある<wbr>異世界転生ものの<wbr>中から、<wbr>本当に<wbr>面白いと<wbr>思った<wbr>10作品を<wbr>厳選します。<wbr>初心者向けから<wbr>上級者向けまで<wbr>幅広く<wbr>紹介します。</div>
-        <div class="blog-card-meta">2026年6月 · 読了目安 7分</div>
-      </div>
-    </a>
-
-    <a href="./romance-top10.html" class="blog-card">
-      <div class="blog-card-thumb">💕</div>
-      <div class="blog-card-body">
-        <span class="blog-tag ranking">ランキング</span>
-        <div class="blog-card-title">泣ける<wbr>ラブコメアニメおすすめ10選【感動保証】</div>
-        <div class="blog-card-desc">笑えて<wbr>泣ける<wbr>ラブコメを<wbr>厳選します。<wbr>「とらドラ!」から<wbr>「CLANNAD」まで、<wbr>外せない<wbr>名作を<wbr>紹介します。</div>
-        <div class="blog-card-meta">2026年6月 · 読了目安 5分</div>
-      </div>
-    </a>
-
-    <a href="./battle-anime-top10.html" class="blog-card">
-      <div class="blog-card-thumb">🔥</div>
-      <div class="blog-card-body">
-        <span class="blog-tag ranking">ランキング</span>
-        <div class="blog-card-title">バトルアニメ歴代おすすめランキング10選</div>
-        <div class="blog-card-desc">迫力の<wbr>戦闘シーンが<wbr>魅力の<wbr>バトルアニメを<wbr>独自ランキングで<wbr>紹介します。<wbr>名シーン・作画・ストーリーを<wbr>総合的に<wbr>評価します。</div>
-        <div class="blog-card-meta">2026年5月 · 読了目安 6分</div>
-      </div>
-    </a>
-
-    <a href="./memories-anime.html" class="blog-card">
-      <div class="blog-card-thumb">🎞️</div>
-      <div class="blog-card-body">
-        <span class="blog-tag ranking">思い出</span>
-        <div class="blog-card-title">管理人が<wbr>思い出に残る<wbr>アニメ6選【実体<wbr>験つきレビュー】</div>
-        <div class="blog-card-desc">鋼の<wbr>錬金術師・宇宙よりも遠い<wbr>場所・ガンダムSEED・ヴァイオレットエヴァーガーデン・とらドラ・DEATH NOTEに<wbr>ついて、<wbr>管理人の<wbr>実体験と共に<wbr>振り返る、<wbr>人生に<wbr>刺さった<wbr>アニメ6選です。</div>
-        <div class="blog-card-meta">2026年7月 · 読了目安 6分</div>
-      </div>
-    </a>
-
-    <a href="./unexpected-hits.html" class="blog-card">
-      <div class="blog-card-thumb">🎁</div>
-      <div class="blog-card-body">
-        <span class="blog-tag feature">管理人の軸</span>
-        <div class="blog-card-title">観る前は<wbr>期待してなかったのに<wbr>刺さった<wbr>作品6選【管理人の<wbr>裏切られ体験】</div>
-        <div class="blog-card-desc">オッドタクシーから夜の<wbr>クラゲは<wbr>泳げないまで、<wbr>期待値ゼロから<wbr>覆された<wbr>6作品を<wbr>振り返ります。</div>
-        <div class="blog-card-meta">2026年10月 · 読了目安 6分</div>
-      </div>
-    </a>
-
-    <a href="./worst-anime-honest.html" class="blog-card">
-      <div class="blog-card-thumb">😇</div>
-      <div class="blog-card-body">
-        <span class="blog-tag feature">本音企画</span>
-        <div class="blog-card-title">話題に<wbr>ならないのに、<wbr>なぜ続編だけは<wbr>続くのか<wbr>【管理人の<wbr>本音】</div>
-        <div class="blog-card-desc">似た<wbr>設定の<wbr>作品が<wbr>量産される<wbr>中、<wbr>SNSで<wbr>静かなのに<wbr>続編だけは<wbr>続くのは<wbr>なぜかを、<wbr>「虚無枠」と、<wbr>追放系・悪役令嬢ものの<wbr>量産を例に<wbr>考えます。</div>
-        <div class="blog-card-meta">2026年10月 · 読了目安 8分</div>
-      </div>
-    </a>
-
-    <a href="./rating-criteria.html" class="blog-card">
-      <div class="blog-card-thumb">🎯</div>
-      <div class="blog-card-body">
-        <span class="blog-tag feature">管理人の軸</span>
-        <div class="blog-card-title">S評価と<wbr>A評価、何が<wbr>違うのか<wbr>【管理人の<wbr>評価基準を<wbr>公開】</div>
-        <div class="blog-card-desc">レビュー記事の<wbr>S/A/B/C評価は<wbr>何基準？<wbr>演出派か<wbr>脚本派か、<wbr>1話切りの<wbr>基準まで<wbr>初公開します。</div>
-        <div class="blog-card-meta">2026年10月更新 · 読了目安 6分</div>
-      </div>
-    </a>
-
-    <a href="./checklist-anime.html" class="blog-card">
-      <div class="blog-card-thumb">🔍</div>
-      <div class="blog-card-body">
-        <span class="blog-tag feature">管理人の軸</span>
-        <div class="blog-card-title">アニメを観る前に必ず<wbr>チェックする<wbr>項目6つ<wbr>【管理人の<wbr>選び方】</div>
-        <div class="blog-card-desc">脚本家・監督・<wbr>制作会社・声優・主題歌まで、<wbr>管理人が<wbr>アニメを選ぶ<wbr>判断基準を<wbr>初公開します。</div>
-        <div class="blog-card-meta">2026年8月 · 読了目安 7分</div>
-      </div>
-    </a>
-
-    <a href="./legend-seiyuu-favorites.html" class="blog-card">
-      <div class="blog-card-thumb">⭐</div>
-      <div class="blog-card-body">
-        <span class="blog-tag feature">変幻自在の<wbr>演技力を<wbr>持つ声優特集</span>
-        <div class="blog-card-title">変幻自在の<wbr>演技力を<wbr>持つ声優9人まとめ【大塚芳忠・石田彰・三木眞一郎・井上喜久子・<wbr>林原めぐみ・<wbr>沢城みゆき&nbsp;他】</div>
-        <div class="blog-card-desc">役ごとに<wbr>変幻自在の<wbr>芝居を<wbr>見せ、<wbr>作品の質を<wbr>底上げする<wbr>声優9人の<wbr>代表作を<wbr>紹介します。</div>
-        <div class="blog-card-meta">2026年9月更新 · 読了目安 9分</div>
-      </div>
-    </a>
-
-    <a href="./nextgen-seiyuu-favorites.html" class="blog-card">
-      <div class="blog-card-thumb">🎙️</div>
-      <div class="blog-card-body">
-        <span class="blog-tag feature">主役級声優特集</span>
-        <div class="blog-card-title">主役級声優11人まとめ【悠木碧・羊宮妃那・鈴代紗弓・夏吉ゆう<wbr>こ・大塚剛央・関根明良・<wbr>千葉翔也&nbsp;他】</div>
-        <div class="blog-card-desc">今、<wbr>主役級として<wbr>活躍する<wbr>声優11人の<wbr>代表作を<wbr>紹介します。<wbr>悠木碧は<wbr>別格として<wbr>特別収録しています。<wbr>これから<wbr>応援したい<wbr>声優を探す<wbr>入り口に<wbr>どうぞ。</div>
-        <div class="blog-card-meta">2026年9月更新 · 読了目安 12分</div>
-      </div>
-    </a>
-
-    <a href="./male-seiyuu-favorites.html" class="blog-card">
-      <div class="blog-card-thumb">🎙️</div>
-      <div class="blog-card-body">
-        <span class="blog-tag feature">男性声優特集</span>
-        <div class="blog-card-title">男性声優9人の<wbr>代表作まとめ【中村悠一・<wbr>杉田智和・津田健次郎・梶裕貴・松岡禎丞・内田雄馬&nbsp;他】</div>
-        <div class="blog-card-desc">男性声優9人の<wbr>代表作を<wbr>紹介します。<wbr>声優買いという<wbr>視点で<wbr>アニメを<wbr>掘り下げたい<wbr>人向けです。</div>
-        <div class="blog-card-meta">2026年9月更新 · 読了目安 8分</div>
-      </div>
-    </a>
-
-    <a href="./female-seiyuu-favorites.html" class="blog-card">
-      <div class="blog-card-thumb">🎙️</div>
-      <div class="blog-card-body">
-        <span class="blog-tag feature">女性声優特集</span>
-        <div class="blog-card-title">女性声優8人の<wbr>代表作まとめ【花澤香菜・早見沙織・佐倉綾音・種﨑敦美・<wbr>水瀬いのり&nbsp;他】</div>
-        <div class="blog-card-desc">女性声優8人の<wbr>代表作を<wbr>紹介します。<wbr>声優買いという<wbr>視点で<wbr>アニメを<wbr>掘り下げたい<wbr>人向けです。</div>
-        <div class="blog-card-meta">2026年9月更新 · 読了目安 7分</div>
-      </div>
-    </a>
-
-    <a href="./director-favorites.html" class="blog-card">
-      <div class="blog-card-thumb">🎬</div>
-      <div class="blog-card-body">
-        <span class="blog-tag feature">監督特集</span>
-        <div class="blog-card-title">監督8人の<wbr>代表作まとめ【長井龍雪・石原立也・石立太一・<wbr>水島努・新海誠・山田尚子・幾原邦彦・高松信司】</div>
-        <div class="blog-card-desc">監督8人の<wbr>代表作を<wbr>紹介します。<wbr>監督買いの<wbr>視点で<wbr>アニメを<wbr>観返してみたい<wbr>人向けです。</div>
-        <div class="blog-card-meta">2026年9月更新 · 読了目安 8分</div>
-      </div>
-    </a>
-
-    <a href="./scriptwriter-favorites.html" class="blog-card">
-      <div class="blog-card-thumb">✍️</div>
-      <div class="blog-card-body">
-        <span class="blog-tag feature">脚本家特集</span>
-        <div class="blog-card-title">脚本家8人の<wbr>代表作まとめ【吉田玲子・岡田麿里・花田十輝・横手美智子・あ<wbr>おしまたかし・虚淵玄・大河内一楼・上江洲誠】</div>
-        <div class="blog-card-desc">脚本家8人の<wbr>代表作を<wbr>紹介します。<wbr>脚本家買いという<wbr>視点で<wbr>アニメを<wbr>掘り下げたい<wbr>人向けです。</div>
-        <div class="blog-card-meta">2026年9月更新 · 読了目安 9分</div>
-      </div>
-    </a>
-
-    <a href="./studio-favorites.html" class="blog-card">
-      <div class="blog-card-thumb">🏢</div>
-      <div class="blog-card-body">
-        <span class="blog-tag feature">制作会社特集</span>
-        <div class="blog-card-title">制作会社16社の<wbr>代表作まとめ【P.A.WORKS・京都アニメーション・CloverWorks&nbsp;他】</div>
-        <div class="blog-card-desc">制作会社16社の<wbr>代表作を<wbr>一挙に<wbr>紹介します。<wbr>見逃し作品が<wbr>ないか<wbr>チェック用に<wbr>どうぞ。</div>
-        <div class="blog-card-meta">2026年9月更新 · 読了目安 13分</div>
-      </div>
-    </a>
-
-    <a href="./artist-anime-favorites.html" class="blog-card">
-      <div class="blog-card-thumb">🎵</div>
-      <div class="blog-card-body">
-        <span class="blog-tag feature">邦楽アーティスト特集</span>
-        <div class="blog-card-title">アーティスト11組が<wbr>手掛けた<wbr>アニメまとめ【米津玄師・中島美嘉・Mrs. GREEN APPLE&nbsp;他】</div>
-        <div class="blog-card-desc">邦楽アーティストが<wbr>手がけた<wbr>アニメ主題歌を<wbr>まとめて<wbr>紹介します。<wbr>音楽好きが<wbr>アニメを<wbr>発見する<wbr>入り口に<wbr>どうぞ。</div>
-        <div class="blog-card-meta">2026年9月更新 · 読了目安 11分</div>
-      </div>
-    </a>
-
-    <a href="./conan-genetics-guide.html" class="blog-card">
-      <div class="blog-card-thumb">🧬</div>
-      <div class="blog-card-body">
-        <span class="blog-tag feature">特集</span>
-        <div class="blog-card-title">名探偵コナン<wbr>「親から子へ」<wbr>名探偵の<wbr>血筋ガイド【工藤家・服部家・<wbr>毛利家・黒羽家】</div>
-        <div class="blog-card-desc">新一・<wbr>平次・蘭・快斗の<wbr>推理力や<wbr>特技は、実は<wbr>親から<wbr>受け継いだものです。<wbr>4つの<wbr>家族に<wbr>注目した<wbr>血筋特集です。</div>
-        <div class="blog-card-meta">2026年9月更新 · 読了目安 6分</div>
-      </div>
-    </a>
-
-    <a href="./conan-romance-guide.html" class="blog-card">
-      <div class="blog-card-thumb">💘</div>
-      <div class="blog-card-body">
-        <span class="blog-tag feature">特集</span>
-        <div class="blog-card-title">名探偵コナン恋愛名場面ガイド【新一×蘭・園子×京極・平次×和葉・高木×佐藤・快斗×青子を<wbr>時系列で<wbr>振り返る】</div>
-        <div class="blog-card-desc">事件解決だけじゃない、もう<wbr>一つの<wbr>魅力です。<wbr>怪盗キッド編を含む<wbr>5組の<wbr>カップルの<wbr>名場面を、<wbr>別視点で<wbr>時系列に<wbr>振り返る<wbr>特集です。</div>
-        <div class="blog-card-meta">2026年9月更新 · 読了目安 8分</div>
-      </div>
-    </a>
-
-    <a href="./conan-advanced-guide.html" class="blog-card">
-      <div class="blog-card-thumb">🕵️</div>
-      <div class="blog-card-body">
-        <span class="blog-tag feature">特集</span>
-        <div class="blog-card-title">名探偵コナン上級ガイド【正体判明ミステリーを<wbr>時系列で<wbr>整理：新出先生〜あの<wbr>方編】</div>
-        <div class="blog-card-desc">初心者ガイドの続編<wbr>（ネタバレ全開）です。<wbr>新出先生・沖矢昴・安室透・RUM、そして<wbr>組織の頂点<wbr>「あの方」まで<wbr>正体判明の<wbr>流れを<wbr>時系列で<wbr>整理します。</div>
-        <div class="blog-card-meta">2026年9月更新 · 読了目安 8分</div>
-      </div>
-    </a>
-
-    <a href="./conan-beginner-guide.html" class="blog-card">
-      <div class="blog-card-thumb">🕵️</div>
-      <div class="blog-card-body">
-        <span class="blog-tag feature">特集</span>
-        <div class="blog-card-title">名探偵コナン初心者ガイド【親から<wbr>子へ、<wbr>今から<wbr>見せるならこの<wbr>順番で】</div>
-        <div class="blog-card-desc">原作・アニメ8割、<wbr>劇場版は<wbr>全29作品視聴済みの<wbr>管理人が、<wbr>これから<wbr>観始める<wbr>人向けに<wbr>入り口を<wbr>解説します。<wbr>映画6選つきです。</div>
-        <div class="blog-card-meta">2026年9月更新 · 読了目安 9分</div>
-      </div>
-    </a>
-
-    <a href="./toaru-guide.html" class="blog-card">
-      <div class="blog-card-thumb">⚡</div>
-      <div class="blog-card-body">
-        <span class="blog-tag feature">特集</span>
-        <div class="blog-card-title">「とある」シリーズの観る<wbr>順番ガイド【超電磁砲から<wbr>入るのが<wbr>おすすめな<wbr>理由】</div>
-        <div class="blog-card-desc">超電磁砲から入る<wbr>視聴順と、<wbr>禁書目録から<wbr>入らない<wbr>理由を、<wbr>2009年に<wbr>リアルタイムで観た<wbr>管理人が<wbr>解説します。一番<wbr>好きな<wbr>超電磁砲Sの<wbr>見どころ<wbr>つきです。</div>
-        <div class="blog-card-meta">2026年10月 · 読了目安 4分</div>
-      </div>
-    </a>
-
+    </div>
   </div>
 </main>
 
 <footer class="site-footer">
   <div class="footer-links">
-    <a href="https://anime-db.jp/" class="footer-link">ホーム</a>
-    <a href="https://anime-db.jp/blog/" class="footer-link">ブログ</a>
-    <a href="https://anime-db.jp/about.html" class="footer-link">ANIMEDBに<wbr>ついて</a>
-    <a href="https://anime-db.jp/privacy.html" class="footer-link">プライバシーポリシー</a>
-    <a href="https://anime-db.jp/contact.html" class="footer-link">お問い合わせ</a>
-    <a href="https://anime-db.jp/changelog.html" class="footer-link">更新履歴</a>
+    <a href="./about.html" class="footer-link" style="text-decoration:none;color:#4a9eff;">開発者の<wbr>思い</a>
+    <a href="./privacy.html" class="footer-link" style="text-decoration:none;">プライバシーポリシー</a>
+    <a href="./contact.html" class="footer-link" style="text-decoration:none;">お問い合わせ</a>
+    <a href="./changelog.html" class="footer-link" style="text-decoration:none;">更新履歴</a>
   </div>
-  <p class="copyright">© 2026 ANIMEDB. All rights reserved.</p>
+  <div class="copyright">&copy; 2026 ANIMEDB. All Rights Reserved.</div>
 </footer>
+
+<div id="modalOv" onclick="closeModal()">
+  <div class="modal-body" onclick="event.stopPropagation()">
+    <button class="m-close-btn" onclick="closeModal()">&times;</button>
+    <div class="m-info-block">
+      <div class="m-title" id="mTitle">作品タイトル</div>
+      <div class="m-synopsis" id="mSynopsis"></div>
+      <div class="stream-links-block" id="mStreamSlot"></div>
+    </div>
+  </div>
+</div>
+
+<div id="toast"></div>
+
+<script>
+const BACKUP_DATA = {
+  now: [
+    { mal_id: 60601, title: "Kusuriya no Hitorigoto Season 3", title_japanese: "薬屋のひとりごと 第3期", score: 9.2, year: 2026, season: "fall", images: { webp: { image_url: "https://cdn.myanimelist.net/images/anime/1708/130510.jpg", large_image_url: "https://cdn.myanimelist.net/images/anime/1708/130510.jpg" } }, synopsis: "後宮から市井へと舞台を移し、猫猫と壬氏の関係が大きく動き出す第3期。" },
+    { mal_id: 60602, title: "Koori no Joheki Season 2", title_japanese: "氷の城壁 第2期", score: 9.0, year: 2026, season: "fall", images: { webp: { image_url: "https://cdn.myanimelist.net/images/anime/1978/141288.jpg", large_image_url: "https://cdn.myanimelist.net/images/anime/1978/141288.jpg" } }, synopsis: "不器用な高校生たちが織りなす青春群像劇、待望の第2期。" },
+    { mal_id: 60603, title: "Ao no Hako Season 2", title_japanese: "アオのハコ Season2", score: 8.9, year: 2026, season: "fall", images: { webp: { image_url: "https://cdn.myanimelist.net/images/anime/1764/135598.jpg", large_image_url: "https://cdn.myanimelist.net/images/anime/1764/135598.jpg" } }, synopsis: "バドミントン部の大喜とバスケ部の千夏、青春スポーツラブストーリー第2期。" },
+    { mal_id: 60604, title: "Ranma 1/2 Season 3", title_japanese: "らんま1/2 第3期", score: 8.8, year: 2026, season: "fall", images: { webp: { image_url: "https://cdn.myanimelist.net/images/anime/1015/126122.jpg", large_image_url: "https://cdn.myanimelist.net/images/anime/1015/126122.jpg" } }, synopsis: "高橋留美子原作、MAPPA制作の令和リメイク第3期。放送直後よりNetflix独占配信。" }
+  ],
+  top2026: [
+    { mal_id: 60601, title: "Kusuriya no Hitorigoto Season 3", title_japanese: "薬屋のひとりごと 第3期", score: 9.2, year: 2026, images: { webp: { image_url: "https://cdn.myanimelist.net/images/anime/1708/130510.jpg" } } },
+    { mal_id: 60602, title: "Koori no Joheki Season 2", title_japanese: "氷の城壁 第2期", score: 9.0, year: 2026, images: { webp: { image_url: "https://cdn.myanimelist.net/images/anime/1978/141288.jpg" } } }
+  ],
+  topAll: [
+    { mal_id: 5114, title: "Fullmetal Alchemist: Brotherhood", title_japanese: "鋼の錬金術師 FULLMETAL ALCHEMIST", score: 9.10, year: 2009, images: { webp: { image_url: "https://cdn.myanimelist.net/images/anime/1223/96541.jpg" } } },
+    { mal_id: 52991, title: "Sousou no Frieren", title_japanese: "葬送のフリーレン", score: 9.39, year: 2024, images: { webp: { image_url: "https://cdn.myanimelist.net/images/anime/1015/138075.jpg" } } }
+  ]
+};
+
+// 状態管理
+const STATE = { cache: {}, currentHeroIndex: 0, heroTimer: null };
+const API_BASE = "https://api.jikan.moe/v4";
+const CURRENT_YEAR = new Date().getFullYear();
+
+document.addEventListener("DOMContentLoaded", () => {
+  loadHomeContent();
+});
+
+function switchPanel(panelId) {
+  document.querySelectorAll(".panel").forEach(p => p.classList.remove("active"));
+  document.querySelectorAll(".nav-item").forEach(n => n.classList.remove("active"));
+
+  const targetPanel = document.getElementById(`panel-${panelId}`);
+  const targetNav = document.getElementById(`nav-${panelId}`);
+  if (targetPanel) targetPanel.classList.add("active");
+  if (targetNav) targetNav.classList.add("active");
+
+  // モーダルの overflow:hidden が残ってしまうケースの保険
+  document.body.style.overflow = "";
+  const modalOv = document.getElementById("modalOv");
+  if (modalOv) modalOv.classList.remove("open");
+
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function getJapaneseTitle(anime) {
+  if (anime.title_japanese) return anime.title_japanese;
+  if (anime.titles && Array.isArray(anime.titles)) {
+    const jaTitle = anime.titles.find(t => t.type === 'Japanese');
+    if (jaTitle) return jaTitle.title;
+  }
+  return anime.title;
+}
+
+function generateStreamBadgesHTML(title) {
+  const encoded = encodeURIComponent(title);
+  const danimeUrl = `https://animestore.docomo.ne.jp/animestore/sch_pc?searchKey=${encoded}`;
+  const amazonUrl = `https://www.amazon.co.jp/s?k=${encoded}&i=instant-video`;
+  const netflixBadgeUrl = `https://www.netflix.com/search?q=${encoded}`
+
+  return `
+    <div class="card-stream-badges" onclick="event.stopPropagation()">
+      <a href="${danimeUrl}" target="_blank" rel="noopener noreferrer" class="badge danime">dアニメ</a>
+      <a href="${amazonUrl}" target="_blank" rel="noopener noreferrer" class="badge amazon">Amazon</a>
+      <a href="${netflixBadgeUrl}" target="_blank" rel="noopener noreferrer" class="badge netflix">Netflix</a>
+    </div>
+  `;
+}
+
+async function loadHomeContent() {
+  const rowsContainer = document.getElementById("homeRows");
+  if (!rowsContainer) return;
+  rowsContainer.innerHTML = "";
+
+  const globalSeenIds = new Set();
+  function dedup(list) {
+    const result = [];
+    for (const a of list) {
+      if (!a.mal_id || globalSeenIds.has(a.mal_id)) continue;
+      globalSeenIds.add(a.mal_id);
+      result.push(a);
+    }
+    return result;
+  }
+
+  // 上部のスライダーは、このページに書いてある「国内で注目のアニメ（管理人セレクト）」から作る。
+  // （以前はMyAnimeListのAPIの応答を待ってから表示していたため、APIが重い・つながらないときは
+  // 表示まで1分以上かかり、バックアップのダミーデータが出てしまっていた）
+  const staticHero = buildStaticHeroList();
+  if (staticHero.length > 0) renderHeroSlider(staticHero);
+
+  // 「海外で注目」の行は、AniList（アニメの評価・人気データを公開している海外のサービス）のデータが
+  // 取得できたときだけ後から追加する。取得できなければ表示しない。
+  // （以前使っていたJikan API（MyAnimeList）が長期間つながらなくなったため、AniListに切り替えた）
+  try {
+    const list = await fetchAniListSeason();
+    if (list.length > 0) {
+      const unique = dedup(list);
+      if (staticHero.length === 0) renderHeroSlider(unique.slice(0, 5));
+      createScrollRow(rowsContainer, "海外で今シーズン注目のアニメ", unique, "※AniList（海外のアニメ情報サービス）のユーザー評価・人気データをもとに、海外で話題の今期アニメを自動集計して表示しています。<span class='note-line'>★はAniListユーザーの平均評価（10点満点換算）です。</span><br>※作品画像はAniListから取得して表示しています。AniList側の状況により、画像が一時的に表示されない場合があります。<br>※作品の画像・タイトルをクリックすると、AniListの作品ページが新しいタブで開きます。<br>※dアニメ・Amazon・Netflixのボタンは、作品名で各サービスを検索するリンクです。海外のデータから自動で並べているため、全作品に3つのボタンが表示されますが、その作品が実際に配信されているとは限りません。");
+    } else {
+      throw new Error("No Data");
+    }
+  } catch (err) {
+    console.warn("海外の注目アニメの取得に失敗したため、この行は表示しません。");
+    if (staticHero.length === 0) {
+      const unique = dedup(BACKUP_DATA.now);
+      renderHeroSlider(unique.slice(0, 5));
+    }
+  }
+}
+
+// AniListから今シーズン（放送中）の人気アニメを取得し、カード表示用の形に変換する
+function currentAniListSeason() {
+  const d = new Date();
+  const m = d.getMonth() + 1;
+  const season = m <= 3 ? "WINTER" : m <= 6 ? "SPRING" : m <= 9 ? "SUMMER" : "FALL";
+  return { season, year: d.getFullYear() };
+}
+
+async function fetchAniListSeason() {
+  const { season, year } = currentAniListSeason();
+  const query = `query($y:Int,$s:MediaSeason){Page(perPage:28){media(season:$s,seasonYear:$y,type:ANIME,status:RELEASING,format_in:[TV,TV_SHORT,ONA],sort:POPULARITY_DESC,isAdult:false){id idMal title{native romaji} averageScore coverImage{large} siteUrl season seasonYear}}}`;
+  for (let i = 0; i < 2; i++) {
+    const ctrl = new AbortController();
+    const timer = setTimeout(() => ctrl.abort(), 8000);
+    try {
+      const res = await fetch("https://graphql.anilist.co", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+        body: JSON.stringify({ query, variables: { y: year, s: season } }),
+        signal: ctrl.signal
+      });
+      if (!res.ok) throw new Error("HTTP_" + res.status);
+      const json = await res.json();
+      const media = (json.data && json.data.Page && json.data.Page.media) || [];
+      return media.map(a => ({
+        mal_id: a.idMal || ("al" + a.id),
+        title_japanese: (a.title && (a.title.native || a.title.romaji)) || "",
+        score: a.averageScore ? a.averageScore / 10 : null,
+        year: a.seasonYear,
+        season: (a.season || "").toLowerCase(),
+        href: a.siteUrl,
+        images: { webp: { image_url: a.coverImage && a.coverImage.large } }
+      })).filter(a => a.title_japanese);
+    } catch (e) {
+      if (i === 1) throw e;
+    } finally {
+      clearTimeout(timer);
+    }
+  }
+  return [];
+}
+
+// 「国内で注目のアニメ（管理人セレクト）」のカードから、上部スライダー用のデータを作る
+function buildStaticHeroList() {
+  const out = [];
+  const sections = document.querySelectorAll("#panel-home section");
+  let target = null;
+  sections.forEach(sec => {
+    const h = sec.querySelector(".section-title");
+    if (h && h.textContent.indexOf("国内で注目のアニメ") !== -1) target = sec;
+  });
+  if (!target) return out;
+  target.querySelectorAll(".anime-card").forEach(card => {
+    const title = (card.querySelector(".card-title") || {}).textContent;
+    const img = card.querySelector("img.card-img");
+    const badge = (card.querySelector(".card-score-badge") || {}).textContent || "";
+    const link = card.querySelector("a[href]");
+    const meta = ((card.querySelector(".card-meta") || {}).textContent || "").trim();
+    const m = badge.match(/[0-9]+(\.[0-9]+)?/);
+    if (!title || !img || !img.getAttribute("src")) return;
+    out.push({
+      title_japanese: title.trim(),
+      scoreText: m ? m[0] : "",
+      metaText: meta,
+      href: link ? link.href : "",
+      images: { webp: { large_image_url: img.getAttribute("src") } }
+    });
+  });
+  return out.slice(0, 10);
+}
+
+function renderHeroSlider(list) {
+  const slot = document.getElementById("heroSlot");
+  if (!slot) return;
+  slot.innerHTML = "";
+  clearInterval(STATE.heroTimer);
+  
+  list.forEach((anime, idx) => {
+    const item = document.createElement("div");
+    item.className = `hero-item ${idx === 0 ? 'active' : ''}`;
+    
+    const bgImg = anime.images?.webp?.large_image_url || anime.images?.jpg?.large_image_url || '';
+    const title = getJapaneseTitle(anime);
+    // MyAnimeListの画像は「xxxx.jpg」が小さい版、「xxxxl.jpg」が大きい版。スライダーでは大きい版を使う
+    const bgLarge = bgImg.replace(/([0-9])\.(jpg|webp)(\?.*)?$/, '$1l.$2$3');
+    let metaStr;
+    if (anime.scoreText !== undefined) {
+      // 管理人セレクト由来（例：「2026 秋」→「2026年秋」）
+      const mt = (anime.metaText || '').replace(/\s+/g, '').replace(/^(\d{4})/, '$1年');
+      metaStr = `${mt}${mt ? ' / ' : ''}管理人スコア ★ ${anime.scoreText}`;
+    } else {
+      const score = anime.score ? `★ ${anime.score.toFixed(2)}` : '評価なし';
+      const sString = anime.season ? translateSeasonString(anime.season) : '';
+      metaStr = `${anime.year || CURRENT_YEAR}年${sString} / ${score}`;
+    }
+    
+    item.innerHTML = `
+      <div class="hero-bg" style="background-image: url('${bgImg}')"></div>
+      ${bgLarge ? `<img class="hero-poster" src="${bgLarge}" alt="${title}" onerror="if(this.dataset.f!=='1'){this.dataset.f='1';this.src='${bgImg}';}else{this.style.display='none';}">` : ''}
+      <div class="hero-content">
+        <div class="hero-tag">注目の作品</div>
+        <h2 class="hero-title">${title}</h2>
+        <div class="hero-meta"><span>${metaStr}</span></div>
+        ${generateStreamBadgesHTML(title)}
+      </div>
+    `;
+    const contentEl = item.querySelector(".hero-content");
+    if (anime.href) {
+      contentEl.addEventListener("click", () => window.open(anime.href, "_blank", "noopener"));
+    } else {
+      contentEl.addEventListener("click", () => openModal(anime.mal_id, title));
+    }
+    slot.appendChild(item);
+  });
+  
+  STATE.currentHeroIndex = 0;
+  if (list.length > 1) {
+    STATE.heroTimer = setInterval(() => {
+      const items = slot.querySelectorAll(".hero-item");
+      if (!items.length) return;
+      items[STATE.currentHeroIndex].classList.remove("active");
+      STATE.currentHeroIndex = (STATE.currentHeroIndex + 1) % items.length;
+      items[STATE.currentHeroIndex].classList.add("active");
+    }, 5000);
+  }
+}
+
+function createScrollRow(container, heading, list, desc) {
+  // リスト単体の重複も除去（同じmal_idが複数ある場合）
+  const seenLocal = new Set();
+  const uniqueList = list.filter(a => {
+    if (!a.mal_id || seenLocal.has(a.mal_id)) return false;
+    seenLocal.add(a.mal_id);
+    return true;
+  });
+  if (uniqueList.length === 0) return;
+  const section = document.createElement("section");
+  // 注意書きは「※」ごとに1段落にする（スマホで折り返したとき、2行目以降を※の右に揃えるため）
+  const descHtml = desc ? `<div class="row-notes">${desc.split("<br>").map(t => `<p>${t}</p>`).join("")}</div>` : "";
+  section.innerHTML = `<h3 class="section-title">${heading}</h3>${descHtml}`;
+  const row = document.createElement("div");
+  row.className = "scroll-row";
+  uniqueList.forEach(anime => row.appendChild(createAnimeCard(anime)));
+  section.appendChild(row);
+  container.appendChild(section);
+}
+
+function createAnimeCard(anime) {
+  const card = document.createElement("div");
+  card.className = "anime-card";
+  const title = getJapaneseTitle(anime);
+  if (anime.href) {
+    card.addEventListener("click", () => window.open(anime.href, "_blank", "noopener"));
+  } else {
+    card.addEventListener("click", () => openModal(anime.mal_id, title));
+  }
+  
+  const imgUrl = anime.images?.webp?.image_url || anime.images?.jpg?.image_url || '';
+  const score = anime.score ? anime.score.toFixed(2) : '--';
+  const sString = anime.season ? translateSeasonString(anime.season) : '';
+  const metaStr = `${anime.year || ''} ${sString}`;
+  
+  card.innerHTML = `
+    <div class="card-img-wrap">
+      <img src="${imgUrl}" class="card-img" alt="${title}" loading="lazy" onerror="this.src='https://via.placeholder.com/225x319/18181c/888898?text=No+Image'">
+      <div class="card-score-badge">★ ${score}</div>
+    </div>
+    <div class="card-info">
+      <div>
+        <div class="card-title">${title}</div>
+        <div class="card-meta">${metaStr}</div>
+      </div>
+      ${generateStreamBadgesHTML(title)}
+    </div>
+  `;
+  return card;
+}
+
+async function openModal(id, fallbackTitle = "作品詳細") {
+  const modalOv = document.getElementById("modalOv");
+  const titleSlot = document.getElementById("mTitle");
+  const synSlot = document.getElementById("mSynopsis");
+  const streamSlot = document.getElementById("mStreamSlot");
+  
+  if (!modalOv) return;
+  
+  titleSlot.textContent = fallbackTitle;
+  synSlot.innerHTML = `<div class="loader-wrap" style="display:flex;"><div class="loader"></div></div>`;
+  streamSlot.innerHTML = "";
+  
+  modalOv.classList.add("open");
+  document.body.style.overflow = "hidden";
+  
+  try {
+    const detail = await fetchWithCache(`${API_BASE}/anime/${id}`);
+    if (!detail || !detail.data) throw new Error("No Data");
+    const anime = detail.data;
+    const title = getJapaneseTitle(anime);
+    
+    titleSlot.textContent = title;
+    
+    const score = anime.score ? anime.score.toFixed(2) : '--';
+    const rank = anime.rank ? anime.rank : '--';
+    const pop = anime.popularity ? anime.popularity : '--';
+    
+    let infoHtml = `
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:10px; background:rgba(0,0,0,0.2); padding:12px; border-radius:8px; margin-bottom:14px; font-size:0.85rem; text-align:center;">
+        <div><span style="color:var(--star-color)">★</span> MAL評価: ${score}</div>
+        <div>🏆 順位: ${rank}</div>
+        <div>🔥 人気: ${pop}</div>
+      </div>
+      <div style="font-size:0.72rem;color:var(--text-muted);margin-top:-8px;margin-bottom:14px;">※MyAnimeListのユーザー評価データを表示しています</div>
+    `;
+    
+    const synText = anime.synopsis_japanese || anime.synopsis || "あらすじ情報はありません。";
+    const translateBtnHtml = anime.synopsis ? `
+      <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+        <a href="https://translate.google.co.jp/?sl=en&tl=ja&text=${encodeURIComponent(synText)}&op=translate&hl=ja" target="_blank" rel="noopener noreferrer" style="display:inline-block; padding:8px 16px; background:#4285F4; color:#fff; text-decoration:none; border-radius:4px; font-size:0.9rem; font-weight:bold; box-shadow:0 2px 4px rgba(0,0,0,0.2);">
+          🌍 Google翻訳で読む
+        </a>
+        <a href="https://www.deepl.com/ja/translator#en/ja/${encodeURIComponent(synText)}" target="_blank" rel="noopener noreferrer" style="display:inline-block; padding:8px 16px; background:#0F2B46; color:#fff; text-decoration:none; border-radius:4px; font-size:0.9rem; font-weight:bold; box-shadow:0 2px 4px rgba(0,0,0,0.2);">
+          ✨ DeepL翻訳で読む(おすすめ)
+        </a>
+      </div>
+    ` : '';
+
+    synSlot.innerHTML = infoHtml + `<div style="line-height:1.5;">${synText}</div>` + translateBtnHtml;
+    appendStreamLinks(streamSlot, title);
+    
+  } catch (err) {
+    console.warn("詳細データの取得に失敗しました。リンク救済処理を行います。");
+    synSlot.innerHTML = `<p style="color:var(--text-muted); margin-bottom:14px;">一時的に詳細データを取得できませんでした（API制限中）。以下の配信サイトボタンから直接作品をご視聴いただけます！</p>`;
+    appendStreamLinks(streamSlot, fallbackTitle);
+  }
+}
+
+function closeModal() {
+  const modalOv = document.getElementById('modalOv');
+  if (modalOv) {
+    modalOv.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+}
+
+function appendStreamLinks(container, title) {
+  if (!container || !title) return;
+  const encoded = encodeURIComponent(title);
+  const netflixUrl = `https://www.netflix.com/search?q=${encoded}`;
+
+  const networks = [
+    { name: "dアニメストア", url: `https://animestore.docomo.ne.jp/animestore/sch_pc?searchKey=${encoded}`, cls: "danime" },
+    { name: "Amazon Prime", url: `https://www.amazon.co.jp/s?k=${encoded}&i=instant-video`, cls: "amazon" },
+    { name: "Netflix", url: netflixUrl, cls: "netflix" }
+  ];
+  
+  networks.forEach(net => {
+    const a = document.createElement("a");
+    a.href = net.url;
+    a.target = "_blank";
+    a.rel = "noopener noreferrer";
+    a.className = `stream-link ${net.cls}`;
+    a.innerHTML = net.name;
+    container.appendChild(a);
+  });
+}
+
+function translateSeasonString(seasonWord) {
+  if (!seasonWord) return '';
+  const s = seasonWord.toLowerCase();
+  if (s.includes('winter') || s.includes('冬')) return '冬';
+  if (s.includes('spring') || s.includes('春')) return '春';
+  if (s.includes('summer') || s.includes('夏')) return '夏';
+  if (s.includes('fall') || s.includes('autumn') || s.includes('秋')) return '秋';
+  return seasonWord;
+}
+
+function showToastText(message) {
+  const toast = document.getElementById('toast');
+  if (!toast) return;
+  toast.textContent = message;
+  toast.classList.add('show');
+  setTimeout(() => { toast.classList.remove('show'); }, 3000);
+}
+
+// ロゴをクリックしたときは、ホームの表示に戻す
+(function() {
+  const logoEl = document.querySelector('header .logo');
+  if (!logoEl) return;
+  logoEl.addEventListener('click', function(e) {
+    try { switchPanel('home'); } catch (err) {}
+  });
+})();
+
+async function fetchWithCache(url, retries = 2) {
+  // 応答が遅いときに延々と待たないよう、1回の通信は8秒で打ち切る
+  const FETCH_TIMEOUT_MS = 8000;
+  const now = Date.now();
+  if (STATE.cache[url] && (now - STATE.cache[url].timestamp < 10 * 60 * 1000)) {
+    return STATE.cache[url].data;
+  }
+  
+  for (let i = 0; i <= retries; i++) {
+    try {
+      await new Promise(res => setTimeout(res, 400));
+      const ctrl = new AbortController();
+      const timer = setTimeout(() => ctrl.abort(), FETCH_TIMEOUT_MS);
+      let response;
+      try {
+        response = await fetch(url, { signal: ctrl.signal });
+      } finally {
+        clearTimeout(timer);
+      }
+      if (response.status === 429) {
+        if (i === retries) throw new Error("API_RATE_LIMIT");
+        await new Promise(res => setTimeout(res, 2000));
+        continue;
+      }
+      if (!response.ok) throw new Error(`HTTP_ERROR_${response.status}`);
+      const data = await response.json();
+      STATE.cache[url] = { timestamp: now, data: data };
+      return data;
+    } catch (e) {
+      if (i === retries) throw e;
+    }
+  }
+  throw new Error("FETCH_FAILED");
+}
+</script>
+
+
+<!-- ANIMEDB intro CM (shown once per browser, top page only) -->
+<style>
+.cmi-wrap{position:fixed;inset:0;z-index:100000;display:none;align-items:center;justify-content:center;background:rgba(5,8,14,.86);padding:16px;-webkit-overflow-scrolling:touch}
+.cmi-wrap.cmi-on{display:flex}
+.cmi-box{position:relative;width:min(94vw,960px);max-height:92vh;display:flex;flex-direction:column;gap:10px}
+.cmi-video{width:100%;aspect-ratio:16/9;max-height:70vh;background:#000;border-radius:14px;box-shadow:0 12px 40px rgba(0,0,0,.6);display:block;object-fit:contain}
+.cmi-close{position:absolute;top:-52px;right:0;width:48px;height:48px;border-radius:50%;border:2px solid rgba(255,255,255,.75);background:rgba(20,26,40,.9);color:#fff;font-size:26px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0}
+.cmi-close:hover,.cmi-close:focus-visible{background:#fff;color:#0b0f19;outline:none}
+.cmi-bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px;color:#cfd6e4;font-size:.85rem}
+.cmi-sound{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.6);border-radius:999px;padding:8px 16px;font-size:.9rem;cursor:pointer;min-height:40px}
+.cmi-enter{background:#ff4d6d;color:#fff;border:0;border-radius:999px;padding:10px 20px;font-size:.95rem;font-weight:700;cursor:pointer;min-height:44px}
+.cmi-note{flex:1 1 100%;text-align:center;opacity:.8}
+@media (max-width:600px){.cmi-close{top:-54px;right:2px}.cmi-note{font-size:.78rem}}
+@media (prefers-reduced-motion:reduce){.cmi-video{scroll-behavior:auto}}
+</style>
+<div class="cmi-wrap" id="cmiWrap" role="dialog" aria-modal="true" aria-label="ANIMEDBのCM（18秒）" hidden>
+  <div class="cmi-box">
+    <button type="button" class="cmi-close" id="cmiClose" aria-label="閉じる">&#10005;</button>
+    <video class="cmi-video" id="cmiVideo" playsinline muted preload="none" poster="/animedb-cm-poster.jpg" controlslist="nodownload" disablepictureinpicture></video>
+    <div class="cmi-bar">
+      <button type="button" class="cmi-sound" id="cmiSound">音を出す</button>
+      <button type="button" class="cmi-enter" id="cmiEnter">ANIMEDBを見る</button>
+      <div class="cmi-note">✕ ボタン・Esc キー・画面の外側のタップで閉じます。閉じると、この訪問中は表示されません。<br>キャラクターはAIの助けを借りて制作したオリジナルです。</div>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  // ---- settings (案A: top page opens -> CM shows; closed once = not again during this visit) ----
+  var ONCE_EVER=false;     // true: show only once per browser (案B)
+  var SKIP_SEARCH=true;    // true: do not show to visitors arriving from search engines
+  var KEY='animedb_cm_v1';
+  function store(){try{return ONCE_EVER?localStorage:sessionStorage}catch(e){return null}}
+  function get(){var st=store();try{return st&&st.getItem(KEY)}catch(e){return null}}
+  function set(){var st=store();try{st&&st.setItem(KEY,String(Date.now()))}catch(e){}}
+  if(get())return;                                   // already closed (this visit / ever, per setting)
+  if(location.pathname.replace(/\/index\.html$/,'/')!=='/')return; // top page only
+  if(SKIP_SEARCH){try{ if(/(google|yahoo|bing|duckduckgo|baidu|ecosia)\./i.test(document.referrer))return; }catch(e){}}
+  var wrap=document.getElementById('cmiWrap'),v=document.getElementById('cmiVideo'),
+      closeB=document.getElementById('cmiClose'),snd=document.getElementById('cmiSound'),ent=document.getElementById('cmiEnter');
+  var lastFocus=null,done=false;
+  function close(){
+    if(done)return; done=true; set();
+    try{v.pause()}catch(e){}
+    v.removeAttribute('src'); try{v.load()}catch(e){}
+    wrap.classList.remove('cmi-on'); wrap.hidden=true;
+    document.documentElement.style.overflow=''; 
+    document.removeEventListener('keydown',onKey,true);
+    if(lastFocus&&lastFocus.focus)try{lastFocus.focus()}catch(e){}
+  }
+  function onKey(e){
+    if(e.key==='Escape'||e.key==='Esc'){e.preventDefault();close();}
+    else if(e.key==='Tab'){ // light focus trap
+      var f=[closeB,snd,ent].filter(function(x){return x&&!x.disabled}); if(!f.length)return;
+      var i=f.indexOf(document.activeElement);
+      if(e.shiftKey&&i<=0){e.preventDefault();f[f.length-1].focus();}
+      else if(!e.shiftKey&&(i===f.length-1||i<0)){e.preventDefault();f[0].focus();}
+    }
+  }
+  function open(){
+    lastFocus=document.activeElement;
+    v.src='/animedb-cm.mp4';
+    wrap.hidden=false; wrap.classList.add('cmi-on');
+    document.documentElement.style.overflow='hidden';
+    document.addEventListener('keydown',onKey,true);
+    closeB.focus();
+    var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(!reduce){var p=v.play(); if(p&&p.catch)p.catch(function(){v.controls=true;});}
+    else v.controls=true;
+  }
+  closeB.addEventListener('click',close);
+  ent.addEventListener('click',close);
+  wrap.addEventListener('click',function(e){if(e.target===wrap)close();});
+  snd.addEventListener('click',function(){v.muted=!v.muted;snd.textContent=v.muted?'音を出す':'音を消す';try{v.play()}catch(e){}});
+  v.addEventListener('error',function(){close();});  // if it cannot play, step aside quietly
+  v.addEventListener('click',function(){ if(v.paused){v.play()}else{v.pause()} });
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',open);else open();
+})();
+</script>
 </body>
 </html>
-
