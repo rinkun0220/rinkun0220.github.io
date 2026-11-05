@@ -252,6 +252,21 @@ main { margin-top: var(--nav-height); padding: 24px; min-height: calc(100vh - va
 .dmm-tv-btn:hover::before {
     left: 100%;
 }
+
+/* はじめての方へ（初心者ガイドの入口） */
+.start-guides{margin:0 0 28px}
+.start-guides-title{font-size:1.2rem;font-weight:700;margin:0 0 8px;color:#fff;border-left:4px solid var(--accent);padding-left:10px}
+.start-guides-lead{color:var(--text-muted);font-size:.9rem;line-height:1.8;margin:0 0 14px}
+.start-guides-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(230px,100%),1fr));gap:12px}
+.sg-card{display:flex;flex-direction:column;gap:6px;background:var(--bg-card);border:1px solid var(--border-color);border-radius:12px;padding:16px;text-decoration:none;color:var(--text-main);transition:border-color .2s,transform .2s;min-width:0}
+.sg-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.sg-ico{font-size:1.6rem;line-height:1}
+.sg-tag{font-size:.72rem;font-weight:700;color:var(--accent);letter-spacing:.02em}
+.sg-title{font-size:1rem;font-weight:700;color:#fff;line-height:1.5}
+.sg-desc{font-size:.82rem;color:var(--text-muted);line-height:1.7}
+.start-guides-more{font-size:.82rem;color:var(--text-muted);margin:12px 0 0}
+.start-guides-more a{color:var(--accent);font-weight:700;text-decoration:underline}
+@media (max-width:600px){.start-guides-grid{grid-template-columns:1fr}.sg-card{padding:14px}}
 /* 日本語の改行を自然にする設定（文節単位で改行・行頭禁則・1文字だけの行を避ける） */
 body{line-break:strict;overflow-wrap:anywhere}
 @supports (word-break:auto-phrase){body{word-break:auto-phrase}}
@@ -296,6 +311,39 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
         <a href="https://www.instagram.com/rinkun0220/" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:6px;background:#000;color:#fff;font-size:0.82rem;font-weight:700;padding:7px 14px;border-radius:20px;text-decoration:none;">📷 Instagram</a>
         <a href="https://www.tiktok.com/@rinkun0220" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:6px;background:#010101;color:#fff;font-size:0.82rem;font-weight:700;padding:7px 14px;border-radius:20px;text-decoration:none;">🎵 TikTok</a>
       </div>
+
+      <!-- はじめての方へ：初心者ガイドの入口 -->
+      <section class="start-guides" aria-label="初心者ガイド">
+        <h2 class="start-guides-title">はじめての方へ：初心者ガイド</h2>
+        <p class="start-guides-lead">長く続く<wbr>シリーズは、<wbr>どこから<wbr>観ればいいか<wbr>迷いがちです。<wbr>管理人の<wbr>視聴体験を<wbr>もとに、<wbr>入口を<wbr>まとめました。</p>
+        <div class="start-guides-grid">
+        <a class="sg-card" href="./blog/conan-beginner-guide.html">
+          <span class="sg-ico" aria-hidden="true">🕵️</span>
+          <span class="sg-tag">名探偵コナン</span>
+          <span class="sg-title">名探偵コナン初心者ガイド</span>
+          <span class="sg-desc">これから<wbr>観始める<wbr>人向けに、<wbr>入口を<wbr>解説します。<wbr>映画6選つきです。</span>
+        </a>
+        <a class="sg-card" href="./blog/toaru-guide.html">
+          <span class="sg-ico" aria-hidden="true">⚡</span>
+          <span class="sg-tag">「とある」シリーズ</span>
+          <span class="sg-title">観る<wbr>順番ガイド</span>
+          <span class="sg-desc">超電磁砲から入る<wbr>視聴順と、<wbr>禁書目録から<wbr>入らない<wbr>理由を<wbr>解説します。</span>
+        </a>
+        <a class="sg-card" href="./blog/toaru-level5-guide.html">
+          <span class="sg-ico" aria-hidden="true">🏙️</span>
+          <span class="sg-tag">「とある」シリーズ</span>
+          <span class="sg-title">レベル5って<wbr>何？</span>
+          <span class="sg-desc">学園都市の<wbr>レベル、<wbr>レベル5の<wbr>人数と<wbr>序列を、<wbr>疑問ごとに<wbr>解説します。</span>
+        </a>
+        <a class="sg-card" href="./blog/toaru-magic-guide.html">
+          <span class="sg-ico" aria-hidden="true">📖</span>
+          <span class="sg-tag">「とある」シリーズ</span>
+          <span class="sg-title">魔術側<wbr>（禁書目録側）って<wbr>何？</span>
+          <span class="sg-desc">魔術、<wbr>禁書目録、<wbr>聖人など、<wbr>魔術側の<wbr>疑問に<wbr>答えます。</span>
+        </a>
+        </div>
+        <p class="start-guides-more">ほかの<wbr>コナンの<wbr>記事は、<a href="./blog/"><wbr>ブログ一覧</a>から<wbr>読めます。</p>
+      </section>
 
       <!-- 来期おすすめアニメ -->
       <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px; padding: 24px; margin-bottom: 20px;">
@@ -473,7 +521,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
 <div style="display: flex; flex-wrap: wrap; gap: 36px; align-items: flex-start;">
 
   <!-- 作品1: 薬屋のひとりごと 第3期 -->
-  <div style="flex: 1; min-width: 250px; padding-bottom: 8px;">
+  <div style="flex: 1; min-width: min(250px, 100%); padding-bottom: 8px;">
     <a href="https://kusuriyanohitorigoto.jp/season3/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; display: block;">
       <h3 style="font-size: 1.05rem; color: #f0f0f0; margin-bottom: 8px; display: flex; align-items: center; gap: 6px;">
         1. 薬屋の<wbr>ひとりごと 第3期
@@ -492,7 +540,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
   </div>
 
   <!-- 作品2: 氷の城壁 第2期 -->
-  <div style="flex: 1; min-width: 250px; padding-bottom: 8px;">
+  <div style="flex: 1; min-width: min(250px, 100%); padding-bottom: 8px;">
     <a href="https://korinojoheki-pr.com/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; display: block;">
       <h3 style="font-size: 1.05rem; color: #f0f0f0; margin-bottom: 8px; display: flex; align-items: center; gap: 6px;">
         2. 氷の<wbr>城壁 第2期
@@ -511,7 +559,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
   </div>
 
   <!-- 作品3: アオのハコ Season2 -->
-  <div style="flex: 1; min-width: 250px; padding-bottom: 8px;">
+  <div style="flex: 1; min-width: min(250px, 100%); padding-bottom: 8px;">
     <a href="https://aonohako-anime.com/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; display: block;">
       <h3 style="font-size: 1.05rem; color: #f0f0f0; margin-bottom: 8px; display: flex; align-items: center; gap: 6px;">
         3. アオの<wbr>ハコ Season2
@@ -530,7 +578,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
   </div>
 
   <!-- 作品4: らんま1/2 第3期 -->
-  <div style="flex: 1; min-width: 250px; padding-bottom: 8px;">
+  <div style="flex: 1; min-width: min(250px, 100%); padding-bottom: 8px;">
     <a href="https://ranma-pr.com/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; display: block;">
       <h3 style="font-size: 1.05rem; color: #f0f0f0; margin-bottom: 8px; display: flex; align-items: center; gap: 6px;">
         4. らんま1/2 第3期
@@ -547,7 +595,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
   </div>
 
   <!-- 作品5: とある暗部の少女共棲 -->
-  <div style="flex: 1; min-width: 250px; padding-bottom: 8px;">
+  <div style="flex: 1; min-width: min(250px, 100%); padding-bottom: 8px;">
     <a href="https://toaru-project.com/item/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; display: block;">
       <h3 style="font-size: 1.05rem; color: #f0f0f0; margin-bottom: 8px; display: flex; align-items: center; gap: 6px;">
         5. とある<wbr>暗部の<wbr>少女共棲
@@ -564,7 +612,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
   </div>
 
   <!-- 作品6: FX戦士くるみちゃん -->
-  <div style="flex: 1; min-width: 250px; padding-bottom: 8px;">
+  <div style="flex: 1; min-width: min(250px, 100%); padding-bottom: 8px;">
     <a href="http://fxkurumi-info.com/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; display: block;">
       <h3 style="font-size: 1.05rem; color: #f0f0f0; margin-bottom: 8px; display: flex; align-items: center; gap: 6px;">
         6. FX戦士くる<wbr>みちゃん

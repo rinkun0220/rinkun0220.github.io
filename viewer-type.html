@@ -98,7 +98,7 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
 
 .reveal-section { max-width: 880px; margin: 0 auto 28px; padding: 0 20px; }
 .reveal-title { font-size: 1.05rem; font-weight: 700; margin-bottom: 14px; color: var(--text-main); }
-.reveal-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
+.reveal-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(260px, 100%), 1fr)); gap: 12px; }
 .reveal-card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px; padding: 16px; }
 .reveal-card .rc-name { font-weight: 700; color: var(--accent); margin-bottom: 6px; display: block; }
 .reveal-card .rc-desc { font-size: 0.85rem; color: var(--text-muted); line-height: 1.7; }
