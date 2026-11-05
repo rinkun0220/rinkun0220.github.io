@@ -182,6 +182,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
     <p>「あなたのアニメ履歴書」は、<wbr>6つの<wbr>質問への<wbr>回答から、<wbr>経験値・視聴の<wbr>幅・涙腺・こだわり・継続力の<wbr>5項目を<wbr>4段階の<wbr>バーで<wbr>表示する<wbr>プロフィールカードを作る<wbr>診断です。<wbr>経験値は<wbr>アニメを<wbr>観始めた<wbr>時期、<wbr>視聴の幅は<wbr>1クールに観る<wbr>本数、<wbr>涙腺は心を<wbr>動かされた<wbr>ジャンル、<wbr>こだわりは<wbr>作品の<wbr>どこを<wbr>重視するか、<wbr>継続力は一番長く<wbr>追っている<wbr>シリーズの<wbr>年数を<wbr>もとにしています。</p>
     <h3>カード上部の<wbr>タイプの見方</h3>
     <p>カードの<wbr>一番上には、<wbr>4つ目の<wbr>質問の<wbr>回答で<wbr>決まる<wbr>「視聴タイプ」<wbr>（脚本派・演出派・キャラ萌え派・<wbr>自由派）と、<wbr>最後の<wbr>質問の<wbr>回答で<wbr>決まる<wbr>「視聴スタイル」が、<wbr>「脚本派 × 週末一気<wbr>見タイプ」のように<wbr>並んで<wbr>表示されます。<wbr>バーが<wbr>長いほど<wbr>優れているという<wbr>意味ではありません。<wbr>たくさんの<wbr>作品を追う<wbr>人も、<wbr>1作品を<wbr>じっくり<wbr>味わう<wbr>人も、<wbr>楽しみ方の<wbr>違いを<wbr>見える形にした<wbr>ものです。</p>
+    <p>管理人が<wbr>作った<wbr>カードは、<wbr>「脚本派 × 深夜アニメ探求者」でした。<wbr>視聴の<wbr>幅、<wbr>涙腺力、<wbr>こだわり度、<wbr>継続力は<wbr>4段階の<wbr>満点で、<wbr>経験値は<wbr>4段階中の<wbr>3でした。</p>
     <h3>保存・シェアと、<wbr>回答の<wbr>扱いに<wbr>ついて</h3>
     <p>できあがった<wbr>カードは<wbr>「画像を保存」で<wbr>PNG画像として<wbr>保存でき、<wbr>「結果をシェア」からXに<wbr>投稿できます。<wbr>回答の<wbr>集計は<wbr>お使いの<wbr>ブラウザの<wbr>中だけで<wbr>行われ、<wbr>選んだ回答の<wbr>内容を<wbr>ANIMEDBの<wbr>サーバーへ<wbr>送信・保存する<wbr>ことは<wbr>ありません。<wbr>視聴環境や<wbr>気分が<wbr>変われば<wbr>答えも<wbr>変わるので、数か<wbr>月後にもう一度<wbr>作って<wbr>見比べてみるのも<wbr>面白いと<wbr>思います。</p>
     <p>重視する<wbr>ポイントを<wbr>もっと<wbr>細かく<wbr>知りたい方は、<wbr>5つの<wbr>タイプに<wbr>分けて<wbr>診断する<a href="/viewer-type.html"><wbr>「あなたは何派？」</a>や、<wbr>評価の<wbr>配点を<wbr>試せる<a href="/rating-simulator.html"><wbr>「この<wbr>アニメ、<wbr>何点つける？」</a>も<wbr>あわせて<wbr>どうぞ。</p>
@@ -312,6 +313,7 @@ function showResult() {
   document.getElementById('progressBar').style.width = '100%';
   document.getElementById('quizScreen').classList.add('hidden');
   document.getElementById('resultScreen').classList.remove('hidden');
+  Object.keys(stats).forEach(function (k) { if (stats[k] > 4) stats[k] = 4; });
   drawCard();
 }
 
