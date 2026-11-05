@@ -94,6 +94,15 @@ main { margin-top: var(--nav-height); padding: 40px 24px; max-width: 1100px; mar
 .guide-row .mascot:nth-child(4){animation-delay:-3.3s;animation-duration:4.6s}
 @media (max-width:600px){.guide-row .mascot{width:62px}}
 @media (prefers-reduced-motion:reduce){.mascot{animation:none}}
+
+/* 記事の種類で絞り込み */
+.cat-filter{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 20px}
+.cat-filter[hidden]{display:none}
+.cat-chip{font:inherit;font-size:.85rem;font-weight:700;color:var(--text-main);background:var(--bg-card);border:1px solid var(--border-color);border-radius:20px;padding:7px 14px;cursor:pointer;display:inline-flex;align-items:center;gap:6px;transition:border-color .2s,background .2s}
+.cat-chip:hover{border-color:var(--accent)}
+.cat-chip.active{background:var(--accent);border-color:var(--accent);color:#fff}
+.cat-n{font-size:.72rem;font-weight:700;opacity:.8}
+@media (max-width:600px){.cat-chip{font-size:.8rem;padding:6px 12px}}
 /* 日本語の改行を自然にする設定（文節単位で改行・行頭禁則・1文字だけの行を避ける） */
 body{line-break:strict;overflow-wrap:anywhere}
 @supports (word-break:auto-phrase){body{word-break:auto-phrase}}
@@ -127,9 +136,12 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
   </div>
 
   <div class="section-title">最新記事</div>
+  <div class="cat-filter" id="catFilter" role="group" aria-label="記事の種類で絞り込む" hidden>
+    <button type="button" class="cat-chip active" data-cat="all" aria-pressed="true">すべて<span class="cat-n">32</span></button><button type="button" class="cat-chip" data-cat="guide" aria-pressed="false">ガイド<span class="cat-n">7</span></button><button type="button" class="cat-chip" data-cat="review" aria-pressed="false">レビュー<span class="cat-n">9</span></button><button type="button" class="cat-chip" data-cat="ranking" aria-pressed="false">ランキング<span class="cat-n">4</span></button><button type="button" class="cat-chip" data-cat="people" aria-pressed="false">声優・スタッフ<span class="cat-n">8</span></button><button type="button" class="cat-chip" data-cat="mind" aria-pressed="false">管理人の考え<span class="cat-n">4</span></button>
+  </div>
   <div class="blog-grid">
 
-    <a href="./autumn2026-recommend.html" class="blog-card">
+    <a href="./autumn2026-recommend.html" class="blog-card" data-cat="review">
       <div class="blog-card-thumb">🍁</div>
       <div class="blog-card-body">
         <span class="blog-tag review">レビュー</span>
@@ -139,7 +151,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </a>
 
-    <a href="./spring2026-recommend.html" class="blog-card">
+    <a href="./spring2026-recommend.html" class="blog-card" data-cat="review">
       <div class="blog-card-thumb">☀️</div>
       <div class="blog-card-body">
         <span class="blog-tag review">レビュー</span>
@@ -149,7 +161,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </a>
 
-    <a href="./2026-spring-all.html" class="blog-card">
+    <a href="./2026-spring-all.html" class="blog-card" data-cat="review">
       <div class="blog-card-thumb">🌸</div>
       <div class="blog-card-body">
         <span class="blog-tag review">レビュー</span>
@@ -159,7 +171,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </a>
 
-    <a href="./hidden-gems-2026-all.html" class="blog-card">
+    <a href="./hidden-gems-2026-all.html" class="blog-card" data-cat="review">
       <div class="blog-card-thumb">💎</div>
       <div class="blog-card-body">
         <span class="blog-tag review">レビュー</span>
@@ -169,7 +181,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </a>
 
-    <a href="./hidden-gems-2025-all.html" class="blog-card">
+    <a href="./hidden-gems-2025-all.html" class="blog-card" data-cat="review">
       <div class="blog-card-thumb">💎</div>
       <div class="blog-card-body">
         <span class="blog-tag review">レビュー</span>
@@ -179,7 +191,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </a>
 
-    <a href="./hidden-gems-2023-2024.html" class="blog-card">
+    <a href="./hidden-gems-2023-2024.html" class="blog-card" data-cat="review">
       <div class="blog-card-thumb">💎</div>
       <div class="blog-card-body">
         <span class="blog-tag review">レビュー</span>
@@ -189,7 +201,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </a>
 
-    <a href="./hidden-gems-history-2020s.html" class="blog-card">
+    <a href="./hidden-gems-history-2020s.html" class="blog-card" data-cat="review">
       <div class="blog-card-thumb">💎</div>
       <div class="blog-card-body">
         <span class="blog-tag review">レビュー</span>
@@ -199,7 +211,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </a>
 
-    <a href="./hidden-gems-history-2010s.html" class="blog-card">
+    <a href="./hidden-gems-history-2010s.html" class="blog-card" data-cat="review">
       <div class="blog-card-thumb">💎</div>
       <div class="blog-card-body">
         <span class="blog-tag review">レビュー</span>
@@ -209,7 +221,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </a>
 
-    <a href="./hidden-gems-history-2009.html" class="blog-card">
+    <a href="./hidden-gems-history-2009.html" class="blog-card" data-cat="review">
       <div class="blog-card-thumb">💎</div>
       <div class="blog-card-body">
         <span class="blog-tag review">レビュー</span>
@@ -219,7 +231,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </a>
 
-    <a href="./isekai-top10.html" class="blog-card">
+    <a href="./isekai-top10.html" class="blog-card" data-cat="ranking">
       <div class="blog-card-thumb">⚔️</div>
       <div class="blog-card-body">
         <span class="blog-tag ranking">ランキング</span>
@@ -229,7 +241,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </a>
 
-    <a href="./romance-top10.html" class="blog-card">
+    <a href="./romance-top10.html" class="blog-card" data-cat="ranking">
       <div class="blog-card-thumb">💕</div>
       <div class="blog-card-body">
         <span class="blog-tag ranking">ランキング</span>
@@ -239,7 +251,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </a>
 
-    <a href="./battle-anime-top10.html" class="blog-card">
+    <a href="./battle-anime-top10.html" class="blog-card" data-cat="ranking">
       <div class="blog-card-thumb">🔥</div>
       <div class="blog-card-body">
         <span class="blog-tag ranking">ランキング</span>
@@ -249,7 +261,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </a>
 
-    <a href="./memories-anime.html" class="blog-card">
+    <a href="./memories-anime.html" class="blog-card" data-cat="ranking">
       <div class="blog-card-thumb">🎞️</div>
       <div class="blog-card-body">
         <span class="blog-tag ranking">思い出</span>
@@ -259,7 +271,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </a>
 
-    <a href="./unexpected-hits.html" class="blog-card">
+    <a href="./unexpected-hits.html" class="blog-card" data-cat="mind">
       <div class="blog-card-thumb">🎁</div>
       <div class="blog-card-body">
         <span class="blog-tag feature">管理人の軸</span>
@@ -269,7 +281,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </a>
 
-    <a href="./worst-anime-honest.html" class="blog-card">
+    <a href="./worst-anime-honest.html" class="blog-card" data-cat="mind">
       <div class="blog-card-thumb">😇</div>
       <div class="blog-card-body">
         <span class="blog-tag feature">本音企画</span>
@@ -279,7 +291,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </a>
 
-    <a href="./rating-criteria.html" class="blog-card">
+    <a href="./rating-criteria.html" class="blog-card" data-cat="mind">
       <div class="blog-card-thumb">🎯</div>
       <div class="blog-card-body">
         <span class="blog-tag feature">管理人の軸</span>
@@ -289,7 +301,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </a>
 
-    <a href="./checklist-anime.html" class="blog-card">
+    <a href="./checklist-anime.html" class="blog-card" data-cat="mind">
       <div class="blog-card-thumb">🔍</div>
       <div class="blog-card-body">
         <span class="blog-tag feature">管理人の軸</span>
@@ -299,7 +311,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </a>
 
-    <a href="./legend-seiyuu-favorites.html" class="blog-card">
+    <a href="./legend-seiyuu-favorites.html" class="blog-card" data-cat="people">
       <div class="blog-card-thumb">⭐</div>
       <div class="blog-card-body">
         <span class="blog-tag feature">変幻自在の<wbr>演技力を<wbr>持つ声優特集</span>
@@ -309,7 +321,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </a>
 
-    <a href="./nextgen-seiyuu-favorites.html" class="blog-card">
+    <a href="./nextgen-seiyuu-favorites.html" class="blog-card" data-cat="people">
       <div class="blog-card-thumb">🎙️</div>
       <div class="blog-card-body">
         <span class="blog-tag feature">主役級声優特集</span>
@@ -319,7 +331,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </a>
 
-    <a href="./male-seiyuu-favorites.html" class="blog-card">
+    <a href="./male-seiyuu-favorites.html" class="blog-card" data-cat="people">
       <div class="blog-card-thumb">🎙️</div>
       <div class="blog-card-body">
         <span class="blog-tag feature">男性声優特集</span>
@@ -329,7 +341,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </a>
 
-    <a href="./female-seiyuu-favorites.html" class="blog-card">
+    <a href="./female-seiyuu-favorites.html" class="blog-card" data-cat="people">
       <div class="blog-card-thumb">🎙️</div>
       <div class="blog-card-body">
         <span class="blog-tag feature">女性声優特集</span>
@@ -339,7 +351,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </a>
 
-    <a href="./director-favorites.html" class="blog-card">
+    <a href="./director-favorites.html" class="blog-card" data-cat="people">
       <div class="blog-card-thumb">🎬</div>
       <div class="blog-card-body">
         <span class="blog-tag feature">監督特集</span>
@@ -349,7 +361,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </a>
 
-    <a href="./scriptwriter-favorites.html" class="blog-card">
+    <a href="./scriptwriter-favorites.html" class="blog-card" data-cat="people">
       <div class="blog-card-thumb">✍️</div>
       <div class="blog-card-body">
         <span class="blog-tag feature">脚本家特集</span>
@@ -359,7 +371,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </a>
 
-    <a href="./studio-favorites.html" class="blog-card">
+    <a href="./studio-favorites.html" class="blog-card" data-cat="people">
       <div class="blog-card-thumb">🏢</div>
       <div class="blog-card-body">
         <span class="blog-tag feature">制作会社特集</span>
@@ -369,7 +381,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </a>
 
-    <a href="./artist-anime-favorites.html" class="blog-card">
+    <a href="./artist-anime-favorites.html" class="blog-card" data-cat="people">
       <div class="blog-card-thumb">🎵</div>
       <div class="blog-card-body">
         <span class="blog-tag feature">邦楽アーティスト特集</span>
@@ -379,7 +391,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </a>
 
-    <a href="./conan-genetics-guide.html" class="blog-card">
+    <a href="./conan-genetics-guide.html" class="blog-card" data-cat="guide">
       <div class="blog-card-thumb">🧬</div>
       <div class="blog-card-body">
         <span class="blog-tag feature">特集</span>
@@ -389,7 +401,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </a>
 
-    <a href="./conan-romance-guide.html" class="blog-card">
+    <a href="./conan-romance-guide.html" class="blog-card" data-cat="guide">
       <div class="blog-card-thumb">💘</div>
       <div class="blog-card-body">
         <span class="blog-tag feature">特集</span>
@@ -399,7 +411,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </a>
 
-    <a href="./conan-advanced-guide.html" class="blog-card">
+    <a href="./conan-advanced-guide.html" class="blog-card" data-cat="guide">
       <div class="blog-card-thumb">🕵️</div>
       <div class="blog-card-body">
         <span class="blog-tag feature">特集</span>
@@ -409,7 +421,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </a>
 
-    <a href="./conan-beginner-guide.html" class="blog-card">
+    <a href="./conan-beginner-guide.html" class="blog-card" data-cat="guide">
       <div class="blog-card-thumb">🕵️</div>
       <div class="blog-card-body">
         <span class="blog-tag feature">特集</span>
@@ -419,7 +431,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </a>
 
-    <a href="./toaru-guide.html" class="blog-card">
+    <a href="./toaru-guide.html" class="blog-card" data-cat="guide">
       <div class="blog-card-thumb">⚡</div>
       <div class="blog-card-body">
         <span class="blog-tag feature">特集</span>
@@ -429,7 +441,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </a>
 
-    <a href="./toaru-level5-guide.html" class="blog-card">
+    <a href="./toaru-level5-guide.html" class="blog-card" data-cat="guide">
       <div class="blog-card-thumb">🏙️</div>
       <div class="blog-card-body">
         <span class="blog-tag feature">特集</span>
@@ -439,7 +451,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </a>
 
-    <a href="./toaru-magic-guide.html" class="blog-card">
+    <a href="./toaru-magic-guide.html" class="blog-card" data-cat="guide">
       <div class="blog-card-thumb">📖</div>
       <div class="blog-card-body">
         <span class="blog-tag feature">特集</span>
@@ -463,6 +475,23 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
   </div>
   <p class="copyright">© 2026 ANIMEDB. All rights reserved.</p>
 </footer>
+<script>
+(function(){
+  var wrap=document.getElementById('catFilter'); if(!wrap) return;
+  var chips=wrap.querySelectorAll('.cat-chip'), cards=document.querySelectorAll('.blog-card[data-cat]');
+  var valid={all:1}; chips.forEach(function(b){valid[b.getAttribute('data-cat')]=1;});
+  function apply(c){
+    cards.forEach(function(el){ el.style.display=(c==='all'||el.getAttribute('data-cat')===c)?'':'none'; });
+    chips.forEach(function(b){ var on=b.getAttribute('data-cat')===c; b.classList.toggle('active',on); b.setAttribute('aria-pressed',on?'true':'false'); });
+  }
+  chips.forEach(function(b){ b.addEventListener('click',function(){
+    var c=b.getAttribute('data-cat'); apply(c);
+    try{ history.replaceState(null,'',c==='all'?location.pathname+location.search:'#'+c); }catch(e){}
+  }); });
+  var h=(location.hash||'').replace('#',''); if(!valid[h]) h='all';
+  wrap.hidden=false; apply(h);
+})();
+</script>
 </body>
 </html>
 
