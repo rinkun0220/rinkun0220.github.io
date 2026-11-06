@@ -76,7 +76,8 @@ header{height:var(--nav-height);background:rgba(11,15,25,0.98);backdrop-filter:b
 .next-article-desc{font-size:.83rem;color:var(--text-muted);margin-top:6px;line-height:1.7}
 .next-article-arrow{font-size:1.7rem;color:var(--accent);flex-shrink:0}
 @media(max-width:600px){.next-article{flex-direction:row;padding:18px 20px}.next-article-arrow{font-size:1.3rem}}
-.related-guides{margin:40px 0 28px;padding:22px 24px;background:var(--bg-card);border:1px solid var(--border-color);border-radius:14px}.related-guides-title{font-size:1.05rem;font-weight:700;color:#fff;margin:0 0 14px}.related-guides ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}.related-guides a{display:block;text-decoration:none;padding:12px 14px;border:1px solid var(--border-color);border-radius:10px;transition:border-color .2s,background .2s}.related-guides a:hover{border-color:var(--accent);background:rgba(255,255,255,0.03)}.related-guides .rg-name{display:block;color:#fff;font-weight:700;font-size:.95rem;line-height:1.5}.related-guides .rg-desc{display:block;color:var(--text-muted);font-size:.82rem;line-height:1.7;margin-top:2px}/* 日本語の改行を自然にする設定（文節単位で改行・行頭禁則・1文字だけの行を避ける） */
+.related-guides{margin:40px 0 28px;padding:22px 24px;background:var(--bg-card);border:1px solid var(--border-color);border-radius:14px}.related-guides-title{font-size:1.05rem;font-weight:700;color:#fff;margin:0 0 14px}.related-guides ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}.related-guides a{display:block;text-decoration:none;padding:12px 14px;border:1px solid var(--border-color);border-radius:10px;transition:border-color .2s,background .2s}.related-guides a:hover{border-color:var(--accent);background:rgba(255,255,255,0.03)}.related-guides .rg-name{display:block;color:#fff;font-weight:700;font-size:.95rem;line-height:1.5}.related-guides .rg-desc{display:block;color:var(--text-muted);font-size:.82rem;line-height:1.7;margin-top:2px}.gem-pick-badge{display:inline-block;margin-top:6px;font-size:.72rem;font-weight:700;color:#fff;background:var(--accent);border-radius:999px;padding:2px 10px;line-height:1.6}
+/* 日本語の改行を自然にする設定（文節単位で改行・行頭禁則・1文字だけの行を避ける） */
 body{line-break:strict;overflow-wrap:anywhere}
 @supports (word-break:auto-phrase){body{word-break:auto-phrase}}
 :has(> wbr){word-break:keep-all}
@@ -113,31 +114,31 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
   <div class="toc">
     <div class="toc-title">📋 作品一覧<wbr>（全25作品）</div>
     <div class="toc-grid">
-      <div class="toc-item"><a href="#gem1">1. 映像研には手を<wbr>出すな！<span class="toc-sub"><wbr>🎯 何かを作る人の熱い話が<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="http://eizouken-anime.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
-      <div class="toc-item"><a href="#gem2">2. 恋する<wbr>小惑星<span class="toc-sub">🎯 星や<wbr>地学に<wbr>惹かれる<wbr>人！</span></a><a class="toc-off" href="https://koiastv.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
-      <div class="toc-item"><a href="#gem3">3. かくしごと<span class="toc-sub"><wbr>🎯 親子の<wbr>日常コメディが<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://kakushigoto-anime.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
-      <div class="toc-item"><a href="#gem4">4. デカダンス<span class="toc-sub">🎯 独特な<wbr>世界観の<wbr>SFが<wbr>観たい<wbr>人！</span></a><a class="toc-off" href="https://decadence-anime.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
-      <div class="toc-item"><a href="#gem5">5. トニカクカワイイ<span class="toc-sub">🎯 甘い<wbr>夫婦の<wbr>ラブコメが<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://tonikawa.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
-      <div class="toc-item"><a href="#gem6">6. アクダマドライブ<span class="toc-sub">🎯 悪役たちの<wbr>痛快な<wbr>群像劇が<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://akudama-drive.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
-      <div class="toc-item"><a href="#gem7">7. どうにかなる日々<span class="toc-sub"><wbr>🎯 短編の<wbr>連なりのような<wbr>静かな<wbr>作品が<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://dounikanaruhibi.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
-      <div class="toc-item"><a href="#gem8">8. 見える<wbr>子ちゃん<span class="toc-sub">🎯 ホラーが<wbr>苦手でも<wbr>楽しめる<wbr>コメディが<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://mierukochan.jp/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
-      <div class="toc-item"><a href="#gem9">9. オッドタクシー<span class="toc-sub">🎯 会話劇の<wbr>ミステリーが<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://oddtaxi.jp/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
-      <div class="toc-item"><a href="#gem10">10. ましろのおと<span class="toc-sub"><wbr>🎯 音楽に<wbr>かける<wbr>青春が<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://mashironooto-official.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
-      <div class="toc-item"><a href="#gem11">11. Vivy -Fluorite Eye's Song-<span class="toc-sub">🎯 歌と<wbr>AIの<wbr>SFドラマが<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://vivy-portal.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
-      <div class="toc-item"><a href="#gem12">12. さよなら私の<wbr>クラマー<span class="toc-sub">🎯 女子サッカーの<wbr>青春が<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://sayonara-cramer.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
-      <div class="toc-item"><a href="#gem13">13. か<wbr>げきしょうじょ!!<span class="toc-sub">🎯 舞台や<wbr>歌劇の<wbr>世界に<wbr>興味がある<wbr>人！</span></a><a class="toc-off" href="https://kageki-anime.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
-      <div class="toc-item"><a href="#gem14">14. 白い砂の<wbr>アクアトープ<span class="toc-sub">🎯 水族館の<wbr>お仕事ドラマが<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://aquatope-anime.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
-      <div class="toc-item"><a href="#gem15">15. サクガン<span class="toc-sub">🎯 少女の<wbr>冒険SFが<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://sakugan-anime.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
-      <div class="toc-item"><a href="#gem16">16. さんかく窓の<wbr>外側は<wbr>夜<span class="toc-sub">🎯 ホラーと<wbr>バディものを両方<wbr>楽しみたい<wbr>人！</span></a><a class="toc-off" href="https://sankakumado-anime.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
-      <div class="toc-item"><a href="#gem17">17. リアデイルの<wbr>大地にて<span class="toc-sub"><wbr>🎯 ゲーム世界ののんびりした<wbr>冒険が<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://leadale.net/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
-      <div class="toc-item"><a href="#gem18">18. パリピ孔明<span class="toc-sub">🎯 音楽と<wbr>三国志の<wbr>コメディが<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://paripikoumei-anime.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
-      <div class="toc-item"><a href="#gem19">19. サマータイムレンダ<span class="toc-sub">🎯 時間ものの<wbr>SFサスペンスが<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://summertime-anime.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
-      <div class="toc-item"><a href="#gem20">20. 組長娘と<wbr>世話係<span class="toc-sub">🎯 意外な<wbr>組み合わせの<wbr>コメディが<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://kumichomusume.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
-      <div class="toc-item"><a href="#gem21">21. スキップと<wbr>ローファー<span class="toc-sub">🎯 等身大の<wbr>青春ストーリーが<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://skip-and-loafer.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
-      <div class="toc-item"><a href="#gem22">22. 天国大魔境<span class="toc-sub">🎯 謎に<wbr>引き込まれる<wbr>SFが<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://tdm-anime.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
-      <div class="toc-item"><a href="#gem23">23. デッドマウント・デスプレイ<span class="toc-sub">🎯 癖のある<wbr>バトルアクションが<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://dmdp-anime.jp/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
-      <div class="toc-item"><a href="#gem24">24. WORLD DAI STAR<span class="toc-sub">🎯 舞台に<wbr>かける<wbr>青春が<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://www.world-dai-star.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
-      <div class="toc-item"><a href="#gem25">25. 小市民シリーズ<span class="toc-sub">🎯 日常の<wbr>謎解きが<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://shoshimin-anime.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem14">1. 白い砂の<wbr>アクアトープ<span class="toc-sub">🎯 水族館の<wbr>お仕事ドラマが<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://aquatope-anime.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem21">2. スキップと<wbr>ローファー<span class="toc-sub">🎯 等身大の<wbr>青春ストーリーが<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://skip-and-loafer.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem25">3. 小市民シリーズ<span class="toc-sub">🎯 日常の<wbr>謎解きが<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://shoshimin-anime.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem1">4. 映像研には手を<wbr>出すな！<span class="toc-sub"><wbr>🎯 何かを作る人の熱い話が<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="http://eizouken-anime.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem2">5. 恋する<wbr>小惑星<span class="toc-sub">🎯 星や<wbr>地学に<wbr>惹かれる<wbr>人！</span></a><a class="toc-off" href="https://koiastv.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem3">6. かくしごと<span class="toc-sub"><wbr>🎯 親子の<wbr>日常コメディが<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://kakushigoto-anime.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem4">7. デカダンス<span class="toc-sub">🎯 独特な<wbr>世界観の<wbr>SFが<wbr>観たい<wbr>人！</span></a><a class="toc-off" href="https://decadence-anime.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem5">8. トニカクカワイイ<span class="toc-sub">🎯 甘い<wbr>夫婦の<wbr>ラブコメが<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://tonikawa.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem6">9. アクダマドライブ<span class="toc-sub">🎯 悪役たちの<wbr>痛快な<wbr>群像劇が<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://akudama-drive.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem7">10. どうにかなる日々<span class="toc-sub"><wbr>🎯 短編の<wbr>連なりのような<wbr>静かな<wbr>作品が<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://dounikanaruhibi.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem8">11. 見える<wbr>子ちゃん<span class="toc-sub">🎯 ホラーが<wbr>苦手でも<wbr>楽しめる<wbr>コメディが<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://mierukochan.jp/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem9">12. オッドタクシー<span class="toc-sub">🎯 会話劇の<wbr>ミステリーが<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://oddtaxi.jp/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem10">13. ましろのおと<span class="toc-sub"><wbr>🎯 音楽に<wbr>かける<wbr>青春が<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://mashironooto-official.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem11">14. Vivy -Fluorite Eye's Song-<span class="toc-sub">🎯 歌と<wbr>AIの<wbr>SFドラマが<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://vivy-portal.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem12">15. さよなら私の<wbr>クラマー<span class="toc-sub">🎯 女子サッカーの<wbr>青春が<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://sayonara-cramer.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem13">16. か<wbr>げきしょうじょ!!<span class="toc-sub">🎯 舞台や<wbr>歌劇の<wbr>世界に<wbr>興味がある<wbr>人！</span></a><a class="toc-off" href="https://kageki-anime.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem15">17. サクガン<span class="toc-sub">🎯 少女の<wbr>冒険SFが<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://sakugan-anime.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem16">18. さんかく窓の<wbr>外側は<wbr>夜<span class="toc-sub">🎯 ホラーと<wbr>バディものを両方<wbr>楽しみたい<wbr>人！</span></a><a class="toc-off" href="https://sankakumado-anime.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem17">19. リアデイルの<wbr>大地にて<span class="toc-sub"><wbr>🎯 ゲーム世界ののんびりした<wbr>冒険が<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://leadale.net/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem18">20. パリピ孔明<span class="toc-sub">🎯 音楽と<wbr>三国志の<wbr>コメディが<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://paripikoumei-anime.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem19">21. サマータイムレンダ<span class="toc-sub">🎯 時間ものの<wbr>SFサスペンスが<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://summertime-anime.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem20">22. 組長娘と<wbr>世話係<span class="toc-sub">🎯 意外な<wbr>組み合わせの<wbr>コメディが<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://kumichomusume.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem22">23. 天国大魔境<span class="toc-sub">🎯 謎に<wbr>引き込まれる<wbr>SFが<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://tdm-anime.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem23">24. デッドマウント・デスプレイ<span class="toc-sub">🎯 癖のある<wbr>バトルアクションが<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://dmdp-anime.jp/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
+      <div class="toc-item"><a href="#gem24">25. WORLD DAI STAR<span class="toc-sub">🎯 舞台に<wbr>かける<wbr>青春が<wbr>好きな<wbr>人！</span></a><a class="toc-off" href="https://www.world-dai-star.com/" target="_blank" rel="noopener"><wbr>🌐 公式サイト</a></div>
     </div>
   </div>
 
@@ -148,9 +149,80 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
     <h2>作品紹介：全25作品</h2>
     <p>放送時期・原作・<wbr>制作会社・監督は、<wbr>公開されている<wbr>資料で<wbr>確認できた<wbr>ものだけを<wbr>書いています。<wbr>公式サイトを<wbr>開いて<wbr>確認できた<wbr>作品は、<wbr>作品名と<wbr>「公式」<wbr>バッジから<wbr>リンクしています。<wbr>配信先の<wbr>バッジは、<wbr>2026年10月23日に<wbr>dアニメストアの<wbr>公式サイトの<wbr>検索と、<wbr>動画配信の<wbr>検索サービス<wbr>（JustWatch）で<wbr>確認した、<wbr>見放題の<wbr>配信サービスです。<wbr>Amazonは、<wbr>Prime Videoの<wbr>見放題だけを<wbr>載せていて、<wbr>レンタルや<wbr>追加チャンネルは<wbr>含みません。<wbr>配信状況は<wbr>変わるので、<wbr>視聴前に<wbr>各サービスで<wbr>最新の<wbr>状況を<wbr>確認してください。</p>
 
-    <div class="gem-card" id="gem1">
+    <h2>特に<wbr>おすすめな3本</h2>
+    <p>管理人が<wbr>観て、<wbr>感想を<wbr>書いた<wbr>3作品です。</p>
+
+    <div class="gem-card" id="gem14">
       <div class="gem-header">
         <div class="gem-num">1</div>
+        <div class="gem-title-block">
+          <h3 class="gem-name"><a href="https://aquatope-anime.com/" target="_blank" rel="noopener">白い砂の<wbr>アクアトープ</a></h3>
+          <div class="gem-sub"><span class="nb">2021年夏</span> / <span class="nb">P.A.WORKS</span> / <span class="nb">日常・<wbr>お仕事</span></div>
+          <div class="gem-pick-badge">特におすすめ</div>
+        </div>
+      </div>
+      <div class="gem-body">沖縄の<wbr>水族館を<wbr>舞台に、<wbr>2人の<wbr>少女の絆や<wbr>葛藤、<wbr>成長を描く<wbr>青春群像劇です。<wbr>P.A.WORKSの<wbr>「お仕事シリーズ」<wbr>第4弾に<wbr>あたります。</div>
+      <p class="gem-data"><strong>📌 作品データ</strong>2021年7月から<wbr>12月まで<wbr>放送された<wbr>全24話の<wbr>オリジナルアニメです。<wbr>制作は<wbr>P.A.WORKSで、<wbr>監督は<wbr>篠原俊哉さん、<wbr>シリーズ構成は<wbr>柿原優子さんです。</p>
+      <p class="gem-data"><strong>📝 管理人の<wbr>感想</strong>管理人は、<wbr>放送時に<wbr>リアルタイムで<wbr>観ました。<wbr>P.A.WORKSの<wbr>オリジナルお仕事アニメという<wbr>以外、<wbr>事前の<wbr>情報は<wbr>入れずに<wbr>観ましたが、<wbr>期待ど<wbr>おりの<wbr>出来でした。<wbr>観終わると、<wbr>「よし、明日も頑張ろう」という<wbr>気持ちに<wbr>なれます。<wbr>特定の<wbr>場面ではなく、<wbr>作品全体からそう<wbr>感じました。</p>
+      <div class="gem-point"><strong>こんな人に：</strong>水族館の<wbr>お仕事ドラマが<wbr>好きな<wbr>人！</div>
+      <div class="streaming-row">
+        <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
+        <a href="https://video.unext.jp/" target="_blank" rel="noopener" class="badge unext">U-NEXT</a>
+        <a href="https://fod.fujitv.co.jp/" target="_blank" rel="noopener" class="badge fod">FOD</a>
+        <a href="https://aquatope-anime.com/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
+      </div>
+    </div>
+
+    <div class="gem-card" id="gem21">
+      <div class="gem-header">
+        <div class="gem-num">2</div>
+        <div class="gem-title-block">
+          <h3 class="gem-name"><a href="https://skip-and-loafer.com/" target="_blank" rel="noopener">スキップと<wbr>ローファー</a></h3>
+          <div class="gem-sub"><span class="nb">2023年春</span> / <span class="nb">P.A.WORKS</span> / <span class="nb">青春ラブコメ</span></div>
+          <div class="gem-pick-badge">特におすすめ</div>
+        </div>
+      </div>
+      <div class="gem-body">石川県から<wbr>東京の<wbr>進学校に<wbr>進んだ<wbr>少女が、<wbr>新しい<wbr>友だちと<wbr>学校生活を送る<wbr>青春ストーリーです。<wbr>原作は<wbr>第47回講談社漫画賞の<wbr>総合部門を<wbr>受賞しています。</div>
+      <p class="gem-data"><strong>📌 作品データ</strong>2023年4月から<wbr>6月まで<wbr>放送された<wbr>第1期<wbr>（全12話）です。<wbr>原作は<wbr>高松美咲さんの漫画<wbr>（講談社<wbr>「月刊アフタヌーン」）で、<wbr>制作は<wbr>P.A.WORKSです。<wbr>監督・シリーズ構成は<wbr>出合小都美さんです。</p>
+      <p class="gem-data"><strong>📝 管理人の<wbr>感想</strong>管理人は、<wbr>放送時に<wbr>リアルタイムで<wbr>観ました。<wbr>P.A.WORKSが手が<wbr>けていると<wbr>知って、<wbr>期待が<wbr>大きかったです。<wbr>結果は、<wbr>期待ど<wbr>おりの<wbr>出来でした。<wbr>主人公の<wbr>岩倉美津未は、<wbr>地方から<wbr>東京の<wbr>高校に<wbr>進学します。<wbr>出身地の<wbr>モデルは、<wbr>石川県の<wbr>能登地方と<wbr>されています。まず<wbr>東京との<wbr>ギャップに<wbr>慣れながら、少しずつ<wbr>馴染んでいく<wbr>過程が<wbr>素晴らしかったです。<wbr>第2期は<wbr>2027年4月放送開始と<wbr>発表されていて、<wbr>とても<wbr>楽しみに<wbr>しています。</p>
+      <div class="gem-point"><strong>こんな人に：</strong>等身大の<wbr>青春ストーリーが<wbr>好きな<wbr>人！</div>
+      <div class="streaming-row">
+        <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
+        <a href="https://netflix.com" target="_blank" rel="noopener" class="badge netflix">Netflix</a>
+        <a href="https://www.hulu.jp/" target="_blank" rel="noopener" class="badge hulu">Hulu</a>
+        <a href="https://fod.fujitv.co.jp/" target="_blank" rel="noopener" class="badge fod">FOD</a>
+        <a href="https://skip-and-loafer.com/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
+      </div>
+    </div>
+
+    <div class="gem-card" id="gem25">
+      <div class="gem-header">
+        <div class="gem-num">3</div>
+        <div class="gem-title-block">
+          <h3 class="gem-name"><a href="https://shoshimin-anime.com/" target="_blank" rel="noopener">小市民シリーズ</a></h3>
+          <div class="gem-sub"><span class="nb">2024年夏</span> / <span class="nb">ラパントラック</span> / <span class="nb">ミステリー・青春</span></div>
+          <div class="gem-pick-badge">特におすすめ</div>
+        </div>
+      </div>
+      <div class="gem-body">中学時代の苦い<wbr>経験から<wbr>「小市民」を<wbr>目指す高校生の<wbr>2人が、<wbr>日常で<wbr>起きる<wbr>事件の謎に<wbr>挑む青春ミステリーです。</div>
+      <p class="gem-data"><strong>📌 作品データ</strong>2024年7月から<wbr>9月まで<wbr>放送された<wbr>第1期<wbr>（全10話）です。<wbr>第2期は<wbr>2025年4月から<wbr>放送されました。<wbr>原作は<wbr>米澤穂信さんの<wbr>推理小説<wbr>（創元推理文庫）で、<wbr>制作は<wbr>ラパントラックです。<wbr>監督は<wbr>神戸守さん、<wbr>シリーズ構成は<wbr>大野敏哉さんです。</p>
+      <p class="gem-data"><strong>📝 管理人の<wbr>感想</strong>管理人は、<wbr>放送時に<wbr>リアルタイムで<wbr>観ました。<wbr>『氷菓』と<wbr>同じ、<wbr>米澤穂信さん<wbr>原作の<wbr>シリーズです。<wbr>『氷菓』の<wbr>雰囲気を<wbr>保ちながら、<wbr>小鳩常悟朗と<wbr>小佐内ゆきの<wbr>二人が、謎を<wbr>淡々と<wbr>解決していく姿に<wbr>惹かれました。</p>
+      <div class="gem-point"><strong>こんな人に：</strong>日常の<wbr>謎解きが<wbr>好きな<wbr>人！</div>
+      <div class="streaming-row">
+        <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
+        <a href="https://netflix.com" target="_blank" rel="noopener" class="badge netflix">Netflix</a>
+        <a href="https://video.unext.jp/" target="_blank" rel="noopener" class="badge unext">U-NEXT</a>
+        <a href="https://www.hulu.jp/" target="_blank" rel="noopener" class="badge hulu">Hulu</a>
+        <a href="https://fod.fujitv.co.jp/" target="_blank" rel="noopener" class="badge fod">FOD</a>
+        <a href="https://shoshimin-anime.com/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
+      </div>
+    </div>
+
+    <h2>そのほかの作品</h2>
+
+    <div class="gem-card" id="gem1">
+      <div class="gem-header">
+        <div class="gem-num">4</div>
         <div class="gem-title-block">
           <h3 class="gem-name"><a href="http://eizouken-anime.com/" target="_blank" rel="noopener">映像研には手を<wbr>出すな！</a></h3>
           <div class="gem-sub"><span class="nb">2020年冬</span> / <span class="nb">サイエンスSARU</span> / <span class="nb">青春・創作</span></div>
@@ -170,7 +242,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
 
     <div class="gem-card" id="gem2">
       <div class="gem-header">
-        <div class="gem-num">2</div>
+        <div class="gem-num">5</div>
         <div class="gem-title-block">
           <h3 class="gem-name"><a href="https://koiastv.com/" target="_blank" rel="noopener">恋する小惑星</a></h3>
           <div class="gem-sub"><span class="nb">2020年冬</span> / <span class="nb">動画工房</span> / <span class="nb">青春・部活</span></div>
@@ -187,7 +259,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
 
     <div class="gem-card" id="gem3">
       <div class="gem-header">
-        <div class="gem-num">3</div>
+        <div class="gem-num">6</div>
         <div class="gem-title-block">
           <h3 class="gem-name"><a href="https://kakushigoto-anime.com/" target="_blank" rel="noopener">かくしごと</a></h3>
           <div class="gem-sub"><span class="nb">2020年春</span> / <span class="nb">亜細亜堂</span> / <span class="nb">コメディ・家族</span></div>
@@ -205,7 +277,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
 
     <div class="gem-card" id="gem4">
       <div class="gem-header">
-        <div class="gem-num">4</div>
+        <div class="gem-num">7</div>
         <div class="gem-title-block">
           <h3 class="gem-name"><a href="https://decadence-anime.com/" target="_blank" rel="noopener">デカダンス</a></h3>
           <div class="gem-sub"><span class="nb">2020年夏</span> / <span class="nb">NUT</span> / <span class="nb">SFバトル</span></div>
@@ -224,7 +296,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
 
     <div class="gem-card" id="gem5">
       <div class="gem-header">
-        <div class="gem-num">5</div>
+        <div class="gem-num">8</div>
         <div class="gem-title-block">
           <h3 class="gem-name"><a href="https://tonikawa.com/" target="_blank" rel="noopener">トニカクカワイイ</a></h3>
           <div class="gem-sub"><span class="nb">2020年秋</span> / <span class="nb">Seven Arcs</span> / <span class="nb">ラブコメ</span></div>
@@ -242,7 +314,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
 
     <div class="gem-card" id="gem6">
       <div class="gem-header">
-        <div class="gem-num">6</div>
+        <div class="gem-num">9</div>
         <div class="gem-title-block">
           <h3 class="gem-name"><a href="https://akudama-drive.com/" target="_blank" rel="noopener">アクダマドライブ</a></h3>
           <div class="gem-sub"><span class="nb">2020年秋</span> / <span class="nb">ぴえろ</span> / <span class="nb">SFアクション</span></div>
@@ -262,7 +334,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
 
     <div class="gem-card" id="gem7">
       <div class="gem-header">
-        <div class="gem-num">7</div>
+        <div class="gem-num">10</div>
         <div class="gem-title-block">
           <h3 class="gem-name"><a href="https://dounikanaruhibi.com/" target="_blank" rel="noopener">どうにかなる日々</a></h3>
           <div class="gem-sub"><span class="nb">2020年公開</span> / <span class="nb">日常</span></div>
@@ -281,7 +353,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
 
     <div class="gem-card" id="gem8">
       <div class="gem-header">
-        <div class="gem-num">8</div>
+        <div class="gem-num">11</div>
         <div class="gem-title-block">
           <h3 class="gem-name"><a href="https://mierukochan.jp/" target="_blank" rel="noopener">見える子ちゃん</a></h3>
           <div class="gem-sub"><span class="nb">2021年冬</span> / <span class="nb">Passione</span> / <span class="nb">ホラーコメディ</span></div>
@@ -301,7 +373,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
 
     <div class="gem-card" id="gem9">
       <div class="gem-header">
-        <div class="gem-num">9</div>
+        <div class="gem-num">12</div>
         <div class="gem-title-block">
           <h3 class="gem-name"><a href="https://oddtaxi.jp/" target="_blank" rel="noopener">オッドタクシー</a></h3>
           <div class="gem-sub"><span class="nb">2021年春</span> / <span class="nb">P.I.C.S.・OLM</span> / <span class="nb">ミステリー・会話劇</span></div>
@@ -322,7 +394,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
 
     <div class="gem-card" id="gem10">
       <div class="gem-header">
-        <div class="gem-num">10</div>
+        <div class="gem-num">13</div>
         <div class="gem-title-block">
           <h3 class="gem-name"><a href="https://mashironooto-official.com/" target="_blank" rel="noopener">ましろのおと</a></h3>
           <div class="gem-sub"><span class="nb">2021年春</span> / <span class="nb">シンエ<wbr>イ動画</span> / <span class="nb">音楽・青春</span></div>
@@ -342,7 +414,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
 
     <div class="gem-card" id="gem11">
       <div class="gem-header">
-        <div class="gem-num">11</div>
+        <div class="gem-num">14</div>
         <div class="gem-title-block">
           <h3 class="gem-name"><a href="https://vivy-portal.com/" target="_blank" rel="noopener">Vivy -Fluorite Eye's Song-</a></h3>
           <div class="gem-sub"><span class="nb">2021年春</span> / <span class="nb">WIT STUDIO</span> / <span class="nb">SFロボット</span></div>
@@ -360,7 +432,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
 
     <div class="gem-card" id="gem12">
       <div class="gem-header">
-        <div class="gem-num">12</div>
+        <div class="gem-num">15</div>
         <div class="gem-title-block">
           <h3 class="gem-name"><a href="https://sayonara-cramer.com/" target="_blank" rel="noopener">さよなら私の<wbr>クラマー</a></h3>
           <div class="gem-sub"><span class="nb">2021年春</span> / <span class="nb">ライデンフィルム</span> / <span class="nb">スポーツ・青春</span></div>
@@ -377,7 +449,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
 
     <div class="gem-card" id="gem13">
       <div class="gem-header">
-        <div class="gem-num">13</div>
+        <div class="gem-num">16</div>
         <div class="gem-title-block">
           <h3 class="gem-name"><a href="https://kageki-anime.com/" target="_blank" rel="noopener">か<wbr>げきしょうじょ!!</a></h3>
           <div class="gem-sub"><span class="nb">2021年夏</span> / <span class="nb">PINE JAM</span> / <span class="nb">音楽学校青春</span></div>
@@ -395,29 +467,9 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </div>
 
-    <div class="gem-card" id="gem14">
-      <div class="gem-header">
-        <div class="gem-num">14</div>
-        <div class="gem-title-block">
-          <h3 class="gem-name"><a href="https://aquatope-anime.com/" target="_blank" rel="noopener">白い砂の<wbr>アクアトープ</a></h3>
-          <div class="gem-sub"><span class="nb">2021年夏</span> / <span class="nb">P.A.WORKS</span> / <span class="nb">日常・<wbr>お仕事</span></div>
-        </div>
-      </div>
-      <div class="gem-body">沖縄の<wbr>水族館を<wbr>舞台に、<wbr>2人の<wbr>少女の絆や<wbr>葛藤、<wbr>成長を描く<wbr>青春群像劇です。<wbr>P.A.WORKSの<wbr>「お仕事シリーズ」<wbr>第4弾に<wbr>あたります。</div>
-      <p class="gem-data"><strong>📌 作品データ</strong>2021年7月から<wbr>12月まで<wbr>放送された<wbr>全24話の<wbr>オリジナルアニメです。<wbr>制作は<wbr>P.A.WORKSで、<wbr>監督は<wbr>篠原俊哉さん、<wbr>シリーズ構成は<wbr>柿原優子さんです。</p>
-      <p class="gem-data"><strong>📝 管理人の<wbr>感想</strong>管理人は、<wbr>放送時に<wbr>リアルタイムで<wbr>観ました。<wbr>P.A.WORKSの<wbr>オリジナルお仕事アニメという<wbr>以外、<wbr>事前の<wbr>情報は<wbr>入れずに<wbr>観ましたが、<wbr>期待ど<wbr>おりの<wbr>出来でした。<wbr>観終わると、<wbr>「よし、明日も頑張ろう」という<wbr>気持ちに<wbr>なれます。<wbr>特定の<wbr>場面ではなく、<wbr>作品全体からそう<wbr>感じました。</p>
-      <div class="gem-point"><strong>こんな人に：</strong>水族館の<wbr>お仕事ドラマが<wbr>好きな<wbr>人！</div>
-      <div class="streaming-row">
-        <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
-        <a href="https://video.unext.jp/" target="_blank" rel="noopener" class="badge unext">U-NEXT</a>
-        <a href="https://fod.fujitv.co.jp/" target="_blank" rel="noopener" class="badge fod">FOD</a>
-        <a href="https://aquatope-anime.com/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
-      </div>
-    </div>
-
     <div class="gem-card" id="gem15">
       <div class="gem-header">
-        <div class="gem-num">15</div>
+        <div class="gem-num">17</div>
         <div class="gem-title-block">
           <h3 class="gem-name"><a href="https://sakugan-anime.com/" target="_blank" rel="noopener">サクガン</a></h3>
           <div class="gem-sub"><span class="nb">2021年秋</span> / <span class="nb">サテライト</span> / <span class="nb">SFアドベンチャー</span></div>
@@ -435,7 +487,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
 
     <div class="gem-card" id="gem16">
       <div class="gem-header">
-        <div class="gem-num">16</div>
+        <div class="gem-num">18</div>
         <div class="gem-title-block">
           <h3 class="gem-name"><a href="https://sankakumado-anime.com/" target="_blank" rel="noopener">さんかく窓の<wbr>外側は夜</a></h3>
           <div class="gem-sub"><span class="nb">2021年秋</span> / <span class="nb">ゼロジー</span> / <span class="nb">ホラーミステリー</span></div>
@@ -455,7 +507,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
 
     <div class="gem-card" id="gem17">
       <div class="gem-header">
-        <div class="gem-num">17</div>
+        <div class="gem-num">19</div>
         <div class="gem-title-block">
           <h3 class="gem-name"><a href="https://leadale.net/" target="_blank" rel="noopener">リアデイルの<wbr>大地にて</a></h3>
           <div class="gem-sub"><span class="nb">2022年冬</span> / <span class="nb">MAHO FILM</span> / <span class="nb">異世界ファンタジー</span></div>
@@ -475,7 +527,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
 
     <div class="gem-card" id="gem18">
       <div class="gem-header">
-        <div class="gem-num">18</div>
+        <div class="gem-num">20</div>
         <div class="gem-title-block">
           <h3 class="gem-name"><a href="https://paripikoumei-anime.com/" target="_blank" rel="noopener">パリピ孔明</a></h3>
           <div class="gem-sub"><span class="nb">2022年春</span> / <span class="nb">P.A.WORKS</span> / <span class="nb">コメディ・音楽</span></div>
@@ -496,7 +548,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
 
     <div class="gem-card" id="gem19">
       <div class="gem-header">
-        <div class="gem-num">19</div>
+        <div class="gem-num">21</div>
         <div class="gem-title-block">
           <h3 class="gem-name"><a href="https://summertime-anime.com/" target="_blank" rel="noopener">サマータイムレンダ</a></h3>
           <div class="gem-sub"><span class="nb">2022年春</span> / <span class="nb">OLM Team Kojima</span> / <span class="nb">サスペンス・SF</span></div>
@@ -517,7 +569,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
 
     <div class="gem-card" id="gem20">
       <div class="gem-header">
-        <div class="gem-num">20</div>
+        <div class="gem-num">22</div>
         <div class="gem-title-block">
           <h3 class="gem-name"><a href="https://kumichomusume.com/" target="_blank" rel="noopener">組長娘と世話係</a></h3>
           <div class="gem-sub"><span class="nb">2022年夏</span> / <span class="nb">feel.・GAINA</span> / <span class="nb">コメディ・日常</span></div>
@@ -537,30 +589,9 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </div>
 
-    <div class="gem-card" id="gem21">
-      <div class="gem-header">
-        <div class="gem-num">21</div>
-        <div class="gem-title-block">
-          <h3 class="gem-name"><a href="https://skip-and-loafer.com/" target="_blank" rel="noopener">スキップと<wbr>ローファー</a></h3>
-          <div class="gem-sub"><span class="nb">2023年春</span> / <span class="nb">P.A.WORKS</span> / <span class="nb">青春ラブコメ</span></div>
-        </div>
-      </div>
-      <div class="gem-body">石川県から<wbr>東京の<wbr>進学校に<wbr>進んだ<wbr>少女が、<wbr>新しい<wbr>友だちと<wbr>学校生活を送る<wbr>青春ストーリーです。<wbr>原作は<wbr>第47回講談社漫画賞の<wbr>総合部門を<wbr>受賞しています。</div>
-      <p class="gem-data"><strong>📌 作品データ</strong>2023年4月から<wbr>6月まで<wbr>放送された<wbr>第1期<wbr>（全12話）です。<wbr>原作は<wbr>高松美咲さんの漫画<wbr>（講談社<wbr>「月刊アフタヌーン」）で、<wbr>制作は<wbr>P.A.WORKSです。<wbr>監督・シリーズ構成は<wbr>出合小都美さんです。</p>
-      <p class="gem-data"><strong>📝 管理人の<wbr>感想</strong>管理人は、<wbr>放送時に<wbr>リアルタイムで<wbr>観ました。<wbr>P.A.WORKSが手が<wbr>けていると<wbr>知って、<wbr>期待が<wbr>大きかったです。<wbr>結果は、<wbr>期待ど<wbr>おりの<wbr>出来でした。<wbr>主人公の<wbr>岩倉美津未は、<wbr>地方から<wbr>東京の<wbr>高校に<wbr>進学します。<wbr>出身地の<wbr>モデルは、<wbr>石川県の<wbr>能登地方と<wbr>されています。まず<wbr>東京との<wbr>ギャップに<wbr>慣れながら、少しずつ<wbr>馴染んでいく<wbr>過程が<wbr>素晴らしかったです。<wbr>第2期は<wbr>2027年4月放送開始と<wbr>発表されていて、<wbr>とても<wbr>楽しみに<wbr>しています。</p>
-      <div class="gem-point"><strong>こんな人に：</strong>等身大の<wbr>青春ストーリーが<wbr>好きな<wbr>人！</div>
-      <div class="streaming-row">
-        <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
-        <a href="https://netflix.com" target="_blank" rel="noopener" class="badge netflix">Netflix</a>
-        <a href="https://www.hulu.jp/" target="_blank" rel="noopener" class="badge hulu">Hulu</a>
-        <a href="https://fod.fujitv.co.jp/" target="_blank" rel="noopener" class="badge fod">FOD</a>
-        <a href="https://skip-and-loafer.com/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
-      </div>
-    </div>
-
     <div class="gem-card" id="gem22">
       <div class="gem-header">
-        <div class="gem-num">22</div>
+        <div class="gem-num">23</div>
         <div class="gem-title-block">
           <h3 class="gem-name"><a href="https://tdm-anime.com/" target="_blank" rel="noopener">天国大魔境</a></h3>
           <div class="gem-sub"><span class="nb">2023年春</span> / <span class="nb">Production I.G</span> / <span class="nb">SFミステリー</span></div>
@@ -577,7 +608,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
 
     <div class="gem-card" id="gem23">
       <div class="gem-header">
-        <div class="gem-num">23</div>
+        <div class="gem-num">24</div>
         <div class="gem-title-block">
           <h3 class="gem-name"><a href="https://dmdp-anime.jp/" target="_blank" rel="noopener">デッドマウント・デスプレイ</a></h3>
           <div class="gem-sub"><span class="nb">2023年春</span> / <span class="nb">GEEKTOYS</span> / <span class="nb">バトル</span></div>
@@ -597,7 +628,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
 
     <div class="gem-card" id="gem24">
       <div class="gem-header">
-        <div class="gem-num">24</div>
+        <div class="gem-num">25</div>
         <div class="gem-title-block">
           <h3 class="gem-name"><a href="https://www.world-dai-star.com/" target="_blank" rel="noopener">WORLD DAI STAR</a></h3>
           <div class="gem-sub"><span class="nb">2023年春</span> / <span class="nb">Lerche</span> / <span class="nb">バレエ・青春</span></div>
@@ -611,29 +642,6 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
         <a href="https://www.world-dai-star.com/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
       </div>
     </div>
-
-    <div class="gem-card" id="gem25">
-      <div class="gem-header">
-        <div class="gem-num">25</div>
-        <div class="gem-title-block">
-          <h3 class="gem-name"><a href="https://shoshimin-anime.com/" target="_blank" rel="noopener">小市民シリーズ</a></h3>
-          <div class="gem-sub"><span class="nb">2024年夏</span> / <span class="nb">ラパントラック</span> / <span class="nb">ミステリー・青春</span></div>
-        </div>
-      </div>
-      <div class="gem-body">中学時代の苦い<wbr>経験から<wbr>「小市民」を<wbr>目指す高校生の<wbr>2人が、<wbr>日常で<wbr>起きる<wbr>事件の謎に<wbr>挑む青春ミステリーです。</div>
-      <p class="gem-data"><strong>📌 作品データ</strong>2024年7月から<wbr>9月まで<wbr>放送された<wbr>第1期<wbr>（全10話）です。<wbr>第2期は<wbr>2025年4月から<wbr>放送されました。<wbr>原作は<wbr>米澤穂信さんの<wbr>推理小説<wbr>（創元推理文庫）で、<wbr>制作は<wbr>ラパントラックです。<wbr>監督は<wbr>神戸守さん、<wbr>シリーズ構成は<wbr>大野敏哉さんです。</p>
-      <p class="gem-data"><strong>📝 管理人の<wbr>感想</strong>管理人は、<wbr>放送時に<wbr>リアルタイムで<wbr>観ました。<wbr>『氷菓』と<wbr>同じ、<wbr>米澤穂信さん<wbr>原作の<wbr>シリーズです。<wbr>『氷菓』の<wbr>雰囲気を<wbr>保ちながら、<wbr>小鳩常悟朗と<wbr>小佐内ゆきの<wbr>二人が、謎を<wbr>淡々と<wbr>解決していく姿に<wbr>惹かれました。</p>
-      <div class="gem-point"><strong>こんな人に：</strong>日常の<wbr>謎解きが<wbr>好きな<wbr>人！</div>
-      <div class="streaming-row">
-        <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener" class="badge danime">dアニメ</a>
-        <a href="https://netflix.com" target="_blank" rel="noopener" class="badge netflix">Netflix</a>
-        <a href="https://video.unext.jp/" target="_blank" rel="noopener" class="badge unext">U-NEXT</a>
-        <a href="https://www.hulu.jp/" target="_blank" rel="noopener" class="badge hulu">Hulu</a>
-        <a href="https://fod.fujitv.co.jp/" target="_blank" rel="noopener" class="badge fod">FOD</a>
-        <a href="https://shoshimin-anime.com/" target="_blank" rel="noopener" class="badge official">🌐 公式</a>
-      </div>
-    </div>
-
 
     <h2>まとめ</h2>
     <p>今回は、<wbr>2020年代前半に<wbr>放送・<wbr>公開された<wbr>25本を<wbr>紹介しました。気になる<wbr>作品が<wbr>見つかったら、<wbr>「<a href="/hidden-gems-gacha.html">埋もれた名作ガチャ</a>」で<wbr>引いてみるのも<wbr>一つの<wbr>方法です。</p>
