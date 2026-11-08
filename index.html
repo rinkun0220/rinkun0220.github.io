@@ -193,7 +193,7 @@ main { margin-top: var(--nav-height); padding: 24px; min-height: calc(100vh - va
 /* 配信リンクバッジ */
 .card-stream-badges { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; z-index: 10; position: relative; }
 .badge { 
-  font-size: 0.65rem; font-weight: 600; padding: 3px 9px; border-radius: 4px; 
+  font-size: 0.72rem; font-weight: 600; padding: 5px 10px; border-radius: 4px; 
   text-decoration: none; display: inline-block; transition: all 0.2s; 
   background: transparent; border: 1px solid currentColor;
 }
@@ -271,7 +271,7 @@ main { margin-top: var(--nav-height); padding: 24px; min-height: calc(100vh - va
 /* 「注目の作品」の隣のリンク(背景のぼかしに合わせた、暗い半透明) */
 .hero-tag-row{display:flex;align-items:center;flex-wrap:wrap;gap:8px 10px;margin-bottom:12px}
 .hero-tag-row .hero-tag{margin-bottom:0}
-.hero-char-link{display:inline-block;font-size:.8rem;font-weight:700;line-height:1.4;color:#fff;text-decoration:none;white-space:nowrap;background:rgba(8,12,22,.5);border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:3px 12px;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);text-shadow:0 1px 3px rgba(0,0,0,.6);transition:background .2s,border-color .2s}
+.hero-char-link{display:inline-block;font-size:.8rem;font-weight:700;line-height:1.4;color:#fff;text-decoration:none;white-space:nowrap;background:rgba(8,12,22,.5);border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:6px 14px;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);text-shadow:0 1px 3px rgba(0,0,0,.6);transition:background .2s,border-color .2s}
 .hero-char-link:hover,.hero-char-link:focus-visible{background:rgba(230,72,90,.75);border-color:rgba(255,255,255,.6)}
 /* 日本語の改行を自然にする設定（文節単位で改行・行頭禁則・1文字だけの行を避ける） */
 body{line-break:strict;overflow-wrap:anywhere}
@@ -850,6 +850,10 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
             <div class="card-stream-badges">
               <a href="https://animestore.docomo.ne.jp" target="_blank" rel="noopener noreferrer" class="badge danime">dアニメ</a>
               <a href="https://www.amazon.co.jp/primevideo" target="_blank" rel="noopener noreferrer" class="badge amazon">Amazon</a>
+            
+              <a href="https://abema.tv/" target="_blank" rel="noopener noreferrer" class="badge abema">ABEMA</a>
+              <a href="https://video.unext.jp/" target="_blank" rel="noopener noreferrer" class="badge unext">U-NEXT</a>
+              <a href="https://tv.dmm.com/vod/" target="_blank" rel="noopener noreferrer" class="badge dmmtv">DMM TV</a>
             </div>
           </div>
         </div>
