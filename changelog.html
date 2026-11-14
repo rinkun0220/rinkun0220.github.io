@@ -146,10 +146,20 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
   </div>
 
   <div class="cat-filter" id="monthFilter" role="group" aria-label="月で絞り込む" hidden>
-    <button type="button" class="cat-chip active" data-m="all" aria-pressed="true">すべて<span class="cat-n">77</span></button><button type="button" class="cat-chip" data-m="2026-11" aria-pressed="false">2026年11月<span class="cat-n">13</span></button><button type="button" class="cat-chip" data-m="2026-10" aria-pressed="false">2026年10月<span class="cat-n">27</span></button><button type="button" class="cat-chip" data-m="2026-09" aria-pressed="false">2026年9月<span class="cat-n">21</span></button><button type="button" class="cat-chip" data-m="2026-08" aria-pressed="false">2026年8月<span class="cat-n">14</span></button><button type="button" class="cat-chip" data-m="2026-07" aria-pressed="false">2026年7月<span class="cat-n">2</span></button>
+    <button type="button" class="cat-chip" data-m="all" aria-pressed="false">すべて<span class="cat-n">78</span></button><button type="button" class="cat-chip active" data-m="2026-11" aria-pressed="true">2026年11月<span class="cat-n">14</span></button><button type="button" class="cat-chip" data-m="2026-10" aria-pressed="false">2026年10月<span class="cat-n">27</span></button><button type="button" class="cat-chip" data-m="2026-09" aria-pressed="false">2026年9月<span class="cat-n">21</span></button><button type="button" class="cat-chip" data-m="2026-08" aria-pressed="false">2026年8月<span class="cat-n">14</span></button><button type="button" class="cat-chip" data-m="2026-07" aria-pressed="false">2026年7月<span class="cat-n">2</span></button>
   </div>
 
   <div class="timeline">
+
+    <div class="log-entry" data-month="2026-11">
+      <div class="log-date">2026年11月20日</div>
+      <div class="log-card">
+        <div class="log-tags"><span class="log-tag improve">改良</span></div>
+        <ul class="log-list">
+          <li><a href="/blog/hidden-gems-2023-2024.html">2023〜2024年に<wbr>見逃した<wbr>隠れた<wbr>名作アニメ</a>の<wbr>「魔法少女に<wbr>あこがれて」に、<wbr>第2期が<wbr>2027年に<wbr>放送される<wbr>ことを<wbr>加えました。</li>
+        </ul>
+      </div>
+    </div>
 
     <div class="log-entry" data-month="2026-11">
       <div class="log-date">2026年11月19日</div>
@@ -1130,9 +1140,9 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
   }
   chips.forEach(function(b){ b.addEventListener('click',function(){
     var c=b.getAttribute('data-m'); apply(c);
-    try{ history.replaceState(null,'',c==='all'?location.pathname+location.search:'#'+c); }catch(e){}
+    try{ history.replaceState(null,'','#'+c); }catch(e){}
   }); });
-  var h=(location.hash||'').replace('#',''); if(!valid[h]) h='all';
+  var h=(location.hash||'').replace('#',''); if(!valid[h]) h=chips[1]?chips[1].getAttribute('data-m'):'all';
   wrap.hidden=false; apply(h);
 })();
 </script>
