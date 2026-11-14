@@ -108,6 +108,13 @@ footer { background: var(--bg-darker); border-top: 1px solid var(--border-color)
 .footer-link { color: var(--text-muted); text-decoration: none; font-size: 0.85rem; }
 .footer-link:hover { color: #fff; }
 .copyright { font-size: 0.8rem; color: rgba(255,255,255,0.3); }
+.cat-filter{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 24px}
+.cat-filter[hidden]{display:none}
+.cat-chip{font:inherit;font-size:.85rem;font-weight:700;color:var(--text-main);background:var(--bg-card);border:1px solid var(--border-color);border-radius:20px;padding:7px 14px;cursor:pointer;display:inline-flex;align-items:center;gap:6px;transition:border-color .2s,background .2s}
+.cat-chip:hover{border-color:var(--accent)}
+.cat-chip.active{background:var(--accent);border-color:var(--accent);color:#fff}
+.cat-n{font-size:.72rem;font-weight:700;opacity:.8}
+@media (max-width:600px){.cat-chip{font-size:.8rem;padding:6px 12px}}
 /* 日本語の改行を自然にする設定（文節単位で改行・行頭禁則・1文字だけの行を避ける） */
 body{line-break:strict;overflow-wrap:anywhere}
 @supports (word-break:auto-phrase){body{word-break:auto-phrase}}
@@ -138,9 +145,28 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
     <p class="page-desc">ANIMEDBの<wbr>更新内容を随時<wbr>記録しています。<wbr>新しい<wbr>記事の<wbr>追加や、<wbr>配信情報の<wbr>修正、<wbr>サイトの<wbr>機能改善などを<wbr>こちらで<wbr>お知らせします。</p>
   </div>
 
+  <div class="cat-filter" id="monthFilter" role="group" aria-label="月で絞り込む" hidden>
+    <button type="button" class="cat-chip active" data-m="all" aria-pressed="true">すべて<span class="cat-n">77</span></button><button type="button" class="cat-chip" data-m="2026-11" aria-pressed="false">2026年11月<span class="cat-n">13</span></button><button type="button" class="cat-chip" data-m="2026-10" aria-pressed="false">2026年10月<span class="cat-n">27</span></button><button type="button" class="cat-chip" data-m="2026-09" aria-pressed="false">2026年9月<span class="cat-n">21</span></button><button type="button" class="cat-chip" data-m="2026-08" aria-pressed="false">2026年8月<span class="cat-n">14</span></button><button type="button" class="cat-chip" data-m="2026-07" aria-pressed="false">2026年7月<span class="cat-n">2</span></button>
+  </div>
+
   <div class="timeline">
 
-    <div class="log-entry">
+    <div class="log-entry" data-month="2026-11">
+      <div class="log-date">2026年11月19日</div>
+      <div class="log-card">
+        <div class="log-tags"><span class="log-tag improve">改良</span></div>
+        <ul class="log-list">
+          <li><a href="/blog/2026-spring-all.html">2026年春アニメの<wbr>感想まとめ</a>の<wbr>「とんがり帽子の<wbr>アトリエ」から、<wbr>「今期No.1」の<wbr>表現を<wbr>カットしました。</li>
+          <li><a href="/blog/rating-criteria.html">評価の<wbr>基準</a>・<a href="/blog/battle-anime-top10.html">バトルアニメ</a>・<a href="/blog/romance-top10.html">泣ける<wbr>ラブコメ</a>の<wbr>記事の、<wbr>更新日の<wbr>表記を<wbr>整えました。</li>
+          <li><a href="/blog/toaru-guide.html">「と<wbr>ある」シリーズ初心者ガイド</a>の<wbr>公開日を、<wbr>11月17日に<wbr>しました。</li>
+          <li>「と<wbr>ある」シリーズ初心者ガイドの<wbr>配信バッジを、<wbr>9作品すべてで<wbr>見放題の<wbr>U-NEXTと<wbr>DMM TVに<wbr>揃えました。<wbr>dアニメは<wbr>外し、<wbr>配信情報は<wbr>11月15日時点に<wbr>しました。</li>
+          <li>「と<wbr>ある<wbr>暗部の<wbr>少女共棲<wbr>（アイテム）」の<wbr>配信バッジも、<wbr>トップページと<wbr>秋アニメの<wbr>記事で、<wbr>dアニメを<wbr>外して<wbr>U-NEXTを<wbr>加えました。</li>
+          <li><a href="/blog/memories-anime.html">管理人が<wbr>思い出に<wbr>残る<wbr>アニメ</a>の<wbr>「コードギアス」に、<wbr>dアニメの<wbr>バッジと、<wbr>11月15日時点の<wbr>配信の<wbr>注記を<wbr>加えました。</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="log-entry" data-month="2026-11">
       <div class="log-date">2026年11月18日</div>
       <div class="log-card">
         <div class="log-tags"><span class="log-tag improve">改良</span></div>
@@ -151,7 +177,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </div>
 
-    <div class="log-entry">
+    <div class="log-entry" data-month="2026-11">
       <div class="log-date">2026年11月17日</div>
       <div class="log-card">
         <div class="log-tags"><span class="log-tag improve">改良</span></div>
@@ -164,7 +190,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </div>
 
-    <div class="log-entry">
+    <div class="log-entry" data-month="2026-11">
       <div class="log-date">2026年11月16日</div>
       <div class="log-card">
         <div class="log-tags"><span class="log-tag improve">改良</span></div>
@@ -175,7 +201,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </div>
 
-    <div class="log-entry">
+    <div class="log-entry" data-month="2026-11">
       <div class="log-date">2026年11月15日</div>
       <div class="log-card">
         <div class="log-tags"><span class="log-tag improve">改良</span></div>
@@ -188,7 +214,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </div>
 
-    <div class="log-entry">
+    <div class="log-entry" data-month="2026-11">
       <div class="log-date">2026年11月14日</div>
       <div class="log-card">
         <div class="log-tags"><span class="log-tag improve">改良</span></div>
@@ -199,7 +225,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </div>
 
-    <div class="log-entry">
+    <div class="log-entry" data-month="2026-11">
       <div class="log-date">2026年11月13日</div>
       <div class="log-card">
         <div class="log-tags"><span class="log-tag improve">改良</span></div>
@@ -210,7 +236,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </div>
 
-    <div class="log-entry">
+    <div class="log-entry" data-month="2026-11">
       <div class="log-date">2026年11月12日</div>
       <div class="log-card">
         <div class="log-tags"><span class="log-tag improve">改良</span></div>
@@ -224,7 +250,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </div>
 
-    <div class="log-entry">
+    <div class="log-entry" data-month="2026-11">
       <div class="log-date">2026年11月11日</div>
       <div class="log-card">
         <div class="log-tags"><span class="log-tag new">新規</span><span class="log-tag improve">改良</span><span class="log-tag fix">修正</span></div>
@@ -239,7 +265,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </div>
 
-    <div class="log-entry">
+    <div class="log-entry" data-month="2026-11">
       <div class="log-date">2026年11月10日</div>
       <div class="log-card">
         <div class="log-tags"><span class="log-tag new">新規</span><span class="log-tag improve">改良</span><span class="log-tag fix">修正</span></div>
@@ -254,7 +280,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </div>
 
-    <div class="log-entry">
+    <div class="log-entry" data-month="2026-11">
       <div class="log-date">2026年11月8日</div>
       <div class="log-card">
         <div class="log-tags"><span class="log-tag new">新規</span><span class="log-tag improve">改良</span><span class="log-tag fix">修正</span></div>
@@ -267,7 +293,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </div>
 
-    <div class="log-entry">
+    <div class="log-entry" data-month="2026-11">
       <div class="log-date">2026年11月4日</div>
       <div class="log-card">
         <div class="log-tags"><span class="log-tag new">新規</span><span class="log-tag improve">改良</span><span class="log-tag fix">修正</span></div>
@@ -282,7 +308,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </div>
 
-    <div class="log-entry">
+    <div class="log-entry" data-month="2026-11">
       <div class="log-date">2026年11月1日</div>
       <div class="log-card">
         <div class="log-tags"><span class="log-tag improve">改良</span></div>
@@ -292,7 +318,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </div>
 
-    <div class="log-entry">
+    <div class="log-entry" data-month="2026-10">
       <div class="log-date">2026年10月31日</div>
       <div class="log-card">
         <div class="log-tags"><span class="log-tag improve">改良</span></div>
@@ -302,7 +328,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </div>
 
-    <div class="log-entry">
+    <div class="log-entry" data-month="2026-10">
       <div class="log-date">2026年10月28日</div>
       <div class="log-card">
         <div class="log-tags"><span class="log-tag new">新規</span><span class="log-tag improve">改良</span><span class="log-tag fix">修正</span></div>
@@ -316,7 +342,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </div>
 
-    <div class="log-entry">
+    <div class="log-entry" data-month="2026-10">
       <div class="log-date">2026年10月27日</div>
       <div class="log-card">
         <div class="log-tags"><span class="log-tag improve">改良</span></div>
@@ -330,7 +356,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </div>
 
-    <div class="log-entry">
+    <div class="log-entry" data-month="2026-10">
       <div class="log-date">2026年10月26日</div>
       <div class="log-card">
         <div class="log-tags"><span class="log-tag improve">改良</span><span class="log-tag fix">修正</span></div>
@@ -345,7 +371,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
     </div>
 
 
-    <div class="log-entry">
+    <div class="log-entry" data-month="2026-10">
       <div class="log-date">2026年10月25日</div>
       <div class="log-card">
         <div class="log-tags"><span class="log-tag improve">改良</span></div>
@@ -359,7 +385,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </div>
 
-    <div class="log-entry">
+    <div class="log-entry" data-month="2026-10">
       <div class="log-date">2026年10月24日</div>
       <div class="log-card">
         <div class="log-tags"><span class="log-tag fix">修正</span><span class="log-tag improve">改良</span></div>
@@ -373,7 +399,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </div>
 
-    <div class="log-entry">
+    <div class="log-entry" data-month="2026-10">
       <div class="log-date">2026年10月23日</div>
       <div class="log-card">
         <div class="log-tags"><span class="log-tag improve">改良</span><span class="log-tag fix">修正</span></div>
@@ -387,7 +413,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </div>
 
-    <div class="log-entry">
+    <div class="log-entry" data-month="2026-10">
       <div class="log-date">2026年10月22日</div>
       <div class="log-card">
         <div class="log-tags"><span class="log-tag new">新規</span><span class="log-tag improve">改良</span></div>
@@ -400,7 +426,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </div>
 
-    <div class="log-entry">
+    <div class="log-entry" data-month="2026-10">
       <div class="log-date">2026年10月21日</div>
       <div class="log-card">
         <div class="log-tags"><span class="log-tag improve">改良</span></div>
@@ -413,7 +439,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </div>
 
-    <div class="log-entry">
+    <div class="log-entry" data-month="2026-10">
       <div class="log-date">2026年10月20日</div>
       <div class="log-card">
         <div class="log-tags"><span class="log-tag fix">修正</span><span class="log-tag improve">改良</span></div>
@@ -427,7 +453,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </div>
 
-    <div class="log-entry">
+    <div class="log-entry" data-month="2026-10">
       <div class="log-date">2026年10月18日</div>
       <div class="log-card">
         <div class="log-tags"><span class="log-tag fix">修正</span></div>
@@ -437,7 +463,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </div>
 
-    <div class="log-entry">
+    <div class="log-entry" data-month="2026-10">
       <div class="log-date">2026年10月17日</div>
       <div class="log-card">
         <div class="log-tags"><span class="log-tag new">新規</span><span class="log-tag improve">改良</span></div>
@@ -451,7 +477,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </div>
 
-    <div class="log-entry">
+    <div class="log-entry" data-month="2026-10">
       <div class="log-date">2026年10月16日</div>
       <div class="log-card">
         <div class="log-tags"><span class="log-tag improve">改良</span></div>
@@ -462,7 +488,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </div>
 
-    <div class="log-entry">
+    <div class="log-entry" data-month="2026-10">
       <div class="log-date">2026年10月15日</div>
       <div class="log-card">
         <div class="log-tags"><span class="log-tag fix">修正</span><span class="log-tag improve">改良</span></div>
@@ -474,7 +500,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </div>
 
-    <div class="log-entry">
+    <div class="log-entry" data-month="2026-10">
       <div class="log-date">2026年10月13日</div>
       <div class="log-card">
         <div class="log-tags"><span class="log-tag improve">改良</span></div>
@@ -485,7 +511,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </div>
 
-    <div class="log-entry">
+    <div class="log-entry" data-month="2026-10">
       <div class="log-date">2026年10月12日</div>
       <div class="log-card">
         <div class="log-tags"><span class="log-tag fix">修正</span><span class="log-tag improve">改良</span></div>
@@ -496,7 +522,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </div>
 
-    <div class="log-entry">
+    <div class="log-entry" data-month="2026-10">
       <div class="log-date">2026年10月11日</div>
       <div class="log-card">
         <div class="log-tags"><span class="log-tag improve">改良</span></div>
@@ -509,7 +535,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </div>
 
-    <div class="log-entry">
+    <div class="log-entry" data-month="2026-10">
       <div class="log-date">2026年10月10日</div>
       <div class="log-card">
         <div class="log-tags"><span class="log-tag fix">修正</span><span class="log-tag improve">改良</span></div>
@@ -522,7 +548,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </div>
 
-    <div class="log-entry">
+    <div class="log-entry" data-month="2026-10">
       <div class="log-date">2026年10月9日</div>
       <div class="log-card">
         <div class="log-tags"><span class="log-tag new">新規</span><span class="log-tag fix">修正</span><span class="log-tag improve">改良</span></div>
@@ -536,7 +562,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </div>
 
-    <div class="log-entry">
+    <div class="log-entry" data-month="2026-10">
       <div class="log-date">2026年10月8日</div>
       <div class="log-card">
         <div class="log-tags"><span class="log-tag fix">修正</span><span class="log-tag improve">改良</span></div>
@@ -548,7 +574,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </div>
 
-    <div class="log-entry">
+    <div class="log-entry" data-month="2026-10">
       <div class="log-date">2026年10月7日</div>
       <div class="log-card">
         <div class="log-tags"><span class="log-tag new">新規</span><span class="log-tag improve">改良</span></div>
@@ -561,7 +587,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </div>
 
-    <div class="log-entry">
+    <div class="log-entry" data-month="2026-10">
       <div class="log-date">2026年10月6日</div>
       <div class="log-card">
         <div class="log-tags"><span class="log-tag new">新規</span><span class="log-tag fix">修正</span><span class="log-tag improve">改良</span></div>
@@ -575,7 +601,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </div>
 
-    <div class="log-entry">
+    <div class="log-entry" data-month="2026-10">
       <div class="log-date">2026年10月5日</div>
       <div class="log-card">
         <div class="log-tags"><span class="log-tag fix">修正</span><span class="log-tag improve">改良</span></div>
@@ -588,7 +614,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </div>
 
-    <div class="log-entry">
+    <div class="log-entry" data-month="2026-10">
       <div class="log-date">2026年10月4日</div>
       <div class="log-card">
         <div class="log-tags"><span class="log-tag new">新規</span></div>
@@ -600,7 +626,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </div>
 
-    <div class="log-entry">
+    <div class="log-entry" data-month="2026-10">
       <div class="log-date">2026年10月3日</div>
       <div class="log-card">
         <div class="log-tags"><span class="log-tag new">新規</span></div>
@@ -611,7 +637,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </div>
 
-    <div class="log-entry">
+    <div class="log-entry" data-month="2026-10">
       <div class="log-date">2026年10月2日</div>
       <div class="log-card">
         <div class="log-tags"><span class="log-tag new">新規</span><span class="log-tag fix">修正</span><span class="log-tag improve">改良</span></div>
@@ -625,7 +651,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </div>
 
-    <div class="log-entry">
+    <div class="log-entry" data-month="2026-10">
       <div class="log-date">2026年10月1日</div>
       <div class="log-card">
         <div class="log-tags"><span class="log-tag improve">改良</span><span class="log-tag fix">修正</span></div>
@@ -639,7 +665,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </div>
 
-    <div class="log-entry">
+    <div class="log-entry" data-month="2026-09">
       <div class="log-date">2026年9月30日</div>
       <div class="log-card">
         <div class="log-tags"><span class="log-tag fix">修正</span></div>
@@ -651,7 +677,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </div>
 
-    <div class="log-entry">
+    <div class="log-entry" data-month="2026-09">
       <div class="log-date">2026年9月29日</div>
       <div class="log-card">
         <div class="log-tags"><span class="log-tag fix">修正</span><span class="log-tag improve">改良</span></div>
@@ -665,7 +691,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </div>
 
-    <div class="log-entry">
+    <div class="log-entry" data-month="2026-09">
       <div class="log-date">2026年9月28日</div>
       <div class="log-card">
         <div class="log-tags"><span class="log-tag fix">修正</span><span class="log-tag new">新規</span><span class="log-tag improve">改良</span></div>
@@ -677,7 +703,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </div>
 
-    <div class="log-entry">
+    <div class="log-entry" data-month="2026-09">
       <div class="log-date">2026年9月26日</div>
       <div class="log-card">
         <div class="log-tags"><span class="log-tag improve">改良</span><span class="log-tag new">新規</span></div>
@@ -688,7 +714,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </div>
 
-    <div class="log-entry">
+    <div class="log-entry" data-month="2026-09">
       <div class="log-date">2026年9月25日</div>
       <div class="log-card">
         <div class="log-tags"><span class="log-tag fix">修正</span><span class="log-tag new">新規</span></div>
@@ -701,7 +727,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </div>
 
-    <div class="log-entry">
+    <div class="log-entry" data-month="2026-09">
       <div class="log-date">2026年9月22日</div>
       <div class="log-card">
         <div class="log-tags"><span class="log-tag improve">改良</span></div>
@@ -711,7 +737,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </div>
 
-    <div class="log-entry">
+    <div class="log-entry" data-month="2026-09">
       <div class="log-date">2026年9月21日</div>
       <div class="log-card">
         <div class="log-tags"><span class="log-tag improve">改良</span></div>
@@ -721,7 +747,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </div>
 
-    <div class="log-entry">
+    <div class="log-entry" data-month="2026-09">
       <div class="log-date">2026年9月19日</div>
       <div class="log-card">
         <div class="log-tags"><span class="log-tag new">新規</span></div>
@@ -731,7 +757,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </div>
 
-    <div class="log-entry">
+    <div class="log-entry" data-month="2026-09">
       <div class="log-date">2026年9月18日</div>
       <div class="log-card">
         <div class="log-tags"><span class="log-tag improve">改良</span><span class="log-tag new">新規</span></div>
@@ -743,7 +769,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </div>
 
-    <div class="log-entry">
+    <div class="log-entry" data-month="2026-09">
       <div class="log-date">2026年9月17日</div>
       <div class="log-card">
         <div class="log-tags"><span class="log-tag improve">改良</span></div>
@@ -753,7 +779,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </div>
 
-    <div class="log-entry">
+    <div class="log-entry" data-month="2026-09">
       <div class="log-date">2026年9月16日</div>
       <div class="log-card">
         <div class="log-tags"><span class="log-tag fix">修正</span></div>
@@ -764,7 +790,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </div>
 
-    <div class="log-entry">
+    <div class="log-entry" data-month="2026-09">
       <div class="log-date">2026年9月15日</div>
       <div class="log-card">
         <div class="log-tags"><span class="log-tag improve">改良</span><span class="log-tag fix">修正</span><span class="log-tag new">新規</span></div>
@@ -778,7 +804,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </div>
 
-    <div class="log-entry">
+    <div class="log-entry" data-month="2026-09">
       <div class="log-date">2026年9月14日</div>
       <div class="log-card">
         <div class="log-tags"><span class="log-tag improve">改良</span></div>
@@ -788,7 +814,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </div>
 
-    <div class="log-entry">
+    <div class="log-entry" data-month="2026-09">
       <div class="log-date">2026年9月13日</div>
       <div class="log-card">
         <div class="log-tags"><span class="log-tag new">新規</span><span class="log-tag improve">改良</span></div>
@@ -799,7 +825,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </div>
 
-    <div class="log-entry">
+    <div class="log-entry" data-month="2026-09">
       <div class="log-date">2026年9月12日</div>
       <div class="log-card">
         <div class="log-tags"><span class="log-tag new">新規</span></div>
@@ -809,7 +835,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </div>
 
-    <div class="log-entry">
+    <div class="log-entry" data-month="2026-09">
       <div class="log-date">2026年9月11日</div>
       <div class="log-card">
         <div class="log-tags"><span class="log-tag new">新規</span><span class="log-tag fix">修正</span></div>
@@ -823,7 +849,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </div>
 
-    <div class="log-entry">
+    <div class="log-entry" data-month="2026-09">
       <div class="log-date">2026年9月9日</div>
       <div class="log-card">
         <div class="log-tags"><span class="log-tag new">新規</span><span class="log-tag fix">修正</span></div>
@@ -836,7 +862,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </div>
 
-    <div class="log-entry">
+    <div class="log-entry" data-month="2026-09">
       <div class="log-date">2026年9月8日</div>
       <div class="log-card">
         <div class="log-tags"><span class="log-tag improve">改良</span><span class="log-tag fix">修正</span><span class="log-tag new">新規</span></div>
@@ -850,7 +876,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </div>
 
-    <div class="log-entry">
+    <div class="log-entry" data-month="2026-09">
       <div class="log-date">2026年9月7日</div>
       <div class="log-card">
         <div class="log-tags"><span class="log-tag fix">修正</span><span class="log-tag improve">改良</span><span class="log-tag fix">修正</span></div>
@@ -864,7 +890,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </div>
 
-    <div class="log-entry">
+    <div class="log-entry" data-month="2026-09">
       <div class="log-date">2026年9月6日</div>
       <div class="log-card">
         <div class="log-tags"><span class="log-tag new">新規</span></div>
@@ -875,7 +901,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </div>
 
-    <div class="log-entry">
+    <div class="log-entry" data-month="2026-09">
       <div class="log-date">2026年9月5日</div>
       <div class="log-card">
         <div class="log-tags"><span class="log-tag new">新規</span><span class="log-tag fix">修正</span><span class="log-tag improve">改良</span></div>
@@ -889,7 +915,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </div>
 
-    <div class="log-entry">
+    <div class="log-entry" data-month="2026-08">
       <div class="log-date">2026年8月30日</div>
       <div class="log-card">
         <div class="log-tags"><span class="log-tag fix">整理</span></div>
@@ -900,7 +926,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </div>
 
-    <div class="log-entry">
+    <div class="log-entry" data-month="2026-08">
       <div class="log-date">2026年8月17日</div>
       <div class="log-card">
         <div class="log-tags"><span class="log-tag fix">修正</span></div>
@@ -911,7 +937,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </div>
 
-    <div class="log-entry">
+    <div class="log-entry" data-month="2026-08">
       <div class="log-date">2026年8月16日</div>
       <div class="log-card">
         <div class="log-tags"><span class="log-tag new">新規</span></div>
@@ -922,7 +948,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </div>
 
-    <div class="log-entry">
+    <div class="log-entry" data-month="2026-08">
       <div class="log-date">2026年8月15日</div>
       <div class="log-card">
         <div class="log-tags"><span class="log-tag improve">改良</span></div>
@@ -934,7 +960,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
     </div>
 
 
-    <div class="log-entry">
+    <div class="log-entry" data-month="2026-08">
       <div class="log-date">2026年8月14日</div>
       <div class="log-card">
         <div class="log-tags"><span class="log-tag fix">修正</span></div>
@@ -945,7 +971,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </div>
 
-    <div class="log-entry">
+    <div class="log-entry" data-month="2026-08">
       <div class="log-date">2026年8月10日</div>
       <div class="log-card">
         <div class="log-tags"><span class="log-tag improve">改良</span><span class="log-tag new">新規</span></div>
@@ -957,7 +983,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </div>
 
-    <div class="log-entry">
+    <div class="log-entry" data-month="2026-08">
       <div class="log-date">2026年8月9日</div>
       <div class="log-card">
         <div class="log-tags"><span class="log-tag improve">改良</span></div>
@@ -968,7 +994,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </div>
 
-    <div class="log-entry">
+    <div class="log-entry" data-month="2026-08">
       <div class="log-date">2026年8月8日</div>
       <div class="log-card">
         <div class="log-tags"><span class="log-tag new">新規</span><span class="log-tag improve">改良</span></div>
@@ -981,7 +1007,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </div>
 
-    <div class="log-entry">
+    <div class="log-entry" data-month="2026-08">
       <div class="log-date">2026年8月7日</div>
       <div class="log-card">
         <div class="log-tags"><span class="log-tag new">新規</span><span class="log-tag fix">修正</span></div>
@@ -995,7 +1021,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </div>
 
-    <div class="log-entry">
+    <div class="log-entry" data-month="2026-08">
       <div class="log-date">2026年8月6日</div>
       <div class="log-card">
         <div class="log-tags"><span class="log-tag fix">修正</span></div>
@@ -1005,7 +1031,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </div>
 
-    <div class="log-entry">
+    <div class="log-entry" data-month="2026-08">
       <div class="log-date">2026年8月5日</div>
       <div class="log-card">
         <div class="log-tags"><span class="log-tag new">新規</span></div>
@@ -1016,7 +1042,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </div>
 
-    <div class="log-entry">
+    <div class="log-entry" data-month="2026-08">
       <div class="log-date">2026年8月3日</div>
       <div class="log-card">
         <div class="log-tags"><span class="log-tag new">新規</span><span class="log-tag improve">改良</span></div>
@@ -1030,7 +1056,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </div>
 
-    <div class="log-entry">
+    <div class="log-entry" data-month="2026-08">
       <div class="log-date">2026年8月2日</div>
       <div class="log-card">
         <div class="log-tags"><span class="log-tag new">新規</span></div>
@@ -1044,7 +1070,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </div>
 
-    <div class="log-entry">
+    <div class="log-entry" data-month="2026-08">
       <div class="log-date">2026年8月1日</div>
       <div class="log-card">
         <div class="log-tags"><span class="log-tag new">新規</span><span class="log-tag fix">修正</span></div>
@@ -1055,7 +1081,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </div>
 
-    <div class="log-entry">
+    <div class="log-entry" data-month="2026-07">
       <div class="log-date">2026年7月下旬</div>
       <div class="log-card">
         <div class="log-tags"><span class="log-tag new">新規</span><span class="log-tag fix">修正</span></div>
@@ -1068,7 +1094,7 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
       </div>
     </div>
 
-    <div class="log-entry">
+    <div class="log-entry" data-month="2026-07">
       <div class="log-date">2026年7月中旬</div>
       <div class="log-card">
         <div class="log-tags"><span class="log-tag new">新規</span></div>
@@ -1093,5 +1119,22 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
   <p class="copyright">© 2026 ANIMEDB. All rights reserved.</p>
 </footer>
 
+<script>
+(function(){
+  var wrap=document.getElementById('monthFilter'); if(!wrap) return;
+  var chips=wrap.querySelectorAll('.cat-chip'), items=document.querySelectorAll('.log-entry[data-month]');
+  var valid={all:1}; chips.forEach(function(b){valid[b.getAttribute('data-m')]=1;});
+  function apply(c){
+    items.forEach(function(el){ el.style.display=(c==='all'||el.getAttribute('data-month')===c)?'':'none'; });
+    chips.forEach(function(b){ var on=b.getAttribute('data-m')===c; b.classList.toggle('active',on); b.setAttribute('aria-pressed',on?'true':'false'); });
+  }
+  chips.forEach(function(b){ b.addEventListener('click',function(){
+    var c=b.getAttribute('data-m'); apply(c);
+    try{ history.replaceState(null,'',c==='all'?location.pathname+location.search:'#'+c); }catch(e){}
+  }); });
+  var h=(location.hash||'').replace('#',''); if(!valid[h]) h='all';
+  wrap.hidden=false; apply(h);
+})();
+</script>
 </body>
 </html>
