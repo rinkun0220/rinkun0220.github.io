@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ページが見つかりません | ANIMEDB</title>
+  <meta name="robots" content="noindex,follow">
+  <meta name="description" content="お探しのページは見つかりませんでした。ANIMEDBのホーム、ブログ一覧などから、お探しの情報をたどれます。">
+<style>
+    :root {
+      --bg: #0d0d0f;
+      --surface: #18181c;
+      --border: #2a2a30;
+      --accent: #e8364a;
+      --accent2: #ff6b7a;
+      --text: #e8e8ec;
+      --text-muted: #888898;
+      --radius: 10px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif;
+      line-height: 1.8;
+      min-height: 100vh;
+    }
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 0 20px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .header-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      height: 56px;
+      gap: 16px;
+    }
+    .logo {
+      font-size: 1.3rem;
+      font-weight: 900;
+      color: var(--accent);
+      text-decoration: none;
+      letter-spacing: 0.05em;
+    }
+    .logo span { color: var(--text); font-weight: 400; font-size: 0.85rem; margin-left: 8px; }
+    main {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+    .page-title {
+      font-size: 1.8rem;
+      font-weight: 900;
+      margin-bottom: 8px;
+      border-left: 4px solid var(--accent);
+      padding-left: 14px;
+    }
+    .updated {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      margin-bottom: 40px;
+      padding-left: 18px;
+    }
+    section {
+      margin-bottom: 36px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+    }
+    h2 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--accent2);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    h2::before {
+      content: '';
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      background: var(--accent);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    p { color: var(--text); margin-bottom: 10px; font-size: 0.95rem; }
+    p:last-child { margin-bottom: 0; }
+    ul { padding-left: 20px; margin-top: 8px; }
+    li { margin-bottom: 6px; font-size: 0.95rem; color: var(--text); }
+    a { color: var(--accent2); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    footer {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      text-align: center;
+      padding: 24px;
+      color: var(--text-muted);
+      font-size: 0.82rem;
+    }
+    footer nav { margin-bottom: 10px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+    footer nav a { color: var(--text-muted); }
+    footer nav a:hover { color: var(--accent2); }
+  /* 日本語の改行を自然にする設定（文節単位で改行・行頭禁則・1文字だけの行を避ける） */
+body{line-break:strict;overflow-wrap:anywhere}
+@supports (word-break:auto-phrase){body{word-break:auto-phrase}}
+:has(> wbr){word-break:keep-all}
+p,li,dd,td,th{text-wrap:pretty}
+td,th{overflow-wrap:anywhere}
+.nb{white-space:nowrap}
+h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-title,.pick-name,.next-article-title{text-wrap:balance}
+
+    .nf-code { font-size: 4rem; font-weight: 900; color: var(--accent); line-height: 1; margin-bottom: 12px; letter-spacing: .05em; }
+    .nf-lead { color: var(--text-muted); font-size: .95rem; margin: 10px 0 28px; padding-left: 18px; }
+    .nf-links { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; list-style: none; padding: 0; margin: 0; }
+    .nf-links li { margin: 0; }
+    .nf-links a { display: block; background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px 16px; color: var(--text); font-weight: 700; font-size: .95rem; }
+    .nf-links a:hover { border-color: var(--accent); text-decoration: none; color: var(--accent2); }
+    .nf-links small { display: block; color: var(--text-muted); font-weight: 400; font-size: .8rem; margin-top: 2px; }
+</style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <a class="logo" href="https://anime-db.jp/">ANIMEDB<span>ページが見つかりません</span></a>
+    </div>
+  </header>
+
+  <main>
+    <div class="nf-code">404</div>
+    <h1 class="page-title">ページが<wbr>見つかりません</h1>
+    <p class="nf-lead">お探しの<wbr>ページは<wbr>見つかりませんでした。<wbr>URLが<wbr>違っているか、<wbr>ページが<wbr>移動・<wbr>削除された<wbr>可能性が<wbr>あります。</p>
+
+    <section>
+      <h2>こちらから<wbr>お探しください</h2>
+      <ul class="nf-links">
+        <li><a href="https://anime-db.jp/">ホーム<small>今期の<wbr>アニメと、<wbr>管理人の<wbr>点数を<wbr>見る</small></a></li>
+        <li><a href="https://anime-db.jp/blog/">ブログ一覧<small>ランキングや<wbr>おすすめ記事の<wbr>一覧</small></a></li>
+        <li><a href="https://anime-db.jp/changelog.html">更新履歴・<wbr>お知らせ<small>サイトの<wbr>更新内容の<wbr>記録</small></a></li>
+        <li><a href="https://anime-db.jp/hidden-gems-gacha.html">埋もれた<wbr>名作ガチャ<small>隠れた<wbr>名作を、<wbr>ランダムで<wbr>1本選ぶ</small></a></li>
+        <li><a href="https://anime-db.jp/blog/rating-criteria.html">評価の<wbr>基準<small>S・A・B・Cの<wbr>付け方を<wbr>公開しています</small></a></li>
+        <li><a href="https://anime-db.jp/contact.html">お問い合わせ<small>リンク切れを<wbr>見つけた<wbr>ときは、<wbr>こちらへ</small></a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <nav>
+      <a href="https://anime-db.jp/">ホーム</a>
+      <a href="https://anime-db.jp/blog/">ブログ</a>
+      <a href="https://anime-db.jp/privacy.html">プライバシーポリシー</a>
+      <a href="https://anime-db.jp/contact.html">お問い合わせ</a>
+    </nav>
+    <p>© 2026 ANIMEDB. All rights reserved.</p>
+  </footer>
+</body>
+</html>
