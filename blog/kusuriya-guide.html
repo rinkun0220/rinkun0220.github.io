@@ -109,15 +109,23 @@ h1,h2,h3,h4,.article-title,.blog-card-title,.gem-name,.rank-title,.review-anime-
 .cite{font-size:.68rem;color:var(--text-muted);margin-left:1px;white-space:nowrap}
 .tbl-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
 .tier-box{border:2px solid var(--border-color);border-radius:14px;padding:18px 20px;margin:20px 0;background:var(--bg-card)}
-.tier-box.t1{border-color:#16a34a}
+.tier-box.t1{border-color:var(--accent)}
 details.tier{border:2px solid var(--accent);border-radius:14px;margin:20px 0;background:linear-gradient(135deg,rgba(255,71,87,0.10),rgba(255,107,129,0.04))}
 details.tier>summary{cursor:pointer;list-style:none;padding:16px 20px;font-weight:800;font-size:1rem;line-height:1.6}
 details.tier>summary::-webkit-details-marker{display:none}
 details.tier>summary::before{content:"▶ ";color:var(--accent)}
 details.tier[open]>summary::before{content:"▼ "}
 details.tier .tier-in{padding:0 20px 18px}
-.tier-tag{display:inline-block;font-size:.72rem;font-weight:700;padding:2px 10px;border-radius:12px;margin-right:8px;color:#fff;background:#16a34a}
+.tier-tag{display:inline-block;font-size:.72rem;font-weight:700;padding:2px 10px;border-radius:12px;margin-right:8px;color:#fff;background:var(--accent)}
 details.tier .tier-tag{background:var(--accent)}
+.fact-list a,.fact-list a:visited,.fact-list a:link{color:var(--accent);text-decoration:underline;font-weight:600}
+.fact-list a:hover{color:var(--text-main)}
+.next-article:visited,.related-guides a:visited{color:var(--text-main)}
+.rel-svg .node.new{fill:rgba(230,72,90,0.16);stroke:var(--accent);stroke-width:1.4}
+.rel-svg .edge.new{stroke:var(--accent);stroke-width:2.4}
+.rel-svg .elab.new{stroke:var(--accent)}
+.rel-svg .edge.dash.new{stroke:var(--star-color);stroke-width:2.4}
+.rel-svg .elab.dash.new{stroke:var(--star-color)}
 .rel-svg{display:block;width:100%;max-width:460px;height:auto;margin:10px auto 6px}
 .rel-svg .grp{fill:rgba(255,255,255,0.03);stroke:rgba(255,255,255,0.18);stroke-dasharray:4 4}
 .rel-svg .glabel{fill:var(--text-muted);font-size:11px;font-weight:700}
@@ -139,7 +147,8 @@ details.tier .tier-tag{background:var(--accent)}
 .src-list a{color:var(--text-main);text-decoration:underline}
 .src-list .sn{display:inline-block;min-width:2.2em;color:var(--text-muted);font-weight:700}
 .sch-grid{display:grid;gap:12px;margin:8px 0 22px}.sch-card{background:var(--bg-card);border:1px solid var(--border-color);border-radius:12px;padding:14px 18px}.sch-name{font-weight:800;color:#fff;margin-bottom:6px}.sch-card dl{margin:0;display:grid;grid-template-columns:8.5em 1fr;gap:4px 12px;font-size:.88rem;line-height:1.75}.sch-card dt{color:var(--text-muted);font-weight:700}.sch-card dd{margin:0}@media(max-width:600px){.sch-card dl{grid-template-columns:1fr;gap:0}.sch-card dt{margin-top:6px;font-size:.78rem}}
-.mini-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px;margin:8px 0 18px}.mini-card{background:var(--bg-card);border:1px solid var(--border-color);border-radius:12px;padding:12px 14px;font-size:.88rem;line-height:1.7}.mini-card .mn{font-weight:800;color:#fff}.mini-card .mv{display:block;color:var(--text-muted);font-size:.78rem}@media(max-width:600px){.mini-grid{grid-template-columns:1fr 1fr;gap:8px}.mini-card{padding:10px 11px;font-size:.84rem}}
+.mini-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px;margin:8px 0 18px}.mini-card{background:var(--bg-card);border:1px solid var(--border-color);border-radius:12px;padding:12px 14px;font-size:.88rem;line-height:1.7}.mini-card .mn{font-weight:800;color:#fff}.mini-card .mv{display:block;color:var(--text-muted);font-size:.78rem}@media(max-width:600px){.tier-box,details.tier{margin-left:-14px;margin-right:-14px;border-radius:10px}.tier-box{padding:14px 8px}details.tier>summary{padding:14px 14px}details.tier .tier-in{padding:0 6px 14px}.tier-box>.sub-h,.tier-box>p,details.tier .tier-in>p{padding:0 6px}}
+@media(max-width:600px){.mini-grid{grid-template-columns:1fr 1fr;gap:8px}.mini-card{padding:10px 11px;font-size:.84rem}}
 .mini-card a.ol{display:inline-block;margin-top:4px;font-size:.78rem;color:var(--text-muted);text-decoration:underline}
 .sub-h{font-size:1.02rem;font-weight:700;margin:26px 0 8px;color:#fff}
 </style>
@@ -332,102 +341,248 @@ details.tier .tier-tag{background:var(--accent)}
 <rect class="elab" x="120.0" y="436.0" width="32" height="17" rx="8"/>
 <text class="et" x="136.0" y="449.0" text-anchor="middle">父子</text>
 </svg><div class="tbl-wrap"><table><tr><th>関係</th><th>確認度</th><th>確認できた資料</th></tr><tr><td>猫猫の<wbr>養父は、<wbr>羅門です。<wbr>羅門は<wbr>猫猫の<wbr>薬屋と<wbr>しての<wbr>師でもあります。<wbr>第3期の<wbr>公式相関図では、<wbr>羅門は<wbr>後宮の<wbr>医官の<wbr>枠に<wbr>入っています。</td><td><span class="cf a">◎</span></td><td>[1][2][5][6][7][8]、公式図 [18][20]</td></tr><tr><td>猫猫は、<wbr>緑青館の<wbr>ある<wbr>花街で<wbr>育ちました。<wbr>緑青館には、<wbr>三姫<wbr>（白鈴・女華・梅梅）が<wbr>います。</td><td><span class="cf a">◎</span></td><td>[1][5][7][8]、公式図 [18][20]</td></tr><tr><td>猫猫は、<wbr>玉葉妃に<wbr>毒見役と<wbr>して<wbr>仕えています。</td><td><span class="cf a">◎</span></td><td>公式の第2期相関図 [20]</td></tr><tr><td>壬氏は<wbr>猫猫に、<wbr>宮中で<wbr>起きる<wbr>事件の<wbr>謎解きを<wbr>依頼します。<wbr>猫猫は<wbr>壬氏に<wbr>対し、<wbr>「面倒ごとばかり」と<wbr>返す<wbr>関係です。</td><td><span class="cf a">◎</span></td><td>公式の第2期・第3期相関図の線と札 [18][19][20]</td></tr><tr><td>壬氏は、<wbr>後宮を<wbr>取り仕切る<wbr>立場で、<wbr>登場時は<wbr>宦官と<wbr>して<wbr>扱われます。</td><td><span class="cf b">○</span></td><td>[1][3]</td></tr><tr><td>高順は、<wbr>壬氏に<wbr>仕えています。<wbr>第2期の<wbr>公式相関図では、<wbr>「壬氏付の<wbr>宦官」と<wbr>表示されます。<wbr>第3期の<wbr>公式の<wbr>キャラクター紹介では、<wbr>もともとは<wbr>壬氏の<wbr>お目付け役で、<wbr>今は<wbr>皇帝の<wbr>補佐です。</td><td><span class="cf a">◎</span></td><td>公式図 [18][20]、公式のキャラクター紹介 [27]、[1]</td></tr><tr><td>高順と<wbr>馬閃は<wbr>父子で、<wbr>馬の<wbr>一族です。</td><td><span class="cf a">◎</span></td><td>[1][2][5][6][7][8]、公式の第3期相関図の「馬の一族」の枠 [18][19]</td></tr><tr><td>馬閃は、<wbr>壬氏の<wbr>護衛で、<wbr>乳兄弟でもあります。<wbr>第3期の<wbr>公式の<wbr>キャラクター紹介では、<wbr>馬の<wbr>一族の<wbr>次期当主で、<wbr>壬氏の<wbr>補佐兼護衛です。</td><td><span class="cf b">○</span></td><td>護衛：公式 [18][27]、[5][6]／乳兄弟：[1][2]</td></tr><tr><td>李白は、<wbr>外廷の<wbr>武官です。<wbr>三姫の<wbr>白鈴に<wbr>好意を<wbr>持っています。<wbr>公式の<wbr>相関図には、<wbr>2人を<wbr>結ぶ<wbr>線が<wbr>ありません。</td><td><span class="cf b">○</span></td><td>好意：[1][3][8][19]。外廷の武官：[18][19]</td></tr><tr><td>小蘭は、<wbr>猫猫と<wbr>同じ<wbr>ころに<wbr>後宮へ<wbr>来た<wbr>下女で、<wbr>猫猫の<wbr>友人です。<wbr>公式の<wbr>第2期相関図では、<wbr>小蘭と<wbr>子翠が<wbr>「下女仲間」と<wbr>され、<wbr>猫猫との<wbr>線は<wbr>ありません。<wbr>第3期の<wbr>公式相関図には<wbr>載っていません。</td><td><span class="cf a">◎</span></td><td>[2][3][7][8]、公式図 [20]</td></tr><tr><td>玉葉妃は<wbr>貴妃<wbr>（翡翠宮）、<wbr>梨花妃は<wbr>賢妃<wbr>（水晶宮）、<wbr>里樹妃は<wbr>徳妃<wbr>（金剛宮）です。<wbr>第3期の<wbr>公式相関図では、<wbr>玉葉妃は<wbr>「玉葉后」<wbr>（皇后）と<wbr>表示されます。</td><td><span class="cf a">◎</span></td><td>公式の第2期相関図 [20]、[1][2][3][6][7][8]、第3期 [18][19]</td></tr><tr><td>やぶ医者<wbr>（名は<wbr>虞淵）は、<wbr>後宮の<wbr>医官です。</td><td><span class="cf a">◎</span></td><td>公式図 [18][20]、[1][2][3][7][8]</td></tr><tr><td>姚と<wbr>燕燕は、<wbr>医官の<wbr>手伝いを<wbr>しています。<wbr>公式の<wbr>第2期・第3期相関図には<wbr>載っていません。</td><td><span class="cf b">○</span></td><td>[1][3][8]</td></tr></table></div></div>
-<details class="tier"><summary><span class="tier-tag">ネタバレあり</span>段階2：第1期までに明かされる関係（開くと表示されます）</summary><div class="tier-in"><p>この<wbr>図は、<wbr>段階1に<wbr>足される<wbr>関係だけを<wbr>描いた<wbr>図です。<wbr>段階1の<wbr>人物は、<wbr>省略しています。</p><svg class="rel-svg" viewBox="0 0 420 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="段階2の相関図（第1期までのネタバレ）">
-<text class="glabel" x="8" y="205" text-anchor="start">後宮の淑妃</text>
-<line class="edge" x1="210.0" y1="120.0" x2="210.0" y2="70.0"/>
-<line class="edge" x1="242.9" y1="120.0" x2="325.1" y2="70.0"/>
-<line class="edge" x1="158.0" y1="140.0" x2="114.0" y2="140.0"/>
-<line class="edge" x1="106.4" y1="113.0" x2="177.1" y2="70.0"/>
-<line class="edge" x1="114.0" y1="265.0" x2="306.0" y2="265.0"/>
-<rect class="node" x="158.0" y="30.0" width="104" height="40" rx="8"/>
-<text class="nt" x="210" y="48.0" text-anchor="middle">羅漢</text>
-<text class="ns" x="210" y="62.0" text-anchor="middle">軍師</text>
-<rect class="node" x="306.0" y="30.0" width="104" height="40" rx="8"/>
-<text class="nt" x="358" y="48.0" text-anchor="middle">鳳仙</text>
-<text class="ns" x="358" y="62.0" text-anchor="middle">緑青館の元妓女</text>
-<rect class="node main" x="158.0" y="120.0" width="104" height="40" rx="8"/>
-<text class="nt" x="210" y="138.0" text-anchor="middle">猫猫</text>
-<text class="ns" x="210" y="152.0" text-anchor="middle">主人公</text>
-<rect class="node" x="10.0" y="113.0" width="104" height="54" rx="8"/>
-<text class="nt" x="62" y="131.0" text-anchor="middle">羅門</text>
-<text class="ns" x="62" y="145.0" text-anchor="middle">猫猫の養父</text>
-<text class="ns" x="62" y="159.0" text-anchor="middle">羅漢の叔父</text>
-<rect class="node" x="10.0" y="238.0" width="104" height="54" rx="8"/>
-<text class="nt" x="62" y="256.0" text-anchor="middle">阿多妃</text>
-<text class="ns" x="62" y="270.0" text-anchor="middle">淑妃</text>
-<text class="ns" x="62" y="284.0" text-anchor="middle">柘榴宮</text>
-<rect class="node" x="306.0" y="238.0" width="104" height="54" rx="8"/>
-<text class="nt" x="358" y="256.0" text-anchor="middle">楼蘭妃</text>
-<text class="ns" x="358" y="270.0" text-anchor="middle">のち淑妃に</text>
-<text class="ns" x="358" y="284.0" text-anchor="middle">柘榴宮</text>
-<rect class="elab" x="194.0" y="86.0" width="32" height="17" rx="8"/>
-<text class="et" x="210.0" y="99.0" text-anchor="middle">実父</text>
-<rect class="elab" x="268.0" y="86.0" width="32" height="17" rx="8"/>
-<text class="et" x="284.0" y="99.0" text-anchor="middle">実母</text>
-<rect class="elab" x="120.0" y="131.0" width="32" height="17" rx="8"/>
-<text class="et" x="136.0" y="144.0" text-anchor="middle">養父</text>
-<rect class="elab" x="125.8" y="82.5" width="32" height="17" rx="8"/>
-<text class="et" x="141.8" y="95.5" text-anchor="middle">叔父</text>
-<rect class="elab" x="166.5" y="256.0" width="87" height="17" rx="8"/>
-<text class="et" x="210.0" y="269.0" text-anchor="middle">のち淑妃を継ぐ</text>
+<details class="tier"><summary><span class="tier-tag">ネタバレあり</span>段階2：第1期までに明かされる関係（開くと表示されます）</summary><div class="tier-in"><p>この<wbr>図は、<wbr>段階1の<wbr>人物と<wbr>関係を、<wbr>すべて<wbr>含んでいます。<wbr>そこに、<wbr>第1期までに<wbr>明かされる<wbr>人物と<wbr>関係を<wbr>足しました。<wbr>赤く<wbr>色が<wbr>ついた<wbr>人物と、<wbr>太い<wbr>赤い線が、<wbr>この<wbr>段階で<wbr>足された<wbr>ものです。<wbr>下の<wbr>表は、<wbr>足された<wbr>関係の<wbr>根拠です。</p><svg class="rel-svg" viewBox="0 0 420 700" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="段階2の相関図（段階1の人物をすべて含み、第1期までに明かされる関係を足した図）">
+<rect class="grp" x="2" y="16" width="120" height="172" rx="12"/>
+<rect class="grp" x="2" y="305" width="416" height="360" rx="12"/>
+<text class="glabel" x="8" y="11" text-anchor="start">花街（緑青館）</text>
+<text class="glabel" x="412" y="299" text-anchor="end">後宮・宮廷</text>
+<line class="edge" x1="165.6" y1="123.0" x2="114.0" y2="91.6"/>
+<line class="edge" x1="158.0" y1="150.0" x2="114.0" y2="150.0"/>
+<line class="edge" x1="210.0" y1="177.0" x2="210.0" y2="330.0"/>
+<line class="edge" x1="338.0" y1="323.0" x2="230.0" y2="177.0"/>
+<line class="edge" x1="62.0" y1="177.0" x2="62.0" y2="225.0"/>
+<line class="edge" x1="358.0" y1="377.0" x2="358.0" y2="425.0"/>
+<line class="edge" x1="252.1" y1="418.0" x2="315.9" y2="377.0"/>
+<line class="edge" x1="262.0" y1="445.0" x2="306.0" y2="445.0"/>
+<line class="edge new" x1="210.0" y1="123.0" x2="210.0" y2="80.0"/>
+<line class="edge new" x1="262.0" y1="150.0" x2="306.0" y2="150.0"/>
+<line class="edge new" x1="114.0" y1="60.0" x2="158.0" y2="60.0"/>
+<line class="edge new" x1="62.0" y1="418.0" x2="62.0" y2="377.0"/>
+<rect class="node" x="10.0" y="26.0" width="104" height="68" rx="8"/>
+<text class="nt" x="62" y="44.0" text-anchor="middle">羅門</text>
+<text class="ns" x="62" y="58.0" text-anchor="middle">猫猫の養父</text>
+<text class="ns" x="62" y="72.0" text-anchor="middle">薬の師匠</text>
+<text class="ns" x="62" y="86.0" text-anchor="middle">羅漢の叔父</text>
+<rect class="node new" x="158.0" y="40.0" width="104" height="40" rx="8"/>
+<text class="nt" x="210" y="58.0" text-anchor="middle">羅漢</text>
+<text class="ns" x="210" y="72.0" text-anchor="middle">軍師</text>
+<rect class="node main" x="158.0" y="123.0" width="104" height="54" rx="8"/>
+<text class="nt" x="210" y="141.0" text-anchor="middle">猫猫</text>
+<text class="ns" x="210" y="155.0" text-anchor="middle">花街の薬師</text>
+<text class="ns" x="210" y="169.0" text-anchor="middle">玉葉妃の毒見役</text>
+<rect class="node" x="10.0" y="123.0" width="104" height="54" rx="8"/>
+<text class="nt" x="62" y="141.0" text-anchor="middle">三姫</text>
+<text class="ns" x="62" y="155.0" text-anchor="middle">白鈴・女華・梅梅</text>
+<text class="ns" x="62" y="169.0" text-anchor="middle">緑青館の妓女</text>
+<rect class="node new" x="306.0" y="130.0" width="104" height="40" rx="8"/>
+<text class="nt" x="358" y="148.0" text-anchor="middle">鳳仙</text>
+<text class="ns" x="358" y="162.0" text-anchor="middle">緑青館の元妓女</text>
+<rect class="node" x="10.0" y="225.0" width="104" height="40" rx="8"/>
+<text class="nt" x="62" y="243.0" text-anchor="middle">李白</text>
+<text class="ns" x="62" y="257.0" text-anchor="middle">外廷の武官</text>
+<rect class="node new" x="10.0" y="323.0" width="104" height="54" rx="8"/>
+<text class="nt" x="62" y="341.0" text-anchor="middle">楼蘭妃</text>
+<text class="ns" x="62" y="355.0" text-anchor="middle">のち淑妃に</text>
+<text class="ns" x="62" y="369.0" text-anchor="middle">柘榴宮</text>
+<rect class="node" x="158.0" y="330.0" width="104" height="40" rx="8"/>
+<text class="nt" x="210" y="348.0" text-anchor="middle">小蘭</text>
+<text class="ns" x="210" y="362.0" text-anchor="middle">後宮の下女</text>
+<rect class="node" x="306.0" y="323.0" width="104" height="54" rx="8"/>
+<text class="nt" x="358" y="341.0" text-anchor="middle">壬氏</text>
+<text class="ns" x="358" y="355.0" text-anchor="middle">後宮を取り仕切る</text>
+<text class="ns" x="358" y="369.0" text-anchor="middle">登場時は宦官</text>
+<rect class="node new" x="10.0" y="418.0" width="104" height="54" rx="8"/>
+<text class="nt" x="62" y="436.0" text-anchor="middle">阿多妃</text>
+<text class="ns" x="62" y="450.0" text-anchor="middle">淑妃</text>
+<text class="ns" x="62" y="464.0" text-anchor="middle">柘榴宮</text>
+<rect class="node" x="158.0" y="418.0" width="104" height="54" rx="8"/>
+<text class="nt" x="210" y="436.0" text-anchor="middle">高順</text>
+<text class="ns" x="210" y="450.0" text-anchor="middle">壬氏に仕える</text>
+<text class="ns" x="210" y="464.0" text-anchor="middle">馬の一族</text>
+<rect class="node" x="306.0" y="425.0" width="104" height="40" rx="8"/>
+<text class="nt" x="358" y="443.0" text-anchor="middle">馬閃</text>
+<text class="ns" x="358" y="457.0" text-anchor="middle">高順の息子</text>
+<rect class="node" x="10.0" y="520.0" width="104" height="40" rx="8"/>
+<text class="nt" x="62" y="538.0" text-anchor="middle">里樹妃</text>
+<text class="ns" x="62" y="552.0" text-anchor="middle">徳妃・金剛宮</text>
+<rect class="node" x="158.0" y="520.0" width="104" height="40" rx="8"/>
+<text class="nt" x="210" y="538.0" text-anchor="middle">玉葉妃</text>
+<text class="ns" x="210" y="552.0" text-anchor="middle">貴妃・翡翠宮</text>
+<rect class="node" x="306.0" y="520.0" width="104" height="40" rx="8"/>
+<text class="nt" x="358" y="538.0" text-anchor="middle">梨花妃</text>
+<text class="ns" x="358" y="552.0" text-anchor="middle">賢妃・水晶宮</text>
+<rect class="node" x="158.0" y="615.0" width="104" height="40" rx="8"/>
+<text class="nt" x="210" y="633.0" text-anchor="middle">やぶ医者</text>
+<text class="ns" x="210" y="647.0" text-anchor="middle">医官（宦官）</text>
+<rect class="node" x="306.0" y="615.0" width="104" height="40" rx="8"/>
+<text class="nt" x="358" y="633.0" text-anchor="middle">姚・燕燕</text>
+<text class="ns" x="358" y="647.0" text-anchor="middle">医官の手伝い</text>
+<rect class="elab" x="123.8" y="98.3" width="32" height="17" rx="8"/>
+<text class="et" x="139.8" y="111.3" text-anchor="middle">養父</text>
+<rect class="elab" x="120.0" y="141.0" width="32" height="17" rx="8"/>
+<text class="et" x="136.0" y="154.0" text-anchor="middle">育つ</text>
+<rect class="elab" x="194.0" y="244.5" width="32" height="17" rx="8"/>
+<text class="et" x="210.0" y="257.5" text-anchor="middle">友人</text>
+<rect class="elab" x="246.0" y="241.0" width="76" height="17" rx="8"/>
+<text class="et" x="284.0" y="254.0" text-anchor="middle">謎解きを依頼</text>
+<rect class="elab" x="29.5" y="192.0" width="65" height="17" rx="8"/>
+<text class="et" x="62.0" y="205.0" text-anchor="middle">白鈴に好意</text>
+<rect class="elab" x="320.0" y="392.0" width="76" height="17" rx="8"/>
+<text class="et" x="358.0" y="405.0" text-anchor="middle">護衛・乳兄弟</text>
+<rect class="elab" x="262.5" y="388.5" width="43" height="17" rx="8"/>
+<text class="et" x="284.0" y="401.5" text-anchor="middle">仕える</text>
+<rect class="elab" x="268.0" y="436.0" width="32" height="17" rx="8"/>
+<text class="et" x="284.0" y="449.0" text-anchor="middle">父子</text>
+<rect class="elab new" x="194.0" y="92.5" width="32" height="17" rx="8"/>
+<text class="et" x="210.0" y="105.5" text-anchor="middle">実父</text>
+<rect class="elab new" x="268.0" y="141.0" width="32" height="17" rx="8"/>
+<text class="et" x="284.0" y="154.0" text-anchor="middle">実母</text>
+<rect class="elab new" x="120.0" y="51.0" width="32" height="17" rx="8"/>
+<text class="et" x="136.0" y="64.0" text-anchor="middle">叔父</text>
+<rect class="elab new" x="18.5" y="388.5" width="87" height="17" rx="8"/>
+<text class="et" x="62.0" y="401.5" text-anchor="middle">のち淑妃を継ぐ</text>
 </svg><div class="tbl-wrap"><table><tr><th>関係</th><th>確認度</th><th>確認できた資料</th></tr><tr><td>猫猫の<wbr>実父は、<wbr>軍師の<wbr>羅漢です。</td><td><span class="cf a">◎</span></td><td>[1][2][3][4][5][6][7][8]、公式の第3期相関図にも「実父ではあるが嫌悪感」の線があり [18]、公式のキャラクター紹介にも「実の父」とあります [27]。明かされる時期は、第1期とする資料 [4][8] と、第2期とする資料 [6] に分かれます。</td></tr><tr><td>猫猫の<wbr>実母は、<wbr>緑青館の<wbr>元妓女の<wbr>鳳仙です。</td><td><span class="cf a">◎</span></td><td>[1][2][4][5][6][7][8]。第3期の公式相関図には、鳳仙は載っていません [19]。</td></tr><tr><td>羅門は<wbr>羅漢の<wbr>叔父で、<wbr>猫猫から<wbr>見ると<wbr>大叔父に<wbr>あたります。</td><td><span class="cf a">◎</span></td><td>[1][4][5][7]</td></tr><tr><td>阿多妃は<wbr>淑妃で、のちに<wbr>淑妃の<wbr>座を<wbr>楼蘭妃が<wbr>継ぎます。<wbr>公式の<wbr>第2期相関図では、<wbr>阿多は<wbr>「元上級妃」、<wbr>楼蘭妃は<wbr>「淑妃<wbr>（柘榴宮）」と<wbr>表示されます。<wbr>第3期の<wbr>公式相関図では、<wbr>阿多は<wbr>離宮の<wbr>枠に<wbr>入っています。</td><td><span class="cf a">◎</span></td><td>[1][2][3][4][6][7][8]、公式図 [18][20]</td></tr></table></div></div></details>
-<details class="tier"><summary><span class="tier-tag">大きなネタバレあり</span>段階3：第2期以降・原作で明かされる関係（開くと表示されます）</summary><div class="tier-in"><p>壬氏の<wbr>出生や、<wbr>子の<wbr>一族に<wbr>関わる<wbr>内容を<wbr>含みます。<wbr>この<wbr>図も、<wbr>段階1・2に<wbr>足される<wbr>関係だけを<wbr>描いています。<wbr>どの<wbr>話で<wbr>明かされるかは、<wbr>資料に<wbr>より<wbr>違う<wbr>ため、<wbr>「第○期まで」とは<wbr>書いていません。</p><svg class="rel-svg" viewBox="0 0 420 512" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="段階3の相関図（第2期以降・原作のネタバレ）">
-<text class="glabel" x="8" y="22" text-anchor="start">羅の一族</text>
-<text class="glabel" x="8" y="128" text-anchor="start">壬氏の出生</text>
-<text class="glabel" x="8" y="392" text-anchor="start">子の一族</text>
-<line class="edge dash" x1="114.0" y1="60.0" x2="306.0" y2="60.0"/>
-<line class="edge" x1="262.0" y1="190.0" x2="306.0" y2="190.0"/>
-<line class="edge" x1="187.2" y1="210.0" x2="84.8" y2="300.0"/>
-<line class="edge" x1="232.8" y1="210.0" x2="335.2" y2="300.0"/>
-<line class="edge dash" x1="210.0" y1="210.0" x2="210.0" y2="300.0"/>
-<line class="edge" x1="158.0" y1="450.0" x2="114.0" y2="450.0"/>
-<line class="edge" x1="262.0" y1="450.0" x2="306.0" y2="450.0"/>
-<rect class="node main" x="10.0" y="40.0" width="104" height="40" rx="8"/>
-<text class="nt" x="62" y="58.0" text-anchor="middle">猫猫</text>
-<text class="ns" x="62" y="72.0" text-anchor="middle">主人公</text>
-<rect class="node" x="306.0" y="40.0" width="104" height="40" rx="8"/>
+<details class="tier"><summary><span class="tier-tag">大きなネタバレあり</span>段階3：第2期以降・原作で明かされる関係（開くと表示されます）</summary><div class="tier-in"><p>壬氏の<wbr>出生や、<wbr>子の<wbr>一族に<wbr>関わる<wbr>内容を<wbr>含みます。<wbr>この<wbr>図は、<wbr>段階1・2の<wbr>人物と<wbr>関係を、<wbr>すべて<wbr>含んでいます。<wbr>赤く<wbr>色が<wbr>ついた<wbr>人物と、<wbr>太い<wbr>赤い線が、<wbr>この<wbr>段階で<wbr>足された<wbr>ものです。<wbr>黄色の<wbr>点線は、<wbr>確認度が<wbr>△の<wbr>関係です。<wbr>下の<wbr>表は、<wbr>足された<wbr>関係の<wbr>根拠です。<wbr>どの<wbr>話で<wbr>明かされるかは、<wbr>資料に<wbr>より<wbr>違う<wbr>ため、<wbr>「第○期まで」とは<wbr>書いていません。</p><svg class="rel-svg" viewBox="0 0 420 880" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="段階3の相関図（段階1・2の人物をすべて含み、第2期以降・原作で明かされる関係を足した図）">
+<rect class="grp" x="2" y="16" width="120" height="172" rx="12"/>
+<rect class="grp" x="2" y="305" width="416" height="560" rx="12"/>
+<text class="glabel" x="8" y="11" text-anchor="start">花街（緑青館）</text>
+<text class="glabel" x="412" y="299" text-anchor="end">後宮・宮廷</text>
+<line class="edge" x1="165.6" y1="123.0" x2="114.0" y2="91.6"/>
+<line class="edge" x1="158.0" y1="150.0" x2="114.0" y2="150.0"/>
+<line class="edge" x1="230.0" y1="177.0" x2="343.2" y2="330.0"/>
+<line class="edge" x1="210.0" y1="411.0" x2="210.0" y2="177.0"/>
+<line class="edge" x1="62.0" y1="177.0" x2="62.0" y2="225.0"/>
+<line class="edge" x1="158.0" y1="478.4" x2="93.2" y2="520.0"/>
+<line class="edge" x1="210.0" y1="513.0" x2="210.0" y2="479.0"/>
+<line class="edge" x1="158.0" y1="540.0" x2="114.0" y2="540.0"/>
+<line class="edge" x1="210.0" y1="123.0" x2="210.0" y2="80.0"/>
+<line class="edge" x1="262.0" y1="150.0" x2="306.0" y2="150.0"/>
+<line class="edge" x1="114.0" y1="60.0" x2="158.0" y2="60.0"/>
+<line class="edge" x1="358.0" y1="567.0" x2="358.0" y2="608.0"/>
+<line class="edge dash new" x1="254.4" y1="123.0" x2="325.1" y2="80.0"/>
+<line class="edge new" x1="262.0" y1="445.0" x2="306.0" y2="445.0"/>
+<line class="edge new" x1="158.0" y1="411.6" x2="93.2" y2="370.0"/>
+<line class="edge new" x1="158.0" y1="445.0" x2="114.0" y2="445.0"/>
+<line class="edge dash new" x1="262.0" y1="478.4" x2="315.9" y2="513.0"/>
+<line class="edge new" x1="306.0" y1="635.0" x2="262.0" y2="635.0"/>
+<line class="edge new" x1="358.0" y1="662.0" x2="358.0" y2="710.0"/>
+<rect class="node" x="10.0" y="26.0" width="104" height="68" rx="8"/>
+<text class="nt" x="62" y="44.0" text-anchor="middle">羅門</text>
+<text class="ns" x="62" y="58.0" text-anchor="middle">猫猫の養父</text>
+<text class="ns" x="62" y="72.0" text-anchor="middle">薬の師匠</text>
+<text class="ns" x="62" y="86.0" text-anchor="middle">羅漢の叔父</text>
+<rect class="node" x="158.0" y="40.0" width="104" height="40" rx="8"/>
+<text class="nt" x="210" y="58.0" text-anchor="middle">羅漢</text>
+<text class="ns" x="210" y="72.0" text-anchor="middle">軍師</text>
+<rect class="node new" x="306.0" y="40.0" width="104" height="40" rx="8"/>
 <text class="nt" x="358" y="58.0" text-anchor="middle">羅半</text>
 <text class="ns" x="358" y="72.0" text-anchor="middle">羅漢の養子（甥）</text>
-<rect class="node main" x="158.0" y="170.0" width="104" height="40" rx="8"/>
-<text class="nt" x="210" y="188.0" text-anchor="middle">壬氏</text>
-<text class="ns" x="210" y="202.0" text-anchor="middle">本名は華瑞月</text>
-<rect class="node" x="306.0" y="170.0" width="104" height="40" rx="8"/>
-<text class="nt" x="358" y="188.0" text-anchor="middle">水蓮</text>
-<text class="ns" x="358" y="202.0" text-anchor="middle">壬氏の乳母</text>
-<rect class="node" x="10.0" y="300.0" width="104" height="40" rx="8"/>
-<text class="nt" x="62" y="318.0" text-anchor="middle">皇帝</text>
-<text class="ns" x="62" y="332.0" text-anchor="middle">壬氏の兄</text>
-<rect class="node" x="158.0" y="300.0" width="104" height="40" rx="8"/>
-<text class="nt" x="210" y="318.0" text-anchor="middle">阿多妃</text>
-<text class="ns" x="210" y="332.0" text-anchor="middle">実母とされる</text>
-<rect class="node" x="306.0" y="300.0" width="104" height="40" rx="8"/>
-<text class="nt" x="358" y="318.0" text-anchor="middle">安氏</text>
-<text class="ns" x="358" y="332.0" text-anchor="middle">皇太后</text>
-<rect class="node" x="10.0" y="423.0" width="104" height="54" rx="8"/>
-<text class="nt" x="62" y="441.0" text-anchor="middle">子昌</text>
-<text class="ns" x="62" y="455.0" text-anchor="middle">宰相</text>
-<text class="ns" x="62" y="469.0" text-anchor="middle">子の一族の当主</text>
-<rect class="node" x="158.0" y="423.0" width="104" height="54" rx="8"/>
-<text class="nt" x="210" y="441.0" text-anchor="middle">楼蘭妃</text>
-<text class="ns" x="210" y="455.0" text-anchor="middle">淑妃（柘榴宮）</text>
-<text class="ns" x="210" y="469.0" text-anchor="middle">下女「子翠」の姿も</text>
-<rect class="node" x="306.0" y="430.0" width="104" height="40" rx="8"/>
-<text class="nt" x="358" y="448.0" text-anchor="middle">翠苓</text>
-<text class="ns" x="358" y="462.0" text-anchor="middle">楼蘭妃の異母姉</text>
-<rect class="elab dash" x="155.5" y="51.0" width="109" height="17" rx="8"/>
-<text class="et" x="210.0" y="64.0" text-anchor="middle">従兄・義兄とされる</text>
-<rect class="elab" x="268.0" y="181.0" width="32" height="17" rx="8"/>
-<text class="et" x="284.0" y="194.0" text-anchor="middle">乳母</text>
-<rect class="elab" x="120.0" y="246.0" width="32" height="17" rx="8"/>
-<text class="et" x="136.0" y="259.0" text-anchor="middle">兄弟</text>
-<rect class="elab" x="273.5" y="246.0" width="21" height="17" rx="8"/>
-<text class="et" x="284.0" y="259.0" text-anchor="middle">母</text>
-<rect class="elab dash" x="172.0" y="246.0" width="76" height="17" rx="8"/>
-<text class="et" x="210.0" y="259.0" text-anchor="middle">実母とされる</text>
-<rect class="elab" x="125.5" y="441.0" width="21" height="17" rx="8"/>
-<text class="et" x="136.0" y="454.0" text-anchor="middle">父</text>
-<rect class="elab" x="262.5" y="441.0" width="43" height="17" rx="8"/>
-<text class="et" x="284.0" y="454.0" text-anchor="middle">異母姉</text>
+<rect class="node main" x="158.0" y="123.0" width="104" height="54" rx="8"/>
+<text class="nt" x="210" y="141.0" text-anchor="middle">猫猫</text>
+<text class="ns" x="210" y="155.0" text-anchor="middle">花街の薬師</text>
+<text class="ns" x="210" y="169.0" text-anchor="middle">玉葉妃の毒見役</text>
+<rect class="node" x="10.0" y="123.0" width="104" height="54" rx="8"/>
+<text class="nt" x="62" y="141.0" text-anchor="middle">三姫</text>
+<text class="ns" x="62" y="155.0" text-anchor="middle">白鈴・女華・梅梅</text>
+<text class="ns" x="62" y="169.0" text-anchor="middle">緑青館の妓女</text>
+<rect class="node" x="306.0" y="130.0" width="104" height="40" rx="8"/>
+<text class="nt" x="358" y="148.0" text-anchor="middle">鳳仙</text>
+<text class="ns" x="358" y="162.0" text-anchor="middle">緑青館の元妓女</text>
+<rect class="node" x="10.0" y="225.0" width="104" height="40" rx="8"/>
+<text class="nt" x="62" y="243.0" text-anchor="middle">李白</text>
+<text class="ns" x="62" y="257.0" text-anchor="middle">外廷の武官</text>
+<rect class="node new" x="10.0" y="330.0" width="104" height="40" rx="8"/>
+<text class="nt" x="62" y="348.0" text-anchor="middle">皇帝</text>
+<text class="ns" x="62" y="362.0" text-anchor="middle">壬氏の兄</text>
+<rect class="node" x="306.0" y="330.0" width="104" height="40" rx="8"/>
+<text class="nt" x="358" y="348.0" text-anchor="middle">小蘭</text>
+<text class="ns" x="358" y="362.0" text-anchor="middle">後宮の下女</text>
+<rect class="node new" x="10.0" y="425.0" width="104" height="40" rx="8"/>
+<text class="nt" x="62" y="443.0" text-anchor="middle">安氏</text>
+<text class="ns" x="62" y="457.0" text-anchor="middle">皇太后</text>
+<rect class="node main" x="158.0" y="411.0" width="104" height="68" rx="8"/>
+<text class="nt" x="210" y="429.0" text-anchor="middle">壬氏</text>
+<text class="ns" x="210" y="443.0" text-anchor="middle">後宮を取り仕切る</text>
+<text class="ns" x="210" y="457.0" text-anchor="middle">登場時は宦官</text>
+<text class="ns" x="210" y="471.0" text-anchor="middle">本名は華瑞月</text>
+<rect class="node new" x="306.0" y="425.0" width="104" height="40" rx="8"/>
+<text class="nt" x="358" y="443.0" text-anchor="middle">水蓮</text>
+<text class="ns" x="358" y="457.0" text-anchor="middle">壬氏の乳母</text>
+<rect class="node" x="10.0" y="520.0" width="104" height="40" rx="8"/>
+<text class="nt" x="62" y="538.0" text-anchor="middle">馬閃</text>
+<text class="ns" x="62" y="552.0" text-anchor="middle">高順の息子</text>
+<rect class="node" x="158.0" y="513.0" width="104" height="54" rx="8"/>
+<text class="nt" x="210" y="531.0" text-anchor="middle">高順</text>
+<text class="ns" x="210" y="545.0" text-anchor="middle">壬氏に仕える</text>
+<text class="ns" x="210" y="559.0" text-anchor="middle">馬の一族</text>
+<rect class="node" x="306.0" y="513.0" width="104" height="54" rx="8"/>
+<text class="nt" x="358" y="531.0" text-anchor="middle">阿多妃</text>
+<text class="ns" x="358" y="545.0" text-anchor="middle">淑妃</text>
+<text class="ns" x="358" y="559.0" text-anchor="middle">柘榴宮</text>
+<rect class="node new" x="158.0" y="608.0" width="104" height="54" rx="8"/>
+<text class="nt" x="210" y="626.0" text-anchor="middle">子昌</text>
+<text class="ns" x="210" y="640.0" text-anchor="middle">宰相</text>
+<text class="ns" x="210" y="654.0" text-anchor="middle">子の一族の当主</text>
+<rect class="node" x="306.0" y="608.0" width="104" height="54" rx="8"/>
+<text class="nt" x="358" y="626.0" text-anchor="middle">楼蘭妃</text>
+<text class="ns" x="358" y="640.0" text-anchor="middle">淑妃（柘榴宮）</text>
+<text class="ns" x="358" y="654.0" text-anchor="middle">下女「子翠」の姿も</text>
+<rect class="node" x="10.0" y="710.0" width="104" height="40" rx="8"/>
+<text class="nt" x="62" y="728.0" text-anchor="middle">姚・燕燕</text>
+<text class="ns" x="62" y="742.0" text-anchor="middle">医官の手伝い</text>
+<rect class="node" x="158.0" y="710.0" width="104" height="40" rx="8"/>
+<text class="nt" x="210" y="728.0" text-anchor="middle">やぶ医者</text>
+<text class="ns" x="210" y="742.0" text-anchor="middle">医官（宦官）</text>
+<rect class="node new" x="306.0" y="710.0" width="104" height="40" rx="8"/>
+<text class="nt" x="358" y="728.0" text-anchor="middle">翠苓</text>
+<text class="ns" x="358" y="742.0" text-anchor="middle">楼蘭妃の異母姉</text>
+<rect class="node" x="10.0" y="805.0" width="104" height="40" rx="8"/>
+<text class="nt" x="62" y="823.0" text-anchor="middle">梨花妃</text>
+<text class="ns" x="62" y="837.0" text-anchor="middle">賢妃・水晶宮</text>
+<rect class="node" x="158.0" y="805.0" width="104" height="40" rx="8"/>
+<text class="nt" x="210" y="823.0" text-anchor="middle">玉葉妃</text>
+<text class="ns" x="210" y="837.0" text-anchor="middle">貴妃・翡翠宮</text>
+<rect class="node" x="306.0" y="805.0" width="104" height="40" rx="8"/>
+<text class="nt" x="358" y="823.0" text-anchor="middle">里樹妃</text>
+<text class="ns" x="358" y="837.0" text-anchor="middle">徳妃・金剛宮</text>
+<rect class="elab" x="123.8" y="98.3" width="32" height="17" rx="8"/>
+<text class="et" x="139.8" y="111.3" text-anchor="middle">養父</text>
+<rect class="elab" x="120.0" y="141.0" width="32" height="17" rx="8"/>
+<text class="et" x="136.0" y="154.0" text-anchor="middle">育つ</text>
+<rect class="elab" x="270.6" y="244.5" width="32" height="17" rx="8"/>
+<text class="et" x="286.6" y="257.5" text-anchor="middle">友人</text>
+<rect class="elab" x="172.0" y="285.0" width="76" height="17" rx="8"/>
+<text class="et" x="210.0" y="298.0" text-anchor="middle">謎解きを依頼</text>
+<rect class="elab" x="29.5" y="192.0" width="65" height="17" rx="8"/>
+<text class="et" x="62.0" y="205.0" text-anchor="middle">白鈴に好意</text>
+<rect class="elab" x="87.6" y="490.2" width="76" height="17" rx="8"/>
+<text class="et" x="125.6" y="503.2" text-anchor="middle">護衛・乳兄弟</text>
+<rect class="elab" x="188.5" y="487.0" width="43" height="17" rx="8"/>
+<text class="et" x="210.0" y="500.0" text-anchor="middle">仕える</text>
+<rect class="elab" x="120.0" y="531.0" width="32" height="17" rx="8"/>
+<text class="et" x="136.0" y="544.0" text-anchor="middle">父子</text>
+<rect class="elab" x="194.0" y="92.5" width="32" height="17" rx="8"/>
+<text class="et" x="210.0" y="105.5" text-anchor="middle">実父</text>
+<rect class="elab" x="268.0" y="141.0" width="32" height="17" rx="8"/>
+<text class="et" x="284.0" y="154.0" text-anchor="middle">実母</text>
+<rect class="elab" x="120.0" y="51.0" width="32" height="17" rx="8"/>
+<text class="et" x="136.0" y="64.0" text-anchor="middle">叔父</text>
+<rect class="elab" x="314.5" y="578.5" width="87" height="17" rx="8"/>
+<text class="et" x="358.0" y="591.5" text-anchor="middle">のち淑妃を継ぐ</text>
+<rect class="elab dash new" x="235.3" y="92.5" width="109" height="17" rx="8"/>
+<text class="et" x="289.8" y="105.5" text-anchor="middle">従兄・義兄とされる</text>
+<rect class="elab new" x="268.0" y="436.0" width="32" height="17" rx="8"/>
+<text class="et" x="284.0" y="449.0" text-anchor="middle">乳母</text>
+<rect class="elab new" x="109.6" y="381.8" width="32" height="17" rx="8"/>
+<text class="et" x="125.6" y="394.8" text-anchor="middle">兄弟</text>
+<rect class="elab new" x="125.5" y="436.0" width="21" height="17" rx="8"/>
+<text class="et" x="136.0" y="449.0" text-anchor="middle">母</text>
+<rect class="elab dash new" x="251.0" y="486.7" width="76" height="17" rx="8"/>
+<text class="et" x="289.0" y="499.7" text-anchor="middle">実母とされる</text>
+<rect class="elab new" x="273.5" y="626.0" width="21" height="17" rx="8"/>
+<text class="et" x="284.0" y="639.0" text-anchor="middle">父</text>
+<rect class="elab new" x="336.5" y="677.0" width="43" height="17" rx="8"/>
+<text class="et" x="358.0" y="690.0" text-anchor="middle">異母姉</text>
 </svg><div class="tbl-wrap"><table><tr><th>関係</th><th>確認度</th><th>確認できた資料</th></tr><tr><td>壬氏の<wbr>本名は<wbr>華瑞月で、<wbr>現在の<wbr>皇帝の<wbr>弟です。</td><td><span class="cf a">◎</span></td><td>[1][5][6][7][8]、公式の第3期キャラクター紹介 [27]。第2期の第36話の題名にも「華瑞月」があります [4][9]。</td></tr><tr><td>壬氏は、<wbr>先帝と<wbr>皇太后<wbr>（安氏）の<wbr>子で、<wbr>皇帝の<wbr>兄弟です。<wbr>公式の<wbr>第2期相関図では、<wbr>先帝と<wbr>皇太后の<wbr>線は<wbr>皇帝にだけつながり、<wbr>壬氏とは<wbr>結ばれていません。<wbr>第3期で、<wbr>壬氏と<wbr>皇帝が<wbr>並んで<wbr>結ばれます。</td><td><span class="cf a">◎</span></td><td>公式の第3期相関図 [18]、[1][2][5][6][7][8]。第2期 [20]</td></tr><tr><td>壬氏の<wbr>実母は<wbr>阿多妃で、<wbr>実父は<wbr>皇帝と<wbr>されます<wbr>（図の<wbr>点線）。</td><td><span class="cf c">△</span></td><td>[2][5][6][7]（[8] は「原作の先まで含めると」と注記）。ただし、公式の第2期・第3期相関図には、壬氏と阿多を結ぶ線がありません [18][20]。明かされる時期も、「第2期では示唆まで」とする資料と「第2期で明かされる」とする資料に分かれます。</td></tr><tr><td>水蓮は、<wbr>壬氏の<wbr>乳母です<wbr>（侍女と<wbr>する<wbr>資料も<wbr>あります）。</td><td><span class="cf a">◎</span></td><td>[1][2][7][8]。原作者のWeb版の紹介でも「元乳母」とされます [19]。公式の第2期相関図では「壬氏の侍女」と表示され [20]、第3期には載っていません。</td></tr><tr><td>羅半は、<wbr>羅漢の<wbr>甥で、<wbr>羅漢の<wbr>養子です。</td><td><span class="cf a">◎</span></td><td>[1][5][7][8]、公式の第3期相関図に「養子」の線があり [18]、公式のキャラクター紹介にも「羅漢の甥であり、養子」とあります [27]</td></tr><tr><td>猫猫と<wbr>羅半の<wbr>続柄は、<wbr>「従兄」<wbr>「義兄」<wbr>「義理の<wbr>きょうだい」と、<wbr>資料で<wbr>書き方が<wbr>分かれます<wbr>（図の<wbr>点線）。<wbr>公式図にも<wbr>線は<wbr>ありません。</td><td><span class="cf c">△</span></td><td>[1][5][7][8]</td></tr><tr><td>楼蘭妃の<wbr>父は、<wbr>子の<wbr>一族の<wbr>当主の<wbr>子昌です。</td><td><span class="cf a">◎</span></td><td>[1][2][3][5][7][8]。公式の第2期相関図に「宰相」の札と、楼蘭妃との親子の線があります [20]。第3期には載っていません。</td></tr><tr><td>翠苓は、<wbr>楼蘭妃の<wbr>異母姉です。</td><td><span class="cf a">◎</span></td><td>[1][2][5][7][8]。公式の第2期相関図では「行方不明の女官」、第3期では阿多と同じ離宮の枠に入っています [18][20]。</td></tr><tr><td>下女の<wbr>「子翠」は、<wbr>楼蘭妃が<wbr>扮した<wbr>姿です。<wbr>翠苓とは<wbr>別人です。</td><td><span class="cf a">◎</span></td><td>[2][7][8]、第2期の物語で明かされるとされます [19]。公式の第2期相関図では、子翠は小蘭の「下女仲間」として、楼蘭妃とは別の人物として描かれています [20]（別人扱い：[5] も）。翠苓の元の名が「子翠」だったとする記述もあり [1][2]、名前が似ているため混同しやすい点です。</td></tr></table></div></div></details>
 <h2 id="unverified">10. 確認できなかったこと・載せなかったこと</h2>
 <p>人物の<wbr>関係は、<wbr>資料に<wbr>よって<wbr>書き方が<wbr>違うことがあります。<wbr>そこで、<wbr>次の<wbr>ものは<wbr>図に<wbr>載せていません。</p>
